@@ -78,6 +78,8 @@ void SystemInit (void) {
 
 
   SystemInitHook();
+
+  ARM_TIMER_GetFreq(&SystemCoreClock);
 }
 
 /* ----------------------------------------------------------------------------
