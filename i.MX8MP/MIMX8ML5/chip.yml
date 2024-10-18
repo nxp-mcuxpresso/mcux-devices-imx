@@ -1,0 +1,83 @@
+---
+
+device.hardware_data:
+  section-type: "manifest_content"
+  belong_to: set.device.MIMX8ML5
+  contents:
+    generated_from_chip_model: "yes"
+    devices:
+      - id: "MIMX8ML5xxxLZ"
+        full_name: "MIMX8ML5xxxLZ"
+        name: "MIMX8ML5"
+        platform: "i.MX"
+        series: "8M Plus Dual"
+        family: "MIMX8MLx"
+        subfamily: "iMX8ML3"
+        frequency_mhz: 800
+        core:
+          - name: "Cortex-M7F"
+            type: "cm7f"
+            id: "cm7"
+            description: "M7 core"
+            fpu: "SP_FPU"
+            mpu: true
+        memory:
+          memoryBlock:
+            - id: "SRAM_UPPER"
+              name: "SRAM_UPPER"
+              addr: 0x20000000
+              size: 0x20000
+              type: "RAM"
+              access: "RW"
+              default: true
+            - id: "SRAM_LOWER"
+              name: "SRAM_LOWER"
+              addr: 0x0
+              size: 0x20000
+              type: "RAM"
+              access: "RW"
+              default: true
+        total_memory:
+          ram_size_kb: 256
+          flash_size_kb: 0
+        part:
+          - name: "MIMX8ML5DVNLZ"
+        modules:
+      - id: "MIMX8ML5xxxKZ"
+        full_name: "MIMX8ML5xxxKZ"
+        name: "MIMX8ML5"
+        platform: "i.MX"
+        series: "8M Plus Dual"
+        family: "MIMX8MLx"
+        subfamily: "iMX8ML3"
+        frequency_mhz: 800
+        core:
+          - name: "Cortex-M7F"
+            type: "cm7f"
+            id: "cm7"
+            description: "M7 core"
+            fpu: "SP_FPU"
+            mpu: true
+        memory:
+          memoryBlock:
+            - id: "SRAM_UPPER"
+              name: "SRAM_UPPER"
+              addr: 0x20000000
+              size: 0x20000
+              type: "RAM"
+              access: "RW"
+              default: true
+            - id: "SRAM_LOWER"
+              name: "SRAM_LOWER"
+              addr: 0x0
+              size: 0x20000
+              type: "RAM"
+              access: "RW"
+              default: true
+        total_memory:
+          ram_size_kb: 256
+          flash_size_kb: 0
+        part:
+          - name: "MIMX8ML5CVNKZ"
+        modules:
+...
