@@ -1,0 +1,77 @@
+---
+device.hardware_data:
+  section-type: manifest_content
+  belong_to: set.device.MIMX8MN4
+  contents:
+    generated_from_chip_model: 'yes'
+    devices:
+    - id: MIMX8MN4xxxJZ
+      full_name: MIMX8MN4xxxJZ
+      name: MIMX8MN4
+      platform: i.MX
+      series: 8M Nano Dual
+      family: MIMX8MNx
+      subfamily: iMX8MN4
+      frequency_mhz: 600
+      core:
+      - name: Cortex-M7F
+        type: cm7f
+        id: cm7
+        description: M7 core
+        fpu: SP_FPU
+        mpu: true
+      memory:
+        memoryBlock:
+        - id: SRAM_UPPER
+          name: SRAM_UPPER
+          addr: 536870912
+          size: 131072
+          type: RAM
+          access: RW
+        - id: SRAM_LOWER
+          name: SRAM_LOWER
+          addr: 0
+          size: 131072
+          type: RAM
+          access: RW
+      total_memory:
+        ram_size_kb: 256
+        flash_size_kb: 0
+      part:
+      - name: MIMX8MN4DVTJZ
+      modules:
+    - id: MIMX8MN4xxxIZ
+      full_name: MIMX8MN4xxxIZ
+      name: MIMX8MN4
+      platform: i.MX
+      series: 8M Nano Dual
+      family: MIMX8MNx
+      subfamily: iMX8MN4
+      frequency_mhz: 600
+      core:
+      - name: Cortex-M7F
+        type: cm7f
+        id: cm7
+        description: M7 core
+        fpu: SP_FPU
+        mpu: true
+      memory:
+        memoryBlock:
+        - id: SRAM_UPPER
+          name: SRAM_UPPER
+          addr: 536870912
+          size: 131072
+          type: RAM
+          access: RW
+        - id: SRAM_LOWER
+          name: SRAM_LOWER
+          addr: 0
+          size: 131072
+          type: RAM
+          access: RW
+      total_memory:
+        ram_size_kb: 256
+        flash_size_kb: 0
+      part:
+      - name: MIMX8MN4CVTIZ
+      modules:

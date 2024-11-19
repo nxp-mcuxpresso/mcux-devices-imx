@@ -1,0 +1,50 @@
+---
+
+device.hardware_data:
+  section-type: "manifest_content"
+  belong_to: set.device.MIMX9321
+  contents:
+    generated_from_chip_model: "yes"
+    devices:
+      - id: "MIMX9321xxxxM"
+        full_name: "MIMX9321xxxxM"
+        name: "MIMX9321"
+        platform: "i.MX"
+        series: "93"
+        family: "MIMX93xx"
+        subfamily: "iMX9321"
+        core:
+          - name: "Cortex-M33"
+            type: "cm33"
+            id: "cm33"
+            description: ""
+            fpu: "SP_FPU"
+            dsp: true
+            mpu: true
+            sau: true
+            frequency_mhz: 216
+        memory:
+          memoryBlock:
+            - id: "SRAM_UPPER"
+              name: "SRAM_UPPER"
+              addr: 0x20000000
+              size: 0x20000
+              type: "RAM"
+              access: "RW"
+              default: true
+            - id: "SRAM_LOWER"
+              name: "SRAM_LOWER"
+              addr: 0xffe0000
+              size: 0x20000
+              type: "RAM"
+              access: "RW"
+              default: true
+        total_memory:
+          ram_size_kb: 256
+          flash_size_kb: 0
+        part:
+          - name: "MIMX9321DVXXM"
+          - name: "MIMX9321CVXXM"
+          - name: "MIMX9321XVXXM"
+        modules:
+...

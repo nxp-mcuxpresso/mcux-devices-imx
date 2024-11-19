@@ -1,0 +1,45 @@
+---
+device.hardware_data:
+  section-type: manifest_content
+  belong_to: set.device.MCIMX7U3
+  contents:
+    generated_from_chip_model: 'yes'
+    devices:
+    - id: MCIMX7U3xxxxx
+      full_name: MCIMX7U3xxxxx
+      name: MCIMX7U3
+      platform: i.MX
+      series: 7ULP
+      family: MCIMX7Ux
+      subfamily: iMX7U3
+      frequency_mhz: 200
+      core:
+      - name: Cortex-M4F
+        type: cm4f
+        id: cm4
+        description: M4 core
+        fpu: SP_FPU
+        mpu: true
+      memory:
+        memoryBlock:
+        - id: SRAM_LOWER
+          name: SRAM_LOWER
+          addr: 536674304
+          size: 196608
+          type: RAM
+          access: RW
+          default: true
+        - id: SRAM_UPPER
+          name: SRAM_UPPER
+          addr: 536870912
+          size: 65536
+          type: RAM
+          access: RW
+          default: true
+      total_memory:
+        ram_size_kb: 256
+        flash_size_kb: 0
+      part:
+      - name: MCIMX7U3DVK07
+      - name: MCIMX7U3CVP06
+      modules:

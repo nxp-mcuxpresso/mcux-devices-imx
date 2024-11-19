@@ -1,0 +1,81 @@
+---
+device.hardware_data:
+  section-type: manifest_content
+  belong_to: set.device.MIMX8MM3
+  contents:
+    generated_from_chip_model: 'yes'
+    devices:
+    - id: MIMX8MM3xxxLZ
+      full_name: MIMX8MM3xxxLZ
+      name: MIMX8MM3
+      platform: i.MX
+      series: 8M Mini DualLite
+      family: MIMX8MMx
+      subfamily: iMX8MM3
+      frequency_mhz: 400
+      core:
+      - name: Cortex-M4F
+        type: cm4f
+        id: cm4
+        description: M4 core
+        fpu: SP_FPU
+        mpu: true
+      memory:
+        memoryBlock:
+        - id: SRAM_UPPER
+          name: SRAM_UPPER
+          addr: 536870912
+          size: 131072
+          type: RAM
+          access: RW
+          default: true
+        - id: SRAM_LOWER
+          name: SRAM_LOWER
+          addr: 536739840
+          size: 131072
+          type: RAM
+          access: RW
+          default: true
+      total_memory:
+        ram_size_kb: 256
+        flash_size_kb: 0
+      part:
+      - name: MIMX8MM3DVTLZ
+      modules:
+    - id: MIMX8MM3xxxKZ
+      full_name: MIMX8MM3xxxKZ
+      name: MIMX8MM3
+      platform: i.MX
+      series: 8M Mini DualLite
+      family: MIMX8MMx
+      subfamily: iMX8MM3
+      frequency_mhz: 400
+      core:
+      - name: Cortex-M4F
+        type: cm4f
+        id: cm4
+        description: M4 core
+        fpu: SP_FPU
+        mpu: true
+      memory:
+        memoryBlock:
+        - id: SRAM_UPPER
+          name: SRAM_UPPER
+          addr: 536870912
+          size: 131072
+          type: RAM
+          access: RW
+          default: true
+        - id: SRAM_LOWER
+          name: SRAM_LOWER
+          addr: 536739840
+          size: 131072
+          type: RAM
+          access: RW
+          default: true
+      total_memory:
+        ram_size_kb: 256
+        flash_size_kb: 0
+      part:
+      - name: MIMX8MM3CVTKZ
+      modules:

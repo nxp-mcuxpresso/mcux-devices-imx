@@ -1,0 +1,57 @@
+---
+
+device.hardware_data:
+  section-type: "manifest_content"
+  belong_to: set.device.MIMX8UD7
+  contents:
+    generated_from_chip_model: "yes"
+    devices:
+      - id: "MIMX8UD7xxx08"
+        full_name: "MIMX8UD7xxx08"
+        name: "MIMX8UD7"
+        platform: "i.MX"
+        series: "8ULP"
+        family: "MIMX8UDx"
+        subfamily: "iMX8UD7"
+        core:
+          - name: "Cadence-FusionF1"
+            type: "dsp"
+            id: "fusionf1"
+            description: "Cadence Fusion F1 DSP core"
+            frequency_mhz: 200
+            boot_role: "secondary"
+          - name: "Cortex-M33"
+            type: "cm33"
+            id: "cm33"
+            description: ""
+            fpu: "SP_FPU"
+            dsp: true
+            mpu: true
+            sau: true
+            frequency_mhz: 216
+            boot_role: "primary"
+        memory:
+          memoryBlock:
+            - id: "SRAM_UPPER"
+              name: "SRAM_UPPER"
+              addr: 0x20000000
+              size: 0x80000
+              type: "RAM"
+              access: "RW"
+              default: true
+            - id: "SRAM_LOWER"
+              name: "SRAM_LOWER"
+              addr: 0xffc0000
+              size: 0x40000
+              type: "RAM"
+              access: "RW"
+              default: true
+        total_memory:
+          ram_size_kb: 768
+          flash_size_kb: 0
+        part:
+          - name: "MIMX8UD7CVP08"
+          - name: "MIMX8UD7DVP08"
+          - name: "MIMX8UD7DVK08"
+        modules:
+...
