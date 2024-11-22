@@ -4,13 +4,11 @@
 /*            MIMX8MN4_cm7                                                   */
 /*  @version: 2.0                                                            */
 /*  @date:    2019-9-23                                                      */
-/*  @build:   b220622                                                        */
+/*  @build:   b240708                                                        */
 /* ------------------------------------------------------------------------- */
 /*                                                                           */
 /* Copyright 1997-2016 Freescale Semiconductor, Inc.                         */
-/* Copyright 2016-2022 NXP                                                   */
-/* All rights reserved.                                                      */
-/*                                                                           */
+/* Copyright 2016-2024 NXP                                                   */
 /* SPDX-License-Identifier: BSD-3-Clause                                     */
 /*****************************************************************************/
 /* Version: GCC for ARM Embedded Processors                                  */

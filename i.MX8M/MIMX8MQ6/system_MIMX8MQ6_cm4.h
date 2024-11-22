@@ -1,15 +1,15 @@
 /*
 ** ###################################################################
-**     Processors:          MIMX8MQ6CVAHZ
-**                          MIMX8MQ6DVAJZ
+**     Processors:          MIMX8MQ6CVAHZ_cm4
+**                          MIMX8MQ6DVAJZ_cm4
 **
-**     Compilers:           Keil ARM C/C++ Compiler
-**                          GNU C Compiler
+**     Compilers:           GNU C Compiler
 **                          IAR ANSI C/C++ Compiler for ARM
+**                          Keil ARM C/C++ Compiler
 **
 **     Reference manual:    IMX8MDQLQRM, Rev. 0, Jan. 2018
 **     Version:             rev. 4.0, 2018-01-26
-**     Build:               b180903
+**     Build:               b240708
 **
 **     Abstract:
 **         Provides a system configuration function and a global variable that
@@ -17,9 +17,7 @@
 **         the oscillator (PLL) that is part of the microcontroller device.
 **
 **     Copyright 2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2018 NXP
-**     All rights reserved.
-**
+**     Copyright 2016-2024 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -40,15 +38,14 @@
 
 /*!
  * @file MIMX8MQ6_cm4
- * @version 4.0
- * @date 2018-01-26
+ * @version 1.0
+ * @date 080724
  * @brief Device specific configuration file for MIMX8MQ6_cm4 (header file)
  *
  * Provides a system configuration function and a global variable that contains
  * the system frequency. It configures the device and initializes the oscillator
  * (PLL) that is part of the microcontroller device.
  */
-
 #ifndef _SYSTEM_MIMX8MQ6_cm4_H_
 #define _SYSTEM_MIMX8MQ6_cm4_H_                  /**< Symbol preventing repeated inclusion */
 

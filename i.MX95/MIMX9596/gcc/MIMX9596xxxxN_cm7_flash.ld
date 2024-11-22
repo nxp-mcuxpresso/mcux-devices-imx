@@ -7,15 +7,13 @@
 **     Compiler:            GNU C Compiler
 **     Reference manual:    iMX95RM rev1 draftM
 **     Version:             rev. 1.0, 2021-11-16
-**     Build:               b230506
+**     Build:               b241122
 **
 **     Abstract:
 **         Linker file for the GNU C Compiler
 **
 **     Copyright 2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2023 NXP
-**     All rights reserved.
-**
+**     Copyright 2016-2024 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com

@@ -1,7 +1,7 @@
 /*
 ** ###################################################################
-**     Processors:          MIMX8MM4CVTKZ
-**                          MIMX8MM4DVTLZ
+**     Processors:          MIMX8MM4CVTKZ_cm4
+**                          MIMX8MM4DVTLZ_cm4
 **
 **     Compilers:           GNU C Compiler
 **                          IAR ANSI C/C++ Compiler for ARM
@@ -9,7 +9,7 @@
 **
 **     Reference manual:    MX8MMRM, Rev. 0, 02/2019
 **     Version:             rev. 4.0, 2019-02-18
-**     Build:               b190228
+**     Build:               b240708
 **
 **     Abstract:
 **         Provides a system configuration function and a global variable that
@@ -17,9 +17,7 @@
 **         the oscillator (PLL) that is part of the microcontroller device.
 **
 **     Copyright 2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2019 NXP
-**     All rights reserved.
-**
+**     Copyright 2016-2024 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -40,10 +38,9 @@
 
 /*!
  * @file MIMX8MM4_cm4
- * @version 4.0
- * @date 2019-02-18
- * @brief Device specific configuration file for MIMX8MM4_cm4 (implementation
- *        file)
+ * @version 1.0
+ * @date 080724
+ * @brief Device specific configuration file for MIMX8MM4_cm4 (implementation file)
  *
  * Provides a system configuration function and a global variable that contains
  * the system frequency. It configures the device and initializes the oscillator

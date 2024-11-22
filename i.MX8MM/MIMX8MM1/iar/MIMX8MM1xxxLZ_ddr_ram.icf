@@ -1,20 +1,18 @@
 /*
 ** ###################################################################
-**     Processors:          MIMX8MM1CVTKZ
-**                          MIMX8MM1DVTLZ
+**     Processors:          MIMX8MM1CVTKZ_cm4
+**                          MIMX8MM1DVTLZ_cm4
 **
 **     Compiler:            IAR ANSI C/C++ Compiler for ARM
 **     Reference manual:    MX8MMRM, Rev. 0, 02/2019
 **     Version:             rev. 4.0, 2019-02-18
-**     Build:               b200330
+**     Build:               b241122
 **
 **     Abstract:
 **         Linker file for the IAR ANSI C/C++ Compiler for ARM
 **
 **     Copyright 2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2020 NXP
-**     All rights reserved.
-**
+**     Copyright 2016-2024 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com

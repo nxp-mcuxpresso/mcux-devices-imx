@@ -4,13 +4,11 @@
 ;            MIMX8MM1_cm4
 ;  @version: 4.0
 ;  @date:    2019-2-18
-;  @build:   b220622
+;  @build:   b240708
 ; -------------------------------------------------------------------------
 ;
 ; Copyright 1997-2016 Freescale Semiconductor, Inc.
-; Copyright 2016-2022 NXP
-; All rights reserved.
-;
+; Copyright 2016-2024 NXP
 ; SPDX-License-Identifier: BSD-3-Clause
 ;
 ; The modules in this file are included in the libraries, and may be replaced

@@ -1,18 +1,16 @@
 /*
 ** ###################################################################
-**     Processor:           MIMX8MD6CVAHZ
+**     Processor:           MIMX8MD6CVAHZ_cm4
 **     Compiler:            GNU C Compiler
 **     Reference manual:    IMX8MDQLQRM, Rev. 0, Jan. 2018
 **     Version:             rev. 4.0, 2018-01-26
-**     Build:               b200331
+**     Build:               b241122
 **
 **     Abstract:
 **         Linker file for the GNU C Compiler
 **
 **     Copyright 2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2020 NXP
-**     All rights reserved.
-**
+**     Copyright 2016-2024 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com

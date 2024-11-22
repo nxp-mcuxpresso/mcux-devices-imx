@@ -1,18 +1,16 @@
 /*
 ** ###################################################################
-**     Processor:           MIMX8MQ6DVAJZ
+**     Processor:           MIMX8MQ6DVAJZ_cm4
 **     Compiler:            IAR ANSI C/C++ Compiler for ARM
 **     Reference manual:    IMX8MDQLQRM, Rev. 0, Jan. 2018
 **     Version:             rev. 4.0, 2018-01-26
-**     Build:               b200331
+**     Build:               b241122
 **
 **     Abstract:
 **         Linker file for the IAR ANSI C/C++ Compiler for ARM
 **
 **     Copyright 2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2020 NXP
-**     All rights reserved.
-**
+**     Copyright 2016-2024 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com

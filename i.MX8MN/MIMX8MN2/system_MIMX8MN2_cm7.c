@@ -1,7 +1,7 @@
 /*
 ** ###################################################################
-**     Processors:          MIMX8MN2CVTIZ
-**                          MIMX8MN2DVTJZ
+**     Processors:          MIMX8MN2CVTIZ_cm7
+**                          MIMX8MN2DVTJZ_cm7
 **
 **     Compilers:           GNU C Compiler
 **                          IAR ANSI C/C++ Compiler for ARM
@@ -9,7 +9,7 @@
 **
 **     Reference manual:    MX8MNRM, Rev.B, 07/2019
 **     Version:             rev. 2.0, 2019-09-23
-**     Build:               b211101
+**     Build:               b240708
 **
 **     Abstract:
 **         Provides a system configuration function and a global variable that
@@ -17,9 +17,7 @@
 **         the oscillator (PLL) that is part of the microcontroller device.
 **
 **     Copyright 2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2021 NXP
-**     All rights reserved.
-**
+**     Copyright 2016-2024 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -37,7 +35,7 @@
 /*!
  * @file MIMX8MN2_cm7
  * @version 2.0
- * @date 011121
+ * @date 080724
  * @brief Device specific configuration file for MIMX8MN2 (implementation file)
  *
  * Provides a system configuration function and a global variable that contains

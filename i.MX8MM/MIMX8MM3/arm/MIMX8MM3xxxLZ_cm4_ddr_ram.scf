@@ -1,19 +1,17 @@
 #! armcc -E
 /*
 ** ###################################################################
-**     Processor:           MIMX8MM3DVTLZ
+**     Processor:           MIMX8MM3DVTLZ_cm4
 **     Compiler:            Keil ARM C/C++ Compiler
 **     Reference manual:    MX8MMRM, Rev. A, 07/2018
 **     Version:             rev. 2.0, 2018-07-20
-**     Build:               b180801
+**     Build:               b241122
 **
 **     Abstract:
 **         Linker file for the Keil ARM C/C++ Compiler
 **
 **     Copyright 2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2018 NXP
-**     All rights reserved.
-**
+**     Copyright 2016-2024 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com

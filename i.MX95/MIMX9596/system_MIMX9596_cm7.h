@@ -10,7 +10,7 @@
 **
 **     Reference manual:    iMX95RM rev1 draftM
 **     Version:             rev. 1.0, 2023-01-10
-**     Build:               b230413
+**     Build:               b240823
 **
 **     Abstract:
 **         Provides a system configuration function and a global variable that
@@ -18,9 +18,7 @@
 **         the oscillator (PLL) that is part of the microcontroller device.
 **
 **     Copyright 2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2023 NXP
-**     All rights reserved.
-**
+**     Copyright 2016-2024 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com

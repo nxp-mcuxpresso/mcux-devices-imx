@@ -1,20 +1,18 @@
 /*
 ** ###################################################################
-**     Processors:          MIMX8MM3CVTKZ
-**                          MIMX8MM3DVTLZ
+**     Processors:          MIMX8MM3CVTKZ_cm4
+**                          MIMX8MM3DVTLZ_cm4
 **
 **     Compiler:            GNU C Compiler
 **     Reference manual:    MX8MMRM, Rev. 0, 02/2019
 **     Version:             rev. 4.0, 2019-02-18
-**     Build:               b200330
+**     Build:               b241122
 **
 **     Abstract:
 **         Linker file for the GNU C Compiler
 **
 **     Copyright 2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2020 NXP
-**     All rights reserved.
-**
+**     Copyright 2016-2024 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
