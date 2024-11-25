@@ -358,7 +358,7 @@ config MCUX_HW_IP_DriverType_PCIE
     default y
     depends on MCUX_HW_DEVICE_ID_MIMX8ML3xxxLZ || MCUX_HW_DEVICE_ID_MIMX8ML3xxxKZ
 
-config MCUX_HW_IP_DriverType_PCIe PHY
+config MCUX_HW_IP_DriverType_PCIe_PHY
     bool
     default y
     depends on MCUX_HW_DEVICE_ID_MIMX8ML3xxxLZ || MCUX_HW_DEVICE_ID_MIMX8ML3xxxKZ
