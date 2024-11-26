@@ -1,0 +1,88 @@
+# Copyright 2024 NXP
+# SPDX-License-Identifier: BSD-3-Clause
+# core related
+config MCUX_HW_CORE
+    string
+    default "cm7f"
+
+config MCUX_HW_CORE_CM7F
+    bool
+    default y
+
+config MCUX_HW_CORE_ID
+    string
+    default "cm7_core1"
+
+config MCUX_HW_CORE_ID_CM7_CORE1
+    bool
+    default y
+
+config MCUX_HW_DEVICE_CORE
+    string
+    default "MIMX94398_cm7_core1"
+
+config MCUX_HW_FPU
+    string
+    default "DP_FPU"
+
+config MCUX_HW_FPU_TYPE
+    string
+    default "fpv5_dp"
+
+config MCUX_HW_FPV5_DP
+    bool
+    default y
+
+config MCUX_HW_INT_PRIO_BITS
+    int
+    default 4
+
+config MCUX_HW_SOC_SERIES_MIMX
+    bool
+    default y
+
+# For chipmodel generated files
+config MCUX_TOOLCHAIN_LINKER_DEVICE_PREFIX
+    string
+    default "MIMX94398_cm7_core1" if MCUX_HW_DEVICE_ID_MIMX94398xxxM
+    default "MIMX94398_cm7_core1" if MCUX_HW_DEVICE_ID_MIMX94398xxxJ
+    default "MIMX94398_cm7_core1" if MCUX_HW_DEVICE_ID_MIMX94398xxxE
+
+config MCUX_TOOLCHAIN_MCUX_STARTUP
+    string
+    default "mimx9494_cm7_core1"
+
+# Toolchain related
+
+config MCUX_TOOLCHAIN_IAR_CPU_IDENTIFIER
+    string
+    default "MIMX94398xxxM_cm7_core1" if MCUX_HW_DEVICE_ID_MIMX94398xxxM
+    default "MIMX94398xxxJ_cm7_core1" if MCUX_HW_DEVICE_ID_MIMX94398xxxJ
+    default "MIMX94398xxxE_cm7_core1" if MCUX_HW_DEVICE_ID_MIMX94398xxxE
+
+config MCUX_TOOLCHAIN_MDK_CPU_IDENTIFIER
+    string
+    default "MIMX94398DVKM:cm7_core1" if MCUX_HW_DEVICE_PART_MIMX94398DVKM
+    default "MIMX94398DVMM:cm7_core1" if MCUX_HW_DEVICE_PART_MIMX94398DVMM
+    default "MIMX94398CVKM:cm7_core1" if MCUX_HW_DEVICE_PART_MIMX94398CVKM
+    default "MIMX94398CVMM:cm7_core1" if MCUX_HW_DEVICE_PART_MIMX94398CVMM
+    default "MIMX94398XVKM:cm7_core1" if MCUX_HW_DEVICE_PART_MIMX94398XVKM
+    default "MIMX94398XVMM:cm7_core1" if MCUX_HW_DEVICE_PART_MIMX94398XVMM
+    default "MIMX94398AVKM:cm7_core1" if MCUX_HW_DEVICE_PART_MIMX94398AVKM
+    default "MIMX94398AVMM:cm7_core1" if MCUX_HW_DEVICE_PART_MIMX94398AVMM
+    default "MIMX94398DVKJ:cm7_core1" if MCUX_HW_DEVICE_PART_MIMX94398DVKJ
+    default "MIMX94398DVMJ:cm7_core1" if MCUX_HW_DEVICE_PART_MIMX94398DVMJ
+    default "MIMX94398CVKJ:cm7_core1" if MCUX_HW_DEVICE_PART_MIMX94398CVKJ
+    default "MIMX94398CVMJ:cm7_core1" if MCUX_HW_DEVICE_PART_MIMX94398CVMJ
+    default "MIMX94398XVKJ:cm7_core1" if MCUX_HW_DEVICE_PART_MIMX94398XVKJ
+    default "MIMX94398XVMJ:cm7_core1" if MCUX_HW_DEVICE_PART_MIMX94398XVMJ
+    default "MIMX94398AVKJ:cm7_core1" if MCUX_HW_DEVICE_PART_MIMX94398AVKJ
+    default "MIMX94398AVMJ:cm7_core1" if MCUX_HW_DEVICE_PART_MIMX94398AVMJ
+    default "MIMX94398DVKE:cm7_core1" if MCUX_HW_DEVICE_PART_MIMX94398DVKE
+    default "MIMX94398DVME:cm7_core1" if MCUX_HW_DEVICE_PART_MIMX94398DVME
+    default "MIMX94398CVKE:cm7_core1" if MCUX_HW_DEVICE_PART_MIMX94398CVKE
+    default "MIMX94398CVME:cm7_core1" if MCUX_HW_DEVICE_PART_MIMX94398CVME
+    default "MIMX94398XVKE:cm7_core1" if MCUX_HW_DEVICE_PART_MIMX94398XVKE
+    default "MIMX94398XVME:cm7_core1" if MCUX_HW_DEVICE_PART_MIMX94398XVME
+    default "MIMX94398AVKE:cm7_core1" if MCUX_HW_DEVICE_PART_MIMX94398AVKE
+    default "MIMX94398AVME:cm7_core1" if MCUX_HW_DEVICE_PART_MIMX94398AVME

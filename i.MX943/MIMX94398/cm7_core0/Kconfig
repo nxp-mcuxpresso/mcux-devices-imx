@@ -1,0 +1,10 @@
+# Copyright 2024 NXP
+# SPDX-License-Identifier: BSD-3-Clause
+
+config MCUX_HW_DEVICE_MIMX94398_CORE_ID_cm7_core0
+    bool
+    imply MCUX_COMPONENT_driver.cache_armv7_m7
+    imply MCUX_COMPONENT_driver.irqsteer_1_soc.cm7_core0
+    default y
+
+rsource "Kconfig.chip"

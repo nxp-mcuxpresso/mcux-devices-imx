@@ -1,0 +1,79 @@
+# Copyright 2024 NXP
+#
+# SPDX-License-Identifier: BSD-3-Clause
+
+menu "Device specific drivers configuration"
+
+    config MCUX_COMPONENT_driver.elec_spec
+         bool "Use driver elec_spec"
+         default y
+
+    config MCUX_COMPONENT_driver.reset
+         bool "Use driver reset"
+         default y
+
+    config MCUX_COMPONENT_driver.trdc_soc
+         bool "Use driver trdc_soc"
+         default y
+
+    config MCUX_COMPONENT_driver.clock
+         bool "Use driver clock"
+         default y
+         imply MCUX_COMPONENT_driver.fract_pll
+
+    config MCUX_COMPONENT_driver.edma_soc
+         bool "Use driver edma_soc"
+         depends on MCUX_COMPONENT_driver.edma4
+         default y
+
+    config MCUX_COMPONENT_driver.iomuxc
+         bool "Use driver iomuxc"
+         default y
+
+    config MCUX_COMPONENT_driver.supply
+         bool "Use driver supply"
+         default y
+
+    config MCUX_COMPONENT_driver.cpu
+         bool "Use driver cpu"
+         default y
+
+    config MCUX_COMPONENT_driver.memory
+         bool "Use driver memory"
+         default y
+
+    config MCUX_COMPONENT_driver.power
+         bool "Use driver power"
+         default y
+
+    config MCUX_COMPONENT_driver.irqsteer_1_soc
+         bool "Use irqsteer_1 soc specific driver"
+
+    config MCUX_COMPONENT_driver.irqsteer_1_soc.cm33_core0
+         bool "Use irqsteer_1 soc cm33 core0 specific driver"
+         depends on MCUX_COMPONENT_driver.irqsteer_1_soc
+
+    config MCUX_COMPONENT_driver.irqsteer_1_soc.cm33_core1
+         bool "Use irqsteer_1 soc cm33 core1 specific driver"
+         depends on MCUX_COMPONENT_driver.irqsteer_1_soc
+
+    config MCUX_COMPONENT_driver.irqsteer_1_soc.cm7_core0
+         bool "Use irqsteer_1 soc cm7 core0 specific driver"
+         depends on MCUX_COMPONENT_driver.irqsteer_1_soc
+
+    config MCUX_COMPONENT_driver.irqsteer_1_soc.cm7_core1
+         bool "Use irqsteer_1 soc cm7 core1 specific driver"
+         depends on MCUX_COMPONENT_driver.irqsteer_1_soc
+
+    config MCUX_COMPONENT_driver.ccm
+         bool "Use driver ccm"
+         default y
+
+    config MCUX_COMPONENT_driver.src1
+         bool "Use driver src1"
+         default y
+
+    config MCUX_COMPONENT_driver.fro
+         bool "Use driver fro"
+         default y
+endmenu
