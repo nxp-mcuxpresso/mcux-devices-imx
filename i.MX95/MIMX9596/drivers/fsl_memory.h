@@ -12,6 +12,11 @@
 /*******************************************************************************
  * Definitions
  ******************************************************************************/
+/*! @name Driver version */
+/*@{*/
+/*! @brief MEMORY driver version 1.0.0. */
+#define FSL_MEMORY_DRIVER_VERSION (MAKE_VERSION(1, 0, 0))
+/*@}*/
 /* Component ID definition, used by tools. */
 #ifndef FSL_COMPONENT_ID
 #define FSL_COMPONENT_ID "platform.drivers.memory"

@@ -1,14 +1,15 @@
 # Copyright 2024 NXP
-# All rights reserved.
 #
 # SPDX-License-Identifier: BSD-3-Clause
 
 if (CONFIG_MCUX_COMPONENT_driver.clock)
+    mcux_component_version(2.0.5)
     mcux_add_source( SOURCES fsl_clock.c fsl_clock.h )
     mcux_add_include( INCLUDES . )
 endif()
 
 if (CONFIG_MCUX_COMPONENT_driver.edma_soc_rev2)
+    mcux_component_version(1.0.0)
     mcux_add_source( SOURCES fsl_edma_soc_rev2.h )
     mcux_add_include( INCLUDES . )
 endif()
@@ -20,6 +21,7 @@ if (CONFIG_MCUX_COMPONENT_driver.fusion)
 endif()
 
 if (CONFIG_MCUX_COMPONENT_driver.iomuxc)
+    mcux_component_version(2.0.0)
     mcux_add_source( SOURCES fsl_iomuxc.h )
     mcux_add_include( INCLUDES . )
 endif()
@@ -37,6 +39,7 @@ if (CONFIG_MCUX_COMPONENT_driver.reset)
 endif()
 
 if (CONFIG_MCUX_COMPONENT_driver.sentinel)
+    mcux_component_version(1.0.0)
     mcux_add_source( SOURCES fsl_sentinel.c fsl_sentinel.h )
     mcux_add_include( INCLUDES . )
 endif()

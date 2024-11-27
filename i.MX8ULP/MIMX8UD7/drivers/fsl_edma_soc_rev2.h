@@ -9,6 +9,12 @@
 
 #include "fsl_edma_rev2.h"
 
+/*! @name Driver version */
+/*@{*/
+/*! @brief EDMA SOC REV2 driver version 1.0.0. */
+#define FSL_EDMA_SOC_REV2_DRIVER_VERSION (MAKE_VERSION(1, 0, 0))
+/*@}*/
+
 #if defined(__cplusplus)
 extern "C" {
 #endif
