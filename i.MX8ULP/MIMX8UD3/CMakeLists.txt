@@ -5,7 +5,7 @@
 
 #### device spepcific drivers
 include(${SdkRootDirPath}/devices/arm/device_header.cmake)
-mcux_add_cmakelists(${SdkRootDirPath}/devices/i.MX/i.MX8ULP/MIMX8UD3/drivers)
+mcux_add_cmakelists(${SdkRootDirPath}/${device_root}/i.MX/i.MX8ULP/MIMX8UD3/drivers)
 mcux_add_cmakelists(${SdkRootDirPath}/devices/i.MX/i.MX8ULP/MIMX8UD3/drivers/upower)
 
 #### i.MX shared drivers/components/middlewares, project segments
