@@ -8,12 +8,6 @@ if (CONFIG_MCUX_COMPONENT_driver.clock)
     mcux_add_include( INCLUDES . )
 endif()
 
-if (CONFIG_MCUX_COMPONENT_driver.edma_soc_rev2)
-    mcux_component_version(1.0.0)
-    mcux_add_source( SOURCES fsl_edma_soc_rev2.h )
-    mcux_add_include( INCLUDES . )
-endif()
-
 if (CONFIG_MCUX_COMPONENT_driver.fusion)
     mcux_component_version(2.0.0)
     mcux_add_source( SOURCES fsl_fusion.c fsl_fusion.h )

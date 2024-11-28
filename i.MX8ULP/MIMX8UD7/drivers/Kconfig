@@ -9,10 +9,6 @@ menu "Device specific drivers configuration"
          bool "Use driver clock"
          default y
 
-    config MCUX_COMPONENT_driver.edma_soc_rev2
-         bool "Use driver edma_soc_rev2"
-         default n
-
     config MCUX_COMPONENT_driver.fusion
          bool "Use driver fusion"
          default n

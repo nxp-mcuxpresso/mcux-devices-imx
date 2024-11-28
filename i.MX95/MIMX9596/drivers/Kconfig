@@ -20,9 +20,6 @@ menu "Device specific drivers configuration"
          bool "Use driver memory"
          default y
 
-    config MCUX_COMPONENT_driver.sentinel
-         bool "Use driver sentinel"
-
     config MCUX_COMPONENT_driver.trdc_soc
          bool "Use driver trdc_soc"
 

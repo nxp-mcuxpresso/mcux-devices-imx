@@ -26,12 +26,6 @@ if (CONFIG_MCUX_COMPONENT_driver.memory)
     mcux_add_include( INCLUDES . )
 endif()
 
-if (CONFIG_MCUX_COMPONENT_driver.sentinel)
-    mcux_component_version(1.0.0)
-    mcux_add_source( SOURCES fsl_sentinel.c fsl_sentinel.h )
-    mcux_add_include( INCLUDES . )
-endif()
-
 if (CONFIG_MCUX_COMPONENT_driver.trdc_soc)
     mcux_component_version(2.0.0)
     mcux_add_source( SOURCES fsl_trdc_soc.h )
