@@ -20,10 +20,9 @@
  ******************************************************************************/
 /*! @name Driver version */
 /*@{*/
-/*! @brief SENTINEL driver version 1.0.0. */
-#define FSL_SENTINEL_DRIVER_VERSION (MAKE_VERSION(1, 0, 0))
+/*! @brief sentinel driver version 2.0.3. */
+#define FSL_SENTINEL_DRIVER_VERSION (MAKE_VERSION(2, 0, 3))
 /*@}*/
-
 /*! @brief sentinel command definition. */
 /* baseline apis command */
 #define SENTINEL_BASELINE_API_CMD_PING              (0x01U)
@@ -277,12 +276,6 @@ enum rdc_type
     TRDC_TYPE,
     XRDC_TYPE,
 };
-
-/*! @name Driver version */
-/*@{*/
-/*! @brief sentinel driver version 2.0.3. */
-#define FSL_SENTINEL_DRIVER_VERSION (MAKE_VERSION(2, 0, 3))
-/*@}*/
 
 /*******************************************************************************
  * API

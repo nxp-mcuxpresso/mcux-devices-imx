@@ -33,7 +33,7 @@ if (CONFIG_MCUX_COMPONENT_driver.reset)
 endif()
 
 if (CONFIG_MCUX_COMPONENT_driver.sentinel)
-    mcux_component_version(1.0.0)
+    mcux_component_version(2.0.3)
     mcux_add_source( SOURCES fsl_sentinel.c fsl_sentinel.h )
     mcux_add_include( INCLUDES . )
 endif()
