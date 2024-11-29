@@ -59,6 +59,10 @@ typedef struct _fracn_pll_pfd_init
     bool div2_en;
 } fracn_pll_pfd_init_t;
 
+#if defined(__cplusplus)
+extern "C" {
+#endif /* __cplusplus */
+
 /*!
  * @brief PLL init.
  *
@@ -125,6 +129,9 @@ static inline void CLOCK_PllPfdInit(PLL_Type *pll, uint32_t pfd_n, const fracn_p
     __ISB();
 }
 
+#if defined(__cplusplus)
+}
+#endif /* __cplusplus */
 /*******************************************************************************
  * Clock Source Definitions
  ******************************************************************************/
@@ -1106,6 +1113,10 @@ typedef enum _clock_lpcg
         kCLOCK_IpInvalid, kCLOCK_Sema1, kCLOCK_Sema2 \
     }
 
+#if defined(__cplusplus)
+extern "C" {
+#endif /* __cplusplus */
+
 /*******************************************************************************
  * Clock Root APIs
  ******************************************************************************/
@@ -1275,5 +1286,8 @@ extern volatile uint32_t g_clockSourceFreq[kCLOCK_Ext + 1];
  * @return Clock frequency value in hertz
  */
 uint32_t CLOCK_GetIpFreq(clock_root_t name);
+#if defined(__cplusplus)
+}
+#endif /* __cplusplus */
 
 #endif
