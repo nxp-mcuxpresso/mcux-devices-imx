@@ -8,4 +8,4 @@ config MCUX_HW_DEVICE_MIMX8ULP_CORE_ID_cm33
     default y
 
 rsource "Kconfig.chip"
-rsource "../../../../arm/Kconfig.common"
+rsource "../../../../../devices/arm/Kconfig.common"
