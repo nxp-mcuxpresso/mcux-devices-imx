@@ -45,7 +45,7 @@ config MCUX_HW_DSP
 
 config MCUX_HW_SAU
     bool
-    default n
+    default y
 
 config MCUX_HW_SOC_SERIES_MIMX
     bool
