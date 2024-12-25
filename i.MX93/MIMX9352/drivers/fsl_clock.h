@@ -1095,6 +1095,12 @@ typedef enum _clock_lpcg
         kCLOCK_Pdm \
     }
 
+/*! @brief Clock ip name array for USDHC. */
+#define USDHC_CLOCKS                                                  \
+    {                                                                 \
+        kCLOCK_IpInvalid, kCLOCK_Usdhc1, kCLOCK_Usdhc2, kCLOCK_Usdhc3 \
+    }
+
 /*! @brief Clock ip name array for ENET QOS. */
 #define ENETQOS_CLOCKS  \
     {                   \
