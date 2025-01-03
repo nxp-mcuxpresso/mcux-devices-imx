@@ -184,12 +184,12 @@ config MCUX_HW_IP_DriverType_EDMA5
     default y
     depends on MCUX_HW_DEVICE_ID_MIMX9596xxxxQ || MCUX_HW_DEVICE_ID_MIMX9596xxxxN || MCUX_HW_DEVICE_ID_MIMX9596xxxxL
 
-config MCUX_HW_IP_DriverType_EIM
+config MCUX_HW_IP_DriverType_EIM_EICHD
     bool
     default y
     depends on MCUX_HW_DEVICE_ID_MIMX9596xxxxQ || MCUX_HW_DEVICE_ID_MIMX9596xxxxN || MCUX_HW_DEVICE_ID_MIMX9596xxxxL
 
-config MCUX_HW_IP_DriverType_ERM
+config MCUX_HW_IP_DriverType_ERM_2
     bool
     default y
     depends on MCUX_HW_DEVICE_ID_MIMX9596xxxxQ || MCUX_HW_DEVICE_ID_MIMX9596xxxxN || MCUX_HW_DEVICE_ID_MIMX9596xxxxL
@@ -259,7 +259,7 @@ config MCUX_HW_IP_DriverType_JTAGC
     default y
     depends on MCUX_HW_DEVICE_ID_MIMX9596xxxxQ || MCUX_HW_DEVICE_ID_MIMX9596xxxxN || MCUX_HW_DEVICE_ID_MIMX9596xxxxL
 
-config MCUX_HW_IP_DriverType_LDB
+config MCUX_HW_IP_DriverType_LDB_1
     bool
     default y
     depends on MCUX_HW_DEVICE_ID_MIMX9596xxxxQ || MCUX_HW_DEVICE_ID_MIMX9596xxxxN || MCUX_HW_DEVICE_ID_MIMX9596xxxxL
@@ -374,11 +374,6 @@ config MCUX_HW_IP_DriverType_SEMA42
     default y
     depends on MCUX_HW_DEVICE_ID_MIMX9596xxxxQ || MCUX_HW_DEVICE_ID_MIMX9596xxxxN || MCUX_HW_DEVICE_ID_MIMX9596xxxxL
 
-config MCUX_HW_IP_DriverType_SFA
-    bool
-    default y
-    depends on MCUX_HW_DEVICE_ID_MIMX9596xxxxQ || MCUX_HW_DEVICE_ID_MIMX9596xxxxN || MCUX_HW_DEVICE_ID_MIMX9596xxxxL
-
 config MCUX_HW_IP_DriverType_STIMER_tmr
     bool
     default y
@@ -394,17 +389,12 @@ config MCUX_HW_IP_DriverType_TPM
     default y
     depends on MCUX_HW_DEVICE_ID_MIMX9596xxxxQ || MCUX_HW_DEVICE_ID_MIMX9596xxxxN || MCUX_HW_DEVICE_ID_MIMX9596xxxxL
 
-config MCUX_HW_IP_DriverType_TRDC
-    bool
-    default y
-    depends on MCUX_HW_DEVICE_ID_MIMX9596xxxxQ || MCUX_HW_DEVICE_ID_MIMX9596xxxxN || MCUX_HW_DEVICE_ID_MIMX9596xxxxL
-
 config MCUX_HW_IP_DriverType_TRDC_1
     bool
     default y
     depends on MCUX_HW_DEVICE_ID_MIMX9596xxxxQ || MCUX_HW_DEVICE_ID_MIMX9596xxxxN || MCUX_HW_DEVICE_ID_MIMX9596xxxxL
 
-config MCUX_HW_IP_DriverType_TRGMUX
+config MCUX_HW_IP_DriverType_TRGMUX_1
     bool
     default y
     depends on MCUX_HW_DEVICE_ID_MIMX9596xxxxQ || MCUX_HW_DEVICE_ID_MIMX9596xxxxN || MCUX_HW_DEVICE_ID_MIMX9596xxxxL
@@ -425,11 +415,6 @@ config MCUX_HW_IP_DriverType_USBPHY
     depends on MCUX_HW_DEVICE_ID_MIMX9596xxxxQ || MCUX_HW_DEVICE_ID_MIMX9596xxxxN || MCUX_HW_DEVICE_ID_MIMX9596xxxxL
 
 config MCUX_HW_IP_DriverType_USB_HOST_DEVICE_EHCI
-    bool
-    default y
-    depends on MCUX_HW_DEVICE_ID_MIMX9596xxxxQ || MCUX_HW_DEVICE_ID_MIMX9596xxxxN || MCUX_HW_DEVICE_ID_MIMX9596xxxxL
-
-config MCUX_HW_IP_DriverType_XCACHE
     bool
     default y
     depends on MCUX_HW_DEVICE_ID_MIMX9596xxxxQ || MCUX_HW_DEVICE_ID_MIMX9596xxxxN || MCUX_HW_DEVICE_ID_MIMX9596xxxxL
