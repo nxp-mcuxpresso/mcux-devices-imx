@@ -1,13 +1,11 @@
 /*
- * Copyright 2022 NXP
- * All rights reserved.
+ * Copyright 2022,2025 NXP
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
 #ifndef _FSL_CLOCK_H_
 #define _FSL_CLOCK_H_
-#include "hal_clock.h"
 #include "fsl_common.h"
 
 /*!
@@ -1114,7 +1112,7 @@ typedef enum _clock_gate_value
     kCLOCK_On  = CCM_LPCG_DIRECT_ON_MASK,       /*!< Clock is on*/
 } clock_gate_value_t;
 
-#define clock_ip_name_t hal_clk_id_e
+#define clock_ip_name_t clock_root_t
 
 /*! @brief Clock ip name array for ADC. */
 #define ADC_CLOCKS                \
