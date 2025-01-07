@@ -210,6 +210,11 @@ config MCUX_HW_IP_DriverType_ENDAT2P2
     default y
     depends on MCUX_HW_DEVICE_ID_MIMX94398xxxM || MCUX_HW_DEVICE_ID_MIMX94398xxxJ || MCUX_HW_DEVICE_ID_MIMX94398xxxE
 
+config MCUX_HW_IP_DriverType_ENDAT3
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX94398xxxM || MCUX_HW_DEVICE_ID_MIMX94398xxxJ || MCUX_HW_DEVICE_ID_MIMX94398xxxE
+
 config MCUX_HW_IP_DriverType_EQDC
     bool
     default y
@@ -251,6 +256,11 @@ config MCUX_HW_IP_DriverType_FRO
     depends on MCUX_HW_DEVICE_ID_MIMX94398xxxM || MCUX_HW_DEVICE_ID_MIMX94398xxxJ || MCUX_HW_DEVICE_ID_MIMX94398xxxE
 
 config MCUX_HW_IP_DriverType_GPT
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX94398xxxM || MCUX_HW_DEVICE_ID_MIMX94398xxxJ || MCUX_HW_DEVICE_ID_MIMX94398xxxE
+
+config MCUX_HW_IP_DriverType_HIPERFACE
     bool
     default y
     depends on MCUX_HW_DEVICE_ID_MIMX94398xxxM || MCUX_HW_DEVICE_ID_MIMX94398xxxJ || MCUX_HW_DEVICE_ID_MIMX94398xxxE
