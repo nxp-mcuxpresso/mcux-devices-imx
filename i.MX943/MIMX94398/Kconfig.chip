@@ -484,4 +484,8 @@ config MCUX_HW_IP_DriverType_S3MU
     bool
     default y
     depends on MCUX_HW_DEVICE_ID_MIMX94398xxxM || MCUX_HW_DEVICE_ID_MIMX94398xxxJ || MCUX_HW_DEVICE_ID_MIMX94398xxxE
+config MCUX_HW_IP_DriverType_SRAMCTL
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX94398xxxM || MCUX_HW_DEVICE_ID_MIMX94398xxxJ || MCUX_HW_DEVICE_ID_MIMX94398xxxE
 
