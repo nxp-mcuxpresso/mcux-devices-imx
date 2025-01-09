@@ -24,6 +24,7 @@ config MCUX_HW_DEVICE_MIMX94398
     ## Project segment dependency data
 
     imply  MCUX_COMPONENT_driver.irqsteer_1
+    imply  MCUX_COMPONENT_driver.sramctl
     select MCUX_COMPONENT_driver.port if MCUX_PRJSEG_module.board.pinmux
     select MCUX_COMPONENT_driver.rgpio if MCUX_PRJSEG_module.board.pinmux
     select MCUX_COMPONENT_driver.clock if MCUX_PRJSEG_module.board.clock
