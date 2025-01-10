@@ -31,7 +31,7 @@
 **
 **     Reference manual:    iMX943RM rev1 draftK
 **     Version:             rev. 1.0, 2023-11-01
-**     Build:               b250103
+**     Build:               b250109
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for MIMX94398_cm33_core0
@@ -7541,35 +7541,6 @@ typedef enum IRQn {
   #define NOC_Probe_m_e_9_main_TranStatProf_BASE_PTRS { NOC__GPV__PROBE_M_E_9_MAIN_TRANSACTIONSTATPROFILER }
 #endif
 
-/* NOC_SRAMCTL - Peripheral instance base addresses */
-#if (defined(__ARM_FEATURE_CMSE) && (__ARM_FEATURE_CMSE & 0x2))
-  /** Peripheral NOC__SRAMCTL base address */
-  #define NOC__SRAMCTL_BASE                        (0x590A0000u)
-  /** Peripheral NOC__SRAMCTL base address */
-  #define NOC__SRAMCTL_BASE_NS                     (0x490A0000u)
-  /** Peripheral NOC__SRAMCTL base pointer */
-  #define NOC__SRAMCTL                             ((NOC_SRAMCTL_Type *)NOC__SRAMCTL_BASE)
-  /** Peripheral NOC__SRAMCTL base pointer */
-  #define NOC__SRAMCTL_NS                          ((NOC_SRAMCTL_Type *)NOC__SRAMCTL_BASE_NS)
-  /** Array initializer of NOC_SRAMCTL peripheral base addresses */
-  #define NOC_SRAMCTL_BASE_ADDRS                   { NOC__SRAMCTL_BASE }
-  /** Array initializer of NOC_SRAMCTL peripheral base pointers */
-  #define NOC_SRAMCTL_BASE_PTRS                    { NOC__SRAMCTL }
-  /** Array initializer of NOC_SRAMCTL peripheral base addresses */
-  #define NOC_SRAMCTL_BASE_ADDRS_NS                { NOC__SRAMCTL_BASE_NS }
-  /** Array initializer of NOC_SRAMCTL peripheral base pointers */
-  #define NOC_SRAMCTL_BASE_PTRS_NS                 { NOC__SRAMCTL_NS }
-#else
-  /** Peripheral NOC__SRAMCTL base address */
-  #define NOC__SRAMCTL_BASE                        (0x490A0000u)
-  /** Peripheral NOC__SRAMCTL base pointer */
-  #define NOC__SRAMCTL                             ((NOC_SRAMCTL_Type *)NOC__SRAMCTL_BASE)
-  /** Array initializer of NOC_SRAMCTL peripheral base addresses */
-  #define NOC_SRAMCTL_BASE_ADDRS                   { NOC__SRAMCTL_BASE }
-  /** Array initializer of NOC_SRAMCTL peripheral base pointers */
-  #define NOC_SRAMCTL_BASE_PTRS                    { NOC__SRAMCTL }
-#endif
-
 /* NOC_TCU - Peripheral instance base addresses */
 #if (defined(__ARM_FEATURE_CMSE) && (__ARM_FEATURE_CMSE & 0x2))
   /** Peripheral NOC__TCU base address */
@@ -9072,6 +9043,35 @@ typedef enum IRQn {
   #define SINC_BASE_ADDRS                          { 0u, SINC1_BASE, SINC2_BASE, SINC3_BASE, SINC4_BASE }
   /** Array initializer of SINC peripheral base pointers */
   #define SINC_BASE_PTRS                           { (SINC_Type *)0u, SINC1, SINC2, SINC3, SINC4 }
+#endif
+
+/* SRAMCTL - Peripheral instance base addresses */
+#if (defined(__ARM_FEATURE_CMSE) && (__ARM_FEATURE_CMSE & 0x2))
+  /** Peripheral SRAMCTL base address */
+  #define SRAMCTL_BASE                             (0x590A0000u)
+  /** Peripheral SRAMCTL base address */
+  #define SRAMCTL_BASE_NS                          (0x490A0000u)
+  /** Peripheral SRAMCTL base pointer */
+  #define SRAMCTL                                  ((SRAMCTL_Type *)SRAMCTL_BASE)
+  /** Peripheral SRAMCTL base pointer */
+  #define SRAMCTL_NS                               ((SRAMCTL_Type *)SRAMCTL_BASE_NS)
+  /** Array initializer of SRAMCTL peripheral base addresses */
+  #define SRAMCTL_BASE_ADDRS                       { SRAMCTL_BASE }
+  /** Array initializer of SRAMCTL peripheral base pointers */
+  #define SRAMCTL_BASE_PTRS                        { SRAMCTL }
+  /** Array initializer of SRAMCTL peripheral base addresses */
+  #define SRAMCTL_BASE_ADDRS_NS                    { SRAMCTL_BASE_NS }
+  /** Array initializer of SRAMCTL peripheral base pointers */
+  #define SRAMCTL_BASE_PTRS_NS                     { SRAMCTL_NS }
+#else
+  /** Peripheral SRAMCTL base address */
+  #define SRAMCTL_BASE                             (0x490A0000u)
+  /** Peripheral SRAMCTL base pointer */
+  #define SRAMCTL                                  ((SRAMCTL_Type *)SRAMCTL_BASE)
+  /** Array initializer of SRAMCTL peripheral base addresses */
+  #define SRAMCTL_BASE_ADDRS                       { SRAMCTL_BASE }
+  /** Array initializer of SRAMCTL peripheral base pointers */
+  #define SRAMCTL_BASE_PTRS                        { SRAMCTL }
 #endif
 
 /* SRC_GEN - Peripheral instance base addresses */

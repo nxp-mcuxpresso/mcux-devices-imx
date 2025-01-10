@@ -31,7 +31,7 @@
 **
 **     Reference manual:    iMX943RM rev1 draftK
 **     Version:             rev. 1.0, 2023-11-01
-**     Build:               b250103
+**     Build:               b250109
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for MIMX94398_cm33_core0
@@ -267,7 +267,6 @@
 #include "PERI_NOC_PROBE_PXP_RD_MAIN_TRSTPROF.h"
 #include "PERI_NOC_PROBE_PXP_WR_MAIN_PROBE.h"
 #include "PERI_NOC_PROBE_PXP_WR_MAIN_TRSTPROF.h"
-#include "PERI_NOC_SRAMCTL.h"
 #include "PERI_NOC_TCU.h"
 #include "PERI_NOC_TRDC_MGR.h"
 #include "PERI_NPU_EIM.h"
@@ -286,6 +285,7 @@
 #include "PERI_SEMA42.h"
 #include "PERI_SERDES_SS.h"
 #include "PERI_SINC.h"
+#include "PERI_SRAMCTL.h"
 #include "PERI_SRC_GEN.h"
 #include "PERI_SRC_MEM.h"
 #include "PERI_SRC_XSPR.h"

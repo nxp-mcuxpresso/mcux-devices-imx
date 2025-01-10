@@ -31,7 +31,7 @@
 **
 **     Reference manual:    iMX943RM rev1 draftK
 **     Version:             rev. 1.0, 2023-11-01
-**     Build:               b250103
+**     Build:               b250109
 **
 **     Abstract:
 **         Provides a system configuration function and a global variable that
@@ -77,10 +77,28 @@
 #include "system_MIMX94398_cm33_core1.h"
 #include "fsl_cache.h"
 
+#define NETC_OCRAM_START_ADDR (0x20800000U)
+#define NETC_OCRAM_END_ADDR (0x2097FFFFU)
+
 /* ----------------------------------------------------------------------------
    -- Core clock
    ---------------------------------------------------------------------------- */
 uint32_t SystemCoreClock = DEFAULT_SYSTEM_CLOCK;
+
+/* ----------------------------------------------------------------------------
+   -- SystemInitNetcOcram()
+   ---------------------------------------------------------------------------- */
+static void SystemInitNetcOcram(void)
+{
+    uint32_t addr = 0U;
+
+    for (addr = NETC_OCRAM_START_ADDR; addr <= NETC_OCRAM_END_ADDR; )
+    {
+        /* Need to use str(32 bits access) instruction to initialize netc ocram. Cannot use memset(it will be converted to strb instruction by compiler, it's 8 bits access) to initialize netc ocram. */
+        *(uint32_t *)addr = 0U;
+	addr = addr + 4;
+    }
+}
 
 /* ----------------------------------------------------------------------------
    -- SystemInitMemoryRegions()
@@ -122,7 +140,9 @@ __attribute__((weak)) void SystemInit(void)
     #endif /* (__ARM_FEATURE_CMSE) && (__ARM_FEATURE_CMSE == 3U) */
 #endif /* ((__FPU_PRESENT == 1) && (__FPU_USED == 1)) */
 
-    //SystemInitMemoryRegions();
+    SystemInitNetcOcram();
+
+    SystemInitMemoryRegions();
 
     XCACHE_EnableCache(M33S_CACHE_CTRLPC); /* enable code bus cache(I-Cache) */
 

@@ -31,7 +31,7 @@
 **
 **     Reference manual:    iMX943RM rev1 draftK
 **     Version:             rev. 1.0, 2023-11-01
-**     Build:               b250103
+**     Build:               b250109
 **
 **     Abstract:
 **         Provides a system configuration function and a global variable that

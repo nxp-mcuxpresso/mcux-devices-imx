@@ -122,10 +122,10 @@
 **                          MIMX94398XVMM_cm7_core1
 **
 **     Version:             rev. 1.0, 2023-11-01
-**     Build:               b250103
+**     Build:               b250109
 **
 **     Abstract:
-**         CMSIS Peripheral Access Layer for NOC_SRAMCTL
+**         CMSIS Peripheral Access Layer for SRAMCTL
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
 **     Copyright 2016-2025 NXP
@@ -162,16 +162,16 @@
 */
 
 /*!
- * @file NOC_SRAMCTL.h
+ * @file SRAMCTL.h
  * @version 1.0
  * @date 2023-11-01
- * @brief CMSIS Peripheral Access Layer for NOC_SRAMCTL
+ * @brief CMSIS Peripheral Access Layer for SRAMCTL
  *
- * CMSIS Peripheral Access Layer for NOC_SRAMCTL
+ * CMSIS Peripheral Access Layer for SRAMCTL
  */
 
-#if !defined(NOC_SRAMCTL_H_)
-#define NOC_SRAMCTL_H_                           /**< Symbol preventing repeated inclusion */
+#if !defined(SRAMCTL_H_)
+#define SRAMCTL_H_                               /**< Symbol preventing repeated inclusion */
 
 #if (defined(CPU_MIMX94398AVKE_ca55) || defined(CPU_MIMX94398AVKJ_ca55) || defined(CPU_MIMX94398AVKM_ca55) || defined(CPU_MIMX94398AVME_ca55) || defined(CPU_MIMX94398AVMJ_ca55) || defined(CPU_MIMX94398AVMM_ca55) || defined(CPU_MIMX94398CVKE_ca55) || defined(CPU_MIMX94398CVKJ_ca55) || defined(CPU_MIMX94398CVKM_ca55) || defined(CPU_MIMX94398CVME_ca55) || defined(CPU_MIMX94398CVMJ_ca55) || defined(CPU_MIMX94398CVMM_ca55) || defined(CPU_MIMX94398DVKE_ca55) || defined(CPU_MIMX94398DVKJ_ca55) || defined(CPU_MIMX94398DVKM_ca55) || defined(CPU_MIMX94398DVME_ca55) || defined(CPU_MIMX94398DVMJ_ca55) || defined(CPU_MIMX94398DVMM_ca55) || defined(CPU_MIMX94398XVKE_ca55) || defined(CPU_MIMX94398XVKJ_ca55) || defined(CPU_MIMX94398XVKM_ca55) || defined(CPU_MIMX94398XVME_ca55) || defined(CPU_MIMX94398XVMJ_ca55) || defined(CPU_MIMX94398XVMM_ca55))
 #include "MIMX94398_ca55_COMMON.h"
@@ -217,15 +217,15 @@
 #endif
 
 /* ----------------------------------------------------------------------------
-   -- NOC_SRAMCTL Peripheral Access Layer
+   -- SRAMCTL Peripheral Access Layer
    ---------------------------------------------------------------------------- */
 
 /*!
- * @addtogroup NOC_SRAMCTL_Peripheral_Access_Layer NOC_SRAMCTL Peripheral Access Layer
+ * @addtogroup SRAMCTL_Peripheral_Access_Layer SRAMCTL Peripheral Access Layer
  * @{
  */
 
-/** NOC_SRAMCTL - Register Layout Typedef */
+/** SRAMCTL - Register Layout Typedef */
 typedef struct {
   __IO uint32_t RAMCR;                             /**< RAM Control, offset: 0x0 */
   __IO uint32_t RAMIAS;                            /**< RAM Initialization Address Start, offset: 0x4 */
@@ -245,266 +245,266 @@ typedef struct {
   __IO uint32_t RAMMAXA;                           /**< RAM Maximum-Value Address, offset: 0x40 */
        uint8_t RESERVED_3[60];
   __IO uint32_t RAMCR2;                            /**< RAM Control 2, offset: 0x80 */
-} NOC_SRAMCTL_Type;
+} SRAMCTL_Type;
 
 /* ----------------------------------------------------------------------------
-   -- NOC_SRAMCTL Register Masks
+   -- SRAMCTL Register Masks
    ---------------------------------------------------------------------------- */
 
 /*!
- * @addtogroup NOC_SRAMCTL_Register_Masks NOC_SRAMCTL Register Masks
+ * @addtogroup SRAMCTL_Register_Masks SRAMCTL Register Masks
  * @{
  */
 
 /*! @name RAMCR - RAM Control */
 /*! @{ */
 
-#define NOC_SRAMCTL_RAMCR_INIT_MASK              (0x1U)
-#define NOC_SRAMCTL_RAMCR_INIT_SHIFT             (0U)
+#define SRAMCTL_RAMCR_INIT_MASK                  (0x1U)
+#define SRAMCTL_RAMCR_INIT_SHIFT                 (0U)
 /*! INIT - Initialization Request
  *  0b0..Not requested
  *  0b1..Requested
  */
-#define NOC_SRAMCTL_RAMCR_INIT(x)                (((uint32_t)(((uint32_t)(x)) << NOC_SRAMCTL_RAMCR_INIT_SHIFT)) & NOC_SRAMCTL_RAMCR_INIT_MASK)
+#define SRAMCTL_RAMCR_INIT(x)                    (((uint32_t)(((uint32_t)(x)) << SRAMCTL_RAMCR_INIT_SHIFT)) & SRAMCTL_RAMCR_INIT_MASK)
 
-#define NOC_SRAMCTL_RAMCR_IWS_MASK               (0x6U)
-#define NOC_SRAMCTL_RAMCR_IWS_SHIFT              (1U)
+#define SRAMCTL_RAMCR_IWS_MASK                   (0x6U)
+#define SRAMCTL_RAMCR_IWS_SHIFT                  (1U)
 /*! IWS - Initialization Wait States
  *  0b00..Zero
  *  0b01..One
  *  0b10..Two
  *  0b11..Three
  */
-#define NOC_SRAMCTL_RAMCR_IWS(x)                 (((uint32_t)(((uint32_t)(x)) << NOC_SRAMCTL_RAMCR_IWS_SHIFT)) & NOC_SRAMCTL_RAMCR_IWS_MASK)
+#define SRAMCTL_RAMCR_IWS(x)                     (((uint32_t)(((uint32_t)(x)) << SRAMCTL_RAMCR_IWS_SHIFT)) & SRAMCTL_RAMCR_IWS_MASK)
 
-#define NOC_SRAMCTL_RAMCR_INIT_SYSA_MASK         (0x100U)
-#define NOC_SRAMCTL_RAMCR_INIT_SYSA_SHIFT        (8U)
+#define SRAMCTL_RAMCR_INIT_SYSA_MASK             (0x100U)
+#define SRAMCTL_RAMCR_INIT_SYSA_SHIFT            (8U)
 /*! INIT_SYSA - Initialize With System Address
  *  0b0..Local
  *  0b1..System
  */
-#define NOC_SRAMCTL_RAMCR_INIT_SYSA(x)           (((uint32_t)(((uint32_t)(x)) << NOC_SRAMCTL_RAMCR_INIT_SYSA_SHIFT)) & NOC_SRAMCTL_RAMCR_INIT_SYSA_MASK)
+#define SRAMCTL_RAMCR_INIT_SYSA(x)               (((uint32_t)(((uint32_t)(x)) << SRAMCTL_RAMCR_INIT_SYSA_SHIFT)) & SRAMCTL_RAMCR_INIT_SYSA_MASK)
 /*! @} */
 
 /*! @name RAMIAS - RAM Initialization Address Start */
 /*! @{ */
 
-#define NOC_SRAMCTL_RAMIAS_IAS_MASK              (0xFFFFFFFFU)
-#define NOC_SRAMCTL_RAMIAS_IAS_SHIFT             (0U)
+#define SRAMCTL_RAMIAS_IAS_MASK                  (0xFFFFFFFFU)
+#define SRAMCTL_RAMIAS_IAS_SHIFT                 (0U)
 /*! IAS - Initialization Address Start */
-#define NOC_SRAMCTL_RAMIAS_IAS(x)                (((uint32_t)(((uint32_t)(x)) << NOC_SRAMCTL_RAMIAS_IAS_SHIFT)) & NOC_SRAMCTL_RAMIAS_IAS_MASK)
+#define SRAMCTL_RAMIAS_IAS(x)                    (((uint32_t)(((uint32_t)(x)) << SRAMCTL_RAMIAS_IAS_SHIFT)) & SRAMCTL_RAMIAS_IAS_MASK)
 /*! @} */
 
 /*! @name RAMIAE - RAM Initialization Address End */
 /*! @{ */
 
-#define NOC_SRAMCTL_RAMIAE_IAE_MASK              (0xFFFFFFFFU)
-#define NOC_SRAMCTL_RAMIAE_IAE_SHIFT             (0U)
+#define SRAMCTL_RAMIAE_IAE_MASK                  (0xFFFFFFFFU)
+#define SRAMCTL_RAMIAE_IAE_SHIFT                 (0U)
 /*! IAE - Initialization Address End */
-#define NOC_SRAMCTL_RAMIAE_IAE(x)                (((uint32_t)(((uint32_t)(x)) << NOC_SRAMCTL_RAMIAE_IAE_SHIFT)) & NOC_SRAMCTL_RAMIAE_IAE_MASK)
+#define SRAMCTL_RAMIAE_IAE(x)                    (((uint32_t)(((uint32_t)(x)) << SRAMCTL_RAMIAE_IAE_SHIFT)) & SRAMCTL_RAMIAE_IAE_MASK)
 /*! @} */
 
 /*! @name RAMSR - RAM Status */
 /*! @{ */
 
-#define NOC_SRAMCTL_RAMSR_IDONE_MASK             (0x1U)
-#define NOC_SRAMCTL_RAMSR_IDONE_SHIFT            (0U)
+#define SRAMCTL_RAMSR_IDONE_MASK                 (0x1U)
+#define SRAMCTL_RAMSR_IDONE_SHIFT                (0U)
 /*! IDONE - Initialization Done
  *  0b0..An initialization was not requested, is in progress, or did not complete
  *  0b1..An initialization completed successfully
  */
-#define NOC_SRAMCTL_RAMSR_IDONE(x)               (((uint32_t)(((uint32_t)(x)) << NOC_SRAMCTL_RAMSR_IDONE_SHIFT)) & NOC_SRAMCTL_RAMSR_IDONE_MASK)
+#define SRAMCTL_RAMSR_IDONE(x)                   (((uint32_t)(((uint32_t)(x)) << SRAMCTL_RAMSR_IDONE_SHIFT)) & SRAMCTL_RAMSR_IDONE_MASK)
 
-#define NOC_SRAMCTL_RAMSR_BUSERR_MASK            (0x2U)
-#define NOC_SRAMCTL_RAMSR_BUSERR_SHIFT           (1U)
+#define SRAMCTL_RAMSR_BUSERR_MASK                (0x2U)
+#define SRAMCTL_RAMSR_BUSERR_SHIFT               (1U)
 /*! BUSERR - Bus Error
  *  0b0..No error occurred since the last time this field was cleared
  *  0b1..An error occurred
  */
-#define NOC_SRAMCTL_RAMSR_BUSERR(x)              (((uint32_t)(((uint32_t)(x)) << NOC_SRAMCTL_RAMSR_BUSERR_SHIFT)) & NOC_SRAMCTL_RAMSR_BUSERR_MASK)
+#define SRAMCTL_RAMSR_BUSERR(x)                  (((uint32_t)(((uint32_t)(x)) << SRAMCTL_RAMSR_BUSERR_SHIFT)) & SRAMCTL_RAMSR_BUSERR_MASK)
 
-#define NOC_SRAMCTL_RAMSR_IPEND_MASK             (0x4U)
-#define NOC_SRAMCTL_RAMSR_IPEND_SHIFT            (2U)
+#define SRAMCTL_RAMSR_IPEND_MASK                 (0x4U)
+#define SRAMCTL_RAMSR_IPEND_SHIFT                (2U)
 /*! IPEND - Initialization Pending
  *  0b0..Not in progress
  *  0b1..In progress
  */
-#define NOC_SRAMCTL_RAMSR_IPEND(x)               (((uint32_t)(((uint32_t)(x)) << NOC_SRAMCTL_RAMSR_IPEND_SHIFT)) & NOC_SRAMCTL_RAMSR_IPEND_MASK)
+#define SRAMCTL_RAMSR_IPEND(x)                   (((uint32_t)(((uint32_t)(x)) << SRAMCTL_RAMSR_IPEND_SHIFT)) & SRAMCTL_RAMSR_IPEND_MASK)
 
-#define NOC_SRAMCTL_RAMSR_AVALID_MASK            (0x8U)
-#define NOC_SRAMCTL_RAMSR_AVALID_SHIFT           (3U)
+#define SRAMCTL_RAMSR_AVALID_MASK                (0x8U)
+#define SRAMCTL_RAMSR_AVALID_SHIFT               (3U)
 /*! AVALID - Addresses Valid
  *  0b0..Addresses do not correspond to an event
  *  0b1..Addresses correspond to an event
  */
-#define NOC_SRAMCTL_RAMSR_AVALID(x)              (((uint32_t)(((uint32_t)(x)) << NOC_SRAMCTL_RAMSR_AVALID_SHIFT)) & NOC_SRAMCTL_RAMSR_AVALID_MASK)
+#define SRAMCTL_RAMSR_AVALID(x)                  (((uint32_t)(((uint32_t)(x)) << SRAMCTL_RAMSR_AVALID_SHIFT)) & SRAMCTL_RAMSR_AVALID_MASK)
 
-#define NOC_SRAMCTL_RAMSR_AERR_MASK              (0x20U)
-#define NOC_SRAMCTL_RAMSR_AERR_SHIFT             (5U)
+#define SRAMCTL_RAMSR_AERR_MASK                  (0x20U)
+#define SRAMCTL_RAMSR_AERR_SHIFT                 (5U)
 /*! AERR - ECC Address Error
  *  0b0..No error occurred
  *  0b1..An error occurred
  */
-#define NOC_SRAMCTL_RAMSR_AERR(x)                (((uint32_t)(((uint32_t)(x)) << NOC_SRAMCTL_RAMSR_AERR_SHIFT)) & NOC_SRAMCTL_RAMSR_AERR_MASK)
+#define SRAMCTL_RAMSR_AERR(x)                    (((uint32_t)(((uint32_t)(x)) << SRAMCTL_RAMSR_AERR_SHIFT)) & SRAMCTL_RAMSR_AERR_MASK)
 
-#define NOC_SRAMCTL_RAMSR_MLTERR_MASK            (0x40U)
-#define NOC_SRAMCTL_RAMSR_MLTERR_SHIFT           (6U)
+#define SRAMCTL_RAMSR_MLTERR_MASK                (0x40U)
+#define SRAMCTL_RAMSR_MLTERR_SHIFT               (6U)
 /*! MLTERR - ECC Multi-Bit Error
  *  0b0..No error occurred
  *  0b1..An error occurred
  */
-#define NOC_SRAMCTL_RAMSR_MLTERR(x)              (((uint32_t)(((uint32_t)(x)) << NOC_SRAMCTL_RAMSR_MLTERR_SHIFT)) & NOC_SRAMCTL_RAMSR_MLTERR_MASK)
+#define SRAMCTL_RAMSR_MLTERR(x)                  (((uint32_t)(((uint32_t)(x)) << SRAMCTL_RAMSR_MLTERR_SHIFT)) & SRAMCTL_RAMSR_MLTERR_MASK)
 
-#define NOC_SRAMCTL_RAMSR_SGLERR_MASK            (0x80U)
-#define NOC_SRAMCTL_RAMSR_SGLERR_SHIFT           (7U)
+#define SRAMCTL_RAMSR_SGLERR_MASK                (0x80U)
+#define SRAMCTL_RAMSR_SGLERR_SHIFT               (7U)
 /*! SGLERR - ECC Single-Bit Error
  *  0b0..No error occurred
  *  0b1..An error occurred
  */
-#define NOC_SRAMCTL_RAMSR_SGLERR(x)              (((uint32_t)(((uint32_t)(x)) << NOC_SRAMCTL_RAMSR_SGLERR_SHIFT)) & NOC_SRAMCTL_RAMSR_SGLERR_MASK)
+#define SRAMCTL_RAMSR_SGLERR(x)                  (((uint32_t)(((uint32_t)(x)) << SRAMCTL_RAMSR_SGLERR_SHIFT)) & SRAMCTL_RAMSR_SGLERR_MASK)
 
-#define NOC_SRAMCTL_RAMSR_SYND_MASK              (0xFF00U)
-#define NOC_SRAMCTL_RAMSR_SYND_SHIFT             (8U)
+#define SRAMCTL_RAMSR_SYND_MASK                  (0xFF00U)
+#define SRAMCTL_RAMSR_SYND_SHIFT                 (8U)
 /*! SYND - ECC Syndrome Value */
-#define NOC_SRAMCTL_RAMSR_SYND(x)                (((uint32_t)(((uint32_t)(x)) << NOC_SRAMCTL_RAMSR_SYND_SHIFT)) & NOC_SRAMCTL_RAMSR_SYND_MASK)
+#define SRAMCTL_RAMSR_SYND(x)                    (((uint32_t)(((uint32_t)(x)) << SRAMCTL_RAMSR_SYND_SHIFT)) & SRAMCTL_RAMSR_SYND_MASK)
 
-#define NOC_SRAMCTL_RAMSR_EINFO_MASK             (0xFF0000U)
-#define NOC_SRAMCTL_RAMSR_EINFO_SHIFT            (16U)
+#define SRAMCTL_RAMSR_EINFO_MASK                 (0xFF0000U)
+#define SRAMCTL_RAMSR_EINFO_SHIFT                (16U)
 /*! EINFO - Event Information */
-#define NOC_SRAMCTL_RAMSR_EINFO(x)               (((uint32_t)(((uint32_t)(x)) << NOC_SRAMCTL_RAMSR_EINFO_SHIFT)) & NOC_SRAMCTL_RAMSR_EINFO_MASK)
+#define SRAMCTL_RAMSR_EINFO(x)                   (((uint32_t)(((uint32_t)(x)) << SRAMCTL_RAMSR_EINFO_SHIFT)) & SRAMCTL_RAMSR_EINFO_MASK)
 /*! @} */
 
 /*! @name RAMMEMA - RAM ECC Address */
 /*! @{ */
 
-#define NOC_SRAMCTL_RAMMEMA_MEMA_MASK            (0x1FFFFU)
-#define NOC_SRAMCTL_RAMMEMA_MEMA_SHIFT           (0U)
+#define SRAMCTL_RAMMEMA_MEMA_MASK                (0x1FFFFU)
+#define SRAMCTL_RAMMEMA_MEMA_SHIFT               (0U)
 /*! MEMA - RAM Bank Address */
-#define NOC_SRAMCTL_RAMMEMA_MEMA(x)              (((uint32_t)(((uint32_t)(x)) << NOC_SRAMCTL_RAMMEMA_MEMA_SHIFT)) & NOC_SRAMCTL_RAMMEMA_MEMA_MASK)
+#define SRAMCTL_RAMMEMA_MEMA(x)                  (((uint32_t)(((uint32_t)(x)) << SRAMCTL_RAMMEMA_MEMA_SHIFT)) & SRAMCTL_RAMMEMA_MEMA_MASK)
 
-#define NOC_SRAMCTL_RAMMEMA_BANK_MASK            (0x1F00000U)
-#define NOC_SRAMCTL_RAMMEMA_BANK_SHIFT           (20U)
+#define SRAMCTL_RAMMEMA_BANK_MASK                (0x1F00000U)
+#define SRAMCTL_RAMMEMA_BANK_SHIFT               (20U)
 /*! BANK - RAM Bank ID */
-#define NOC_SRAMCTL_RAMMEMA_BANK(x)              (((uint32_t)(((uint32_t)(x)) << NOC_SRAMCTL_RAMMEMA_BANK_SHIFT)) & NOC_SRAMCTL_RAMMEMA_BANK_MASK)
+#define SRAMCTL_RAMMEMA_BANK(x)                  (((uint32_t)(((uint32_t)(x)) << SRAMCTL_RAMMEMA_BANK_SHIFT)) & SRAMCTL_RAMMEMA_BANK_MASK)
 /*! @} */
 
 /*! @name RAMSYSA - RAM System Address */
 /*! @{ */
 
-#define NOC_SRAMCTL_RAMSYSA_SYSA_MASK            (0xFFFFFFFFU)
-#define NOC_SRAMCTL_RAMSYSA_SYSA_SHIFT           (0U)
+#define SRAMCTL_RAMSYSA_SYSA_MASK                (0xFFFFFFFFU)
+#define SRAMCTL_RAMSYSA_SYSA_SHIFT               (0U)
 /*! SYSA - System Address */
-#define NOC_SRAMCTL_RAMSYSA_SYSA(x)              (((uint32_t)(((uint32_t)(x)) << NOC_SRAMCTL_RAMSYSA_SYSA_SHIFT)) & NOC_SRAMCTL_RAMSYSA_SYSA_MASK)
+#define SRAMCTL_RAMSYSA_SYSA(x)                  (((uint32_t)(((uint32_t)(x)) << SRAMCTL_RAMSYSA_SYSA_SHIFT)) & SRAMCTL_RAMSYSA_SYSA_MASK)
 /*! @} */
 
 /*! @name RAMECCNT - RAM Correctable Error Count */
 /*! @{ */
 
-#define NOC_SRAMCTL_RAMECCNT_ECCNT_MASK          (0xFFU)
-#define NOC_SRAMCTL_RAMECCNT_ECCNT_SHIFT         (0U)
+#define SRAMCTL_RAMECCNT_ECCNT_MASK              (0xFFU)
+#define SRAMCTL_RAMECCNT_ECCNT_SHIFT             (0U)
 /*! ECCNT - ECC Correctable Error Count */
-#define NOC_SRAMCTL_RAMECCNT_ECCNT(x)            (((uint32_t)(((uint32_t)(x)) << NOC_SRAMCTL_RAMECCNT_ECCNT_SHIFT)) & NOC_SRAMCTL_RAMECCNT_ECCNT_MASK)
+#define SRAMCTL_RAMECCNT_ECCNT(x)                (((uint32_t)(((uint32_t)(x)) << SRAMCTL_RAMECCNT_ECCNT_SHIFT)) & SRAMCTL_RAMECCNT_ECCNT_MASK)
 /*! @} */
 
 /*! @name RAMEID0 - RAM Error Injection Data 0 */
 /*! @{ */
 
-#define NOC_SRAMCTL_RAMEID0_EID_W0_MASK          (0xFFFFFFFFU)
-#define NOC_SRAMCTL_RAMEID0_EID_W0_SHIFT         (0U)
+#define SRAMCTL_RAMEID0_EID_W0_MASK              (0xFFFFFFFFU)
+#define SRAMCTL_RAMEID0_EID_W0_SHIFT             (0U)
 /*! EID_W0 - Error Injection Data Word 0 */
-#define NOC_SRAMCTL_RAMEID0_EID_W0(x)            (((uint32_t)(((uint32_t)(x)) << NOC_SRAMCTL_RAMEID0_EID_W0_SHIFT)) & NOC_SRAMCTL_RAMEID0_EID_W0_MASK)
+#define SRAMCTL_RAMEID0_EID_W0(x)                (((uint32_t)(((uint32_t)(x)) << SRAMCTL_RAMEID0_EID_W0_SHIFT)) & SRAMCTL_RAMEID0_EID_W0_MASK)
 /*! @} */
 
 /*! @name RAMEID1 - RAM Error Injection Data 1 */
 /*! @{ */
 
-#define NOC_SRAMCTL_RAMEID1_EID_W1_MASK          (0xFFFFFFFFU)
-#define NOC_SRAMCTL_RAMEID1_EID_W1_SHIFT         (0U)
+#define SRAMCTL_RAMEID1_EID_W1_MASK              (0xFFFFFFFFU)
+#define SRAMCTL_RAMEID1_EID_W1_SHIFT             (0U)
 /*! EID_W1 - Error Injection Data Word 1 */
-#define NOC_SRAMCTL_RAMEID1_EID_W1(x)            (((uint32_t)(((uint32_t)(x)) << NOC_SRAMCTL_RAMEID1_EID_W1_SHIFT)) & NOC_SRAMCTL_RAMEID1_EID_W1_MASK)
+#define SRAMCTL_RAMEID1_EID_W1(x)                (((uint32_t)(((uint32_t)(x)) << SRAMCTL_RAMEID1_EID_W1_SHIFT)) & SRAMCTL_RAMEID1_EID_W1_MASK)
 /*! @} */
 
 /*! @name RAMEIDC - RAM Error Injection Data Control */
 /*! @{ */
 
-#define NOC_SRAMCTL_RAMEIDC_EID_CKB_MASK         (0xFFU)
-#define NOC_SRAMCTL_RAMEIDC_EID_CKB_SHIFT        (0U)
+#define SRAMCTL_RAMEIDC_EID_CKB_MASK             (0xFFU)
+#define SRAMCTL_RAMEIDC_EID_CKB_SHIFT            (0U)
 /*! EID_CKB - Error Injection Data Checkbits */
-#define NOC_SRAMCTL_RAMEIDC_EID_CKB(x)           (((uint32_t)(((uint32_t)(x)) << NOC_SRAMCTL_RAMEIDC_EID_CKB_SHIFT)) & NOC_SRAMCTL_RAMEIDC_EID_CKB_MASK)
+#define SRAMCTL_RAMEIDC_EID_CKB(x)               (((uint32_t)(((uint32_t)(x)) << SRAMCTL_RAMEIDC_EID_CKB_SHIFT)) & SRAMCTL_RAMEIDC_EID_CKB_MASK)
 
-#define NOC_SRAMCTL_RAMEIDC_EIP_EN_MASK          (0x1000000U)
-#define NOC_SRAMCTL_RAMEIDC_EIP_EN_SHIFT         (24U)
+#define SRAMCTL_RAMEIDC_EIP_EN_MASK              (0x1000000U)
+#define SRAMCTL_RAMEIDC_EIP_EN_SHIFT             (24U)
 /*! EIP_EN - Error Injection Into Pipeline Enable
  *  0b0..No error injected
  *  0b1..Error injected
  */
-#define NOC_SRAMCTL_RAMEIDC_EIP_EN(x)            (((uint32_t)(((uint32_t)(x)) << NOC_SRAMCTL_RAMEIDC_EIP_EN_SHIFT)) & NOC_SRAMCTL_RAMEIDC_EIP_EN_MASK)
+#define SRAMCTL_RAMEIDC_EIP_EN(x)                (((uint32_t)(((uint32_t)(x)) << SRAMCTL_RAMEIDC_EIP_EN_SHIFT)) & SRAMCTL_RAMEIDC_EIP_EN_MASK)
 
-#define NOC_SRAMCTL_RAMEIDC_EIA_EN_MASK          (0x40000000U)
-#define NOC_SRAMCTL_RAMEIDC_EIA_EN_SHIFT         (30U)
+#define SRAMCTL_RAMEIDC_EIA_EN_MASK              (0x40000000U)
+#define SRAMCTL_RAMEIDC_EIA_EN_SHIFT             (30U)
 /*! EIA_EN - Error Injection Address Enable
  *  0b0..Ignore RAMEIA and RAMEIAM
  *  0b1..Enable RAMEIA and RAMEIAM
  */
-#define NOC_SRAMCTL_RAMEIDC_EIA_EN(x)            (((uint32_t)(((uint32_t)(x)) << NOC_SRAMCTL_RAMEIDC_EIA_EN_SHIFT)) & NOC_SRAMCTL_RAMEIDC_EIA_EN_MASK)
+#define SRAMCTL_RAMEIDC_EIA_EN(x)                (((uint32_t)(((uint32_t)(x)) << SRAMCTL_RAMEIDC_EIA_EN_SHIFT)) & SRAMCTL_RAMEIDC_EIA_EN_MASK)
 
-#define NOC_SRAMCTL_RAMEIDC_EID_EN_MASK          (0x80000000U)
-#define NOC_SRAMCTL_RAMEIDC_EID_EN_SHIFT         (31U)
+#define SRAMCTL_RAMEIDC_EID_EN_MASK              (0x80000000U)
+#define SRAMCTL_RAMEIDC_EID_EN_SHIFT             (31U)
 /*! EID_EN - Error Injection Data Enable
  *  0b0..No injection
  *  0b1..Local injection
  */
-#define NOC_SRAMCTL_RAMEIDC_EID_EN(x)            (((uint32_t)(((uint32_t)(x)) << NOC_SRAMCTL_RAMEIDC_EID_EN_SHIFT)) & NOC_SRAMCTL_RAMEIDC_EID_EN_MASK)
+#define SRAMCTL_RAMEIDC_EID_EN(x)                (((uint32_t)(((uint32_t)(x)) << SRAMCTL_RAMEIDC_EID_EN_SHIFT)) & SRAMCTL_RAMEIDC_EID_EN_MASK)
 /*! @} */
 
 /*! @name RAMEIA - RAM Error Injection Base Address */
 /*! @{ */
 
-#define NOC_SRAMCTL_RAMEIA_EIA_MASK              (0xFFFFFFFFU)
-#define NOC_SRAMCTL_RAMEIA_EIA_SHIFT             (0U)
+#define SRAMCTL_RAMEIA_EIA_MASK                  (0xFFFFFFFFU)
+#define SRAMCTL_RAMEIA_EIA_SHIFT                 (0U)
 /*! EIA - Error Injection Base Address */
-#define NOC_SRAMCTL_RAMEIA_EIA(x)                (((uint32_t)(((uint32_t)(x)) << NOC_SRAMCTL_RAMEIA_EIA_SHIFT)) & NOC_SRAMCTL_RAMEIA_EIA_MASK)
+#define SRAMCTL_RAMEIA_EIA(x)                    (((uint32_t)(((uint32_t)(x)) << SRAMCTL_RAMEIA_EIA_SHIFT)) & SRAMCTL_RAMEIA_EIA_MASK)
 /*! @} */
 
 /*! @name RAMEIAM - RAM Error Injection Address Mask */
 /*! @{ */
 
-#define NOC_SRAMCTL_RAMEIAM_EIAM_MASK            (0xFFFFFFFFU)
-#define NOC_SRAMCTL_RAMEIAM_EIAM_SHIFT           (0U)
+#define SRAMCTL_RAMEIAM_EIAM_MASK                (0xFFFFFFFFU)
+#define SRAMCTL_RAMEIAM_EIAM_SHIFT               (0U)
 /*! EIAM - Error Injection Address Mask */
-#define NOC_SRAMCTL_RAMEIAM_EIAM(x)              (((uint32_t)(((uint32_t)(x)) << NOC_SRAMCTL_RAMEIAM_EIAM_SHIFT)) & NOC_SRAMCTL_RAMEIAM_EIAM_MASK)
+#define SRAMCTL_RAMEIAM_EIAM(x)                  (((uint32_t)(((uint32_t)(x)) << SRAMCTL_RAMEIAM_EIAM_SHIFT)) & SRAMCTL_RAMEIAM_EIAM_MASK)
 /*! @} */
 
 /*! @name RAMMAXA - RAM Maximum-Value Address */
 /*! @{ */
 
-#define NOC_SRAMCTL_RAMMAXA_MAXA_MASK            (0xFFFFFFFFU)
-#define NOC_SRAMCTL_RAMMAXA_MAXA_SHIFT           (0U)
+#define SRAMCTL_RAMMAXA_MAXA_MASK                (0xFFFFFFFFU)
+#define SRAMCTL_RAMMAXA_MAXA_SHIFT               (0U)
 /*! MAXA - Maximum Address */
-#define NOC_SRAMCTL_RAMMAXA_MAXA(x)              (((uint32_t)(((uint32_t)(x)) << NOC_SRAMCTL_RAMMAXA_MAXA_SHIFT)) & NOC_SRAMCTL_RAMMAXA_MAXA_MASK)
+#define SRAMCTL_RAMMAXA_MAXA(x)                  (((uint32_t)(((uint32_t)(x)) << SRAMCTL_RAMMAXA_MAXA_SHIFT)) & SRAMCTL_RAMMAXA_MAXA_MASK)
 /*! @} */
 
 /*! @name RAMCR2 - RAM Control 2 */
 /*! @{ */
 
-#define NOC_SRAMCTL_RAMCR2_DEM_MASK              (0x8U)
-#define NOC_SRAMCTL_RAMCR2_DEM_SHIFT             (3U)
+#define SRAMCTL_RAMCR2_DEM_MASK                  (0x8U)
+#define SRAMCTL_RAMCR2_DEM_SHIFT                 (3U)
 /*! DEM - Disable Exclusive Monitor
  *  0b0..Enabled
  *  0b1..Disabled
  */
-#define NOC_SRAMCTL_RAMCR2_DEM(x)                (((uint32_t)(((uint32_t)(x)) << NOC_SRAMCTL_RAMCR2_DEM_SHIFT)) & NOC_SRAMCTL_RAMCR2_DEM_MASK)
+#define SRAMCTL_RAMCR2_DEM(x)                    (((uint32_t)(((uint32_t)(x)) << SRAMCTL_RAMCR2_DEM_SHIFT)) & SRAMCTL_RAMCR2_DEM_MASK)
 /*! @} */
 
 
 /*!
  * @}
- */ /* end of group NOC_SRAMCTL_Register_Masks */
+ */ /* end of group SRAMCTL_Register_Masks */
 
 
 /*!
  * @}
- */ /* end of group NOC_SRAMCTL_Peripheral_Access_Layer */
+ */ /* end of group SRAMCTL_Peripheral_Access_Layer */
 
 
 /*
@@ -530,5 +530,5 @@ typedef struct {
  */ /* end of group Peripheral_access_layer */
 
 
-#endif  /* NOC_SRAMCTL_H_ */
+#endif  /* SRAMCTL_H_ */
 

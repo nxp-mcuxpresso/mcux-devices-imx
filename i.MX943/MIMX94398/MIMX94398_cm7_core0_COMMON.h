@@ -31,7 +31,7 @@
 **
 **     Reference manual:    iMX943RM rev1 draftK
 **     Version:             rev. 1.0, 2023-11-01
-**     Build:               b250103
+**     Build:               b250109
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for MIMX94398_cm7_core0
@@ -3494,16 +3494,6 @@ typedef enum IRQn {
  * pointers */
 #define NOC_Probe_m_e_9_main_TranStatProf_BASE_PTRS { NOC__GPV__PROBE_M_E_9_MAIN_TRANSACTIONSTATPROFILER }
 
-/* NOC_SRAMCTL - Peripheral instance base addresses */
-/** Peripheral NOC__SRAMCTL base address */
-#define NOC__SRAMCTL_BASE                        (0x490A0000u)
-/** Peripheral NOC__SRAMCTL base pointer */
-#define NOC__SRAMCTL                             ((NOC_SRAMCTL_Type *)NOC__SRAMCTL_BASE)
-/** Array initializer of NOC_SRAMCTL peripheral base addresses */
-#define NOC_SRAMCTL_BASE_ADDRS                   { NOC__SRAMCTL_BASE }
-/** Array initializer of NOC_SRAMCTL peripheral base pointers */
-#define NOC_SRAMCTL_BASE_PTRS                    { NOC__SRAMCTL }
-
 /* NOC_TCU - Peripheral instance base addresses */
 /** Peripheral NOC__TCU base address */
 #define NOC__TCU_BASE                            (0x49040000u)
@@ -4019,6 +4009,16 @@ typedef enum IRQn {
 #define SINC_BASE_ADDRS                          { 0u, SINC1_BASE, SINC2_BASE, SINC3_BASE, SINC4_BASE }
 /** Array initializer of SINC peripheral base pointers */
 #define SINC_BASE_PTRS                           { (SINC_Type *)0u, SINC1, SINC2, SINC3, SINC4 }
+
+/* SRAMCTL - Peripheral instance base addresses */
+/** Peripheral SRAMCTL base address */
+#define SRAMCTL_BASE                             (0x490A0000u)
+/** Peripheral SRAMCTL base pointer */
+#define SRAMCTL                                  ((SRAMCTL_Type *)SRAMCTL_BASE)
+/** Array initializer of SRAMCTL peripheral base addresses */
+#define SRAMCTL_BASE_ADDRS                       { SRAMCTL_BASE }
+/** Array initializer of SRAMCTL peripheral base pointers */
+#define SRAMCTL_BASE_PTRS                        { SRAMCTL }
 
 /* SRC_GEN - Peripheral instance base addresses */
 /** Peripheral SRC_GEN base address */
