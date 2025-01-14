@@ -30,6 +30,10 @@
 
         ;; Forward declaration of sections.
         SECTION CSTACK:DATA:NOROOT(3)
+	SECTION HEAP:DATA:NOROOT(3)
+        SECTION RW:DATA:NOROOT(2)
+        SECTION QACCESS_CODE_VAR:DATA:NOROOT(3)
+        SECTION QACCESS_DATA_VAR:DATA:NOROOT(3)
 
         SECTION .intvec:CODE:NOROOT(2)
 
