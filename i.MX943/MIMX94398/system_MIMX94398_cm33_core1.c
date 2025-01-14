@@ -76,6 +76,8 @@
 #include "fsl_common.h"
 #include "system_MIMX94398_cm33_core1.h"
 #include "fsl_cache.h"
+#include "hal_clock_platform.h"
+#include "hal_clock.h"
 
 #define NETC_OCRAM_START_ADDR (0x20800000U)
 #define NETC_OCRAM_END_ADDR (0x2097FFFFU)
@@ -164,6 +166,7 @@ __attribute__((weak)) void SystemInitHook(void)
 
 void SystemCoreClockUpdate(void)
 {
+    SystemCoreClock = HAL_ClockGetRate(hal_clock_m33sync);
 }
 
 /* ----------------------------------------------------------------------------

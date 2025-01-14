@@ -82,7 +82,7 @@ extern "C" {
 #include <stdint.h>
 #include "fsl_device_registers.h"
 
-#define DEFAULT_SYSTEM_CLOCK 333000000u
+#define DEFAULT_SYSTEM_CLOCK 266666666U
 
 #define SYSTEM_INIT_MEMORY_REGIONS (1)
 
