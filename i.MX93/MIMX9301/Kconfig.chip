@@ -399,3 +399,8 @@ config MCUX_HW_IP_DriverType_uSDHC
     bool
     default y
     depends on MCUX_HW_DEVICE_ID_MIMX9301xxxxD
+
+config MCUX_HW_IP_DriverType_SAR_ADC
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX9301xxxxD
