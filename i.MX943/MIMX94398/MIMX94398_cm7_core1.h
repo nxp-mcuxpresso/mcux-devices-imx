@@ -31,7 +31,7 @@
 **
 **     Reference manual:    iMX943RM rev1 draftK
 **     Version:             rev. 1.0, 2023-11-01
-**     Build:               b250109
+**     Build:               b250115
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for MIMX94398_cm7_core1
@@ -282,6 +282,7 @@
 #include "PERI_PWM.h"
 #include "PERI_PXP.h"
 #include "PERI_RGPIO.h"
+#include "PERI_S3MU.h"
 #include "PERI_SEMA42.h"
 #include "PERI_SERDES_SS.h"
 #include "PERI_SINC.h"

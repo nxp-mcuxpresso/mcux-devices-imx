@@ -31,7 +31,7 @@
 **
 **     Reference manual:    iMX943RM rev1 draftK
 **     Version:             rev. 1.0, 2023-11-01
-**     Build:               b250109
+**     Build:               b250115
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for MIMX94398_cm7_core0
@@ -3973,6 +3973,48 @@ typedef enum IRQn {
 #define RGPIO_BASE_PTRS                          { (RGPIO_Type *)0u, GPIO1, GPIO2, GPIO3, GPIO4, GPIO5, GPIO6, GPIO7 }
 /** Interrupt vectors for the RGPIO peripheral type */
 #define RGPIO_IRQS                               { NotAvail_IRQn, GPIO1_INT0_IRQn, GPIO2_INT0_IRQn, GPIO3_INT0_IRQn, GPIO4_INT0_IRQn, GPIO5_INT0_IRQn, GPIO6_INT0_IRQn, GPIO7_INT0_IRQn }
+
+/* S3MU - Peripheral instance base addresses */
+/** Peripheral ELE_MU0_MUA base address */
+#define ELE_MU0_MUA_BASE                         (0x47520000u)
+/** Peripheral ELE_MU0_MUA base pointer */
+#define ELE_MU0_MUA                              ((S3MU_Type *)ELE_MU0_MUA_BASE)
+/** Peripheral ELE_MU1_MUA base address */
+#define ELE_MU1_MUA_BASE                         (0x47530000u)
+/** Peripheral ELE_MU1_MUA base pointer */
+#define ELE_MU1_MUA                              ((S3MU_Type *)ELE_MU1_MUA_BASE)
+/** Peripheral ELE_MU2_MUA base address */
+#define ELE_MU2_MUA_BASE                         (0x47540000u)
+/** Peripheral ELE_MU2_MUA base pointer */
+#define ELE_MU2_MUA                              ((S3MU_Type *)ELE_MU2_MUA_BASE)
+/** Peripheral ELE_MU3_MUA base address */
+#define ELE_MU3_MUA_BASE                         (0x47550000u)
+/** Peripheral ELE_MU3_MUA base pointer */
+#define ELE_MU3_MUA                              ((S3MU_Type *)ELE_MU3_MUA_BASE)
+/** Peripheral ELE_MU4_MUA base address */
+#define ELE_MU4_MUA_BASE                         (0x47560000u)
+/** Peripheral ELE_MU4_MUA base pointer */
+#define ELE_MU4_MUA                              ((S3MU_Type *)ELE_MU4_MUA_BASE)
+/** Peripheral ELE_MU5_MUA base address */
+#define ELE_MU5_MUA_BASE                         (0x47570000u)
+/** Peripheral ELE_MU5_MUA base pointer */
+#define ELE_MU5_MUA                              ((S3MU_Type *)ELE_MU5_MUA_BASE)
+/** Peripheral ELE_MU6_MUA base address */
+#define ELE_MU6_MUA_BASE                         (0x47580000u)
+/** Peripheral ELE_MU6_MUA base pointer */
+#define ELE_MU6_MUA                              ((S3MU_Type *)ELE_MU6_MUA_BASE)
+/** Peripheral ELE_MU7_MUA base address */
+#define ELE_MU7_MUA_BASE                         (0x47590000u)
+/** Peripheral ELE_MU7_MUA base pointer */
+#define ELE_MU7_MUA                              ((S3MU_Type *)ELE_MU7_MUA_BASE)
+/** Peripheral ELE_MU8_MUA base address */
+#define ELE_MU8_MUA_BASE                         (0x475A0000u)
+/** Peripheral ELE_MU8_MUA base pointer */
+#define ELE_MU8_MUA                              ((S3MU_Type *)ELE_MU8_MUA_BASE)
+/** Array initializer of S3MU peripheral base addresses */
+#define S3MU_BASE_ADDRS                          { ELE_MU0_MUA_BASE, ELE_MU1_MUA_BASE, ELE_MU2_MUA_BASE, ELE_MU3_MUA_BASE, ELE_MU4_MUA_BASE, ELE_MU5_MUA_BASE, ELE_MU6_MUA_BASE, ELE_MU7_MUA_BASE, ELE_MU8_MUA_BASE }
+/** Array initializer of S3MU peripheral base pointers */
+#define S3MU_BASE_PTRS                           { ELE_MU0_MUA, ELE_MU1_MUA, ELE_MU2_MUA, ELE_MU3_MUA, ELE_MU4_MUA, ELE_MU5_MUA, ELE_MU6_MUA, ELE_MU7_MUA, ELE_MU8_MUA }
 
 /* SEMA42 - Peripheral instance base addresses */
 /** Peripheral SEMA42_1 base address */
