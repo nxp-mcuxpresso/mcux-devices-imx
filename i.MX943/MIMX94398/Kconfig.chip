@@ -10,7 +10,7 @@ config MCUX_HW_DEVICE_ID_MIMX94398xxxJ
 config MCUX_HW_DEVICE_ID_MIMX94398xxxE
     bool
 
-choice
+choice MCUX_HW_DEVICE_PART_MIMX94398
     prompt "Device MIMX94398 Part"
     config MCUX_HW_DEVICE_PART_MIMX94398DVKM
     bool "Device part MIMX94398DVKM"
