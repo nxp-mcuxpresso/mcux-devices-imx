@@ -25,6 +25,8 @@
 
 /* SOC module features */
 
+/* @brief ADC availability on the SoC. */
+#define FSL_FEATURE_SOC_ADC_COUNT (1)
 /* @brief AXBS availability on the SoC. */
 #define FSL_FEATURE_SOC_AXBS_COUNT (1)
 /* @brief BBNSM availability on the SoC. */
@@ -99,6 +101,24 @@
 #define FSL_FEATURE_SOC_WDOG_COUNT (5)
 /* @brief XCACHE availability on the SoC. */
 #define FSL_FEATURE_SOC_XCACHE_COUNT (2)
+
+/* ADC module features */
+
+/* @brief Channel group counts of ADC. */
+#define FSL_FEATURE_ADC_CHANNEL_GROUPS_COUNT (2)
+/* @brief Threshold counts of ADC. */
+#define FSL_FEATURE_ADC_THRESHOLDS_COUNT (8)
+/* @brief Self-test threshold counts of ADC. */
+#define FSL_FEATURE_ADC_SELF_TEST_THRESHOLDS_COUNT (6)
+
+/* CACHE module features */
+
+/* @brief L1 ICACHE line size in byte. */
+#define FSL_FEATURE_L1ICACHE_LINESIZE_BYTE (16)
+/* @brief L1 DCACHE line size in byte. */
+#define FSL_FEATURE_L1DCACHE_LINESIZE_BYTE (16)
+/* @brief has no NONCACHEABLE section. */
+#define FSL_FEATURE_HAS_NO_NONCACHEABLE_SECTION (0)
 
 /* FLEXCAN module features */
 
@@ -377,6 +397,10 @@
 #define FSL_FEATURE_I3C_HAS_HDROK (1)
 /* @brief SOC doesn't support slave IBI/MR/HJ. */
 #define FSL_FEATURE_I3C_HAS_NO_SLAVE_IBI_MR_HJ (0)
+/* @brief Has SCL delay after START. */
+#define FSL_FEATURE_I3C_HAS_START_SCL_DELAY (1)
+/* @brief Has no the master write data register for DMA. */
+#define FSL_FEATURE_I3C_HAS_NO_MASTER_DMA_WDATA_REG (0)
 
 /* XCACHE module features */
 
