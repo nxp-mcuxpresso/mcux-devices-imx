@@ -999,6 +999,12 @@ typedef enum _clock_lpcg
 
 #define clock_ip_name_t clock_lpcg_t
 
+/*! @brief Clock ip name array for ADC. */
+#define ADC_CLOCKS  \
+    {               \
+        kCLOCK_Adc1 \
+    }
+
 /*! @brief Clock ip name array for EDMA. */
 #define EDMA_CLOCKS                \
     {                              \
