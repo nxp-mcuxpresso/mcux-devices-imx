@@ -9,13 +9,13 @@
 **
 **     Reference manual:    IMX8MPRM, Rev.D, 12/2020
 **     Version:             rev. 5.0, 2021-03-01
-**     Build:               b240708
+**     Build:               b250115
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for MIMX8ML6_cm7
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -263,14 +263,14 @@ typedef enum IRQn {
 #include "core_cm7.h"                  /* Core Peripheral Access Layer */
 #include "system_MIMX8ML6_cm7.h"       /* Device specific configuration file */
 
-#define MIMX8ML6_cm7_SERIES
-/* CPU specific feature definitions */
-#include "MIMX8ML6_cm7_features.h"
-
 /*!
  * @}
  */ /* end of group Cortex_Core_Configuration */
 
+
+#define MIMX8ML6_cm7_SERIES
+/* CPU specific feature definitions */
+#include "MIMX8ML6_cm7_features.h"
 
 /* AIPSTZ - Peripheral instance base addresses */
 /** Peripheral AIPSTZ1 base address */

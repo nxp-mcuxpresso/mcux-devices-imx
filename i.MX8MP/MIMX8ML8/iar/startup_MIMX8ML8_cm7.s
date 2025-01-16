@@ -4,11 +4,11 @@
 ;            MIMX8ML8_cm7
 ;  @version: 5.0
 ;  @date:    2021-3-1
-;  @build:   b240723
+;  @build:   b250115
 ; -------------------------------------------------------------------------
 ;
 ; Copyright 1997-2016 Freescale Semiconductor, Inc.
-; Copyright 2016-2024 NXP
+; Copyright 2016-2025 NXP
 ; SPDX-License-Identifier: BSD-3-Clause
 ;
 ; The modules in this file are included in the libraries, and may be replaced
@@ -1372,7 +1372,7 @@ MECC_S_ERR_IRQHandler
         BX      R0
 
         PUBWEAK DefaultISR
-        SECTION .text:CODE:REORDER(1)
+        SECTION .text:CODE:REORDER:NOROOT(1)
 Reserved16_DriverIRQHandler
 DAP_DriverIRQHandler
 SDMA1_DriverIRQHandler

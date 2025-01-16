@@ -1,6 +1,12 @@
 /*
 ** ###################################################################
-**     Processors:          MIMX8ML3CVNKZ_ca53
+**     Processors:          MIMX8ML2CVNKZ_ca53
+**                          MIMX8ML2CVNKZ_cm7
+**                          MIMX8ML2CVNKZ_dsp
+**                          MIMX8ML2DVNLZ_ca53
+**                          MIMX8ML2DVNLZ_cm7
+**                          MIMX8ML2DVNLZ_dsp
+**                          MIMX8ML3CVNKZ_ca53
 **                          MIMX8ML3CVNKZ_cm7
 **                          MIMX8ML3CVNKZ_dsp
 **                          MIMX8ML3DVNLZ_ca53
@@ -10,6 +16,12 @@
 **                          MIMX8ML4CVNKZ_cm7
 **                          MIMX8ML4DVNLZ_ca53
 **                          MIMX8ML4DVNLZ_cm7
+**                          MIMX8ML5CVNKZ_ca53
+**                          MIMX8ML5CVNKZ_cm7
+**                          MIMX8ML5CVNKZ_dsp
+**                          MIMX8ML5DVNLZ_ca53
+**                          MIMX8ML5DVNLZ_cm7
+**                          MIMX8ML5DVNLZ_dsp
 **                          MIMX8ML6CVNKZ_ca53
 **                          MIMX8ML6CVNKZ_cm7
 **                          MIMX8ML6DVNLZ_ca53
@@ -22,13 +34,13 @@
 **                          MIMX8ML8DVNLZ_dsp
 **
 **     Version:             rev. 5.0, 2021-03-01
-**     Build:               b240708
+**     Build:               b250115
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for VPU_H264
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -61,7 +73,13 @@
 #if !defined(VPU_H264_H_)
 #define VPU_H264_H_                              /**< Symbol preventing repeated inclusion */
 
-#if (defined(CPU_MIMX8ML3CVNKZ_ca53) || defined(CPU_MIMX8ML3DVNLZ_ca53))
+#if (defined(CPU_MIMX8ML2CVNKZ_ca53) || defined(CPU_MIMX8ML2DVNLZ_ca53))
+#include "MIMX8ML2_ca53_COMMON.h"
+#elif (defined(CPU_MIMX8ML2CVNKZ_cm7) || defined(CPU_MIMX8ML2DVNLZ_cm7))
+#include "MIMX8ML2_cm7_COMMON.h"
+#elif (defined(CPU_MIMX8ML2CVNKZ_dsp) || defined(CPU_MIMX8ML2DVNLZ_dsp))
+#include "MIMX8ML2_dsp_COMMON.h"
+#elif (defined(CPU_MIMX8ML3CVNKZ_ca53) || defined(CPU_MIMX8ML3DVNLZ_ca53))
 #include "MIMX8ML3_ca53_COMMON.h"
 #elif (defined(CPU_MIMX8ML3CVNKZ_cm7) || defined(CPU_MIMX8ML3DVNLZ_cm7))
 #include "MIMX8ML3_cm7_COMMON.h"
@@ -71,6 +89,12 @@
 #include "MIMX8ML4_ca53_COMMON.h"
 #elif (defined(CPU_MIMX8ML4CVNKZ_cm7) || defined(CPU_MIMX8ML4DVNLZ_cm7))
 #include "MIMX8ML4_cm7_COMMON.h"
+#elif (defined(CPU_MIMX8ML5CVNKZ_ca53) || defined(CPU_MIMX8ML5DVNLZ_ca53))
+#include "MIMX8ML5_ca53_COMMON.h"
+#elif (defined(CPU_MIMX8ML5CVNKZ_cm7) || defined(CPU_MIMX8ML5DVNLZ_cm7))
+#include "MIMX8ML5_cm7_COMMON.h"
+#elif (defined(CPU_MIMX8ML5CVNKZ_dsp) || defined(CPU_MIMX8ML5DVNLZ_dsp))
+#include "MIMX8ML5_dsp_COMMON.h"
 #elif (defined(CPU_MIMX8ML6CVNKZ_ca53) || defined(CPU_MIMX8ML6DVNLZ_ca53))
 #include "MIMX8ML6_ca53_COMMON.h"
 #elif (defined(CPU_MIMX8ML6CVNKZ_cm7) || defined(CPU_MIMX8ML6DVNLZ_cm7))
@@ -675,8 +699,8 @@ typedef struct {
 #define VPU_H264_SWREG6_SW_ENC_DEBLOCKING_FILTER_CTRL_MASK (0x8000U)
 #define VPU_H264_SWREG6_SW_ENC_DEBLOCKING_FILTER_CTRL_SHIFT (15U)
 /*! SW_ENC_DEBLOCKING_FILTER_CTRL
- *  0b1..filtering is disabled for current picture.
  *  0b0..filtering is enabled for current picture.
+ *  0b1..filtering is disabled for current picture.
  */
 #define VPU_H264_SWREG6_SW_ENC_DEBLOCKING_FILTER_CTRL(x) (((uint32_t)(((uint32_t)(x)) << VPU_H264_SWREG6_SW_ENC_DEBLOCKING_FILTER_CTRL_SHIFT)) & VPU_H264_SWREG6_SW_ENC_DEBLOCKING_FILTER_CTRL_MASK)
 
@@ -2286,8 +2310,8 @@ typedef struct {
 #define VPU_H264_SWREG191_SW_ENC_PREFIXNAL_SVC_EXT_MASK (0x10000U)
 #define VPU_H264_SWREG191_SW_ENC_PREFIXNAL_SVC_EXT_SHIFT (16U)
 /*! SW_ENC_PREFIXNAL_SVC_EXT
- *  0b1..enabled (insert H264Scalability SEI).
  *  0b0..disabled
+ *  0b1..enabled (insert H264Scalability SEI).
  */
 #define VPU_H264_SWREG191_SW_ENC_PREFIXNAL_SVC_EXT(x) (((uint32_t)(((uint32_t)(x)) << VPU_H264_SWREG191_SW_ENC_PREFIXNAL_SVC_EXT_SHIFT)) & VPU_H264_SWREG191_SW_ENC_PREFIXNAL_SVC_EXT_MASK)
 
@@ -2965,8 +2989,8 @@ typedef struct {
 #define VPU_H264_SWREG226_SW_ENC_HWP010REFSUPPORT_MASK (0x40000000U)
 #define VPU_H264_SWREG226_SW_ENC_HWP010REFSUPPORT_SHIFT (30U)
 /*! SW_ENC_HWP010REFSUPPORT
- *  0b1..P010 tile raster format.
  *  0b0..normal format
+ *  0b1..P010 tile raster format.
  */
 #define VPU_H264_SWREG226_SW_ENC_HWP010REFSUPPORT(x) (((uint32_t)(((uint32_t)(x)) << VPU_H264_SWREG226_SW_ENC_HWP010REFSUPPORT_SHIFT)) & VPU_H264_SWREG226_SW_ENC_HWP010REFSUPPORT_MASK)
 
