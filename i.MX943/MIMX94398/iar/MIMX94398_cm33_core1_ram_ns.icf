@@ -65,6 +65,9 @@ define symbol m_ncache_end            = 0x2003BFFF;
 define symbol m_rsc_tbl_start          = 0x2003C000;
 define symbol m_rsc_tbl_end            = 0x2003FFFF;
 
+define symbol m_rsc_tbl_share_with_mpu_start  = 0x208A0000;
+define symbol m_rsc_tbl_share_with_mpu_end    = 0x208A0FFF;
+
 /* Sizes */
 if (isdefinedsymbol(__stack_size__)) {
   define symbol __size_cstack__        = __stack_size__;
@@ -80,6 +83,9 @@ if (isdefinedsymbol(__heap_size__)) {
 
 define exported symbol __NCACHE_REGION_START   = m_ncache_start;
 define exported symbol __NCACHE_REGION_SIZE    = m_ncache_end - m_ncache_start + 1;
+
+define exported symbol __RscTblShareWithMpuStart   = m_rsc_tbl_share_with_mpu_start;
+define exported symbol __RscTblShareWithMpuEnd     = m_rsc_tbl_share_with_mpu_end;
 
 define exported symbol __VECTOR_TABLE  = m_interrupts_start;
 define exported symbol __VECTOR_RAM    = isdefinedsymbol(__ram_vector_table__) ? m_interrupts_ram_start : m_interrupts_start;

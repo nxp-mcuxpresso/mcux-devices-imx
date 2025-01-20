@@ -54,11 +54,12 @@ M_VECTOR_RAM_SIZE = DEFINED(__ram_vector_table__) ? 0x0620 : 0x0;
 /* Specify the memory areas */
 MEMORY
 {
-  m_interrupts          (RX)  : ORIGIN = 0x0FFE0000, LENGTH = 0x00002000
-  m_text                (RX)  : ORIGIN = 0x0FFE2000, LENGTH = 0x0001E000
-  m_data                (RW)  : ORIGIN = 0x20023000, LENGTH = 0x0000E000
-  m_ncache              (RW)  : ORIGIN = 0x20031000, LENGTH = 0x0000B000
-  m_rsc_tbl             (RW)  : ORIGIN = 0x2003C000, LENGTH = 0x00004000
+  m_interrupts              (RX)  : ORIGIN = 0x0FFE0000, LENGTH = 0x00002000
+  m_text                    (RX)  : ORIGIN = 0x0FFE2000, LENGTH = 0x0001E000
+  m_data                    (RW)  : ORIGIN = 0x20023000, LENGTH = 0x0000E000
+  m_ncache                  (RW)  : ORIGIN = 0x20031000, LENGTH = 0x0000B000
+  m_rsc_tbl                 (RW)  : ORIGIN = 0x2003C000, LENGTH = 0x00004000
+  m_rsc_tbl_share_with_mpu  (RW)  : ORIGIN = 0x208A0000, LENGTH = 0x00001000
 }
 
 /* Define output sections */
@@ -260,6 +261,9 @@ SECTIONS
   /* For Resource table region */
   __RscTblStart = ORIGIN(m_rsc_tbl);
   __RscTblEnd = ORIGIN(m_rsc_tbl) + LENGTH(m_rsc_tbl);
+  /* For Resource table region in dram, Cortex-A read the resource table from here */
+  __RscTblShareWithMpuStart = ORIGIN(m_rsc_tbl_share_with_mpu);
+  __RscTblShareWithMpuEnd = ORIGIN(m_rsc_tbl_share_with_mpu) + LENGTH(m_rsc_tbl_share_with_mpu);
 
   .ARM.attributes 0 : { *(.ARM.attributes) }
 
