@@ -1,6 +1,9 @@
 # Copyright 2024 NXP
 # SPDX-License-Identifier: BSD-3-Clause
 
+#### device core spepcific drivers
+mcux_add_cmakelists(${SdkRootDirPath}/devices/i.MX/i.MX943/${device}/drivers/${core_id})
+
 if (CONFIG_MCUX_COMPONENT_driver.elec_spec)
     mcux_component_version(1.0.0)
     mcux_add_source( SOURCES fsl_elec_spec.h )
@@ -59,40 +62,6 @@ if (CONFIG_MCUX_COMPONENT_driver.power)
     mcux_component_version(1.0.0)
     mcux_add_source( SOURCES fsl_power.h fsl_power.c )
     mcux_add_include( INCLUDES . )
-endif()
-
-if (CONFIG_MCUX_COMPONENT_driver.irqsteer_1_soc)
-if (CONFIG_MCUX_COMPONENT_driver.irqsteer_1_soc.cm33_core0)
-    mcux_component_version(1.0.0)
-    mcux_add_source(
-            SOURCES cm33_core0/fsl_irqsteer_soc.h cm33_core0/fsl_irqsteer_soc.c )
-    mcux_add_include(
-            INCLUDES cm33_core0 )
-endif()
-
-if (CONFIG_MCUX_COMPONENT_driver.irqsteer_1_soc.cm33_core1)
-    mcux_component_version(1.0.0)
-    mcux_add_source(
-            SOURCES cm33_core1/fsl_irqsteer_soc.h cm33_core1/fsl_irqsteer_soc.c )
-    mcux_add_include(
-            INCLUDES cm33_core1 )
-endif()
-
-if (CONFIG_MCUX_COMPONENT_driver.irqsteer_1_soc.cm7_core0)
-    mcux_component_version(1.0.0)
-    mcux_add_source(
-            SOURCES cm7_core0/fsl_irqsteer_soc.h cm7_core0/fsl_irqsteer_soc.c )
-    mcux_add_include(
-            INCLUDES cm7_core0 )
-endif()
-
-if (CONFIG_MCUX_COMPONENT_driver.irqsteer_1_soc.cm7_core1)
-    mcux_component_version(1.0.0)
-    mcux_add_source(
-            SOURCES cm7_core1/fsl_irqsteer_soc.h cm7_core1/fsl_irqsteer_soc.c )
-    mcux_add_include(
-            INCLUDES cm7_core1 )
-endif()
 endif()
 
 if (CONFIG_MCUX_COMPONENT_driver.ccm)

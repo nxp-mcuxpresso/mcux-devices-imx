@@ -1,6 +1,7 @@
 # Copyright 2024 NXP
 #
 # SPDX-License-Identifier: BSD-3-Clause
+rsource "${core_id}/Kconfig"
 
 menu "Device specific drivers configuration"
 
@@ -45,25 +46,6 @@ menu "Device specific drivers configuration"
     config MCUX_COMPONENT_driver.power
          bool "Use driver power"
          default y
-
-    config MCUX_COMPONENT_driver.irqsteer_1_soc
-         bool "Use irqsteer_1 soc specific driver"
-
-    config MCUX_COMPONENT_driver.irqsteer_1_soc.cm33_core0
-         bool "Use irqsteer_1 soc cm33 core0 specific driver"
-         depends on MCUX_COMPONENT_driver.irqsteer_1_soc
-
-    config MCUX_COMPONENT_driver.irqsteer_1_soc.cm33_core1
-         bool "Use irqsteer_1 soc cm33 core1 specific driver"
-         depends on MCUX_COMPONENT_driver.irqsteer_1_soc
-
-    config MCUX_COMPONENT_driver.irqsteer_1_soc.cm7_core0
-         bool "Use irqsteer_1 soc cm7 core0 specific driver"
-         depends on MCUX_COMPONENT_driver.irqsteer_1_soc
-
-    config MCUX_COMPONENT_driver.irqsteer_1_soc.cm7_core1
-         bool "Use irqsteer_1 soc cm7 core1 specific driver"
-         depends on MCUX_COMPONENT_driver.irqsteer_1_soc
 
     config MCUX_COMPONENT_driver.ccm
          bool "Use driver ccm"
