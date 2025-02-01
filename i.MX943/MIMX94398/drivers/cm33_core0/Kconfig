@@ -1,0 +1,7 @@
+# Copyright 2025 NXP
+#
+# SPDX-License-Identifier: BSD-3-Clause
+menu "Device core specific drivers configuration"
+    config MCUX_COMPONENT_driver.irqsteer_1_soc.cm33_core0
+         bool "Use irqsteer_1 soc specific driver"
+endmenu
