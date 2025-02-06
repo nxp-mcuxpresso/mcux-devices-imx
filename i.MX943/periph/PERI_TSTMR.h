@@ -264,7 +264,7 @@ typedef struct {
  */ /* end of group TSTMR_Register_Masks */
 
 /* Extra definition */
-#define TSTMR_CLOCK_FREQUENCY_MHZ                (1U)
+#define TSTMR_CLOCK_FREQUENCY_MHZ                (24U)
 
 
 /*!
