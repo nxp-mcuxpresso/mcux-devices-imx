@@ -55,13 +55,13 @@ config MCUX_HW_DEVICE_ID_MCIMX7U5xxxxx
 choice MCUX_HW_DEVICE_PART_MCIMX7U5
     prompt "Device MCIMX7U5 Part"
     config MCUX_HW_DEVICE_PART_MCIMX7U5DVP07
-    bool "Device part MCIMX7U5DVP07"
+    bool "MCIMX7U5DVP07"
     select MCUX_HW_DEVICE_ID_MCIMX7U5xxxxx
     config MCUX_HW_DEVICE_PART_MCIMX7U5DVK07
-    bool "Device part MCIMX7U5DVK07"
+    bool "MCIMX7U5DVK07"
     select MCUX_HW_DEVICE_ID_MCIMX7U5xxxxx
     config MCUX_HW_DEVICE_PART_MCIMX7U5CVP06
-    bool "Device part MCIMX7U5CVP06"
+    bool "MCIMX7U5CVP06"
     select MCUX_HW_DEVICE_ID_MCIMX7U5xxxxx
 endchoice
 

@@ -58,10 +58,10 @@ config MCUX_HW_DEVICE_ID_MIMX8MQ6xxxHZ
 choice MCUX_HW_DEVICE_PART_MIMX8MQ6
     prompt "Device MIMX8MQ6 Part"
     config MCUX_HW_DEVICE_PART_MIMX8MQ6DVAJZ
-    bool "Device part MIMX8MQ6DVAJZ"
+    bool "MIMX8MQ6DVAJZ"
     select MCUX_HW_DEVICE_ID_MIMX8MQ6xxxJZ
     config MCUX_HW_DEVICE_PART_MIMX8MQ6CVAHZ
-    bool "Device part MIMX8MQ6CVAHZ"
+    bool "MIMX8MQ6CVAHZ"
     select MCUX_HW_DEVICE_ID_MIMX8MQ6xxxHZ
 endchoice
 

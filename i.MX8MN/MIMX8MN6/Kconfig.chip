@@ -68,10 +68,10 @@ config MCUX_HW_DEVICE_DDR3L
 choice MCUX_HW_DEVICE_PART_MIMX8MN6
     prompt "Device MIMX8MN6 Part"
     config MCUX_HW_DEVICE_PART_MIMX8MN6DVTJZ
-    bool "Device part MIMX8MN6DVTJZ"
+    bool "MIMX8MN6DVTJZ"
     select MCUX_HW_DEVICE_ID_MIMX8MN6xxxJZ
     config MCUX_HW_DEVICE_PART_MIMX8MN6CVTIZ
-    bool "Device part MIMX8MN6CVTIZ"
+    bool "MIMX8MN6CVTIZ"
     select MCUX_HW_DEVICE_ID_MIMX8MN6xxxIZ
 endchoice
 
