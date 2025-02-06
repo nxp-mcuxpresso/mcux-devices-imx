@@ -6,35 +6,35 @@
 menu "Device specific drivers configuration"
 
     config MCUX_COMPONENT_driver.clock
-         bool "Use driver clock"
+         bool "clock"
          default y
 
     config MCUX_COMPONENT_driver.fusion
-         bool "Use driver fusion"
+         bool "fusion"
          default n
 
     config MCUX_COMPONENT_driver.iomuxc
-         bool "Use driver iomuxc"
+         bool "iomuxc"
          default y
 
     config MCUX_COMPONENT_driver.memory
-         bool "Use driver memory"
+         bool "memory"
          default y
 
     config MCUX_COMPONENT_driver.reset
-         bool "Use driver reset"
+         bool "reset"
          default y
 
     config MCUX_COMPONENT_driver.sentinel
-         bool "Use driver sentinel"
+         bool "sentinel"
          default y
 
     config MCUX_COMPONENT_driver.mipi_dsi_soc
-         bool "Use driver mipi_dsi_soc"
+         bool "mipi_dsi_soc"
          default y
 
     config MCUX_COMPONENT_driver.upower
-         bool "Use driver upower"
+         bool "upower"
          default y
 
 endmenu

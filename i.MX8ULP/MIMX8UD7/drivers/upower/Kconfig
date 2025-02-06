@@ -7,7 +7,7 @@ menu "Device specific drivers configuration"
 
 
     config MCUX_COMPONENT_driver.upowerlib
-         bool "Use driver upowerlib"
+         bool "upowerlib"
          default y
 
 endmenu

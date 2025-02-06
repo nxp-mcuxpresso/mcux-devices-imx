@@ -63,13 +63,13 @@ config MCUX_HW_DEVICE_ID_MIMX9321xxxxM
 choice MCUX_HW_DEVICE_PART_MIMX9321
     prompt "Device MIMX9321 Part"
     config MCUX_HW_DEVICE_PART_MIMX9321DVXXM
-    bool "Device part MIMX9321DVXXM"
+    bool "MIMX9321DVXXM"
     select MCUX_HW_DEVICE_ID_MIMX9321xxxxM
     config MCUX_HW_DEVICE_PART_MIMX9321CVXXM
-    bool "Device part MIMX9321CVXXM"
+    bool "MIMX9321CVXXM"
     select MCUX_HW_DEVICE_ID_MIMX9321xxxxM
     config MCUX_HW_DEVICE_PART_MIMX9321XVXXM
-    bool "Device part MIMX9321XVXXM"
+    bool "MIMX9321XVXXM"
     select MCUX_HW_DEVICE_ID_MIMX9321xxxxM
 endchoice
 

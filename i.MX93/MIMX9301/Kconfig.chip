@@ -63,10 +63,10 @@ config MCUX_HW_DEVICE_ID_MIMX9301xxxxD
 choice MCUX_HW_DEVICE_PART_MIMX9301
     prompt "Device MIMX9301 Part"
     config MCUX_HW_DEVICE_PART_MIMX9301DVVXD
-    bool "Device part MIMX9301DVVXD"
+    bool "MIMX9301DVVXD"
     select MCUX_HW_DEVICE_ID_MIMX9301xxxxD
     config MCUX_HW_DEVICE_PART_MIMX9301CVVXD
-    bool "Device part MIMX9301CVVXD"
+    bool "MIMX9301CVVXD"
     select MCUX_HW_DEVICE_ID_MIMX9301xxxxD
 endchoice
 

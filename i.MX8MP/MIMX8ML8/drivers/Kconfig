@@ -6,19 +6,19 @@
 menu "Device specific drivers configuration"
 
     config MCUX_COMPONENT_driver.audiomix
-         bool "Use driver audiomix"
+         bool "audiomix"
          default y
 
     config MCUX_COMPONENT_driver.clock
-         bool "Use driver clock"
+         bool "clock"
          default y
 
     config MCUX_COMPONENT_driver.iomuxc
-         bool "Use driver iomuxc"
+         bool "iomuxc"
          default y
 
     config MCUX_COMPONENT_driver.memory
-         bool "Use driver memory"
+         bool "memory"
          default y
 
 endmenu
