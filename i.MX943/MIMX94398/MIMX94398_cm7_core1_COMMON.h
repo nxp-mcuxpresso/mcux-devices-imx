@@ -2547,8 +2547,7 @@ typedef enum IRQn {
 /** Array initializer of MSGINTR peripheral base pointers */
 #define MSGINTR_BASE_PTRS                        { (MSGINTR_Type *)0u, MSGINTR1, MSGINTR2, MSGINTR3, MSGINTR4, MSGINTR5, MSGINTR6, MSGINTR7, MSGINTR8 }
 /** Interrupt vectors for the MSGINTR peripheral type */
-#define MSGINTR_IRQS                                { NotAvail_IRQn, IRQSTEERM7_CH5_IRQn, IRQSTEERM7_CH6_IRQn, IRQSTEERM7_CH6_IRQn, IRQSTEERM7_CH6_IRQn, IRQSTEERM7_CH6_IRQn, IRQSTEERM7_CH6_IRQn, IRQSTEERM7_CH6_IRQn,  IRQSTEERM7_CH6_IRQn }
-
+#define MSGINTR_IRQS                                { NotAvail_IRQn, MSGINTR1_IRQn, MSGINTR2_IRQn, MSGINTR3_IRQn, MSGINTR4_IRQn, MSGINTR5_IRQn, MSGINTR6_IRQn, MSGINTR7_IRQn, MSGINTR8_IRQn }
 
 /* MU - Peripheral instance base addresses */
 /** Peripheral MU1_MUA base address */
