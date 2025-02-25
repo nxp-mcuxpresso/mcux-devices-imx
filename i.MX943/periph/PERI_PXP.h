@@ -227,24 +227,18 @@
 
 /** PXP - Register Layout Typedef */
 typedef struct {
-  struct {                                         /* offset: 0x0 */
-    __IO uint32_t RW;                                /**< Control Register 0, offset: 0x0 */
-    __IO uint32_t SET;                               /**< Control Register 0, offset: 0x4 */
-    __IO uint32_t CLR;                               /**< Control Register 0, offset: 0x8 */
-    __IO uint32_t TOG;                               /**< Control Register 0, offset: 0xC */
-  } CTRL;
-  struct {                                         /* offset: 0x10 */
-    __IO uint32_t RW;                                /**< Status Register, offset: 0x10 */
-    __IO uint32_t SET;                               /**< Status Register, offset: 0x14 */
-    __IO uint32_t CLR;                               /**< Status Register, offset: 0x18 */
-    __IO uint32_t TOG;                               /**< Status Register, offset: 0x1C */
-  } STAT;
-  struct {                                         /* offset: 0x20 */
-    __IO uint32_t RW;                                /**< Output Buffer Control Register, offset: 0x20 */
-    __IO uint32_t SET;                               /**< Output Buffer Control Register, offset: 0x24 */
-    __IO uint32_t CLR;                               /**< Output Buffer Control Register, offset: 0x28 */
-    __IO uint32_t TOG;                               /**< Output Buffer Control Register, offset: 0x2C */
-  } OUT_CTRL;
+  __IO uint32_t CTRL;                              /**< Control Register 0, offset: 0x0 */
+  __IO uint32_t CTRL_SET;                          /**< Control Register 0, offset: 0x4 */
+  __IO uint32_t CTRL_CLR;                          /**< Control Register 0, offset: 0x8 */
+  __IO uint32_t CTRL_TOG;                          /**< Control Register 0, offset: 0xC */
+  __IO uint32_t STAT;                              /**< Status Register, offset: 0x10 */
+  __IO uint32_t STAT_SET;                          /**< Status Register, offset: 0x14 */
+  __IO uint32_t STAT_CLR;                          /**< Status Register, offset: 0x18 */
+  __IO uint32_t STAT_TOG;                          /**< Status Register, offset: 0x1C */
+  __IO uint32_t OUT_CTRL;                          /**< Output Buffer Control Register, offset: 0x20 */
+  __IO uint32_t OUT_CTRL_SET;                      /**< Output Buffer Control Register, offset: 0x24 */
+  __IO uint32_t OUT_CTRL_CLR;                      /**< Output Buffer Control Register, offset: 0x28 */
+  __IO uint32_t OUT_CTRL_TOG;                      /**< Output Buffer Control Register, offset: 0x2C */
   __IO uint32_t OUT_BUF;                           /**< Output Frame Buffer Pointer Register, offset: 0x30 */
        uint8_t RESERVED_0[12];
   __IO uint32_t OUT_BUF2;                          /**< Output Frame Buffer Pointer #2 Register, offset: 0x40 */
@@ -261,12 +255,10 @@ typedef struct {
        uint8_t RESERVED_6[12];
   __IO uint32_t OUT_AS_LRC;                        /**< Alpha Surface Lower Right Coordinate Register, offset: 0xA0 */
        uint8_t RESERVED_7[12];
-  struct {                                         /* offset: 0xB0 */
-    __IO uint32_t RW;                                /**< Processed Surface (PS) Control Register, offset: 0xB0 */
-    __IO uint32_t SET;                               /**< Processed Surface (PS) Control Register, offset: 0xB4 */
-    __IO uint32_t CLR;                               /**< Processed Surface (PS) Control Register, offset: 0xB8 */
-    __IO uint32_t TOG;                               /**< Processed Surface (PS) Control Register, offset: 0xBC */
-  } PS_CTRL;
+  __IO uint32_t PS_CTRL;                           /**< Processed Surface (PS) Control Register, offset: 0xB0 */
+  __IO uint32_t PS_CTRL_SET;                       /**< Processed Surface (PS) Control Register, offset: 0xB4 */
+  __IO uint32_t PS_CTRL_CLR;                       /**< Processed Surface (PS) Control Register, offset: 0xB8 */
+  __IO uint32_t PS_CTRL_TOG;                       /**< Processed Surface (PS) Control Register, offset: 0xBC */
   __IO uint32_t PS_BUF;                            /**< PS Input Buffer Address Register, offset: 0xC0 */
        uint8_t RESERVED_8[12];
   __IO uint32_t PS_UBUF;                           /**< PS U/Cb or 2 Plane UV Input Buffer Address Register, offset: 0xD0 */
@@ -331,52 +323,40 @@ typedef struct {
        uint8_t RESERVED_38[12];
   __IO uint32_t AS_CLRKEYHIGH_1;                   /**< Overlay Color Key High Register, offset: 0x300 */
        uint8_t RESERVED_39[12];
-  struct {                                         /* offset: 0x310 */
-    __IO uint32_t RW;                                /**< Control Register 2, offset: 0x310 */
-    __IO uint32_t SET;                               /**< Control Register 2, offset: 0x314 */
-    __IO uint32_t CLR;                               /**< Control Register 2, offset: 0x318 */
-    __IO uint32_t TOG;                               /**< Control Register 2, offset: 0x31C */
-  } CTRL2;
+  __IO uint32_t CTRL2;                             /**< Control Register 2, offset: 0x310 */
+  __IO uint32_t CTRL2_SET;                         /**< Control Register 2, offset: 0x314 */
+  __IO uint32_t CTRL2_CLR;                         /**< Control Register 2, offset: 0x318 */
+  __IO uint32_t CTRL2_TOG;                         /**< Control Register 2, offset: 0x31C */
   __IO uint32_t POWER_REG0;                        /**< Power Control Register 0, offset: 0x320 */
        uint8_t RESERVED_40[12];
   __IO uint32_t POWER_REG1;                        /**< Power Control Register 1, offset: 0x330 */
        uint8_t RESERVED_41[12];
-  struct {                                         /* offset: 0x340 */
-    __IO uint32_t RW;                                /**< Data Path Control 0 Register, offset: 0x340 */
-    __IO uint32_t SET;                               /**< Data Path Control 0 Register, offset: 0x344 */
-    __IO uint32_t CLR;                               /**< Data Path Control 0 Register, offset: 0x348 */
-    __IO uint32_t TOG;                               /**< Data Path Control 0 Register, offset: 0x34C */
-  } DATA_PATH_CTRL0;
-       uint8_t RESERVED_42[64];
-  struct {                                         /* offset: 0x390 */
-    __IO uint32_t RW;                                /**< IRQ Mask Register, offset: 0x390 */
-    __IO uint32_t SET;                               /**< IRQ Mask Register, offset: 0x394 */
-    __IO uint32_t CLR;                               /**< IRQ Mask Register, offset: 0x398 */
-    __IO uint32_t TOG;                               /**< IRQ Mask Register, offset: 0x39C */
-  } IRQ_MASK;
-  struct {                                         /* offset: 0x3A0 */
-    __IO uint32_t RW;                                /**< Interrupt Register, offset: 0x3A0 */
-    __IO uint32_t SET;                               /**< Interrupt Register, offset: 0x3A4 */
-    __IO uint32_t CLR;                               /**< Interrupt Register, offset: 0x3A8 */
-    __IO uint32_t TOG;                               /**< Interrupt Register, offset: 0x3AC */
-  } IRQ;
+  __IO uint32_t DATA_PATH_CTRL0;                                /**< Data Path Control 0 Register, offset: 0x340 */
+  __IO uint32_t DATA_PATH_CTRL0_SET;                               /**< Data Path Control 0 Register, offset: 0x344 */
+  __IO uint32_t DATA_PATH_CTRL0_CLR;                               /**< Data Path Control 0 Register, offset: 0x348 */
+  __IO uint32_t DATA_PATH_CTRL0_TOG;                               /**< Data Path Control 0 Register, offset: 0x34C */
+  uint8_t RESERVED_42[64];
+  __IO uint32_t IRQ_MASK;                          /**< PXP IRQ Mask Register, offset: 0x390 */
+  __IO uint32_t IRQ_MASK_SET;                      /**< PXP IRQ Mask Register, offset: 0x394 */
+  __IO uint32_t IRQ_MASK_CLR;                      /**< PXP IRQ Mask Register, offset: 0x398 */
+  __IO uint32_t IRQ_MASK_TOG;                      /**< PXP IRQ Mask Register, offset: 0x39C */
+  __IO uint32_t IRQ;                               /**< PXP Interrupt Register, offset: 0x3A0 */
+  __IO uint32_t IRQ_SET;                           /**< PXP Interrupt Register, offset: 0x3A4 */
+  __IO uint32_t IRQ_CLR;                           /**< PXP Interrupt Register, offset: 0x3A8 */
+  __IO uint32_t IRQ_TOG;                           /**< PXP Interrupt Register, offset: 0x3AC */
        uint8_t RESERVED_43[80];
   __IO uint32_t NEXT;                              /**< Next Frame Pointer Register, offset: 0x400 */
        uint8_t RESERVED_44[60];
   __IO uint32_t OUT_BUF3;                          /**< Output Frame Buffer Pointer #3 Register, offset: 0x440 */
        uint8_t RESERVED_45[12];
-  struct {                                         /* offset: 0x450 */
-    __IO uint32_t RW;                                /**< Input Fetch Control Channel 0 Register, offset: 0x450 */
-    __IO uint32_t SET;                               /**< Input Fetch Control Channel 0 Register, offset: 0x454 */
-    __IO uint32_t CLR;                               /**< Input Fetch Control Channel 0 Register, offset: 0x458 */
-    __IO uint32_t TOG;                               /**< Input Fetch Control Channel 0 Register, offset: 0x45C */
-  } INPUT_FETCH_CTRL_CH0;
-  struct {                                         /* offset: 0x460 */
-    __IO uint32_t RW;                                /**< Input Fetch Control Channel 1 Register, offset: 0x460 */
-    __IO uint32_t SET;                               /**< Input Fetch Control Channel 1 Register, offset: 0x464 */
-    __IO uint32_t CLR;                               /**< Input Fetch Control Channel 1 Register, offset: 0x468 */
-    __IO uint32_t TOG;                               /**< Input Fetch Control Channel 1 Register, offset: 0x46C */
-  } INPUT_FETCH_CTRL_CH1;
+  __IO uint32_t INPUT_FETCH_CTRL_CH0;              /**< Pre-fetch engine Control Channel 0 Register, offset: 0x450 */
+  __IO uint32_t INPUT_FETCH_CTRL_CH0_SET;          /**< Pre-fetch engine Control Channel 0 Register, offset: 0x454 */
+  __IO uint32_t INPUT_FETCH_CTRL_CH0_CLR;          /**< Pre-fetch engine Control Channel 0 Register, offset: 0x458 */
+  __IO uint32_t INPUT_FETCH_CTRL_CH0_TOG;          /**< Pre-fetch engine Control Channel 0 Register, offset: 0x45C */
+  __IO uint32_t INPUT_FETCH_CTRL_CH1;              /**< Pre-fetch engine Control Channel 1 Register, offset: 0x460 */
+  __IO uint32_t INPUT_FETCH_CTRL_CH1_SET;          /**< Pre-fetch engine Control Channel 1 Register, offset: 0x464 */
+  __IO uint32_t INPUT_FETCH_CTRL_CH1_CLR;          /**< Pre-fetch engine Control Channel 1 Register, offset: 0x468 */
+  __IO uint32_t INPUT_FETCH_CTRL_CH1_TOG;          /**< Pre-fetch engine Control Channel 1 Register, offset: 0x46C */
   __I  uint32_t INPUT_FETCH_STATUS_CH0;            /**< Input Fetch Status Channel 0 Register, offset: 0x470 */
        uint8_t RESERVED_46[12];
   __I  uint32_t INPUT_FETCH_STATUS_CH1;            /**< Input Fetch Status Channel 1 Register, offset: 0x480 */
@@ -399,42 +379,30 @@ typedef struct {
        uint8_t RESERVED_55[12];
   __IO uint32_t INPUT_FETCH_PITCH;                 /**< Input Fetch Pitch Register, offset: 0x510 */
        uint8_t RESERVED_56[12];
-  struct {                                         /* offset: 0x520 */
-    __IO uint32_t RW;                                /**< Input Fetch Shift Control Channel 0 Register, offset: 0x520 */
-    __IO uint32_t SET;                               /**< Input Fetch Shift Control Channel 0 Register, offset: 0x524 */
-    __IO uint32_t CLR;                               /**< Input Fetch Shift Control Channel 0 Register, offset: 0x528 */
-    __IO uint32_t TOG;                               /**< Input Fetch Shift Control Channel 0 Register, offset: 0x52C */
-  } INPUT_FETCH_SHIFT_CTRL_CH0;
-  struct {                                         /* offset: 0x530 */
-    __IO uint32_t RW;                                /**< Input Fetch Shift Control Channel 1 Register, offset: 0x530 */
-    __IO uint32_t SET;                               /**< Input Fetch Shift Control Channel 1 Register, offset: 0x534 */
-    __IO uint32_t CLR;                               /**< Input Fetch Shift Control Channel 1 Register, offset: 0x538 */
-    __IO uint32_t TOG;                               /**< Input Fetch Shift Control Channel 1 Register, offset: 0x53C */
-  } INPUT_FETCH_SHIFT_CTRL_CH1;
-  struct {                                         /* offset: 0x540 */
-    __IO uint32_t RW;                                /**< Input Fetch Shift Offset Channel 0 Register, offset: 0x540 */
-    __IO uint32_t SET;                               /**< Input Fetch Shift Offset Channel 0 Register, offset: 0x544 */
-    __IO uint32_t CLR;                               /**< Input Fetch Shift Offset Channel 0 Register, offset: 0x548 */
-    __IO uint32_t TOG;                               /**< Input Fetch Shift Offset Channel 0 Register, offset: 0x54C */
-  } INPUT_FETCH_SHIFT_OFFSET_CH0;
-  struct {                                         /* offset: 0x550 */
-    __IO uint32_t RW;                                /**< Input Fetch Shift Offset Channel 1 Register, offset: 0x550 */
-    __IO uint32_t SET;                               /**< Input Fetch Shift Offset Channel 1 Register, offset: 0x554 */
-    __IO uint32_t CLR;                               /**< Input Fetch Shift Offset Channel 1 Register, offset: 0x558 */
-    __IO uint32_t TOG;                               /**< Input Fetch Shift Offset Channel 1 Register, offset: 0x55C */
-  } INPUT_FETCH_SHIFT_OFFSET_CH1;
-  struct {                                         /* offset: 0x560 */
-    __IO uint32_t RW;                                /**< Input Fetch Shift Width Channel 0 Register, offset: 0x560 */
-    __IO uint32_t SET;                               /**< Input Fetch Shift Width Channel 0 Register, offset: 0x564 */
-    __IO uint32_t CLR;                               /**< Input Fetch Shift Width Channel 0 Register, offset: 0x568 */
-    __IO uint32_t TOG;                               /**< Input Fetch Shift Width Channel 0 Register, offset: 0x56C */
-  } INPUT_FETCH_SHIFT_WIDTH_CH0;
-  struct {                                         /* offset: 0x570 */
-    __IO uint32_t RW;                                /**< Input Fetch Shift Width Channel 1 Register, offset: 0x570 */
-    __IO uint32_t SET;                               /**< Input Fetch Shift Width Channel 1 Register, offset: 0x574 */
-    __IO uint32_t CLR;                               /**< Input Fetch Shift Width Channel 1 Register, offset: 0x578 */
-    __IO uint32_t TOG;                               /**< Input Fetch Shift Width Channel 1 Register, offset: 0x57C */
-  } INPUT_FETCH_SHIFT_WIDTH_CH1;
+  __IO uint32_t INPUT_FETCH_SHIFT_CTRL_CH0;        /**< offset: 0x520 */
+  __IO uint32_t INPUT_FETCH_SHIFT_CTRL_CH0_SET;    /**< offset: 0x524 */
+  __IO uint32_t INPUT_FETCH_SHIFT_CTRL_CH0_CLR;    /**< offset: 0x528 */
+  __IO uint32_t INPUT_FETCH_SHIFT_CTRL_CH0_TOG;    /**< offset: 0x52C */
+  __IO uint32_t INPUT_FETCH_SHIFT_CTRL_CH1;        /**< offset: 0x530 */
+  __IO uint32_t INPUT_FETCH_SHIFT_CTRL_CH1_SET;    /**< offset: 0x534 */
+  __IO uint32_t INPUT_FETCH_SHIFT_CTRL_CH1_CLR;    /**< offset: 0x538 */
+  __IO uint32_t INPUT_FETCH_SHIFT_CTRL_CH1_TOG;    /**< offset: 0x53C */
+  __IO uint32_t INPUT_FETCH_SHIFT_OFFSET_CH0;      /**< offset: 0x540 */
+  __IO uint32_t INPUT_FETCH_SHIFT_OFFSET_CH0_SET;  /**< offset: 0x544 */
+  __IO uint32_t INPUT_FETCH_SHIFT_OFFSET_CH0_CLR;  /**< offset: 0x548 */
+  __IO uint32_t INPUT_FETCH_SHIFT_OFFSET_CH0_TOG;  /**< offset: 0x54C */
+  __IO uint32_t INPUT_FETCH_SHIFT_OFFSET_CH1;      /**< offset: 0x550 */
+  __IO uint32_t INPUT_FETCH_SHIFT_OFFSET_CH1_SET;  /**< offset: 0x554 */
+  __IO uint32_t INPUT_FETCH_SHIFT_OFFSET_CH1_CLR;  /**< offset: 0x558 */
+  __IO uint32_t INPUT_FETCH_SHIFT_OFFSET_CH1_TOG;  /**< offset: 0x55C */
+  __IO uint32_t INPUT_FETCH_SHIFT_WIDTH_CH0;       /**< offset: 0x560 */
+  __IO uint32_t INPUT_FETCH_SHIFT_WIDTH_CH0_SET;   /**< offset: 0x564 */
+  __IO uint32_t INPUT_FETCH_SHIFT_WIDTH_CH0_CLR;   /**< offset: 0x568 */
+  __IO uint32_t INPUT_FETCH_SHIFT_WIDTH_CH0_TOG;   /**< offset: 0x56C */
+  __IO uint32_t INPUT_FETCH_SHIFT_WIDTH_CH1;       /**< offset: 0x570 */
+  __IO uint32_t INPUT_FETCH_SHIFT_WIDTH_CH1_SET;   /**< offset: 0x574 */
+  __IO uint32_t INPUT_FETCH_SHIFT_WIDTH_CH1_CLR;   /**< offset: 0x578 */
+  __IO uint32_t INPUT_FETCH_SHIFT_WIDTH_CH1_TOG;   /**< offset: 0x57C */
   __IO uint32_t INPUT_FETCH_ADDR_0_CH0;            /**< Input Fetch Address 0 Channel 0 Register, offset: 0x580 */
        uint8_t RESERVED_57[12];
   __IO uint32_t INPUT_FETCH_ADDR_1_CH0;            /**< Input Fetch Address 1 Channel 0 Register, offset: 0x590 */
@@ -443,18 +411,14 @@ typedef struct {
        uint8_t RESERVED_59[12];
   __IO uint32_t INPUT_FETCH_ADDR_1_CH1;            /**< Input Fetch Address 1 Channel 1 Register, offset: 0x5B0 */
        uint8_t RESERVED_60[12];
-  struct {                                         /* offset: 0x5C0 */
-    __IO uint32_t RW;                                /**< Input Store Control Channel 0 Register, offset: 0x5C0 */
-    __IO uint32_t SET;                               /**< Input Store Control Channel 0 Register, offset: 0x5C4 */
-    __IO uint32_t CLR;                               /**< Input Store Control Channel 0 Register, offset: 0x5C8 */
-    __IO uint32_t TOG;                               /**< Input Store Control Channel 0 Register, offset: 0x5CC */
-  } INPUT_STORE_CTRL_CH0;
-  struct {                                         /* offset: 0x5D0 */
-    __IO uint32_t RW;                                /**< Input Store Control Channel 1 Register, offset: 0x5D0 */
-    __IO uint32_t SET;                               /**< Input Store Control Channel 1 Register, offset: 0x5D4 */
-    __IO uint32_t CLR;                               /**< Input Store Control Channel 1 Register, offset: 0x5D8 */
-    __IO uint32_t TOG;                               /**< Input Store Control Channel 1 Register, offset: 0x5DC */
-  } INPUT_STORE_CTRL_CH1;
+  __IO uint32_t INPUT_STORE_CTRL_CH0;              /**< Store engine Control Channel 0 Register, offset: 0x5C0 */
+  __IO uint32_t INPUT_STORE_CTRL_CH0_SET;          /**< Store engine Control Channel 0 Register, offset: 0x5C4 */
+  __IO uint32_t INPUT_STORE_CTRL_CH0_CLR;          /**< Store engine Control Channel 0 Register, offset: 0x5C8 */
+  __IO uint32_t INPUT_STORE_CTRL_CH0_TOG;          /**< Store engine Control Channel 0 Register, offset: 0x5CC */
+  __IO uint32_t INPUT_STORE_CTRL_CH1;              /**< Store engine Control Channel 1 Register, offset: 0x5D0 */
+  __IO uint32_t INPUT_STORE_CTRL_CH1_SET;          /**< Store engine Control Channel 1 Register, offset: 0x5D4 */
+  __IO uint32_t INPUT_STORE_CTRL_CH1_CLR;          /**< Store engine Control Channel 1 Register, offset: 0x5D8 */
+  __IO uint32_t INPUT_STORE_CTRL_CH1_TOG;          /**< Store engine Control Channel 1 Register, offset: 0x5DC */
   __I  uint32_t INPUT_STORE_STATUS_CH0;            /**< Input Store Status Channel 0 Register, offset: 0x5E0 */
        uint8_t RESERVED_61[12];
   __I  uint32_t INPUT_STORE_STATUS_CH1;            /**< Input Store Status Channel 1 Register, offset: 0x5F0 */
@@ -465,18 +429,14 @@ typedef struct {
        uint8_t RESERVED_64[12];
   __IO uint32_t INPUT_STORE_PITCH;                 /**< Input Store Pitch Register, offset: 0x620 */
        uint8_t RESERVED_65[12];
-  struct {                                         /* offset: 0x630 */
-    __IO uint32_t RW;                                /**< Input Store Shift Control Channel 0 Register, offset: 0x630 */
-    __IO uint32_t SET;                               /**< Input Store Shift Control Channel 0 Register, offset: 0x634 */
-    __IO uint32_t CLR;                               /**< Input Store Shift Control Channel 0 Register, offset: 0x638 */
-    __IO uint32_t TOG;                               /**< Input Store Shift Control Channel 0 Register, offset: 0x63C */
-  } INPUT_STORE_SHIFT_CTRL_CH0;
-  struct {                                         /* offset: 0x640 */
-    __IO uint32_t RW;                                /**< Input Store Shift Control Channel 1 Register, offset: 0x640 */
-    __IO uint32_t SET;                               /**< Input Store Shift Control Channel 1 Register, offset: 0x644 */
-    __IO uint32_t CLR;                               /**< Input Store Shift Control Channel 1 Register, offset: 0x648 */
-    __IO uint32_t TOG;                               /**< Input Store Shift Control Channel 1 Register, offset: 0x64C */
-  } INPUT_STORE_SHIFT_CTRL_CH1;
+  __IO uint32_t INPUT_STORE_SHIFT_CTRL_CH0;        /**< offset: 0x630 */
+  __IO uint32_t INPUT_STORE_SHIFT_CTRL_CH0_SET;    /**< offset: 0x634 */
+  __IO uint32_t INPUT_STORE_SHIFT_CTRL_CH0_CLR;    /**< offset: 0x638 */
+  __IO uint32_t INPUT_STORE_SHIFT_CTRL_CH0_TOG;    /**< offset: 0x63C */
+  __IO uint32_t INPUT_STORE_SHIFT_CTRL_CH1;        /**< offset: 0x640 */
+  __IO uint32_t INPUT_STORE_SHIFT_CTRL_CH1_SET;    /**< offset: 0x644 */
+  __IO uint32_t INPUT_STORE_SHIFT_CTRL_CH1_CLR;    /**< offset: 0x648 */
+  __IO uint32_t INPUT_STORE_SHIFT_CTRL_CH1_TOG;    /**< offset: 0x64C */
        uint8_t RESERVED_66[64];
   __IO uint32_t INPUT_STORE_ADDR_0_CH0;            /**< Input Store Address 0 Channel 0 Register, offset: 0x690 */
        uint8_t RESERVED_67[12];

@@ -938,5 +938,16 @@
 /* @brief Delay Elements in autoupdate offset */
 #define FSL_FEATURE_XSPI_DLL_REF_VALUE_AUTOUPDATE_OFFSET_DELAY_ELEMENT_COUNT (0U)
 
+/* PXP module features */
+
+/* @brief PXP module supports repeat run */
+#define FSL_FEATURE_PXP_HAS_EN_REPEAT (0)
+/* @brief PXP doesn't have LUT */
+#define FSL_FEATURE_PXP_HAS_NO_LUT (1)
+/* @brief PXP doesn't have PORTER_DUFF_CTR */
+#define FSL_FEATURE_PXP_HAS_NO_PORTER_DUFF_CTRL (1)
+/* @brief PXP 4.0 version */
+#define FSL_FEATURE_PXP_V4 (1)
+
 #endif /* _MIMX94398_cm7_core0_FEATURES_H_ */
 
