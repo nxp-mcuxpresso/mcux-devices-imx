@@ -7,6 +7,7 @@ rsource "Kconfig.chip"
 rsource "drivers/Kconfig"
 rsource "../../../arm/Kconfig.common"
 rsource "Kconfig.defconfig"
+rsource "Kconfig.rpmsg"
 
 ## pinmux dependency
 config MCUX_DEPENDENCY_PINMUX

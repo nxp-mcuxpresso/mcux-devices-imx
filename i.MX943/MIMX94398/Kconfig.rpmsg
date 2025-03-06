@@ -1,0 +1,51 @@
+# Copyright 2025 NXP
+#
+# SPDX-License-Identifier: BSD-3-Clause
+
+config RPMSG_A55_M33S
+    bool "RPMSG A55 as master, M33S as remote"
+    default n
+    depends on !USE_TCM_AS_RPMSG_SHMEM
+
+config RPMSG_A55_M70
+    bool "RPMSG A55 as master, M70 as remote"
+    default n
+    depends on !USE_TCM_AS_RPMSG_SHMEM
+
+config RPMSG_A55_M71
+    bool "RPMSG A55 as master, M71 as remote"
+    default n
+    depends on !USE_TCM_AS_RPMSG_SHMEM
+
+    config RPMSG_M33S_M70
+        bool "RPMSG M33S as master, M70 as remote"
+        default n
+        depends on USE_TCM_AS_RPMSG_SHMEM
+
+    config RPMSG_M70_M33S
+        bool "RPMSG M70 as master, M33S as remote"
+        default n
+        depends on USE_TCM_AS_RPMSG_SHMEM
+    config RPMSG_M33S_M71
+        bool "RPMSG M33S as master, M71 as remote"
+        default n
+        depends on USE_TCM_AS_RPMSG_SHMEM
+
+    config RPMSG_M71_M33S
+        bool "RPMSG M71 as master, M33S as remote"
+        default n
+        depends on USE_TCM_AS_RPMSG_SHMEM
+    config RPMSG_M70_M71
+        bool "RPMSG M70 as master, M71 as remote"
+        default n
+        depends on USE_TCM_AS_RPMSG_SHMEM
+
+    config RPMSG_M71_M70
+        bool "RPMSG M71 as master, M70 as remote"
+        default n
+        depends on USE_TCM_AS_RPMSG_SHMEM
+
+config USE_TCM_AS_RPMSG_SHMEM
+    bool "Use TCM as rpmsg share memory"
+    default n
+
