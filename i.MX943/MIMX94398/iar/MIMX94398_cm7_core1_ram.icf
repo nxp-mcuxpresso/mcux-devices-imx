@@ -60,7 +60,13 @@ define symbol m_data_start             = m_interrupts_ram_start + __ram_vector_t
 define symbol m_data_end               = 0x20030FFF;
 
 define symbol m_ncache_start          = 0x20031000;
-define symbol m_ncache_end            = 0x2003BFFF;
+define symbol m_ncache_end            = 0x20038FFF;
+
+define symbol m_rpmsg_shmem_m70_m71_start          = 0x20039000;
+define symbol m_rpmsg_shmem_m70_m71_end            = 0x2003A7FF;
+
+define symbol m_rpmsg_shmem_m33s_m71_start          = 0x2003A800;
+define symbol m_rpmsg_shmem_m33s_m71_end            = 0x2003BFFF;
 
 define symbol m_rsc_tbl_start          = 0x2003C000;
 define symbol m_rsc_tbl_end            = 0x2003FFFF;
