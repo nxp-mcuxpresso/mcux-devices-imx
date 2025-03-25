@@ -1,13 +1,13 @@
 /*
 ** ###################################################################
 **     Version:             rev. 4.0, 2018-01-26
-**     Build:               b231024
+**     Build:               b250326
 **
 **     Abstract:
 **         Chip specific module features.
 **
 **     Copyright 2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2023 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -171,6 +171,11 @@
 /* @brief Has data register toggle DR_TOGGLE. */
 #define FSL_FEATURE_IGPIO_HAS_DR_TOGGLE (0)
 
+/* GPT module features */
+
+/* @brief Is affected by errata with ID 3777. */
+#define FSL_FEATURE_GPT_HAS_ERRATA_3777 (0)
+
 /* SAI module features */
 
 /* @brief SAI has FIFO in this soc (register bit fields TCR1[TFW]. */
@@ -213,6 +218,8 @@
 #define FSL_FEATURE_SAI_HAS_MCR_MCLK_POST_DIV (0)
 /* @brief Support Channel Mode (register bit fields TCR4[CHMOD]). */
 #define FSL_FEATURE_SAI_HAS_CHANNEL_MODE (1)
+/* @brief Support synchronous with another SAI. */
+#define FSL_FEATURE_SAI_HAS_SYNC_WITH_ANOTHER_SAI (0)
 /* @brief SAI5 AND SAI6 SHARE ONE IRQNUMBER. */
 #define FSL_FEATURE_SAI_SAI5_SAI6_SHARE_IRQ  (1)
 
@@ -304,6 +311,18 @@
 #define FSL_FEATURE_QSPI_HAS_NO_TDH (0)
 /* @brief QSPI AHB buffer size in byte. */
 #define FSL_FEATURE_QSPI_AHB_BUFFER_SIZE (1024U)
+/* @brief there is no END_CFG bit in MCR register. */
+#define FSL_FEATURE_QSPI_HAS_NO_MCR_END (0)
+/* @brief there is DLLCRA register. */
+#define FSL_FEATURE_QSPI_HAS_DLLCRA (0)
+/* @brief there is data learning feature. */
+#define FSL_FEATURE_QSPI_HAS_DATA_LEARNING (1)
+/* @brief there is AHB Command priority granted. */
+#define FSL_FEATURE_QSPI_HAS_AHB_CMD_PRIORITY (1)
+/* @brief there is AHB sequence error status flag. */
+#define FSL_FEATURE_QSPI_HAS_AHB_SEQ_ERR (1)
+/* @brief there is Tx buffer enough data available flag. */
+#define FSL_FEATURE_QSPI_HAS_TX_BUFF_ENOUGH_DATA (1)
 /* @brief QSPI AMBA base address. */
 #define FSL_FEATURE_QSPI_AMBA_BASE (0xC0000000U)
 /* @brief QSPI AHB buffer ARDB base address. */
@@ -399,6 +418,10 @@
 #define FSL_FEATURE_USDHC_INSTANCE_SUPPORT_1V8_SIGNALn(x) (1)
 /* @brief Has no retuning time counter (HOST_CTRL_CAP[TIME_COUNT_RETURNING]) */
 #define FSL_FEATURE_USDHC_REGISTER_HOST_CTRL_CAP_HAS_NO_RETUNING_TIME_COUNTER (0)
+/* @brief Has no VSELECT bit in VEND_SPEC register */
+#define FSL_FEATURE_USDHC_HAS_NO_VOLTAGE_SELECT (0)
+/* @brief Has no VS18 bit in HOST_CTRL_CAP register */
+#define FSL_FEATURE_USDHC_HAS_NO_VS18 (0)
 
 #endif /* _MIMX8MQ6_cm4_FEATURES_H_ */
 

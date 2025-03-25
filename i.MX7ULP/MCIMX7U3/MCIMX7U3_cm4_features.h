@@ -1,13 +1,13 @@
 /*
 ** ###################################################################
 **     Version:             rev. 7.0, 2018-11-05
-**     Build:               b240229
+**     Build:               b250325
 **
 **     Abstract:
 **         Chip specific module features.
 **
 **     Copyright 2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -229,6 +229,10 @@
 #define FSL_FEATURE_ACMP_HAS_C1_DMODE_BIT (1)
 /* @brief Has C2 RRE Bit */
 #define FSL_FEATURE_ACMP_HAS_C2_RRE_BIT (0)
+/* @brief Has C3 RDIVE Bit */
+#define FSL_FEATURE_ACMP_HAS_C3_RDIVE_BIT (1)
+/* @brief If support 3v domain */
+#define FSL_FEATURE_ACMP_HAS_NO_3V_DOMAIN (0)
 
 /* CRC module features */
 
@@ -275,6 +279,8 @@
 #define FSL_FEATURE_DMAMUX_HAS_A_ON (1)
 /* @brief Register CHCFGn width. */
 #define FSL_FEATURE_DMAMUX_CHCFG_REGISTER_WIDTH (32)
+/* @brief Register CHCFGn sorted in order 3, 2 ,1 ,0 ,7 ,6 ,5 ,4 ... */
+#define FSL_FEATURE_DMAMUX_CHANNEL_NEEDS_ENDIAN_CONVERT (0)
 
 /* EWM module features */
 
@@ -614,6 +620,8 @@
 
 /* @brief Has separate DMA RX and TX requests. */
 #define FSL_FEATURE_LPI2C_HAS_SEPARATE_DMA_RX_TX_REQn(x) (1)
+/* @brief Has dedicated interrupt for master and slave. */
+#define FSL_FEATURE_LPI2C_HAS_ROLE_SPLIT_IRQ (0)
 /* @brief Capacity (number of entries) of the transmit/receive FIFO (or zero if no FIFO is available). */
 #define FSL_FEATURE_LPI2C_FIFO_SIZEn(x) (4)
 
@@ -740,6 +748,8 @@
 #define FSL_FEATURE_LPUART_HAS_HDCR (0)
 /* @brief Has register Timeout. */
 #define FSL_FEATURE_LPUART_HAS_TIMEOUT (0)
+/* @brief UART support swap TX and RX (has bit CTRL[SWAP]). */
+#define FSL_FEATURE_LPUART_HAS_CTRL_SWAP (0)
 
 /* LTC module features */
 
@@ -757,6 +767,25 @@
 #define FSL_FEATURE_LTC_HAS_AES192 (0)
 /* @brief LTC module supports AES with 32 bytes key. */
 #define FSL_FEATURE_LTC_HAS_AES256 (0)
+
+/* MCM module features */
+
+/* @brief Has cache parity error ISCR[CPEE]. */
+#define FSL_FEATURE_MCM_HAS_CACHE_PARITY_ERROR (0)
+/* @brief Has cache write buffer error ISCR[CWBEE]. */
+#define FSL_FEATURE_MCM_HAS_CACHE_WRITE_BUFFER_ERROR (0)
+/* @brief LMD lock. LMDR2[RO]. */
+#define FSL_FEATURE_MCM_HAS_LMD_RO (0)
+/* @brief MCM has PC Parity. LMDR2[PCPME] or LMDR2[PCPFE]. */
+#define FSL_FEATURE_MCM_HAS_PC_PARITY (0)
+/* @brief Has buffer fault, register FATR, FDR, FADR. */
+#define FSL_FEATURE_MCM_HAS_BUFFER_FAULT (1)
+/* @brief Has register CPCR2. */
+#define FSL_FEATURE_MCM_HAS_CPCR2 (0)
+/* @brief Has LMEM fault, register LMFAR, LMFDLR, LMFDHR, LMFATR. */
+#define FSL_FEATURE_MCM_HAS_LMEM_FAULT (0)
+/* @brief  MCM has LMEM control, register LMPECR, LMPEIR. */
+#define FSL_FEATURE_MCM_HAS_LMEM_PARITY (0)
 
 /* SMC module features */
 
@@ -927,6 +956,18 @@
 #define FSL_FEATURE_QSPI_HAS_NO_TDH (0)
 /* @brief QSPI AHB buffer size in byte. */
 #define FSL_FEATURE_QSPI_AHB_BUFFER_SIZE (128U)
+/* @brief there is no END_CFG bit in MCR register. */
+#define FSL_FEATURE_QSPI_HAS_NO_MCR_END (0)
+/* @brief there is DLLCRA register. */
+#define FSL_FEATURE_QSPI_HAS_DLLCRA (0)
+/* @brief there is data learning feature. */
+#define FSL_FEATURE_QSPI_HAS_DATA_LEARNING (1)
+/* @brief there is AHB Command priority granted. */
+#define FSL_FEATURE_QSPI_HAS_AHB_CMD_PRIORITY (1)
+/* @brief there is AHB sequence error status flag. */
+#define FSL_FEATURE_QSPI_HAS_AHB_SEQ_ERR (1)
+/* @brief there is Tx buffer enough data available flag. */
+#define FSL_FEATURE_QSPI_HAS_TX_BUFF_ENOUGH_DATA (1)
 /* @brief QSPI AMBA base address. */
 #define FSL_FEATURE_QSPI_AMBA_BASE (0xC0000000U)
 /* @brief QSPI AHB buffer ARDB base address. */
@@ -1320,6 +1361,8 @@
 #define FSL_FEATURE_SIM_HAS_UIDH (0)
 /* @brief Has UIDM registers. */
 #define FSL_FEATURE_SIM_HAS_UIDM (0)
+/* @brief Supports software trigger (MISCTRL1[SW_TRG]). */
+#define FSL_FEATURE_SIM_HAS_SW_TRG (0)
 
 /* SNVS module features */
 
@@ -1375,6 +1418,10 @@
     (((x) == TPM5) ? (0) : \
     (((x) == TPM6) ? (0) : \
     (((x) == TPM7) ? (1) : (-1)))))))))
+/* @brief Has global time base enable. */
+#define FSL_FEATURE_TPM_HAS_GLOBAL_TIME_BASE_EN (1)
+/* @brief Has global time base sync. */
+#define FSL_FEATURE_TPM_HAS_GLOBAL_TIME_BASE_SYNC (1)
 /* @brief Has counter pause on trigger. */
 #define FSL_FEATURE_TPM_HAS_PAUSE_COUNTER_ON_TRIGGER (1)
 /* @brief Has external trigger selection. */
