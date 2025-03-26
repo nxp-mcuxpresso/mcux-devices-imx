@@ -316,7 +316,7 @@
 /* @brief there is DLLCRA register. */
 #define FSL_FEATURE_QSPI_HAS_DLLCRA (0)
 /* @brief there is data learning feature. */
-#define FSL_FEATURE_QSPI_HAS_DATA_LEARNING (1)
+#define FSL_FEATURE_QSPI_HAS_DATA_LEARNING (0)
 /* @brief there is AHB Command priority granted. */
 #define FSL_FEATURE_QSPI_HAS_AHB_CMD_PRIORITY (1)
 /* @brief there is AHB sequence error status flag. */
