@@ -1662,20 +1662,15 @@ static bool CPU_IrqMaskSet(uint32_t cpuIdx, bool maskIrqs)
             BLK_CTRL_S_AONMIX->CA55_IRQ_MASK[3] = irqMaskVal;
             BLK_CTRL_S_AONMIX->CA55_IRQ_MASK[4] = irqMaskVal;
             BLK_CTRL_S_AONMIX->CA55_IRQ_MASK[5] = irqMaskVal;
-            BLK_CTRL_S_AONMIX->CA55_IRQ_MASK[6] = irqMaskVal;
-            BLK_CTRL_S_AONMIX->CA55_IRQ_MASK[7] = irqMaskVal;
-            BLK_CTRL_S_AONMIX->CA55_IRQ_MASK[8] = irqMaskVal;
-            BLK_CTRL_S_AONMIX->CA55_IRQ_MASK[9] = irqMaskVal;
-            BLK_CTRL_S_AONMIX->CA55_IRQ_MASK[10] = irqMaskVal;
-            BLK_CTRL_S_AONMIX->CA55_IRQ_MASK[11] = irqMaskVal;
-            BLK_CTRL_S_AONMIX->CA55_IRQ_MASK[12] = irqMaskVal;
-            BLK_CTRL_S_AONMIX->CA55_IRQ_MASK[13] = irqMaskVal;
-            BLK_CTRL_S_AONMIX->CA55_IRQ_MASK[14] = irqMaskVal;
-            BLK_CTRL_S_AONMIX->CA55_IRQ_MASK[15] = irqMaskVal;
-            BLK_CTRL_S_AONMIX->CA55_IRQ_MASK[16] = irqMaskVal;
-            BLK_CTRL_S_AONMIX->CA55_IRQ_MASK[17] = irqMaskVal;
-            BLK_CTRL_S_AONMIX->CA55_IRQ_MASK[18] = irqMaskVal;
-            BLK_CTRL_S_AONMIX->CA55_IRQ_MASK[19] = irqMaskVal;
+            BLK_CTRL_S_AONMIX->CA55_IRQ_MASK6 = irqMaskVal;
+            BLK_CTRL_S_AONMIX->CA55_IRQ_MASK7 = irqMaskVal;
+            BLK_CTRL_S_AONMIX->CA55_IRQ_MASK8 = irqMaskVal;
+            BLK_CTRL_S_AONMIX->CA55_IRQ_MASK9 = irqMaskVal;
+            BLK_CTRL_S_AONMIX->CA55_IRQ_MASK10 = irqMaskVal;
+            BLK_CTRL_S_AONMIX->CA55_IRQ_MASK11 = irqMaskVal;
+            BLK_CTRL_S_AONMIX->CA55_IRQ_MASK12 = irqMaskVal;
+            BLK_CTRL_S_AONMIX->CA55_IRQ_MASK13 = irqMaskVal;
+            BLK_CTRL_S_AONMIX->CA55_IRQ_MASK14 = irqMaskVal;
             break;
 
         default:
