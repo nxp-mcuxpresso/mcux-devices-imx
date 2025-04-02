@@ -733,6 +733,10 @@
 #define FSL_FEATURE_NETC_HAS_NO_XGMII (1)
 /* @brief NXP Switch Tag support. */
 #define FSL_FEATURE_NETC_HAS_SWITCH_TAG (1)
+/* @brief NXP Switch port seamless redundancy support. */
+#define FSL_FEATURE_NETC_HAS_PORT_PSRCR (1)
+/* @brief NXP Switch port group support. */
+#define FSL_FEATURE_NETC_HAS_PORT_PGCR (1)
 
 /* PDM module features */
 
