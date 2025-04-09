@@ -1,7 +1,7 @@
 /*
 ** ###################################################################
 **     Version:             rev. 4.0, 2018-01-26
-**     Build:               b250326
+**     Build:               b250408
 **
 **     Abstract:
 **         Chip specific module features.
@@ -231,6 +231,8 @@
 #define FSL_FEATURE_LMEM_SUPPORT_ICACHE_DEMOTE_REMOVE (1)
 /* @brief Has no NONCACHEABLE section. */
 #define FSL_FEATURE_HAS_NO_NONCACHEABLE_SECTION (0)
+/* @brief Has Enable Write Buffer bit (register bit PCCCR[ENWRBUF]). */
+#define FSL_FEATURE_LMEM_HAS_ENWRBUF_BIT_CONFIG_SUPPORT (1)
 /* @brief L1 ICACHE line size in byte. */
 #define FSL_FEATURE_L1ICACHE_LINESIZE_BYTE (32)
 /* @brief L1 DCACHE line size in byte. */
