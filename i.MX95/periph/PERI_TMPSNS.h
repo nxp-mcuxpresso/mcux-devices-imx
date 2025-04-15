@@ -44,13 +44,13 @@
 **                          MIMX9596XVZXN_cm7
 **
 **     Version:             rev. 1.0, 2023-01-10
-**     Build:               b240728
+**     Build:               b250415
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for TMPSNS
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -176,10 +176,10 @@ typedef struct {
   __IO uint32_t PERIOD_CTRL_TOG;                   /**< Measurement Period Control, offset: 0x27C */
   __IO uint32_t REF_DIV;                           /**< Reference Clock Divider Control, offset: 0x280 */
        uint8_t RESERVED_3[44];
-  __IO uint32_t PUD_ST_CTRL;                       /**< Power-Up Delay and Self-Test Control, offset: 0x2B0 */
-  __IO uint32_t PUD_ST_CTRL_SET;                   /**< Power-Up Delay and Self-Test Control, offset: 0x2B4 */
-  __IO uint32_t PUD_ST_CTRL_CLR;                   /**< Power-Up Delay and Self-Test Control, offset: 0x2B8 */
-  __IO uint32_t PUD_ST_CTRL_TOG;                   /**< Power-Up Delay and Self-Test Control, offset: 0x2BC */
+  __IO uint32_t PUD_ST_CTRL;                       /**< Power-Up Delay Control, offset: 0x2B0 */
+  __IO uint32_t PUD_ST_CTRL_SET;                   /**< Power-Up Delay Control, offset: 0x2B4 */
+  __IO uint32_t PUD_ST_CTRL_CLR;                   /**< Power-Up Delay Control, offset: 0x2B8 */
+  __IO uint32_t PUD_ST_CTRL_TOG;                   /**< Power-Up Delay Control, offset: 0x2BC */
        uint8_t RESERVED_4[32];
   __IO uint32_t TRIM1;                             /**< Trim Control 1, offset: 0x2E0 */
   __IO uint32_t TRIM1_SET;                         /**< Trim Control 1, offset: 0x2E4 */
@@ -479,9 +479,9 @@ typedef struct {
 #define TMPSNS_STAT0_THR0_IF_SHIFT               (8U)
 /*! THR0_IF - Threshold0 Status Flag
  *  0b0..Event did not occur
- *  0b1..Event occurred
  *  0b0..No effect
  *  0b1..Clear the flag
+ *  0b1..Event occurred
  */
 #define TMPSNS_STAT0_THR0_IF(x)                  (((uint32_t)(((uint32_t)(x)) << TMPSNS_STAT0_THR0_IF_SHIFT)) & TMPSNS_STAT0_THR0_IF_MASK)
 
@@ -489,9 +489,9 @@ typedef struct {
 #define TMPSNS_STAT0_THR1_IF_SHIFT               (9U)
 /*! THR1_IF - Threshold1 Status Flag
  *  0b0..Event did not occur
- *  0b1..Event occurred
  *  0b0..No effect
  *  0b1..Clear the flag
+ *  0b1..Event occurred
  */
 #define TMPSNS_STAT0_THR1_IF(x)                  (((uint32_t)(((uint32_t)(x)) << TMPSNS_STAT0_THR1_IF_SHIFT)) & TMPSNS_STAT0_THR1_IF_MASK)
 
@@ -499,9 +499,9 @@ typedef struct {
 #define TMPSNS_STAT0_THR2_IF_SHIFT               (10U)
 /*! THR2_IF - Threshold2 Status Flag
  *  0b0..Event did not occur
- *  0b1..Event occurred
  *  0b0..No effect
  *  0b1..Clear the flag
+ *  0b1..Event occurred
  */
 #define TMPSNS_STAT0_THR2_IF(x)                  (((uint32_t)(((uint32_t)(x)) << TMPSNS_STAT0_THR2_IF_SHIFT)) & TMPSNS_STAT0_THR2_IF_MASK)
 
@@ -879,7 +879,7 @@ typedef struct {
 #define TMPSNS_CTRL1_MEAS_MODE_SHIFT             (24U)
 /*! MEAS_MODE - Measurement Mode
  *  0b00..Single One-Shot Measurement
- *  0b01..Continuous Measurement
+ *  0b01..Reserved
  *  0b10..Periodic One-Shot Measurement
  *  0b11..Reserved
  */
@@ -1124,9 +1124,9 @@ typedef struct {
 #define TMPSNS_STAT1_THR4_IF_SHIFT               (8U)
 /*! THR4_IF - Threshold4 Status Flag
  *  0b0..Event did not occur
- *  0b1..Event occurred
  *  0b0..No effect
  *  0b1..Clear the flag
+ *  0b1..Event occurred
  */
 #define TMPSNS_STAT1_THR4_IF(x)                  (((uint32_t)(((uint32_t)(x)) << TMPSNS_STAT1_THR4_IF_SHIFT)) & TMPSNS_STAT1_THR4_IF_MASK)
 
@@ -1134,9 +1134,9 @@ typedef struct {
 #define TMPSNS_STAT1_THR5_IF_SHIFT               (9U)
 /*! THR5_IF - Threshold5 Status Flag
  *  0b0..Event did not occur
- *  0b1..Event occurred
  *  0b0..No effect
  *  0b1..Clear the flag
+ *  0b1..Event occurred
  */
 #define TMPSNS_STAT1_THR5_IF(x)                  (((uint32_t)(((uint32_t)(x)) << TMPSNS_STAT1_THR5_IF_SHIFT)) & TMPSNS_STAT1_THR5_IF_MASK)
 
@@ -1420,7 +1420,7 @@ typedef struct {
 #define TMPSNS_REF_DIV_DE(x)                     (((uint32_t)(((uint32_t)(x)) << TMPSNS_REF_DIV_DE_SHIFT)) & TMPSNS_REF_DIV_DE_MASK)
 /*! @} */
 
-/*! @name PUD_ST_CTRL - Power-Up Delay and Self-Test Control */
+/*! @name PUD_ST_CTRL - Power-Up Delay Control */
 /*! @{ */
 
 #define TMPSNS_PUD_ST_CTRL_PUD_MASK              (0xFF0000U)
@@ -1429,7 +1429,7 @@ typedef struct {
 #define TMPSNS_PUD_ST_CTRL_PUD(x)                (((uint32_t)(((uint32_t)(x)) << TMPSNS_PUD_ST_CTRL_PUD_SHIFT)) & TMPSNS_PUD_ST_CTRL_PUD_MASK)
 /*! @} */
 
-/*! @name PUD_ST_CTRL_SET - Power-Up Delay and Self-Test Control */
+/*! @name PUD_ST_CTRL_SET - Power-Up Delay Control */
 /*! @{ */
 
 #define TMPSNS_PUD_ST_CTRL_SET_PUD_MASK          (0xFF0000U)
@@ -1438,7 +1438,7 @@ typedef struct {
 #define TMPSNS_PUD_ST_CTRL_SET_PUD(x)            (((uint32_t)(((uint32_t)(x)) << TMPSNS_PUD_ST_CTRL_SET_PUD_SHIFT)) & TMPSNS_PUD_ST_CTRL_SET_PUD_MASK)
 /*! @} */
 
-/*! @name PUD_ST_CTRL_CLR - Power-Up Delay and Self-Test Control */
+/*! @name PUD_ST_CTRL_CLR - Power-Up Delay Control */
 /*! @{ */
 
 #define TMPSNS_PUD_ST_CTRL_CLR_PUD_MASK          (0xFF0000U)
@@ -1447,7 +1447,7 @@ typedef struct {
 #define TMPSNS_PUD_ST_CTRL_CLR_PUD(x)            (((uint32_t)(((uint32_t)(x)) << TMPSNS_PUD_ST_CTRL_CLR_PUD_SHIFT)) & TMPSNS_PUD_ST_CTRL_CLR_PUD_MASK)
 /*! @} */
 
-/*! @name PUD_ST_CTRL_TOG - Power-Up Delay and Self-Test Control */
+/*! @name PUD_ST_CTRL_TOG - Power-Up Delay Control */
 /*! @{ */
 
 #define TMPSNS_PUD_ST_CTRL_TOG_PUD_MASK          (0xFF0000U)

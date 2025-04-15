@@ -44,13 +44,13 @@
 **                          MIMX9596XVZXN_cm7
 **
 **     Version:             rev. 1.0, 2023-01-10
-**     Build:               b240728
+**     Build:               b250415
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for CSI
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -848,8 +848,8 @@ typedef struct {
 #define CSI_INT_ST_PHY_phy_erresc_0_MASK         (0x10000U)
 #define CSI_INT_ST_PHY_phy_erresc_0_SHIFT        (16U)
 /*! phy_erresc_0 - Escape Entry Error on data lane 0.
- *  0b1..Escape entry error on data lane 0
  *  0b0..No error
+ *  0b1..Escape entry error on data lane 0
  */
 #define CSI_INT_ST_PHY_phy_erresc_0(x)           (((uint32_t)(((uint32_t)(x)) << CSI_INT_ST_PHY_phy_erresc_0_SHIFT)) & CSI_INT_ST_PHY_phy_erresc_0_MASK)
 
@@ -916,8 +916,8 @@ typedef struct {
 #define CSI_INT_MSK_PHY_mask_phy_erresc_0_MASK   (0x10000U)
 #define CSI_INT_MSK_PHY_mask_phy_erresc_0_SHIFT  (16U)
 /*! mask_phy_erresc_0 - Mask for phy_erresc_0.
- *  0b1..Enable the interrupt source.
  *  0b0..Interrupt source is masked.
+ *  0b1..Enable the interrupt source.
  */
 #define CSI_INT_MSK_PHY_mask_phy_erresc_0(x)     (((uint32_t)(((uint32_t)(x)) << CSI_INT_MSK_PHY_mask_phy_erresc_0_SHIFT)) & CSI_INT_MSK_PHY_mask_phy_erresc_0_MASK)
 
@@ -1216,8 +1216,8 @@ typedef struct {
 #define CSI_INT_MSK_LINE_mask_err_l_seq_di0_MASK (0x10000U)
 #define CSI_INT_MSK_LINE_mask_err_l_seq_di0_SHIFT (16U)
 /*! mask_err_l_seq_di0 - Mask for err_l_seq_di0
- *  0b1..Enable the interrupt source.
  *  0b0..Interrupt source is masked.
+ *  0b1..Enable the interrupt source.
  */
 #define CSI_INT_MSK_LINE_mask_err_l_seq_di0(x)   (((uint32_t)(((uint32_t)(x)) << CSI_INT_MSK_LINE_mask_err_l_seq_di0_SHIFT)) & CSI_INT_MSK_LINE_mask_err_l_seq_di0_MASK)
 
@@ -1416,8 +1416,8 @@ typedef struct {
 #define CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc0_MASK (0x1U)
 #define CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc0_SHIFT (0U)
 /*! err_f_bndry_match_vc0 - Error matching Frame Start with Frame End for virtual channel 0.
- *  0b1..Matching frame start with frame end error is detected.
  *  0b0..No error.
+ *  0b1..Matching frame start with frame end error is detected.
  */
 #define CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc0(x) (((uint32_t)(((uint32_t)(x)) << CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc0_SHIFT)) & CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc0_MASK)
 
@@ -1432,112 +1432,112 @@ typedef struct {
 #define CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc2_MASK (0x4U)
 #define CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc2_SHIFT (2U)
 /*! err_f_bndry_match_vc2 - Error matching Frame Start with Frame End for virtual channel 2.
- *  0b1..Matching frame start with frame end error is detected.
  *  0b0..No error.
+ *  0b1..Matching frame start with frame end error is detected.
  */
 #define CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc2(x) (((uint32_t)(((uint32_t)(x)) << CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc2_SHIFT)) & CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc2_MASK)
 
 #define CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc3_MASK (0x8U)
 #define CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc3_SHIFT (3U)
 /*! err_f_bndry_match_vc3 - Error matching Frame Start with Frame End for virtual channel 3.
- *  0b1..Matching frame start with frame end error is detected.
  *  0b0..No error.
+ *  0b1..Matching frame start with frame end error is detected.
  */
 #define CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc3(x) (((uint32_t)(((uint32_t)(x)) << CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc3_SHIFT)) & CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc3_MASK)
 
 #define CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc4_MASK (0x10U)
 #define CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc4_SHIFT (4U)
 /*! err_f_bndry_match_vc4 - Error matching Frame Start with Frame End for virtual channel 4.
- *  0b1..Matching frame start with frame end error is detected.
  *  0b0..No error.
+ *  0b1..Matching frame start with frame end error is detected.
  */
 #define CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc4(x) (((uint32_t)(((uint32_t)(x)) << CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc4_SHIFT)) & CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc4_MASK)
 
 #define CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc5_MASK (0x20U)
 #define CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc5_SHIFT (5U)
 /*! err_f_bndry_match_vc5 - Error matching Frame Start with Frame End for virtual channel 5.
- *  0b1..Matching frame start with frame end error is detected.
  *  0b0..No error.
+ *  0b1..Matching frame start with frame end error is detected.
  */
 #define CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc5(x) (((uint32_t)(((uint32_t)(x)) << CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc5_SHIFT)) & CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc5_MASK)
 
 #define CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc6_MASK (0x40U)
 #define CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc6_SHIFT (6U)
 /*! err_f_bndry_match_vc6 - Error matching Frame Start with Frame End for virtual channel 6.
- *  0b1..Matching frame start with frame end error is detected.
  *  0b0..No error.
+ *  0b1..Matching frame start with frame end error is detected.
  */
 #define CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc6(x) (((uint32_t)(((uint32_t)(x)) << CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc6_SHIFT)) & CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc6_MASK)
 
 #define CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc7_MASK (0x80U)
 #define CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc7_SHIFT (7U)
 /*! err_f_bndry_match_vc7 - Error matching Frame Start with Frame End for virtual channel 7.
- *  0b1..Matching frame start with frame end error is detected.
  *  0b0..No error.
+ *  0b1..Matching frame start with frame end error is detected.
  */
 #define CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc7(x) (((uint32_t)(((uint32_t)(x)) << CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc7_SHIFT)) & CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc7_MASK)
 
 #define CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc8_MASK (0x100U)
 #define CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc8_SHIFT (8U)
 /*! err_f_bndry_match_vc8 - Error matching Frame Start with Frame End for virtual channel 8.
- *  0b1..Matching frame start with frame end error is detected.
  *  0b0..No error.
+ *  0b1..Matching frame start with frame end error is detected.
  */
 #define CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc8(x) (((uint32_t)(((uint32_t)(x)) << CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc8_SHIFT)) & CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc8_MASK)
 
 #define CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc9_MASK (0x200U)
 #define CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc9_SHIFT (9U)
 /*! err_f_bndry_match_vc9 - Error matching Frame Start with Frame End for virtual channel 9.
- *  0b1..Matching frame start with frame end error is detected.
  *  0b0..No error.
+ *  0b1..Matching frame start with frame end error is detected.
  */
 #define CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc9(x) (((uint32_t)(((uint32_t)(x)) << CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc9_SHIFT)) & CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc9_MASK)
 
 #define CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc10_MASK (0x400U)
 #define CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc10_SHIFT (10U)
 /*! err_f_bndry_match_vc10 - Error matching Frame Start with Frame End for virtual channel 10.
- *  0b1..Matching frame start with frame end error is detected.
  *  0b0..No error.
+ *  0b1..Matching frame start with frame end error is detected.
  */
 #define CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc10(x) (((uint32_t)(((uint32_t)(x)) << CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc10_SHIFT)) & CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc10_MASK)
 
 #define CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc11_MASK (0x800U)
 #define CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc11_SHIFT (11U)
 /*! err_f_bndry_match_vc11 - Error matching Frame Start with Frame End for virtual channel 11.
- *  0b1..Matching frame start with frame end error is detected.
  *  0b0..No error.
+ *  0b1..Matching frame start with frame end error is detected.
  */
 #define CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc11(x) (((uint32_t)(((uint32_t)(x)) << CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc11_SHIFT)) & CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc11_MASK)
 
 #define CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc12_MASK (0x1000U)
 #define CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc12_SHIFT (12U)
 /*! err_f_bndry_match_vc12 - Error matching Frame Start with Frame End for virtual channel 12.
- *  0b1..Matching frame start with frame end error is detected.
  *  0b0..No error.
+ *  0b1..Matching frame start with frame end error is detected.
  */
 #define CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc12(x) (((uint32_t)(((uint32_t)(x)) << CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc12_SHIFT)) & CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc12_MASK)
 
 #define CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc13_MASK (0x2000U)
 #define CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc13_SHIFT (13U)
 /*! err_f_bndry_match_vc13 - Error matching Frame Start with Frame End for virtual channel 13.
- *  0b1..Matching frame start with frame end error is detected.
  *  0b0..No error.
+ *  0b1..Matching frame start with frame end error is detected.
  */
 #define CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc13(x) (((uint32_t)(((uint32_t)(x)) << CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc13_SHIFT)) & CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc13_MASK)
 
 #define CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc14_MASK (0x4000U)
 #define CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc14_SHIFT (14U)
 /*! err_f_bndry_match_vc14 - Error matching Frame Start with Frame End for virtual channel 14.
- *  0b1..Matching frame start with frame end error is detected.
  *  0b0..No error.
+ *  0b1..Matching frame start with frame end error is detected.
  */
 #define CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc14(x) (((uint32_t)(((uint32_t)(x)) << CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc14_SHIFT)) & CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc14_MASK)
 
 #define CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc15_MASK (0x8000U)
 #define CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc15_SHIFT (15U)
 /*! err_f_bndry_match_vc15 - Error matching Frame Start with Frame End for virtual channel 15.
- *  0b1..Matching frame start with frame end error is detected.
  *  0b0..No error.
+ *  0b1..Matching frame start with frame end error is detected.
  */
 #define CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc15(x) (((uint32_t)(((uint32_t)(x)) << CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc15_SHIFT)) & CSI_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc15_MASK)
 /*! @} */
@@ -3792,8 +3792,8 @@ typedef struct {
 #define CSI_SCRAMBLING_scramble_enable_MASK      (0x1U)
 #define CSI_SCRAMBLING_scramble_enable_SHIFT     (0U)
 /*! scramble_enable - Enables data de-scrambling on the controller side.
- *  0b1..Enable data de-scrambling
  *  0b0..Disable data de-scrambling
+ *  0b1..Enable data de-scrambling
  */
 #define CSI_SCRAMBLING_scramble_enable(x)        (((uint32_t)(((uint32_t)(x)) << CSI_SCRAMBLING_scramble_enable_SHIFT)) & CSI_SCRAMBLING_scramble_enable_MASK)
 /*! @} */

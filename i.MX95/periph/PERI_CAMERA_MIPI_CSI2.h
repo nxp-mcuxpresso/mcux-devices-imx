@@ -44,13 +44,13 @@
 **                          MIMX9596XVZXN_cm7
 **
 **     Version:             rev. 1.0, 2023-01-10
-**     Build:               b240728
+**     Build:               b250415
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for CAMERA_MIPI_CSI2
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -848,8 +848,8 @@ typedef struct {
 #define CAMERA_MIPI_CSI2_INT_ST_PHY_phy_erresc_0_MASK (0x10000U)
 #define CAMERA_MIPI_CSI2_INT_ST_PHY_phy_erresc_0_SHIFT (16U)
 /*! phy_erresc_0 - Escape Entry Error on data lane 0.
- *  0b1..Escape entry error on data lane 0
  *  0b0..No error
+ *  0b1..Escape entry error on data lane 0
  */
 #define CAMERA_MIPI_CSI2_INT_ST_PHY_phy_erresc_0(x) (((uint32_t)(((uint32_t)(x)) << CAMERA_MIPI_CSI2_INT_ST_PHY_phy_erresc_0_SHIFT)) & CAMERA_MIPI_CSI2_INT_ST_PHY_phy_erresc_0_MASK)
 
@@ -916,32 +916,32 @@ typedef struct {
 #define CAMERA_MIPI_CSI2_INT_MSK_PHY_mask_phy_erresc_0_MASK (0x10000U)
 #define CAMERA_MIPI_CSI2_INT_MSK_PHY_mask_phy_erresc_0_SHIFT (16U)
 /*! mask_phy_erresc_0 - Mask for phy_erresc_0.
- *  0b1..Enable the interrupt source.
  *  0b0..Interrupt source is masked.
+ *  0b1..Enable the interrupt source.
  */
 #define CAMERA_MIPI_CSI2_INT_MSK_PHY_mask_phy_erresc_0(x) (((uint32_t)(((uint32_t)(x)) << CAMERA_MIPI_CSI2_INT_MSK_PHY_mask_phy_erresc_0_SHIFT)) & CAMERA_MIPI_CSI2_INT_MSK_PHY_mask_phy_erresc_0_MASK)
 
 #define CAMERA_MIPI_CSI2_INT_MSK_PHY_mask_phy_erresc_1_MASK (0x20000U)
 #define CAMERA_MIPI_CSI2_INT_MSK_PHY_mask_phy_erresc_1_SHIFT (17U)
 /*! mask_phy_erresc_1 - Mask for phy_erresc_1
- *  0b1..Enable the interrupt source.
  *  0b0..Interrupt source is masked.
+ *  0b1..Enable the interrupt source.
  */
 #define CAMERA_MIPI_CSI2_INT_MSK_PHY_mask_phy_erresc_1(x) (((uint32_t)(((uint32_t)(x)) << CAMERA_MIPI_CSI2_INT_MSK_PHY_mask_phy_erresc_1_SHIFT)) & CAMERA_MIPI_CSI2_INT_MSK_PHY_mask_phy_erresc_1_MASK)
 
 #define CAMERA_MIPI_CSI2_INT_MSK_PHY_mask_phy_erresc_2_MASK (0x40000U)
 #define CAMERA_MIPI_CSI2_INT_MSK_PHY_mask_phy_erresc_2_SHIFT (18U)
 /*! mask_phy_erresc_2 - Mask for phy_erresc_2
- *  0b1..Enable the interrupt source.
  *  0b0..Interrupt source is masked.
+ *  0b1..Enable the interrupt source.
  */
 #define CAMERA_MIPI_CSI2_INT_MSK_PHY_mask_phy_erresc_2(x) (((uint32_t)(((uint32_t)(x)) << CAMERA_MIPI_CSI2_INT_MSK_PHY_mask_phy_erresc_2_SHIFT)) & CAMERA_MIPI_CSI2_INT_MSK_PHY_mask_phy_erresc_2_MASK)
 
 #define CAMERA_MIPI_CSI2_INT_MSK_PHY_mask_phy_erresc_3_MASK (0x80000U)
 #define CAMERA_MIPI_CSI2_INT_MSK_PHY_mask_phy_erresc_3_SHIFT (19U)
 /*! mask_phy_erresc_3 - Mask for phy_erresc_3
- *  0b1..Enable the interrupt source.
  *  0b0..Interrupt source is masked.
+ *  0b1..Enable the interrupt source.
  */
 #define CAMERA_MIPI_CSI2_INT_MSK_PHY_mask_phy_erresc_3(x) (((uint32_t)(((uint32_t)(x)) << CAMERA_MIPI_CSI2_INT_MSK_PHY_mask_phy_erresc_3_SHIFT)) & CAMERA_MIPI_CSI2_INT_MSK_PHY_mask_phy_erresc_3_MASK)
 /*! @} */
@@ -1216,8 +1216,8 @@ typedef struct {
 #define CAMERA_MIPI_CSI2_INT_MSK_LINE_mask_err_l_seq_di0_MASK (0x10000U)
 #define CAMERA_MIPI_CSI2_INT_MSK_LINE_mask_err_l_seq_di0_SHIFT (16U)
 /*! mask_err_l_seq_di0 - Mask for err_l_seq_di0
- *  0b1..Enable the interrupt source.
  *  0b0..Interrupt source is masked.
+ *  0b1..Enable the interrupt source.
  */
 #define CAMERA_MIPI_CSI2_INT_MSK_LINE_mask_err_l_seq_di0(x) (((uint32_t)(((uint32_t)(x)) << CAMERA_MIPI_CSI2_INT_MSK_LINE_mask_err_l_seq_di0_SHIFT)) & CAMERA_MIPI_CSI2_INT_MSK_LINE_mask_err_l_seq_di0_MASK)
 
@@ -1536,8 +1536,8 @@ typedef struct {
 #define CAMERA_MIPI_CSI2_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc15_MASK (0x8000U)
 #define CAMERA_MIPI_CSI2_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc15_SHIFT (15U)
 /*! err_f_bndry_match_vc15 - Error matching Frame Start with Frame End for virtual channel 15.
- *  0b1..Matching frame start with frame end error is detected.
  *  0b0..No error.
+ *  0b1..Matching frame start with frame end error is detected.
  */
 #define CAMERA_MIPI_CSI2_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc15(x) (((uint32_t)(((uint32_t)(x)) << CAMERA_MIPI_CSI2_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc15_SHIFT)) & CAMERA_MIPI_CSI2_INT_ST_BNDRY_FRAME_FATAL_err_f_bndry_match_vc15_MASK)
 /*! @} */

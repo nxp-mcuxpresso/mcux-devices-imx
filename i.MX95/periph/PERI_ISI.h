@@ -44,13 +44,13 @@
 **                          MIMX9596XVZXN_cm7
 **
 **     Version:             rev. 1.0, 2023-01-10
-**     Build:               b240728
+**     Build:               b250415
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for ISI
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -396,7 +396,9 @@ typedef struct {
 
 #define ISI_CHNL_IMG_CTRL_FORMAT_MASK            (0x7F000000U)
 #define ISI_CHNL_IMG_CTRL_FORMAT_SHIFT           (24U)
-/*! FORMAT - Output Image Format */
+/*! FORMAT - Output Image Format
+ *  0b0000000-0b1000001..See .
+ */
 #define ISI_CHNL_IMG_CTRL_FORMAT(x)              (((uint32_t)(((uint32_t)(x)) << ISI_CHNL_IMG_CTRL_FORMAT_SHIFT)) & ISI_CHNL_IMG_CTRL_FORMAT_MASK)
 /*! @} */
 
@@ -410,6 +412,14 @@ typedef struct {
  *  0b0001-0b1111..Panic asserts
  */
 #define ISI_CHNL_OUT_BUF_CTRL_PANIC_SET_THD_Y(x) (((uint32_t)(((uint32_t)(x)) << ISI_CHNL_OUT_BUF_CTRL_PANIC_SET_THD_Y_SHIFT)) & ISI_CHNL_OUT_BUF_CTRL_PANIC_SET_THD_Y_MASK)
+
+#define ISI_CHNL_OUT_BUF_CTRL_PANIC_UNSET_THD_Y_MASK (0xF0U)
+#define ISI_CHNL_OUT_BUF_CTRL_PANIC_UNSET_THD_Y_SHIFT (4U)
+/*! PANIC_UNSET_THD_Y - Overflow Panic Unset Threshold Value for Y or RGB Output Buffer
+ *  0b0000..No unset
+ *  0b0001-0b1111..Panic unset
+ */
+#define ISI_CHNL_OUT_BUF_CTRL_PANIC_UNSET_THD_Y(x) (((uint32_t)(((uint32_t)(x)) << ISI_CHNL_OUT_BUF_CTRL_PANIC_UNSET_THD_Y_SHIFT)) & ISI_CHNL_OUT_BUF_CTRL_PANIC_UNSET_THD_Y_MASK)
 
 #define ISI_CHNL_OUT_BUF_CTRL_PANIC_SET_THD_U_MASK (0xF00U)
 #define ISI_CHNL_OUT_BUF_CTRL_PANIC_SET_THD_U_SHIFT (8U)
@@ -436,6 +446,22 @@ typedef struct {
  *  0b0001-0b1111..Panic asserts
  */
 #define ISI_CHNL_OUT_BUF_CTRL_PANIC_SET_THD_V(x) (((uint32_t)(((uint32_t)(x)) << ISI_CHNL_OUT_BUF_CTRL_PANIC_SET_THD_V_SHIFT)) & ISI_CHNL_OUT_BUF_CTRL_PANIC_SET_THD_V_MASK)
+
+#define ISI_CHNL_OUT_BUF_CTRL_PANIC_UNSET_THD_U_MASK (0xF00000U)
+#define ISI_CHNL_OUT_BUF_CTRL_PANIC_UNSET_THD_U_SHIFT (20U)
+/*! PANIC_UNSET_THD_U - Overflow Panic Unset Threshold Value for U Output Buffer
+ *  0b0000..No unset
+ *  0b0001-0b1111..Panic unset
+ */
+#define ISI_CHNL_OUT_BUF_CTRL_PANIC_UNSET_THD_U(x) (((uint32_t)(((uint32_t)(x)) << ISI_CHNL_OUT_BUF_CTRL_PANIC_UNSET_THD_U_SHIFT)) & ISI_CHNL_OUT_BUF_CTRL_PANIC_UNSET_THD_U_MASK)
+
+#define ISI_CHNL_OUT_BUF_CTRL_PANIC_UNSET_THD_V_MASK (0xF000000U)
+#define ISI_CHNL_OUT_BUF_CTRL_PANIC_UNSET_THD_V_SHIFT (24U)
+/*! PANIC_UNSET_THD_V - Overflow Panic Unset Threshold Value for V Output Buffer
+ *  0b0000..No unset
+ *  0b0001-0b1111..Panic unset
+ */
+#define ISI_CHNL_OUT_BUF_CTRL_PANIC_UNSET_THD_V(x) (((uint32_t)(((uint32_t)(x)) << ISI_CHNL_OUT_BUF_CTRL_PANIC_UNSET_THD_V_SHIFT)) & ISI_CHNL_OUT_BUF_CTRL_PANIC_UNSET_THD_V_MASK)
 
 #define ISI_CHNL_OUT_BUF_CTRL_MAX_WR_BEATS_UV_MASK (0x40000000U)
 #define ISI_CHNL_OUT_BUF_CTRL_MAX_WR_BEATS_UV_SHIFT (30U)

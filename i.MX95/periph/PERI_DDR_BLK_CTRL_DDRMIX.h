@@ -44,13 +44,13 @@
 **                          MIMX9596XVZXN_cm7
 **
 **     Version:             rev. 1.0, 2023-01-10
-**     Build:               b240728
+**     Build:               b250415
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for DDR_BLK_CTRL_DDRMIX
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -132,18 +132,20 @@
 /** DDR_BLK_CTRL_DDRMIX - Register Layout Typedef */
 typedef struct {
   __IO uint32_t HWFFC_CTRL;                        /**< DDRPHY DfiClk, DflCtlClk HWFFC Control, offset: 0x0 */
-       uint8_t RESERVED_0[8];
+  __IO uint32_t CA55_SEL_CTRL;                     /**< CA55 Arm Pll Observe Select, offset: 0x4 */
+  __IO uint32_t VREF_PSW_CTRL;                     /**< DRAM_VREF power switch, offset: 0x8 */
   __IO uint32_t DDRC_STOP_CTRL;                    /**< DDR Controller ipg_stop SW control, offset: 0xC */
   __IO uint32_t AUTO_CG_CTRL;                      /**< DDR Controller automatic clock gating control when no AXI transmit, offset: 0x10 */
-       uint8_t RESERVED_1[4];
+  __IO uint32_t SSI_PWR_CTRL;                      /**< NOC2DDR SSI slave power control, offset: 0x14 */
   __IO uint32_t DDRC_EXCLUSIVE_EN;                 /**< DDRC AXI exclusive access monitor enable, offset: 0x18 */
   __IO uint32_t DDRC_URGENT_EN;                    /**< DDRC real_time read urgent and read urgent enable, offset: 0x1C */
   __IO uint32_t RT_MASTER_ID_0_1;                  /**< DDRC real_time master 6bit extend-ID range 0 and range 1, offset: 0x20 */
   __IO uint32_t RT_MASTER_ID_2_3;                  /**< DDRC real_time master 6bit extend-ID range 2 and range 3, offset: 0x24 */
-       uint8_t RESERVED_2[4];
+  __IO uint32_t AXI_PARITY_ERR_CLR;                /**< DDRMIX AXI parity check clear register, offset: 0x28 */
   __IO uint32_t AXI_PARITY_ERR_INJECT;             /**< DDRMIX AXI parity error injection register, offset: 0x2C */
   __IO uint32_t RT_MASTER_ID_4_5;                  /**< DDRC real_time master 6bit extend-ID range 4 and range 5, offset: 0x30 */
   __IO uint32_t RT_MASTER_ID_6_7;                  /**< DDRC real_time master 6bit extend-ID range 6 and range 7, offset: 0x34 */
+  __I  uint32_t FUSE_DISABLE_DDRMIX;               /**< Fuse to ddrmix_blk_ctrl, offset: 0x38 */
 } DDR_BLK_CTRL_DDRMIX_Type;
 
 /* ----------------------------------------------------------------------------
@@ -167,6 +169,24 @@ typedef struct {
 #define DDR_BLK_CTRL_DDRMIX_HWFFC_CTRL_HWFFC_SEL_SHIFT (1U)
 /*! HWFFC_SEL - DDRPHY DfiClk, DfiCtlClk HWFFC Select */
 #define DDR_BLK_CTRL_DDRMIX_HWFFC_CTRL_HWFFC_SEL(x) (((uint32_t)(((uint32_t)(x)) << DDR_BLK_CTRL_DDRMIX_HWFFC_CTRL_HWFFC_SEL_SHIFT)) & DDR_BLK_CTRL_DDRMIX_HWFFC_CTRL_HWFFC_SEL_MASK)
+/*! @} */
+
+/*! @name CA55_SEL_CTRL - CA55 Arm Pll Observe Select */
+/*! @{ */
+
+#define DDR_BLK_CTRL_DDRMIX_CA55_SEL_CTRL_CA55_SEL_MASK (0x1U)
+#define DDR_BLK_CTRL_DDRMIX_CA55_SEL_CTRL_CA55_SEL_SHIFT (0U)
+/*! CA55_SEL - CA55 Arm Pll select into DDRPHY */
+#define DDR_BLK_CTRL_DDRMIX_CA55_SEL_CTRL_CA55_SEL(x) (((uint32_t)(((uint32_t)(x)) << DDR_BLK_CTRL_DDRMIX_CA55_SEL_CTRL_CA55_SEL_SHIFT)) & DDR_BLK_CTRL_DDRMIX_CA55_SEL_CTRL_CA55_SEL_MASK)
+/*! @} */
+
+/*! @name VREF_PSW_CTRL - DRAM_VREF power switch */
+/*! @{ */
+
+#define DDR_BLK_CTRL_DDRMIX_VREF_PSW_CTRL_VREF_PSW_MASK (0x1U)
+#define DDR_BLK_CTRL_DDRMIX_VREF_PSW_CTRL_VREF_PSW_SHIFT (0U)
+/*! VREF_PSW - DDRPHY DRAM_VREF Power Switch */
+#define DDR_BLK_CTRL_DDRMIX_VREF_PSW_CTRL_VREF_PSW(x) (((uint32_t)(((uint32_t)(x)) << DDR_BLK_CTRL_DDRMIX_VREF_PSW_CTRL_VREF_PSW_SHIFT)) & DDR_BLK_CTRL_DDRMIX_VREF_PSW_CTRL_VREF_PSW_MASK)
 /*! @} */
 
 /*! @name DDRC_STOP_CTRL - DDR Controller ipg_stop SW control */
@@ -235,6 +255,20 @@ typedef struct {
 #define DDR_BLK_CTRL_DDRMIX_AUTO_CG_CTRL_GATE_DDRPHY_APBCLK_SHIFT (30U)
 /*! GATE_DDRPHY_APBCLK - DDR Auto Clock Gating is allowed for DDRPHY APBCLK clock. */
 #define DDR_BLK_CTRL_DDRMIX_AUTO_CG_CTRL_GATE_DDRPHY_APBCLK(x) (((uint32_t)(((uint32_t)(x)) << DDR_BLK_CTRL_DDRMIX_AUTO_CG_CTRL_GATE_DDRPHY_APBCLK_SHIFT)) & DDR_BLK_CTRL_DDRMIX_AUTO_CG_CTRL_GATE_DDRPHY_APBCLK_MASK)
+/*! @} */
+
+/*! @name SSI_PWR_CTRL - NOC2DDR SSI slave power control */
+/*! @{ */
+
+#define DDR_BLK_CTRL_DDRMIX_SSI_PWR_CTRL_POWER_CONTROL_MASK (0x1U)
+#define DDR_BLK_CTRL_DDRMIX_SSI_PWR_CTRL_POWER_CONTROL_SHIFT (0U)
+/*! POWER_CONTROL - NOC2DDR SSI slave power_control signal */
+#define DDR_BLK_CTRL_DDRMIX_SSI_PWR_CTRL_POWER_CONTROL(x) (((uint32_t)(((uint32_t)(x)) << DDR_BLK_CTRL_DDRMIX_SSI_PWR_CTRL_POWER_CONTROL_SHIFT)) & DDR_BLK_CTRL_DDRMIX_SSI_PWR_CTRL_POWER_CONTROL_MASK)
+
+#define DDR_BLK_CTRL_DDRMIX_SSI_PWR_CTRL_ISO_CONTROL_MASK (0x2U)
+#define DDR_BLK_CTRL_DDRMIX_SSI_PWR_CTRL_ISO_CONTROL_SHIFT (1U)
+/*! ISO_CONTROL - NOC2DDR SSI slave iso_control signal */
+#define DDR_BLK_CTRL_DDRMIX_SSI_PWR_CTRL_ISO_CONTROL(x) (((uint32_t)(((uint32_t)(x)) << DDR_BLK_CTRL_DDRMIX_SSI_PWR_CTRL_ISO_CONTROL_SHIFT)) & DDR_BLK_CTRL_DDRMIX_SSI_PWR_CTRL_ISO_CONTROL_MASK)
 /*! @} */
 
 /*! @name DDRC_EXCLUSIVE_EN - DDRC AXI exclusive access monitor enable */
@@ -328,6 +362,30 @@ typedef struct {
 #define DDR_BLK_CTRL_DDRMIX_RT_MASTER_ID_2_3_RANGE_3_EN(x) (((uint32_t)(((uint32_t)(x)) << DDR_BLK_CTRL_DDRMIX_RT_MASTER_ID_2_3_RANGE_3_EN_SHIFT)) & DDR_BLK_CTRL_DDRMIX_RT_MASTER_ID_2_3_RANGE_3_EN_MASK)
 /*! @} */
 
+/*! @name AXI_PARITY_ERR_CLR - DDRMIX AXI parity check clear register */
+/*! @{ */
+
+#define DDR_BLK_CTRL_DDRMIX_AXI_PARITY_ERR_CLR_MST_ERR_CLR_MASK (0x1U)
+#define DDR_BLK_CTRL_DDRMIX_AXI_PARITY_ERR_CLR_MST_ERR_CLR_SHIFT (0U)
+/*! MST_ERR_CLR - DDRMIX AXI parity master d_ip_axi_parity_master error clear */
+#define DDR_BLK_CTRL_DDRMIX_AXI_PARITY_ERR_CLR_MST_ERR_CLR(x) (((uint32_t)(((uint32_t)(x)) << DDR_BLK_CTRL_DDRMIX_AXI_PARITY_ERR_CLR_MST_ERR_CLR_SHIFT)) & DDR_BLK_CTRL_DDRMIX_AXI_PARITY_ERR_CLR_MST_ERR_CLR_MASK)
+
+#define DDR_BLK_CTRL_DDRMIX_AXI_PARITY_ERR_CLR_SLV_ERR_CLR_MASK (0x100U)
+#define DDR_BLK_CTRL_DDRMIX_AXI_PARITY_ERR_CLR_SLV_ERR_CLR_SHIFT (8U)
+/*! SLV_ERR_CLR - DDRMIX AXI parity slave d_ip_axi_parity_slave error clear */
+#define DDR_BLK_CTRL_DDRMIX_AXI_PARITY_ERR_CLR_SLV_ERR_CLR(x) (((uint32_t)(((uint32_t)(x)) << DDR_BLK_CTRL_DDRMIX_AXI_PARITY_ERR_CLR_SLV_ERR_CLR_SHIFT)) & DDR_BLK_CTRL_DDRMIX_AXI_PARITY_ERR_CLR_SLV_ERR_CLR_MASK)
+
+#define DDR_BLK_CTRL_DDRMIX_AXI_PARITY_ERR_CLR_ERR_HOLD_MASK (0x70000U)
+#define DDR_BLK_CTRL_DDRMIX_AXI_PARITY_ERR_CLR_ERR_HOLD_SHIFT (16U)
+/*! ERR_HOLD - DDRMIX AXI parity error hold time */
+#define DDR_BLK_CTRL_DDRMIX_AXI_PARITY_ERR_CLR_ERR_HOLD(x) (((uint32_t)(((uint32_t)(x)) << DDR_BLK_CTRL_DDRMIX_AXI_PARITY_ERR_CLR_ERR_HOLD_SHIFT)) & DDR_BLK_CTRL_DDRMIX_AXI_PARITY_ERR_CLR_ERR_HOLD_MASK)
+
+#define DDR_BLK_CTRL_DDRMIX_AXI_PARITY_ERR_CLR_ERR_HOLD_EN_MASK (0x80000U)
+#define DDR_BLK_CTRL_DDRMIX_AXI_PARITY_ERR_CLR_ERR_HOLD_EN_SHIFT (19U)
+/*! ERR_HOLD_EN - DDRMIX DDRC error hold enable */
+#define DDR_BLK_CTRL_DDRMIX_AXI_PARITY_ERR_CLR_ERR_HOLD_EN(x) (((uint32_t)(((uint32_t)(x)) << DDR_BLK_CTRL_DDRMIX_AXI_PARITY_ERR_CLR_ERR_HOLD_EN_SHIFT)) & DDR_BLK_CTRL_DDRMIX_AXI_PARITY_ERR_CLR_ERR_HOLD_EN_MASK)
+/*! @} */
+
 /*! @name AXI_PARITY_ERR_INJECT - DDRMIX AXI parity error injection register */
 /*! @{ */
 
@@ -336,10 +394,15 @@ typedef struct {
 /*! WDATA_ERR_INJ - DDRMIX AXI parity error injection on wdatachk[0] */
 #define DDR_BLK_CTRL_DDRMIX_AXI_PARITY_ERR_INJECT_WDATA_ERR_INJ(x) (((uint32_t)(((uint32_t)(x)) << DDR_BLK_CTRL_DDRMIX_AXI_PARITY_ERR_INJECT_WDATA_ERR_INJ_SHIFT)) & DDR_BLK_CTRL_DDRMIX_AXI_PARITY_ERR_INJECT_WDATA_ERR_INJ_MASK)
 
-#define DDR_BLK_CTRL_DDRMIX_AXI_PARITY_ERR_INJECT_RDATA_ERR_INJ_MASK (0x10000U)
-#define DDR_BLK_CTRL_DDRMIX_AXI_PARITY_ERR_INJECT_RDATA_ERR_INJ_SHIFT (16U)
+#define DDR_BLK_CTRL_DDRMIX_AXI_PARITY_ERR_INJECT_RDATA_ERR_INJ_MASK (0x2U)
+#define DDR_BLK_CTRL_DDRMIX_AXI_PARITY_ERR_INJECT_RDATA_ERR_INJ_SHIFT (1U)
 /*! RDATA_ERR_INJ - DDRMIX AXI parity error injection on rdatachk[0] */
 #define DDR_BLK_CTRL_DDRMIX_AXI_PARITY_ERR_INJECT_RDATA_ERR_INJ(x) (((uint32_t)(((uint32_t)(x)) << DDR_BLK_CTRL_DDRMIX_AXI_PARITY_ERR_INJECT_RDATA_ERR_INJ_SHIFT)) & DDR_BLK_CTRL_DDRMIX_AXI_PARITY_ERR_INJECT_RDATA_ERR_INJ_MASK)
+
+#define DDR_BLK_CTRL_DDRMIX_AXI_PARITY_ERR_INJECT_RDATA_ERR_INJ_DDRC_MASK (0x4U)
+#define DDR_BLK_CTRL_DDRMIX_AXI_PARITY_ERR_INJECT_RDATA_ERR_INJ_DDRC_SHIFT (2U)
+/*! RDATA_ERR_INJ_DDRC - DDRC AXI parity error injection on rdatachk[0] */
+#define DDR_BLK_CTRL_DDRMIX_AXI_PARITY_ERR_INJECT_RDATA_ERR_INJ_DDRC(x) (((uint32_t)(((uint32_t)(x)) << DDR_BLK_CTRL_DDRMIX_AXI_PARITY_ERR_INJECT_RDATA_ERR_INJ_DDRC_SHIFT)) & DDR_BLK_CTRL_DDRMIX_AXI_PARITY_ERR_INJECT_RDATA_ERR_INJ_DDRC_MASK)
 /*! @} */
 
 /*! @name RT_MASTER_ID_4_5 - DDRC real_time master 6bit extend-ID range 4 and range 5 */
@@ -408,6 +471,15 @@ typedef struct {
 #define DDR_BLK_CTRL_DDRMIX_RT_MASTER_ID_6_7_RANGE_7_EN_SHIFT (31U)
 /*! RANGE_7_EN - DDRC real_time master ID range 7 enable */
 #define DDR_BLK_CTRL_DDRMIX_RT_MASTER_ID_6_7_RANGE_7_EN(x) (((uint32_t)(((uint32_t)(x)) << DDR_BLK_CTRL_DDRMIX_RT_MASTER_ID_6_7_RANGE_7_EN_SHIFT)) & DDR_BLK_CTRL_DDRMIX_RT_MASTER_ID_6_7_RANGE_7_EN_MASK)
+/*! @} */
+
+/*! @name FUSE_DISABLE_DDRMIX - Fuse to ddrmix_blk_ctrl */
+/*! @{ */
+
+#define DDR_BLK_CTRL_DDRMIX_FUSE_DISABLE_DDRMIX_FUSE_DISABLE_DDRMIX_MASK (0x3U)
+#define DDR_BLK_CTRL_DDRMIX_FUSE_DISABLE_DDRMIX_FUSE_DISABLE_DDRMIX_SHIFT (0U)
+/*! FUSE_DISABLE_DDRMIX - Read only reg for fuse mapped to ddrmix_blk_ctrl. */
+#define DDR_BLK_CTRL_DDRMIX_FUSE_DISABLE_DDRMIX_FUSE_DISABLE_DDRMIX(x) (((uint32_t)(((uint32_t)(x)) << DDR_BLK_CTRL_DDRMIX_FUSE_DISABLE_DDRMIX_FUSE_DISABLE_DDRMIX_SHIFT)) & DDR_BLK_CTRL_DDRMIX_FUSE_DISABLE_DDRMIX_FUSE_DISABLE_DDRMIX_MASK)
 /*! @} */
 
 

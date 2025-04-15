@@ -44,13 +44,13 @@
 **                          MIMX9596XVZXN_cm7
 **
 **     Version:             rev. 1.0, 2023-01-10
-**     Build:               b240728
+**     Build:               b250415
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for ENETC_PF_TMR
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -133,49 +133,50 @@
 #define ENETC_PF_TMR_ALL_REG_ARRAYS_TMR_ALARMM_COUNT 2u
 #define ENETC_PF_TMR_ALL_REG_ARRAYS_TMR_FIPERF_COUNT 3u
 #define ENETC_PF_TMR_ALL_REG_ARRAYS_TMR_ETTSN_COUNT 2u
+#define ENETC_PF_TMR_ALL_REG_ARRAYS_COUNT         1u
 
 /** ENETC_PF_TMR - Register Layout Typedef */
 typedef struct {
-  __I  uint32_t TMR_ID;                            /**< Module ID, array offset: 0x0, array step: 0xFC */
-       uint8_t RESERVED_0[4];
-  __I  uint32_t TMR_CAPR;                          /**< Timer Capability, array offset: 0x8, array step: 0xFC */
-       uint8_t RESERVED_1[20];
-  __I  uint32_t TMR_FRT_L;                         /**< Timer Free Running Time Low, array offset: 0x20, array step: 0xFC */
-  __I  uint32_t TMR_FRT_H;                         /**< Timer Free Running Time High, array offset: 0x24, array step: 0xFC */
-  __I  uint32_t TMR_SRT_L;                         /**< Timer Synchronous Time Low, array offset: 0x28, array step: 0xFC */
-  __I  uint32_t TMR_SRT_H;                         /**< Timer Synchronous Time High, array offset: 0x2C, array step: 0xFC */
-  __I  uint32_t TMR_DEF_CNT_L;                     /**< Default ns Timer Counter Low, array offset: 0x30, array step: 0xFC */
-  __I  uint32_t TMR_DEF_CNT_H;                     /**< Default ns Timer Counter High, array offset: 0x34, array step: 0xFC */
-       uint8_t RESERVED_2[72];
-  __IO uint32_t TMR_CTRL;                          /**< Timer Control, array offset: 0x80, array step: 0xFC */
-  __IO uint32_t TMR_TEVENT;                        /**< Timer Event, array offset: 0x84, array step: 0xFC */
-  __IO uint32_t TMR_TEMASK;                        /**< Timer Event Mask, array offset: 0x88, array step: 0xFC */
-  __IO uint32_t TMR_MSIVEC;                        /**< Timer MSI-X Vector, array offset: 0x8C, array step: 0xFC */
-       uint8_t RESERVED_3[4];
-  __I  uint32_t TMR_STAT;                          /**< Timer Status, array offset: 0x94, array step: 0xFC */
-  __IO uint32_t TMR_CNT_L;                         /**< Timer Counter Low, array offset: 0x98, array step: 0xFC */
-  __IO uint32_t TMR_CNT_H;                         /**< Timer Counter High, array offset: 0x9C, array step: 0xFC */
-  __IO uint32_t TMR_ADD;                           /**< Timer Addend, array offset: 0xA0, array step: 0xFC */
-  __I  uint32_t TMR_ACC;                           /**< Timer Accumulator, array offset: 0xA4, array step: 0xFC */
-  __IO uint32_t TMR_PRSC;                          /**< Timer Prescale, array offset: 0xA8, array step: 0xFC */
-  __IO uint32_t TMR_ECTRL;                         /**< Extended Timer Control, array offset: 0xAC, array step: 0xFC */
-  __IO uint32_t TMROFF_L;                          /**< Timer Offset Low, array offset: 0xB0, array step: 0xFC */
-  __IO uint32_t TMROFF_H;                          /**< Timer Offset High, array offset: 0xB4, array step: 0xFC */
-  struct {                                         /* offset: 0xB8, array step: index*0xFC, index2*0x8 */
-    __IO uint32_t TMR_ALARM_L;                       /**< Alarm Time Comparator Low, array offset: 0xB8, array step: index*0xFC, index2*0x8 */
-    __IO uint32_t TMR_ALARM_H;                       /**< Alarm Time Comparator High, array offset: 0xBC, array step: index*0xFC, index2*0x8 */
-  } TMR_ALARMM[ENETC_PF_TMR_ALL_REG_ARRAYS_TMR_ALARMM_COUNT];
-       uint8_t RESERVED_4[4];
-  __IO uint32_t TMR_ALARM_CTRL;                    /**< Timer Alarm Control, array offset: 0xCC, array step: 0xFC */
-  __IO uint32_t TMR_FIPER[ENETC_PF_TMR_ALL_REG_ARRAYS_TMR_FIPERF_COUNT];   /**< Timer Fixed Interval Period, array offset: 0xD0, array step: index*0xFC, index2*0x4 */
-  __IO uint32_t TMR_FIPER_CTRL;                    /**< Timer FIPER Control, array offset: 0xDC, array step: 0xFC */
-  struct {                                         /* offset: 0xE0, array step: index*0xFC, index2*0x8 */
-    __I  uint32_t TMR_ETTS_L;                        /**< External Trigger Stamp, array offset: 0xE0, array step: index*0xFC, index2*0x8 */
-    __I  uint32_t TMR_ETTS_H;                        /**< External Trigger Stamp, array offset: 0xE4, array step: index*0xFC, index2*0x8 */
-  } TMR_ETTSN[ENETC_PF_TMR_ALL_REG_ARRAYS_TMR_ETTSN_COUNT];
-  __I  uint32_t TMR_CUR_TIME_L;                    /**< Timer Current Time Low, array offset: 0xF0, array step: 0xFC */
-  __I  uint32_t TMR_CUR_TIME_H;                    /**< Timer Current Time High, array offset: 0xF4, array step: 0xFC */
-  __IO uint32_t TMR_PARAM;                         /**< Timer Parameter, array offset: 0xF8, array step: 0xFC */
+    __I  uint32_t TMR_ID;                            /**< Module ID, array offset: 0x0, array step: 0xFC */
+         uint8_t RESERVED_0[4];
+    __I  uint32_t TMR_CAPR;                          /**< Timer Capability, array offset: 0x8, array step: 0xFC */
+         uint8_t RESERVED_1[20];
+    __I  uint32_t TMR_FRT_L;                         /**< Timer Free Running Time Low, array offset: 0x20, array step: 0xFC */
+    __I  uint32_t TMR_FRT_H;                         /**< Timer Free Running Time High, array offset: 0x24, array step: 0xFC */
+    __I  uint32_t TMR_SRT_L;                         /**< Timer Synchronous Time Low, array offset: 0x28, array step: 0xFC */
+    __I  uint32_t TMR_SRT_H;                         /**< Timer Synchronous Time High, array offset: 0x2C, array step: 0xFC */
+    __I  uint32_t TMR_DEF_CNT_L;                     /**< Default ns Timer Counter Low, array offset: 0x30, array step: 0xFC */
+    __I  uint32_t TMR_DEF_CNT_H;                     /**< Default ns Timer Counter High, array offset: 0x34, array step: 0xFC */
+         uint8_t RESERVED_2[72];
+    __IO uint32_t TMR_CTRL;                          /**< Timer Control, array offset: 0x80, array step: 0xFC */
+    __IO uint32_t TMR_TEVENT;                        /**< Timer Event, array offset: 0x84, array step: 0xFC */
+    __IO uint32_t TMR_TEMASK;                        /**< Timer Event Mask, array offset: 0x88, array step: 0xFC */
+    __IO uint32_t TMR_MSIVEC;                        /**< Timer MSI-X Vector, array offset: 0x8C, array step: 0xFC */
+         uint8_t RESERVED_3[4];
+    __I  uint32_t TMR_STAT;                          /**< Timer Status, array offset: 0x94, array step: 0xFC */
+    __IO uint32_t TMR_CNT_L;                         /**< Timer Counter Low, array offset: 0x98, array step: 0xFC */
+    __IO uint32_t TMR_CNT_H;                         /**< Timer Counter High, array offset: 0x9C, array step: 0xFC */
+    __IO uint32_t TMR_ADD;                           /**< Timer Addend, array offset: 0xA0, array step: 0xFC */
+    __I  uint32_t TMR_ACC;                           /**< Timer Accumulator, array offset: 0xA4, array step: 0xFC */
+    __IO uint32_t TMR_PRSC;                          /**< Timer Prescale, array offset: 0xA8, array step: 0xFC */
+    __IO uint32_t TMR_ECTRL;                         /**< Extended Timer Control, array offset: 0xAC, array step: 0xFC */
+    __IO uint32_t TMROFF_L;                          /**< Timer Offset Low, array offset: 0xB0, array step: 0xFC */
+    __IO uint32_t TMROFF_H;                          /**< Timer Offset High, array offset: 0xB4, array step: 0xFC */
+    struct {                                         /* offset: 0xB8, array step: index*0xFC, index2*0x8 */
+      __IO uint32_t TMR_ALARM_L;                       /**< Alarm Time Comparator Low, array offset: 0xB8, array step: index*0xFC, index2*0x8 */
+      __IO uint32_t TMR_ALARM_H;                       /**< Alarm Time Comparator High, array offset: 0xBC, array step: index*0xFC, index2*0x8 */
+    } TMR_ALARMM[ENETC_PF_TMR_ALL_REG_ARRAYS_TMR_ALARMM_COUNT];
+         uint8_t RESERVED_4[4];
+    __IO uint32_t TMR_ALARM_CTRL;                    /**< Timer Alarm Control, array offset: 0xCC, array step: 0xFC */
+    __IO uint32_t TMR_FIPER[ENETC_PF_TMR_ALL_REG_ARRAYS_TMR_FIPERF_COUNT];   /**< Timer Fixed Interval Period, array offset: 0xD0, array step: index*0xFC, index2*0x4 */
+    __IO uint32_t TMR_FIPER_CTRL;                    /**< Timer FIPER Control, array offset: 0xDC, array step: 0xFC */
+    struct {                                         /* offset: 0xE0, array step: index*0xFC, index2*0x8 */
+      __I  uint32_t TMR_ETTS_L;                        /**< External Trigger Stamp, array offset: 0xE0, array step: index*0xFC, index2*0x8 */
+      __I  uint32_t TMR_ETTS_H;                        /**< External Trigger Stamp, array offset: 0xE4, array step: index*0xFC, index2*0x8 */
+    } TMR_ETTSN[ENETC_PF_TMR_ALL_REG_ARRAYS_TMR_ETTSN_COUNT];
+    __I  uint32_t TMR_CUR_TIME_L;                    /**< Timer Current Time Low, array offset: 0xF0, array step: 0xFC */
+    __I  uint32_t TMR_CUR_TIME_H;                    /**< Timer Current Time High, array offset: 0xF4, array step: 0xFC */
+    __IO uint32_t TMR_PARAM;                         /**< Timer Parameter, array offset: 0xF8, array step: 0xFC */
 } ENETC_PF_TMR_Type;
 
 /* ----------------------------------------------------------------------------
@@ -212,21 +213,37 @@ typedef struct {
 /*! @name TMR_CAPR - Timer Capability */
 /*! @{ */
 
-#define ENETC_PF_TMR_TMR_CAPR_IEEE_1722_MASK     (0x1U)
-#define ENETC_PF_TMR_TMR_CAPR_IEEE_1722_SHIFT    (0U)
+#define ENETC_PF_TMR_TMR_CAPR_ECADJ_MASK         (0x2U)
+#define ENETC_PF_TMR_TMR_CAPR_ECADJ_SHIFT        (1U)
+/*! ECADJ
+ *  0b0..Not supported
+ *  0b1..Supported
+ */
+#define ENETC_PF_TMR_TMR_CAPR_ECADJ(x)           (((uint32_t)(((uint32_t)(x)) << ENETC_PF_TMR_TMR_CAPR_ECADJ_SHIFT)) & ENETC_PF_TMR_TMR_CAPR_ECADJ_MASK)
+
+#define ENETC_PF_TMR_TMR_CAPR_IEEE_8021AS_REV_MASK (0x4U)
+#define ENETC_PF_TMR_TMR_CAPR_IEEE_8021AS_REV_SHIFT (2U)
+/*! IEEE_8021AS_REV
+ *  0b0..Not supported
+ *  0b1..Supported
+ */
+#define ENETC_PF_TMR_TMR_CAPR_IEEE_8021AS_REV(x) (((uint32_t)(((uint32_t)(x)) << ENETC_PF_TMR_TMR_CAPR_IEEE_8021AS_REV_SHIFT)) & ENETC_PF_TMR_TMR_CAPR_IEEE_8021AS_REV_MASK)
+
+#define ENETC_PF_TMR_TMR_CAPR_AUTO_OFFSET_ADJ_MASK (0x8U)
+#define ENETC_PF_TMR_TMR_CAPR_AUTO_OFFSET_ADJ_SHIFT (3U)
+/*! AUTO_OFFSET_ADJ
+ *  0b0..Not supported
+ *  0b1..Supported
+ */
+#define ENETC_PF_TMR_TMR_CAPR_AUTO_OFFSET_ADJ(x) (((uint32_t)(((uint32_t)(x)) << ENETC_PF_TMR_TMR_CAPR_AUTO_OFFSET_ADJ_SHIFT)) & ENETC_PF_TMR_TMR_CAPR_AUTO_OFFSET_ADJ_MASK)
+
+#define ENETC_PF_TMR_TMR_CAPR_IEEE_1722_MASK     (0x200U)
+#define ENETC_PF_TMR_TMR_CAPR_IEEE_1722_SHIFT    (9U)
 /*! IEEE_1722
  *  0b0..Not supported
  *  0b1..Supported
  */
 #define ENETC_PF_TMR_TMR_CAPR_IEEE_1722(x)       (((uint32_t)(((uint32_t)(x)) << ENETC_PF_TMR_TMR_CAPR_IEEE_1722_SHIFT)) & ENETC_PF_TMR_TMR_CAPR_IEEE_1722_MASK)
-
-#define ENETC_PF_TMR_TMR_CAPR_ECADJ_MASK         (0x2U)
-#define ENETC_PF_TMR_TMR_CAPR_ECADJ_SHIFT        (1U)
-#define ENETC_PF_TMR_TMR_CAPR_ECADJ(x)           (((uint32_t)(((uint32_t)(x)) << ENETC_PF_TMR_TMR_CAPR_ECADJ_SHIFT)) & ENETC_PF_TMR_TMR_CAPR_ECADJ_MASK)
-
-#define ENETC_PF_TMR_TMR_CAPR_IEEE_8021AS_REV_MASK (0x4U)
-#define ENETC_PF_TMR_TMR_CAPR_IEEE_8021AS_REV_SHIFT (2U)
-#define ENETC_PF_TMR_TMR_CAPR_IEEE_8021AS_REV(x) (((uint32_t)(((uint32_t)(x)) << ENETC_PF_TMR_TMR_CAPR_IEEE_8021AS_REV_SHIFT)) & ENETC_PF_TMR_TMR_CAPR_IEEE_8021AS_REV_MASK)
 
 #define ENETC_PF_TMR_TMR_CAPR_NUM_MSIX_MASK      (0x10000U)
 #define ENETC_PF_TMR_TMR_CAPR_NUM_MSIX_SHIFT     (16U)
@@ -334,6 +351,11 @@ typedef struct {
 #define ENETC_PF_TMR_TMR_CTRL_ETEP2_SHIFT        (9U)
 /*! ETEP2 - External trigger 2 edge polarity */
 #define ENETC_PF_TMR_TMR_CTRL_ETEP2(x)           (((uint32_t)(((uint32_t)(x)) << ENETC_PF_TMR_TMR_CTRL_ETEP2_SHIFT)) & ENETC_PF_TMR_TMR_CTRL_ETEP2_MASK)
+
+#define ENETC_PF_TMR_TMR_CTRL_LDR_MASK           (0x800U)
+#define ENETC_PF_TMR_TMR_CTRL_LDR_SHIFT          (11U)
+/*! LDR - Timer Leader mode */
+#define ENETC_PF_TMR_TMR_CTRL_LDR(x)             (((uint32_t)(((uint32_t)(x)) << ENETC_PF_TMR_TMR_CTRL_LDR_SHIFT)) & ENETC_PF_TMR_TMR_CTRL_LDR_MASK)
 
 #define ENETC_PF_TMR_TMR_CTRL_COMP_MODE_MASK     (0x8000U)
 #define ENETC_PF_TMR_TMR_CTRL_COMP_MODE_SHIFT    (15U)
@@ -697,6 +719,11 @@ typedef struct {
 /*! FIPER1_PW - FIPER 1 pulse width selection */
 #define ENETC_PF_TMR_TMR_FIPER_CTRL_FIPER1_PW(x) (((uint32_t)(((uint32_t)(x)) << ENETC_PF_TMR_TMR_FIPER_CTRL_FIPER1_PW_SHIFT)) & ENETC_PF_TMR_TMR_FIPER_CTRL_FIPER1_PW_MASK)
 
+#define ENETC_PF_TMR_TMR_FIPER_CTRL_FIPER1_FS_ALM_MASK (0x20U)
+#define ENETC_PF_TMR_TMR_FIPER_CTRL_FIPER1_FS_ALM_SHIFT (5U)
+/*! FIPER1_FS_ALM - FIPER1 Alarm select */
+#define ENETC_PF_TMR_TMR_FIPER_CTRL_FIPER1_FS_ALM(x) (((uint32_t)(((uint32_t)(x)) << ENETC_PF_TMR_TMR_FIPER_CTRL_FIPER1_FS_ALM_SHIFT)) & ENETC_PF_TMR_TMR_FIPER_CTRL_FIPER1_FS_ALM_MASK)
+
 #define ENETC_PF_TMR_TMR_FIPER_CTRL_PG1_MASK     (0x40U)
 #define ENETC_PF_TMR_TMR_FIPER_CTRL_PG1_SHIFT    (6U)
 /*! PG1 - FIPER1 pulse generation select */
@@ -712,6 +739,11 @@ typedef struct {
 /*! FIPER2_PW - FIPER 2 pulse width selection */
 #define ENETC_PF_TMR_TMR_FIPER_CTRL_FIPER2_PW(x) (((uint32_t)(((uint32_t)(x)) << ENETC_PF_TMR_TMR_FIPER_CTRL_FIPER2_PW_SHIFT)) & ENETC_PF_TMR_TMR_FIPER_CTRL_FIPER2_PW_MASK)
 
+#define ENETC_PF_TMR_TMR_FIPER_CTRL_FIPER2_FS_ALM_MASK (0x2000U)
+#define ENETC_PF_TMR_TMR_FIPER_CTRL_FIPER2_FS_ALM_SHIFT (13U)
+/*! FIPER2_FS_ALM - FIPER2 Alarm select */
+#define ENETC_PF_TMR_TMR_FIPER_CTRL_FIPER2_FS_ALM(x) (((uint32_t)(((uint32_t)(x)) << ENETC_PF_TMR_TMR_FIPER_CTRL_FIPER2_FS_ALM_SHIFT)) & ENETC_PF_TMR_TMR_FIPER_CTRL_FIPER2_FS_ALM_MASK)
+
 #define ENETC_PF_TMR_TMR_FIPER_CTRL_PG2_MASK     (0x4000U)
 #define ENETC_PF_TMR_TMR_FIPER_CTRL_PG2_SHIFT    (14U)
 /*! PG2 - FIPER2 pulse generation time */
@@ -726,6 +758,11 @@ typedef struct {
 #define ENETC_PF_TMR_TMR_FIPER_CTRL_FIPER3_PW_SHIFT (16U)
 /*! FIPER3_PW - FIPER 3 Pulse Width Selection */
 #define ENETC_PF_TMR_TMR_FIPER_CTRL_FIPER3_PW(x) (((uint32_t)(((uint32_t)(x)) << ENETC_PF_TMR_TMR_FIPER_CTRL_FIPER3_PW_SHIFT)) & ENETC_PF_TMR_TMR_FIPER_CTRL_FIPER3_PW_MASK)
+
+#define ENETC_PF_TMR_TMR_FIPER_CTRL_FIPER3_FS_ALM_MASK (0x200000U)
+#define ENETC_PF_TMR_TMR_FIPER_CTRL_FIPER3_FS_ALM_SHIFT (21U)
+/*! FIPER3_FS_ALM - FIPER3 Alarm select */
+#define ENETC_PF_TMR_TMR_FIPER_CTRL_FIPER3_FS_ALM(x) (((uint32_t)(((uint32_t)(x)) << ENETC_PF_TMR_TMR_FIPER_CTRL_FIPER3_FS_ALM_SHIFT)) & ENETC_PF_TMR_TMR_FIPER_CTRL_FIPER3_FS_ALM_MASK)
 
 #define ENETC_PF_TMR_TMR_FIPER_CTRL_PG3_MASK     (0x400000U)
 #define ENETC_PF_TMR_TMR_FIPER_CTRL_PG3_SHIFT    (22U)

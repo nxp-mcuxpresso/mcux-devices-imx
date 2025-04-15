@@ -44,13 +44,13 @@
 **                          MIMX9596XVZXN_cm7
 **
 **     Version:             rev. 1.0, 2023-01-10
-**     Build:               b240728
+**     Build:               b250415
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for NETC_ENETC
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -203,7 +203,7 @@ typedef struct {
        uint8_t RESERVED_14[12];
   __IO uint32_t PRIO2TCMR0;                        /**< Transmit priority to traffic class mapping register 0, offset: 0x380 */
        uint8_t RESERVED_15[12];
-  __IO uint32_t PTCTSDR[NETC_ENETC_TC_TBS_NUM_COUNT]; /**< Port traffic class 0 time specific departure register..Port traffic class 7 time specific departure register, array offset: 0x390, array step: 0x4 */
+  __IO uint32_t PTCTSDR[NETC_ENETC_TC_TBS_NUM_COUNT]; /**< Port traffic class a time specific departure register, array offset: 0x390, array step: 0x4 */
        uint8_t RESERVED_16[1104];
   __I  uint32_t SMCAPR;                            /**< Switch management capability register, offset: 0x800 */
        uint8_t RESERVED_17[6140];
@@ -902,7 +902,7 @@ typedef struct {
 #define NETC_ENETC_PRIO2TCMR0_PRIO7TC(x)         (((uint32_t)(((uint32_t)(x)) << NETC_ENETC_PRIO2TCMR0_PRIO7TC_SHIFT)) & NETC_ENETC_PRIO2TCMR0_PRIO7TC_MASK)
 /*! @} */
 
-/*! @name PTCTSDR - Port traffic class 0 time specific departure register..Port traffic class 7 time specific departure register */
+/*! @name PTCTSDR - Port traffic class a time specific departure register */
 /*! @{ */
 
 #define NETC_ENETC_PTCTSDR_TSDE_MASK             (0x80000000U)

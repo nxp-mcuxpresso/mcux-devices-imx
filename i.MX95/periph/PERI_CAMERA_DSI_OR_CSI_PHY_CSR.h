@@ -44,13 +44,13 @@
 **                          MIMX9596XVZXN_cm7
 **
 **     Version:             rev. 1.0, 2023-01-10
-**     Build:               b240728
+**     Build:               b250415
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for CAMERA_DSI_OR_CSI_PHY_CSR
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -226,8 +226,8 @@ typedef struct {
 #define CAMERA_DSI_OR_CSI_PHY_CSR_STANDALONE_PHY_TEST_MODE_CONTROL_turndisable_0_MASK (0x2000U)
 #define CAMERA_DSI_OR_CSI_PHY_CSR_STANDALONE_PHY_TEST_MODE_CONTROL_turndisable_0_SHIFT (13U)
 /*! turndisable_0 - Disable Turn Around for Lane 0
- *  0b1..Disable turn around
  *  0b0..Allow turn around
+ *  0b1..Disable turn around
  */
 #define CAMERA_DSI_OR_CSI_PHY_CSR_STANDALONE_PHY_TEST_MODE_CONTROL_turndisable_0(x) (((uint32_t)(((uint32_t)(x)) << CAMERA_DSI_OR_CSI_PHY_CSR_STANDALONE_PHY_TEST_MODE_CONTROL_turndisable_0_SHIFT)) & CAMERA_DSI_OR_CSI_PHY_CSR_STANDALONE_PHY_TEST_MODE_CONTROL_turndisable_0_MASK)
 
@@ -279,32 +279,32 @@ typedef struct {
 #define CAMERA_DSI_OR_CSI_PHY_CSR_STANDALONE_PHY_TEST_MODE_STATUS_errcontrol_0_MASK (0x10U)
 #define CAMERA_DSI_OR_CSI_PHY_CSR_STANDALONE_PHY_TEST_MODE_STATUS_errcontrol_0_SHIFT (4U)
 /*! errcontrol_0 - Indicates control error for lane 0
- *  0b1..Control error detected
  *  0b0..No control error detected
+ *  0b1..Control error detected
  */
 #define CAMERA_DSI_OR_CSI_PHY_CSR_STANDALONE_PHY_TEST_MODE_STATUS_errcontrol_0(x) (((uint32_t)(((uint32_t)(x)) << CAMERA_DSI_OR_CSI_PHY_CSR_STANDALONE_PHY_TEST_MODE_STATUS_errcontrol_0_SHIFT)) & CAMERA_DSI_OR_CSI_PHY_CSR_STANDALONE_PHY_TEST_MODE_STATUS_errcontrol_0_MASK)
 
 #define CAMERA_DSI_OR_CSI_PHY_CSR_STANDALONE_PHY_TEST_MODE_STATUS_errcontrol_1_MASK (0x20U)
 #define CAMERA_DSI_OR_CSI_PHY_CSR_STANDALONE_PHY_TEST_MODE_STATUS_errcontrol_1_SHIFT (5U)
 /*! errcontrol_1 - Indicates control error for lane 1
- *  0b1..Control error detected
  *  0b0..No control error detected
+ *  0b1..Control error detected
  */
 #define CAMERA_DSI_OR_CSI_PHY_CSR_STANDALONE_PHY_TEST_MODE_STATUS_errcontrol_1(x) (((uint32_t)(((uint32_t)(x)) << CAMERA_DSI_OR_CSI_PHY_CSR_STANDALONE_PHY_TEST_MODE_STATUS_errcontrol_1_SHIFT)) & CAMERA_DSI_OR_CSI_PHY_CSR_STANDALONE_PHY_TEST_MODE_STATUS_errcontrol_1_MASK)
 
 #define CAMERA_DSI_OR_CSI_PHY_CSR_STANDALONE_PHY_TEST_MODE_STATUS_errcontrol_2_MASK (0x40U)
 #define CAMERA_DSI_OR_CSI_PHY_CSR_STANDALONE_PHY_TEST_MODE_STATUS_errcontrol_2_SHIFT (6U)
 /*! errcontrol_2 - Indicates control error for lane 2
- *  0b1..Control error detected
  *  0b0..No control error detected
+ *  0b1..Control error detected
  */
 #define CAMERA_DSI_OR_CSI_PHY_CSR_STANDALONE_PHY_TEST_MODE_STATUS_errcontrol_2(x) (((uint32_t)(((uint32_t)(x)) << CAMERA_DSI_OR_CSI_PHY_CSR_STANDALONE_PHY_TEST_MODE_STATUS_errcontrol_2_SHIFT)) & CAMERA_DSI_OR_CSI_PHY_CSR_STANDALONE_PHY_TEST_MODE_STATUS_errcontrol_2_MASK)
 
 #define CAMERA_DSI_OR_CSI_PHY_CSR_STANDALONE_PHY_TEST_MODE_STATUS_errcontrol_3_MASK (0x80U)
 #define CAMERA_DSI_OR_CSI_PHY_CSR_STANDALONE_PHY_TEST_MODE_STATUS_errcontrol_3_SHIFT (7U)
 /*! errcontrol_3 - Indicates control error for lane 3
- *  0b1..Control error detected
  *  0b0..No control error detected
+ *  0b1..Control error detected
  */
 #define CAMERA_DSI_OR_CSI_PHY_CSR_STANDALONE_PHY_TEST_MODE_STATUS_errcontrol_3(x) (((uint32_t)(((uint32_t)(x)) << CAMERA_DSI_OR_CSI_PHY_CSR_STANDALONE_PHY_TEST_MODE_STATUS_errcontrol_3_SHIFT)) & CAMERA_DSI_OR_CSI_PHY_CSR_STANDALONE_PHY_TEST_MODE_STATUS_errcontrol_3_MASK)
 
@@ -331,8 +331,8 @@ typedef struct {
 #define CAMERA_DSI_OR_CSI_PHY_CSR_STANDALONE_PHY_TEST_IO_CONT_Phy_Cont_en_MASK (0x1U)
 #define CAMERA_DSI_OR_CSI_PHY_CSR_STANDALONE_PHY_TEST_IO_CONT_Phy_Cont_en_SHIFT (0U)
 /*! Phy_Cont_en - IO continuity test mode enable
- *  0b1..Enable IO continuity test mode
  *  0b0..Disable IO continuity test mode
+ *  0b1..Enable IO continuity test mode
  */
 #define CAMERA_DSI_OR_CSI_PHY_CSR_STANDALONE_PHY_TEST_IO_CONT_Phy_Cont_en(x) (((uint32_t)(((uint32_t)(x)) << CAMERA_DSI_OR_CSI_PHY_CSR_STANDALONE_PHY_TEST_IO_CONT_Phy_Cont_en_SHIFT)) & CAMERA_DSI_OR_CSI_PHY_CSR_STANDALONE_PHY_TEST_IO_CONT_Phy_Cont_en_MASK)
 
@@ -437,32 +437,32 @@ typedef struct {
 #define CAMERA_DSI_OR_CSI_PHY_CSR_COMBO_PHY_TEST_MODE_CONTROL_forcetxstopmode_1_MASK (0x20U)
 #define CAMERA_DSI_OR_CSI_PHY_CSR_COMBO_PHY_TEST_MODE_CONTROL_forcetxstopmode_1_SHIFT (5U)
 /*! forcetxstopmode_1 - Force lane module into transmit mode and generate Stop state for lane 1
- *  0b1..Force lane module into transmit mode and Stop state following an error indication
  *  0b0..Do not force lane module into transmit mode and Stop state following an error indication
+ *  0b1..Force lane module into transmit mode and Stop state following an error indication
  */
 #define CAMERA_DSI_OR_CSI_PHY_CSR_COMBO_PHY_TEST_MODE_CONTROL_forcetxstopmode_1(x) (((uint32_t)(((uint32_t)(x)) << CAMERA_DSI_OR_CSI_PHY_CSR_COMBO_PHY_TEST_MODE_CONTROL_forcetxstopmode_1_SHIFT)) & CAMERA_DSI_OR_CSI_PHY_CSR_COMBO_PHY_TEST_MODE_CONTROL_forcetxstopmode_1_MASK)
 
 #define CAMERA_DSI_OR_CSI_PHY_CSR_COMBO_PHY_TEST_MODE_CONTROL_forcetxstopmode_2_MASK (0x40U)
 #define CAMERA_DSI_OR_CSI_PHY_CSR_COMBO_PHY_TEST_MODE_CONTROL_forcetxstopmode_2_SHIFT (6U)
 /*! forcetxstopmode_2 - Force lane module into transmit mode and generate Stop state for lane 2
- *  0b1..Force lane module into transmit mode and Stop state following an error indication
  *  0b0..Do not force lane module into transmit mode and Stop state following an error indication
+ *  0b1..Force lane module into transmit mode and Stop state following an error indication
  */
 #define CAMERA_DSI_OR_CSI_PHY_CSR_COMBO_PHY_TEST_MODE_CONTROL_forcetxstopmode_2(x) (((uint32_t)(((uint32_t)(x)) << CAMERA_DSI_OR_CSI_PHY_CSR_COMBO_PHY_TEST_MODE_CONTROL_forcetxstopmode_2_SHIFT)) & CAMERA_DSI_OR_CSI_PHY_CSR_COMBO_PHY_TEST_MODE_CONTROL_forcetxstopmode_2_MASK)
 
 #define CAMERA_DSI_OR_CSI_PHY_CSR_COMBO_PHY_TEST_MODE_CONTROL_forcetxstopmode_3_MASK (0x80U)
 #define CAMERA_DSI_OR_CSI_PHY_CSR_COMBO_PHY_TEST_MODE_CONTROL_forcetxstopmode_3_SHIFT (7U)
 /*! forcetxstopmode_3 - Force lane module into transmit mode and generate Stop state for lane 3
- *  0b1..Force lane module into transmit mode and Stop state following an error indication
  *  0b0..Do not force lane module into transmit mode and Stop state following an error indication
+ *  0b1..Force lane module into transmit mode and Stop state following an error indication
  */
 #define CAMERA_DSI_OR_CSI_PHY_CSR_COMBO_PHY_TEST_MODE_CONTROL_forcetxstopmode_3(x) (((uint32_t)(((uint32_t)(x)) << CAMERA_DSI_OR_CSI_PHY_CSR_COMBO_PHY_TEST_MODE_CONTROL_forcetxstopmode_3_SHIFT)) & CAMERA_DSI_OR_CSI_PHY_CSR_COMBO_PHY_TEST_MODE_CONTROL_forcetxstopmode_3_MASK)
 
 #define CAMERA_DSI_OR_CSI_PHY_CSR_COMBO_PHY_TEST_MODE_CONTROL_forcerxmode_0_MASK (0x100U)
 #define CAMERA_DSI_OR_CSI_PHY_CSR_COMBO_PHY_TEST_MODE_CONTROL_forcerxmode_0_SHIFT (8U)
 /*! forcerxmode_0 - Force lane module into receive mode/wait for Stop State for lane 0
- *  0b1..Force lane module into receive mode and wait for Stop state
  *  0b0..Do not force lane module into receive mode and wait for Stop state
+ *  0b1..Force lane module into receive mode and wait for Stop state
  */
 #define CAMERA_DSI_OR_CSI_PHY_CSR_COMBO_PHY_TEST_MODE_CONTROL_forcerxmode_0(x) (((uint32_t)(((uint32_t)(x)) << CAMERA_DSI_OR_CSI_PHY_CSR_COMBO_PHY_TEST_MODE_CONTROL_forcerxmode_0_SHIFT)) & CAMERA_DSI_OR_CSI_PHY_CSR_COMBO_PHY_TEST_MODE_CONTROL_forcerxmode_0_MASK)
 
@@ -585,8 +585,8 @@ typedef struct {
 #define CAMERA_DSI_OR_CSI_PHY_CSR_COMBO_PHY_TEST_MODE_STATUS_ulpsactivenot_1_MASK (0x2U)
 #define CAMERA_DSI_OR_CSI_PHY_CSR_COMBO_PHY_TEST_MODE_STATUS_ulpsactivenot_1_SHIFT (1U)
 /*! ulpsactivenot_1 - Indicates lane 1 is in the Ultra Low Power (ULP) state
- *  0b1..Lane is not in ULP state
  *  0b0..Lane is in ULP state
+ *  0b1..Lane is not in ULP state
  */
 #define CAMERA_DSI_OR_CSI_PHY_CSR_COMBO_PHY_TEST_MODE_STATUS_ulpsactivenot_1(x) (((uint32_t)(((uint32_t)(x)) << CAMERA_DSI_OR_CSI_PHY_CSR_COMBO_PHY_TEST_MODE_STATUS_ulpsactivenot_1_SHIFT)) & CAMERA_DSI_OR_CSI_PHY_CSR_COMBO_PHY_TEST_MODE_STATUS_ulpsactivenot_1_MASK)
 
@@ -601,32 +601,32 @@ typedef struct {
 #define CAMERA_DSI_OR_CSI_PHY_CSR_COMBO_PHY_TEST_MODE_STATUS_ulpsactivenot_3_MASK (0x8U)
 #define CAMERA_DSI_OR_CSI_PHY_CSR_COMBO_PHY_TEST_MODE_STATUS_ulpsactivenot_3_SHIFT (3U)
 /*! ulpsactivenot_3 - Indicates lane 3 is in the Ultra Low Power (ULP) state
- *  0b1..Lane is not in ULP state
  *  0b0..Lane is in ULP state
+ *  0b1..Lane is not in ULP state
  */
 #define CAMERA_DSI_OR_CSI_PHY_CSR_COMBO_PHY_TEST_MODE_STATUS_ulpsactivenot_3(x) (((uint32_t)(((uint32_t)(x)) << CAMERA_DSI_OR_CSI_PHY_CSR_COMBO_PHY_TEST_MODE_STATUS_ulpsactivenot_3_SHIFT)) & CAMERA_DSI_OR_CSI_PHY_CSR_COMBO_PHY_TEST_MODE_STATUS_ulpsactivenot_3_MASK)
 
 #define CAMERA_DSI_OR_CSI_PHY_CSR_COMBO_PHY_TEST_MODE_STATUS_errcontrol_0_MASK (0x10U)
 #define CAMERA_DSI_OR_CSI_PHY_CSR_COMBO_PHY_TEST_MODE_STATUS_errcontrol_0_SHIFT (4U)
 /*! errcontrol_0 - Indicates control error for lane 0
- *  0b1..Control error detected
  *  0b0..No control error detected
+ *  0b1..Control error detected
  */
 #define CAMERA_DSI_OR_CSI_PHY_CSR_COMBO_PHY_TEST_MODE_STATUS_errcontrol_0(x) (((uint32_t)(((uint32_t)(x)) << CAMERA_DSI_OR_CSI_PHY_CSR_COMBO_PHY_TEST_MODE_STATUS_errcontrol_0_SHIFT)) & CAMERA_DSI_OR_CSI_PHY_CSR_COMBO_PHY_TEST_MODE_STATUS_errcontrol_0_MASK)
 
 #define CAMERA_DSI_OR_CSI_PHY_CSR_COMBO_PHY_TEST_MODE_STATUS_errcontrol_1_MASK (0x20U)
 #define CAMERA_DSI_OR_CSI_PHY_CSR_COMBO_PHY_TEST_MODE_STATUS_errcontrol_1_SHIFT (5U)
 /*! errcontrol_1 - Indicates control error for lane 1
- *  0b1..Control error detected
  *  0b0..No control error detected
+ *  0b1..Control error detected
  */
 #define CAMERA_DSI_OR_CSI_PHY_CSR_COMBO_PHY_TEST_MODE_STATUS_errcontrol_1(x) (((uint32_t)(((uint32_t)(x)) << CAMERA_DSI_OR_CSI_PHY_CSR_COMBO_PHY_TEST_MODE_STATUS_errcontrol_1_SHIFT)) & CAMERA_DSI_OR_CSI_PHY_CSR_COMBO_PHY_TEST_MODE_STATUS_errcontrol_1_MASK)
 
 #define CAMERA_DSI_OR_CSI_PHY_CSR_COMBO_PHY_TEST_MODE_STATUS_errcontrol_2_MASK (0x40U)
 #define CAMERA_DSI_OR_CSI_PHY_CSR_COMBO_PHY_TEST_MODE_STATUS_errcontrol_2_SHIFT (6U)
 /*! errcontrol_2 - Indicates control error for lane 2
- *  0b1..Control error detected
  *  0b0..No control error detected
+ *  0b1..Control error detected
  */
 #define CAMERA_DSI_OR_CSI_PHY_CSR_COMBO_PHY_TEST_MODE_STATUS_errcontrol_2(x) (((uint32_t)(((uint32_t)(x)) << CAMERA_DSI_OR_CSI_PHY_CSR_COMBO_PHY_TEST_MODE_STATUS_errcontrol_2_SHIFT)) & CAMERA_DSI_OR_CSI_PHY_CSR_COMBO_PHY_TEST_MODE_STATUS_errcontrol_2_MASK)
 
@@ -641,8 +641,8 @@ typedef struct {
 #define CAMERA_DSI_OR_CSI_PHY_CSR_COMBO_PHY_TEST_MODE_STATUS_rxulpsclknot_MASK (0x100U)
 #define CAMERA_DSI_OR_CSI_PHY_CSR_COMBO_PHY_TEST_MODE_STATUS_rxulpsclknot_SHIFT (8U)
 /*! rxulpsclknot - Indicates that the clock lane module has entered the ULP state
- *  0b1..Clock lane is not in ULP state
  *  0b0..Clock lane is in ULP state
+ *  0b1..Clock lane is not in ULP state
  */
 #define CAMERA_DSI_OR_CSI_PHY_CSR_COMBO_PHY_TEST_MODE_STATUS_rxulpsclknot(x) (((uint32_t)(((uint32_t)(x)) << CAMERA_DSI_OR_CSI_PHY_CSR_COMBO_PHY_TEST_MODE_STATUS_rxulpsclknot_SHIFT)) & CAMERA_DSI_OR_CSI_PHY_CSR_COMBO_PHY_TEST_MODE_STATUS_rxulpsclknot_MASK)
 
@@ -673,8 +673,8 @@ typedef struct {
 #define CAMERA_DSI_OR_CSI_PHY_CSR_COMBO_PHY_TEST_MODE_STATUS_BistOK_MASK (0x2000U)
 #define CAMERA_DSI_OR_CSI_PHY_CSR_COMBO_PHY_TEST_MODE_STATUS_BistOK_SHIFT (13U)
 /*! BistOK - Status of BIST test
- *  0b1..BIST test is OK
  *  0b0..BIST test completed with errors
+ *  0b1..BIST test is OK
  */
 #define CAMERA_DSI_OR_CSI_PHY_CSR_COMBO_PHY_TEST_MODE_STATUS_BistOK(x) (((uint32_t)(((uint32_t)(x)) << CAMERA_DSI_OR_CSI_PHY_CSR_COMBO_PHY_TEST_MODE_STATUS_BistOK_SHIFT)) & CAMERA_DSI_OR_CSI_PHY_CSR_COMBO_PHY_TEST_MODE_STATUS_BistOK_MASK)
 /*! @} */
@@ -685,8 +685,8 @@ typedef struct {
 #define CAMERA_DSI_OR_CSI_PHY_CSR_COMBO_PHY_TEST_IO_CONT_Phy_Cont_en_MASK (0x1U)
 #define CAMERA_DSI_OR_CSI_PHY_CSR_COMBO_PHY_TEST_IO_CONT_Phy_Cont_en_SHIFT (0U)
 /*! Phy_Cont_en - IO continuity test mode enable
- *  0b1..Enable IO continuity test mode
  *  0b0..Disable IO continuity test mode
+ *  0b1..Enable IO continuity test mode
  */
 #define CAMERA_DSI_OR_CSI_PHY_CSR_COMBO_PHY_TEST_IO_CONT_Phy_Cont_en(x) (((uint32_t)(((uint32_t)(x)) << CAMERA_DSI_OR_CSI_PHY_CSR_COMBO_PHY_TEST_IO_CONT_Phy_Cont_en_SHIFT)) & CAMERA_DSI_OR_CSI_PHY_CSR_COMBO_PHY_TEST_IO_CONT_Phy_Cont_en_MASK)
 

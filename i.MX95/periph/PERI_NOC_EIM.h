@@ -44,13 +44,13 @@
 **                          MIMX9596XVZXN_cm7
 **
 **     Version:             rev. 1.0, 2023-01-10
-**     Build:               b240728
+**     Build:               b250415
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for NOC_EIM
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -135,6 +135,8 @@ typedef struct {
   __IO uint32_t EICHEN;                            /**< Error Injection Channel Enable register, offset: 0x4 */
        uint8_t RESERVED_0[252];
   __IO uint32_t EICHD0_WORD1;                      /**< Error Injection Channel Descriptor 0, Word1, offset: 0x104 */
+       uint8_t RESERVED_1[60];
+  __IO uint32_t EICHD1_WORD1;                      /**< Error Injection Channel Descriptor 1, Word1, offset: 0x144 */
 } NOC_EIM_Type;
 
 /* ----------------------------------------------------------------------------
@@ -161,6 +163,14 @@ typedef struct {
 /*! @name EICHEN - Error Injection Channel Enable register */
 /*! @{ */
 
+#define NOC_EIM_EICHEN_EICH1EN_MASK              (0x40000000U)
+#define NOC_EIM_EICHEN_EICH1EN_SHIFT             (30U)
+/*! EICH1EN - Error Injection Channel 1 Enable
+ *  0b0..Error injection is disabled on Error Injection Channel 1
+ *  0b1..Error injection is enabled on Error Injection Channel 1
+ */
+#define NOC_EIM_EICHEN_EICH1EN(x)                (((uint32_t)(((uint32_t)(x)) << NOC_EIM_EICHEN_EICH1EN_SHIFT)) & NOC_EIM_EICHEN_EICH1EN_MASK)
+
 #define NOC_EIM_EICHEN_EICH0EN_MASK              (0x80000000U)
 #define NOC_EIM_EICHEN_EICH0EN_SHIFT             (31U)
 /*! EICH0EN - Error Injection Channel 0 Enable
@@ -177,6 +187,15 @@ typedef struct {
 #define NOC_EIM_EICHD0_WORD1_B0_3DATA_MASK_SHIFT (0U)
 /*! B0_3DATA_MASK - Data Mask Bytes 0-3 */
 #define NOC_EIM_EICHD0_WORD1_B0_3DATA_MASK(x)    (((uint32_t)(((uint32_t)(x)) << NOC_EIM_EICHD0_WORD1_B0_3DATA_MASK_SHIFT)) & NOC_EIM_EICHD0_WORD1_B0_3DATA_MASK_MASK)
+/*! @} */
+
+/*! @name EICHD1_WORD1 - Error Injection Channel Descriptor 1, Word1 */
+/*! @{ */
+
+#define NOC_EIM_EICHD1_WORD1_B0_3DATA_MASK_MASK  (0xFFU)
+#define NOC_EIM_EICHD1_WORD1_B0_3DATA_MASK_SHIFT (0U)
+/*! B0_3DATA_MASK - Data Mask Bytes 0-3 */
+#define NOC_EIM_EICHD1_WORD1_B0_3DATA_MASK(x)    (((uint32_t)(((uint32_t)(x)) << NOC_EIM_EICHD1_WORD1_B0_3DATA_MASK_SHIFT)) & NOC_EIM_EICHD1_WORD1_B0_3DATA_MASK_MASK)
 /*! @} */
 
 

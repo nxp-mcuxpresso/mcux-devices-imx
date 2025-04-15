@@ -44,13 +44,13 @@
 **                          MIMX9596XVZXN_cm7
 **
 **     Version:             rev. 1.0, 2023-01-10
-**     Build:               b240728
+**     Build:               b250415
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for TRDC_MBC2
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -130,14 +130,14 @@
  */
 
 /** TRDC_MBC2 - Size of Registers Arrays */
-#define TRDC_MBC2_DACFG_COUNT                     40u
+#define TRDC_MBC2_DACFG_COUNT                     39u
 #define TRDC_MBC2_DERRLOC_COUNT                   16u
 #define TRDC_MBC2_MBC_DERR_COUNT                  2u
 #define TRDC_MBC2_MRC_DERR_COUNT                  1u
 #define TRDC_MBC2_PID_COUNT                       1u
 #define TRDC_MBC2_MDA_Wx_y_DFMT_MDA_W_DFMT_DFMT0_MDA_Wx_DFMT0_COUNT 3u
 #define TRDC_MBC2_MDA_Wx_y_DFMT_MDA_W_DFMT_DFMT1_MDA_Wx_DFMT1_COUNT 1u
-#define TRDC_MBC2_MDA_Wx_y_DFMT_COUNT             40u
+#define TRDC_MBC2_MDA_Wx_y_DFMT_COUNT             39u
 #define TRDC_MBC2_MBC_INDEX_MBC_MEM_GLBCFG_COUNT  4u
 #define TRDC_MBC2_MBC_INDEX_MBC_MEMN_GLBAC_COUNT  8u
 #define TRDC_MBC2_MBC_INDEX_MBC_INDEX_DOM0_MEM0_BLK_CFG_W_COUNT 16u
@@ -281,7 +281,7 @@ typedef struct {
   __I  uint32_t TRDC_HWCFG2;                       /**< TRDC Hardware Configuration Register 2, offset: 0xF8 */
   __I  uint32_t TRDC_HWCFG3;                       /**< TRDC Hardware Configuration Register 3, offset: 0xFC */
   __I  uint8_t DACFG[TRDC_MBC2_DACFG_COUNT];       /**< Domain Assignment Configuration Register, array offset: 0x100, array step: 0x1 */
-       uint8_t RESERVED_1[152];
+       uint8_t RESERVED_1[153];
   __IO uint32_t TRDC_IDAU_CR;                      /**< TRDC IDAU Control Register, offset: 0x1C0 */
        uint8_t RESERVED_2[28];
   __IO uint32_t TRDC_FLW_CTL;                      /**< TRDC FLW Control, offset: 0x1E0 */
@@ -296,14 +296,14 @@ typedef struct {
     __I  uint32_t W0;                                /**< MBC Domain Error Word0 Register, array offset: 0x400, array step: 0x10 */
     __I  uint32_t W1;                                /**< MBC Domain Error Word1 Register, array offset: 0x404, array step: 0x10 */
          uint8_t RESERVED_0[4];
-    __O  uint32_t W3;                                /**< MBC Domain Error Word3 Register, array offset: 0x40C, array step: 0x10 */
+    __IO uint32_t W3;                                /**< MBC Domain Error Word3 Register, array offset: 0x40C, array step: 0x10 */
   } MBC_DERR[TRDC_MBC2_MBC_DERR_COUNT];
        uint8_t RESERVED_5[96];
   struct {                                         /* offset: 0x480, array step: 0x10 */
     __I  uint32_t W0;                                /**< MRC Domain Error Word0 Register, array offset: 0x480, array step: 0x10 */
     __I  uint32_t W1;                                /**< MRC Domain Error Word1 Register, array offset: 0x484, array step: 0x10 */
          uint8_t RESERVED_0[4];
-    __O  uint32_t W3;                                /**< MRC Domain Error Word3 Register, array offset: 0x48C, array step: 0x10 */
+    __IO uint32_t W3;                                /**< MRC Domain Error Word3 Register, array offset: 0x48C, array step: 0x10 */
   } MRC_DERR[TRDC_MBC2_MRC_DERR_COUNT];
        uint8_t RESERVED_6[688];
   __IO uint32_t PID[TRDC_MBC2_PID_COUNT];          /**< Process Identifier, array offset: 0x740, array step: 0x4 */
@@ -314,18 +314,18 @@ typedef struct {
         __IO uint32_t MDA_W_DFMT0;                       /**< DAC Master Domain Assignment Register, array offset: 0x800, array step: index*0x20, index2*0x4, valid indices: [16][0-2] */
       } MDA_Wx_DFMT0[TRDC_MBC2_MDA_Wx_y_DFMT_MDA_W_DFMT_DFMT0_MDA_Wx_DFMT0_COUNT];
       struct {                                         /* offset: 0x800, array step: index*0x20, index2*0x4 */
-        __IO uint32_t MDA_W_DFMT1;                       /**< DAC Master Domain Assignment Register, array offset: 0x800, array step: index*0x20, index2*0x4, valid indices: [0-15, 17-39][0] */
+        __IO uint32_t MDA_W_DFMT1;                       /**< DAC Master Domain Assignment Register, array offset: 0x800, array step: index*0x20, index2*0x4, valid indices: [0-15, 17-38][0] */
       } MDA_Wx_DFMT1[TRDC_MBC2_MDA_Wx_y_DFMT_MDA_W_DFMT_DFMT1_MDA_Wx_DFMT1_COUNT];
     } MDA_W_DFMT;
          uint8_t RESERVED_0[20];
   } MDA_Wx_y_DFMT[TRDC_MBC2_MDA_Wx_y_DFMT_COUNT];
-       uint8_t RESERVED_8[62208];
+       uint8_t RESERVED_8[62240];
   struct {                                         /* offset: 0x10000, array step: 0x2000 */
     __I  uint32_t MBC_MEM_GLBCFG[TRDC_MBC2_MBC_INDEX_MBC_MEM_GLBCFG_COUNT];   /**< MBC Global Configuration Register, array offset: 0x10000, array step: index*0x2000, index2*0x4 */
     __IO uint32_t MBC_NSE_BLK_INDEX;                 /**< MBC NonSecure Enable Block Index, array offset: 0x10010, array step: 0x2000 */
-    __O  uint32_t MBC_NSE_BLK_SET;                   /**< MBC NonSecure Enable Block Set, array offset: 0x10014, array step: 0x2000 */
-    __O  uint32_t MBC_NSE_BLK_CLR;                   /**< MBC NonSecure Enable Block Clear, array offset: 0x10018, array step: 0x2000 */
-    __O  uint32_t MBC_NSE_BLK_CLR_ALL;               /**< MBC NonSecure Enable Block Clear All, array offset: 0x1001C, array step: 0x2000 */
+    __IO uint32_t MBC_NSE_BLK_SET;                   /**< MBC NonSecure Enable Block Set, array offset: 0x10014, array step: 0x2000 */
+    __IO uint32_t MBC_NSE_BLK_CLR;                   /**< MBC NonSecure Enable Block Clear, array offset: 0x10018, array step: 0x2000 */
+    __IO uint32_t MBC_NSE_BLK_CLR_ALL;               /**< MBC NonSecure Enable Block Clear All, array offset: 0x1001C, array step: 0x2000 */
     __IO uint32_t MBC_MEMN_GLBAC[TRDC_MBC2_MBC_INDEX_MBC_MEMN_GLBAC_COUNT];   /**< MBC Global Access Control, array offset: 0x10020, array step: index*0x2000, index2*0x4 */
     __IO uint32_t MBC_DOM0_MEM0_BLK_CFG_W[TRDC_MBC2_MBC_INDEX_MBC_INDEX_DOM0_MEM0_BLK_CFG_W_COUNT];   /**< MBC Memory Block Configuration Word, array offset: 0x10040, array step: index*0x2000, index2*0x4, valid indices: [0][0-15], [1][0-3] */
          uint8_t RESERVED_0[192];
@@ -524,9 +524,9 @@ typedef struct {
     __I  uint32_t MRC_GLBCFG;                        /**< MRC Global Configuration Register, array offset: 0x14000, array step: 0xFC4 */
          uint8_t RESERVED_0[12];
     __IO uint32_t MRC_NSE_RGN_INDIRECT;              /**< MRC NonSecure Enable Region Indirect, array offset: 0x14010, array step: 0xFC4 */
-    __O  uint32_t MRC_NSE_RGN_SET;                   /**< MRC NonSecure Enable Region Set, array offset: 0x14014, array step: 0xFC4 */
-    __O  uint32_t MRC_NSE_RGN_CLR;                   /**< MRC NonSecure Enable Region Clear, array offset: 0x14018, array step: 0xFC4 */
-    __O  uint32_t MRC_NSE_RGN_CLR_ALL;               /**< MRC NonSecure Enable Region Clear All, array offset: 0x1401C, array step: 0xFC4 */
+    __IO uint32_t MRC_NSE_RGN_SET;                   /**< MRC NonSecure Enable Region Set, array offset: 0x14014, array step: 0xFC4 */
+    __IO uint32_t MRC_NSE_RGN_CLR;                   /**< MRC NonSecure Enable Region Clear, array offset: 0x14018, array step: 0xFC4 */
+    __IO uint32_t MRC_NSE_RGN_CLR_ALL;               /**< MRC NonSecure Enable Region Clear All, array offset: 0x1401C, array step: 0xFC4 */
     __IO uint32_t MRC_GLBAC[TRDC_MBC2_MRC_INDEX_MRC_GLBAC_COUNT];   /**< MRC Global Access Control, array offset: 0x14020, array step: index*0xFC4, index2*0x4 */
     __IO uint32_t MRC_DOM0_RGD_W[TRDC_MBC2_MRC_INDEX_MRC_INDEX_DOM0_RGD_COUNT][TRDC_MBC2_MRC_INDEX_MRC_INDEX_DOM0_RGD_MRC_INDEX_DOM0_RGD_W_COUNT];   /**< MRC Region Descriptor Word 0..MRC Region Descriptor Word 1, array offset: 0x14040, array step: index*0xFC4, index2*0x8, index3*0x4 */
          uint8_t RESERVED_1[64];
@@ -1145,7 +1145,7 @@ typedef struct {
 /*! @} */
 
 /* The count of TRDC_MBC2_MDA_W_DFMT0 */
-#define TRDC_MBC2_MDA_W_DFMT0_COUNT              (40U)
+#define TRDC_MBC2_MDA_W_DFMT0_COUNT              (39U)
 
 /* The count of TRDC_MBC2_MDA_W_DFMT0 */
 #define TRDC_MBC2_MDA_W_DFMT0_COUNT2             (3U)
@@ -1225,7 +1225,7 @@ typedef struct {
 /*! @} */
 
 /* The count of TRDC_MBC2_MDA_W_DFMT1 */
-#define TRDC_MBC2_MDA_W_DFMT1_COUNT              (40U)
+#define TRDC_MBC2_MDA_W_DFMT1_COUNT              (39U)
 
 /* The count of TRDC_MBC2_MDA_W_DFMT1 */
 #define TRDC_MBC2_MDA_W_DFMT1_COUNT2             (1U)

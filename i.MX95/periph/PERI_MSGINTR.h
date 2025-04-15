@@ -44,13 +44,13 @@
 **                          MIMX9596XVZXN_cm7
 **
 **     Version:             rev. 1.0, 2023-01-10
-**     Build:               b240728
+**     Build:               b250415
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for MSGINTR
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -135,8 +135,8 @@
 /** MSGINTR - Register Layout Typedef */
 typedef struct {
   struct {                                         /* offset: 0x0, array step: 0x8 */
-    __O  uint32_t MSIIR;                             /**< Message Signaled Interrupt Index Register 0..Message Signaled Interrupt Index Register 2, array offset: 0x0, array step: 0x8 */
-    __I  uint32_t MSIR;                              /**< Message Signaled Interrupt Register 0..Message Signaled Interrupt Register 2, array offset: 0x4, array step: 0x8 */
+    __O  uint32_t MSIIR;                             /**< Message Signaled Interrupt Index 0..Message Signaled Interrupt Index 2, array offset: 0x0, array step: 0x8 */
+    __I  uint32_t MSIR;                              /**< Message Signaled Interrupt 0..Message Signaled Interrupt 2, array offset: 0x4, array step: 0x8 */
   } MSI[MSGINTR_MSI_COUNT];
 } MSGINTR_Type;
 
@@ -149,18 +149,19 @@ typedef struct {
  * @{
  */
 
-/*! @name MSIIR - Message Signaled Interrupt Index Register 0..Message Signaled Interrupt Index Register 2 */
+/*! @name MSIIR - Message Signaled Interrupt Index 0..Message Signaled Interrupt Index 2 */
 /*! @{ */
 
 #define MSGINTR_MSIIR_IBS_MASK                   (0x1FU)
 #define MSGINTR_MSIIR_IBS_SHIFT                  (0U)
+/*! IBS - Interrupt Bit Select */
 #define MSGINTR_MSIIR_IBS(x)                     (((uint32_t)(((uint32_t)(x)) << MSGINTR_MSIIR_IBS_SHIFT)) & MSGINTR_MSIIR_IBS_MASK)
 /*! @} */
 
 /* The count of MSGINTR_MSIIR */
 #define MSGINTR_MSIIR_COUNT                      (3U)
 
-/*! @name MSIR - Message Signaled Interrupt Register 0..Message Signaled Interrupt Register 2 */
+/*! @name MSIR - Message Signaled Interrupt 0..Message Signaled Interrupt 2 */
 /*! @{ */
 
 #define MSGINTR_MSIR_SHn_MASK                    (0xFFFFFFFFU)

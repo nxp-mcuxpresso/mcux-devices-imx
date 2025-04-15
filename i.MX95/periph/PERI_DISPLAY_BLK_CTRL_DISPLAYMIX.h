@@ -44,13 +44,13 @@
 **                          MIMX9596XVZXN_cm7
 **
 **     Version:             rev. 1.0, 2023-01-10
-**     Build:               b240728
+**     Build:               b250415
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for DISPLAY_BLK_CTRL_DISPLAYMIX
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -155,10 +155,10 @@ typedef struct {
 #define DISPLAY_BLK_CTRL_DISPLAYMIX_DISPLAY_ENGINES_CLOCK_CONTROL_DSIP_CLK0_SEL_MASK (0x3U)
 #define DISPLAY_BLK_CTRL_DISPLAYMIX_DISPLAY_ENGINES_CLOCK_CONTROL_DSIP_CLK0_SEL_SHIFT (0U)
 /*! DSIP_CLK0_SEL - Select the clock feeding the display engine 0
- *  0b11..Reserved
- *  0b10..LVDS PLL Div/7 clock
- *  0b01..DSI PLL Div clock
  *  0b00..CCM.video_pll_clk
+ *  0b01..DSI PLL Div clock
+ *  0b10..LVDS PLL Div/7 clock
+ *  0b11..Reserved
  */
 #define DISPLAY_BLK_CTRL_DISPLAYMIX_DISPLAY_ENGINES_CLOCK_CONTROL_DSIP_CLK0_SEL(x) (((uint32_t)(((uint32_t)(x)) << DISPLAY_BLK_CTRL_DISPLAYMIX_DISPLAY_ENGINES_CLOCK_CONTROL_DSIP_CLK0_SEL_SHIFT)) & DISPLAY_BLK_CTRL_DISPLAYMIX_DISPLAY_ENGINES_CLOCK_CONTROL_DSIP_CLK0_SEL_MASK)
 
@@ -199,8 +199,8 @@ typedef struct {
 #define DISPLAY_BLK_CTRL_DISPLAYMIX_PIXEL_LINK_CTRL_PL0_enable_MASK (0x1U)
 #define DISPLAY_BLK_CTRL_DISPLAYMIX_PIXEL_LINK_CTRL_PL0_enable_SHIFT (0U)
 /*! PL0_enable - Start Pixel Link 0
- *  0b1..Start Pixel Link 0
  *  0b0..Do not start Pixel Link 0
+ *  0b1..Start Pixel Link 0
  */
 #define DISPLAY_BLK_CTRL_DISPLAYMIX_PIXEL_LINK_CTRL_PL0_enable(x) (((uint32_t)(((uint32_t)(x)) << DISPLAY_BLK_CTRL_DISPLAYMIX_PIXEL_LINK_CTRL_PL0_enable_SHIFT)) & DISPLAY_BLK_CTRL_DISPLAYMIX_PIXEL_LINK_CTRL_PL0_enable_MASK)
 
@@ -223,8 +223,8 @@ typedef struct {
 #define DISPLAY_BLK_CTRL_DISPLAYMIX_PIXEL_LINK_CTRL_PL1_valid_MASK (0x20U)
 #define DISPLAY_BLK_CTRL_DISPLAYMIX_PIXEL_LINK_CTRL_PL1_valid_SHIFT (5U)
 /*! PL1_valid - Indicates valid pixels / control
- *  0b1..Valid pixels/control
  *  0b0..Not valid pixels/control
+ *  0b1..Valid pixels/control
  */
 #define DISPLAY_BLK_CTRL_DISPLAYMIX_PIXEL_LINK_CTRL_PL1_valid(x) (((uint32_t)(((uint32_t)(x)) << DISPLAY_BLK_CTRL_DISPLAYMIX_PIXEL_LINK_CTRL_PL1_valid_SHIFT)) & DISPLAY_BLK_CTRL_DISPLAYMIX_PIXEL_LINK_CTRL_PL1_valid_MASK)
 /*! @} */
@@ -289,32 +289,32 @@ typedef struct {
 #define DISPLAY_BLK_CTRL_DISPLAYMIX_DISPLAYENGINE_PLANE_ASSOCIATION_FracPlane_0_MASK (0x1U)
 #define DISPLAY_BLK_CTRL_DISPLAYMIX_DISPLAYENGINE_PLANE_ASSOCIATION_FracPlane_0_SHIFT (0U)
 /*! FracPlane_0 - FetchLayer#0
- *  0b1..Fetch unit is associated with Display Engine 1.
  *  0b0..Fetch unit is associated with Display Engine 0.
+ *  0b1..Fetch unit is associated with Display Engine 1.
  */
 #define DISPLAY_BLK_CTRL_DISPLAYMIX_DISPLAYENGINE_PLANE_ASSOCIATION_FracPlane_0(x) (((uint32_t)(((uint32_t)(x)) << DISPLAY_BLK_CTRL_DISPLAYMIX_DISPLAYENGINE_PLANE_ASSOCIATION_FracPlane_0_SHIFT)) & DISPLAY_BLK_CTRL_DISPLAYMIX_DISPLAYENGINE_PLANE_ASSOCIATION_FracPlane_0_MASK)
 
 #define DISPLAY_BLK_CTRL_DISPLAYMIX_DISPLAYENGINE_PLANE_ASSOCIATION_FracPlane_1_MASK (0x4U)
 #define DISPLAY_BLK_CTRL_DISPLAYMIX_DISPLAYENGINE_PLANE_ASSOCIATION_FracPlane_1_SHIFT (2U)
 /*! FracPlane_1 - FetchLayer#1
- *  0b1..Fetch unit is associated with Display Engine 1.
  *  0b0..Fetch unit is associated with Display Engine 0.
+ *  0b1..Fetch unit is associated with Display Engine 1.
  */
 #define DISPLAY_BLK_CTRL_DISPLAYMIX_DISPLAYENGINE_PLANE_ASSOCIATION_FracPlane_1(x) (((uint32_t)(((uint32_t)(x)) << DISPLAY_BLK_CTRL_DISPLAYMIX_DISPLAYENGINE_PLANE_ASSOCIATION_FracPlane_1_SHIFT)) & DISPLAY_BLK_CTRL_DISPLAYMIX_DISPLAYENGINE_PLANE_ASSOCIATION_FracPlane_1_MASK)
 
 #define DISPLAY_BLK_CTRL_DISPLAYMIX_DISPLAYENGINE_PLANE_ASSOCIATION_IntPlane_0_MASK (0x40U)
 #define DISPLAY_BLK_CTRL_DISPLAYMIX_DISPLAYENGINE_PLANE_ASSOCIATION_IntPlane_0_SHIFT (6U)
 /*! IntPlane_0 - FetchYUV#3
- *  0b1..Fetch unit is associated with Display Engine 1.
  *  0b0..Fetch unit is associated with Display Engine 0.
+ *  0b1..Fetch unit is associated with Display Engine 1.
  */
 #define DISPLAY_BLK_CTRL_DISPLAYMIX_DISPLAYENGINE_PLANE_ASSOCIATION_IntPlane_0(x) (((uint32_t)(((uint32_t)(x)) << DISPLAY_BLK_CTRL_DISPLAYMIX_DISPLAYENGINE_PLANE_ASSOCIATION_IntPlane_0_SHIFT)) & DISPLAY_BLK_CTRL_DISPLAYMIX_DISPLAYENGINE_PLANE_ASSOCIATION_IntPlane_0_MASK)
 
 #define DISPLAY_BLK_CTRL_DISPLAYMIX_DISPLAYENGINE_PLANE_ASSOCIATION_VideoPlane_0_MASK (0x100U)
 #define DISPLAY_BLK_CTRL_DISPLAYMIX_DISPLAYENGINE_PLANE_ASSOCIATION_VideoPlane_0_SHIFT (8U)
 /*! VideoPlane_0 - FetchYUV#0 + FetchEco#0
- *  0b1..Fetch unit is associated with Display Engine 1.
  *  0b0..Fetch unit is associated with Display Engine 0.
+ *  0b1..Fetch unit is associated with Display Engine 1.
  */
 #define DISPLAY_BLK_CTRL_DISPLAYMIX_DISPLAYENGINE_PLANE_ASSOCIATION_VideoPlane_0(x) (((uint32_t)(((uint32_t)(x)) << DISPLAY_BLK_CTRL_DISPLAYMIX_DISPLAYENGINE_PLANE_ASSOCIATION_VideoPlane_0_SHIFT)) & DISPLAY_BLK_CTRL_DISPLAYMIX_DISPLAYENGINE_PLANE_ASSOCIATION_VideoPlane_0_MASK)
 
@@ -329,8 +329,8 @@ typedef struct {
 #define DISPLAY_BLK_CTRL_DISPLAYMIX_DISPLAYENGINE_PLANE_ASSOCIATION_VideoPlane_2_MASK (0x1000U)
 #define DISPLAY_BLK_CTRL_DISPLAYMIX_DISPLAYENGINE_PLANE_ASSOCIATION_VideoPlane_2_SHIFT (12U)
 /*! VideoPlane_2 - FetchYUV#2 + FetchEco#2
- *  0b1..Fetch unit is associated with Display Engine 1.
  *  0b0..Fetch unit is associated with Display Engine 0.
+ *  0b1..Fetch unit is associated with Display Engine 1.
  */
 #define DISPLAY_BLK_CTRL_DISPLAYMIX_DISPLAYENGINE_PLANE_ASSOCIATION_VideoPlane_2(x) (((uint32_t)(((uint32_t)(x)) << DISPLAY_BLK_CTRL_DISPLAYMIX_DISPLAYENGINE_PLANE_ASSOCIATION_VideoPlane_2_SHIFT)) & DISPLAY_BLK_CTRL_DISPLAYMIX_DISPLAYENGINE_PLANE_ASSOCIATION_VideoPlane_2_MASK)
 /*! @} */

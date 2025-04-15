@@ -44,13 +44,13 @@
 **                          MIMX9596XVZXN_cm7
 **
 **     Version:             rev. 1.0, 2023-01-10
-**     Build:               b240728
+**     Build:               b250415
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for I2S
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -145,7 +145,7 @@ typedef struct {
   __IO uint32_t TCR3;                              /**< Transmit Configuration 3, offset: 0x14 */
   __IO uint32_t TCR4;                              /**< Transmit Configuration 4, offset: 0x18 */
   __IO uint32_t TCR5;                              /**< Transmit Configuration 5, offset: 0x1C */
-  __O  uint32_t TDR[I2S_TDR_COUNT];                /**< Transmit Data, array offset: 0x20, array step: 0x4, irregular array, not all indices are valid */
+  __IO uint32_t TDR[I2S_TDR_COUNT];                /**< Transmit Data, array offset: 0x20, array step: 0x4, irregular array, not all indices are valid */
   __I  uint32_t TFR[I2S_TFR_COUNT];                /**< Transmit FIFO, array offset: 0x40, array step: 0x4, irregular array, not all indices are valid */
   __IO uint32_t TMR;                               /**< Transmit Mask, offset: 0x60 */
        uint8_t RESERVED_0[12];
@@ -299,30 +299,30 @@ typedef struct {
 #define I2S_TCSR_FEF_MASK                        (0x40000U)
 #define I2S_TCSR_FEF_SHIFT                       (18U)
 /*! FEF - FIFO Error Flag
- *  0b0..Not detected
- *  0b1..Detected
  *  0b0..No effect
+ *  0b0..Not detected
  *  0b1..Clear the flag
+ *  0b1..Detected
  */
 #define I2S_TCSR_FEF(x)                          (((uint32_t)(((uint32_t)(x)) << I2S_TCSR_FEF_SHIFT)) & I2S_TCSR_FEF_MASK)
 
 #define I2S_TCSR_SEF_MASK                        (0x80000U)
 #define I2S_TCSR_SEF_SHIFT                       (19U)
 /*! SEF - Sync Error Flag
- *  0b0..Not detected
- *  0b1..Detected
  *  0b0..No effect
+ *  0b0..Not detected
  *  0b1..Clear the flag
+ *  0b1..Detected
  */
 #define I2S_TCSR_SEF(x)                          (((uint32_t)(((uint32_t)(x)) << I2S_TCSR_SEF_SHIFT)) & I2S_TCSR_SEF_MASK)
 
 #define I2S_TCSR_WSF_MASK                        (0x100000U)
 #define I2S_TCSR_WSF_SHIFT                       (20U)
 /*! WSF - Word Start Flag
- *  0b0..Not detected
- *  0b1..Detected
  *  0b0..No effect
+ *  0b0..Not detected
  *  0b1..Clear the flag
+ *  0b1..Detected
  */
 #define I2S_TCSR_WSF(x)                          (((uint32_t)(((uint32_t)(x)) << I2S_TCSR_WSF_SHIFT)) & I2S_TCSR_WSF_MASK)
 
@@ -381,10 +381,10 @@ typedef struct {
 #define I2S_TCR1_TFW_MASK                        (0x7FU)  /* Merged from fields with different position or width, of widths (5, 7), largest definition used */
 #define I2S_TCR1_TFW_SHIFT                       (0U)
 /*! TFW - Transmit FIFO Watermark
- *  0b0000000..1
- *  0b0000001..2
- *  0b0000010-0b1111110..(TFW +1)
- *  0b1111111..128
+ *  0b0000000..0
+ *  0b0000001..1
+ *  0b0000010-0b1111110..(TFW)
+ *  0b1111111..127
  */
 #define I2S_TCR1_TFW(x)                          (((uint32_t)(((uint32_t)(x)) << I2S_TCR1_TFW_SHIFT)) & I2S_TCR1_TFW_MASK)  /* Merged from fields with different position or width, of widths (5, 7), largest definition used */
 /*! @} */
@@ -792,30 +792,30 @@ typedef struct {
 #define I2S_RCSR_FEF_MASK                        (0x40000U)
 #define I2S_RCSR_FEF_SHIFT                       (18U)
 /*! FEF - FIFO Error Flag
- *  0b0..No error
- *  0b1..Receive overflow detected
  *  0b0..No effect
+ *  0b0..No error
  *  0b1..Clear the flag
+ *  0b1..Receive overflow detected
  */
 #define I2S_RCSR_FEF(x)                          (((uint32_t)(((uint32_t)(x)) << I2S_RCSR_FEF_SHIFT)) & I2S_RCSR_FEF_MASK)
 
 #define I2S_RCSR_SEF_MASK                        (0x80000U)
 #define I2S_RCSR_SEF_SHIFT                       (19U)
 /*! SEF - Sync Error Flag
- *  0b0..Not detected
- *  0b1..Detected
  *  0b0..No effect
+ *  0b0..Not detected
  *  0b1..Clear the flag
+ *  0b1..Detected
  */
 #define I2S_RCSR_SEF(x)                          (((uint32_t)(((uint32_t)(x)) << I2S_RCSR_SEF_SHIFT)) & I2S_RCSR_SEF_MASK)
 
 #define I2S_RCSR_WSF_MASK                        (0x100000U)
 #define I2S_RCSR_WSF_SHIFT                       (20U)
 /*! WSF - Word Start Flag
- *  0b0..Not detected
- *  0b1..Detected
  *  0b0..No effect
+ *  0b0..Not detected
  *  0b1..Clear the flag
+ *  0b1..Detected
  */
 #define I2S_RCSR_WSF(x)                          (((uint32_t)(((uint32_t)(x)) << I2S_RCSR_WSF_SHIFT)) & I2S_RCSR_WSF_MASK)
 

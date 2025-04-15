@@ -44,13 +44,13 @@
 **                          MIMX9596XVZXN_cm7
 **
 **     Version:             rev. 1.0, 2023-01-10
-**     Build:               b240728
+**     Build:               b250415
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for TPM
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -601,6 +601,22 @@ typedef struct {
  *  0b11..TPM counter continues
  */
 #define TPM_CONF_DBGMODE(x)                      (((uint32_t)(((uint32_t)(x)) << TPM_CONF_DBGMODE_SHIFT)) & TPM_CONF_DBGMODE_MASK)
+
+#define TPM_CONF_GTBSYNC_MASK                    (0x100U)
+#define TPM_CONF_GTBSYNC_SHIFT                   (8U)
+/*! GTBSYNC - GTB Synchronization
+ *  0b0..Disable
+ *  0b1..Enable
+ */
+#define TPM_CONF_GTBSYNC(x)                      (((uint32_t)(((uint32_t)(x)) << TPM_CONF_GTBSYNC_SHIFT)) & TPM_CONF_GTBSYNC_MASK)
+
+#define TPM_CONF_GTBEEN_MASK                     (0x200U)
+#define TPM_CONF_GTBEEN_SHIFT                    (9U)
+/*! GTBEEN - GTB Enable
+ *  0b0..Internally generated TPM counter
+ *  0b1..Externally generated GTB counter
+ */
+#define TPM_CONF_GTBEEN(x)                       (((uint32_t)(((uint32_t)(x)) << TPM_CONF_GTBEEN_SHIFT)) & TPM_CONF_GTBEEN_MASK)
 
 #define TPM_CONF_CSOT_MASK                       (0x10000U)
 #define TPM_CONF_CSOT_SHIFT                      (16U)

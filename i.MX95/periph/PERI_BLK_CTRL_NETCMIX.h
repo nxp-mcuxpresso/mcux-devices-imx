@@ -44,13 +44,13 @@
 **                          MIMX9596XVZXN_cm7
 **
 **     Version:             rev. 1.0, 2023-01-10
-**     Build:               b240728
+**     Build:               b250415
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for BLK_CTRL_NETCMIX
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -157,8 +157,8 @@ typedef struct {
 #define BLK_CTRL_NETCMIX_MQS_SETTING_SAI_SEL_MASK (0x3U)
 #define BLK_CTRL_NETCMIX_MQS_SETTING_SAI_SEL_SHIFT (0U)
 /*! SAI_SEL - SAI2 clock source selection
- *  0b01..Reserved
  *  0b00..Select clock source from SAI2
+ *  0b01..Reserved
  *  0b10..Reserved
  *  0b11..Reserved
  */
@@ -167,8 +167,8 @@ typedef struct {
 #define BLK_CTRL_NETCMIX_MQS_SETTING_MQS_EN_MASK (0x4U)
 #define BLK_CTRL_NETCMIX_MQS_SETTING_MQS_EN_SHIFT (2U)
 /*! MQS_EN - MQS enable
- *  0b1..Enable MQS
  *  0b0..Disable MQS
+ *  0b1..Enable MQS
  */
 #define BLK_CTRL_NETCMIX_MQS_SETTING_MQS_EN(x)   (((uint32_t)(((uint32_t)(x)) << BLK_CTRL_NETCMIX_MQS_SETTING_MQS_EN_SHIFT)) & BLK_CTRL_NETCMIX_MQS_SETTING_MQS_EN_MASK)
 
@@ -187,6 +187,10 @@ typedef struct {
  *  0b1..64
  */
 #define BLK_CTRL_NETCMIX_MQS_SETTING_OVERSAMPLE(x) (((uint32_t)(((uint32_t)(x)) << BLK_CTRL_NETCMIX_MQS_SETTING_OVERSAMPLE_SHIFT)) & BLK_CTRL_NETCMIX_MQS_SETTING_OVERSAMPLE_MASK)
+
+#define BLK_CTRL_NETCMIX_MQS_SETTING_IDDQ_FUNC_MASK (0x20U)
+#define BLK_CTRL_NETCMIX_MQS_SETTING_IDDQ_FUNC_SHIFT (5U)
+#define BLK_CTRL_NETCMIX_MQS_SETTING_IDDQ_FUNC(x) (((uint32_t)(((uint32_t)(x)) << BLK_CTRL_NETCMIX_MQS_SETTING_IDDQ_FUNC_SHIFT)) & BLK_CTRL_NETCMIX_MQS_SETTING_IDDQ_FUNC_MASK)
 
 #define BLK_CTRL_NETCMIX_MQS_SETTING_CLK_DIVIDE_MASK (0x1FE00U)
 #define BLK_CTRL_NETCMIX_MQS_SETTING_CLK_DIVIDE_SHIFT (9U)
@@ -208,22 +212,22 @@ typedef struct {
 #define BLK_CTRL_NETCMIX_NETCMIX_CLK_SEL_SAI2_MCLK2_MASK (0x1EU)
 #define BLK_CTRL_NETCMIX_NETCMIX_CLK_SEL_SAI2_MCLK2_SHIFT (1U)
 /*! SAI2_MCLK2 - SAI2 MCLK2 clock root select
- *  0b1100..Reserved
+ *  0b0000..SAI1_CLK_ROOT
  *  0b0001..SAI2_CLK_ROOT
  *  0b0010..SAI3_CLK_ROOT
- *  0b0000..SAI1_CLK_ROOT
  *  0b0011..SAI4_CLK_ROOT
  *  0b0100..SAI5_CLK_ROOT
- *  0b0110..Reserved
  *  0b0101..Reserved
- *  0b1101..Reserved
- *  0b1111..SPDIF_RX_ROOT
+ *  0b0110..Reserved
  *  0b0111..SAI1_IPP_IND_SAI_MCLK
  *  0b1000..SAI2_IPP_IND_SAI_MCLK
  *  0b1001..SAI3_IPP_IND_SAI_MCLK
  *  0b1010..Reserved
- *  0b1110..SPDIF_CLK_ROOT
  *  0b1011..Reserved
+ *  0b1100..Reserved
+ *  0b1101..Reserved
+ *  0b1110..SPDIF_CLK_ROOT
+ *  0b1111..SPDIF_RX_ROOT
  */
 #define BLK_CTRL_NETCMIX_NETCMIX_CLK_SEL_SAI2_MCLK2(x) (((uint32_t)(((uint32_t)(x)) << BLK_CTRL_NETCMIX_NETCMIX_CLK_SEL_SAI2_MCLK2_SHIFT)) & BLK_CTRL_NETCMIX_NETCMIX_CLK_SEL_SAI2_MCLK2_MASK)
 
@@ -238,22 +242,22 @@ typedef struct {
 #define BLK_CTRL_NETCMIX_NETCMIX_CLK_SEL_SAI2_MCLK3_MASK (0x3C0U)
 #define BLK_CTRL_NETCMIX_NETCMIX_CLK_SEL_SAI2_MCLK3_SHIFT (6U)
 /*! SAI2_MCLK3 - SAI2 MCLK3 clock root select
- *  0b1111..SPDIF_RX_ROOT
- *  0b1110..SPDIF_CLK_ROOT
- *  0b1101..Reserved
- *  0b1100..Reserved
- *  0b1011..Reserved
- *  0b1010..Reserved
- *  0b1001..SAI3_IPP_IND_SAI_MCLK
- *  0b1000..SAI2_IPP_IND_SAI_MCLK
- *  0b0111..SAI1_IPP_IND_SAI_MCLK
- *  0b0110..Reserved
- *  0b0101..Reserved
- *  0b0100..SAI5_CLK_ROOT
- *  0b0011..SAI4_CLK_ROOT
- *  0b0010..SAI3_CLK_ROOT
- *  0b0001..SAI2_CLK_ROOT
  *  0b0000..SAI1_CLK_ROOT
+ *  0b0001..SAI2_CLK_ROOT
+ *  0b0010..SAI3_CLK_ROOT
+ *  0b0011..SAI4_CLK_ROOT
+ *  0b0100..SAI5_CLK_ROOT
+ *  0b0101..Reserved
+ *  0b0110..Reserved
+ *  0b0111..SAI1_IPP_IND_SAI_MCLK
+ *  0b1000..SAI2_IPP_IND_SAI_MCLK
+ *  0b1001..SAI3_IPP_IND_SAI_MCLK
+ *  0b1010..Reserved
+ *  0b1011..Reserved
+ *  0b1100..Reserved
+ *  0b1101..Reserved
+ *  0b1110..SPDIF_CLK_ROOT
+ *  0b1111..SPDIF_RX_ROOT
  */
 #define BLK_CTRL_NETCMIX_NETCMIX_CLK_SEL_SAI2_MCLK3(x) (((uint32_t)(((uint32_t)(x)) << BLK_CTRL_NETCMIX_NETCMIX_CLK_SEL_SAI2_MCLK3_SHIFT)) & BLK_CTRL_NETCMIX_NETCMIX_CLK_SEL_SAI2_MCLK3_MASK)
 
@@ -280,56 +284,56 @@ typedef struct {
 #define BLK_CTRL_NETCMIX_IPG_DEBUG_SAI2_IPG_DEBUG_CA55_CORE1_MASK (0x2U)
 #define BLK_CTRL_NETCMIX_IPG_DEBUG_SAI2_IPG_DEBUG_CA55_CORE1_SHIFT (1U)
 /*! IPG_DEBUG_CA55_CORE1 - CA55 core1 in debug mode
- *  0b1..Core enters debug mode
  *  0b0..Core does not enter debug mode
+ *  0b1..Core enters debug mode
  */
 #define BLK_CTRL_NETCMIX_IPG_DEBUG_SAI2_IPG_DEBUG_CA55_CORE1(x) (((uint32_t)(((uint32_t)(x)) << BLK_CTRL_NETCMIX_IPG_DEBUG_SAI2_IPG_DEBUG_CA55_CORE1_SHIFT)) & BLK_CTRL_NETCMIX_IPG_DEBUG_SAI2_IPG_DEBUG_CA55_CORE1_MASK)
 
 #define BLK_CTRL_NETCMIX_IPG_DEBUG_SAI2_IPG_DEBUG_CA55_CORE2_MASK (0x4U)
 #define BLK_CTRL_NETCMIX_IPG_DEBUG_SAI2_IPG_DEBUG_CA55_CORE2_SHIFT (2U)
 /*! IPG_DEBUG_CA55_CORE2 - CA55 core2 in debug mode
- *  0b1..Core enters debug mode
  *  0b0..Core does not enter debug mode
+ *  0b1..Core enters debug mode
  */
 #define BLK_CTRL_NETCMIX_IPG_DEBUG_SAI2_IPG_DEBUG_CA55_CORE2(x) (((uint32_t)(((uint32_t)(x)) << BLK_CTRL_NETCMIX_IPG_DEBUG_SAI2_IPG_DEBUG_CA55_CORE2_SHIFT)) & BLK_CTRL_NETCMIX_IPG_DEBUG_SAI2_IPG_DEBUG_CA55_CORE2_MASK)
 
 #define BLK_CTRL_NETCMIX_IPG_DEBUG_SAI2_IPG_DEBUG_CA55_CORE3_MASK (0x8U)
 #define BLK_CTRL_NETCMIX_IPG_DEBUG_SAI2_IPG_DEBUG_CA55_CORE3_SHIFT (3U)
 /*! IPG_DEBUG_CA55_CORE3 - CA55 core3 in debug mode
- *  0b1..Core enters debug mode
  *  0b0..Core does not enter debug mode
+ *  0b1..Core enters debug mode
  */
 #define BLK_CTRL_NETCMIX_IPG_DEBUG_SAI2_IPG_DEBUG_CA55_CORE3(x) (((uint32_t)(((uint32_t)(x)) << BLK_CTRL_NETCMIX_IPG_DEBUG_SAI2_IPG_DEBUG_CA55_CORE3_SHIFT)) & BLK_CTRL_NETCMIX_IPG_DEBUG_SAI2_IPG_DEBUG_CA55_CORE3_MASK)
 
 #define BLK_CTRL_NETCMIX_IPG_DEBUG_SAI2_IPG_DEBUG_CA55_CORE4_MASK (0x10U)
 #define BLK_CTRL_NETCMIX_IPG_DEBUG_SAI2_IPG_DEBUG_CA55_CORE4_SHIFT (4U)
 /*! IPG_DEBUG_CA55_CORE4 - CA55 core4 in debug mode
- *  0b1..Core enters debug mode
  *  0b0..Core does not enter debug mode
+ *  0b1..Core enters debug mode
  */
 #define BLK_CTRL_NETCMIX_IPG_DEBUG_SAI2_IPG_DEBUG_CA55_CORE4(x) (((uint32_t)(((uint32_t)(x)) << BLK_CTRL_NETCMIX_IPG_DEBUG_SAI2_IPG_DEBUG_CA55_CORE4_SHIFT)) & BLK_CTRL_NETCMIX_IPG_DEBUG_SAI2_IPG_DEBUG_CA55_CORE4_MASK)
 
 #define BLK_CTRL_NETCMIX_IPG_DEBUG_SAI2_IPG_DEBUG_CA55_CORE5_MASK (0x20U)
 #define BLK_CTRL_NETCMIX_IPG_DEBUG_SAI2_IPG_DEBUG_CA55_CORE5_SHIFT (5U)
 /*! IPG_DEBUG_CA55_CORE5 - CA55 core5 in debug mode
- *  0b1..Core enters debug mode
  *  0b0..Core does not enter debug mode
+ *  0b1..Core enters debug mode
  */
 #define BLK_CTRL_NETCMIX_IPG_DEBUG_SAI2_IPG_DEBUG_CA55_CORE5(x) (((uint32_t)(((uint32_t)(x)) << BLK_CTRL_NETCMIX_IPG_DEBUG_SAI2_IPG_DEBUG_CA55_CORE5_SHIFT)) & BLK_CTRL_NETCMIX_IPG_DEBUG_SAI2_IPG_DEBUG_CA55_CORE5_MASK)
 
 #define BLK_CTRL_NETCMIX_IPG_DEBUG_SAI2_IPG_DEBUG_CM33_MASK (0x40U)
 #define BLK_CTRL_NETCMIX_IPG_DEBUG_SAI2_IPG_DEBUG_CM33_SHIFT (6U)
 /*! IPG_DEBUG_CM33 - CM33 in debug mode
- *  0b1..Core enters debug mode
  *  0b0..Core does not enter debug mode
+ *  0b1..Core enters debug mode
  */
 #define BLK_CTRL_NETCMIX_IPG_DEBUG_SAI2_IPG_DEBUG_CM33(x) (((uint32_t)(((uint32_t)(x)) << BLK_CTRL_NETCMIX_IPG_DEBUG_SAI2_IPG_DEBUG_CM33_SHIFT)) & BLK_CTRL_NETCMIX_IPG_DEBUG_SAI2_IPG_DEBUG_CM33_MASK)
 
 #define BLK_CTRL_NETCMIX_IPG_DEBUG_SAI2_IPG_DEBUG_M7_MASK (0x80U)
 #define BLK_CTRL_NETCMIX_IPG_DEBUG_SAI2_IPG_DEBUG_M7_SHIFT (7U)
 /*! IPG_DEBUG_M7 - M7 in debug mode
- *  0b1..Core enters debug mode
  *  0b0..Core does not enter debug mode
+ *  0b1..Core enters debug mode
  */
 #define BLK_CTRL_NETCMIX_IPG_DEBUG_SAI2_IPG_DEBUG_M7(x) (((uint32_t)(((uint32_t)(x)) << BLK_CTRL_NETCMIX_IPG_DEBUG_SAI2_IPG_DEBUG_M7_SHIFT)) & BLK_CTRL_NETCMIX_IPG_DEBUG_SAI2_IPG_DEBUG_M7_MASK)
 /*! @} */
@@ -348,16 +352,16 @@ typedef struct {
 #define BLK_CTRL_NETCMIX_CFG_LINK_IO_VAR_CFG_LINK_IO_VAR_1_MASK (0xF0U)
 #define BLK_CTRL_NETCMIX_CFG_LINK_IO_VAR_CFG_LINK_IO_VAR_1_SHIFT (4U)
 /*! CFG_LINK_IO_VAR_1 - I/O variant supported by SoC on link 1
- *  0b0001..16FF 16G SerDes
  *  0b0000..None
+ *  0b0001..16FF 16G SerDes
  */
 #define BLK_CTRL_NETCMIX_CFG_LINK_IO_VAR_CFG_LINK_IO_VAR_1(x) (((uint32_t)(((uint32_t)(x)) << BLK_CTRL_NETCMIX_CFG_LINK_IO_VAR_CFG_LINK_IO_VAR_1_SHIFT)) & BLK_CTRL_NETCMIX_CFG_LINK_IO_VAR_CFG_LINK_IO_VAR_1_MASK)
 
 #define BLK_CTRL_NETCMIX_CFG_LINK_IO_VAR_CFG_LINK_IO_VAR_2_MASK (0xF00U)
 #define BLK_CTRL_NETCMIX_CFG_LINK_IO_VAR_CFG_LINK_IO_VAR_2_SHIFT (8U)
 /*! CFG_LINK_IO_VAR_2 - I/O variant supported by SoC on link 2
- *  0b0001..16FF 16G SerDes
  *  0b0000..None
+ *  0b0001..16FF 16G SerDes
  */
 #define BLK_CTRL_NETCMIX_CFG_LINK_IO_VAR_CFG_LINK_IO_VAR_2(x) (((uint32_t)(((uint32_t)(x)) << BLK_CTRL_NETCMIX_CFG_LINK_IO_VAR_CFG_LINK_IO_VAR_2_SHIFT)) & BLK_CTRL_NETCMIX_CFG_LINK_IO_VAR_CFG_LINK_IO_VAR_2_MASK)
 /*! @} */
@@ -371,11 +375,11 @@ typedef struct {
  *  0b0000..MII
  *  0b0001..RMII
  *  0b0010..RGMII
+ *  0b0011..Reserved
  *  0b0100..SGMII
  *  0b0101..XGMII
  *  0b0110..Reserved
  *  0b0111..Reserved
- *  0b0011..Reserved
  *  0b1000..Reserved
  *  0b1001..Reserved
  *  0b1010..Reserved
@@ -390,44 +394,44 @@ typedef struct {
 #define BLK_CTRL_NETCMIX_CFG_LINK_MII_PROT_CFG_LINK_MII_PROT_1_MASK (0xF0U)
 #define BLK_CTRL_NETCMIX_CFG_LINK_MII_PROT_CFG_LINK_MII_PROT_1_SHIFT (4U)
 /*! CFG_LINK_MII_PROT_1 - NETC MII protocol on link1
- *  0b1111..Reserved
- *  0b1110..Reserved
- *  0b1101..Reserved
- *  0b1100..Reserved
- *  0b1011..Reserved
- *  0b1010..Reserved
- *  0b1001..Reserved
- *  0b1000..Reserved
- *  0b0111..Reserved
- *  0b0110..Reserved
- *  0b0101..XGMII
- *  0b0100..SGMII
- *  0b0011..Reserved
- *  0b0010..RGMII
- *  0b0001..RMII
  *  0b0000..MII
+ *  0b0001..RMII
+ *  0b0010..RGMII
+ *  0b0011..Reserved
+ *  0b0100..SGMII
+ *  0b0101..XGMII
+ *  0b0110..Reserved
+ *  0b0111..Reserved
+ *  0b1000..Reserved
+ *  0b1001..Reserved
+ *  0b1010..Reserved
+ *  0b1011..Reserved
+ *  0b1100..Reserved
+ *  0b1101..Reserved
+ *  0b1110..Reserved
+ *  0b1111..Reserved
  */
 #define BLK_CTRL_NETCMIX_CFG_LINK_MII_PROT_CFG_LINK_MII_PROT_1(x) (((uint32_t)(((uint32_t)(x)) << BLK_CTRL_NETCMIX_CFG_LINK_MII_PROT_CFG_LINK_MII_PROT_1_SHIFT)) & BLK_CTRL_NETCMIX_CFG_LINK_MII_PROT_CFG_LINK_MII_PROT_1_MASK)
 
 #define BLK_CTRL_NETCMIX_CFG_LINK_MII_PROT_CFG_LINK_MII_PROT_2_MASK (0xF00U)
 #define BLK_CTRL_NETCMIX_CFG_LINK_MII_PROT_CFG_LINK_MII_PROT_2_SHIFT (8U)
 /*! CFG_LINK_MII_PROT_2 - NETC MII protocol on link2
- *  0b1111..Reserved
- *  0b1110..Reserved
- *  0b1101..Reserved
- *  0b1100..Reserved
- *  0b1011..Reserved
- *  0b1010..Reserved
- *  0b1001..Reserved
- *  0b1000..Reserved
- *  0b0111..Reserved
- *  0b0110..Reserved
- *  0b0101..XGMII
- *  0b0100..SGMII
- *  0b0011..Reserved
- *  0b0010..RGMII
- *  0b0001..RMII
  *  0b0000..MII
+ *  0b0001..RMII
+ *  0b0010..RGMII
+ *  0b0011..Reserved
+ *  0b0100..SGMII
+ *  0b0101..XGMII
+ *  0b0110..Reserved
+ *  0b0111..Reserved
+ *  0b1000..Reserved
+ *  0b1001..Reserved
+ *  0b1010..Reserved
+ *  0b1011..Reserved
+ *  0b1100..Reserved
+ *  0b1101..Reserved
+ *  0b1110..Reserved
+ *  0b1111..Reserved
  */
 #define BLK_CTRL_NETCMIX_CFG_LINK_MII_PROT_CFG_LINK_MII_PROT_2(x) (((uint32_t)(((uint32_t)(x)) << BLK_CTRL_NETCMIX_CFG_LINK_MII_PROT_CFG_LINK_MII_PROT_2_SHIFT)) & BLK_CTRL_NETCMIX_CFG_LINK_MII_PROT_CFG_LINK_MII_PROT_2_MASK)
 /*! @} */

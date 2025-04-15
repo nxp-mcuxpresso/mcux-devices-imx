@@ -44,13 +44,13 @@
 **                          MIMX9596XVZXN_cm7
 **
 **     Version:             rev. 1.0, 2023-01-10
-**     Build:               b240728
+**     Build:               b250415
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for VPU
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -1219,15 +1219,15 @@ typedef struct {
   __O  uint32_t CMD_CONTROL_REG_VPU_PDBG_WDATA_REG; /**< V-CPU Debugger Write Data, offset: 0x608 */
   __I  uint32_t CMD_CONTROL_REG_VPU_PDBG_RDATA_REG; /**< V-CPU Debugger Read Data, offset: 0x60C */
   __IO uint32_t CMD_CONTROL_REG_VPU_PDBG_STEP_MASK; /**< V-CPU Debugger Step Mask, offset: 0x610 */
-       uint8_t RESERVED_7[14916];
-  __O  uint32_t CMD_GLOBAL_REG_VCPU_RESTART;       /**< V-CPU Restart Request, offset: 0x4058 */
+       uint8_t RESERVED_7[260676];
+  __O  uint32_t CMD_GLOBAL_REG_VCPU_RESTART;       /**< V-CPU Restart Request, offset: 0x40058 */
        uint8_t RESERVED_8[4];
-  __O  uint32_t CMD_GLOBAL_REG_OPTION;             /**< Remap Control, offset: 0x4060 */
-  __O  uint32_t CMD_GLOBAL_REG_VPU_REMAP_VADDR;    /**< Remap Virutal Address, offset: 0x4064 */
-  __O  uint32_t CMD_GLOBAL_REG_VPU_REMAP_PADDR;    /**< Remap Physical Address, offset: 0x4068 */
-  __O  uint32_t CMD_GLOBAL_REG_VPU_REMAP_CORE_START_GLOBAL; /**< VPU Start Request, offset: 0x406C */
+  __O  uint32_t CMD_GLOBAL_REG_OPTION;             /**< Remap Control, offset: 0x40060 */
+  __O  uint32_t CMD_GLOBAL_REG_VPU_REMAP_VADDR;    /**< Remap Virutal Address, offset: 0x40064 */
+  __O  uint32_t CMD_GLOBAL_REG_VPU_REMAP_PADDR;    /**< Remap Physical Address, offset: 0x40068 */
+  __O  uint32_t CMD_GLOBAL_REG_VPU_REMAP_CORE_START_GLOBAL; /**< VPU Start Request, offset: 0x4006C */
        uint8_t RESERVED_9[148];
-  __O  uint32_t CMD_GLOBAL_REG_COMMAND_GLOBAL;     /**< Command, offset: 0x4104 */
+  __O  uint32_t CMD_GLOBAL_REG_COMMAND_GLOBAL;     /**< Command, offset: 0x40104 */
 } VPU_Type;
 
 /* ----------------------------------------------------------------------------

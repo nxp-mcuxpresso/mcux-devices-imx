@@ -44,13 +44,13 @@
 **                          MIMX9596XVZXN_cm7
 **
 **     Version:             rev. 1.0, 2023-01-10
-**     Build:               b240728
+**     Build:               b250415
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for M7_A7_APB_MCM
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -250,13 +250,13 @@ typedef struct {
  *  0b0011..AHB slave access.
  *  0b0100..Debugger access.
  *  0b0101..MBIST access.
- *  0b1001..Software data access from store queue.
- *  0b1011..AHB slave access from store queue.
- *  0b1100..Debugger access from store queue.
  *  0b0110..
  *  0b0111..
  *  0b1000..
+ *  0b1001..Software data access from store queue.
  *  0b1010..
+ *  0b1011..AHB slave access from store queue.
+ *  0b1100..Debugger access from store queue.
  *  0b1101..
  *  0b1110..
  *  0b1111..
@@ -267,8 +267,8 @@ typedef struct {
 #define M7_A7_APB_MCM_ITCM_ECC_SINGLE_ERROR_INFO_ITCM_ECCS_EFPRT_SHIFT (8U)
 /*! ITCM_ECCS_EFPRT - Privilege level of access
  *  0b0000..User
- *  0b0010..Privileged
  *  0b0001..
+ *  0b0010..Privileged
  *  0b0011-0b1111..
  */
 #define M7_A7_APB_MCM_ITCM_ECC_SINGLE_ERROR_INFO_ITCM_ECCS_EFPRT(x) (((uint32_t)(((uint32_t)(x)) << M7_A7_APB_MCM_ITCM_ECC_SINGLE_ERROR_INFO_ITCM_ECCS_EFPRT_SHIFT)) & M7_A7_APB_MCM_ITCM_ECC_SINGLE_ERROR_INFO_ITCM_ECCS_EFPRT_MASK)

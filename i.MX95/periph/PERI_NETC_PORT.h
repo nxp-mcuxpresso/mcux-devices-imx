@@ -44,13 +44,13 @@
 **                          MIMX9596XVZXN_cm7
 **
 **     Version:             rev. 1.0, 2023-01-10
-**     Build:               b240728
+**     Build:               b250415
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for NETC_PORT
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -205,6 +205,10 @@ typedef struct {
 #define NETC_PORT_PCAPR_NUM_TC_SHIFT             (12U)
 #define NETC_PORT_PCAPR_NUM_TC(x)                (((uint32_t)(((uint32_t)(x)) << NETC_PORT_PCAPR_NUM_TC_SHIFT)) & NETC_PORT_PCAPR_NUM_TC_MASK)
 
+#define NETC_PORT_PCAPR_NUM_CBS_MASK             (0x700000U)
+#define NETC_PORT_PCAPR_NUM_CBS_SHIFT            (20U)
+#define NETC_PORT_PCAPR_NUM_CBS(x)               (((uint32_t)(((uint32_t)(x)) << NETC_PORT_PCAPR_NUM_CBS_SHIFT)) & NETC_PORT_PCAPR_NUM_CBS_MASK)
+
 #define NETC_PORT_PCAPR_TGS_MASK                 (0x10000000U)
 #define NETC_PORT_PCAPR_TGS_SHIFT                (28U)
 /*! TGS - Time Gate Scheduling */
@@ -236,6 +240,11 @@ typedef struct {
 #define NETC_PORT_PMCAPR_FP_SHIFT                (9U)
 /*! FP - Indicates if frame preemption is supported */
 #define NETC_PORT_PMCAPR_FP(x)                   (((uint32_t)(((uint32_t)(x)) << NETC_PORT_PMCAPR_FP_SHIFT)) & NETC_PORT_PMCAPR_FP_MASK)
+
+#define NETC_PORT_PMCAPR_MIN_MPDU_MASK           (0x1000U)
+#define NETC_PORT_PMCAPR_MIN_MPDU_SHIFT          (12U)
+/*! MIN_MPDU - Minimum MAC Protocol Data Unit (PDU) size check */
+#define NETC_PORT_PMCAPR_MIN_MPDU(x)             (((uint32_t)(((uint32_t)(x)) << NETC_PORT_PMCAPR_MIN_MPDU_SHIFT)) & NETC_PORT_PMCAPR_MIN_MPDU_MASK)
 
 #define NETC_PORT_PMCAPR_MII_PROT_MASK           (0xF000000U)
 #define NETC_PORT_PMCAPR_MII_PROT_SHIFT          (24U)
@@ -726,7 +735,6 @@ typedef struct {
  *  0b00..PPDU (Physical Layer PDU).
  *  0b01..MPDU (MAC PDU).
  *  0b10..MSDU (MAC SDU); MPDU minus 12B MAC Header and 4B FCS. The frame length is adjusted by subtracting 16 bytes from it.
- *  *..
  */
 #define NETC_PORT_PTCTMSDUR_SDU_TYPE(x)          (((uint32_t)(((uint32_t)(x)) << NETC_PORT_PTCTMSDUR_SDU_TYPE_SHIFT)) & NETC_PORT_PTCTMSDUR_SDU_TYPE_MASK)
 

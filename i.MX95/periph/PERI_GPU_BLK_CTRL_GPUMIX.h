@@ -44,13 +44,13 @@
 **                          MIMX9596XVZXN_cm7
 **
 **     Version:             rev. 1.0, 2023-01-10
-**     Build:               b240728
+**     Build:               b250415
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for GPU_BLK_CTRL_GPUMIX
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -134,6 +134,7 @@ typedef struct {
   __IO uint32_t STRIPING_GRANULE;                  /**< Striping Granule Register, offset: 0x0 */
   __IO uint32_t TEXFMTENABLE;                      /**< TEXFMT Enable Register, offset: 0x4 */
   __IO uint32_t GPURESET;                          /**< GPU Reset Release Register, offset: 0x8 */
+  __IO uint32_t DBGCTRL;                           /**< Register used to bypass debug signals, offset: 0xC */
 } GPU_BLK_CTRL_GPUMIX_Type;
 
 /* ----------------------------------------------------------------------------
@@ -170,6 +171,30 @@ typedef struct {
 #define GPU_BLK_CTRL_GPUMIX_GPURESET_GPURR_SHIFT (0U)
 /*! GPURR - GPU Reset Release */
 #define GPU_BLK_CTRL_GPUMIX_GPURESET_GPURR(x)    (((uint32_t)(((uint32_t)(x)) << GPU_BLK_CTRL_GPUMIX_GPURESET_GPURR_SHIFT)) & GPU_BLK_CTRL_GPUMIX_GPURESET_GPURR_MASK)
+/*! @} */
+
+/*! @name DBGCTRL - Register used to bypass debug signals */
+/*! @{ */
+
+#define GPU_BLK_CTRL_GPUMIX_DBGCTRL_MCUDBGEN_MASK (0x1U)
+#define GPU_BLK_CTRL_GPUMIX_DBGCTRL_MCUDBGEN_SHIFT (0U)
+/*! MCUDBGEN - Secure enclave MCUDBGEN input bypass */
+#define GPU_BLK_CTRL_GPUMIX_DBGCTRL_MCUDBGEN(x)  (((uint32_t)(((uint32_t)(x)) << GPU_BLK_CTRL_GPUMIX_DBGCTRL_MCUDBGEN_SHIFT)) & GPU_BLK_CTRL_GPUMIX_DBGCTRL_MCUDBGEN_MASK)
+
+#define GPU_BLK_CTRL_GPUMIX_DBGCTRL_MCUNIDEN_MASK (0x2U)
+#define GPU_BLK_CTRL_GPUMIX_DBGCTRL_MCUNIDEN_SHIFT (1U)
+/*! MCUNIDEN - Secure enclave MCUNIDEN input bypass */
+#define GPU_BLK_CTRL_GPUMIX_DBGCTRL_MCUNIDEN(x)  (((uint32_t)(((uint32_t)(x)) << GPU_BLK_CTRL_GPUMIX_DBGCTRL_MCUNIDEN_SHIFT)) & GPU_BLK_CTRL_GPUMIX_DBGCTRL_MCUNIDEN_MASK)
+
+#define GPU_BLK_CTRL_GPUMIX_DBGCTRL_PROTDBGEN_MASK (0x4U)
+#define GPU_BLK_CTRL_GPUMIX_DBGCTRL_PROTDBGEN_SHIFT (2U)
+/*! PROTDBGEN - Secure enclave PROTDBGEN input bypass */
+#define GPU_BLK_CTRL_GPUMIX_DBGCTRL_PROTDBGEN(x) (((uint32_t)(((uint32_t)(x)) << GPU_BLK_CTRL_GPUMIX_DBGCTRL_PROTDBGEN_SHIFT)) & GPU_BLK_CTRL_GPUMIX_DBGCTRL_PROTDBGEN_MASK)
+
+#define GPU_BLK_CTRL_GPUMIX_DBGCTRL_PROTNIDEN_MASK (0x8U)
+#define GPU_BLK_CTRL_GPUMIX_DBGCTRL_PROTNIDEN_SHIFT (3U)
+/*! PROTNIDEN - Secure enclave PROTNIDEN input bypass */
+#define GPU_BLK_CTRL_GPUMIX_DBGCTRL_PROTNIDEN(x) (((uint32_t)(((uint32_t)(x)) << GPU_BLK_CTRL_GPUMIX_DBGCTRL_PROTNIDEN_SHIFT)) & GPU_BLK_CTRL_GPUMIX_DBGCTRL_PROTNIDEN_MASK)
 /*! @} */
 
 

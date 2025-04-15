@@ -44,13 +44,13 @@
 **                          MIMX9596XVZXN_cm7
 **
 **     Version:             rev. 1.0, 2023-01-10
-**     Build:               b240728
+**     Build:               b250415
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for DMA5
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -168,15 +168,15 @@ typedef struct {
     __IO uint16_t SOFF;                              /**< TCD Signed Source Address Offset, array offset: 0x10028, array step: 0x8000, irregular array, not all indices are valid */
     __IO uint16_t ATTR;                              /**< TCD Transfer Attributes, array offset: 0x1002A, array step: 0x8000, irregular array, not all indices are valid */
     union {                                          /* offset: 0x1002C, array step: 0x8000 */
-      __IO uint32_t NBYTES_MLOFFNO;                    /**< TCD Transfer Size without Minor Loop Offsets, array offset: 0x1002C, array step: 0x8000, irregular array, not all indices are valid */
+      __IO uint32_t NBYTES_MLOFFNO;                    /**< TCD Transfer Size Without Minor Loop Offsets, array offset: 0x1002C, array step: 0x8000, irregular array, not all indices are valid */
       __IO uint32_t NBYTES_MLOFFYES;                   /**< TCD Transfer Size with Minor Loop Offsets, array offset: 0x1002C, array step: 0x8000, irregular array, not all indices are valid */
     };
-    __IO uint32_t SLAST_SDA;                         /**< TCD Last Source Address Adjustment / Store DADDR Address, array offset: 0x10030, array step: 0x8000, irregular array, not all indices are valid */
-    __IO uint32_t SLAST_SDA_HIGH;                    /**< TCD Last Source Address Adjustment / Store DADDR Address, array offset: 0x10034, array step: 0x8000, irregular array, not all indices are valid */
+    __IO uint32_t SLAST_SDA;                         /**< TCD Last Source Address Adjustment and Store DADDR Address, array offset: 0x10030, array step: 0x8000, irregular array, not all indices are valid */
+    __IO uint32_t SLAST_SDA_HIGH;                    /**< TCD Last Source Address Adjustment and Store DADDR Address, array offset: 0x10034, array step: 0x8000, irregular array, not all indices are valid */
     __IO uint32_t DADDR;                             /**< TCD Destination Address, array offset: 0x10038, array step: 0x8000, irregular array, not all indices are valid */
     __IO uint32_t DADDR_HIGH;                        /**< TCD Destination Address, array offset: 0x1003C, array step: 0x8000, irregular array, not all indices are valid */
-    __IO uint32_t DLAST_SGA;                         /**< TCD Last Destination Address Adjustment / Scatter Gather Address Register, array offset: 0x10040, array step: 0x8000, irregular array, not all indices are valid */
-    __IO uint32_t DLAST_SGA_HIGH;                    /**< TCD Last Destination Address Adjustment / Scatter Gather Address, array offset: 0x10044, array step: 0x8000, irregular array, not all indices are valid */
+    __IO uint32_t DLAST_SGA;                         /**< TCD Last Destination Address Adjustment and Scatter/Gather Address, array offset: 0x10040, array step: 0x8000, irregular array, not all indices are valid */
+    __IO uint32_t DLAST_SGA_HIGH;                    /**< TCD Last Destination Address Adjustment and Scatter/Gather Address, array offset: 0x10044, array step: 0x8000, irregular array, not all indices are valid */
     __IO uint16_t DOFF;                              /**< TCD Signed Destination Address Offset, array offset: 0x10048, array step: 0x8000, irregular array, not all indices are valid */
     union {                                          /* offset: 0x1004A, array step: 0x8000 */
       __IO uint16_t CITER_ELINKNO;                     /**< TCD Current Major Loop Count (Minor Loop Channel Linking Disabled), array offset: 0x1004A, array step: 0x8000, irregular array, not all indices are valid */
@@ -222,8 +222,8 @@ typedef struct {
 #define DMA5_MP_CSR_GCPC_MASK                    (0x8U)
 #define DMA5_MP_CSR_GCPC_SHIFT                   (3U)
 /*! GCPC - Global Channel Preemption Control
- *  0b1..Available for each channel group
  *  0b0..Disabled for all channels
+ *  0b1..Available within each channel group
  */
 #define DMA5_MP_CSR_GCPC(x)                      (((uint32_t)(((uint32_t)(x)) << DMA5_MP_CSR_GCPC_SHIFT)) & DMA5_MP_CSR_GCPC_MASK)
 
@@ -355,7 +355,7 @@ typedef struct {
 
 #define DMA5_MP_ES_UCE_MASK                      (0x200U)
 #define DMA5_MP_ES_UCE_SHIFT                     (9U)
-/*! UCE - Uncorrectable TCD Error during Channel Execution
+/*! UCE - Uncorrectable TCD Error During Channel Execution
  *  0b0..No error
  *  0b1..TCD RAM error
  */
@@ -422,8 +422,8 @@ typedef struct {
 #define DMA5_MP_STOPCH_ERR_MASK                  (0x80U)
 #define DMA5_MP_STOPCH_ERR_SHIFT                 (7U)
 /*! ERR - Stop Channel with Error Exit
- *  0b0..Disable
- *  0b1..Enable
+ *  0b0..Stop channel without error reporting
+ *  0b1..Stop channel with error reporting
  */
 #define DMA5_MP_STOPCH_ERR(x)                    (((uint32_t)(((uint32_t)(x)) << DMA5_MP_STOPCH_ERR_SHIFT)) & DMA5_MP_STOPCH_ERR_MASK)
 /*! @} */
@@ -551,7 +551,7 @@ typedef struct {
 
 #define DMA5_CH_CSR_ECX_MASK                     (0x80U)
 #define DMA5_CH_CSR_ECX_SHIFT                    (7U)
-/*! ECX - Stop Transferring Data and Set an Error Flag
+/*! ECX - Stop Transferring Data and Set an Error
  *  0b0..No operation
  *  0b1..Stop the channel with error reporting
  */
@@ -585,10 +585,10 @@ typedef struct {
 #define DMA5_CH_CSR_DONE_MASK                    (0x40000000U)
 #define DMA5_CH_CSR_DONE_SHIFT                   (30U)
 /*! DONE - Channel Done Flag
- *  0b0..Not done
- *  0b1..Done
  *  0b0..No effect
+ *  0b0..Not done
  *  0b1..Clear the flag
+ *  0b1..Done
  */
 #define DMA5_CH_CSR_DONE(x)                      (((uint32_t)(((uint32_t)(x)) << DMA5_CH_CSR_DONE_SHIFT)) & DMA5_CH_CSR_DONE_MASK)
 
@@ -623,7 +623,7 @@ typedef struct {
 #define DMA5_CH_ES_SGE_MASK                      (0x4U)
 #define DMA5_CH_ES_SGE_SHIFT                     (2U)
 /*! SGE - Scatter/Gather Configuration Error
- *  0b0..No error
+ *  0b0..No error detected
  *  0b1..Error detected
  */
 #define DMA5_CH_ES_SGE(x)                        (((uint32_t)(((uint32_t)(x)) << DMA5_CH_ES_SGE_SHIFT)) & DMA5_CH_ES_SGE_MASK)
@@ -631,7 +631,7 @@ typedef struct {
 #define DMA5_CH_ES_NCE_MASK                      (0x8U)
 #define DMA5_CH_ES_NCE_SHIFT                     (3U)
 /*! NCE - NBYTES or CITER Configuration Error
- *  0b0..No error
+ *  0b0..No error detected
  *  0b1..Error detected
  */
 #define DMA5_CH_ES_NCE(x)                        (((uint32_t)(((uint32_t)(x)) << DMA5_CH_ES_NCE_SHIFT)) & DMA5_CH_ES_NCE_MASK)
@@ -639,7 +639,7 @@ typedef struct {
 #define DMA5_CH_ES_DOE_MASK                      (0x10U)
 #define DMA5_CH_ES_DOE_SHIFT                     (4U)
 /*! DOE - Destination Offset Error
- *  0b0..No error
+ *  0b0..No error detected
  *  0b1..Error detected
  */
 #define DMA5_CH_ES_DOE(x)                        (((uint32_t)(((uint32_t)(x)) << DMA5_CH_ES_DOE_SHIFT)) & DMA5_CH_ES_DOE_MASK)
@@ -647,7 +647,7 @@ typedef struct {
 #define DMA5_CH_ES_DAE_MASK                      (0x20U)
 #define DMA5_CH_ES_DAE_SHIFT                     (5U)
 /*! DAE - Destination Address Error
- *  0b0..No error
+ *  0b0..No error detected
  *  0b1..Error detected
  */
 #define DMA5_CH_ES_DAE(x)                        (((uint32_t)(((uint32_t)(x)) << DMA5_CH_ES_DAE_SHIFT)) & DMA5_CH_ES_DAE_MASK)
@@ -655,7 +655,7 @@ typedef struct {
 #define DMA5_CH_ES_SOE_MASK                      (0x40U)
 #define DMA5_CH_ES_SOE_SHIFT                     (6U)
 /*! SOE - Source Offset Error
- *  0b0..No error
+ *  0b0..No error detected
  *  0b1..Error detected
  */
 #define DMA5_CH_ES_SOE(x)                        (((uint32_t)(((uint32_t)(x)) << DMA5_CH_ES_SOE_SHIFT)) & DMA5_CH_ES_SOE_MASK)
@@ -663,7 +663,7 @@ typedef struct {
 #define DMA5_CH_ES_SAE_MASK                      (0x80U)
 #define DMA5_CH_ES_SAE_SHIFT                     (7U)
 /*! SAE - Source Address Error
- *  0b0..No error
+ *  0b0..No error detected
  *  0b1..Error detected
  */
 #define DMA5_CH_ES_SAE(x)                        (((uint32_t)(((uint32_t)(x)) << DMA5_CH_ES_SAE_SHIFT)) & DMA5_CH_ES_SAE_MASK)
@@ -679,18 +679,18 @@ typedef struct {
 #define DMA5_CH_ES_UCE_MASK                      (0x200U)
 #define DMA5_CH_ES_UCE_SHIFT                     (9U)
 /*! UCE - Uncorrectable TCD Error During Channel Execution
- *  0b0..Not an error
+ *  0b0..No error
  *  0b1..Error
  */
 #define DMA5_CH_ES_UCE(x)                        (((uint32_t)(((uint32_t)(x)) << DMA5_CH_ES_UCE_SHIFT)) & DMA5_CH_ES_UCE_MASK)
 
 #define DMA5_CH_ES_ERR_MASK                      (0x80000000U)
 #define DMA5_CH_ES_ERR_SHIFT                     (31U)
-/*! ERR - Error in Channel
- *  0b0..Not occurred
- *  0b1..Occurred
+/*! ERR - Error in Channel Flag
  *  0b0..No effect
+ *  0b0..Not occurred
  *  0b1..Clear the flag
+ *  0b1..Occurred
  */
 #define DMA5_CH_ES_ERR(x)                        (((uint32_t)(((uint32_t)(x)) << DMA5_CH_ES_ERR_SHIFT)) & DMA5_CH_ES_ERR_MASK)
 /*! @} */
@@ -703,10 +703,10 @@ typedef struct {
 
 #define DMA5_CH_INT_INT_MASK                     (0x1U)
 #define DMA5_CH_INT_INT_SHIFT                    (0U)
-/*! INT - Interrupt Request
+/*! INT - Interrupt Request Flag
  *  0b0..Cleared
- *  0b1..Active
  *  0b0..No effect
+ *  0b1..Active
  *  0b1..Clear the flag
  */
 #define DMA5_CH_INT_INT(x)                       (((uint32_t)(((uint32_t)(x)) << DMA5_CH_INT_INT_SHIFT)) & DMA5_CH_INT_INT_MASK)
@@ -768,7 +768,7 @@ typedef struct {
 #define DMA5_CH_PRI_DPA_SHIFT                    (30U)
 /*! DPA - Disable Preempt Ability
  *  0b0..Can suspend a lower priority channel
- *  0b1..Cannot suspend
+ *  0b1..Cannot suspend any other channel
  */
 #define DMA5_CH_PRI_DPA(x)                       (((uint32_t)(((uint32_t)(x)) << DMA5_CH_PRI_DPA_SHIFT)) & DMA5_CH_PRI_DPA_MASK)
 
@@ -849,7 +849,7 @@ typedef struct {
 
 #define DMA5_SADDR_SADDR_MASK                    (0xFFFFFFFFU)
 #define DMA5_SADDR_SADDR_SHIFT                   (0U)
-/*! SADDR - Source Address bits */
+/*! SADDR - Source Address */
 #define DMA5_SADDR_SADDR(x)                      (((uint32_t)(((uint32_t)(x)) << DMA5_SADDR_SADDR_SHIFT)) & DMA5_SADDR_SADDR_MASK)
 /*! @} */
 
@@ -928,7 +928,7 @@ typedef struct {
 /* The count of DMA5_ATTR */
 #define DMA5_ATTR_COUNT                          (64U)
 
-/*! @name NBYTES_MLOFFNO - TCD Transfer Size without Minor Loop Offsets */
+/*! @name NBYTES_MLOFFNO - TCD Transfer Size Without Minor Loop Offsets */
 /*! @{ */
 
 #define DMA5_NBYTES_MLOFFNO_NBYTES_MASK          (0x3FFFFFFFU)
@@ -989,7 +989,7 @@ typedef struct {
 /* The count of DMA5_NBYTES_MLOFFYES */
 #define DMA5_NBYTES_MLOFFYES_COUNT               (64U)
 
-/*! @name SLAST_SDA - TCD Last Source Address Adjustment / Store DADDR Address */
+/*! @name SLAST_SDA - TCD Last Source Address Adjustment and Store DADDR Address */
 /*! @{ */
 
 #define DMA5_SLAST_SDA_SLAST_SDA_MASK            (0xFFFFFFFFU)
@@ -1001,7 +1001,7 @@ typedef struct {
 /* The count of DMA5_SLAST_SDA */
 #define DMA5_SLAST_SDA_COUNT                     (64U)
 
-/*! @name SLAST_SDA_HIGH - TCD Last Source Address Adjustment / Store DADDR Address */
+/*! @name SLAST_SDA_HIGH - TCD Last Source Address Adjustment and Store DADDR Address */
 /*! @{ */
 
 #define DMA5_SLAST_SDA_HIGH_SLAST_SDA_MASK       (0xFFFFFFFFU)  /* Merged from fields with different position or width, of widths (12, 32), largest definition used */
@@ -1037,24 +1037,24 @@ typedef struct {
 /* The count of DMA5_DADDR_HIGH */
 #define DMA5_DADDR_HIGH_COUNT                    (64U)
 
-/*! @name DLAST_SGA - TCD Last Destination Address Adjustment / Scatter Gather Address Register */
+/*! @name DLAST_SGA - TCD Last Destination Address Adjustment and Scatter/Gather Address */
 /*! @{ */
 
 #define DMA5_DLAST_SGA_DLAST_SGA_MASK            (0xFFFFFFFFU)
 #define DMA5_DLAST_SGA_DLAST_SGA_SHIFT           (0U)
-/*! DLAST_SGA - Final Destination Address Adjustment and Scatter Gather Address */
+/*! DLAST_SGA - Final Destination Address Adjustment and Scatter/Gather Address */
 #define DMA5_DLAST_SGA_DLAST_SGA(x)              (((uint32_t)(((uint32_t)(x)) << DMA5_DLAST_SGA_DLAST_SGA_SHIFT)) & DMA5_DLAST_SGA_DLAST_SGA_MASK)
 /*! @} */
 
 /* The count of DMA5_DLAST_SGA */
 #define DMA5_DLAST_SGA_COUNT                     (64U)
 
-/*! @name DLAST_SGA_HIGH - TCD Last Destination Address Adjustment / Scatter Gather Address */
+/*! @name DLAST_SGA_HIGH - TCD Last Destination Address Adjustment and Scatter/Gather Address */
 /*! @{ */
 
 #define DMA5_DLAST_SGA_HIGH_DLAST_SGA_MASK       (0xFFFFFFFFU)  /* Merged from fields with different position or width, of widths (12, 32), largest definition used */
 #define DMA5_DLAST_SGA_HIGH_DLAST_SGA_SHIFT      (0U)
-/*! DLAST_SGA - Final Destination Address Adjustment and Scatter Gather Address */
+/*! DLAST_SGA - Final Destination Address Adjustment and Scatter/Gather Address */
 #define DMA5_DLAST_SGA_HIGH_DLAST_SGA(x)         (((uint32_t)(((uint32_t)(x)) << DMA5_DLAST_SGA_HIGH_DLAST_SGA_SHIFT)) & DMA5_DLAST_SGA_HIGH_DLAST_SGA_MASK)  /* Merged from fields with different position or width, of widths (12, 32), largest definition used */
 /*! @} */
 
@@ -1185,10 +1185,10 @@ typedef struct {
  */
 #define DMA5_CSR_ESDA(x)                         (((uint16_t)(((uint16_t)(x)) << DMA5_CSR_ESDA_SHIFT)) & DMA5_CSR_ESDA_MASK)
 
-#define DMA5_CSR_MAJORLINKCH_MASK                (0x3F00U)  /* Merged from fields with different position or width, of widths (5, 6), largest definition used */
+#define DMA5_CSR_MAJORLINKCH_MASK                (0x3F00U)
 #define DMA5_CSR_MAJORLINKCH_SHIFT               (8U)
 /*! MAJORLINKCH - Major Loop Link Channel Number */
-#define DMA5_CSR_MAJORLINKCH(x)                  (((uint16_t)(((uint16_t)(x)) << DMA5_CSR_MAJORLINKCH_SHIFT)) & DMA5_CSR_MAJORLINKCH_MASK)  /* Merged from fields with different position or width, of widths (5, 6), largest definition used */
+#define DMA5_CSR_MAJORLINKCH(x)                  (((uint16_t)(((uint16_t)(x)) << DMA5_CSR_MAJORLINKCH_SHIFT)) & DMA5_CSR_MAJORLINKCH_MASK)
 
 #define DMA5_CSR_TMC_MASK                        (0xC000U)
 #define DMA5_CSR_TMC_SHIFT                       (14U)

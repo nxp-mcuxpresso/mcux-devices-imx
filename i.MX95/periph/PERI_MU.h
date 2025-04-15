@@ -44,13 +44,13 @@
 **                          MIMX9596XVZXN_cm7
 **
 **     Version:             rev. 1.0, 2023-01-10
-**     Build:               b240728
+**     Build:               b250415
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for MU
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -129,6 +129,10 @@
  * @{
  */
 
+/** MU - Size of Registers Arrays */
+#define MU_TR_COUNT                               4u
+#define MU_RR_COUNT                               4u
+
 /** MU - Register Layout Typedef */
 typedef struct {
   __I  uint32_t VER;                               /**< Version ID, offset: 0x0 */
@@ -138,7 +142,7 @@ typedef struct {
   __IO uint32_t CCR0;                              /**< Core Control 0, offset: 0x10 */
   __IO uint32_t CIER0;                             /**< Core Interrupt Enable 0, offset: 0x14 */
   __IO uint32_t CSSR0;                             /**< Core Sticky Status 0, offset: 0x18 */
-  __I  uint32_t CSR0;                              /**< Core Status 0, offset: 0x1C, not available in all instances (available on 9 out of 36) */
+  __I  uint32_t CSR0;                              /**< Core Status 0, offset: 0x1C, not available in all instances (available on 210 out of 350) */
        uint8_t RESERVED_0[224];
   __IO uint32_t FCR;                               /**< Flag Control, offset: 0x100 */
   __I  uint32_t FSR;                               /**< Flag Status, offset: 0x104 */
@@ -152,9 +156,9 @@ typedef struct {
   __IO uint32_t RCR;                               /**< Receive Control, offset: 0x128 */
   __I  uint32_t RSR;                               /**< Receive Status, offset: 0x12C */
        uint8_t RESERVED_3[208];
-  __O  uint32_t TR[4];                             /**< Transmit, array offset: 0x200, array step: 0x4 */
+  __IO uint32_t TR[MU_TR_COUNT];                   /**< Transmit, array offset: 0x200, array step: 0x4 */
        uint8_t RESERVED_4[112];
-  __I  uint32_t RR[4];                             /**< Receive, array offset: 0x280, array step: 0x4 */
+  __I  uint32_t RR[MU_RR_COUNT];                   /**< Receive, array offset: 0x280, array step: 0x4 */
 } MU_Type;
 
 /* ----------------------------------------------------------------------------
@@ -243,10 +247,10 @@ typedef struct {
 #define MU_SR_MURIP_MASK                         (0x2U)
 #define MU_SR_MURIP_SHIFT                        (1U)
 /*! MURIP - MU Reset Interrupt Pending Flag
- *  0b0..Reset not issued
- *  0b1..Reset issued
  *  0b0..No effect
+ *  0b0..Reset not issued
  *  0b1..Clear the flag
+ *  0b1..Reset issued
  */
 #define MU_SR_MURIP(x)                           (((uint32_t)(((uint32_t)(x)) << MU_SR_MURIP_SHIFT)) & MU_SR_MURIP_MASK)
 
@@ -309,10 +313,52 @@ typedef struct {
  *  0b1..Nonmaskable interrupt issued
  */
 #define MU_CCR0_NMI(x)                           (((uint32_t)(((uint32_t)(x)) << MU_CCR0_NMI_SHIFT)) & MU_CCR0_NMI_MASK)
+
+#define MU_CCR0_HR_MASK                          (0x2U)
+#define MU_CCR0_HR_SHIFT                         (1U)
+/*! HR - Processor A Hardware Reset
+ *  0b0..Deassert hardware reset to processor A.
+ *  0b1..Assert hardware reset to processor A.
+ */
+#define MU_CCR0_HR(x)                            (((uint32_t)(((uint32_t)(x)) << MU_CCR0_HR_SHIFT)) & MU_CCR0_HR_MASK)
+
+#define MU_CCR0_HRM_MASK                         (0x4U)
+#define MU_CCR0_HRM_SHIFT                        (2U)
+/*! HRM - Processor B Hardware Reset Mask
+ *  0b0..Enable
+ *  0b1..Disable
+ */
+#define MU_CCR0_HRM(x)                           (((uint32_t)(((uint32_t)(x)) << MU_CCR0_HRM_SHIFT)) & MU_CCR0_HRM_MASK)
+
+#define MU_CCR0_RSTH_MASK                        (0x10U)
+#define MU_CCR0_RSTH_SHIFT                       (4U)
+/*! RSTH - Processor A Reset Hold
+ *  0b0..Release from reset
+ *  0b1..Hold in reset
+ */
+#define MU_CCR0_RSTH(x)                          (((uint32_t)(((uint32_t)(x)) << MU_CCR0_RSTH_SHIFT)) & MU_CCR0_RSTH_MASK)
+
+#define MU_CCR0_BOOT_MASK                        (0x60U)
+#define MU_CCR0_BOOT_SHIFT                       (5U)
+/*! BOOT - Target Processor A Boot Configuration
+ *  0b00..Processor Boot option 0
+ *  0b01..Processor Boot option 1
+ *  0b10..Processor Boot option 2
+ *  0b11..Processor Boot option 3
+ */
+#define MU_CCR0_BOOT(x)                          (((uint32_t)(((uint32_t)(x)) << MU_CCR0_BOOT_SHIFT)) & MU_CCR0_BOOT_MASK)
 /*! @} */
 
 /*! @name CIER0 - Core Interrupt Enable 0 */
 /*! @{ */
+
+#define MU_CIER0_HRIE_MASK                       (0x2U)
+#define MU_CIER0_HRIE_SHIFT                      (1U)
+/*! HRIE - Processor B Hardware Reset Interrupt Enable
+ *  0b0..Disable
+ *  0b1..Enable
+ */
+#define MU_CIER0_HRIE(x)                         (((uint32_t)(((uint32_t)(x)) << MU_CIER0_HRIE_SHIFT)) & MU_CIER0_HRIE_MASK)
 
 #define MU_CIER0_RUNIE_MASK                      (0x4U)
 #define MU_CIER0_RUNIE_SHIFT                     (2U)
@@ -374,6 +420,14 @@ typedef struct {
  */
 #define MU_CSSR0_NMIC(x)                         (((uint32_t)(((uint32_t)(x)) << MU_CSSR0_NMIC_SHIFT)) & MU_CSSR0_NMIC_MASK)
 
+#define MU_CSSR0_HRIP_MASK                       (0x2U)
+#define MU_CSSR0_HRIP_SHIFT                      (1U)
+/*! HRIP - Processor B Hardware Reset Interrupt Pending Flag
+ *  0b0..No hardware reset initiated
+ *  0b1..Hardware reset initiated
+ */
+#define MU_CSSR0_HRIP(x)                         (((uint32_t)(((uint32_t)(x)) << MU_CSSR0_HRIP_SHIFT)) & MU_CSSR0_HRIP_MASK)
+
 #define MU_CSSR0_RUN_MASK                        (0x4U)
 #define MU_CSSR0_RUN_SHIFT                       (2U)
 /*! RUN - Processor B Run Mode Entry Interrupt Pending Flag
@@ -385,8 +439,8 @@ typedef struct {
 #define MU_CSSR0_RAIP_MASK                       (0x8U)
 #define MU_CSSR0_RAIP_SHIFT                      (3U)
 /*! RAIP - Processor B Reset Asserted Interrupt Pending Flag
- *  0b0..Processor B did not enter reset.
- *  0b1..Processor B entered reset.
+ *  0b0..Processor A did not enter reset.
+ *  0b1..Processor A entered reset.
  */
 #define MU_CSSR0_RAIP(x)                         (((uint32_t)(((uint32_t)(x)) << MU_CSSR0_RAIP_SHIFT)) & MU_CSSR0_RAIP_MASK)
 
@@ -425,6 +479,14 @@ typedef struct {
 
 /*! @name CSR0 - Core Status 0 */
 /*! @{ */
+
+#define MU_CSR0_HRIP_MASK                        (0x2U)
+#define MU_CSR0_HRIP_SHIFT                       (1U)
+/*! HRIP - Processor B Hardware Reset Interrupt Pending
+ *  0b0..No hardware reset initiated
+ *  0b1..Hardware reset initiated
+ */
+#define MU_CSR0_HRIP(x)                          (((uint32_t)(((uint32_t)(x)) << MU_CSR0_HRIP_SHIFT)) & MU_CSR0_HRIP_MASK)
 
 #define MU_CSR0_RUN_MASK                         (0x4U)
 #define MU_CSR0_RUN_SHIFT                        (2U)
@@ -609,40 +671,40 @@ typedef struct {
 #define MU_GSR_GIP0_MASK                         (0x1U)
 #define MU_GSR_GIP0_SHIFT                        (0U)
 /*! GIP0 - MUB General-Purpose Interrupt Request Pending
- *  0b0..Not pending
- *  0b1..Pending
  *  0b0..No effect
+ *  0b0..Not pending
  *  0b1..Clear the flag
+ *  0b1..Pending
  */
 #define MU_GSR_GIP0(x)                           (((uint32_t)(((uint32_t)(x)) << MU_GSR_GIP0_SHIFT)) & MU_GSR_GIP0_MASK)
 
 #define MU_GSR_GIP1_MASK                         (0x2U)
 #define MU_GSR_GIP1_SHIFT                        (1U)
 /*! GIP1 - MUB General-Purpose Interrupt Request Pending
- *  0b0..Not pending
- *  0b1..Pending
  *  0b0..No effect
+ *  0b0..Not pending
  *  0b1..Clear the flag
+ *  0b1..Pending
  */
 #define MU_GSR_GIP1(x)                           (((uint32_t)(((uint32_t)(x)) << MU_GSR_GIP1_SHIFT)) & MU_GSR_GIP1_MASK)
 
 #define MU_GSR_GIP2_MASK                         (0x4U)
 #define MU_GSR_GIP2_SHIFT                        (2U)
 /*! GIP2 - MUB General-Purpose Interrupt Request Pending
- *  0b0..Not pending
- *  0b1..Pending
  *  0b0..No effect
+ *  0b0..Not pending
  *  0b1..Clear the flag
+ *  0b1..Pending
  */
 #define MU_GSR_GIP2(x)                           (((uint32_t)(((uint32_t)(x)) << MU_GSR_GIP2_SHIFT)) & MU_GSR_GIP2_MASK)
 
 #define MU_GSR_GIP3_MASK                         (0x8U)
 #define MU_GSR_GIP3_SHIFT                        (3U)
 /*! GIP3 - MUB General-Purpose Interrupt Request Pending
- *  0b0..Not pending
- *  0b1..Pending
  *  0b0..No effect
+ *  0b0..Not pending
  *  0b1..Clear the flag
+ *  0b1..Pending
  */
 #define MU_GSR_GIP3(x)                           (((uint32_t)(((uint32_t)(x)) << MU_GSR_GIP3_SHIFT)) & MU_GSR_GIP3_MASK)
 /*! @} */
@@ -800,9 +862,6 @@ typedef struct {
 #define MU_TR_TR_DATA(x)                         (((uint32_t)(((uint32_t)(x)) << MU_TR_TR_DATA_SHIFT)) & MU_TR_TR_DATA_MASK)
 /*! @} */
 
-/* The count of MU_TR */
-#define MU_TR_COUNT                              (4U)
-
 /*! @name RR - Receive */
 /*! @{ */
 
@@ -811,9 +870,6 @@ typedef struct {
 /*! RR_DATA - MUB Receive Data */
 #define MU_RR_RR_DATA(x)                         (((uint32_t)(((uint32_t)(x)) << MU_RR_RR_DATA_SHIFT)) & MU_RR_RR_DATA_MASK)
 /*! @} */
-
-/* The count of MU_RR */
-#define MU_RR_COUNT                              (4U)
 
 
 /*!

@@ -44,13 +44,13 @@
 **                          MIMX9596XVZXN_cm7
 **
 **     Version:             rev. 1.0, 2023-01-10
-**     Build:               b240728
+**     Build:               b250415
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for BLK_CTRL_CAMERAMIX
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -224,24 +224,24 @@ typedef struct {
 #define BLK_CTRL_CAMERAMIX_ISP_CLOCK_GATING_CONTROL_CSI2_pixel_formatting_1_MASK (0x2U)
 #define BLK_CTRL_CAMERAMIX_ISP_CLOCK_GATING_CONTROL_CSI2_pixel_formatting_1_SHIFT (1U)
 /*! CSI2_pixel_formatting_1 - Pixel link clock gate control of the CSI2 pixel formatting 1 (Combo)
- *  0b1..Gate the Pixel link clock of the CSI2 pixel formatting 1
  *  0b0..Do not gate the Pixel link clock of the CSI2 pixel formatting 1
+ *  0b1..Gate the Pixel link clock of the CSI2 pixel formatting 1
  */
 #define BLK_CTRL_CAMERAMIX_ISP_CLOCK_GATING_CONTROL_CSI2_pixel_formatting_1(x) (((uint32_t)(((uint32_t)(x)) << BLK_CTRL_CAMERAMIX_ISP_CLOCK_GATING_CONTROL_CSI2_pixel_formatting_1_SHIFT)) & BLK_CTRL_CAMERAMIX_ISP_CLOCK_GATING_CONTROL_CSI2_pixel_formatting_1_MASK)
 
 #define BLK_CTRL_CAMERAMIX_ISP_CLOCK_GATING_CONTROL_ISP_AXI_clock_MASK (0x10U)
 #define BLK_CTRL_CAMERAMIX_ISP_CLOCK_GATING_CONTROL_ISP_AXI_clock_SHIFT (4U)
 /*! ISP_AXI_clock - AXI clock gate control of the ISP
- *  0b1..Gate the AXI clock of the ISP
  *  0b0..Do not gate the AXI clock of the ISP
+ *  0b1..Gate the AXI clock of the ISP
  */
 #define BLK_CTRL_CAMERAMIX_ISP_CLOCK_GATING_CONTROL_ISP_AXI_clock(x) (((uint32_t)(((uint32_t)(x)) << BLK_CTRL_CAMERAMIX_ISP_CLOCK_GATING_CONTROL_ISP_AXI_clock_SHIFT)) & BLK_CTRL_CAMERAMIX_ISP_CLOCK_GATING_CONTROL_ISP_AXI_clock_MASK)
 
 #define BLK_CTRL_CAMERAMIX_ISP_CLOCK_GATING_CONTROL_ISP_Pixel_clock_MASK (0x20U)
 #define BLK_CTRL_CAMERAMIX_ISP_CLOCK_GATING_CONTROL_ISP_Pixel_clock_SHIFT (5U)
 /*! ISP_Pixel_clock - Pixel clock gate control of the ISP
- *  0b1..Gate the Pixel clock of the ISP
  *  0b0..Do not gate the Pixel clock of the ISP
+ *  0b1..Gate the Pixel clock of the ISP
  */
 #define BLK_CTRL_CAMERAMIX_ISP_CLOCK_GATING_CONTROL_ISP_Pixel_clock(x) (((uint32_t)(((uint32_t)(x)) << BLK_CTRL_CAMERAMIX_ISP_CLOCK_GATING_CONTROL_ISP_Pixel_clock_SHIFT)) & BLK_CTRL_CAMERAMIX_ISP_CLOCK_GATING_CONTROL_ISP_Pixel_clock_MASK)
 
@@ -285,6 +285,15 @@ typedef struct {
 #define BLK_CTRL_CAMERAMIX_ISP_QOS_SETTING_Ar_local_panic_QoS_SHIFT (12U)
 /*! Ar_local_panic_QoS - Set the AXI Hurry/Pressure QoS signal when the o_arpostqos of the AXI read port are set to '1'. */
 #define BLK_CTRL_CAMERAMIX_ISP_QOS_SETTING_Ar_local_panic_QoS(x) (((uint32_t)(((uint32_t)(x)) << BLK_CTRL_CAMERAMIX_ISP_QOS_SETTING_Ar_local_panic_QoS_SHIFT)) & BLK_CTRL_CAMERAMIX_ISP_QOS_SETTING_Ar_local_panic_QoS_MASK)
+
+#define BLK_CTRL_CAMERAMIX_ISP_QOS_SETTING_ISP_Traffic_MASK (0x10000U)
+#define BLK_CTRL_CAMERAMIX_ISP_QOS_SETTING_ISP_Traffic_SHIFT (16U)
+/*! ISP_Traffic - Set the ISP Traffic as real-time.
+ *  0b0..ISP write traffic is configured as best effort. ISP contribution to panic signal through AWQoS_panic is
+ *       gated. Set this bit in case of memory to memory ISP processing.
+ *  0b1..ISP write traffic is configured as real time. ISP contribute to panic signal. Set this bit in case of real time streaming.
+ */
+#define BLK_CTRL_CAMERAMIX_ISP_QOS_SETTING_ISP_Traffic(x) (((uint32_t)(((uint32_t)(x)) << BLK_CTRL_CAMERAMIX_ISP_QOS_SETTING_ISP_Traffic_SHIFT)) & BLK_CTRL_CAMERAMIX_ISP_QOS_SETTING_ISP_Traffic_MASK)
 /*! @} */
 
 /*! @name ISI_AXCACHE_CONTROL - ISI AxCache control */
@@ -397,8 +406,8 @@ typedef struct {
 #define BLK_CTRL_CAMERAMIX_INIT_PENDING_TX_eDMA_MASK (0x200U)
 #define BLK_CTRL_CAMERAMIX_INIT_PENDING_TX_eDMA_SHIFT (9U)
 /*! eDMA - eDMA pending transaction
- *  0b1..Pending transaction
  *  0b0..No pending transaction
+ *  0b1..Pending transaction
  */
 #define BLK_CTRL_CAMERAMIX_INIT_PENDING_TX_eDMA(x) (((uint32_t)(((uint32_t)(x)) << BLK_CTRL_CAMERAMIX_INIT_PENDING_TX_eDMA_SHIFT)) & BLK_CTRL_CAMERAMIX_INIT_PENDING_TX_eDMA_MASK)
 /*! @} */
@@ -493,10 +502,10 @@ typedef struct {
 #define BLK_CTRL_CAMERAMIX_CSI0_VC_INTERLACED_CTRL_CSI0_VC7_interlace_mode_MASK (0xC000U)
 #define BLK_CTRL_CAMERAMIX_CSI0_VC_INTERLACED_CTRL_CSI0_VC7_interlace_mode_SHIFT (14U)
 /*! CSI0_VC7_interlace_mode - CSI0 VC7 interlace mode
- *  0b11..Virtual Channel is interlaced. First received frame is considered as ODD.
- *  0b10..Virtual Channel is interlaced and generation done according to the number of lines received during one frame
- *  0b01..Virtual Channel is interlaced and generation done according to the CSI2 frame number
  *  0b00..Virtual Channel is not interlaced : pixel link interlaced/not control field is set 2b00
+ *  0b01..Virtual Channel is interlaced and generation done according to the CSI2 frame number
+ *  0b10..Virtual Channel is interlaced and generation done according to the number of lines received during one frame
+ *  0b11..Virtual Channel is interlaced. First received frame is considered as ODD.
  */
 #define BLK_CTRL_CAMERAMIX_CSI0_VC_INTERLACED_CTRL_CSI0_VC7_interlace_mode(x) (((uint32_t)(((uint32_t)(x)) << BLK_CTRL_CAMERAMIX_CSI0_VC_INTERLACED_CTRL_CSI0_VC7_interlace_mode_SHIFT)) & BLK_CTRL_CAMERAMIX_CSI0_VC_INTERLACED_CTRL_CSI0_VC7_interlace_mode_MASK)
 /*! @} */
@@ -563,8 +572,8 @@ typedef struct {
 #define BLK_CTRL_CAMERAMIX_CSI0_VC_INTERLACED_ERROR_CSI0_VC7_MASK (0x80U)
 #define BLK_CTRL_CAMERAMIX_CSI0_VC_INTERLACED_ERROR_CSI0_VC7_SHIFT (7U)
 /*! CSI0_VC7 - CSI0 VC7 line count mismatch
- *  0b1..Line count mismatch error
  *  0b0..No line count mismatch error
+ *  0b1..Line count mismatch error
  */
 #define BLK_CTRL_CAMERAMIX_CSI0_VC_INTERLACED_ERROR_CSI0_VC7(x) (((uint32_t)(((uint32_t)(x)) << BLK_CTRL_CAMERAMIX_CSI0_VC_INTERLACED_ERROR_CSI0_VC7_SHIFT)) & BLK_CTRL_CAMERAMIX_CSI0_VC_INTERLACED_ERROR_CSI0_VC7_MASK)
 /*! @} */
@@ -643,8 +652,8 @@ typedef struct {
 #define BLK_CTRL_CAMERAMIX_CSI0_RAW32_CTR_CSI0_VC0_RAW32_MODE_MASK (0x1U)
 #define BLK_CTRL_CAMERAMIX_CSI0_RAW32_CTR_CSI0_VC0_RAW32_MODE_SHIFT (0U)
 /*! CSI0_VC0_RAW32_MODE - Defines if a virtual channel is set in RAW32 mode
- *  0b1..VC is set in RAW32 mode
  *  0b0..VC is not set in RAW32 mode
+ *  0b1..VC is set in RAW32 mode
  */
 #define BLK_CTRL_CAMERAMIX_CSI0_RAW32_CTR_CSI0_VC0_RAW32_MODE(x) (((uint32_t)(((uint32_t)(x)) << BLK_CTRL_CAMERAMIX_CSI0_RAW32_CTR_CSI0_VC0_RAW32_MODE_SHIFT)) & BLK_CTRL_CAMERAMIX_CSI0_RAW32_CTR_CSI0_VC0_RAW32_MODE_MASK)
 
@@ -699,8 +708,8 @@ typedef struct {
 #define BLK_CTRL_CAMERAMIX_CSI0_RAW32_CTR_CSI0_VC7_RAW32_MODE_MASK (0x80U)
 #define BLK_CTRL_CAMERAMIX_CSI0_RAW32_CTR_CSI0_VC7_RAW32_MODE_SHIFT (7U)
 /*! CSI0_VC7_RAW32_MODE - Defines if a virtual channel is set in RAW32 mode
- *  0b1..VC is set in RAW32 mode
  *  0b0..VC is not set in RAW32 mode
+ *  0b1..VC is set in RAW32 mode
  */
 #define BLK_CTRL_CAMERAMIX_CSI0_RAW32_CTR_CSI0_VC7_RAW32_MODE(x) (((uint32_t)(((uint32_t)(x)) << BLK_CTRL_CAMERAMIX_CSI0_RAW32_CTR_CSI0_VC7_RAW32_MODE_SHIFT)) & BLK_CTRL_CAMERAMIX_CSI0_RAW32_CTR_CSI0_VC7_RAW32_MODE_MASK)
 
@@ -814,8 +823,8 @@ typedef struct {
 #define BLK_CTRL_CAMERAMIX_CSI0_Non_Pixel_data_ctrl_VC_Reroute_VC_MASK (0x1U)
 #define BLK_CTRL_CAMERAMIX_CSI0_Non_Pixel_data_ctrl_VC_Reroute_VC_SHIFT (0U)
 /*! Reroute_VC - Defines if the non-pixel data are routed to another VC or not
- *  0b1..Non-pixel data are routed to VC defined by New_VC.
  *  0b0..Non-pixel data are not re-routed.
+ *  0b1..Non-pixel data are routed to VC defined by New_VC.
  */
 #define BLK_CTRL_CAMERAMIX_CSI0_Non_Pixel_data_ctrl_VC_Reroute_VC(x) (((uint32_t)(((uint32_t)(x)) << BLK_CTRL_CAMERAMIX_CSI0_Non_Pixel_data_ctrl_VC_Reroute_VC_SHIFT)) & BLK_CTRL_CAMERAMIX_CSI0_Non_Pixel_data_ctrl_VC_Reroute_VC_MASK)
 
@@ -1015,8 +1024,8 @@ typedef struct {
 #define BLK_CTRL_CAMERAMIX_CSI1_YUV420_FIRST_LINE_EVEN_VC0_MASK (0x1U)
 #define BLK_CTRL_CAMERAMIX_CSI1_YUV420_FIRST_LINE_EVEN_VC0_SHIFT (0U)
 /*! VC0 - CSI1 VC0 first line even
- *  0b1..First line is EVEN
  *  0b0..First line is ODD
+ *  0b1..First line is EVEN
  */
 #define BLK_CTRL_CAMERAMIX_CSI1_YUV420_FIRST_LINE_EVEN_VC0(x) (((uint32_t)(((uint32_t)(x)) << BLK_CTRL_CAMERAMIX_CSI1_YUV420_FIRST_LINE_EVEN_VC0_SHIFT)) & BLK_CTRL_CAMERAMIX_CSI1_YUV420_FIRST_LINE_EVEN_VC0_MASK)
 
@@ -1028,40 +1037,40 @@ typedef struct {
 #define BLK_CTRL_CAMERAMIX_CSI1_YUV420_FIRST_LINE_EVEN_VC2_MASK (0x4U)
 #define BLK_CTRL_CAMERAMIX_CSI1_YUV420_FIRST_LINE_EVEN_VC2_SHIFT (2U)
 /*! VC2 - CSI1 VC2 first line even
- *  0b1..First line is EVEN
  *  0b0..First line is ODD
+ *  0b1..First line is EVEN
  */
 #define BLK_CTRL_CAMERAMIX_CSI1_YUV420_FIRST_LINE_EVEN_VC2(x) (((uint32_t)(((uint32_t)(x)) << BLK_CTRL_CAMERAMIX_CSI1_YUV420_FIRST_LINE_EVEN_VC2_SHIFT)) & BLK_CTRL_CAMERAMIX_CSI1_YUV420_FIRST_LINE_EVEN_VC2_MASK)
 
 #define BLK_CTRL_CAMERAMIX_CSI1_YUV420_FIRST_LINE_EVEN_VC3_MASK (0x8U)
 #define BLK_CTRL_CAMERAMIX_CSI1_YUV420_FIRST_LINE_EVEN_VC3_SHIFT (3U)
 /*! VC3 - CSI1 VC3 first line even
- *  0b1..First line is EVEN
  *  0b0..First line is ODD
+ *  0b1..First line is EVEN
  */
 #define BLK_CTRL_CAMERAMIX_CSI1_YUV420_FIRST_LINE_EVEN_VC3(x) (((uint32_t)(((uint32_t)(x)) << BLK_CTRL_CAMERAMIX_CSI1_YUV420_FIRST_LINE_EVEN_VC3_SHIFT)) & BLK_CTRL_CAMERAMIX_CSI1_YUV420_FIRST_LINE_EVEN_VC3_MASK)
 
 #define BLK_CTRL_CAMERAMIX_CSI1_YUV420_FIRST_LINE_EVEN_VC4_MASK (0x10U)
 #define BLK_CTRL_CAMERAMIX_CSI1_YUV420_FIRST_LINE_EVEN_VC4_SHIFT (4U)
 /*! VC4 - CSI1 VC4 first line even
- *  0b1..First line is EVEN
  *  0b0..First line is ODD
+ *  0b1..First line is EVEN
  */
 #define BLK_CTRL_CAMERAMIX_CSI1_YUV420_FIRST_LINE_EVEN_VC4(x) (((uint32_t)(((uint32_t)(x)) << BLK_CTRL_CAMERAMIX_CSI1_YUV420_FIRST_LINE_EVEN_VC4_SHIFT)) & BLK_CTRL_CAMERAMIX_CSI1_YUV420_FIRST_LINE_EVEN_VC4_MASK)
 
 #define BLK_CTRL_CAMERAMIX_CSI1_YUV420_FIRST_LINE_EVEN_VC5_MASK (0x20U)
 #define BLK_CTRL_CAMERAMIX_CSI1_YUV420_FIRST_LINE_EVEN_VC5_SHIFT (5U)
 /*! VC5 - CSI1 VC5 first line even
- *  0b1..First line is EVEN
  *  0b0..First line is ODD
+ *  0b1..First line is EVEN
  */
 #define BLK_CTRL_CAMERAMIX_CSI1_YUV420_FIRST_LINE_EVEN_VC5(x) (((uint32_t)(((uint32_t)(x)) << BLK_CTRL_CAMERAMIX_CSI1_YUV420_FIRST_LINE_EVEN_VC5_SHIFT)) & BLK_CTRL_CAMERAMIX_CSI1_YUV420_FIRST_LINE_EVEN_VC5_MASK)
 
 #define BLK_CTRL_CAMERAMIX_CSI1_YUV420_FIRST_LINE_EVEN_VC6_MASK (0x40U)
 #define BLK_CTRL_CAMERAMIX_CSI1_YUV420_FIRST_LINE_EVEN_VC6_SHIFT (6U)
 /*! VC6 - CSI1 VC6 first line even
- *  0b1..First line is EVEN
  *  0b0..First line is ODD
+ *  0b1..First line is EVEN
  */
 #define BLK_CTRL_CAMERAMIX_CSI1_YUV420_FIRST_LINE_EVEN_VC6(x) (((uint32_t)(((uint32_t)(x)) << BLK_CTRL_CAMERAMIX_CSI1_YUV420_FIRST_LINE_EVEN_VC6_SHIFT)) & BLK_CTRL_CAMERAMIX_CSI1_YUV420_FIRST_LINE_EVEN_VC6_MASK)
 
@@ -1247,8 +1256,8 @@ typedef struct {
 #define BLK_CTRL_CAMERAMIX_CSI1_Non_Pixel_data_ctrl_VC_Reroute_VC_MASK (0x1U)
 #define BLK_CTRL_CAMERAMIX_CSI1_Non_Pixel_data_ctrl_VC_Reroute_VC_SHIFT (0U)
 /*! Reroute_VC - Defines if the non-pixel data are routed to another VC or not
- *  0b1..Non-pixel data are routed to VC defined by New_VC.
  *  0b0..Non-pixel data are not re-routed.
+ *  0b1..Non-pixel data are routed to VC defined by New_VC.
  */
 #define BLK_CTRL_CAMERAMIX_CSI1_Non_Pixel_data_ctrl_VC_Reroute_VC(x) (((uint32_t)(((uint32_t)(x)) << BLK_CTRL_CAMERAMIX_CSI1_Non_Pixel_data_ctrl_VC_Reroute_VC_SHIFT)) & BLK_CTRL_CAMERAMIX_CSI1_Non_Pixel_data_ctrl_VC_Reroute_VC_MASK)
 

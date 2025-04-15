@@ -44,13 +44,13 @@
 **                          MIMX9596XVZXN_cm7
 **
 **     Version:             rev. 1.0, 2023-01-10
-**     Build:               b240728
+**     Build:               b250415
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for NETC_SW_ENETC
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -242,14 +242,17 @@ typedef struct {
 
 #define NETC_SW_ENETC_IPCAPR_RP_MASK             (0x1U)
 #define NETC_SW_ENETC_IPCAPR_RP_SHIFT            (0U)
+/*! RP - Rate Policer */
 #define NETC_SW_ENETC_IPCAPR_RP(x)               (((uint32_t)(((uint32_t)(x)) << NETC_SW_ENETC_IPCAPR_RP_SHIFT)) & NETC_SW_ENETC_IPCAPR_RP_MASK)
 
 #define NETC_SW_ENETC_IPCAPR_IPFLT_MASK          (0x2U)
 #define NETC_SW_ENETC_IPCAPR_IPFLT_SHIFT         (1U)
+/*! IPFLT - Ingress Port Filtering */
 #define NETC_SW_ENETC_IPCAPR_IPFLT(x)            (((uint32_t)(((uint32_t)(x)) << NETC_SW_ENETC_IPCAPR_IPFLT_SHIFT)) & NETC_SW_ENETC_IPCAPR_IPFLT_MASK)
 
 #define NETC_SW_ENETC_IPCAPR_ISID_MASK           (0x4U)
 #define NETC_SW_ENETC_IPCAPR_ISID_SHIFT          (2U)
+/*! ISID - Ingress Stream Identification */
 #define NETC_SW_ENETC_IPCAPR_ISID(x)             (((uint32_t)(((uint32_t)(x)) << NETC_SW_ENETC_IPCAPR_ISID_SHIFT)) & NETC_SW_ENETC_IPCAPR_ISID_MASK)
 
 #define NETC_SW_ENETC_IPCAPR_SDU_MASK            (0x1F00U)

@@ -44,13 +44,13 @@
 **                          MIMX9596XVZXN_cm7
 **
 **     Version:             rev. 1.0, 2023-01-10
-**     Build:               b240728
+**     Build:               b250415
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for CAMERA_DSI_MASTER_CSR
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -151,8 +151,8 @@ typedef struct {
 #define CAMERA_DSI_MASTER_CSR_DSI_CLOCK_GATING_CONTROL_Display_0_async_fifo_MASK (0x1U)
 #define CAMERA_DSI_MASTER_CSR_DSI_CLOCK_GATING_CONTROL_Display_0_async_fifo_SHIFT (0U)
 /*! Display_0_async_fifo - Controls the gating of the processing clock (pixel clock) of Pixel link slave.
- *  0b1..Pixel clock is disabled (gated)
  *  0b0..Pixel clock is enabled
+ *  0b1..Pixel clock is disabled (gated)
  */
 #define CAMERA_DSI_MASTER_CSR_DSI_CLOCK_GATING_CONTROL_Display_0_async_fifo(x) (((uint32_t)(((uint32_t)(x)) << CAMERA_DSI_MASTER_CSR_DSI_CLOCK_GATING_CONTROL_Display_0_async_fifo_SHIFT)) & CAMERA_DSI_MASTER_CSR_DSI_CLOCK_GATING_CONTROL_Display_0_async_fifo_MASK)
 
@@ -167,16 +167,16 @@ typedef struct {
 #define CAMERA_DSI_MASTER_CSR_DSI_CLOCK_GATING_CONTROL_Dphy_pll_clkin_MASK (0x4U)
 #define CAMERA_DSI_MASTER_CSR_DSI_CLOCK_GATING_CONTROL_Dphy_pll_clkin_SHIFT (2U)
 /*! Dphy_pll_clkin - Controls the clock gating of the DPHY PLL clkin.
- *  0b1..clkin is disabled (gated)
  *  0b0..clkin is enabled
+ *  0b1..clkin is disabled (gated)
  */
 #define CAMERA_DSI_MASTER_CSR_DSI_CLOCK_GATING_CONTROL_Dphy_pll_clkin(x) (((uint32_t)(((uint32_t)(x)) << CAMERA_DSI_MASTER_CSR_DSI_CLOCK_GATING_CONTROL_Dphy_pll_clkin_SHIFT)) & CAMERA_DSI_MASTER_CSR_DSI_CLOCK_GATING_CONTROL_Dphy_pll_clkin_MASK)
 
 #define CAMERA_DSI_MASTER_CSR_DSI_CLOCK_GATING_CONTROL_Dphy_pll_clkout_MASK (0x8U)
 #define CAMERA_DSI_MASTER_CSR_DSI_CLOCK_GATING_CONTROL_Dphy_pll_clkout_SHIFT (3U)
 /*! Dphy_pll_clkout - Controls the clock gating of the DPHY PLL clkout.
- *  0b1..clkout is disabled (gated)
  *  0b0..clkout is enabled
+ *  0b1..clkout is disabled (gated)
  */
 #define CAMERA_DSI_MASTER_CSR_DSI_CLOCK_GATING_CONTROL_Dphy_pll_clkout(x) (((uint32_t)(((uint32_t)(x)) << CAMERA_DSI_MASTER_CSR_DSI_CLOCK_GATING_CONTROL_Dphy_pll_clkout_SHIFT)) & CAMERA_DSI_MASTER_CSR_DSI_CLOCK_GATING_CONTROL_Dphy_pll_clkout_MASK)
 

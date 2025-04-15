@@ -44,13 +44,13 @@
 **                          MIMX9596XVZXN_cm7
 **
 **     Version:             rev. 1.0, 2023-01-10
-**     Build:               b240728
+**     Build:               b250415
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for DPU_IRQSTEER
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -199,11 +199,11 @@ typedef enum DPU_IRQSTEER_IRQn
 /** DPU_IRQSTEER - Register Layout Typedef */
 typedef struct {
        uint8_t RESERVED_0[4];
-  __IO uint32_t CHN_MASK[DPU_IRQSTEER_CHN_MASK_COUNT]; /**< Channel n Interrupt Mask Register, array offset: 0x4, array step: 0x4 */
-  __IO uint32_t CHN_SET[DPU_IRQSTEER_CHN_SET_COUNT]; /**< Channel n Interrupt Set Register, array offset: 0x44, array step: 0x4 */
-  __I  uint32_t CHN_STATUS[DPU_IRQSTEER_CHN_STATUS_COUNT]; /**< Channel n Interrupt Status Register, array offset: 0x84, array step: 0x4 */
-  __IO uint32_t CHN_MINTDIS;                       /**< Channel n Master Interrupt Disable Register., offset: 0xC4 */
-  __I  uint32_t CHN_MSTRSTAT;                      /**< Channel n Master Status Register, offset: 0xC8 */
+  __IO uint32_t CHN_MASK[DPU_IRQSTEER_CHN_MASK_COUNT]; /**< Channel n Interrupt Mask, array offset: 0x4, array step: 0x4 */
+  __IO uint32_t CHN_SET[DPU_IRQSTEER_CHN_SET_COUNT]; /**< Channel n Interrupt Set, array offset: 0x44, array step: 0x4 */
+  __I  uint32_t CHN_STATUS[DPU_IRQSTEER_CHN_STATUS_COUNT]; /**< Channel n Interrupt Status, array offset: 0x84, array step: 0x4 */
+  __IO uint32_t CHN_MINTDIS;                       /**< Channel n Group Interrupt Disable, offset: 0xC4 */
+  __I  uint32_t CHN_MSTRSTAT;                      /**< Channel n Group Status, offset: 0xC8 */
 } DPU_IRQSTEER_Type;
 
 /* ----------------------------------------------------------------------------
@@ -215,60 +215,51 @@ typedef struct {
  * @{
  */
 
-/*! @name CHN_MASK - Channel n Interrupt Mask Register */
+/*! @name CHN_MASK - Channel n Interrupt Mask */
 /*! @{ */
 
 #define DPU_IRQSTEER_CHN_MASK_MASKFLD_MASK       (0xFFFFFFFFU)
 #define DPU_IRQSTEER_CHN_MASK_MASKFLD_SHIFT      (0U)
-/*! MASKFLD - Mask bits
- *  0b00000000000000000000000000000000..Mask interrupt
- *  0b00000000000000000000000000000001..Do not mask interrupt
- */
+/*! MASKFLD - Masks */
 #define DPU_IRQSTEER_CHN_MASK_MASKFLD(x)         (((uint32_t)(((uint32_t)(x)) << DPU_IRQSTEER_CHN_MASK_MASKFLD_SHIFT)) & DPU_IRQSTEER_CHN_MASK_MASKFLD_MASK)
 /*! @} */
 
-/*! @name CHN_SET - Channel n Interrupt Set Register */
+/*! @name CHN_SET - Channel n Interrupt Set */
 /*! @{ */
 
 #define DPU_IRQSTEER_CHN_SET_FORCEFLD_MASK       (0xFFFFFFFFU)
 #define DPU_IRQSTEER_CHN_SET_FORCEFLD_SHIFT      (0U)
-/*! FORCEFLD - Force interrupt.
- *  0b00000000000000000000000000000000..Normal operation
- *  0b00000000000000000000000000000001..Force interrupt
- */
+/*! FORCEFLD - Force Interrupt */
 #define DPU_IRQSTEER_CHN_SET_FORCEFLD(x)         (((uint32_t)(((uint32_t)(x)) << DPU_IRQSTEER_CHN_SET_FORCEFLD_SHIFT)) & DPU_IRQSTEER_CHN_SET_FORCEFLD_MASK)
 /*! @} */
 
-/*! @name CHN_STATUS - Channel n Interrupt Status Register */
+/*! @name CHN_STATUS - Channel n Interrupt Status */
 /*! @{ */
 
 #define DPU_IRQSTEER_CHN_STATUS_STATUS_MASK      (0xFFFFFFFFU)
 #define DPU_IRQSTEER_CHN_STATUS_STATUS_SHIFT     (0U)
-/*! STATUS - Status of an interrupt
- *  0b00000000000000000000000000000000..Interrupt is not set.
- *  0b00000000000000000000000000000001..Interrupt is set.
- */
+/*! STATUS - Status of an interrupt */
 #define DPU_IRQSTEER_CHN_STATUS_STATUS(x)        (((uint32_t)(((uint32_t)(x)) << DPU_IRQSTEER_CHN_STATUS_STATUS_SHIFT)) & DPU_IRQSTEER_CHN_STATUS_STATUS_MASK)
 /*! @} */
 
-/*! @name CHN_MINTDIS - Channel n Master Interrupt Disable Register. */
+/*! @name CHN_MINTDIS - Channel n Group Interrupt Disable */
 /*! @{ */
 
 #define DPU_IRQSTEER_CHN_MINTDIS_DISABLE_MASK    (0xFFU)
 #define DPU_IRQSTEER_CHN_MINTDIS_DISABLE_SHIFT   (0U)
-/*! DISABLE - Each bit of this field disables the corresponding interrupts in table above.
+/*! DISABLE - Interrupt Disable
  *  0b00000000..Enable interrupts
  *  0b00000001..Disable interrupts
  */
 #define DPU_IRQSTEER_CHN_MINTDIS_DISABLE(x)      (((uint32_t)(((uint32_t)(x)) << DPU_IRQSTEER_CHN_MINTDIS_DISABLE_SHIFT)) & DPU_IRQSTEER_CHN_MINTDIS_DISABLE_MASK)
 /*! @} */
 
-/*! @name CHN_MSTRSTAT - Channel n Master Status Register */
+/*! @name CHN_MSTRSTAT - Channel n Group Status */
 /*! @{ */
 
 #define DPU_IRQSTEER_CHN_MSTRSTAT_STATUS_MASK    (0x1U)
 #define DPU_IRQSTEER_CHN_MSTRSTAT_STATUS_SHIFT   (0U)
-/*! STATUS - Status of all interrupts
+/*! STATUS - Group Interrupt Status
  *  0b0..No interrupts are asserted.
  *  0b1..At least one interrupt is asserted.
  */

@@ -44,13 +44,13 @@
 **                          MIMX9596XVZXN_cm7
 **
 **     Version:             rev. 1.0, 2023-01-10
-**     Build:               b240728
+**     Build:               b250415
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for WDOG
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -270,12 +270,12 @@ typedef struct {
 
 #define WDOG_CNT_CNTLOW_MASK                     (0xFFU)
 #define WDOG_CNT_CNTLOW_SHIFT                    (0U)
-/*! CNTLOW - Counter High Byte */
+/*! CNTLOW - Counter Low Byte */
 #define WDOG_CNT_CNTLOW(x)                       (((uint32_t)(((uint32_t)(x)) << WDOG_CNT_CNTLOW_SHIFT)) & WDOG_CNT_CNTLOW_MASK)
 
 #define WDOG_CNT_CNTHIGH_MASK                    (0xFF00U)
 #define WDOG_CNT_CNTHIGH_SHIFT                   (8U)
-/*! CNTHIGH - Counter Low Byte */
+/*! CNTHIGH - Counter High Byte */
 #define WDOG_CNT_CNTHIGH(x)                      (((uint32_t)(((uint32_t)(x)) << WDOG_CNT_CNTHIGH_SHIFT)) & WDOG_CNT_CNTHIGH_MASK)
 /*! @} */
 

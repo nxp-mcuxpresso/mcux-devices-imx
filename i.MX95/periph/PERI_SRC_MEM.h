@@ -44,13 +44,13 @@
 **                          MIMX9596XVZXN_cm7
 **
 **     Version:             rev. 1.0, 2023-01-10
-**     Build:               b240728
+**     Build:               b250415
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for SRC_MEM
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -133,10 +133,7 @@
 typedef struct {
        uint8_t RESERVED_0[4];
   __IO uint32_t MEM_CTRL;                          /**< MEM Low Power Control, offset: 0x4 */
-  __IO uint32_t MEMLP_CTRL_0;                      /**< MEM Low Power Control_0, offset: 0x8 */
-       uint8_t RESERVED_1[4];
-  __IO uint32_t MEMLP_CTRL_1;                      /**< MEM Low Power Control_1, offset: 0x10 */
-  __IO uint32_t MEMLP_CTRL_2;                      /**< MEM Low Power Control_2, offset: 0x14 */
+       uint8_t RESERVED_1[16];
   __I  uint32_t MEM_STAT;                          /**< MEM Status, offset: 0x18 */
 } SRC_MEM_Type;
 
@@ -160,16 +157,6 @@ typedef struct {
  */
 #define SRC_MEM_MEM_CTRL_MEM_LP_MODE(x)          (((uint32_t)(((uint32_t)(x)) << SRC_MEM_MEM_CTRL_MEM_LP_MODE_SHIFT)) & SRC_MEM_MEM_CTRL_MEM_LP_MODE_MASK)
 
-#define SRC_MEM_MEM_CTRL_MEM_LF_CNT_CFG_MASK     (0xFF00U)
-#define SRC_MEM_MEM_CTRL_MEM_LF_CNT_CFG_SHIFT    (8U)
-/*! MEM_LF_CNT_CFG - MEM power up counter */
-#define SRC_MEM_MEM_CTRL_MEM_LF_CNT_CFG(x)       (((uint32_t)(((uint32_t)(x)) << SRC_MEM_MEM_CTRL_MEM_LF_CNT_CFG_SHIFT)) & SRC_MEM_MEM_CTRL_MEM_LF_CNT_CFG_MASK)
-
-#define SRC_MEM_MEM_CTRL_MEM_HF_CNT_CFG_MASK     (0xFF0000U)
-#define SRC_MEM_MEM_CTRL_MEM_HF_CNT_CFG_SHIFT    (16U)
-/*! MEM_HF_CNT_CFG - MEM power up counter */
-#define SRC_MEM_MEM_CTRL_MEM_HF_CNT_CFG(x)       (((uint32_t)(((uint32_t)(x)) << SRC_MEM_MEM_CTRL_MEM_HF_CNT_CFG_SHIFT)) & SRC_MEM_MEM_CTRL_MEM_HF_CNT_CFG_MASK)
-
 #define SRC_MEM_MEM_CTRL_LOCK_CFG_MASK           (0x1000000U)
 #define SRC_MEM_MEM_CTRL_LOCK_CFG_SHIFT          (24U)
 /*! LOCK_CFG - Configuration lock
@@ -179,47 +166,20 @@ typedef struct {
 #define SRC_MEM_MEM_CTRL_LOCK_CFG(x)             (((uint32_t)(((uint32_t)(x)) << SRC_MEM_MEM_CTRL_LOCK_CFG_SHIFT)) & SRC_MEM_MEM_CTRL_LOCK_CFG_MASK)
 /*! @} */
 
-/*! @name MEMLP_CTRL_0 - MEM Low Power Control_0 */
-/*! @{ */
-
-#define SRC_MEM_MEMLP_CTRL_0_MEMLP_ENT_CNT_MASK  (0xFFFFFFFFU)
-#define SRC_MEM_MEMLP_CTRL_0_MEMLP_ENT_CNT_SHIFT (0U)
-/*! MEMLP_ENT_CNT - Delay counter to start entering to memory low power mode. Locked by LOCK_CFG field */
-#define SRC_MEM_MEMLP_CTRL_0_MEMLP_ENT_CNT(x)    (((uint32_t)(((uint32_t)(x)) << SRC_MEM_MEMLP_CTRL_0_MEMLP_ENT_CNT_SHIFT)) & SRC_MEM_MEMLP_CTRL_0_MEMLP_ENT_CNT_MASK)
-/*! @} */
-
-/*! @name MEMLP_CTRL_1 - MEM Low Power Control_1 */
-/*! @{ */
-
-#define SRC_MEM_MEMLP_CTRL_1_MEMLP_RET_PGEN_CNT_MASK (0xFFFFFFFFU)
-#define SRC_MEM_MEMLP_CTRL_1_MEMLP_RET_PGEN_CNT_SHIFT (0U)
-/*! MEMLP_RET_PGEN_CNT - Delay counter to interval for retn to pgen. Locked by LOCK_CFG field */
-#define SRC_MEM_MEMLP_CTRL_1_MEMLP_RET_PGEN_CNT(x) (((uint32_t)(((uint32_t)(x)) << SRC_MEM_MEMLP_CTRL_1_MEMLP_RET_PGEN_CNT_SHIFT)) & SRC_MEM_MEMLP_CTRL_1_MEMLP_RET_PGEN_CNT_MASK)
-/*! @} */
-
-/*! @name MEMLP_CTRL_2 - MEM Low Power Control_2 */
-/*! @{ */
-
-#define SRC_MEM_MEMLP_CTRL_2_MEMLP_EXT_CNT_MASK  (0xFFFFFFFFU)
-#define SRC_MEM_MEMLP_CTRL_2_MEMLP_EXT_CNT_SHIFT (0U)
-/*! MEMLP_EXT_CNT - Delay counter to start exiting from memory low power mode. Locked by LOCK_CFG field */
-#define SRC_MEM_MEMLP_CTRL_2_MEMLP_EXT_CNT(x)    (((uint32_t)(((uint32_t)(x)) << SRC_MEM_MEMLP_CTRL_2_MEMLP_EXT_CNT_SHIFT)) & SRC_MEM_MEMLP_CTRL_2_MEMLP_EXT_CNT_MASK)
-/*! @} */
-
 /*! @name MEM_STAT - MEM Status */
 /*! @{ */
 
 #define SRC_MEM_MEM_STAT_MEM_FSM_STAT_MASK       (0xFU)
 #define SRC_MEM_MEM_STAT_MEM_FSM_STAT_SHIFT      (0U)
 /*! MEM_FSM_STAT - MEM FSM status
- *  0b0000..MEM_IDLE_POR
- *  0b0001..MEM_IDLE_RUN
- *  0b0010..MEM_OFF_PRE
- *  0b0011..MEM_ENT_RET
- *  0b0100..MEM_ENT_PGEN
- *  0b0101..MEM_OFF_RSP
- *  0b0110..MEM_IDLE_SLEEP
- *  0b0111..MEM_ON_PRE
+ *  0b0000..MEM_RESET
+ *  0b0001..MEM_NSPR
+ *  0b0010..MEM_PWR_UP_PGEN
+ *  0b0011..MEM_PWR_UP_ACK
+ *  0b0100..MEM_PWR_UP
+ *  0b0101..MEM_PWR_DWN_RETX
+ *  0b0110..MEM_PWR_DWN_ACK
+ *  0b0111..MEM_PWR_DWN
  *  0b1000..MEM_EXT_PGEN
  *  0b1001..MEM_EXT_RET
  *  0b1010..MEM_ON_RSP
@@ -242,8 +202,8 @@ typedef struct {
 #define SRC_MEM_MEM_STAT_RET1N_STAT_MASK         (0x20U)
 #define SRC_MEM_MEM_STAT_RET1N_STAT_SHIFT        (5U)
 /*! RET1N_STAT - RET1N status
- *  0b1..Memory RET1N pin is high
  *  0b0..Memory RET1N pin is low
+ *  0b1..Memory RET1N pin is high
  */
 #define SRC_MEM_MEM_STAT_RET1N_STAT(x)           (((uint32_t)(((uint32_t)(x)) << SRC_MEM_MEM_STAT_RET1N_STAT_SHIFT)) & SRC_MEM_MEM_STAT_RET1N_STAT_MASK)
 

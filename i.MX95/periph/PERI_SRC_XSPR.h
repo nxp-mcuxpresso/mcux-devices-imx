@@ -44,13 +44,13 @@
 **                          MIMX9596XVZXN_cm7
 **
 **     Version:             rev. 1.0, 2023-01-10
-**     Build:               b240728
+**     Build:               b250415
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for SRC_XSPR
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -147,20 +147,11 @@ typedef struct {
   __I  uint32_t SYSMAN_ACK_STAT;                   /**< System manager handshake acknowledge status, offset: 0x4C */
   __IO uint32_t SSAR_ACK_CTRL;                     /**< SSAR acknowledge control, offset: 0x50 */
   __I  uint32_t SSAR_ACK_STAT;                     /**< SSAR acknowledge status, offset: 0x54 */
-       uint8_t RESERVED_4[4];
-  __IO uint32_t ISO_OFF_DLY_POR;                   /**< iso off delay control when por, offset: 0x5C */
-  __IO uint32_t ISO_ON_DLY;                        /**< iso on delay control, offset: 0x60 */
-  __IO uint32_t ISO_OFF_DLY;                       /**< iso off delay control, offset: 0x64 */
-  __IO uint32_t PSW_OFF_LF_DLY;                    /**< psw off lf delay control, offset: 0x68 */
-       uint8_t RESERVED_5[4];
-  __IO uint32_t PSW_OFF_HF_DLY;                    /**< psw off hf delay control, offset: 0x70 */
-  __IO uint32_t PSW_ON_LF_DLY;                     /**< psw on lf delay control, offset: 0x74 */
-  __IO uint32_t PSW_ON_HF_DLY;                     /**< psw on hf delay control, offset: 0x78 */
-       uint8_t RESERVED_6[4];
+       uint8_t RESERVED_4[40];
   __IO uint32_t PSW_ACK_CTRL_0;                    /**< Power switch acknowledge control, offset: 0x80 */
   __IO uint32_t PSW_ACK_CTRL_1;                    /**< Power switch acknowledge control, offset: 0x84 */
   __I  uint32_t PSW_ACK_STAT;                      /**< PSW acknowledge status, offset: 0x88 */
-       uint8_t RESERVED_7[20];
+       uint8_t RESERVED_5[20];
   __I  uint32_t UPI_STAT_0;                        /**< UPI status 0, offset: 0xA0 */
   __I  uint32_t UPI_STAT_1;                        /**< UPI status 1, offset: 0xA4 */
   __I  uint32_t UPI_STAT_2;                        /**< UPI status 2, offset: 0xA8 */
@@ -233,22 +224,22 @@ typedef struct {
 #define SRC_XSPR_AUTHEN_CTRL_WHITE_LIST_MASK     (0xFFFF0000U)
 #define SRC_XSPR_AUTHEN_CTRL_WHITE_LIST_SHIFT    (16U)
 /*! WHITE_LIST - Domain ID white list
- *  0b0000000000000001..Core with TRDC domain (resp. GPC domain) ID=0 can write SRC MIX SLICE registers (resp. trigger SRC MIX SLICE powering down).
- *  0b0000000000000010..Core with TRDC domain (resp. GPC domain) ID=1 can write SRC MIX SLICE registers (resp. trigger SRC MIX SLICE powering down).
- *  0b0000000000000100..Core with TRDC domain (resp. GPC domain) ID=2 can write SRC MIX SLICE registers (resp. trigger SRC MIX SLICE powering down).
- *  0b0000000000001000..Core with TRDC domain (resp. GPC domain) ID=3 can write SRC MIX SLICE registers (resp. trigger SRC MIX SLICE powering down).
- *  0b0000000000010000..Core with TRDC domain (resp. GPC domain) ID=4 can write SRC MIX SLICE registers (resp. trigger SRC MIX SLICE powering down).
- *  0b0000000000100000..Core with TRDC domain (resp. GPC domain) ID=5 can write SRC MIX SLICE registers (resp. trigger SRC MIX SLICE powering down).
- *  0b0000000001000000..Core with TRDC domain (resp. GPC domain) ID=6 can write SRC MIX SLICE registers (resp. trigger SRC MIX SLICE powering down).
- *  0b0000000010000000..Core with TRDC domain (resp. GPC domain) ID=7 can write SRC MIX SLICE registers (resp. trigger SRC MIX SLICE powering down).
- *  0b0000000100000000..Core with TRDC domain (resp. GPC domain) ID=8 can write SRC MIX SLICE registers (resp. trigger SRC MIX SLICE powering down).
- *  0b0000001000000000..Core with TRDC domain (resp. GPC domain) ID=9 can write SRC MIX SLICE registers (resp. trigger SRC MIX SLICE powering down).
- *  0b0000010000000000..Core with TRDC domain (resp. GPC domain) ID=10 can write SRC MIX SLICE registers (resp. trigger SRC MIX SLICE powering down).
- *  0b0000100000000000..Core with TRDC domain (resp. GPC domain) ID=11 can write SRC MIX SLICE registers (resp. trigger SRC MIX SLICE powering down).
- *  0b0001000000000000..Core with TRDC domain (resp. GPC domain) ID=12 can write SRC MIX SLICE registers (resp. trigger SRC MIX SLICE powering down).
- *  0b0010000000000000..Core with TRDC domain (resp. GPC domain) ID=13 can write SRC MIX SLICE registers (resp. trigger SRC MIX SLICE powering down).
- *  0b0100000000000000..Core with TRDC domain (resp. GPC domain) ID=14 can write SRC MIX SLICE registers (resp. trigger SRC MIX SLICE powering down).
- *  0b1000000000000000..Core with TRDC domain (resp. GPC domain) ID=15 can write SRC MIX SLICE registers (resp. trigger SRC MIX SLICE powering down).
+ *  0b0000000000000001..Core with domain ID=0 can write SRC MIX SLICE registers.
+ *  0b0000000000000010..Core with domain ID=1 can write SRC MIX SLICE registers.
+ *  0b0000000000000100..Core with domain ID=2 can write SRC MIX SLICE registers.
+ *  0b0000000000001000..Core with domain ID=3 can write SRC MIX SLICE registers.
+ *  0b0000000000010000..Core with domain ID=4 can write SRC MIX SLICE registers.
+ *  0b0000000000100000..Core with domain ID=5 can write SRC MIX SLICE registers.
+ *  0b0000000001000000..Core with domain ID=6 can write SRC MIX SLICE registers.
+ *  0b0000000010000000..Core with domain ID=7 can write SRC MIX SLICE registers.
+ *  0b0000000100000000..Core with domain ID=8 can write SRC MIX SLICE registers.
+ *  0b0000001000000000..Core with domain ID=9 can write SRC MIX SLICE registers.
+ *  0b0000010000000000..Core with domain ID=10 can write SRC MIX SLICE registers.
+ *  0b0000100000000000..Core with domain ID=11 can write SRC MIX SLICE registers.
+ *  0b0001000000000000..Core with domain ID=12 can write SRC MIX SLICE registers.
+ *  0b0010000000000000..Core with domain ID=13 can write SRC MIX SLICE registers.
+ *  0b0100000000000000..Core with domain ID=14 can write SRC MIX SLICE registers.
+ *  0b1000000000000000..Core with domain ID=15 can write SRC MIX SLICE registers.
  */
 #define SRC_XSPR_AUTHEN_CTRL_WHITE_LIST(x)       (((uint32_t)(((uint32_t)(x)) << SRC_XSPR_AUTHEN_CTRL_WHITE_LIST_SHIFT)) & SRC_XSPR_AUTHEN_CTRL_WHITE_LIST_MASK)
 /*! @} */
@@ -497,6 +488,22 @@ typedef struct {
 /*! @name SLICE_SW_CTRL - Slice Software Control Register */
 /*! @{ */
 
+#define SRC_XSPR_SLICE_SW_CTRL_ISO_OVERRIDE_B_0_MASK (0x1U)
+#define SRC_XSPR_SLICE_SW_CTRL_ISO_OVERRIDE_B_0_SHIFT (0U)
+/*! ISO_OVERRIDE_B_0 - Override contribution of switchable-VDD_SOC iso control to DRAM PHY internal iso control
+ *  0b0..override power switched domain isolation
+ *  0b1..No override power switched domain isolation
+ */
+#define SRC_XSPR_SLICE_SW_CTRL_ISO_OVERRIDE_B_0(x) (((uint32_t)(((uint32_t)(x)) << SRC_XSPR_SLICE_SW_CTRL_ISO_OVERRIDE_B_0_SHIFT)) & SRC_XSPR_SLICE_SW_CTRL_ISO_OVERRIDE_B_0_MASK)
+
+#define SRC_XSPR_SLICE_SW_CTRL_ISO_OVERRIDE_B_1_MASK (0x2U)
+#define SRC_XSPR_SLICE_SW_CTRL_ISO_OVERRIDE_B_1_SHIFT (1U)
+/*! ISO_OVERRIDE_B_1 - Override contribution of switchable-VDD_SOC iso control to DRAM PLL internal iso control
+ *  0b0..override power switched domain isolation
+ *  0b1..No override power switched domain isolation
+ */
+#define SRC_XSPR_SLICE_SW_CTRL_ISO_OVERRIDE_B_1(x) (((uint32_t)(((uint32_t)(x)) << SRC_XSPR_SLICE_SW_CTRL_ISO_OVERRIDE_B_1_SHIFT)) & SRC_XSPR_SLICE_SW_CTRL_ISO_OVERRIDE_B_1_MASK)
+
 #define SRC_XSPR_SLICE_SW_CTRL_RST_RSTR_0_MASK   (0x100000U)
 #define SRC_XSPR_SLICE_SW_CTRL_RST_RSTR_0_SHIFT  (20U)
 /*! RST_RSTR_0 - Reset Control for Reset Region 0.
@@ -531,7 +538,7 @@ typedef struct {
 
 #define SRC_XSPR_SLICE_SW_CTRL_ISO_CTRL_0_MASK   (0x1000000U)
 #define SRC_XSPR_SLICE_SW_CTRL_ISO_CTRL_0_SHIFT  (24U)
-/*! ISO_CTRL_0 - Isolation control for IP 0.
+/*! ISO_CTRL_0 - MISC Isolation control for IP 0:
  *  0b0..disable isolation of IP 0
  *  0b1..enable isolation of IP 0
  */
@@ -539,7 +546,7 @@ typedef struct {
 
 #define SRC_XSPR_SLICE_SW_CTRL_ISO_CTRL_1_MASK   (0x2000000U)
 #define SRC_XSPR_SLICE_SW_CTRL_ISO_CTRL_1_SHIFT  (25U)
-/*! ISO_CTRL_1 - Isolation control for IP 1.
+/*! ISO_CTRL_1 - MISC Isolation control for IP 1:
  *  0b0..disable isolation of IP 1
  *  0b1..enable isolation of IP 1
  */
@@ -547,7 +554,7 @@ typedef struct {
 
 #define SRC_XSPR_SLICE_SW_CTRL_ISO_CTRL_2_MASK   (0x4000000U)
 #define SRC_XSPR_SLICE_SW_CTRL_ISO_CTRL_2_SHIFT  (26U)
-/*! ISO_CTRL_2 - Isolation control for IP 2.
+/*! ISO_CTRL_2 - MISC Isolation control for IP 2:
  *  0b0..disable isolation of IP 2
  *  0b1..enable isolation of IP 2
  */
@@ -555,7 +562,7 @@ typedef struct {
 
 #define SRC_XSPR_SLICE_SW_CTRL_ISO_CTRL_3_MASK   (0x8000000U)
 #define SRC_XSPR_SLICE_SW_CTRL_ISO_CTRL_3_SHIFT  (27U)
-/*! ISO_CTRL_3 - Isolation control for IP 3.
+/*! ISO_CTRL_3 - MISC Isolation control for IP 3:
  *  0b0..disable isolation of IP 3
  *  0b1..enable isolation of IP 3
  */
@@ -563,7 +570,7 @@ typedef struct {
 
 #define SRC_XSPR_SLICE_SW_CTRL_ISO_CTRL_4_MASK   (0x10000000U)
 #define SRC_XSPR_SLICE_SW_CTRL_ISO_CTRL_4_SHIFT  (28U)
-/*! ISO_CTRL_4 - Isolation control for IP 4.
+/*! ISO_CTRL_4 - MISC Isolation control for IP 4.
  *  0b0..disable isolation of IP 4
  *  0b1..enable isolation of IP 4
  */
@@ -571,7 +578,7 @@ typedef struct {
 
 #define SRC_XSPR_SLICE_SW_CTRL_ISO_CTRL_5_MASK   (0x20000000U)
 #define SRC_XSPR_SLICE_SW_CTRL_ISO_CTRL_5_SHIFT  (29U)
-/*! ISO_CTRL_5 - Isolation control for IP 5.
+/*! ISO_CTRL_5 - MISC Isolation control for IP 5:
  *  0b0..disable isolation of IP 5
  *  0b1..enable isolation of IP 5
  */
@@ -579,7 +586,7 @@ typedef struct {
 
 #define SRC_XSPR_SLICE_SW_CTRL_ISO_CTRL_6_MASK   (0x40000000U)
 #define SRC_XSPR_SLICE_SW_CTRL_ISO_CTRL_6_SHIFT  (30U)
-/*! ISO_CTRL_6 - Isolation control for IP 6.
+/*! ISO_CTRL_6 - MISC Isolation control for IP 6.
  *  0b0..disable isolation of IP 6
  *  0b1..enable isolation of IP 6
  */
@@ -924,69 +931,6 @@ typedef struct {
 #define SRC_XSPR_SSAR_ACK_STAT_BUSY_RESTORE(x)   (((uint32_t)(((uint32_t)(x)) << SRC_XSPR_SSAR_ACK_STAT_BUSY_RESTORE_SHIFT)) & SRC_XSPR_SSAR_ACK_STAT_BUSY_RESTORE_MASK)
 /*! @} */
 
-/*! @name ISO_OFF_DLY_POR - iso off delay control when por */
-/*! @{ */
-
-#define SRC_XSPR_ISO_OFF_DLY_POR_DLY_PRE_ISO_OFF_POR_MASK (0xFFFFFFFFU)
-#define SRC_XSPR_ISO_OFF_DLY_POR_DLY_PRE_ISO_OFF_POR_SHIFT (0U)
-/*! DLY_PRE_ISO_OFF_POR - Delay from receiving iso off request to isolation disable. Locked by LOCK_CFG field. */
-#define SRC_XSPR_ISO_OFF_DLY_POR_DLY_PRE_ISO_OFF_POR(x) (((uint32_t)(((uint32_t)(x)) << SRC_XSPR_ISO_OFF_DLY_POR_DLY_PRE_ISO_OFF_POR_SHIFT)) & SRC_XSPR_ISO_OFF_DLY_POR_DLY_PRE_ISO_OFF_POR_MASK)
-/*! @} */
-
-/*! @name ISO_ON_DLY - iso on delay control */
-/*! @{ */
-
-#define SRC_XSPR_ISO_ON_DLY_DLY_PRE_ISO_ON_MASK  (0xFFFFFFFFU)
-#define SRC_XSPR_ISO_ON_DLY_DLY_PRE_ISO_ON_SHIFT (0U)
-/*! DLY_PRE_ISO_ON - Delay from receiving iso_on request to isolation enable. Locked by LOCK_CFG field. */
-#define SRC_XSPR_ISO_ON_DLY_DLY_PRE_ISO_ON(x)    (((uint32_t)(((uint32_t)(x)) << SRC_XSPR_ISO_ON_DLY_DLY_PRE_ISO_ON_SHIFT)) & SRC_XSPR_ISO_ON_DLY_DLY_PRE_ISO_ON_MASK)
-/*! @} */
-
-/*! @name ISO_OFF_DLY - iso off delay control */
-/*! @{ */
-
-#define SRC_XSPR_ISO_OFF_DLY_DLY_PRE_ISO_OFF_MASK (0xFFFFFFFFU)
-#define SRC_XSPR_ISO_OFF_DLY_DLY_PRE_ISO_OFF_SHIFT (0U)
-/*! DLY_PRE_ISO_OFF - Delay from receiving iso off request to isolation disable. Locked by LOCK_CFG field. */
-#define SRC_XSPR_ISO_OFF_DLY_DLY_PRE_ISO_OFF(x)  (((uint32_t)(((uint32_t)(x)) << SRC_XSPR_ISO_OFF_DLY_DLY_PRE_ISO_OFF_SHIFT)) & SRC_XSPR_ISO_OFF_DLY_DLY_PRE_ISO_OFF_MASK)
-/*! @} */
-
-/*! @name PSW_OFF_LF_DLY - psw off lf delay control */
-/*! @{ */
-
-#define SRC_XSPR_PSW_OFF_LF_DLY_DLY_PRE_PSW_OFF_LF_MASK (0xFFFFFFFFU)
-#define SRC_XSPR_PSW_OFF_LF_DLY_DLY_PRE_PSW_OFF_LF_SHIFT (0U)
-/*! DLY_PRE_PSW_OFF_LF - Delay from receiving power off lf request to power switch shut off. Locked by LOCK_CFG field. */
-#define SRC_XSPR_PSW_OFF_LF_DLY_DLY_PRE_PSW_OFF_LF(x) (((uint32_t)(((uint32_t)(x)) << SRC_XSPR_PSW_OFF_LF_DLY_DLY_PRE_PSW_OFF_LF_SHIFT)) & SRC_XSPR_PSW_OFF_LF_DLY_DLY_PRE_PSW_OFF_LF_MASK)
-/*! @} */
-
-/*! @name PSW_OFF_HF_DLY - psw off hf delay control */
-/*! @{ */
-
-#define SRC_XSPR_PSW_OFF_HF_DLY_DLY_PRE_PSW_OFF_HF_MASK (0xFFFFFFFFU)
-#define SRC_XSPR_PSW_OFF_HF_DLY_DLY_PRE_PSW_OFF_HF_SHIFT (0U)
-/*! DLY_PRE_PSW_OFF_HF - Delay from receiving power off hf request to power switch shut off. Locked by LOCK_CFG field. */
-#define SRC_XSPR_PSW_OFF_HF_DLY_DLY_PRE_PSW_OFF_HF(x) (((uint32_t)(((uint32_t)(x)) << SRC_XSPR_PSW_OFF_HF_DLY_DLY_PRE_PSW_OFF_HF_SHIFT)) & SRC_XSPR_PSW_OFF_HF_DLY_DLY_PRE_PSW_OFF_HF_MASK)
-/*! @} */
-
-/*! @name PSW_ON_LF_DLY - psw on lf delay control */
-/*! @{ */
-
-#define SRC_XSPR_PSW_ON_LF_DLY_DLY_PRE_PSW_ON_LF_MASK (0xFFFFFFFFU)
-#define SRC_XSPR_PSW_ON_LF_DLY_DLY_PRE_PSW_ON_LF_SHIFT (0U)
-/*! DLY_PRE_PSW_ON_LF - Delay from receiving power on lf request to power switch turns on. Locked by LOCK_CFG field. */
-#define SRC_XSPR_PSW_ON_LF_DLY_DLY_PRE_PSW_ON_LF(x) (((uint32_t)(((uint32_t)(x)) << SRC_XSPR_PSW_ON_LF_DLY_DLY_PRE_PSW_ON_LF_SHIFT)) & SRC_XSPR_PSW_ON_LF_DLY_DLY_PRE_PSW_ON_LF_MASK)
-/*! @} */
-
-/*! @name PSW_ON_HF_DLY - psw on hf delay control */
-/*! @{ */
-
-#define SRC_XSPR_PSW_ON_HF_DLY_DLY_PRE_PSW_ON_HF_MASK (0xFFFFFFFFU)
-#define SRC_XSPR_PSW_ON_HF_DLY_DLY_PRE_PSW_ON_HF_SHIFT (0U)
-/*! DLY_PRE_PSW_ON_HF - Delay from receiving power on lf request to power switch turns on. Locked by LOCK_CFG field. */
-#define SRC_XSPR_PSW_ON_HF_DLY_DLY_PRE_PSW_ON_HF(x) (((uint32_t)(((uint32_t)(x)) << SRC_XSPR_PSW_ON_HF_DLY_DLY_PRE_PSW_ON_HF_SHIFT)) & SRC_XSPR_PSW_ON_HF_DLY_DLY_PRE_PSW_ON_HF_MASK)
-/*! @} */
-
 /*! @name PSW_ACK_CTRL_0 - Power switch acknowledge control */
 /*! @{ */
 
@@ -1005,8 +949,6 @@ typedef struct {
 /*! CNT_MODE - Configure the acknowledge counter working mode. Locked by LOCK_CFG field.
  *  0b00..Not use counter, raise power_on/off done to GPC once get psw ack
  *  0b01..Delay after receiving psw ack, delay cycle number is CNT_CFG
- *  0b10..Ignore psw ack, raise power_on/off done to GPC when counting to CNT_CFG value
- *  0b11..Time out mode, raise power_on/off done to GPC when either psw ack received or counting to CNT_CFG value
  */
 #define SRC_XSPR_PSW_ACK_CTRL_0_CNT_MODE(x)      (((uint32_t)(((uint32_t)(x)) << SRC_XSPR_PSW_ACK_CTRL_0_CNT_MODE_SHIFT)) & SRC_XSPR_PSW_ACK_CTRL_0_CNT_MODE_MASK)
 
@@ -1120,13 +1062,18 @@ typedef struct {
 
 #define SRC_XSPR_FSM_STAT_RST_STAT_MASK          (0xF0U)
 #define SRC_XSPR_FSM_STAT_RST_STAT_SHIFT         (4U)
-/*! RST_STAT - Reset FSM status */
+/*! RST_STAT - Reset FSM status(rst_fsm_state 0-3bit) */
 #define SRC_XSPR_FSM_STAT_RST_STAT(x)            (((uint32_t)(((uint32_t)(x)) << SRC_XSPR_FSM_STAT_RST_STAT_SHIFT)) & SRC_XSPR_FSM_STAT_RST_STAT_MASK)
 
 #define SRC_XSPR_FSM_STAT_ISO_STAT_MASK          (0xF00U)
 #define SRC_XSPR_FSM_STAT_ISO_STAT_SHIFT         (8U)
 /*! ISO_STAT - Isolation FSM status */
 #define SRC_XSPR_FSM_STAT_ISO_STAT(x)            (((uint32_t)(((uint32_t)(x)) << SRC_XSPR_FSM_STAT_ISO_STAT_SHIFT)) & SRC_XSPR_FSM_STAT_ISO_STAT_MASK)
+
+#define SRC_XSPR_FSM_STAT_RST_STAT_4BIT_MASK     (0x8000U)
+#define SRC_XSPR_FSM_STAT_RST_STAT_4BIT_SHIFT    (15U)
+/*! RST_STAT_4BIT - Reset FSM status(rst_fsm_state 4bit) */
+#define SRC_XSPR_FSM_STAT_RST_STAT_4BIT(x)       (((uint32_t)(((uint32_t)(x)) << SRC_XSPR_FSM_STAT_RST_STAT_4BIT_SHIFT)) & SRC_XSPR_FSM_STAT_RST_STAT_4BIT_MASK)
 
 #define SRC_XSPR_FSM_STAT_SSAR_STAT_MASK         (0x70000U)
 #define SRC_XSPR_FSM_STAT_SSAR_STAT_SHIFT        (16U)

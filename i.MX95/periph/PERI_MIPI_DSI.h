@@ -44,13 +44,13 @@
 **                          MIMX9596XVZXN_cm7
 **
 **     Version:             rev. 1.0, 2023-01-10
-**     Build:               b240728
+**     Build:               b250415
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for MIPI_DSI
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -240,15 +240,10 @@ typedef struct {
 #define MIPI_DSI_PWR_UP_shutdownz_MASK           (0x1U)
 #define MIPI_DSI_PWR_UP_shutdownz_SHIFT          (0U)
 /*! shutdownz - This bit configures the controller either to power up or to reset
- *  0b1..Power up the controller
  *  0b0..Reset the controller
+ *  0b1..Power up the controller
  */
 #define MIPI_DSI_PWR_UP_shutdownz(x)             (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_PWR_UP_shutdownz_SHIFT)) & MIPI_DSI_PWR_UP_shutdownz_MASK)
-
-#define MIPI_DSI_PWR_UP_reserved_31_1_MASK       (0xFFFFFFFEU)
-#define MIPI_DSI_PWR_UP_reserved_31_1_SHIFT      (1U)
-/*! reserved_31_1 - Reserved and read as zero */
-#define MIPI_DSI_PWR_UP_reserved_31_1(x)         (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_PWR_UP_reserved_31_1_SHIFT)) & MIPI_DSI_PWR_UP_reserved_31_1_MASK)
 /*! @} */
 
 /*! @name CLKMGR_CFG - Factor for internal dividers */
@@ -263,11 +258,6 @@ typedef struct {
 #define MIPI_DSI_CLKMGR_CFG_to_clk_division_SHIFT (8U)
 /*! to_clk_division - Time out clock division */
 #define MIPI_DSI_CLKMGR_CFG_to_clk_division(x)   (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_CLKMGR_CFG_to_clk_division_SHIFT)) & MIPI_DSI_CLKMGR_CFG_to_clk_division_MASK)
-
-#define MIPI_DSI_CLKMGR_CFG_reserved_31_16_MASK  (0xFFFF0000U)
-#define MIPI_DSI_CLKMGR_CFG_reserved_31_16_SHIFT (16U)
-/*! reserved_31_16 - Reserved and read as zero */
-#define MIPI_DSI_CLKMGR_CFG_reserved_31_16(x)    (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_CLKMGR_CFG_reserved_31_16_SHIFT)) & MIPI_DSI_CLKMGR_CFG_reserved_31_16_MASK)
 /*! @} */
 
 /*! @name DPI_VCID - DPI Virtual Channel ID */
@@ -277,11 +267,6 @@ typedef struct {
 #define MIPI_DSI_DPI_VCID_dpi_vcid_SHIFT         (0U)
 /*! dpi_vcid - This field configures the DPI virtual channel id that is indexed to the Video mode packets */
 #define MIPI_DSI_DPI_VCID_dpi_vcid(x)            (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_DPI_VCID_dpi_vcid_SHIFT)) & MIPI_DSI_DPI_VCID_dpi_vcid_MASK)
-
-#define MIPI_DSI_DPI_VCID_reserved_31_2_MASK     (0xFFFFFFFCU)
-#define MIPI_DSI_DPI_VCID_reserved_31_2_SHIFT    (2U)
-/*! reserved_31_2 - Reserved and read as zero */
-#define MIPI_DSI_DPI_VCID_reserved_31_2(x)       (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_DPI_VCID_reserved_31_2_SHIFT)) & MIPI_DSI_DPI_VCID_reserved_31_2_MASK)
 /*! @} */
 
 /*! @name DPI_COLOR_CODING - DPI color coding */
@@ -309,20 +294,10 @@ typedef struct {
  */
 #define MIPI_DSI_DPI_COLOR_CODING_dpi_color_coding(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_DPI_COLOR_CODING_dpi_color_coding_SHIFT)) & MIPI_DSI_DPI_COLOR_CODING_dpi_color_coding_MASK)
 
-#define MIPI_DSI_DPI_COLOR_CODING_reserved_7_4_MASK (0xF0U)
-#define MIPI_DSI_DPI_COLOR_CODING_reserved_7_4_SHIFT (4U)
-/*! reserved_7_4 - Reserved and read as zero */
-#define MIPI_DSI_DPI_COLOR_CODING_reserved_7_4(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_DPI_COLOR_CODING_reserved_7_4_SHIFT)) & MIPI_DSI_DPI_COLOR_CODING_reserved_7_4_MASK)
-
 #define MIPI_DSI_DPI_COLOR_CODING_loosely18_en_MASK (0x100U)
 #define MIPI_DSI_DPI_COLOR_CODING_loosely18_en_SHIFT (8U)
 /*! loosely18_en - When set to 1, this bit activates loosely packed variant to 18-bit configurations */
 #define MIPI_DSI_DPI_COLOR_CODING_loosely18_en(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_DPI_COLOR_CODING_loosely18_en_SHIFT)) & MIPI_DSI_DPI_COLOR_CODING_loosely18_en_MASK)
-
-#define MIPI_DSI_DPI_COLOR_CODING_reserved_31_9_MASK (0xFFFFFE00U)
-#define MIPI_DSI_DPI_COLOR_CODING_reserved_31_9_SHIFT (9U)
-/*! reserved_31_9 - Reserved and read as zero */
-#define MIPI_DSI_DPI_COLOR_CODING_reserved_31_9(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_DPI_COLOR_CODING_reserved_31_9_SHIFT)) & MIPI_DSI_DPI_COLOR_CODING_reserved_31_9_MASK)
 /*! @} */
 
 /*! @name DPI_CFG_POL - DPI signals polarity */
@@ -352,11 +327,6 @@ typedef struct {
 #define MIPI_DSI_DPI_CFG_POL_colorm_active_low_SHIFT (4U)
 /*! colorm_active_low - When set to 1, this bit configures the color mode pin (dpicolorm) as active low */
 #define MIPI_DSI_DPI_CFG_POL_colorm_active_low(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_DPI_CFG_POL_colorm_active_low_SHIFT)) & MIPI_DSI_DPI_CFG_POL_colorm_active_low_MASK)
-
-#define MIPI_DSI_DPI_CFG_POL_reserved_31_5_MASK  (0xFFFFFFE0U)
-#define MIPI_DSI_DPI_CFG_POL_reserved_31_5_SHIFT (5U)
-/*! reserved_31_5 - Reserved and read as zero */
-#define MIPI_DSI_DPI_CFG_POL_reserved_31_5(x)    (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_DPI_CFG_POL_reserved_31_5_SHIFT)) & MIPI_DSI_DPI_CFG_POL_reserved_31_5_MASK)
 /*! @} */
 
 /*! @name DPI_LP_CMD_TIM - Low Power commands' timing */
@@ -367,20 +337,10 @@ typedef struct {
 /*! invact_lpcmd_time - This field is used for the transmission of commands in low-power mode */
 #define MIPI_DSI_DPI_LP_CMD_TIM_invact_lpcmd_time(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_DPI_LP_CMD_TIM_invact_lpcmd_time_SHIFT)) & MIPI_DSI_DPI_LP_CMD_TIM_invact_lpcmd_time_MASK)
 
-#define MIPI_DSI_DPI_LP_CMD_TIM_reserved_15_8_MASK (0xFF00U)
-#define MIPI_DSI_DPI_LP_CMD_TIM_reserved_15_8_SHIFT (8U)
-/*! reserved_15_8 - Reserved and read as zero */
-#define MIPI_DSI_DPI_LP_CMD_TIM_reserved_15_8(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_DPI_LP_CMD_TIM_reserved_15_8_SHIFT)) & MIPI_DSI_DPI_LP_CMD_TIM_reserved_15_8_MASK)
-
 #define MIPI_DSI_DPI_LP_CMD_TIM_outvact_lpcmd_time_MASK (0xFF0000U)
 #define MIPI_DSI_DPI_LP_CMD_TIM_outvact_lpcmd_time_SHIFT (16U)
 /*! outvact_lpcmd_time - This field is used for the transmission of commands in low-power mode */
 #define MIPI_DSI_DPI_LP_CMD_TIM_outvact_lpcmd_time(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_DPI_LP_CMD_TIM_outvact_lpcmd_time_SHIFT)) & MIPI_DSI_DPI_LP_CMD_TIM_outvact_lpcmd_time_MASK)
-
-#define MIPI_DSI_DPI_LP_CMD_TIM_reserved_31_24_MASK (0xFF000000U)
-#define MIPI_DSI_DPI_LP_CMD_TIM_reserved_31_24_SHIFT (24U)
-/*! reserved_31_24 - Reserved and read as zero */
-#define MIPI_DSI_DPI_LP_CMD_TIM_reserved_31_24(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_DPI_LP_CMD_TIM_reserved_31_24_SHIFT)) & MIPI_DSI_DPI_LP_CMD_TIM_reserved_31_24_MASK)
 /*! @} */
 
 /*! @name PCKHDL_CFG - EoTp, BTA, CRC and ECC Configuration */
@@ -415,11 +375,6 @@ typedef struct {
 #define MIPI_DSI_PCKHDL_CFG_eotp_tx_lp_en_SHIFT  (5U)
 /*! eotp_tx_lp_en - When set to 1, this bit enables the EoTp transmission in low-power */
 #define MIPI_DSI_PCKHDL_CFG_eotp_tx_lp_en(x)     (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_PCKHDL_CFG_eotp_tx_lp_en_SHIFT)) & MIPI_DSI_PCKHDL_CFG_eotp_tx_lp_en_MASK)
-
-#define MIPI_DSI_PCKHDL_CFG_reserved_31_6_MASK   (0xFFFFFFC0U)
-#define MIPI_DSI_PCKHDL_CFG_reserved_31_6_SHIFT  (6U)
-/*! reserved_31_6 - Reserved and read as zero */
-#define MIPI_DSI_PCKHDL_CFG_reserved_31_6(x)     (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_PCKHDL_CFG_reserved_31_6_SHIFT)) & MIPI_DSI_PCKHDL_CFG_reserved_31_6_MASK)
 /*! @} */
 
 /*! @name GEN_VCID - Read responses Virtual Channel ID */
@@ -430,20 +385,10 @@ typedef struct {
 /*! gen_vcid_rx - This field indicates the Generic interface read-back virtual channel identification */
 #define MIPI_DSI_GEN_VCID_gen_vcid_rx(x)         (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_GEN_VCID_gen_vcid_rx_SHIFT)) & MIPI_DSI_GEN_VCID_gen_vcid_rx_MASK)
 
-#define MIPI_DSI_GEN_VCID_reserved_7_2_MASK      (0xFCU)
-#define MIPI_DSI_GEN_VCID_reserved_7_2_SHIFT     (2U)
-/*! reserved_7_2 - Reserved and read as zero */
-#define MIPI_DSI_GEN_VCID_reserved_7_2(x)        (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_GEN_VCID_reserved_7_2_SHIFT)) & MIPI_DSI_GEN_VCID_reserved_7_2_MASK)
-
 #define MIPI_DSI_GEN_VCID_gen_vcid_tear_auto_MASK (0x300U)
 #define MIPI_DSI_GEN_VCID_gen_vcid_tear_auto_SHIFT (8U)
 /*! gen_vcid_tear_auto - This field indicates the virtual channel identification for tear effect by hardware */
 #define MIPI_DSI_GEN_VCID_gen_vcid_tear_auto(x)  (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_GEN_VCID_gen_vcid_tear_auto_SHIFT)) & MIPI_DSI_GEN_VCID_gen_vcid_tear_auto_MASK)
-
-#define MIPI_DSI_GEN_VCID_reserved_15_10_MASK    (0xFC00U)
-#define MIPI_DSI_GEN_VCID_reserved_15_10_SHIFT   (10U)
-/*! reserved_15_10 - Reserved and read as zero */
-#define MIPI_DSI_GEN_VCID_reserved_15_10(x)      (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_GEN_VCID_reserved_15_10_SHIFT)) & MIPI_DSI_GEN_VCID_reserved_15_10_MASK)
 
 #define MIPI_DSI_GEN_VCID_gen_vcid_tx_auto_MASK  (0x30000U)
 #define MIPI_DSI_GEN_VCID_gen_vcid_tx_auto_SHIFT (16U)
@@ -451,11 +396,6 @@ typedef struct {
  *    where generic packet is automatically generated & transmitted
  */
 #define MIPI_DSI_GEN_VCID_gen_vcid_tx_auto(x)    (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_GEN_VCID_gen_vcid_tx_auto_SHIFT)) & MIPI_DSI_GEN_VCID_gen_vcid_tx_auto_MASK)
-
-#define MIPI_DSI_GEN_VCID_reserved_31_18_MASK    (0xFFFC0000U)
-#define MIPI_DSI_GEN_VCID_reserved_31_18_SHIFT   (18U)
-/*! reserved_31_18 - Reserved and read as zero */
-#define MIPI_DSI_GEN_VCID_reserved_31_18(x)      (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_GEN_VCID_reserved_31_18_SHIFT)) & MIPI_DSI_GEN_VCID_reserved_31_18_MASK)
 /*! @} */
 
 /*! @name MODE_CFG - Operation mode */
@@ -464,15 +404,10 @@ typedef struct {
 #define MIPI_DSI_MODE_CFG_cmd_video_mode_MASK    (0x1U)
 #define MIPI_DSI_MODE_CFG_cmd_video_mode_SHIFT   (0U)
 /*! cmd_video_mode - This bit configures the operation mode:
- *  0b1..command mode
  *  0b0..video mode
+ *  0b1..command mode
  */
 #define MIPI_DSI_MODE_CFG_cmd_video_mode(x)      (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_MODE_CFG_cmd_video_mode_SHIFT)) & MIPI_DSI_MODE_CFG_cmd_video_mode_MASK)
-
-#define MIPI_DSI_MODE_CFG_reserved_31_1_MASK     (0xFFFFFFFEU)
-#define MIPI_DSI_MODE_CFG_reserved_31_1_SHIFT    (1U)
-/*! reserved_31_1 - Reserved and read as zero */
-#define MIPI_DSI_MODE_CFG_reserved_31_1(x)       (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_MODE_CFG_reserved_31_1_SHIFT)) & MIPI_DSI_MODE_CFG_reserved_31_1_MASK)
 /*! @} */
 
 /*! @name VID_MODE_CFG - Video mode configuration */
@@ -487,11 +422,6 @@ typedef struct {
  *  0b11..Burst mode
  */
 #define MIPI_DSI_VID_MODE_CFG_vid_mode_type(x)   (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_VID_MODE_CFG_vid_mode_type_SHIFT)) & MIPI_DSI_VID_MODE_CFG_vid_mode_type_MASK)
-
-#define MIPI_DSI_VID_MODE_CFG_reserved_7_2_MASK  (0xFCU)
-#define MIPI_DSI_VID_MODE_CFG_reserved_7_2_SHIFT (2U)
-/*! reserved_7_2 - Reserved and read as zero */
-#define MIPI_DSI_VID_MODE_CFG_reserved_7_2(x)    (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_VID_MODE_CFG_reserved_7_2_SHIFT)) & MIPI_DSI_VID_MODE_CFG_reserved_7_2_MASK)
 
 #define MIPI_DSI_VID_MODE_CFG_lp_vsa_en_MASK     (0x100U)
 #define MIPI_DSI_VID_MODE_CFG_lp_vsa_en_SHIFT    (8U)
@@ -538,23 +468,13 @@ typedef struct {
 /*! vpg_en - When set to 1, this bit enables the video mode pattern generator */
 #define MIPI_DSI_VID_MODE_CFG_vpg_en(x)          (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_VID_MODE_CFG_vpg_en_SHIFT)) & MIPI_DSI_VID_MODE_CFG_vpg_en_MASK)
 
-#define MIPI_DSI_VID_MODE_CFG_reserved_19_17_MASK (0xE0000U)
-#define MIPI_DSI_VID_MODE_CFG_reserved_19_17_SHIFT (17U)
-/*! reserved_19_17 - Reserved and read as zero */
-#define MIPI_DSI_VID_MODE_CFG_reserved_19_17(x)  (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_VID_MODE_CFG_reserved_19_17_SHIFT)) & MIPI_DSI_VID_MODE_CFG_reserved_19_17_MASK)
-
 #define MIPI_DSI_VID_MODE_CFG_vpg_mode_MASK      (0x100000U)
 #define MIPI_DSI_VID_MODE_CFG_vpg_mode_SHIFT     (20U)
 /*! vpg_mode - This field is to select the pattern:
- *  0b1..vertical only
  *  0b0..horizontal or vertical
+ *  0b1..vertical only
  */
 #define MIPI_DSI_VID_MODE_CFG_vpg_mode(x)        (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_VID_MODE_CFG_vpg_mode_SHIFT)) & MIPI_DSI_VID_MODE_CFG_vpg_mode_MASK)
-
-#define MIPI_DSI_VID_MODE_CFG_reserved_23_21_MASK (0xE00000U)
-#define MIPI_DSI_VID_MODE_CFG_reserved_23_21_SHIFT (21U)
-/*! reserved_23_21 - Reserved and read as zero */
-#define MIPI_DSI_VID_MODE_CFG_reserved_23_21(x)  (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_VID_MODE_CFG_reserved_23_21_SHIFT)) & MIPI_DSI_VID_MODE_CFG_reserved_23_21_MASK)
 
 #define MIPI_DSI_VID_MODE_CFG_vpg_orientation_MASK (0x1000000U)
 #define MIPI_DSI_VID_MODE_CFG_vpg_orientation_SHIFT (24U)
@@ -563,11 +483,6 @@ typedef struct {
  *  0b1..Horizontal mode
  */
 #define MIPI_DSI_VID_MODE_CFG_vpg_orientation(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_VID_MODE_CFG_vpg_orientation_SHIFT)) & MIPI_DSI_VID_MODE_CFG_vpg_orientation_MASK)
-
-#define MIPI_DSI_VID_MODE_CFG_reserved_31_25_MASK (0xFE000000U)
-#define MIPI_DSI_VID_MODE_CFG_reserved_31_25_SHIFT (25U)
-/*! reserved_31_25 - Reserved and read as zero */
-#define MIPI_DSI_VID_MODE_CFG_reserved_31_25(x)  (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_VID_MODE_CFG_reserved_31_25_SHIFT)) & MIPI_DSI_VID_MODE_CFG_reserved_31_25_MASK)
 /*! @} */
 
 /*! @name VID_PKT_SIZE - Video Packets size */
@@ -577,11 +492,6 @@ typedef struct {
 #define MIPI_DSI_VID_PKT_SIZE_vid_pkt_size_SHIFT (0U)
 /*! vid_pkt_size - This field configures the number of pixels in a single video packet */
 #define MIPI_DSI_VID_PKT_SIZE_vid_pkt_size(x)    (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_VID_PKT_SIZE_vid_pkt_size_SHIFT)) & MIPI_DSI_VID_PKT_SIZE_vid_pkt_size_MASK)
-
-#define MIPI_DSI_VID_PKT_SIZE_reserved_31_14_MASK (0xFFFFC000U)
-#define MIPI_DSI_VID_PKT_SIZE_reserved_31_14_SHIFT (14U)
-/*! reserved_31_14 - Reserved and read as zero */
-#define MIPI_DSI_VID_PKT_SIZE_reserved_31_14(x)  (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_VID_PKT_SIZE_reserved_31_14_SHIFT)) & MIPI_DSI_VID_PKT_SIZE_reserved_31_14_MASK)
 /*! @} */
 
 /*! @name VID_NUM_CHUNKS - Number of Chunks */
@@ -593,11 +503,6 @@ typedef struct {
  *    period (a chunk is pair made of a video packet and a null packet)
  */
 #define MIPI_DSI_VID_NUM_CHUNKS_vid_num_chunks(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_VID_NUM_CHUNKS_vid_num_chunks_SHIFT)) & MIPI_DSI_VID_NUM_CHUNKS_vid_num_chunks_MASK)
-
-#define MIPI_DSI_VID_NUM_CHUNKS_reserved_31_13_MASK (0xFFFFE000U)
-#define MIPI_DSI_VID_NUM_CHUNKS_reserved_31_13_SHIFT (13U)
-/*! reserved_31_13 - Reserved and read as zero */
-#define MIPI_DSI_VID_NUM_CHUNKS_reserved_31_13(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_VID_NUM_CHUNKS_reserved_31_13_SHIFT)) & MIPI_DSI_VID_NUM_CHUNKS_reserved_31_13_MASK)
 /*! @} */
 
 /*! @name VID_NULL_SIZE - Null Packets size */
@@ -607,11 +512,6 @@ typedef struct {
 #define MIPI_DSI_VID_NULL_SIZE_vid_null_size_SHIFT (0U)
 /*! vid_null_size - This register configures the number of bytes inside a null packet */
 #define MIPI_DSI_VID_NULL_SIZE_vid_null_size(x)  (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_VID_NULL_SIZE_vid_null_size_SHIFT)) & MIPI_DSI_VID_NULL_SIZE_vid_null_size_MASK)
-
-#define MIPI_DSI_VID_NULL_SIZE_reserved_31_13_MASK (0xFFFFE000U)
-#define MIPI_DSI_VID_NULL_SIZE_reserved_31_13_SHIFT (13U)
-/*! reserved_31_13 - Reserved and read as zero */
-#define MIPI_DSI_VID_NULL_SIZE_reserved_31_13(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_VID_NULL_SIZE_reserved_31_13_SHIFT)) & MIPI_DSI_VID_NULL_SIZE_reserved_31_13_MASK)
 /*! @} */
 
 /*! @name VID_HSA_TIME - HSA time */
@@ -621,11 +521,6 @@ typedef struct {
 #define MIPI_DSI_VID_HSA_TIME_vid_hsa_time_SHIFT (0U)
 /*! vid_hsa_time - This field configures the Horizontal Synchronism Active period in lane byte clock cycles */
 #define MIPI_DSI_VID_HSA_TIME_vid_hsa_time(x)    (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_VID_HSA_TIME_vid_hsa_time_SHIFT)) & MIPI_DSI_VID_HSA_TIME_vid_hsa_time_MASK)
-
-#define MIPI_DSI_VID_HSA_TIME_reserved_31_12_MASK (0xFFFFF000U)
-#define MIPI_DSI_VID_HSA_TIME_reserved_31_12_SHIFT (12U)
-/*! reserved_31_12 - Reserved and read as zero */
-#define MIPI_DSI_VID_HSA_TIME_reserved_31_12(x)  (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_VID_HSA_TIME_reserved_31_12_SHIFT)) & MIPI_DSI_VID_HSA_TIME_reserved_31_12_MASK)
 /*! @} */
 
 /*! @name VID_HBP_TIME - HBP time */
@@ -635,11 +530,6 @@ typedef struct {
 #define MIPI_DSI_VID_HBP_TIME_vid_hbp_time_SHIFT (0U)
 /*! vid_hbp_time - This field configures the Horizontal Back Porch period in lane byte clock cycles */
 #define MIPI_DSI_VID_HBP_TIME_vid_hbp_time(x)    (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_VID_HBP_TIME_vid_hbp_time_SHIFT)) & MIPI_DSI_VID_HBP_TIME_vid_hbp_time_MASK)
-
-#define MIPI_DSI_VID_HBP_TIME_reserved_31_12_MASK (0xFFFFF000U)
-#define MIPI_DSI_VID_HBP_TIME_reserved_31_12_SHIFT (12U)
-/*! reserved_31_12 - Reserved and read as zero */
-#define MIPI_DSI_VID_HBP_TIME_reserved_31_12(x)  (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_VID_HBP_TIME_reserved_31_12_SHIFT)) & MIPI_DSI_VID_HBP_TIME_reserved_31_12_MASK)
 /*! @} */
 
 /*! @name VID_HLINE_TIME - Overall video line time */
@@ -649,11 +539,6 @@ typedef struct {
 #define MIPI_DSI_VID_HLINE_TIME_vid_hline_time_SHIFT (0U)
 /*! vid_hline_time - This field configures the size of the total line time (HSA+HBP+HACT+HFP) counted in lane byte clock cycles */
 #define MIPI_DSI_VID_HLINE_TIME_vid_hline_time(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_VID_HLINE_TIME_vid_hline_time_SHIFT)) & MIPI_DSI_VID_HLINE_TIME_vid_hline_time_MASK)
-
-#define MIPI_DSI_VID_HLINE_TIME_reserved_31_15_MASK (0xFFFF8000U)
-#define MIPI_DSI_VID_HLINE_TIME_reserved_31_15_SHIFT (15U)
-/*! reserved_31_15 - Reserved and read as zero */
-#define MIPI_DSI_VID_HLINE_TIME_reserved_31_15(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_VID_HLINE_TIME_reserved_31_15_SHIFT)) & MIPI_DSI_VID_HLINE_TIME_reserved_31_15_MASK)
 /*! @} */
 
 /*! @name VID_VSA_LINES - VSA period */
@@ -663,11 +548,6 @@ typedef struct {
 #define MIPI_DSI_VID_VSA_LINES_vsa_lines_SHIFT   (0U)
 /*! vsa_lines - This field configures the Vertical Synchronism Active period measured in number of horizontal lines */
 #define MIPI_DSI_VID_VSA_LINES_vsa_lines(x)      (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_VID_VSA_LINES_vsa_lines_SHIFT)) & MIPI_DSI_VID_VSA_LINES_vsa_lines_MASK)
-
-#define MIPI_DSI_VID_VSA_LINES_reserved_31_10_MASK (0xFFFFFC00U)
-#define MIPI_DSI_VID_VSA_LINES_reserved_31_10_SHIFT (10U)
-/*! reserved_31_10 - Reserved and read as zero */
-#define MIPI_DSI_VID_VSA_LINES_reserved_31_10(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_VID_VSA_LINES_reserved_31_10_SHIFT)) & MIPI_DSI_VID_VSA_LINES_reserved_31_10_MASK)
 /*! @} */
 
 /*! @name VID_VBP_LINES - VBP period */
@@ -677,11 +557,6 @@ typedef struct {
 #define MIPI_DSI_VID_VBP_LINES_vbp_lines_SHIFT   (0U)
 /*! vbp_lines - This field configures the Vertical Back Porch period measured in number of horizontal lines */
 #define MIPI_DSI_VID_VBP_LINES_vbp_lines(x)      (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_VID_VBP_LINES_vbp_lines_SHIFT)) & MIPI_DSI_VID_VBP_LINES_vbp_lines_MASK)
-
-#define MIPI_DSI_VID_VBP_LINES_reserved_31_10_MASK (0xFFFFFC00U)
-#define MIPI_DSI_VID_VBP_LINES_reserved_31_10_SHIFT (10U)
-/*! reserved_31_10 - Reserved and read as zero */
-#define MIPI_DSI_VID_VBP_LINES_reserved_31_10(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_VID_VBP_LINES_reserved_31_10_SHIFT)) & MIPI_DSI_VID_VBP_LINES_reserved_31_10_MASK)
 /*! @} */
 
 /*! @name VID_VFP_LINES - VFP period */
@@ -691,11 +566,6 @@ typedef struct {
 #define MIPI_DSI_VID_VFP_LINES_vfp_lines_SHIFT   (0U)
 /*! vfp_lines - This field configures the Vertical Front Porch period measured in number of horizontal lines */
 #define MIPI_DSI_VID_VFP_LINES_vfp_lines(x)      (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_VID_VFP_LINES_vfp_lines_SHIFT)) & MIPI_DSI_VID_VFP_LINES_vfp_lines_MASK)
-
-#define MIPI_DSI_VID_VFP_LINES_reserved_31_10_MASK (0xFFFFFC00U)
-#define MIPI_DSI_VID_VFP_LINES_reserved_31_10_SHIFT (10U)
-/*! reserved_31_10 - Reserved and read as zero */
-#define MIPI_DSI_VID_VFP_LINES_reserved_31_10(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_VID_VFP_LINES_reserved_31_10_SHIFT)) & MIPI_DSI_VID_VFP_LINES_reserved_31_10_MASK)
 /*! @} */
 
 /*! @name VID_VACTIVE_LINES - Video vertical resolution */
@@ -705,11 +575,6 @@ typedef struct {
 #define MIPI_DSI_VID_VACTIVE_LINES_v_active_lines_SHIFT (0U)
 /*! v_active_lines - This field configures the Vertical Active period measured in number of horizontal lines */
 #define MIPI_DSI_VID_VACTIVE_LINES_v_active_lines(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_VID_VACTIVE_LINES_v_active_lines_SHIFT)) & MIPI_DSI_VID_VACTIVE_LINES_v_active_lines_MASK)
-
-#define MIPI_DSI_VID_VACTIVE_LINES_reserved_31_14_MASK (0xFFFFC000U)
-#define MIPI_DSI_VID_VACTIVE_LINES_reserved_31_14_SHIFT (14U)
-/*! reserved_31_14 - Reserved and read as zero */
-#define MIPI_DSI_VID_VACTIVE_LINES_reserved_31_14(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_VID_VACTIVE_LINES_reserved_31_14_SHIFT)) & MIPI_DSI_VID_VACTIVE_LINES_reserved_31_14_MASK)
 /*! @} */
 
 /*! @name EDPI_CMD_SIZE - eDPI packets size */
@@ -719,11 +584,6 @@ typedef struct {
 #define MIPI_DSI_EDPI_CMD_SIZE_edpi_allowed_cmd_size_SHIFT (0U)
 /*! edpi_allowed_cmd_size - This field configures the maximum allowed size for an eDPI write memory command, measured in pixels */
 #define MIPI_DSI_EDPI_CMD_SIZE_edpi_allowed_cmd_size(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_EDPI_CMD_SIZE_edpi_allowed_cmd_size_SHIFT)) & MIPI_DSI_EDPI_CMD_SIZE_edpi_allowed_cmd_size_MASK)
-
-#define MIPI_DSI_EDPI_CMD_SIZE_reserved_31_16_MASK (0xFFFF0000U)
-#define MIPI_DSI_EDPI_CMD_SIZE_reserved_31_16_SHIFT (16U)
-/*! reserved_31_16 - Reserved and read as zero */
-#define MIPI_DSI_EDPI_CMD_SIZE_reserved_31_16(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_EDPI_CMD_SIZE_reserved_31_16_SHIFT)) & MIPI_DSI_EDPI_CMD_SIZE_reserved_31_16_MASK)
 /*! @} */
 
 /*! @name CMD_MODE_CFG - Command Mode operation configuration */
@@ -738,11 +598,6 @@ typedef struct {
 #define MIPI_DSI_CMD_MODE_CFG_ack_rqst_en_SHIFT  (1U)
 /*! ack_rqst_en - When set to 1, this bit enables the acknowledge request after each packet transmission */
 #define MIPI_DSI_CMD_MODE_CFG_ack_rqst_en(x)     (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_CMD_MODE_CFG_ack_rqst_en_SHIFT)) & MIPI_DSI_CMD_MODE_CFG_ack_rqst_en_MASK)
-
-#define MIPI_DSI_CMD_MODE_CFG_reserved_7_2_MASK  (0xFCU)
-#define MIPI_DSI_CMD_MODE_CFG_reserved_7_2_SHIFT (2U)
-/*! reserved_7_2 - Reserved and read as zero */
-#define MIPI_DSI_CMD_MODE_CFG_reserved_7_2(x)    (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_CMD_MODE_CFG_reserved_7_2_SHIFT)) & MIPI_DSI_CMD_MODE_CFG_reserved_7_2_MASK)
 
 #define MIPI_DSI_CMD_MODE_CFG_gen_sw_0p_tx_MASK  (0x100U)
 #define MIPI_DSI_CMD_MODE_CFG_gen_sw_0p_tx_SHIFT (8U)
@@ -800,11 +655,6 @@ typedef struct {
  */
 #define MIPI_DSI_CMD_MODE_CFG_gen_lw_tx(x)       (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_CMD_MODE_CFG_gen_lw_tx_SHIFT)) & MIPI_DSI_CMD_MODE_CFG_gen_lw_tx_MASK)
 
-#define MIPI_DSI_CMD_MODE_CFG_reserved_15_MASK   (0x8000U)
-#define MIPI_DSI_CMD_MODE_CFG_reserved_15_SHIFT  (15U)
-/*! reserved_15 - Reserved and read as zero */
-#define MIPI_DSI_CMD_MODE_CFG_reserved_15(x)     (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_CMD_MODE_CFG_reserved_15_SHIFT)) & MIPI_DSI_CMD_MODE_CFG_reserved_15_MASK)
-
 #define MIPI_DSI_CMD_MODE_CFG_dcs_sw_0p_tx_MASK  (0x10000U)
 #define MIPI_DSI_CMD_MODE_CFG_dcs_sw_0p_tx_SHIFT (16U)
 /*! dcs_sw_0p_tx - This bit configures the DCS short write packet with zero parameter command transmission type:
@@ -837,11 +687,6 @@ typedef struct {
  */
 #define MIPI_DSI_CMD_MODE_CFG_dcs_lw_tx(x)       (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_CMD_MODE_CFG_dcs_lw_tx_SHIFT)) & MIPI_DSI_CMD_MODE_CFG_dcs_lw_tx_MASK)
 
-#define MIPI_DSI_CMD_MODE_CFG_reserved_23_20_MASK (0xF00000U)
-#define MIPI_DSI_CMD_MODE_CFG_reserved_23_20_SHIFT (20U)
-/*! reserved_23_20 - Reserved and read as zero */
-#define MIPI_DSI_CMD_MODE_CFG_reserved_23_20(x)  (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_CMD_MODE_CFG_reserved_23_20_SHIFT)) & MIPI_DSI_CMD_MODE_CFG_reserved_23_20_MASK)
-
 #define MIPI_DSI_CMD_MODE_CFG_max_rd_pkt_size_MASK (0x1000000U)
 #define MIPI_DSI_CMD_MODE_CFG_max_rd_pkt_size_SHIFT (24U)
 /*! max_rd_pkt_size - This bit configures the maximum read packet size command transmission type:
@@ -849,11 +694,6 @@ typedef struct {
  *  0b1..Transition type is low-power
  */
 #define MIPI_DSI_CMD_MODE_CFG_max_rd_pkt_size(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_CMD_MODE_CFG_max_rd_pkt_size_SHIFT)) & MIPI_DSI_CMD_MODE_CFG_max_rd_pkt_size_MASK)
-
-#define MIPI_DSI_CMD_MODE_CFG_reserved_31_25_MASK (0xFE000000U)
-#define MIPI_DSI_CMD_MODE_CFG_reserved_31_25_SHIFT (25U)
-/*! reserved_31_25 - Reserved and read as zero */
-#define MIPI_DSI_CMD_MODE_CFG_reserved_31_25(x)  (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_CMD_MODE_CFG_reserved_31_25_SHIFT)) & MIPI_DSI_CMD_MODE_CFG_reserved_31_25_MASK)
 /*! @} */
 
 /*! @name GEN_HDR - Generic Interface Packet Header */
@@ -882,11 +722,6 @@ typedef struct {
  *    count for long packets or data 1 for short packets
  */
 #define MIPI_DSI_GEN_HDR_gen_wc_msbyte(x)        (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_GEN_HDR_gen_wc_msbyte_SHIFT)) & MIPI_DSI_GEN_HDR_gen_wc_msbyte_MASK)
-
-#define MIPI_DSI_GEN_HDR_reserved_31_24_MASK     (0xFF000000U)
-#define MIPI_DSI_GEN_HDR_reserved_31_24_SHIFT    (24U)
-/*! reserved_31_24 - Reserved and read as zero */
-#define MIPI_DSI_GEN_HDR_reserved_31_24(x)       (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_GEN_HDR_reserved_31_24_SHIFT)) & MIPI_DSI_GEN_HDR_reserved_31_24_MASK)
 /*! @} */
 
 /*! @name GEN_PLD_DATA - Generic Interface Packets Payload */
@@ -953,51 +788,6 @@ typedef struct {
  */
 #define MIPI_DSI_CMD_PKT_STATUS_gen_rd_cmd_busy(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_CMD_PKT_STATUS_gen_rd_cmd_busy_SHIFT)) & MIPI_DSI_CMD_PKT_STATUS_gen_rd_cmd_busy_MASK)
 
-#define MIPI_DSI_CMD_PKT_STATUS_reserved_7_MASK  (0x80U)
-#define MIPI_DSI_CMD_PKT_STATUS_reserved_7_SHIFT (7U)
-/*! reserved_7 - Reserved and read as zero */
-#define MIPI_DSI_CMD_PKT_STATUS_reserved_7(x)    (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_CMD_PKT_STATUS_reserved_7_SHIFT)) & MIPI_DSI_CMD_PKT_STATUS_reserved_7_MASK)
-
-#define MIPI_DSI_CMD_PKT_STATUS_reserved_8_MASK  (0x100U)
-#define MIPI_DSI_CMD_PKT_STATUS_reserved_8_SHIFT (8U)
-/*! reserved_8 - Reserved and read as zero */
-#define MIPI_DSI_CMD_PKT_STATUS_reserved_8(x)    (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_CMD_PKT_STATUS_reserved_8_SHIFT)) & MIPI_DSI_CMD_PKT_STATUS_reserved_8_MASK)
-
-#define MIPI_DSI_CMD_PKT_STATUS_reserved_9_MASK  (0x200U)
-#define MIPI_DSI_CMD_PKT_STATUS_reserved_9_SHIFT (9U)
-/*! reserved_9 - Reserved and read as zero */
-#define MIPI_DSI_CMD_PKT_STATUS_reserved_9(x)    (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_CMD_PKT_STATUS_reserved_9_SHIFT)) & MIPI_DSI_CMD_PKT_STATUS_reserved_9_MASK)
-
-#define MIPI_DSI_CMD_PKT_STATUS_reserved_10_MASK (0x400U)
-#define MIPI_DSI_CMD_PKT_STATUS_reserved_10_SHIFT (10U)
-/*! reserved_10 - Reserved and read as zero */
-#define MIPI_DSI_CMD_PKT_STATUS_reserved_10(x)   (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_CMD_PKT_STATUS_reserved_10_SHIFT)) & MIPI_DSI_CMD_PKT_STATUS_reserved_10_MASK)
-
-#define MIPI_DSI_CMD_PKT_STATUS_reserved_11_MASK (0x800U)
-#define MIPI_DSI_CMD_PKT_STATUS_reserved_11_SHIFT (11U)
-/*! reserved_11 - Reserved and read as zero */
-#define MIPI_DSI_CMD_PKT_STATUS_reserved_11(x)   (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_CMD_PKT_STATUS_reserved_11_SHIFT)) & MIPI_DSI_CMD_PKT_STATUS_reserved_11_MASK)
-
-#define MIPI_DSI_CMD_PKT_STATUS_reserved_12_MASK (0x1000U)
-#define MIPI_DSI_CMD_PKT_STATUS_reserved_12_SHIFT (12U)
-/*! reserved_12 - Reserved and read as zero */
-#define MIPI_DSI_CMD_PKT_STATUS_reserved_12(x)   (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_CMD_PKT_STATUS_reserved_12_SHIFT)) & MIPI_DSI_CMD_PKT_STATUS_reserved_12_MASK)
-
-#define MIPI_DSI_CMD_PKT_STATUS_reserved_13_MASK (0x2000U)
-#define MIPI_DSI_CMD_PKT_STATUS_reserved_13_SHIFT (13U)
-/*! reserved_13 - Reserved and read as zero */
-#define MIPI_DSI_CMD_PKT_STATUS_reserved_13(x)   (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_CMD_PKT_STATUS_reserved_13_SHIFT)) & MIPI_DSI_CMD_PKT_STATUS_reserved_13_MASK)
-
-#define MIPI_DSI_CMD_PKT_STATUS_reserved_14_MASK (0x4000U)
-#define MIPI_DSI_CMD_PKT_STATUS_reserved_14_SHIFT (14U)
-/*! reserved_14 - Reserved and read as zero */
-#define MIPI_DSI_CMD_PKT_STATUS_reserved_14(x)   (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_CMD_PKT_STATUS_reserved_14_SHIFT)) & MIPI_DSI_CMD_PKT_STATUS_reserved_14_MASK)
-
-#define MIPI_DSI_CMD_PKT_STATUS_reserved_15_MASK (0x8000U)
-#define MIPI_DSI_CMD_PKT_STATUS_reserved_15_SHIFT (15U)
-/*! reserved_15 - Reserved and read as zero */
-#define MIPI_DSI_CMD_PKT_STATUS_reserved_15(x)   (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_CMD_PKT_STATUS_reserved_15_SHIFT)) & MIPI_DSI_CMD_PKT_STATUS_reserved_15_MASK)
-
 #define MIPI_DSI_CMD_PKT_STATUS_gen_buff_cmd_empty_MASK (0x10000U)
 #define MIPI_DSI_CMD_PKT_STATUS_gen_buff_cmd_empty_SHIFT (16U)
 /*! gen_buff_cmd_empty - This bit indicates the empty status of the generic command internal buffer */
@@ -1017,36 +807,6 @@ typedef struct {
 #define MIPI_DSI_CMD_PKT_STATUS_gen_buff_pld_full_SHIFT (19U)
 /*! gen_buff_pld_full - This bit indicates the full status of the generic payload internal buffer */
 #define MIPI_DSI_CMD_PKT_STATUS_gen_buff_pld_full(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_CMD_PKT_STATUS_gen_buff_pld_full_SHIFT)) & MIPI_DSI_CMD_PKT_STATUS_gen_buff_pld_full_MASK)
-
-#define MIPI_DSI_CMD_PKT_STATUS_reserved_23_20_MASK (0xF00000U)
-#define MIPI_DSI_CMD_PKT_STATUS_reserved_23_20_SHIFT (20U)
-/*! reserved_23_20 - Reserved and read as zero */
-#define MIPI_DSI_CMD_PKT_STATUS_reserved_23_20(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_CMD_PKT_STATUS_reserved_23_20_SHIFT)) & MIPI_DSI_CMD_PKT_STATUS_reserved_23_20_MASK)
-
-#define MIPI_DSI_CMD_PKT_STATUS_reserved_24_MASK (0x1000000U)
-#define MIPI_DSI_CMD_PKT_STATUS_reserved_24_SHIFT (24U)
-/*! reserved_24 - Reserved and read as zero */
-#define MIPI_DSI_CMD_PKT_STATUS_reserved_24(x)   (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_CMD_PKT_STATUS_reserved_24_SHIFT)) & MIPI_DSI_CMD_PKT_STATUS_reserved_24_MASK)
-
-#define MIPI_DSI_CMD_PKT_STATUS_reserved_25_MASK (0x2000000U)
-#define MIPI_DSI_CMD_PKT_STATUS_reserved_25_SHIFT (25U)
-/*! reserved_25 - Reserved and read as zero */
-#define MIPI_DSI_CMD_PKT_STATUS_reserved_25(x)   (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_CMD_PKT_STATUS_reserved_25_SHIFT)) & MIPI_DSI_CMD_PKT_STATUS_reserved_25_MASK)
-
-#define MIPI_DSI_CMD_PKT_STATUS_reserved_26_MASK (0x4000000U)
-#define MIPI_DSI_CMD_PKT_STATUS_reserved_26_SHIFT (26U)
-/*! reserved_26 - Reserved and read as zero */
-#define MIPI_DSI_CMD_PKT_STATUS_reserved_26(x)   (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_CMD_PKT_STATUS_reserved_26_SHIFT)) & MIPI_DSI_CMD_PKT_STATUS_reserved_26_MASK)
-
-#define MIPI_DSI_CMD_PKT_STATUS_reserved_27_MASK (0x8000000U)
-#define MIPI_DSI_CMD_PKT_STATUS_reserved_27_SHIFT (27U)
-/*! reserved_27 - Reserved and read as zero */
-#define MIPI_DSI_CMD_PKT_STATUS_reserved_27(x)   (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_CMD_PKT_STATUS_reserved_27_SHIFT)) & MIPI_DSI_CMD_PKT_STATUS_reserved_27_MASK)
-
-#define MIPI_DSI_CMD_PKT_STATUS_reserved_31_28_MASK (0xF0000000U)
-#define MIPI_DSI_CMD_PKT_STATUS_reserved_31_28_SHIFT (28U)
-/*! reserved_31_28 - Reserved and read as zero */
-#define MIPI_DSI_CMD_PKT_STATUS_reserved_31_28(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_CMD_PKT_STATUS_reserved_31_28_SHIFT)) & MIPI_DSI_CMD_PKT_STATUS_reserved_31_28_MASK)
 /*! @} */
 
 /*! @name TO_CNT_CFG - Timeout Trigger Configuration */
@@ -1074,11 +834,6 @@ typedef struct {
 #define MIPI_DSI_HS_RD_TO_CNT_hs_rd_to_cnt_SHIFT (0U)
 /*! hs_rd_to_cnt - This field sets a period for which MIPI DSI host keeps the link still, after sending a high-speed Read operation */
 #define MIPI_DSI_HS_RD_TO_CNT_hs_rd_to_cnt(x)    (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_HS_RD_TO_CNT_hs_rd_to_cnt_SHIFT)) & MIPI_DSI_HS_RD_TO_CNT_hs_rd_to_cnt_MASK)
-
-#define MIPI_DSI_HS_RD_TO_CNT_reserved_31_16_MASK (0xFFFF0000U)
-#define MIPI_DSI_HS_RD_TO_CNT_reserved_31_16_SHIFT (16U)
-/*! reserved_31_16 - Reserved and read as zero */
-#define MIPI_DSI_HS_RD_TO_CNT_reserved_31_16(x)  (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_HS_RD_TO_CNT_reserved_31_16_SHIFT)) & MIPI_DSI_HS_RD_TO_CNT_reserved_31_16_MASK)
 /*! @} */
 
 /*! @name LP_RD_TO_CNT - Peripheral timeout after LP read operations */
@@ -1088,11 +843,6 @@ typedef struct {
 #define MIPI_DSI_LP_RD_TO_CNT_lp_rd_to_cnt_SHIFT (0U)
 /*! lp_rd_to_cnt - This field sets a period for which MIPI DSI host keeps the link still, after sending a low-power Read operation */
 #define MIPI_DSI_LP_RD_TO_CNT_lp_rd_to_cnt(x)    (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_LP_RD_TO_CNT_lp_rd_to_cnt_SHIFT)) & MIPI_DSI_LP_RD_TO_CNT_lp_rd_to_cnt_MASK)
-
-#define MIPI_DSI_LP_RD_TO_CNT_reserved_31_16_MASK (0xFFFF0000U)
-#define MIPI_DSI_LP_RD_TO_CNT_reserved_31_16_SHIFT (16U)
-/*! reserved_31_16 - Reserved and read as zero */
-#define MIPI_DSI_LP_RD_TO_CNT_reserved_31_16(x)  (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_LP_RD_TO_CNT_reserved_31_16_SHIFT)) & MIPI_DSI_LP_RD_TO_CNT_reserved_31_16_MASK)
 /*! @} */
 
 /*! @name HS_WR_TO_CNT - Peripheral timeout after HS write operations */
@@ -1103,20 +853,10 @@ typedef struct {
 /*! hs_wr_to_cnt - This field sets a period for which MIPI DSI host keeps the link still, after sending a high-speed Write operation */
 #define MIPI_DSI_HS_WR_TO_CNT_hs_wr_to_cnt(x)    (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_HS_WR_TO_CNT_hs_wr_to_cnt_SHIFT)) & MIPI_DSI_HS_WR_TO_CNT_hs_wr_to_cnt_MASK)
 
-#define MIPI_DSI_HS_WR_TO_CNT_reserved_23_16_MASK (0xFF0000U)
-#define MIPI_DSI_HS_WR_TO_CNT_reserved_23_16_SHIFT (16U)
-/*! reserved_23_16 - Reserved and read as zero */
-#define MIPI_DSI_HS_WR_TO_CNT_reserved_23_16(x)  (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_HS_WR_TO_CNT_reserved_23_16_SHIFT)) & MIPI_DSI_HS_WR_TO_CNT_reserved_23_16_MASK)
-
 #define MIPI_DSI_HS_WR_TO_CNT_presp_to_mode_MASK (0x1000000U)
 #define MIPI_DSI_HS_WR_TO_CNT_presp_to_mode_SHIFT (24U)
 /*! presp_to_mode - presp_to_mode */
 #define MIPI_DSI_HS_WR_TO_CNT_presp_to_mode(x)   (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_HS_WR_TO_CNT_presp_to_mode_SHIFT)) & MIPI_DSI_HS_WR_TO_CNT_presp_to_mode_MASK)
-
-#define MIPI_DSI_HS_WR_TO_CNT_reserved_31_25_MASK (0xFE000000U)
-#define MIPI_DSI_HS_WR_TO_CNT_reserved_31_25_SHIFT (25U)
-/*! reserved_31_25 - Reserved and read as zero */
-#define MIPI_DSI_HS_WR_TO_CNT_reserved_31_25(x)  (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_HS_WR_TO_CNT_reserved_31_25_SHIFT)) & MIPI_DSI_HS_WR_TO_CNT_reserved_31_25_MASK)
 /*! @} */
 
 /*! @name LP_WR_TO_CNT - Peripheral timeout after LP write operations */
@@ -1126,11 +866,6 @@ typedef struct {
 #define MIPI_DSI_LP_WR_TO_CNT_lp_wr_to_cnt_SHIFT (0U)
 /*! lp_wr_to_cnt - This field sets a period for which MIPI DSI host keeps the link still, after sending a low-power Write operation */
 #define MIPI_DSI_LP_WR_TO_CNT_lp_wr_to_cnt(x)    (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_LP_WR_TO_CNT_lp_wr_to_cnt_SHIFT)) & MIPI_DSI_LP_WR_TO_CNT_lp_wr_to_cnt_MASK)
-
-#define MIPI_DSI_LP_WR_TO_CNT_reserved_31_16_MASK (0xFFFF0000U)
-#define MIPI_DSI_LP_WR_TO_CNT_reserved_31_16_SHIFT (16U)
-/*! reserved_31_16 - Reserved and read as zero */
-#define MIPI_DSI_LP_WR_TO_CNT_reserved_31_16(x)  (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_LP_WR_TO_CNT_reserved_31_16_SHIFT)) & MIPI_DSI_LP_WR_TO_CNT_reserved_31_16_MASK)
 /*! @} */
 
 /*! @name BTA_TO_CNT - Peripheral timeout after BTA completion */
@@ -1140,11 +875,6 @@ typedef struct {
 #define MIPI_DSI_BTA_TO_CNT_bta_to_cnt_SHIFT     (0U)
 /*! bta_to_cnt - This field sets a period for which MIPI DSI host keeps the link still, after completing a Bus Turnaround */
 #define MIPI_DSI_BTA_TO_CNT_bta_to_cnt(x)        (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_BTA_TO_CNT_bta_to_cnt_SHIFT)) & MIPI_DSI_BTA_TO_CNT_bta_to_cnt_MASK)
-
-#define MIPI_DSI_BTA_TO_CNT_reserved_31_16_MASK  (0xFFFF0000U)
-#define MIPI_DSI_BTA_TO_CNT_reserved_31_16_SHIFT (16U)
-/*! reserved_31_16 - Reserved and read as zero */
-#define MIPI_DSI_BTA_TO_CNT_reserved_31_16(x)    (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_BTA_TO_CNT_reserved_31_16_SHIFT)) & MIPI_DSI_BTA_TO_CNT_reserved_31_16_MASK)
 /*! @} */
 
 /*! @name SDF_3D - 3D information for VSS packets */
@@ -1163,8 +893,8 @@ typedef struct {
 #define MIPI_DSI_SDF_3D_format_3d_MASK           (0xCU)
 #define MIPI_DSI_SDF_3D_format_3d_SHIFT          (2U)
 /*! format_3d - This field defines 3D Image Format:
- *  0b01..Alternating frames of left and right data
  *  0b00..Alternating lines of left and right data
+ *  0b01..Alternating frames of left and right data
  *  0b10..Alternating pixels of left and right data
  *  0b11..Reserved, not used
  */
@@ -1187,20 +917,10 @@ typedef struct {
  */
 #define MIPI_DSI_SDF_3D_right_first(x)           (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_SDF_3D_right_first_SHIFT)) & MIPI_DSI_SDF_3D_right_first_MASK)
 
-#define MIPI_DSI_SDF_3D_reserved_15_6_MASK       (0xFFC0U)
-#define MIPI_DSI_SDF_3D_reserved_15_6_SHIFT      (6U)
-/*! reserved_15_6 - Reserved and read as zero */
-#define MIPI_DSI_SDF_3D_reserved_15_6(x)         (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_SDF_3D_reserved_15_6_SHIFT)) & MIPI_DSI_SDF_3D_reserved_15_6_MASK)
-
 #define MIPI_DSI_SDF_3D_send_3d_cfg_MASK         (0x10000U)
 #define MIPI_DSI_SDF_3D_send_3d_cfg_SHIFT        (16U)
 /*! send_3d_cfg - When set, causes the next VSS packet to include 3D control payload in every VSS packet */
 #define MIPI_DSI_SDF_3D_send_3d_cfg(x)           (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_SDF_3D_send_3d_cfg_SHIFT)) & MIPI_DSI_SDF_3D_send_3d_cfg_MASK)
-
-#define MIPI_DSI_SDF_3D_reserved_31_17_MASK      (0xFFFE0000U)
-#define MIPI_DSI_SDF_3D_reserved_31_17_SHIFT     (17U)
-/*! reserved_31_17 - Reserved and read as zero */
-#define MIPI_DSI_SDF_3D_reserved_31_17(x)        (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_SDF_3D_reserved_31_17_SHIFT)) & MIPI_DSI_SDF_3D_reserved_31_17_MASK)
 /*! @} */
 
 /*! @name LPCLK_CTRL - Non-continuous Clock configuration */
@@ -1215,11 +935,6 @@ typedef struct {
 #define MIPI_DSI_LPCLK_CTRL_auto_clklane_ctrl_SHIFT (1U)
 /*! auto_clklane_ctrl - This bit enables the automatic mechanism to stop providing clock in the clock lane when time allows */
 #define MIPI_DSI_LPCLK_CTRL_auto_clklane_ctrl(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_LPCLK_CTRL_auto_clklane_ctrl_SHIFT)) & MIPI_DSI_LPCLK_CTRL_auto_clklane_ctrl_MASK)
-
-#define MIPI_DSI_LPCLK_CTRL_reserved_31_2_MASK   (0xFFFFFFFCU)
-#define MIPI_DSI_LPCLK_CTRL_reserved_31_2_SHIFT  (2U)
-/*! reserved_31_2 - Reserved and read as zero */
-#define MIPI_DSI_LPCLK_CTRL_reserved_31_2(x)     (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_LPCLK_CTRL_reserved_31_2_SHIFT)) & MIPI_DSI_LPCLK_CTRL_reserved_31_2_MASK)
 /*! @} */
 
 /*! @name PHY_TMR_LPCLK_CFG - Time configuration for (clock lane) transitions between HS and LP */
@@ -1230,20 +945,10 @@ typedef struct {
 /*! phy_clklp2hs_time - Low-Power to High speed transmission time for D-PHY clock lane */
 #define MIPI_DSI_PHY_TMR_LPCLK_CFG_phy_clklp2hs_time(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_PHY_TMR_LPCLK_CFG_phy_clklp2hs_time_SHIFT)) & MIPI_DSI_PHY_TMR_LPCLK_CFG_phy_clklp2hs_time_MASK)
 
-#define MIPI_DSI_PHY_TMR_LPCLK_CFG_reserved_15_10_MASK (0xFC00U)
-#define MIPI_DSI_PHY_TMR_LPCLK_CFG_reserved_15_10_SHIFT (10U)
-/*! reserved_15_10 - Reserved and read as zero */
-#define MIPI_DSI_PHY_TMR_LPCLK_CFG_reserved_15_10(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_PHY_TMR_LPCLK_CFG_reserved_15_10_SHIFT)) & MIPI_DSI_PHY_TMR_LPCLK_CFG_reserved_15_10_MASK)
-
 #define MIPI_DSI_PHY_TMR_LPCLK_CFG_phy_clkhs2lp_time_MASK (0x3FF0000U)
 #define MIPI_DSI_PHY_TMR_LPCLK_CFG_phy_clkhs2lp_time_SHIFT (16U)
 /*! phy_clkhs2lp_time - High speed to low-power transmission time for D-PHY clock lane */
 #define MIPI_DSI_PHY_TMR_LPCLK_CFG_phy_clkhs2lp_time(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_PHY_TMR_LPCLK_CFG_phy_clkhs2lp_time_SHIFT)) & MIPI_DSI_PHY_TMR_LPCLK_CFG_phy_clkhs2lp_time_MASK)
-
-#define MIPI_DSI_PHY_TMR_LPCLK_CFG_reserved_31_26_MASK (0xFC000000U)
-#define MIPI_DSI_PHY_TMR_LPCLK_CFG_reserved_31_26_SHIFT (26U)
-/*! reserved_31_26 - Reserved and read as zero */
-#define MIPI_DSI_PHY_TMR_LPCLK_CFG_reserved_31_26(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_PHY_TMR_LPCLK_CFG_reserved_31_26_SHIFT)) & MIPI_DSI_PHY_TMR_LPCLK_CFG_reserved_31_26_MASK)
 /*! @} */
 
 /*! @name PHY_TMR_CFG - Time configuration for (data lanes) transitions between HS and LP */
@@ -1254,20 +959,10 @@ typedef struct {
 /*! phy_lp2hs_time - Low-power to high-speed transmission time for D-PHY data lanes */
 #define MIPI_DSI_PHY_TMR_CFG_phy_lp2hs_time(x)   (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_PHY_TMR_CFG_phy_lp2hs_time_SHIFT)) & MIPI_DSI_PHY_TMR_CFG_phy_lp2hs_time_MASK)
 
-#define MIPI_DSI_PHY_TMR_CFG_reserved_15_10_MASK (0xFC00U)
-#define MIPI_DSI_PHY_TMR_CFG_reserved_15_10_SHIFT (10U)
-/*! reserved_15_10 - Reserved and read as zero */
-#define MIPI_DSI_PHY_TMR_CFG_reserved_15_10(x)   (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_PHY_TMR_CFG_reserved_15_10_SHIFT)) & MIPI_DSI_PHY_TMR_CFG_reserved_15_10_MASK)
-
 #define MIPI_DSI_PHY_TMR_CFG_phy_hs2lp_time_MASK (0x3FF0000U)
 #define MIPI_DSI_PHY_TMR_CFG_phy_hs2lp_time_SHIFT (16U)
 /*! phy_hs2lp_time - High-speed to low-power transmission time for D-PHY data lanes */
 #define MIPI_DSI_PHY_TMR_CFG_phy_hs2lp_time(x)   (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_PHY_TMR_CFG_phy_hs2lp_time_SHIFT)) & MIPI_DSI_PHY_TMR_CFG_phy_hs2lp_time_MASK)
-
-#define MIPI_DSI_PHY_TMR_CFG_reserved_31_26_MASK (0xFC000000U)
-#define MIPI_DSI_PHY_TMR_CFG_reserved_31_26_SHIFT (26U)
-/*! reserved_31_26 - Reserved and read as zero */
-#define MIPI_DSI_PHY_TMR_CFG_reserved_31_26(x)   (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_PHY_TMR_CFG_reserved_31_26_SHIFT)) & MIPI_DSI_PHY_TMR_CFG_reserved_31_26_MASK)
 /*! @} */
 
 /*! @name PHY_RSTZ - D-PHY's PLL and Resets */
@@ -1292,11 +987,6 @@ typedef struct {
 #define MIPI_DSI_PHY_RSTZ_phy_forcepll_SHIFT     (3U)
 /*! phy_forcepll - When the D-PHY is in ULPS, this bit enables the D-PHY PLL */
 #define MIPI_DSI_PHY_RSTZ_phy_forcepll(x)        (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_PHY_RSTZ_phy_forcepll_SHIFT)) & MIPI_DSI_PHY_RSTZ_phy_forcepll_MASK)
-
-#define MIPI_DSI_PHY_RSTZ_reserved_31_4_MASK     (0xFFFFFFF0U)
-#define MIPI_DSI_PHY_RSTZ_reserved_31_4_SHIFT    (4U)
-/*! reserved_31_4 - Reserved and read as zero */
-#define MIPI_DSI_PHY_RSTZ_reserved_31_4(x)       (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_PHY_RSTZ_reserved_31_4_SHIFT)) & MIPI_DSI_PHY_RSTZ_reserved_31_4_MASK)
 /*! @} */
 
 /*! @name PHY_IF_CFG - Active lanes and Stop State minimum time in Stop State */
@@ -1305,27 +995,17 @@ typedef struct {
 #define MIPI_DSI_PHY_IF_CFG_n_lanes_MASK         (0x3U)
 #define MIPI_DSI_PHY_IF_CFG_n_lanes_SHIFT        (0U)
 /*! n_lanes - This field configures the number of active data lanes:
- *  0b11..lanes 0, 1, 2, and 3
  *  0b00..lane 0
- *  0b10..lanes 0, 1, and 2
  *  0b01..lanes 0 and 1
+ *  0b10..lanes 0, 1, and 2
+ *  0b11..lanes 0, 1, 2, and 3
  */
 #define MIPI_DSI_PHY_IF_CFG_n_lanes(x)           (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_PHY_IF_CFG_n_lanes_SHIFT)) & MIPI_DSI_PHY_IF_CFG_n_lanes_MASK)
-
-#define MIPI_DSI_PHY_IF_CFG_reserved_7_2_MASK    (0xFCU)
-#define MIPI_DSI_PHY_IF_CFG_reserved_7_2_SHIFT   (2U)
-/*! reserved_7_2 - Reserved and read as zero */
-#define MIPI_DSI_PHY_IF_CFG_reserved_7_2(x)      (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_PHY_IF_CFG_reserved_7_2_SHIFT)) & MIPI_DSI_PHY_IF_CFG_reserved_7_2_MASK)
 
 #define MIPI_DSI_PHY_IF_CFG_phy_stop_wait_time_MASK (0xFF00U)
 #define MIPI_DSI_PHY_IF_CFG_phy_stop_wait_time_SHIFT (8U)
 /*! phy_stop_wait_time - This field configures the minimum time PHY needs to stay in StopState before requesting an high-speed transmission */
 #define MIPI_DSI_PHY_IF_CFG_phy_stop_wait_time(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_PHY_IF_CFG_phy_stop_wait_time_SHIFT)) & MIPI_DSI_PHY_IF_CFG_phy_stop_wait_time_MASK)
-
-#define MIPI_DSI_PHY_IF_CFG_reserved_31_16_MASK  (0xFFFF0000U)
-#define MIPI_DSI_PHY_IF_CFG_reserved_31_16_SHIFT (16U)
-/*! reserved_31_16 - Reserved and read as zero */
-#define MIPI_DSI_PHY_IF_CFG_reserved_31_16(x)    (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_PHY_IF_CFG_reserved_31_16_SHIFT)) & MIPI_DSI_PHY_IF_CFG_reserved_31_16_MASK)
 /*! @} */
 
 /*! @name PHY_ULPS_CTRL - Transitions from and to ULPS, using D-PHY */
@@ -1350,11 +1030,6 @@ typedef struct {
 #define MIPI_DSI_PHY_ULPS_CTRL_phy_txexitulpslan_SHIFT (3U)
 /*! phy_txexitulpslan - ULPS mode Exit on all active data lanes */
 #define MIPI_DSI_PHY_ULPS_CTRL_phy_txexitulpslan(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_PHY_ULPS_CTRL_phy_txexitulpslan_SHIFT)) & MIPI_DSI_PHY_ULPS_CTRL_phy_txexitulpslan_MASK)
-
-#define MIPI_DSI_PHY_ULPS_CTRL_reserved_31_4_MASK (0xFFFFFFF0U)
-#define MIPI_DSI_PHY_ULPS_CTRL_reserved_31_4_SHIFT (4U)
-/*! reserved_31_4 - Reserved and read as zero */
-#define MIPI_DSI_PHY_ULPS_CTRL_reserved_31_4(x)  (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_PHY_ULPS_CTRL_reserved_31_4_SHIFT)) & MIPI_DSI_PHY_ULPS_CTRL_reserved_31_4_MASK)
 /*! @} */
 
 /*! @name PHY_TX_TRIGGERS - Pins related to D-PHY triggers */
@@ -1364,11 +1039,6 @@ typedef struct {
 #define MIPI_DSI_PHY_TX_TRIGGERS_phy_tx_triggers_SHIFT (0U)
 /*! phy_tx_triggers - This field controls the trigger transmissions */
 #define MIPI_DSI_PHY_TX_TRIGGERS_phy_tx_triggers(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_PHY_TX_TRIGGERS_phy_tx_triggers_SHIFT)) & MIPI_DSI_PHY_TX_TRIGGERS_phy_tx_triggers_MASK)
-
-#define MIPI_DSI_PHY_TX_TRIGGERS_reserved_31_4_MASK (0xFFFFFFF0U)
-#define MIPI_DSI_PHY_TX_TRIGGERS_reserved_31_4_SHIFT (4U)
-/*! reserved_31_4 - Reserved and read as zero */
-#define MIPI_DSI_PHY_TX_TRIGGERS_reserved_31_4(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_PHY_TX_TRIGGERS_reserved_31_4_SHIFT)) & MIPI_DSI_PHY_TX_TRIGGERS_reserved_31_4_MASK)
 /*! @} */
 
 /*! @name PHY_STATUS - D-PHY Status */
@@ -1438,11 +1108,6 @@ typedef struct {
 #define MIPI_DSI_PHY_STATUS_phy_ulpsactivenot3lane_SHIFT (12U)
 /*! phy_ulpsactivenot3lane - This bit indicates the status of ulpsactivenot3lane D-PHY signal */
 #define MIPI_DSI_PHY_STATUS_phy_ulpsactivenot3lane(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_PHY_STATUS_phy_ulpsactivenot3lane_SHIFT)) & MIPI_DSI_PHY_STATUS_phy_ulpsactivenot3lane_MASK)
-
-#define MIPI_DSI_PHY_STATUS_reserved_31_13_MASK  (0xFFFFE000U)
-#define MIPI_DSI_PHY_STATUS_reserved_31_13_SHIFT (13U)
-/*! reserved_31_13 - Reserved and read as zero */
-#define MIPI_DSI_PHY_STATUS_reserved_31_13(x)    (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_PHY_STATUS_reserved_31_13_SHIFT)) & MIPI_DSI_PHY_STATUS_reserved_31_13_MASK)
 /*! @} */
 
 /*! @name PHY_TST_CTRL0 - D-PHY control and clear pins */
@@ -1457,11 +1122,6 @@ typedef struct {
 #define MIPI_DSI_PHY_TST_CTRL0_phy_testclk_SHIFT (1U)
 /*! phy_testclk - This bit is used to clock the TX TESTDIN bus into the D-PHY */
 #define MIPI_DSI_PHY_TST_CTRL0_phy_testclk(x)    (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_PHY_TST_CTRL0_phy_testclk_SHIFT)) & MIPI_DSI_PHY_TST_CTRL0_phy_testclk_MASK)
-
-#define MIPI_DSI_PHY_TST_CTRL0_reserved_31_2_MASK (0xFFFFFFFCU)
-#define MIPI_DSI_PHY_TST_CTRL0_reserved_31_2_SHIFT (2U)
-/*! reserved_31_2 - Reserved and read as zero */
-#define MIPI_DSI_PHY_TST_CTRL0_reserved_31_2(x)  (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_PHY_TST_CTRL0_reserved_31_2_SHIFT)) & MIPI_DSI_PHY_TST_CTRL0_reserved_31_2_MASK)
 /*! @} */
 
 /*! @name PHY_TST_CTRL1 - D-PHY data and enable pins */
@@ -1480,20 +1140,10 @@ typedef struct {
 #define MIPI_DSI_PHY_TST_CTRL1_phy_testen_MASK   (0x10000U)
 #define MIPI_DSI_PHY_TST_CTRL1_phy_testen_SHIFT  (16U)
 /*! phy_testen - PHY test interface operation selector:
- *  0b1..the address write operation is set on the falling edge of the testclk signal
  *  0b0..the data write operation is set on the rising edge of the testclk signal
+ *  0b1..the address write operation is set on the falling edge of the testclk signal
  */
 #define MIPI_DSI_PHY_TST_CTRL1_phy_testen(x)     (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_PHY_TST_CTRL1_phy_testen_SHIFT)) & MIPI_DSI_PHY_TST_CTRL1_phy_testen_MASK)
-
-#define MIPI_DSI_PHY_TST_CTRL1_reserved_17_MASK  (0x20000U)
-#define MIPI_DSI_PHY_TST_CTRL1_reserved_17_SHIFT (17U)
-/*! reserved_17 - Reserved and read as zero */
-#define MIPI_DSI_PHY_TST_CTRL1_reserved_17(x)    (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_PHY_TST_CTRL1_reserved_17_SHIFT)) & MIPI_DSI_PHY_TST_CTRL1_reserved_17_MASK)
-
-#define MIPI_DSI_PHY_TST_CTRL1_reserved_31_18_MASK (0xFFFC0000U)
-#define MIPI_DSI_PHY_TST_CTRL1_reserved_31_18_SHIFT (18U)
-/*! reserved_31_18 - Reserved and read as zero */
-#define MIPI_DSI_PHY_TST_CTRL1_reserved_31_18(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_PHY_TST_CTRL1_reserved_31_18_SHIFT)) & MIPI_DSI_PHY_TST_CTRL1_reserved_31_18_MASK)
 /*! @} */
 
 /*! @name INT_ST0 - Interrupts status 0 */
@@ -1603,11 +1253,6 @@ typedef struct {
 #define MIPI_DSI_INT_ST0_dphy_errors_4_SHIFT     (20U)
 /*! dphy_errors_4 - This bit indicates LP1 contention error ErrContentionLP1 from Lane 0 */
 #define MIPI_DSI_INT_ST0_dphy_errors_4(x)        (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_INT_ST0_dphy_errors_4_SHIFT)) & MIPI_DSI_INT_ST0_dphy_errors_4_MASK)
-
-#define MIPI_DSI_INT_ST0_reserved_31_21_MASK     (0xFFE00000U)
-#define MIPI_DSI_INT_ST0_reserved_31_21_SHIFT    (21U)
-/*! reserved_31_21 - Reserved and read as zero */
-#define MIPI_DSI_INT_ST0_reserved_31_21(x)       (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_INT_ST0_reserved_31_21_SHIFT)) & MIPI_DSI_INT_ST0_reserved_31_21_MASK)
 /*! @} */
 
 /*! @name INT_ST1 - Interrupts Status 1 */
@@ -1682,36 +1327,6 @@ typedef struct {
  */
 #define MIPI_DSI_INT_ST1_gen_pld_recev_err(x)    (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_INT_ST1_gen_pld_recev_err_SHIFT)) & MIPI_DSI_INT_ST1_gen_pld_recev_err_MASK)
 
-#define MIPI_DSI_INT_ST1_reserved_13_MASK        (0x2000U)
-#define MIPI_DSI_INT_ST1_reserved_13_SHIFT       (13U)
-/*! reserved_13 - Reserved and read as zero */
-#define MIPI_DSI_INT_ST1_reserved_13(x)          (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_INT_ST1_reserved_13_SHIFT)) & MIPI_DSI_INT_ST1_reserved_13_MASK)
-
-#define MIPI_DSI_INT_ST1_reserved_14_MASK        (0x4000U)
-#define MIPI_DSI_INT_ST1_reserved_14_SHIFT       (14U)
-/*! reserved_14 - Reserved and read as zero */
-#define MIPI_DSI_INT_ST1_reserved_14(x)          (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_INT_ST1_reserved_14_SHIFT)) & MIPI_DSI_INT_ST1_reserved_14_MASK)
-
-#define MIPI_DSI_INT_ST1_reserved_15_MASK        (0x8000U)
-#define MIPI_DSI_INT_ST1_reserved_15_SHIFT       (15U)
-/*! reserved_15 - Reserved and read as zero */
-#define MIPI_DSI_INT_ST1_reserved_15(x)          (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_INT_ST1_reserved_15_SHIFT)) & MIPI_DSI_INT_ST1_reserved_15_MASK)
-
-#define MIPI_DSI_INT_ST1_reserved_16_MASK        (0x10000U)
-#define MIPI_DSI_INT_ST1_reserved_16_SHIFT       (16U)
-/*! reserved_16 - Reserved and read as zero */
-#define MIPI_DSI_INT_ST1_reserved_16(x)          (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_INT_ST1_reserved_16_SHIFT)) & MIPI_DSI_INT_ST1_reserved_16_MASK)
-
-#define MIPI_DSI_INT_ST1_reserved_17_MASK        (0x20000U)
-#define MIPI_DSI_INT_ST1_reserved_17_SHIFT       (17U)
-/*! reserved_17 - Reserved and read as zero */
-#define MIPI_DSI_INT_ST1_reserved_17(x)          (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_INT_ST1_reserved_17_SHIFT)) & MIPI_DSI_INT_ST1_reserved_17_MASK)
-
-#define MIPI_DSI_INT_ST1_reserved_18_MASK        (0x40000U)
-#define MIPI_DSI_INT_ST1_reserved_18_SHIFT       (18U)
-/*! reserved_18 - Reserved and read as zero */
-#define MIPI_DSI_INT_ST1_reserved_18(x)          (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_INT_ST1_reserved_18_SHIFT)) & MIPI_DSI_INT_ST1_reserved_18_MASK)
-
 #define MIPI_DSI_INT_ST1_dpi_buff_pld_under_MASK (0x80000U)
 #define MIPI_DSI_INT_ST1_dpi_buff_pld_under_SHIFT (19U)
 /*! dpi_buff_pld_under - This bit indicates that an underflow has occurred when reading payload to build DSI packet for video mode */
@@ -1721,11 +1336,6 @@ typedef struct {
 #define MIPI_DSI_INT_ST1_tear_request_err_SHIFT  (20U)
 /*! tear_request_err - This bit indicates that tear_request has occurred but tear effect is not active in DSI host and device */
 #define MIPI_DSI_INT_ST1_tear_request_err(x)     (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_INT_ST1_tear_request_err_SHIFT)) & MIPI_DSI_INT_ST1_tear_request_err_MASK)
-
-#define MIPI_DSI_INT_ST1_reserved_31_21_MASK     (0xFFE00000U)
-#define MIPI_DSI_INT_ST1_reserved_31_21_SHIFT    (21U)
-/*! reserved_31_21 - Reserved and read as zero */
-#define MIPI_DSI_INT_ST1_reserved_31_21(x)       (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_INT_ST1_reserved_31_21_SHIFT)) & MIPI_DSI_INT_ST1_reserved_31_21_MASK)
 /*! @} */
 
 /*! @name INT_MSK0 - INT_ST0 mask */
@@ -1835,11 +1445,6 @@ typedef struct {
 #define MIPI_DSI_INT_MSK0_mask_dphy_errors_4_SHIFT (20U)
 /*! mask_dphy_errors_4 - Mask for dphy_errors_4 */
 #define MIPI_DSI_INT_MSK0_mask_dphy_errors_4(x)  (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_INT_MSK0_mask_dphy_errors_4_SHIFT)) & MIPI_DSI_INT_MSK0_mask_dphy_errors_4_MASK)
-
-#define MIPI_DSI_INT_MSK0_reserved_31_21_MASK    (0xFFE00000U)
-#define MIPI_DSI_INT_MSK0_reserved_31_21_SHIFT   (21U)
-/*! reserved_31_21 - Reserved and read as zero */
-#define MIPI_DSI_INT_MSK0_reserved_31_21(x)      (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_INT_MSK0_reserved_31_21_SHIFT)) & MIPI_DSI_INT_MSK0_reserved_31_21_MASK)
 /*! @} */
 
 /*! @name INT_MSK1 - INT_ST1 mask */
@@ -1910,36 +1515,6 @@ typedef struct {
 /*! mask_gen_pld_recev_err - Mask for gen_pld_recev_err */
 #define MIPI_DSI_INT_MSK1_mask_gen_pld_recev_err(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_INT_MSK1_mask_gen_pld_recev_err_SHIFT)) & MIPI_DSI_INT_MSK1_mask_gen_pld_recev_err_MASK)
 
-#define MIPI_DSI_INT_MSK1_reserved_13_MASK       (0x2000U)
-#define MIPI_DSI_INT_MSK1_reserved_13_SHIFT      (13U)
-/*! reserved_13 - Reserved and read as zero */
-#define MIPI_DSI_INT_MSK1_reserved_13(x)         (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_INT_MSK1_reserved_13_SHIFT)) & MIPI_DSI_INT_MSK1_reserved_13_MASK)
-
-#define MIPI_DSI_INT_MSK1_reserved_14_MASK       (0x4000U)
-#define MIPI_DSI_INT_MSK1_reserved_14_SHIFT      (14U)
-/*! reserved_14 - Reserved and read as zero */
-#define MIPI_DSI_INT_MSK1_reserved_14(x)         (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_INT_MSK1_reserved_14_SHIFT)) & MIPI_DSI_INT_MSK1_reserved_14_MASK)
-
-#define MIPI_DSI_INT_MSK1_reserved_15_MASK       (0x8000U)
-#define MIPI_DSI_INT_MSK1_reserved_15_SHIFT      (15U)
-/*! reserved_15 - Reserved and read as zero */
-#define MIPI_DSI_INT_MSK1_reserved_15(x)         (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_INT_MSK1_reserved_15_SHIFT)) & MIPI_DSI_INT_MSK1_reserved_15_MASK)
-
-#define MIPI_DSI_INT_MSK1_reserved_16_MASK       (0x10000U)
-#define MIPI_DSI_INT_MSK1_reserved_16_SHIFT      (16U)
-/*! reserved_16 - Reserved and read as zero */
-#define MIPI_DSI_INT_MSK1_reserved_16(x)         (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_INT_MSK1_reserved_16_SHIFT)) & MIPI_DSI_INT_MSK1_reserved_16_MASK)
-
-#define MIPI_DSI_INT_MSK1_reserved_17_MASK       (0x20000U)
-#define MIPI_DSI_INT_MSK1_reserved_17_SHIFT      (17U)
-/*! reserved_17 - Reserved and read as zero */
-#define MIPI_DSI_INT_MSK1_reserved_17(x)         (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_INT_MSK1_reserved_17_SHIFT)) & MIPI_DSI_INT_MSK1_reserved_17_MASK)
-
-#define MIPI_DSI_INT_MSK1_reserved_18_MASK       (0x40000U)
-#define MIPI_DSI_INT_MSK1_reserved_18_SHIFT      (18U)
-/*! reserved_18 - Reserved and read as zero */
-#define MIPI_DSI_INT_MSK1_reserved_18(x)         (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_INT_MSK1_reserved_18_SHIFT)) & MIPI_DSI_INT_MSK1_reserved_18_MASK)
-
 #define MIPI_DSI_INT_MSK1_mask_dpi_buff_pld_under_MASK (0x80000U)
 #define MIPI_DSI_INT_MSK1_mask_dpi_buff_pld_under_SHIFT (19U)
 /*! mask_dpi_buff_pld_under - Mask for dpi_buff_pld_under */
@@ -1949,11 +1524,6 @@ typedef struct {
 #define MIPI_DSI_INT_MSK1_mask_tear_request_err_SHIFT (20U)
 /*! mask_tear_request_err - Mask for tear_request_err */
 #define MIPI_DSI_INT_MSK1_mask_tear_request_err(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_INT_MSK1_mask_tear_request_err_SHIFT)) & MIPI_DSI_INT_MSK1_mask_tear_request_err_MASK)
-
-#define MIPI_DSI_INT_MSK1_reserved_31_21_MASK    (0xFFE00000U)
-#define MIPI_DSI_INT_MSK1_reserved_31_21_SHIFT   (21U)
-/*! reserved_31_21 - Reserved and read as zero */
-#define MIPI_DSI_INT_MSK1_reserved_31_21(x)      (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_INT_MSK1_reserved_31_21_SHIFT)) & MIPI_DSI_INT_MSK1_reserved_31_21_MASK)
 /*! @} */
 
 /*! @name PHY_CAL - D-PHY skew calibration */
@@ -1963,11 +1533,6 @@ typedef struct {
 #define MIPI_DSI_PHY_CAL_txskewcalhs_SHIFT       (0U)
 /*! txskewcalhs - High-speed skew calibration is started when txskewcalhs is set high (assuming that PHY is in Stop state) */
 #define MIPI_DSI_PHY_CAL_txskewcalhs(x)          (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_PHY_CAL_txskewcalhs_SHIFT)) & MIPI_DSI_PHY_CAL_txskewcalhs_MASK)
-
-#define MIPI_DSI_PHY_CAL_reserved_31_1_MASK      (0xFFFFFFFEU)
-#define MIPI_DSI_PHY_CAL_reserved_31_1_SHIFT     (1U)
-/*! reserved_31_1 - Reserved and read as zero */
-#define MIPI_DSI_PHY_CAL_reserved_31_1(x)        (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_PHY_CAL_reserved_31_1_SHIFT)) & MIPI_DSI_PHY_CAL_reserved_31_1_MASK)
 /*! @} */
 
 /*! @name INT_FORCE0 - Force INT_ST0 */
@@ -2077,11 +1642,6 @@ typedef struct {
 #define MIPI_DSI_INT_FORCE0_force_dphy_errors_4_SHIFT (20U)
 /*! force_dphy_errors_4 - Force dphy_errors_4 */
 #define MIPI_DSI_INT_FORCE0_force_dphy_errors_4(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_INT_FORCE0_force_dphy_errors_4_SHIFT)) & MIPI_DSI_INT_FORCE0_force_dphy_errors_4_MASK)
-
-#define MIPI_DSI_INT_FORCE0_reserved_31_21_MASK  (0xFFE00000U)
-#define MIPI_DSI_INT_FORCE0_reserved_31_21_SHIFT (21U)
-/*! reserved_31_21 - Reserved and read as zero */
-#define MIPI_DSI_INT_FORCE0_reserved_31_21(x)    (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_INT_FORCE0_reserved_31_21_SHIFT)) & MIPI_DSI_INT_FORCE0_reserved_31_21_MASK)
 /*! @} */
 
 /*! @name INT_FORCE1 - Force INT_ST1 */
@@ -2152,36 +1712,6 @@ typedef struct {
 /*! force_gen_pld_recev_err - Force gen_pld_recev_err */
 #define MIPI_DSI_INT_FORCE1_force_gen_pld_recev_err(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_INT_FORCE1_force_gen_pld_recev_err_SHIFT)) & MIPI_DSI_INT_FORCE1_force_gen_pld_recev_err_MASK)
 
-#define MIPI_DSI_INT_FORCE1_reserved_13_MASK     (0x2000U)
-#define MIPI_DSI_INT_FORCE1_reserved_13_SHIFT    (13U)
-/*! reserved_13 - Reserved and read as zero */
-#define MIPI_DSI_INT_FORCE1_reserved_13(x)       (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_INT_FORCE1_reserved_13_SHIFT)) & MIPI_DSI_INT_FORCE1_reserved_13_MASK)
-
-#define MIPI_DSI_INT_FORCE1_reserved_14_MASK     (0x4000U)
-#define MIPI_DSI_INT_FORCE1_reserved_14_SHIFT    (14U)
-/*! reserved_14 - Reserved and read as zero */
-#define MIPI_DSI_INT_FORCE1_reserved_14(x)       (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_INT_FORCE1_reserved_14_SHIFT)) & MIPI_DSI_INT_FORCE1_reserved_14_MASK)
-
-#define MIPI_DSI_INT_FORCE1_reserved_15_MASK     (0x8000U)
-#define MIPI_DSI_INT_FORCE1_reserved_15_SHIFT    (15U)
-/*! reserved_15 - Reserved and read as zero */
-#define MIPI_DSI_INT_FORCE1_reserved_15(x)       (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_INT_FORCE1_reserved_15_SHIFT)) & MIPI_DSI_INT_FORCE1_reserved_15_MASK)
-
-#define MIPI_DSI_INT_FORCE1_reserved_16_MASK     (0x10000U)
-#define MIPI_DSI_INT_FORCE1_reserved_16_SHIFT    (16U)
-/*! reserved_16 - Reserved and read as zero */
-#define MIPI_DSI_INT_FORCE1_reserved_16(x)       (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_INT_FORCE1_reserved_16_SHIFT)) & MIPI_DSI_INT_FORCE1_reserved_16_MASK)
-
-#define MIPI_DSI_INT_FORCE1_reserved_17_MASK     (0x20000U)
-#define MIPI_DSI_INT_FORCE1_reserved_17_SHIFT    (17U)
-/*! reserved_17 - Reserved and read as zero */
-#define MIPI_DSI_INT_FORCE1_reserved_17(x)       (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_INT_FORCE1_reserved_17_SHIFT)) & MIPI_DSI_INT_FORCE1_reserved_17_MASK)
-
-#define MIPI_DSI_INT_FORCE1_reserved_18_MASK     (0x40000U)
-#define MIPI_DSI_INT_FORCE1_reserved_18_SHIFT    (18U)
-/*! reserved_18 - Reserved and read as zero */
-#define MIPI_DSI_INT_FORCE1_reserved_18(x)       (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_INT_FORCE1_reserved_18_SHIFT)) & MIPI_DSI_INT_FORCE1_reserved_18_MASK)
-
 #define MIPI_DSI_INT_FORCE1_force_dpi_buff_pld_under_MASK (0x80000U)
 #define MIPI_DSI_INT_FORCE1_force_dpi_buff_pld_under_SHIFT (19U)
 /*! force_dpi_buff_pld_under - Force for dpi_buff_pld_under */
@@ -2191,11 +1721,6 @@ typedef struct {
 #define MIPI_DSI_INT_FORCE1_force_tear_request_err_SHIFT (20U)
 /*! force_tear_request_err - Force for tear_request_err */
 #define MIPI_DSI_INT_FORCE1_force_tear_request_err(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_INT_FORCE1_force_tear_request_err_SHIFT)) & MIPI_DSI_INT_FORCE1_force_tear_request_err_MASK)
-
-#define MIPI_DSI_INT_FORCE1_reserved_31_21_MASK  (0xFFE00000U)
-#define MIPI_DSI_INT_FORCE1_reserved_31_21_SHIFT (21U)
-/*! reserved_31_21 - Reserved and read as zero */
-#define MIPI_DSI_INT_FORCE1_reserved_31_21(x)    (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_INT_FORCE1_reserved_31_21_SHIFT)) & MIPI_DSI_INT_FORCE1_reserved_31_21_MASK)
 /*! @} */
 
 /*! @name AUTO_ULPS_MODE - Automatic ULPS control */
@@ -2206,11 +1731,6 @@ typedef struct {
 /*! auto_ulps - This bit enables the automatic mechanism to enter and exit ULPS */
 #define MIPI_DSI_AUTO_ULPS_MODE_auto_ulps(x)     (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_AUTO_ULPS_MODE_auto_ulps_SHIFT)) & MIPI_DSI_AUTO_ULPS_MODE_auto_ulps_MASK)
 
-#define MIPI_DSI_AUTO_ULPS_MODE_reserved_15_1_MASK (0xFFFEU)
-#define MIPI_DSI_AUTO_ULPS_MODE_reserved_15_1_SHIFT (1U)
-/*! reserved_15_1 - Reserved and read as zero */
-#define MIPI_DSI_AUTO_ULPS_MODE_reserved_15_1(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_AUTO_ULPS_MODE_reserved_15_1_SHIFT)) & MIPI_DSI_AUTO_ULPS_MODE_reserved_15_1_MASK)
-
 #define MIPI_DSI_AUTO_ULPS_MODE_pll_off_ulps_MASK (0x10000U)
 #define MIPI_DSI_AUTO_ULPS_MODE_pll_off_ulps_SHIFT (16U)
 /*! pll_off_ulps - Turn off the D-PHY PLL during ULPS */
@@ -2220,11 +1740,6 @@ typedef struct {
 #define MIPI_DSI_AUTO_ULPS_MODE_pre_pll_off_req_SHIFT (17U)
 /*! pre_pll_off_req - When pll_off_ulps is active, allows to turn off PLL before the request to enter in ULPS */
 #define MIPI_DSI_AUTO_ULPS_MODE_pre_pll_off_req(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_AUTO_ULPS_MODE_pre_pll_off_req_SHIFT)) & MIPI_DSI_AUTO_ULPS_MODE_pre_pll_off_req_MASK)
-
-#define MIPI_DSI_AUTO_ULPS_MODE_reserved_31_18_MASK (0xFFFC0000U)
-#define MIPI_DSI_AUTO_ULPS_MODE_reserved_31_18_SHIFT (18U)
-/*! reserved_31_18 - Reserved and read as zero */
-#define MIPI_DSI_AUTO_ULPS_MODE_reserved_31_18(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_AUTO_ULPS_MODE_reserved_31_18_SHIFT)) & MIPI_DSI_AUTO_ULPS_MODE_reserved_31_18_MASK)
 /*! @} */
 
 /*! @name AUTO_ULPS_ENTRY_DELAY - ULPS transition delay */
@@ -2258,11 +1773,6 @@ typedef struct {
 /*! compression_mode - When set to 1, this bit enables the compression mode */
 #define MIPI_DSI_DSC_PARAMETER_compression_mode(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_DSC_PARAMETER_compression_mode_SHIFT)) & MIPI_DSI_DSC_PARAMETER_compression_mode_MASK)
 
-#define MIPI_DSI_DSC_PARAMETER_reserved_7_1_MASK (0xFEU)
-#define MIPI_DSI_DSC_PARAMETER_reserved_7_1_SHIFT (1U)
-/*! reserved_7_1 - Reserved and read as zero */
-#define MIPI_DSI_DSC_PARAMETER_reserved_7_1(x)   (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_DSC_PARAMETER_reserved_7_1_SHIFT)) & MIPI_DSI_DSC_PARAMETER_reserved_7_1_MASK)
-
 #define MIPI_DSI_DSC_PARAMETER_compress_algo_MASK (0x300U)
 #define MIPI_DSI_DSC_PARAMETER_compress_algo_SHIFT (8U)
 /*! compress_algo - This field indicates the algorithm identifier:
@@ -2273,11 +1783,6 @@ typedef struct {
  */
 #define MIPI_DSI_DSC_PARAMETER_compress_algo(x)  (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_DSC_PARAMETER_compress_algo_SHIFT)) & MIPI_DSI_DSC_PARAMETER_compress_algo_MASK)
 
-#define MIPI_DSI_DSC_PARAMETER_reserved_15_10_MASK (0xFC00U)
-#define MIPI_DSI_DSC_PARAMETER_reserved_15_10_SHIFT (10U)
-/*! reserved_15_10 - Reserved and read as zero */
-#define MIPI_DSI_DSC_PARAMETER_reserved_15_10(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_DSC_PARAMETER_reserved_15_10_SHIFT)) & MIPI_DSI_DSC_PARAMETER_reserved_15_10_MASK)
-
 #define MIPI_DSI_DSC_PARAMETER_pps_sel_MASK      (0x30000U)
 #define MIPI_DSI_DSC_PARAMETER_pps_sel_SHIFT     (16U)
 /*! pps_sel - This field indicates the PPS selector:
@@ -2287,11 +1792,6 @@ typedef struct {
  *  0b11..PPS Table 4
  */
 #define MIPI_DSI_DSC_PARAMETER_pps_sel(x)        (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_DSC_PARAMETER_pps_sel_SHIFT)) & MIPI_DSI_DSC_PARAMETER_pps_sel_MASK)
-
-#define MIPI_DSI_DSC_PARAMETER_reserved_31_18_MASK (0xFFFC0000U)
-#define MIPI_DSI_DSC_PARAMETER_reserved_31_18_SHIFT (18U)
-/*! reserved_31_18 - Reserved and read as zero */
-#define MIPI_DSI_DSC_PARAMETER_reserved_31_18(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_DSC_PARAMETER_reserved_31_18_SHIFT)) & MIPI_DSI_DSC_PARAMETER_reserved_31_18_MASK)
 /*! @} */
 
 /*! @name PHY_TMR_RD_CFG - PHY timings */
@@ -2301,11 +1801,6 @@ typedef struct {
 #define MIPI_DSI_PHY_TMR_RD_CFG_max_rd_time_SHIFT (0U)
 /*! max_rd_time - This field configures the maximum time required to perform a read command in lane byte clock cycles */
 #define MIPI_DSI_PHY_TMR_RD_CFG_max_rd_time(x)   (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_PHY_TMR_RD_CFG_max_rd_time_SHIFT)) & MIPI_DSI_PHY_TMR_RD_CFG_max_rd_time_MASK)
-
-#define MIPI_DSI_PHY_TMR_RD_CFG_reserved_31_15_MASK (0xFFFF8000U)
-#define MIPI_DSI_PHY_TMR_RD_CFG_reserved_31_15_SHIFT (15U)
-/*! reserved_31_15 - Reserved and read as zero */
-#define MIPI_DSI_PHY_TMR_RD_CFG_reserved_31_15(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_PHY_TMR_RD_CFG_reserved_31_15_SHIFT)) & MIPI_DSI_PHY_TMR_RD_CFG_reserved_31_15_MASK)
 /*! @} */
 
 /*! @name AUTO_ULPS_MIN_TIME - PHY Timings - Transition between ulpsactivenot and ulpsexitreq */
@@ -2315,11 +1810,6 @@ typedef struct {
 #define MIPI_DSI_AUTO_ULPS_MIN_TIME_ulps_min_time_SHIFT (0U)
 /*! ulps_min_time - Configures the minimum time required by PHY between ulpsactivenot and ulpsexitreq for clock and data lane */
 #define MIPI_DSI_AUTO_ULPS_MIN_TIME_ulps_min_time(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_AUTO_ULPS_MIN_TIME_ulps_min_time_SHIFT)) & MIPI_DSI_AUTO_ULPS_MIN_TIME_ulps_min_time_MASK)
-
-#define MIPI_DSI_AUTO_ULPS_MIN_TIME_reserved_31_12_MASK (0xFFFFF000U)
-#define MIPI_DSI_AUTO_ULPS_MIN_TIME_reserved_31_12_SHIFT (12U)
-/*! reserved_31_12 - Reserved and read as zero */
-#define MIPI_DSI_AUTO_ULPS_MIN_TIME_reserved_31_12(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_AUTO_ULPS_MIN_TIME_reserved_31_12_SHIFT)) & MIPI_DSI_AUTO_ULPS_MIN_TIME_reserved_31_12_MASK)
 /*! @} */
 
 /*! @name VID_SHADOW_CTRL - DPI Shadow Feature */
@@ -2330,30 +1820,15 @@ typedef struct {
 /*! vid_shadow_en - When set to 1, DPI receives the active configuration from the auxiliary registers */
 #define MIPI_DSI_VID_SHADOW_CTRL_vid_shadow_en(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_VID_SHADOW_CTRL_vid_shadow_en_SHIFT)) & MIPI_DSI_VID_SHADOW_CTRL_vid_shadow_en_MASK)
 
-#define MIPI_DSI_VID_SHADOW_CTRL_reserved_7_1_MASK (0xFEU)
-#define MIPI_DSI_VID_SHADOW_CTRL_reserved_7_1_SHIFT (1U)
-/*! reserved_7_1 - Reserved and read as zero */
-#define MIPI_DSI_VID_SHADOW_CTRL_reserved_7_1(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_VID_SHADOW_CTRL_reserved_7_1_SHIFT)) & MIPI_DSI_VID_SHADOW_CTRL_reserved_7_1_MASK)
-
 #define MIPI_DSI_VID_SHADOW_CTRL_vid_shadow_req_MASK (0x100U)
 #define MIPI_DSI_VID_SHADOW_CTRL_vid_shadow_req_SHIFT (8U)
 /*! vid_shadow_req - When set to 1, this bit request that the dpi registers from regbank are copied to the auxiliary registers */
 #define MIPI_DSI_VID_SHADOW_CTRL_vid_shadow_req(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_VID_SHADOW_CTRL_vid_shadow_req_SHIFT)) & MIPI_DSI_VID_SHADOW_CTRL_vid_shadow_req_MASK)
 
-#define MIPI_DSI_VID_SHADOW_CTRL_reserved_15_9_MASK (0xFE00U)
-#define MIPI_DSI_VID_SHADOW_CTRL_reserved_15_9_SHIFT (9U)
-/*! reserved_15_9 - Reserved and read as zero */
-#define MIPI_DSI_VID_SHADOW_CTRL_reserved_15_9(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_VID_SHADOW_CTRL_reserved_15_9_SHIFT)) & MIPI_DSI_VID_SHADOW_CTRL_reserved_15_9_MASK)
-
 #define MIPI_DSI_VID_SHADOW_CTRL_vid_shadow_pin_req_MASK (0x10000U)
 #define MIPI_DSI_VID_SHADOW_CTRL_vid_shadow_pin_req_SHIFT (16U)
 /*! vid_shadow_pin_req - When set to 1, the video request is done by external pin */
 #define MIPI_DSI_VID_SHADOW_CTRL_vid_shadow_pin_req(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_VID_SHADOW_CTRL_vid_shadow_pin_req_SHIFT)) & MIPI_DSI_VID_SHADOW_CTRL_vid_shadow_pin_req_MASK)
-
-#define MIPI_DSI_VID_SHADOW_CTRL_reserved_31_17_MASK (0xFFFE0000U)
-#define MIPI_DSI_VID_SHADOW_CTRL_reserved_31_17_SHIFT (17U)
-/*! reserved_31_17 - Reserved and read as zero */
-#define MIPI_DSI_VID_SHADOW_CTRL_reserved_31_17(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_VID_SHADOW_CTRL_reserved_31_17_SHIFT)) & MIPI_DSI_VID_SHADOW_CTRL_reserved_31_17_MASK)
 /*! @} */
 
 /*! @name DPI_VCID_ACT - Actual DPI Virtual Channel ID */
@@ -2363,11 +1838,6 @@ typedef struct {
 #define MIPI_DSI_DPI_VCID_ACT_dpi_vcid_SHIFT     (0U)
 /*! dpi_vcid - This field specifies the DPI virtual channel id that is indexed to the Video mode packets */
 #define MIPI_DSI_DPI_VCID_ACT_dpi_vcid(x)        (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_DPI_VCID_ACT_dpi_vcid_SHIFT)) & MIPI_DSI_DPI_VCID_ACT_dpi_vcid_MASK)
-
-#define MIPI_DSI_DPI_VCID_ACT_reserved_31_2_MASK (0xFFFFFFFCU)
-#define MIPI_DSI_DPI_VCID_ACT_reserved_31_2_SHIFT (2U)
-/*! reserved_31_2 - Reserved and read as zero */
-#define MIPI_DSI_DPI_VCID_ACT_reserved_31_2(x)   (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_DPI_VCID_ACT_reserved_31_2_SHIFT)) & MIPI_DSI_DPI_VCID_ACT_reserved_31_2_MASK)
 /*! @} */
 
 /*! @name DPI_COLOR_CODING_ACT - Actual DPI Color Coding */
@@ -2395,20 +1865,10 @@ typedef struct {
  */
 #define MIPI_DSI_DPI_COLOR_CODING_ACT_dpi_color_coding(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_DPI_COLOR_CODING_ACT_dpi_color_coding_SHIFT)) & MIPI_DSI_DPI_COLOR_CODING_ACT_dpi_color_coding_MASK)
 
-#define MIPI_DSI_DPI_COLOR_CODING_ACT_reserved_7_4_MASK (0xF0U)
-#define MIPI_DSI_DPI_COLOR_CODING_ACT_reserved_7_4_SHIFT (4U)
-/*! reserved_7_4 - Reserved and read as zero */
-#define MIPI_DSI_DPI_COLOR_CODING_ACT_reserved_7_4(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_DPI_COLOR_CODING_ACT_reserved_7_4_SHIFT)) & MIPI_DSI_DPI_COLOR_CODING_ACT_reserved_7_4_MASK)
-
 #define MIPI_DSI_DPI_COLOR_CODING_ACT_loosely18_en_MASK (0x100U)
 #define MIPI_DSI_DPI_COLOR_CODING_ACT_loosely18_en_SHIFT (8U)
 /*! loosely18_en - When 1, this bit activates loosely packed variant to 18-bit configurations */
 #define MIPI_DSI_DPI_COLOR_CODING_ACT_loosely18_en(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_DPI_COLOR_CODING_ACT_loosely18_en_SHIFT)) & MIPI_DSI_DPI_COLOR_CODING_ACT_loosely18_en_MASK)
-
-#define MIPI_DSI_DPI_COLOR_CODING_ACT_reserved_31_9_MASK (0xFFFFFE00U)
-#define MIPI_DSI_DPI_COLOR_CODING_ACT_reserved_31_9_SHIFT (9U)
-/*! reserved_31_9 - Reserved and read as zero */
-#define MIPI_DSI_DPI_COLOR_CODING_ACT_reserved_31_9(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_DPI_COLOR_CODING_ACT_reserved_31_9_SHIFT)) & MIPI_DSI_DPI_COLOR_CODING_ACT_reserved_31_9_MASK)
 /*! @} */
 
 /*! @name DPI_LP_CMD_TIM_ACT - Actual DPI Low Power Commands' Timing */
@@ -2419,20 +1879,10 @@ typedef struct {
 /*! invact_lpcmd_time - This field is used for the transmission of commands in low-power mode */
 #define MIPI_DSI_DPI_LP_CMD_TIM_ACT_invact_lpcmd_time(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_DPI_LP_CMD_TIM_ACT_invact_lpcmd_time_SHIFT)) & MIPI_DSI_DPI_LP_CMD_TIM_ACT_invact_lpcmd_time_MASK)
 
-#define MIPI_DSI_DPI_LP_CMD_TIM_ACT_reserved_15_8_MASK (0xFF00U)
-#define MIPI_DSI_DPI_LP_CMD_TIM_ACT_reserved_15_8_SHIFT (8U)
-/*! reserved_15_8 - Reserved and read as zero */
-#define MIPI_DSI_DPI_LP_CMD_TIM_ACT_reserved_15_8(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_DPI_LP_CMD_TIM_ACT_reserved_15_8_SHIFT)) & MIPI_DSI_DPI_LP_CMD_TIM_ACT_reserved_15_8_MASK)
-
 #define MIPI_DSI_DPI_LP_CMD_TIM_ACT_outvact_lpcmd_time_MASK (0xFF0000U)
 #define MIPI_DSI_DPI_LP_CMD_TIM_ACT_outvact_lpcmd_time_SHIFT (16U)
 /*! outvact_lpcmd_time - This field is used for the transmission of commands in low-power mode */
 #define MIPI_DSI_DPI_LP_CMD_TIM_ACT_outvact_lpcmd_time(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_DPI_LP_CMD_TIM_ACT_outvact_lpcmd_time_SHIFT)) & MIPI_DSI_DPI_LP_CMD_TIM_ACT_outvact_lpcmd_time_MASK)
-
-#define MIPI_DSI_DPI_LP_CMD_TIM_ACT_reserved_31_24_MASK (0xFF000000U)
-#define MIPI_DSI_DPI_LP_CMD_TIM_ACT_reserved_31_24_SHIFT (24U)
-/*! reserved_31_24 - Reserved and read as zero */
-#define MIPI_DSI_DPI_LP_CMD_TIM_ACT_reserved_31_24(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_DPI_LP_CMD_TIM_ACT_reserved_31_24_SHIFT)) & MIPI_DSI_DPI_LP_CMD_TIM_ACT_reserved_31_24_MASK)
 /*! @} */
 
 /*! @name EDPI_TE_HW_CFG - TE for Hardware operations */
@@ -2456,11 +1906,6 @@ typedef struct {
  */
 #define MIPI_DSI_EDPI_TE_HW_CFG_hw_tear_effect_gen(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_EDPI_TE_HW_CFG_hw_tear_effect_gen_SHIFT)) & MIPI_DSI_EDPI_TE_HW_CFG_hw_tear_effect_gen_MASK)
 
-#define MIPI_DSI_EDPI_TE_HW_CFG_reserved_3_2_MASK (0xCU)
-#define MIPI_DSI_EDPI_TE_HW_CFG_reserved_3_2_SHIFT (2U)
-/*! reserved_3_2 - Reserved and read as zero */
-#define MIPI_DSI_EDPI_TE_HW_CFG_reserved_3_2(x)  (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_EDPI_TE_HW_CFG_reserved_3_2_SHIFT)) & MIPI_DSI_EDPI_TE_HW_CFG_reserved_3_2_MASK)
-
 #define MIPI_DSI_EDPI_TE_HW_CFG_hw_set_scan_line_MASK (0x10U)
 #define MIPI_DSI_EDPI_TE_HW_CFG_hw_set_scan_line_SHIFT (4U)
 /*! hw_set_scan_line - When hw_tear_effect_on = 1, this bit configures DCS packet type to be issued by MIPI DSI host to the display module:
@@ -2468,11 +1913,6 @@ typedef struct {
  *  0b1..After tearing effect request, set_tear_scan_line issued to display module
  */
 #define MIPI_DSI_EDPI_TE_HW_CFG_hw_set_scan_line(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_EDPI_TE_HW_CFG_hw_set_scan_line_SHIFT)) & MIPI_DSI_EDPI_TE_HW_CFG_hw_set_scan_line_MASK)
-
-#define MIPI_DSI_EDPI_TE_HW_CFG_reserved_15_5_MASK (0xFFE0U)
-#define MIPI_DSI_EDPI_TE_HW_CFG_reserved_15_5_SHIFT (5U)
-/*! reserved_15_5 - Reserved and read as zero */
-#define MIPI_DSI_EDPI_TE_HW_CFG_reserved_15_5(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_EDPI_TE_HW_CFG_reserved_15_5_SHIFT)) & MIPI_DSI_EDPI_TE_HW_CFG_reserved_15_5_MASK)
 
 #define MIPI_DSI_EDPI_TE_HW_CFG_scan_line_parameter_MASK (0xFFFF0000U)
 #define MIPI_DSI_EDPI_TE_HW_CFG_scan_line_parameter_SHIFT (16U)
@@ -2532,11 +1972,6 @@ typedef struct {
 #define MIPI_DSI_VID_MODE_CFG_ACT_lp_cmd_en_SHIFT (9U)
 /*! lp_cmd_en - When 1, this bit enables the command transmission only in low-power mode */
 #define MIPI_DSI_VID_MODE_CFG_ACT_lp_cmd_en(x)   (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_VID_MODE_CFG_ACT_lp_cmd_en_SHIFT)) & MIPI_DSI_VID_MODE_CFG_ACT_lp_cmd_en_MASK)
-
-#define MIPI_DSI_VID_MODE_CFG_ACT_reserved_31_10_MASK (0xFFFFFC00U)
-#define MIPI_DSI_VID_MODE_CFG_ACT_reserved_31_10_SHIFT (10U)
-/*! reserved_31_10 - Reserved and read as zero */
-#define MIPI_DSI_VID_MODE_CFG_ACT_reserved_31_10(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_VID_MODE_CFG_ACT_reserved_31_10_SHIFT)) & MIPI_DSI_VID_MODE_CFG_ACT_reserved_31_10_MASK)
 /*! @} */
 
 /*! @name VID_PKT_SIZE_ACT - Actual VID_PKT_SIZE */
@@ -2546,11 +1981,6 @@ typedef struct {
 #define MIPI_DSI_VID_PKT_SIZE_ACT_vid_pkt_size_SHIFT (0U)
 /*! vid_pkt_size - This field specifies the number of pixels in a single video packet */
 #define MIPI_DSI_VID_PKT_SIZE_ACT_vid_pkt_size(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_VID_PKT_SIZE_ACT_vid_pkt_size_SHIFT)) & MIPI_DSI_VID_PKT_SIZE_ACT_vid_pkt_size_MASK)
-
-#define MIPI_DSI_VID_PKT_SIZE_ACT_reserved_31_14_MASK (0xFFFFC000U)
-#define MIPI_DSI_VID_PKT_SIZE_ACT_reserved_31_14_SHIFT (14U)
-/*! reserved_31_14 - Reserved and read as zero */
-#define MIPI_DSI_VID_PKT_SIZE_ACT_reserved_31_14(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_VID_PKT_SIZE_ACT_reserved_31_14_SHIFT)) & MIPI_DSI_VID_PKT_SIZE_ACT_reserved_31_14_MASK)
 /*! @} */
 
 /*! @name VID_NUM_CHUNKS_ACT - Actual VID_NUM_CHUNKS */
@@ -2562,11 +1992,6 @@ typedef struct {
  *    period (a chunk is pair made of a video packet and a null packet)
  */
 #define MIPI_DSI_VID_NUM_CHUNKS_ACT_vid_num_chunks(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_VID_NUM_CHUNKS_ACT_vid_num_chunks_SHIFT)) & MIPI_DSI_VID_NUM_CHUNKS_ACT_vid_num_chunks_MASK)
-
-#define MIPI_DSI_VID_NUM_CHUNKS_ACT_reserved_31_13_MASK (0xFFFFE000U)
-#define MIPI_DSI_VID_NUM_CHUNKS_ACT_reserved_31_13_SHIFT (13U)
-/*! reserved_31_13 - Reserved and read as zero */
-#define MIPI_DSI_VID_NUM_CHUNKS_ACT_reserved_31_13(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_VID_NUM_CHUNKS_ACT_reserved_31_13_SHIFT)) & MIPI_DSI_VID_NUM_CHUNKS_ACT_reserved_31_13_MASK)
 /*! @} */
 
 /*! @name VID_NULL_SIZE_ACT - Actual VID_NULL_SIZE */
@@ -2576,11 +2001,6 @@ typedef struct {
 #define MIPI_DSI_VID_NULL_SIZE_ACT_vid_null_size_SHIFT (0U)
 /*! vid_null_size - This register specifies the number of bytes inside a null packet */
 #define MIPI_DSI_VID_NULL_SIZE_ACT_vid_null_size(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_VID_NULL_SIZE_ACT_vid_null_size_SHIFT)) & MIPI_DSI_VID_NULL_SIZE_ACT_vid_null_size_MASK)
-
-#define MIPI_DSI_VID_NULL_SIZE_ACT_reserved_31_13_MASK (0xFFFFE000U)
-#define MIPI_DSI_VID_NULL_SIZE_ACT_reserved_31_13_SHIFT (13U)
-/*! reserved_31_13 - Reserved and read as zero */
-#define MIPI_DSI_VID_NULL_SIZE_ACT_reserved_31_13(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_VID_NULL_SIZE_ACT_reserved_31_13_SHIFT)) & MIPI_DSI_VID_NULL_SIZE_ACT_reserved_31_13_MASK)
 /*! @} */
 
 /*! @name VID_HSA_TIME_ACT - Actual VID_HSA_TIME */
@@ -2590,11 +2010,6 @@ typedef struct {
 #define MIPI_DSI_VID_HSA_TIME_ACT_vid_hsa_time_SHIFT (0U)
 /*! vid_hsa_time - This field specifies the Horizontal Synchronism Active period in lane byte clock cycles */
 #define MIPI_DSI_VID_HSA_TIME_ACT_vid_hsa_time(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_VID_HSA_TIME_ACT_vid_hsa_time_SHIFT)) & MIPI_DSI_VID_HSA_TIME_ACT_vid_hsa_time_MASK)
-
-#define MIPI_DSI_VID_HSA_TIME_ACT_reserved_31_12_MASK (0xFFFFF000U)
-#define MIPI_DSI_VID_HSA_TIME_ACT_reserved_31_12_SHIFT (12U)
-/*! reserved_31_12 - Reserved and read as zero */
-#define MIPI_DSI_VID_HSA_TIME_ACT_reserved_31_12(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_VID_HSA_TIME_ACT_reserved_31_12_SHIFT)) & MIPI_DSI_VID_HSA_TIME_ACT_reserved_31_12_MASK)
 /*! @} */
 
 /*! @name VID_HBP_TIME_ACT - Actual VID_HBP_TIME */
@@ -2604,11 +2019,6 @@ typedef struct {
 #define MIPI_DSI_VID_HBP_TIME_ACT_vid_hbp_time_SHIFT (0U)
 /*! vid_hbp_time - This field specifies the Horizontal Back Porch period in lane byte clock cycles */
 #define MIPI_DSI_VID_HBP_TIME_ACT_vid_hbp_time(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_VID_HBP_TIME_ACT_vid_hbp_time_SHIFT)) & MIPI_DSI_VID_HBP_TIME_ACT_vid_hbp_time_MASK)
-
-#define MIPI_DSI_VID_HBP_TIME_ACT_reserved_31_12_MASK (0xFFFFF000U)
-#define MIPI_DSI_VID_HBP_TIME_ACT_reserved_31_12_SHIFT (12U)
-/*! reserved_31_12 - Reserved and read as zero */
-#define MIPI_DSI_VID_HBP_TIME_ACT_reserved_31_12(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_VID_HBP_TIME_ACT_reserved_31_12_SHIFT)) & MIPI_DSI_VID_HBP_TIME_ACT_reserved_31_12_MASK)
 /*! @} */
 
 /*! @name VID_HLINE_TIME_ACT - Actual VID_HLINE_TIME */
@@ -2618,11 +2028,6 @@ typedef struct {
 #define MIPI_DSI_VID_HLINE_TIME_ACT_vid_hline_time_SHIFT (0U)
 /*! vid_hline_time - This field specifies the size of the total line time (HSA+HBP+HACT+HFP) counted in lane byte clock cycles */
 #define MIPI_DSI_VID_HLINE_TIME_ACT_vid_hline_time(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_VID_HLINE_TIME_ACT_vid_hline_time_SHIFT)) & MIPI_DSI_VID_HLINE_TIME_ACT_vid_hline_time_MASK)
-
-#define MIPI_DSI_VID_HLINE_TIME_ACT_reserved_31_15_MASK (0xFFFF8000U)
-#define MIPI_DSI_VID_HLINE_TIME_ACT_reserved_31_15_SHIFT (15U)
-/*! reserved_31_15 - Reserved and read as zero */
-#define MIPI_DSI_VID_HLINE_TIME_ACT_reserved_31_15(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_VID_HLINE_TIME_ACT_reserved_31_15_SHIFT)) & MIPI_DSI_VID_HLINE_TIME_ACT_reserved_31_15_MASK)
 /*! @} */
 
 /*! @name VID_VSA_LINES_ACT - Actual VID_VSA_LINES */
@@ -2632,11 +2037,6 @@ typedef struct {
 #define MIPI_DSI_VID_VSA_LINES_ACT_vsa_lines_SHIFT (0U)
 /*! vsa_lines - This field specifies the Vertical Synchronism Active period measured in number of horizontal lines */
 #define MIPI_DSI_VID_VSA_LINES_ACT_vsa_lines(x)  (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_VID_VSA_LINES_ACT_vsa_lines_SHIFT)) & MIPI_DSI_VID_VSA_LINES_ACT_vsa_lines_MASK)
-
-#define MIPI_DSI_VID_VSA_LINES_ACT_reserved_31_10_MASK (0xFFFFFC00U)
-#define MIPI_DSI_VID_VSA_LINES_ACT_reserved_31_10_SHIFT (10U)
-/*! reserved_31_10 - Reserved and read as zero */
-#define MIPI_DSI_VID_VSA_LINES_ACT_reserved_31_10(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_VID_VSA_LINES_ACT_reserved_31_10_SHIFT)) & MIPI_DSI_VID_VSA_LINES_ACT_reserved_31_10_MASK)
 /*! @} */
 
 /*! @name VID_VBP_LINES_ACT - VID_VBP_LINES */
@@ -2646,11 +2046,6 @@ typedef struct {
 #define MIPI_DSI_VID_VBP_LINES_ACT_vbp_lines_SHIFT (0U)
 /*! vbp_lines - This field specifies the Vertical Back Porch period measured in number of horizontal lines */
 #define MIPI_DSI_VID_VBP_LINES_ACT_vbp_lines(x)  (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_VID_VBP_LINES_ACT_vbp_lines_SHIFT)) & MIPI_DSI_VID_VBP_LINES_ACT_vbp_lines_MASK)
-
-#define MIPI_DSI_VID_VBP_LINES_ACT_reserved_31_10_MASK (0xFFFFFC00U)
-#define MIPI_DSI_VID_VBP_LINES_ACT_reserved_31_10_SHIFT (10U)
-/*! reserved_31_10 - Reserved and read as zero */
-#define MIPI_DSI_VID_VBP_LINES_ACT_reserved_31_10(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_VID_VBP_LINES_ACT_reserved_31_10_SHIFT)) & MIPI_DSI_VID_VBP_LINES_ACT_reserved_31_10_MASK)
 /*! @} */
 
 /*! @name VID_VFP_LINES_ACT - Actual VID_VFP_LINES */
@@ -2660,11 +2055,6 @@ typedef struct {
 #define MIPI_DSI_VID_VFP_LINES_ACT_vfp_lines_SHIFT (0U)
 /*! vfp_lines - This field specifies the Vertical Front Porch period measured in number of horizontal lines */
 #define MIPI_DSI_VID_VFP_LINES_ACT_vfp_lines(x)  (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_VID_VFP_LINES_ACT_vfp_lines_SHIFT)) & MIPI_DSI_VID_VFP_LINES_ACT_vfp_lines_MASK)
-
-#define MIPI_DSI_VID_VFP_LINES_ACT_reserved_31_10_MASK (0xFFFFFC00U)
-#define MIPI_DSI_VID_VFP_LINES_ACT_reserved_31_10_SHIFT (10U)
-/*! reserved_31_10 - Reserved and read as zero */
-#define MIPI_DSI_VID_VFP_LINES_ACT_reserved_31_10(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_VID_VFP_LINES_ACT_reserved_31_10_SHIFT)) & MIPI_DSI_VID_VFP_LINES_ACT_reserved_31_10_MASK)
 /*! @} */
 
 /*! @name VID_VACTIVE_LINES_ACT - Actual VID_VACTIVE_LINES */
@@ -2674,11 +2064,6 @@ typedef struct {
 #define MIPI_DSI_VID_VACTIVE_LINES_ACT_v_active_lines_SHIFT (0U)
 /*! v_active_lines - This field specifies the Vertical Active period measured in number of horizontal lines */
 #define MIPI_DSI_VID_VACTIVE_LINES_ACT_v_active_lines(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_VID_VACTIVE_LINES_ACT_v_active_lines_SHIFT)) & MIPI_DSI_VID_VACTIVE_LINES_ACT_v_active_lines_MASK)
-
-#define MIPI_DSI_VID_VACTIVE_LINES_ACT_reserved_31_14_MASK (0xFFFFC000U)
-#define MIPI_DSI_VID_VACTIVE_LINES_ACT_reserved_31_14_SHIFT (14U)
-/*! reserved_31_14 - Reserved and read as zero */
-#define MIPI_DSI_VID_VACTIVE_LINES_ACT_reserved_31_14(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_VID_VACTIVE_LINES_ACT_reserved_31_14_SHIFT)) & MIPI_DSI_VID_VACTIVE_LINES_ACT_reserved_31_14_MASK)
 /*! @} */
 
 /*! @name VID_PKT_STATUS - eDPI and DPI FIFOs status */
@@ -2724,11 +2109,6 @@ typedef struct {
 /*! edpi_pld_w_full - This bit indicates the full status of write payload FIFO for command Mode */
 #define MIPI_DSI_VID_PKT_STATUS_edpi_pld_w_full(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_VID_PKT_STATUS_edpi_pld_w_full_SHIFT)) & MIPI_DSI_VID_PKT_STATUS_edpi_pld_w_full_MASK)
 
-#define MIPI_DSI_VID_PKT_STATUS_reserved_15_8_MASK (0xFF00U)
-#define MIPI_DSI_VID_PKT_STATUS_reserved_15_8_SHIFT (8U)
-/*! reserved_15_8 - Reserved and read as zero */
-#define MIPI_DSI_VID_PKT_STATUS_reserved_15_8(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_VID_PKT_STATUS_reserved_15_8_SHIFT)) & MIPI_DSI_VID_PKT_STATUS_reserved_15_8_MASK)
-
 #define MIPI_DSI_VID_PKT_STATUS_dpi_buff_pld_empty_MASK (0x10000U)
 #define MIPI_DSI_VID_PKT_STATUS_dpi_buff_pld_empty_SHIFT (16U)
 /*! dpi_buff_pld_empty - This bit indicates the empty status of the payload internal buffer for video Mode */
@@ -2738,11 +2118,6 @@ typedef struct {
 #define MIPI_DSI_VID_PKT_STATUS_dpi_buff_pld_full_SHIFT (17U)
 /*! dpi_buff_pld_full - This bit indicates the full status of the payload internal buffer for video Mode */
 #define MIPI_DSI_VID_PKT_STATUS_dpi_buff_pld_full(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_VID_PKT_STATUS_dpi_buff_pld_full_SHIFT)) & MIPI_DSI_VID_PKT_STATUS_dpi_buff_pld_full_MASK)
-
-#define MIPI_DSI_VID_PKT_STATUS_reserved_19_18_MASK (0xC0000U)
-#define MIPI_DSI_VID_PKT_STATUS_reserved_19_18_SHIFT (18U)
-/*! reserved_19_18 - Reserved and read as zero */
-#define MIPI_DSI_VID_PKT_STATUS_reserved_19_18(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_VID_PKT_STATUS_reserved_19_18_SHIFT)) & MIPI_DSI_VID_PKT_STATUS_reserved_19_18_MASK)
 
 #define MIPI_DSI_VID_PKT_STATUS_edpi_buff_cmd_empty_MASK (0x100000U)
 #define MIPI_DSI_VID_PKT_STATUS_edpi_buff_cmd_empty_SHIFT (20U)
@@ -2763,11 +2138,6 @@ typedef struct {
 #define MIPI_DSI_VID_PKT_STATUS_edpi_buff_pld_full_SHIFT (23U)
 /*! edpi_buff_pld_full - This bit indicates the full status of the edpi payload internal buffer */
 #define MIPI_DSI_VID_PKT_STATUS_edpi_buff_pld_full(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_VID_PKT_STATUS_edpi_buff_pld_full_SHIFT)) & MIPI_DSI_VID_PKT_STATUS_edpi_buff_pld_full_MASK)
-
-#define MIPI_DSI_VID_PKT_STATUS_reserved_31_24_MASK (0xFF000000U)
-#define MIPI_DSI_VID_PKT_STATUS_reserved_31_24_SHIFT (24U)
-/*! reserved_31_24 - Reserved and read as zero */
-#define MIPI_DSI_VID_PKT_STATUS_reserved_31_24(x) (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_VID_PKT_STATUS_reserved_31_24_SHIFT)) & MIPI_DSI_VID_PKT_STATUS_reserved_31_24_MASK)
 /*! @} */
 
 /*! @name SDF_3D_ACT - SDF_3D */
@@ -2786,8 +2156,8 @@ typedef struct {
 #define MIPI_DSI_SDF_3D_ACT_format_3d_MASK       (0xCU)
 #define MIPI_DSI_SDF_3D_ACT_format_3d_SHIFT      (2U)
 /*! format_3d - This field specifies 3D Image Format:
- *  0b01..Alternating frames of left and right data
  *  0b00..Alternating lines of left and right data
+ *  0b01..Alternating frames of left and right data
  *  0b10..Alternating pixels of left and right data
  *  0b11..Reserved, not used
  */
@@ -2810,20 +2180,10 @@ typedef struct {
  */
 #define MIPI_DSI_SDF_3D_ACT_right_first(x)       (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_SDF_3D_ACT_right_first_SHIFT)) & MIPI_DSI_SDF_3D_ACT_right_first_MASK)
 
-#define MIPI_DSI_SDF_3D_ACT_reserved_15_6_MASK   (0xFFC0U)
-#define MIPI_DSI_SDF_3D_ACT_reserved_15_6_SHIFT  (6U)
-/*! reserved_15_6 - Reserved and read as zero */
-#define MIPI_DSI_SDF_3D_ACT_reserved_15_6(x)     (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_SDF_3D_ACT_reserved_15_6_SHIFT)) & MIPI_DSI_SDF_3D_ACT_reserved_15_6_MASK)
-
 #define MIPI_DSI_SDF_3D_ACT_send_3d_cfg_MASK     (0x10000U)
 #define MIPI_DSI_SDF_3D_ACT_send_3d_cfg_SHIFT    (16U)
 /*! send_3d_cfg - When set, causes the next VSS packet to include 3D control payload in every VSS packet */
 #define MIPI_DSI_SDF_3D_ACT_send_3d_cfg(x)       (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_SDF_3D_ACT_send_3d_cfg_SHIFT)) & MIPI_DSI_SDF_3D_ACT_send_3d_cfg_MASK)
-
-#define MIPI_DSI_SDF_3D_ACT_reserved_31_17_MASK  (0xFFFE0000U)
-#define MIPI_DSI_SDF_3D_ACT_reserved_31_17_SHIFT (17U)
-/*! reserved_31_17 - Reserved and read as zero */
-#define MIPI_DSI_SDF_3D_ACT_reserved_31_17(x)    (((uint32_t)(((uint32_t)(x)) << MIPI_DSI_SDF_3D_ACT_reserved_31_17_SHIFT)) & MIPI_DSI_SDF_3D_ACT_reserved_31_17_MASK)
 /*! @} */
 
 

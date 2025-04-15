@@ -44,13 +44,13 @@
 **                          MIMX9596XVZXN_cm7
 **
 **     Version:             rev. 1.0, 2023-01-10
-**     Build:               b240728
+**     Build:               b250415
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for BBSM_BLK_CTRL_BBSMMIX
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -131,7 +131,7 @@
 
 /** BBSM_BLK_CTRL_BBSMMIX - Register Layout Typedef */
 typedef struct {
-  __IO uint32_t SXOSC_CTRL;                        /**< SXOSC Control Register, offset: 0x0 */
+       uint8_t RESERVED_0[4];
   __IO uint32_t SNVS_CLKRST_CTRL;                  /**< snvs_clkrst Control Register, offset: 0x4 */
 } BBSM_BLK_CTRL_BBSMMIX_Type;
 
@@ -143,18 +143,6 @@ typedef struct {
  * @addtogroup BBSM_BLK_CTRL_BBSMMIX_Register_Masks BBSM_BLK_CTRL_BBSMMIX Register Masks
  * @{
  */
-
-/*! @name SXOSC_CTRL - SXOSC Control Register */
-/*! @{ */
-
-#define BBSM_BLK_CTRL_BBSMMIX_SXOSC_CTRL_pwd_lv_MASK (0x10000U)
-#define BBSM_BLK_CTRL_BBSMMIX_SXOSC_CTRL_pwd_lv_SHIFT (16U)
-/*! pwd_lv - Power down/enable signal
- *  0b0..Power up
- *  0b1..Power down
- */
-#define BBSM_BLK_CTRL_BBSMMIX_SXOSC_CTRL_pwd_lv(x) (((uint32_t)(((uint32_t)(x)) << BBSM_BLK_CTRL_BBSMMIX_SXOSC_CTRL_pwd_lv_SHIFT)) & BBSM_BLK_CTRL_BBSMMIX_SXOSC_CTRL_pwd_lv_MASK)
-/*! @} */
 
 /*! @name SNVS_CLKRST_CTRL - snvs_clkrst Control Register */
 /*! @{ */
@@ -178,8 +166,8 @@ typedef struct {
 #define BBSM_BLK_CTRL_BBSMMIX_SNVS_CLKRST_CTRL_tst_xtal_slow_MASK (0x4000U)
 #define BBSM_BLK_CTRL_BBSMMIX_SNVS_CLKRST_CTRL_tst_xtal_slow_SHIFT (14U)
 /*! tst_xtal_slow - Indicates slow external XTAL crystal
- *  0b1..Slow external XTAL crystal is enabled
  *  0b0..Slow external XTAL crystal is disabled
+ *  0b1..Slow external XTAL crystal is enabled
  */
 #define BBSM_BLK_CTRL_BBSMMIX_SNVS_CLKRST_CTRL_tst_xtal_slow(x) (((uint32_t)(((uint32_t)(x)) << BBSM_BLK_CTRL_BBSMMIX_SNVS_CLKRST_CTRL_tst_xtal_slow_SHIFT)) & BBSM_BLK_CTRL_BBSMMIX_SNVS_CLKRST_CTRL_tst_xtal_slow_MASK)
 

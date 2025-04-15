@@ -44,13 +44,13 @@
 **                          MIMX9596XVZXN_cm7
 **
 **     Version:             rev. 1.0, 2023-01-10
-**     Build:               b240728
+**     Build:               b250415
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for HSIO_TRDC_MGR
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -179,7 +179,7 @@ typedef struct {
     __I  uint32_t W0;                                /**< MBC Domain Error Word0 Register, array offset: 0x400, array step: 0x10 */
     __I  uint32_t W1;                                /**< MBC Domain Error Word1 Register, array offset: 0x404, array step: 0x10 */
     __I  uint32_t W2;                                /**< MBC Domain Error Word1 Register, array offset: 0x408, array step: 0x10, valid indices: [1] */
-    __O  uint32_t W3;                                /**< MBC Domain Error Word3 Register, array offset: 0x40C, array step: 0x10 */
+    __IO uint32_t W3;                                /**< MBC Domain Error Word3 Register, array offset: 0x40C, array step: 0x10 */
   } MBC_DERR[HSIO_TRDC_MGR_MBC_DERR_COUNT];
        uint8_t RESERVED_6[976];
   __IO uint32_t MDA_W0_0_DFMT1;                    /**< DAC Master Domain Assignment Register, offset: 0x800 */
@@ -220,9 +220,9 @@ typedef struct {
        uint8_t RESERVED_24[62940];
   __I  uint32_t MBC0_MEM_GLBCFG[HSIO_TRDC_MGR_MBC_MEM_GLBCFG0_COUNT]; /**< MBC Global Configuration Register, array offset: 0x10000, array step: 0x4 */
   __IO uint32_t MBC0_NSE_BLK_INDEX;                /**< MBC NonSecure Enable Block Index, offset: 0x10010 */
-  __O  uint32_t MBC0_NSE_BLK_SET;                  /**< MBC NonSecure Enable Block Set, offset: 0x10014 */
-  __O  uint32_t MBC0_NSE_BLK_CLR;                  /**< MBC NonSecure Enable Block Clear, offset: 0x10018 */
-  __O  uint32_t MBC0_NSE_BLK_CLR_ALL;              /**< MBC NonSecure Enable Block Clear All, offset: 0x1001C */
+  __IO uint32_t MBC0_NSE_BLK_SET;                  /**< MBC NonSecure Enable Block Set, offset: 0x10014 */
+  __IO uint32_t MBC0_NSE_BLK_CLR;                  /**< MBC NonSecure Enable Block Clear, offset: 0x10018 */
+  __IO uint32_t MBC0_NSE_BLK_CLR_ALL;              /**< MBC NonSecure Enable Block Clear All, offset: 0x1001C */
   __IO uint32_t MBC0_MEMN_GLBAC[HSIO_TRDC_MGR_MBC_MEMN_GLBAC0_COUNT]; /**< MBC Global Access Control, array offset: 0x10020, array step: 0x4 */
   __IO uint32_t MBC0_DOM0_MEM0_BLK_CFG_W0;         /**< MBC Memory Block Configuration Word, offset: 0x10040 */
   __IO uint32_t MBC0_DOM0_MEM0_BLK_CFG_W1;         /**< MBC Memory Block Configuration Word, offset: 0x10044 */
@@ -546,9 +546,9 @@ typedef struct {
        uint8_t RESERVED_152[12];
   __I  uint32_t MBC1_MEM_GLBCFG[HSIO_TRDC_MGR_MBC_MEM_GLBCFG1_COUNT]; /**< MBC Global Configuration Register, array offset: 0x12000, array step: 0x4 */
   __IO uint32_t MBC1_NSE_BLK_INDEX;                /**< MBC NonSecure Enable Block Index, offset: 0x12010 */
-  __O  uint32_t MBC1_NSE_BLK_SET;                  /**< MBC NonSecure Enable Block Set, offset: 0x12014 */
-  __O  uint32_t MBC1_NSE_BLK_CLR;                  /**< MBC NonSecure Enable Block Clear, offset: 0x12018 */
-  __O  uint32_t MBC1_NSE_BLK_CLR_ALL;              /**< MBC NonSecure Enable Block Clear All, offset: 0x1201C */
+  __IO uint32_t MBC1_NSE_BLK_SET;                  /**< MBC NonSecure Enable Block Set, offset: 0x12014 */
+  __IO uint32_t MBC1_NSE_BLK_CLR;                  /**< MBC NonSecure Enable Block Clear, offset: 0x12018 */
+  __IO uint32_t MBC1_NSE_BLK_CLR_ALL;              /**< MBC NonSecure Enable Block Clear All, offset: 0x1201C */
   __IO uint32_t MBC1_MEMN_GLBAC[HSIO_TRDC_MGR_MBC_MEMN_GLBAC1_COUNT]; /**< MBC Global Access Control, array offset: 0x12020, array step: 0x4 */
   __IO uint32_t MBC1_DOM0_MEM0_BLK_CFG_W0;         /**< MBC Memory Block Configuration Word, offset: 0x12040 */
        uint8_t RESERVED_153[252];
@@ -808,9 +808,9 @@ typedef struct {
        uint8_t RESERVED_280[12];
   __I  uint32_t MBC2_MEM_GLBCFG[HSIO_TRDC_MGR_MBC_MEM_GLBCFG2_COUNT]; /**< MBC Global Configuration Register, array offset: 0x14000, array step: 0x4 */
   __IO uint32_t MBC2_NSE_BLK_INDEX;                /**< MBC NonSecure Enable Block Index, offset: 0x14010 */
-  __O  uint32_t MBC2_NSE_BLK_SET;                  /**< MBC NonSecure Enable Block Set, offset: 0x14014 */
-  __O  uint32_t MBC2_NSE_BLK_CLR;                  /**< MBC NonSecure Enable Block Clear, offset: 0x14018 */
-  __O  uint32_t MBC2_NSE_BLK_CLR_ALL;              /**< MBC NonSecure Enable Block Clear All, offset: 0x1401C */
+  __IO uint32_t MBC2_NSE_BLK_SET;                  /**< MBC NonSecure Enable Block Set, offset: 0x14014 */
+  __IO uint32_t MBC2_NSE_BLK_CLR;                  /**< MBC NonSecure Enable Block Clear, offset: 0x14018 */
+  __IO uint32_t MBC2_NSE_BLK_CLR_ALL;              /**< MBC NonSecure Enable Block Clear All, offset: 0x1401C */
   __IO uint32_t MBC2_MEMN_GLBAC[HSIO_TRDC_MGR_MBC_MEMN_GLBAC2_COUNT]; /**< MBC Global Access Control, array offset: 0x14020, array step: 0x4 */
   __IO uint32_t MBC2_DOM0_MEM0_BLK_CFG_W0;         /**< MBC Memory Block Configuration Word, offset: 0x14040 */
   __IO uint32_t MBC2_DOM0_MEM0_BLK_CFG_W1;         /**< MBC Memory Block Configuration Word, offset: 0x14044 */

@@ -44,13 +44,13 @@
 **                          MIMX9596XVZXN_cm7
 **
 **     Version:             rev. 1.0, 2023-01-10
-**     Build:               b240728
+**     Build:               b250415
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for NOC_BLK_CTRL_NOCMIX
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -132,8 +132,7 @@
 /** NOC_BLK_CTRL_NOCMIX - Register Layout Typedef */
 typedef struct {
   __IO uint32_t DEXSC_ERR;                         /**< DEXSC error response configuration, offset: 0x0 */
-       uint8_t RESERVED_0[4];
-  __IO uint32_t AXI_LIMIT_WAKEUPMIX;               /**< AXI limit wakeupmix configuration, offset: 0x8 */
+       uint8_t RESERVED_0[8];
   __IO uint32_t CACHE_ATTR;                        /**< AxCACHE[1] override configuration register, offset: 0xC */
        uint8_t RESERVED_1[20];
   __IO uint32_t TIE_VALUE;                         /**< GPR for uncertain tie0 or tie1, offset: 0x24 */
@@ -202,20 +201,6 @@ typedef struct {
 #define NOC_BLK_CTRL_NOCMIX_DEXSC_ERR_NPU_LOCK_ERR_RESP_EN_SHIFT (2U)
 /*! NPU_LOCK_ERR_RESP_EN - NPU RAM lock error response enable */
 #define NOC_BLK_CTRL_NOCMIX_DEXSC_ERR_NPU_LOCK_ERR_RESP_EN(x) (((uint32_t)(((uint32_t)(x)) << NOC_BLK_CTRL_NOCMIX_DEXSC_ERR_NPU_LOCK_ERR_RESP_EN_SHIFT)) & NOC_BLK_CTRL_NOCMIX_DEXSC_ERR_NPU_LOCK_ERR_RESP_EN_MASK)
-/*! @} */
-
-/*! @name AXI_LIMIT_WAKEUPMIX - AXI limit wakeupmix configuration */
-/*! @{ */
-
-#define NOC_BLK_CTRL_NOCMIX_AXI_LIMIT_WAKEUPMIX_ENABLE_MASK (0x1U)
-#define NOC_BLK_CTRL_NOCMIX_AXI_LIMIT_WAKEUPMIX_ENABLE_SHIFT (0U)
-/*! ENABLE - Enable beat limiter */
-#define NOC_BLK_CTRL_NOCMIX_AXI_LIMIT_WAKEUPMIX_ENABLE(x) (((uint32_t)(((uint32_t)(x)) << NOC_BLK_CTRL_NOCMIX_AXI_LIMIT_WAKEUPMIX_ENABLE_SHIFT)) & NOC_BLK_CTRL_NOCMIX_AXI_LIMIT_WAKEUPMIX_ENABLE_MASK)
-
-#define NOC_BLK_CTRL_NOCMIX_AXI_LIMIT_WAKEUPMIX_BEAT_LIMIT_MASK (0xFFFF0000U)
-#define NOC_BLK_CTRL_NOCMIX_AXI_LIMIT_WAKEUPMIX_BEAT_LIMIT_SHIFT (16U)
-/*! BEAT_LIMIT - Burst beat limit */
-#define NOC_BLK_CTRL_NOCMIX_AXI_LIMIT_WAKEUPMIX_BEAT_LIMIT(x) (((uint32_t)(((uint32_t)(x)) << NOC_BLK_CTRL_NOCMIX_AXI_LIMIT_WAKEUPMIX_BEAT_LIMIT_SHIFT)) & NOC_BLK_CTRL_NOCMIX_AXI_LIMIT_WAKEUPMIX_BEAT_LIMIT_MASK)
 /*! @} */
 
 /*! @name CACHE_ATTR - AxCACHE[1] override configuration register */

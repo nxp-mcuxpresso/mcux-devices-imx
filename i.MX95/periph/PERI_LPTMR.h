@@ -44,13 +44,13 @@
 **                          MIMX9596XVZXN_cm7
 **
 **     Version:             rev. 1.0, 2023-01-10
-**     Build:               b240728
+**     Build:               b250415
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for LPTMR
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -203,8 +203,8 @@ typedef struct {
 #define LPTMR_CSR_TCF_SHIFT                      (7U)
 /*! TCF - Timer Compare Flag
  *  0b0..CNR != (CMR + 1)
- *  0b1..CNR = (CMR + 1)
  *  0b0..No effect
+ *  0b1..CNR = (CMR + 1)
  *  0b1..Clear the flag
  */
 #define LPTMR_CSR_TCF(x)                         (((uint32_t)(((uint32_t)(x)) << LPTMR_CSR_TCF_SHIFT)) & LPTMR_CSR_TCF_MASK)

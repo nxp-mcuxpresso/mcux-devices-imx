@@ -44,13 +44,13 @@
 **                          MIMX9596XVZXN_cm7
 **
 **     Version:             rev. 1.0, 2023-01-10
-**     Build:               b240728
+**     Build:               b250415
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for ENETC_PF_EMDIO
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -339,7 +339,7 @@ typedef struct {
 
 #define ENETC_PF_EMDIO_EMDIO_STAT_REQ_TYPE_MASK  (0x80000U)
 #define ENETC_PF_EMDIO_EMDIO_STAT_REQ_TYPE_SHIFT (19U)
-/*! REQ_TYPE - Port ID */
+/*! REQ_TYPE - Request type */
 #define ENETC_PF_EMDIO_EMDIO_STAT_REQ_TYPE(x)    (((uint32_t)(((uint32_t)(x)) << ENETC_PF_EMDIO_EMDIO_STAT_REQ_TYPE_SHIFT)) & ENETC_PF_EMDIO_EMDIO_STAT_REQ_TYPE_MASK)
 /*! @} */
 

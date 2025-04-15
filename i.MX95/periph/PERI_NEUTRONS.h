@@ -44,13 +44,13 @@
 **                          MIMX9596XVZXN_cm7
 **
 **     Version:             rev. 1.0, 2023-01-10
-**     Build:               b240728
+**     Build:               b250415
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for neutrons
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -828,7 +828,6 @@ typedef struct {
  *  0b00..Normal slice (src_stride)
  *  0b01..Destination stride (using {pad,src_stride})
  *  0b10..Inject padding (using src_stride)
- *  *..
  */
 #define neutrons_TTCTRL2_MODE(x)                 (((uint32_t)(((uint32_t)(x)) << neutrons_TTCTRL2_MODE_SHIFT)) & neutrons_TTCTRL2_MODE_MASK)
 
@@ -892,50 +891,50 @@ typedef struct {
 #define neutrons_CONFIG_TTINT_MASK               (0x100U)
 #define neutrons_CONFIG_TTINT_SHIFT              (8U)
 /*! TTINT - TCM-to-TCM Channel Interrupt Status
- *  0b0..No interrupt generated
- *  0b1..Interrupt generated
  *  0b0..No effect
+ *  0b0..No interrupt generated
  *  0b1..Clear
+ *  0b1..Interrupt generated
  */
 #define neutrons_CONFIG_TTINT(x)                 (((uint32_t)(((uint32_t)(x)) << neutrons_CONFIG_TTINT_SHIFT)) & neutrons_CONFIG_TTINT_MASK)
 
 #define neutrons_CONFIG_FINT_MASK                (0x200U)
 #define neutrons_CONFIG_FINT_SHIFT               (9U)
 /*! FINT - Fetch Channel Interrupt Status
- *  0b0..No interrupt generated
- *  0b1..Interrupt generated
  *  0b0..No effect
+ *  0b0..No interrupt generated
  *  0b1..Clear
+ *  0b1..Interrupt generated
  */
 #define neutrons_CONFIG_FINT(x)                  (((uint32_t)(((uint32_t)(x)) << neutrons_CONFIG_FINT_SHIFT)) & neutrons_CONFIG_FINT_MASK)
 
 #define neutrons_CONFIG_PINT_MASK                (0x400U)
 #define neutrons_CONFIG_PINT_SHIFT               (10U)
 /*! PINT - Push Channel Interrupt Status
- *  0b0..No interrupt generated
- *  0b1..Interrupt generated
  *  0b0..No effect
+ *  0b0..No interrupt generated
  *  0b1..Clear
+ *  0b1..Interrupt generated
  */
 #define neutrons_CONFIG_PINT(x)                  (((uint32_t)(((uint32_t)(x)) << neutrons_CONFIG_PINT_SHIFT)) & neutrons_CONFIG_PINT_MASK)
 
 #define neutrons_CONFIG_WINT_MASK                (0x800U)
 #define neutrons_CONFIG_WINT_SHIFT               (11U)
 /*! WINT - Data Mover Weight Channel Interrupt
- *  0b0..No interrupt generated
- *  0b1..Interrupt generated
  *  0b0..No effect
+ *  0b0..No interrupt generated
  *  0b1..Clear
+ *  0b1..Interrupt generated
  */
 #define neutrons_CONFIG_WINT(x)                  (((uint32_t)(((uint32_t)(x)) << neutrons_CONFIG_WINT_SHIFT)) & neutrons_CONFIG_WINT_MASK)
 
 #define neutrons_CONFIG_EINT_MASK                (0x1000U)
 #define neutrons_CONFIG_EINT_SHIFT               (12U)
 /*! EINT - Data Mover Error Interrupt
- *  0b0..No interrupt generated
- *  0b1..Interrupt generated
  *  0b0..No effect
+ *  0b0..No interrupt generated
  *  0b1..Clear
+ *  0b1..Interrupt generated
  */
 #define neutrons_CONFIG_EINT(x)                  (((uint32_t)(((uint32_t)(x)) << neutrons_CONFIG_EINT_SHIFT)) & neutrons_CONFIG_EINT_MASK)
 
@@ -1064,6 +1063,22 @@ typedef struct {
  *  0b1..Error
  */
 #define neutrons_STATUS_DECOMPERR(x)             (((uint32_t)(((uint32_t)(x)) << neutrons_STATUS_DECOMPERR_SHIFT)) & neutrons_STATUS_DECOMPERR_MASK)
+
+#define neutrons_STATUS_RERR_MASK                (0x40000000U)
+#define neutrons_STATUS_RERR_SHIFT               (30U)
+/*! RERR - Bus Read Response Error
+ *  0b0..No error
+ *  0b1..DMA read transaction received an error response
+ */
+#define neutrons_STATUS_RERR(x)                  (((uint32_t)(((uint32_t)(x)) << neutrons_STATUS_RERR_SHIFT)) & neutrons_STATUS_RERR_MASK)
+
+#define neutrons_STATUS_WERR_MASK                (0x80000000U)
+#define neutrons_STATUS_WERR_SHIFT               (31U)
+/*! WERR - Bus Write Response Error
+ *  0b0..No error
+ *  0b1..DMA write transaction received an error response
+ */
+#define neutrons_STATUS_WERR(x)                  (((uint32_t)(((uint32_t)(x)) << neutrons_STATUS_WERR_SHIFT)) & neutrons_STATUS_WERR_MASK)
 /*! @} */
 
 /*! @name DFORDER - Data Fetch Order Manager */
@@ -1250,7 +1265,6 @@ typedef struct {
 /*! MODE - Mode
  *  0b00..Disabled
  *  0b01..Activate
- *  *..
  */
 #define neutrons_DCTRL1_PUSH_MODE(x)             (((uint32_t)(((uint32_t)(x)) << neutrons_DCTRL1_PUSH_MODE_SHIFT)) & neutrons_DCTRL1_PUSH_MODE_MASK)
 
@@ -1307,7 +1321,6 @@ typedef struct {
 /*! MODE - Mode
  *  0b00..Disabled
  *  0b01..Activate
- *  *..
  */
 #define neutrons_DCTRL2_PUSH_MODE(x)             (((uint32_t)(((uint32_t)(x)) << neutrons_DCTRL2_PUSH_MODE_SHIFT)) & neutrons_DCTRL2_PUSH_MODE_MASK)
 
@@ -2427,7 +2440,6 @@ typedef struct {
  *  0b00..None. No listener mode
  *  0b01..Data listening
  *  0b10..Weight listening
- *  *..
  */
 #define neutrons_LISTEN_MODE(x)                  (((uint32_t)(((uint32_t)(x)) << neutrons_LISTEN_MODE_SHIFT)) & neutrons_LISTEN_MODE_MASK)
 

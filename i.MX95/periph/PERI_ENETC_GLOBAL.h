@@ -44,13 +44,13 @@
 **                          MIMX9596XVZXN_cm7
 **
 **     Version:             rev. 1.0, 2023-01-10
-**     Build:               b240728
+**     Build:               b250415
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for ENETC_GLOBAL
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -184,12 +184,12 @@ typedef struct {
        uint8_t RESERVED_10[280];
   union {                                          /* offset: 0xE20 */
     struct {                                         /* offset: 0xE20 */
-      __IO uint32_t EMDIOUFSBECR;                      /**< EMDIO uncorrectable fatal system bus error configuration register, offset: 0xE20, not available in all instances (available on 14 out of 70) */
-      __IO uint32_t EMDIOUFSBESR;                      /**< EMDIO uncorrectable fatal system bus error status register, offset: 0xE24, not available in all instances (available on 14 out of 70) */
+      __IO uint32_t EMDIOUFSBECR;                      /**< EMDIO uncorrectable fatal system bus error configuration register, offset: 0xE20, not available in all instances (available on 14 out of 56) */
+      __IO uint32_t EMDIOUFSBESR;                      /**< EMDIO uncorrectable fatal system bus error status register, offset: 0xE24, not available in all instances (available on 14 out of 56) */
     } EMDIO;
     struct {                                         /* offset: 0xE20 */
-      __IO uint32_t TUFSBECR;                          /**< Timer uncorrectable fatal system bus error configuration register, offset: 0xE20, not available in all instances (available on 14 out of 70) */
-      __IO uint32_t TUFSBESR;                          /**< Timer uncorrectable fatal system bus error status register, offset: 0xE24, not available in all instances (available on 14 out of 70) */
+      __IO uint32_t TUFSBECR;                          /**< Timer uncorrectable fatal system bus error configuration register, offset: 0xE20, not available in all instances (available on 14 out of 56) */
+      __IO uint32_t TUFSBESR;                          /**< Timer uncorrectable fatal system bus error status register, offset: 0xE24, not available in all instances (available on 14 out of 56) */
     } TIMER;
   };
 } ENETC_GLOBAL_Type;
@@ -354,15 +354,15 @@ typedef struct {
 /*! @name PCEOR - PCE 0 operational register */
 /*! @{ */
 
-#define ENETC_GLOBAL_PCEOR_NUM_FRAMES_MASK       (0x3FU)
+#define ENETC_GLOBAL_PCEOR_NUM_FRAMES_MASK       (0x7FU)
 #define ENETC_GLOBAL_PCEOR_NUM_FRAMES_SHIFT      (0U)
 #define ENETC_GLOBAL_PCEOR_NUM_FRAMES(x)         (((uint32_t)(((uint32_t)(x)) << ENETC_GLOBAL_PCEOR_NUM_FRAMES_SHIFT)) & ENETC_GLOBAL_PCEOR_NUM_FRAMES_MASK)
 
-#define ENETC_GLOBAL_PCEOR_HWM_FRAMES_MASK       (0x3F00U)
+#define ENETC_GLOBAL_PCEOR_HWM_FRAMES_MASK       (0x7F00U)
 #define ENETC_GLOBAL_PCEOR_HWM_FRAMES_SHIFT      (8U)
 #define ENETC_GLOBAL_PCEOR_HWM_FRAMES(x)         (((uint32_t)(((uint32_t)(x)) << ENETC_GLOBAL_PCEOR_HWM_FRAMES_SHIFT)) & ENETC_GLOBAL_PCEOR_HWM_FRAMES_MASK)
 
-#define ENETC_GLOBAL_PCEOR_MAX_FRAMES_MASK       (0x3F0000U)
+#define ENETC_GLOBAL_PCEOR_MAX_FRAMES_MASK       (0x7F0000U)
 #define ENETC_GLOBAL_PCEOR_MAX_FRAMES_SHIFT      (16U)
 /*! MAX_FRAMES - Maximum number of concurrent frames that can be processed by the PCE block */
 #define ENETC_GLOBAL_PCEOR_MAX_FRAMES(x)         (((uint32_t)(((uint32_t)(x)) << ENETC_GLOBAL_PCEOR_MAX_FRAMES_SHIFT)) & ENETC_GLOBAL_PCEOR_MAX_FRAMES_MASK)

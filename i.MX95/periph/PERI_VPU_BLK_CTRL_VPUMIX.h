@@ -44,13 +44,13 @@
 **                          MIMX9596XVZXN_cm7
 **
 **     Version:             rev. 1.0, 2023-01-10
-**     Build:               b240728
+**     Build:               b250415
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for VPU_BLK_CTRL_VPUMIX
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -151,8 +151,8 @@ typedef struct {
 #define VPU_BLK_CTRL_VPUMIX_VPU_STATUS_VPU_IDLE_MASK (0x1U)
 #define VPU_BLK_CTRL_VPUMIX_VPU_STATUS_VPU_IDLE_SHIFT (0U)
 /*! VPU_IDLE - VPU idle status
- *  0b1..VPU is idle
  *  0b0..VPU is not idle
+ *  0b1..VPU is idle
  */
 #define VPU_BLK_CTRL_VPUMIX_VPU_STATUS_VPU_IDLE(x) (((uint32_t)(((uint32_t)(x)) << VPU_BLK_CTRL_VPUMIX_VPU_STATUS_VPU_IDLE_SHIFT)) & VPU_BLK_CTRL_VPUMIX_VPU_STATUS_VPU_IDLE_MASK)
 /*! @} */
@@ -173,8 +173,8 @@ typedef struct {
 #define VPU_BLK_CTRL_VPUMIX_INIT_PENDING_TX_VPU_Secondary_SHIFT (1U)
 /*! VPU_Secondary - Status information from initiator NIU NoC that indicates if there are pending
  *    transaction in the NoC for VPU Secondary NIUs
- *  0b1..Pending transaction
  *  0b0..No pending transaction
+ *  0b1..Pending transaction
  */
 #define VPU_BLK_CTRL_VPUMIX_INIT_PENDING_TX_VPU_Secondary(x) (((uint32_t)(((uint32_t)(x)) << VPU_BLK_CTRL_VPUMIX_INIT_PENDING_TX_VPU_Secondary_SHIFT)) & VPU_BLK_CTRL_VPUMIX_INIT_PENDING_TX_VPU_Secondary_MASK)
 
@@ -182,8 +182,8 @@ typedef struct {
 #define VPU_BLK_CTRL_VPUMIX_INIT_PENDING_TX_JPEG_Encode_SHIFT (2U)
 /*! JPEG_Encode - Status information from initiator NIU NoC that indicates if there are pending
  *    transaction in the NoC for JPEG Encode NIUs
- *  0b1..Pending transaction
  *  0b0..No pending transaction
+ *  0b1..Pending transaction
  */
 #define VPU_BLK_CTRL_VPUMIX_INIT_PENDING_TX_JPEG_Encode(x) (((uint32_t)(((uint32_t)(x)) << VPU_BLK_CTRL_VPUMIX_INIT_PENDING_TX_JPEG_Encode_SHIFT)) & VPU_BLK_CTRL_VPUMIX_INIT_PENDING_TX_JPEG_Encode_MASK)
 
@@ -191,8 +191,8 @@ typedef struct {
 #define VPU_BLK_CTRL_VPUMIX_INIT_PENDING_TX_JPEG_Decode_SHIFT (3U)
 /*! JPEG_Decode - Status information from initiator NIU NoC that indicates if there are pending
  *    transaction in the NoC for JPEG Decode NIUs
- *  0b1..Pending transaction
  *  0b0..No pending transaction
+ *  0b1..Pending transaction
  */
 #define VPU_BLK_CTRL_VPUMIX_INIT_PENDING_TX_JPEG_Decode(x) (((uint32_t)(((uint32_t)(x)) << VPU_BLK_CTRL_VPUMIX_INIT_PENDING_TX_JPEG_Decode_SHIFT)) & VPU_BLK_CTRL_VPUMIX_INIT_PENDING_TX_JPEG_Decode_MASK)
 /*! @} */
@@ -203,16 +203,16 @@ typedef struct {
 #define VPU_BLK_CTRL_VPUMIX_CLOCK_GATING_CONTROL_Wave_VPU_MASK (0x1U)
 #define VPU_BLK_CTRL_VPUMIX_CLOCK_GATING_CONTROL_Wave_VPU_SHIFT (0U)
 /*! Wave_VPU - Gate the VPU clock (VPU_CLK_ROOT) and its associated network interface units
- *  0b1..Clock is disabled (gated)
  *  0b0..Clock is enabled
+ *  0b1..Clock is disabled (gated)
  */
 #define VPU_BLK_CTRL_VPUMIX_CLOCK_GATING_CONTROL_Wave_VPU(x) (((uint32_t)(((uint32_t)(x)) << VPU_BLK_CTRL_VPUMIX_CLOCK_GATING_CONTROL_Wave_VPU_SHIFT)) & VPU_BLK_CTRL_VPUMIX_CLOCK_GATING_CONTROL_Wave_VPU_MASK)
 
 #define VPU_BLK_CTRL_VPUMIX_CLOCK_GATING_CONTROL_JPEG_ENC_MASK (0x2U)
 #define VPU_BLK_CTRL_VPUMIX_CLOCK_GATING_CONTROL_JPEG_ENC_SHIFT (1U)
 /*! JPEG_ENC - Gate the JPEG ENC clock (VPU_JPEG_CLK_ROOT) and its associated network interface unit
- *  0b1..Clock is disabled (gated)
  *  0b0..Clock is enabled
+ *  0b1..Clock is disabled (gated)
  */
 #define VPU_BLK_CTRL_VPUMIX_CLOCK_GATING_CONTROL_JPEG_ENC(x) (((uint32_t)(((uint32_t)(x)) << VPU_BLK_CTRL_VPUMIX_CLOCK_GATING_CONTROL_JPEG_ENC_SHIFT)) & VPU_BLK_CTRL_VPUMIX_CLOCK_GATING_CONTROL_JPEG_ENC_MASK)
 

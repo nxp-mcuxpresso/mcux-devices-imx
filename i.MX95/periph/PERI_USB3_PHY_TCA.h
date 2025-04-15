@@ -44,13 +44,13 @@
 **                          MIMX9596XVZXN_cm7
 **
 **     Version:             rev. 1.0, 2023-01-10
-**     Build:               b240728
+**     Build:               b250415
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for USB3_PHY_TCA
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -192,8 +192,8 @@ typedef struct {
 #define USB3_PHY_TCA_TCA_CLK_RST_XA_RST_SW_MASK  (0x200U)
 #define USB3_PHY_TCA_TCA_CLK_RST_XA_RST_SW_SHIFT (9U)
 /*! XA_RST_SW - XBar Assist Soft Reset
- *  0b1..Soft reset is not applied
  *  0b0..Soft reset is applied
+ *  0b1..Soft reset is not applied
  */
 #define USB3_PHY_TCA_TCA_CLK_RST_XA_RST_SW(x)    (((uint32_t)(((uint32_t)(x)) << USB3_PHY_TCA_TCA_CLK_RST_XA_RST_SW_SHIFT)) & USB3_PHY_TCA_TCA_CLK_RST_XA_RST_SW_MASK)
 /*! @} */

@@ -44,13 +44,13 @@
 **                          MIMX9596XVZXN_cm7
 **
 **     Version:             rev. 1.0, 2023-01-10
-**     Build:               b240728
+**     Build:               b250415
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for AON_SYSPM
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -186,8 +186,8 @@ typedef struct {
 /*! CMODE - Count Mode
  *  0b00..Counted in both User and Privileged modes
  *  0b01..
- *  0b10..Counted only in User mode
- *  0b11..Counted only in Privileged mode
+ *  0b10..
+ *  0b11..
  */
 #define AON_SYSPM_PMCR_CMODE(x)                  (((uint32_t)(((uint32_t)(x)) << AON_SYSPM_PMCR_CMODE_SHIFT)) & AON_SYSPM_PMCR_CMODE_MASK)
 

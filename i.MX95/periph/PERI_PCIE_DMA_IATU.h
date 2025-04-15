@@ -44,13 +44,13 @@
 **                          MIMX9596XVZXN_cm7
 **
 **     Version:             rev. 1.0, 2023-01-10
-**     Build:               b240728
+**     Build:               b250415
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for PCIE_DMA_IATU
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -527,17 +527,17 @@ typedef struct {
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_0_INHIBIT_PAYLOAD_MASK (0x400000U)
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_0_INHIBIT_PAYLOAD_SHIFT (22U)
 /*! INHIBIT_PAYLOAD - Inhibit TLP Payload Data for TLP's in Matched Region; assign iATU region to be TLP without data.
- *  0b1..Fmt[1] =0 so that only TLP type without data is sent. For example, a Msg instead of MsgD will be sent.
  *  0b0..Fmt[1] =0/1 so that TLPs with or without data can be sent.
+ *  0b1..Fmt[1] =0 so that only TLP type without data is sent. For example, a Msg instead of MsgD will be sent.
  */
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_0_INHIBIT_PAYLOAD(x) (((uint32_t)(((uint32_t)(x)) << PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_0_INHIBIT_PAYLOAD_SHIFT)) & PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_0_INHIBIT_PAYLOAD_MASK)
 
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_0_HEADER_SUBSTITUTE_EN_MASK (0x800000U)
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_0_HEADER_SUBSTITUTE_EN_SHIFT (23U)
 /*! HEADER_SUBSTITUTE_EN - Header Substitute Enable.
+ *  0b0..LWR_TARGET_RW in the iATU_LWR_TARGET_ADDR_OFF_OUTBOUND_i register forms the new address of the translated region.
  *  0b1..LWR_TARGET_RW in the iATU_LWR_TARGET_ADDR_OFF_OUTBOUND_i register is used to fill bytes 8-to-11 (for 3
  *       DWORD header) or bytes 12-to-15 (for 4 DWORD header) of the translated TLP header.
- *  0b0..LWR_TARGET_RW in the iATU_LWR_TARGET_ADDR_OFF_OUTBOUND_i register forms the new address of the translated region.
  */
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_0_HEADER_SUBSTITUTE_EN(x) (((uint32_t)(((uint32_t)(x)) << PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_0_HEADER_SUBSTITUTE_EN_SHIFT)) & PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_0_HEADER_SUBSTITUTE_EN_MASK)
 
@@ -760,10 +760,10 @@ typedef struct {
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_0_RESPONSE_CODE_MASK (0x3000000U)
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_0_RESPONSE_CODE_SHIFT (24U)
 /*! RESPONSE_CODE - Response Code.
- *  0b10..Completer abort (CA)
  *  0b00..Normal RADM filter response is used.
- *  0b11..Not used / undefined / reserved
  *  0b01..Unsupported request (UR)
+ *  0b10..Completer abort (CA)
+ *  0b11..Not used / undefined / reserved
  */
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_0_RESPONSE_CODE(x) (((uint32_t)(((uint32_t)(x)) << PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_0_RESPONSE_CODE_SHIFT)) & PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_0_RESPONSE_CODE_MASK)
 
@@ -794,8 +794,8 @@ typedef struct {
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_0_MATCH_MODE_MASK (0x40000000U)
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_0_MATCH_MODE_SHIFT (30U)
 /*! MATCH_MODE - Match Mode.
- *  0b1..The interpretation is dependent on TLP type, that is, MEM/IO, CFG0, or MSG/MSGD TLPs.
  *  0b0..The interpretation is dependent on TLP type, that is, MEM/IO, CFG0, or MSG/MSGD TLPs.
+ *  0b1..The interpretation is dependent on TLP type, that is, MEM/IO, CFG0, or MSG/MSGD TLPs.
  */
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_0_MATCH_MODE(x) (((uint32_t)(((uint32_t)(x)) << PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_0_MATCH_MODE_SHIFT)) & PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_0_MATCH_MODE_MASK)
 
@@ -838,17 +838,17 @@ typedef struct {
 #define PCIE_DMA_IATU_IATU_LIMIT_ADDR_OFF_INBOUND_0_CBUF_INCR_SHIFT (0U)
 /*! CBUF_INCR - Circular Buffer Increment.
  *  0b0000..0 (Default; legacy Single Address Location mode)
- *  0b1001..1024
- *  0b0110..128
- *  0b0011..16
- *  0b1010..2048
- *  0b0111..256
- *  0b0100..32
  *  0b0001..4
- *  0b1011..4096
- *  0b1000..512
- *  0b0101..64
  *  0b0010..8
+ *  0b0011..16
+ *  0b0100..32
+ *  0b0101..64
+ *  0b0110..128
+ *  0b0111..256
+ *  0b1000..512
+ *  0b1001..1024
+ *  0b1010..2048
+ *  0b1011..4096
  *  0b1100..8192
  *  0b1101..rsvd.
  *  0b1110..rsvd.
@@ -992,17 +992,17 @@ typedef struct {
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_1_INHIBIT_PAYLOAD_MASK (0x400000U)
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_1_INHIBIT_PAYLOAD_SHIFT (22U)
 /*! INHIBIT_PAYLOAD - Inhibit TLP Payload Data for TLP's in Matched Region; assign iATU region to be TLP without data.
- *  0b1..Fmt[1] =0 so that only TLP type without data is sent. For example, a Msg instead of MsgD will be sent.
  *  0b0..Fmt[1] =0/1 so that TLPs with or without data can be sent.
+ *  0b1..Fmt[1] =0 so that only TLP type without data is sent. For example, a Msg instead of MsgD will be sent.
  */
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_1_INHIBIT_PAYLOAD(x) (((uint32_t)(((uint32_t)(x)) << PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_1_INHIBIT_PAYLOAD_SHIFT)) & PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_1_INHIBIT_PAYLOAD_MASK)
 
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_1_HEADER_SUBSTITUTE_EN_MASK (0x800000U)
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_1_HEADER_SUBSTITUTE_EN_SHIFT (23U)
 /*! HEADER_SUBSTITUTE_EN - Header Substitute Enable.
+ *  0b0..LWR_TARGET_RW in the iATU_LWR_TARGET_ADDR_OFF_OUTBOUND_i register forms the new address of the translated region.
  *  0b1..LWR_TARGET_RW in the iATU_LWR_TARGET_ADDR_OFF_OUTBOUND_i register is used to fill bytes 8-to-11 (for 3
  *       DWORD header) or bytes 12-to-15 (for 4 DWORD header) of the translated TLP header.
- *  0b0..LWR_TARGET_RW in the iATU_LWR_TARGET_ADDR_OFF_OUTBOUND_i register forms the new address of the translated region.
  */
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_1_HEADER_SUBSTITUTE_EN(x) (((uint32_t)(((uint32_t)(x)) << PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_1_HEADER_SUBSTITUTE_EN_SHIFT)) & PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_1_HEADER_SUBSTITUTE_EN_MASK)
 
@@ -1225,10 +1225,10 @@ typedef struct {
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_1_RESPONSE_CODE_MASK (0x3000000U)
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_1_RESPONSE_CODE_SHIFT (24U)
 /*! RESPONSE_CODE - Response Code.
- *  0b10..Completer abort (CA)
  *  0b00..Normal RADM filter response is used.
- *  0b11..Not used / undefined / reserved
  *  0b01..Unsupported request (UR)
+ *  0b10..Completer abort (CA)
+ *  0b11..Not used / undefined / reserved
  */
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_1_RESPONSE_CODE(x) (((uint32_t)(((uint32_t)(x)) << PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_1_RESPONSE_CODE_SHIFT)) & PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_1_RESPONSE_CODE_MASK)
 
@@ -1259,8 +1259,8 @@ typedef struct {
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_1_MATCH_MODE_MASK (0x40000000U)
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_1_MATCH_MODE_SHIFT (30U)
 /*! MATCH_MODE - Match Mode.
- *  0b1..The interpretation is dependent on TLP type, that is, MEM/IO, CFG0, or MSG/MSGD TLPs.
  *  0b0..The interpretation is dependent on TLP type, that is, MEM/IO, CFG0, or MSG/MSGD TLPs.
+ *  0b1..The interpretation is dependent on TLP type, that is, MEM/IO, CFG0, or MSG/MSGD TLPs.
  */
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_1_MATCH_MODE(x) (((uint32_t)(((uint32_t)(x)) << PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_1_MATCH_MODE_SHIFT)) & PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_1_MATCH_MODE_MASK)
 
@@ -1303,17 +1303,17 @@ typedef struct {
 #define PCIE_DMA_IATU_IATU_LIMIT_ADDR_OFF_INBOUND_1_CBUF_INCR_SHIFT (0U)
 /*! CBUF_INCR - Circular Buffer Increment.
  *  0b0000..0 (Default; legacy Single Address Location mode)
- *  0b1001..1024
- *  0b0110..128
- *  0b0011..16
- *  0b1010..2048
- *  0b0111..256
- *  0b0100..32
  *  0b0001..4
- *  0b1011..4096
- *  0b1000..512
- *  0b0101..64
  *  0b0010..8
+ *  0b0011..16
+ *  0b0100..32
+ *  0b0101..64
+ *  0b0110..128
+ *  0b0111..256
+ *  0b1000..512
+ *  0b1001..1024
+ *  0b1010..2048
+ *  0b1011..4096
  *  0b1100..8192
  *  0b1101..rsvd.
  *  0b1110..rsvd.
@@ -1457,17 +1457,17 @@ typedef struct {
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_2_INHIBIT_PAYLOAD_MASK (0x400000U)
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_2_INHIBIT_PAYLOAD_SHIFT (22U)
 /*! INHIBIT_PAYLOAD - Inhibit TLP Payload Data for TLP's in Matched Region; assign iATU region to be TLP without data.
- *  0b1..Fmt[1] =0 so that only TLP type without data is sent. For example, a Msg instead of MsgD will be sent.
  *  0b0..Fmt[1] =0/1 so that TLPs with or without data can be sent.
+ *  0b1..Fmt[1] =0 so that only TLP type without data is sent. For example, a Msg instead of MsgD will be sent.
  */
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_2_INHIBIT_PAYLOAD(x) (((uint32_t)(((uint32_t)(x)) << PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_2_INHIBIT_PAYLOAD_SHIFT)) & PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_2_INHIBIT_PAYLOAD_MASK)
 
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_2_HEADER_SUBSTITUTE_EN_MASK (0x800000U)
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_2_HEADER_SUBSTITUTE_EN_SHIFT (23U)
 /*! HEADER_SUBSTITUTE_EN - Header Substitute Enable.
+ *  0b0..LWR_TARGET_RW in the iATU_LWR_TARGET_ADDR_OFF_OUTBOUND_i register forms the new address of the translated region.
  *  0b1..LWR_TARGET_RW in the iATU_LWR_TARGET_ADDR_OFF_OUTBOUND_i register is used to fill bytes 8-to-11 (for 3
  *       DWORD header) or bytes 12-to-15 (for 4 DWORD header) of the translated TLP header.
- *  0b0..LWR_TARGET_RW in the iATU_LWR_TARGET_ADDR_OFF_OUTBOUND_i register forms the new address of the translated region.
  */
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_2_HEADER_SUBSTITUTE_EN(x) (((uint32_t)(((uint32_t)(x)) << PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_2_HEADER_SUBSTITUTE_EN_SHIFT)) & PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_2_HEADER_SUBSTITUTE_EN_MASK)
 
@@ -1690,10 +1690,10 @@ typedef struct {
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_2_RESPONSE_CODE_MASK (0x3000000U)
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_2_RESPONSE_CODE_SHIFT (24U)
 /*! RESPONSE_CODE - Response Code.
- *  0b10..Completer abort (CA)
  *  0b00..Normal RADM filter response is used.
- *  0b11..Not used / undefined / reserved
  *  0b01..Unsupported request (UR)
+ *  0b10..Completer abort (CA)
+ *  0b11..Not used / undefined / reserved
  */
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_2_RESPONSE_CODE(x) (((uint32_t)(((uint32_t)(x)) << PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_2_RESPONSE_CODE_SHIFT)) & PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_2_RESPONSE_CODE_MASK)
 
@@ -1724,8 +1724,8 @@ typedef struct {
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_2_MATCH_MODE_MASK (0x40000000U)
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_2_MATCH_MODE_SHIFT (30U)
 /*! MATCH_MODE - Match Mode.
- *  0b1..The interpretation is dependent on TLP type, that is, MEM/IO, CFG0, or MSG/MSGD TLPs.
  *  0b0..The interpretation is dependent on TLP type, that is, MEM/IO, CFG0, or MSG/MSGD TLPs.
+ *  0b1..The interpretation is dependent on TLP type, that is, MEM/IO, CFG0, or MSG/MSGD TLPs.
  */
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_2_MATCH_MODE(x) (((uint32_t)(((uint32_t)(x)) << PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_2_MATCH_MODE_SHIFT)) & PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_2_MATCH_MODE_MASK)
 
@@ -1768,17 +1768,17 @@ typedef struct {
 #define PCIE_DMA_IATU_IATU_LIMIT_ADDR_OFF_INBOUND_2_CBUF_INCR_SHIFT (0U)
 /*! CBUF_INCR - Circular Buffer Increment.
  *  0b0000..0 (Default; legacy Single Address Location mode)
- *  0b1001..1024
- *  0b0110..128
- *  0b0011..16
- *  0b1010..2048
- *  0b0111..256
- *  0b0100..32
  *  0b0001..4
- *  0b1011..4096
- *  0b1000..512
- *  0b0101..64
  *  0b0010..8
+ *  0b0011..16
+ *  0b0100..32
+ *  0b0101..64
+ *  0b0110..128
+ *  0b0111..256
+ *  0b1000..512
+ *  0b1001..1024
+ *  0b1010..2048
+ *  0b1011..4096
  *  0b1100..8192
  *  0b1101..rsvd.
  *  0b1110..rsvd.
@@ -1922,17 +1922,17 @@ typedef struct {
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_3_INHIBIT_PAYLOAD_MASK (0x400000U)
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_3_INHIBIT_PAYLOAD_SHIFT (22U)
 /*! INHIBIT_PAYLOAD - Inhibit TLP Payload Data for TLP's in Matched Region; assign iATU region to be TLP without data.
- *  0b1..Fmt[1] =0 so that only TLP type without data is sent. For example, a Msg instead of MsgD will be sent.
  *  0b0..Fmt[1] =0/1 so that TLPs with or without data can be sent.
+ *  0b1..Fmt[1] =0 so that only TLP type without data is sent. For example, a Msg instead of MsgD will be sent.
  */
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_3_INHIBIT_PAYLOAD(x) (((uint32_t)(((uint32_t)(x)) << PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_3_INHIBIT_PAYLOAD_SHIFT)) & PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_3_INHIBIT_PAYLOAD_MASK)
 
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_3_HEADER_SUBSTITUTE_EN_MASK (0x800000U)
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_3_HEADER_SUBSTITUTE_EN_SHIFT (23U)
 /*! HEADER_SUBSTITUTE_EN - Header Substitute Enable.
+ *  0b0..LWR_TARGET_RW in the iATU_LWR_TARGET_ADDR_OFF_OUTBOUND_i register forms the new address of the translated region.
  *  0b1..LWR_TARGET_RW in the iATU_LWR_TARGET_ADDR_OFF_OUTBOUND_i register is used to fill bytes 8-to-11 (for 3
  *       DWORD header) or bytes 12-to-15 (for 4 DWORD header) of the translated TLP header.
- *  0b0..LWR_TARGET_RW in the iATU_LWR_TARGET_ADDR_OFF_OUTBOUND_i register forms the new address of the translated region.
  */
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_3_HEADER_SUBSTITUTE_EN(x) (((uint32_t)(((uint32_t)(x)) << PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_3_HEADER_SUBSTITUTE_EN_SHIFT)) & PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_3_HEADER_SUBSTITUTE_EN_MASK)
 
@@ -2155,10 +2155,10 @@ typedef struct {
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_3_RESPONSE_CODE_MASK (0x3000000U)
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_3_RESPONSE_CODE_SHIFT (24U)
 /*! RESPONSE_CODE - Response Code.
- *  0b10..Completer abort (CA)
  *  0b00..Normal RADM filter response is used.
- *  0b11..Not used / undefined / reserved
  *  0b01..Unsupported request (UR)
+ *  0b10..Completer abort (CA)
+ *  0b11..Not used / undefined / reserved
  */
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_3_RESPONSE_CODE(x) (((uint32_t)(((uint32_t)(x)) << PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_3_RESPONSE_CODE_SHIFT)) & PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_3_RESPONSE_CODE_MASK)
 
@@ -2189,8 +2189,8 @@ typedef struct {
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_3_MATCH_MODE_MASK (0x40000000U)
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_3_MATCH_MODE_SHIFT (30U)
 /*! MATCH_MODE - Match Mode.
- *  0b1..The interpretation is dependent on TLP type, that is, MEM/IO, CFG0, or MSG/MSGD TLPs.
  *  0b0..The interpretation is dependent on TLP type, that is, MEM/IO, CFG0, or MSG/MSGD TLPs.
+ *  0b1..The interpretation is dependent on TLP type, that is, MEM/IO, CFG0, or MSG/MSGD TLPs.
  */
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_3_MATCH_MODE(x) (((uint32_t)(((uint32_t)(x)) << PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_3_MATCH_MODE_SHIFT)) & PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_3_MATCH_MODE_MASK)
 
@@ -2233,17 +2233,17 @@ typedef struct {
 #define PCIE_DMA_IATU_IATU_LIMIT_ADDR_OFF_INBOUND_3_CBUF_INCR_SHIFT (0U)
 /*! CBUF_INCR - Circular Buffer Increment.
  *  0b0000..0 (Default; legacy Single Address Location mode)
- *  0b1001..1024
- *  0b0110..128
- *  0b0011..16
- *  0b1010..2048
- *  0b0111..256
- *  0b0100..32
  *  0b0001..4
- *  0b1011..4096
- *  0b1000..512
- *  0b0101..64
  *  0b0010..8
+ *  0b0011..16
+ *  0b0100..32
+ *  0b0101..64
+ *  0b0110..128
+ *  0b0111..256
+ *  0b1000..512
+ *  0b1001..1024
+ *  0b1010..2048
+ *  0b1011..4096
  *  0b1100..8192
  *  0b1101..rsvd.
  *  0b1110..rsvd.
@@ -2387,17 +2387,17 @@ typedef struct {
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_4_INHIBIT_PAYLOAD_MASK (0x400000U)
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_4_INHIBIT_PAYLOAD_SHIFT (22U)
 /*! INHIBIT_PAYLOAD - Inhibit TLP Payload Data for TLP's in Matched Region; assign iATU region to be TLP without data.
- *  0b1..Fmt[1] =0 so that only TLP type without data is sent. For example, a Msg instead of MsgD will be sent.
  *  0b0..Fmt[1] =0/1 so that TLPs with or without data can be sent.
+ *  0b1..Fmt[1] =0 so that only TLP type without data is sent. For example, a Msg instead of MsgD will be sent.
  */
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_4_INHIBIT_PAYLOAD(x) (((uint32_t)(((uint32_t)(x)) << PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_4_INHIBIT_PAYLOAD_SHIFT)) & PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_4_INHIBIT_PAYLOAD_MASK)
 
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_4_HEADER_SUBSTITUTE_EN_MASK (0x800000U)
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_4_HEADER_SUBSTITUTE_EN_SHIFT (23U)
 /*! HEADER_SUBSTITUTE_EN - Header Substitute Enable.
+ *  0b0..LWR_TARGET_RW in the iATU_LWR_TARGET_ADDR_OFF_OUTBOUND_i register forms the new address of the translated region.
  *  0b1..LWR_TARGET_RW in the iATU_LWR_TARGET_ADDR_OFF_OUTBOUND_i register is used to fill bytes 8-to-11 (for 3
  *       DWORD header) or bytes 12-to-15 (for 4 DWORD header) of the translated TLP header.
- *  0b0..LWR_TARGET_RW in the iATU_LWR_TARGET_ADDR_OFF_OUTBOUND_i register forms the new address of the translated region.
  */
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_4_HEADER_SUBSTITUTE_EN(x) (((uint32_t)(((uint32_t)(x)) << PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_4_HEADER_SUBSTITUTE_EN_SHIFT)) & PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_4_HEADER_SUBSTITUTE_EN_MASK)
 
@@ -2620,10 +2620,10 @@ typedef struct {
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_4_RESPONSE_CODE_MASK (0x3000000U)
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_4_RESPONSE_CODE_SHIFT (24U)
 /*! RESPONSE_CODE - Response Code.
- *  0b10..Completer abort (CA)
  *  0b00..Normal RADM filter response is used.
- *  0b11..Not used / undefined / reserved
  *  0b01..Unsupported request (UR)
+ *  0b10..Completer abort (CA)
+ *  0b11..Not used / undefined / reserved
  */
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_4_RESPONSE_CODE(x) (((uint32_t)(((uint32_t)(x)) << PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_4_RESPONSE_CODE_SHIFT)) & PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_4_RESPONSE_CODE_MASK)
 
@@ -2654,8 +2654,8 @@ typedef struct {
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_4_MATCH_MODE_MASK (0x40000000U)
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_4_MATCH_MODE_SHIFT (30U)
 /*! MATCH_MODE - Match Mode.
- *  0b1..The interpretation is dependent on TLP type, that is, MEM/IO, CFG0, or MSG/MSGD TLPs.
  *  0b0..The interpretation is dependent on TLP type, that is, MEM/IO, CFG0, or MSG/MSGD TLPs.
+ *  0b1..The interpretation is dependent on TLP type, that is, MEM/IO, CFG0, or MSG/MSGD TLPs.
  */
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_4_MATCH_MODE(x) (((uint32_t)(((uint32_t)(x)) << PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_4_MATCH_MODE_SHIFT)) & PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_4_MATCH_MODE_MASK)
 
@@ -2698,17 +2698,17 @@ typedef struct {
 #define PCIE_DMA_IATU_IATU_LIMIT_ADDR_OFF_INBOUND_4_CBUF_INCR_SHIFT (0U)
 /*! CBUF_INCR - Circular Buffer Increment.
  *  0b0000..0 (Default; legacy Single Address Location mode)
- *  0b1001..1024
- *  0b0110..128
- *  0b0011..16
- *  0b1010..2048
- *  0b0111..256
- *  0b0100..32
  *  0b0001..4
- *  0b1011..4096
- *  0b1000..512
- *  0b0101..64
  *  0b0010..8
+ *  0b0011..16
+ *  0b0100..32
+ *  0b0101..64
+ *  0b0110..128
+ *  0b0111..256
+ *  0b1000..512
+ *  0b1001..1024
+ *  0b1010..2048
+ *  0b1011..4096
  *  0b1100..8192
  *  0b1101..rsvd.
  *  0b1110..rsvd.
@@ -2852,17 +2852,17 @@ typedef struct {
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_5_INHIBIT_PAYLOAD_MASK (0x400000U)
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_5_INHIBIT_PAYLOAD_SHIFT (22U)
 /*! INHIBIT_PAYLOAD - Inhibit TLP Payload Data for TLP's in Matched Region; assign iATU region to be TLP without data.
- *  0b1..Fmt[1] =0 so that only TLP type without data is sent. For example, a Msg instead of MsgD will be sent.
  *  0b0..Fmt[1] =0/1 so that TLPs with or without data can be sent.
+ *  0b1..Fmt[1] =0 so that only TLP type without data is sent. For example, a Msg instead of MsgD will be sent.
  */
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_5_INHIBIT_PAYLOAD(x) (((uint32_t)(((uint32_t)(x)) << PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_5_INHIBIT_PAYLOAD_SHIFT)) & PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_5_INHIBIT_PAYLOAD_MASK)
 
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_5_HEADER_SUBSTITUTE_EN_MASK (0x800000U)
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_5_HEADER_SUBSTITUTE_EN_SHIFT (23U)
 /*! HEADER_SUBSTITUTE_EN - Header Substitute Enable.
+ *  0b0..LWR_TARGET_RW in the iATU_LWR_TARGET_ADDR_OFF_OUTBOUND_i register forms the new address of the translated region.
  *  0b1..LWR_TARGET_RW in the iATU_LWR_TARGET_ADDR_OFF_OUTBOUND_i register is used to fill bytes 8-to-11 (for 3
  *       DWORD header) or bytes 12-to-15 (for 4 DWORD header) of the translated TLP header.
- *  0b0..LWR_TARGET_RW in the iATU_LWR_TARGET_ADDR_OFF_OUTBOUND_i register forms the new address of the translated region.
  */
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_5_HEADER_SUBSTITUTE_EN(x) (((uint32_t)(((uint32_t)(x)) << PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_5_HEADER_SUBSTITUTE_EN_SHIFT)) & PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_5_HEADER_SUBSTITUTE_EN_MASK)
 
@@ -3085,10 +3085,10 @@ typedef struct {
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_5_RESPONSE_CODE_MASK (0x3000000U)
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_5_RESPONSE_CODE_SHIFT (24U)
 /*! RESPONSE_CODE - Response Code.
- *  0b10..Completer abort (CA)
  *  0b00..Normal RADM filter response is used.
- *  0b11..Not used / undefined / reserved
  *  0b01..Unsupported request (UR)
+ *  0b10..Completer abort (CA)
+ *  0b11..Not used / undefined / reserved
  */
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_5_RESPONSE_CODE(x) (((uint32_t)(((uint32_t)(x)) << PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_5_RESPONSE_CODE_SHIFT)) & PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_5_RESPONSE_CODE_MASK)
 
@@ -3119,8 +3119,8 @@ typedef struct {
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_5_MATCH_MODE_MASK (0x40000000U)
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_5_MATCH_MODE_SHIFT (30U)
 /*! MATCH_MODE - Match Mode.
- *  0b1..The interpretation is dependent on TLP type, that is, MEM/IO, CFG0, or MSG/MSGD TLPs.
  *  0b0..The interpretation is dependent on TLP type, that is, MEM/IO, CFG0, or MSG/MSGD TLPs.
+ *  0b1..The interpretation is dependent on TLP type, that is, MEM/IO, CFG0, or MSG/MSGD TLPs.
  */
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_5_MATCH_MODE(x) (((uint32_t)(((uint32_t)(x)) << PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_5_MATCH_MODE_SHIFT)) & PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_5_MATCH_MODE_MASK)
 
@@ -3163,17 +3163,17 @@ typedef struct {
 #define PCIE_DMA_IATU_IATU_LIMIT_ADDR_OFF_INBOUND_5_CBUF_INCR_SHIFT (0U)
 /*! CBUF_INCR - Circular Buffer Increment.
  *  0b0000..0 (Default; legacy Single Address Location mode)
- *  0b1001..1024
- *  0b0110..128
- *  0b0011..16
- *  0b1010..2048
- *  0b0111..256
- *  0b0100..32
  *  0b0001..4
- *  0b1011..4096
- *  0b1000..512
- *  0b0101..64
  *  0b0010..8
+ *  0b0011..16
+ *  0b0100..32
+ *  0b0101..64
+ *  0b0110..128
+ *  0b0111..256
+ *  0b1000..512
+ *  0b1001..1024
+ *  0b1010..2048
+ *  0b1011..4096
  *  0b1100..8192
  *  0b1101..rsvd.
  *  0b1110..rsvd.
@@ -3317,17 +3317,17 @@ typedef struct {
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_6_INHIBIT_PAYLOAD_MASK (0x400000U)
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_6_INHIBIT_PAYLOAD_SHIFT (22U)
 /*! INHIBIT_PAYLOAD - Inhibit TLP Payload Data for TLP's in Matched Region; assign iATU region to be TLP without data.
- *  0b1..Fmt[1] =0 so that only TLP type without data is sent. For example, a Msg instead of MsgD will be sent.
  *  0b0..Fmt[1] =0/1 so that TLPs with or without data can be sent.
+ *  0b1..Fmt[1] =0 so that only TLP type without data is sent. For example, a Msg instead of MsgD will be sent.
  */
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_6_INHIBIT_PAYLOAD(x) (((uint32_t)(((uint32_t)(x)) << PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_6_INHIBIT_PAYLOAD_SHIFT)) & PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_6_INHIBIT_PAYLOAD_MASK)
 
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_6_HEADER_SUBSTITUTE_EN_MASK (0x800000U)
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_6_HEADER_SUBSTITUTE_EN_SHIFT (23U)
 /*! HEADER_SUBSTITUTE_EN - Header Substitute Enable.
+ *  0b0..LWR_TARGET_RW in the iATU_LWR_TARGET_ADDR_OFF_OUTBOUND_i register forms the new address of the translated region.
  *  0b1..LWR_TARGET_RW in the iATU_LWR_TARGET_ADDR_OFF_OUTBOUND_i register is used to fill bytes 8-to-11 (for 3
  *       DWORD header) or bytes 12-to-15 (for 4 DWORD header) of the translated TLP header.
- *  0b0..LWR_TARGET_RW in the iATU_LWR_TARGET_ADDR_OFF_OUTBOUND_i register forms the new address of the translated region.
  */
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_6_HEADER_SUBSTITUTE_EN(x) (((uint32_t)(((uint32_t)(x)) << PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_6_HEADER_SUBSTITUTE_EN_SHIFT)) & PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_6_HEADER_SUBSTITUTE_EN_MASK)
 
@@ -3550,10 +3550,10 @@ typedef struct {
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_6_RESPONSE_CODE_MASK (0x3000000U)
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_6_RESPONSE_CODE_SHIFT (24U)
 /*! RESPONSE_CODE - Response Code.
- *  0b10..Completer abort (CA)
  *  0b00..Normal RADM filter response is used.
- *  0b11..Not used / undefined / reserved
  *  0b01..Unsupported request (UR)
+ *  0b10..Completer abort (CA)
+ *  0b11..Not used / undefined / reserved
  */
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_6_RESPONSE_CODE(x) (((uint32_t)(((uint32_t)(x)) << PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_6_RESPONSE_CODE_SHIFT)) & PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_6_RESPONSE_CODE_MASK)
 
@@ -3584,8 +3584,8 @@ typedef struct {
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_6_MATCH_MODE_MASK (0x40000000U)
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_6_MATCH_MODE_SHIFT (30U)
 /*! MATCH_MODE - Match Mode.
- *  0b1..The interpretation is dependent on TLP type, that is, MEM/IO, CFG0, or MSG/MSGD TLPs.
  *  0b0..The interpretation is dependent on TLP type, that is, MEM/IO, CFG0, or MSG/MSGD TLPs.
+ *  0b1..The interpretation is dependent on TLP type, that is, MEM/IO, CFG0, or MSG/MSGD TLPs.
  */
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_6_MATCH_MODE(x) (((uint32_t)(((uint32_t)(x)) << PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_6_MATCH_MODE_SHIFT)) & PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_6_MATCH_MODE_MASK)
 
@@ -3628,17 +3628,17 @@ typedef struct {
 #define PCIE_DMA_IATU_IATU_LIMIT_ADDR_OFF_INBOUND_6_CBUF_INCR_SHIFT (0U)
 /*! CBUF_INCR - Circular Buffer Increment.
  *  0b0000..0 (Default; legacy Single Address Location mode)
- *  0b1001..1024
- *  0b0110..128
- *  0b0011..16
- *  0b1010..2048
- *  0b0111..256
- *  0b0100..32
  *  0b0001..4
- *  0b1011..4096
- *  0b1000..512
- *  0b0101..64
  *  0b0010..8
+ *  0b0011..16
+ *  0b0100..32
+ *  0b0101..64
+ *  0b0110..128
+ *  0b0111..256
+ *  0b1000..512
+ *  0b1001..1024
+ *  0b1010..2048
+ *  0b1011..4096
  *  0b1100..8192
  *  0b1101..rsvd.
  *  0b1110..rsvd.
@@ -3782,17 +3782,17 @@ typedef struct {
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_7_INHIBIT_PAYLOAD_MASK (0x400000U)
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_7_INHIBIT_PAYLOAD_SHIFT (22U)
 /*! INHIBIT_PAYLOAD - Inhibit TLP Payload Data for TLP's in Matched Region; assign iATU region to be TLP without data.
- *  0b1..Fmt[1] =0 so that only TLP type without data is sent. For example, a Msg instead of MsgD will be sent.
  *  0b0..Fmt[1] =0/1 so that TLPs with or without data can be sent.
+ *  0b1..Fmt[1] =0 so that only TLP type without data is sent. For example, a Msg instead of MsgD will be sent.
  */
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_7_INHIBIT_PAYLOAD(x) (((uint32_t)(((uint32_t)(x)) << PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_7_INHIBIT_PAYLOAD_SHIFT)) & PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_7_INHIBIT_PAYLOAD_MASK)
 
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_7_HEADER_SUBSTITUTE_EN_MASK (0x800000U)
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_7_HEADER_SUBSTITUTE_EN_SHIFT (23U)
 /*! HEADER_SUBSTITUTE_EN - Header Substitute Enable.
+ *  0b0..LWR_TARGET_RW in the iATU_LWR_TARGET_ADDR_OFF_OUTBOUND_i register forms the new address of the translated region.
  *  0b1..LWR_TARGET_RW in the iATU_LWR_TARGET_ADDR_OFF_OUTBOUND_i register is used to fill bytes 8-to-11 (for 3
  *       DWORD header) or bytes 12-to-15 (for 4 DWORD header) of the translated TLP header.
- *  0b0..LWR_TARGET_RW in the iATU_LWR_TARGET_ADDR_OFF_OUTBOUND_i register forms the new address of the translated region.
  */
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_7_HEADER_SUBSTITUTE_EN(x) (((uint32_t)(((uint32_t)(x)) << PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_7_HEADER_SUBSTITUTE_EN_SHIFT)) & PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_OUTBOUND_7_HEADER_SUBSTITUTE_EN_MASK)
 
@@ -4015,10 +4015,10 @@ typedef struct {
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_7_RESPONSE_CODE_MASK (0x3000000U)
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_7_RESPONSE_CODE_SHIFT (24U)
 /*! RESPONSE_CODE - Response Code.
- *  0b10..Completer abort (CA)
  *  0b00..Normal RADM filter response is used.
- *  0b11..Not used / undefined / reserved
  *  0b01..Unsupported request (UR)
+ *  0b10..Completer abort (CA)
+ *  0b11..Not used / undefined / reserved
  */
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_7_RESPONSE_CODE(x) (((uint32_t)(((uint32_t)(x)) << PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_7_RESPONSE_CODE_SHIFT)) & PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_7_RESPONSE_CODE_MASK)
 
@@ -4049,8 +4049,8 @@ typedef struct {
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_7_MATCH_MODE_MASK (0x40000000U)
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_7_MATCH_MODE_SHIFT (30U)
 /*! MATCH_MODE - Match Mode.
- *  0b1..The interpretation is dependent on TLP type, that is, MEM/IO, CFG0, or MSG/MSGD TLPs.
  *  0b0..The interpretation is dependent on TLP type, that is, MEM/IO, CFG0, or MSG/MSGD TLPs.
+ *  0b1..The interpretation is dependent on TLP type, that is, MEM/IO, CFG0, or MSG/MSGD TLPs.
  */
 #define PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_7_MATCH_MODE(x) (((uint32_t)(((uint32_t)(x)) << PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_7_MATCH_MODE_SHIFT)) & PCIE_DMA_IATU_IATU_REGION_CTRL_2_OFF_INBOUND_7_MATCH_MODE_MASK)
 
@@ -4093,17 +4093,17 @@ typedef struct {
 #define PCIE_DMA_IATU_IATU_LIMIT_ADDR_OFF_INBOUND_7_CBUF_INCR_SHIFT (0U)
 /*! CBUF_INCR - Circular Buffer Increment.
  *  0b0000..0 (Default; legacy Single Address Location mode)
- *  0b1001..1024
- *  0b0110..128
- *  0b0011..16
- *  0b1010..2048
- *  0b0111..256
- *  0b0100..32
  *  0b0001..4
- *  0b1011..4096
- *  0b1000..512
- *  0b0101..64
  *  0b0010..8
+ *  0b0011..16
+ *  0b0100..32
+ *  0b0101..64
+ *  0b0110..128
+ *  0b0111..256
+ *  0b1000..512
+ *  0b1001..1024
+ *  0b1010..2048
+ *  0b1011..4096
  *  0b1100..8192
  *  0b1101..rsvd.
  *  0b1110..rsvd.
@@ -4819,9 +4819,9 @@ typedef struct {
 #define PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_WRCH_0_CS_MASK (0x60U)
 #define PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_WRCH_0_CS_SHIFT (5U)
 /*! CS - Channel Status (CS).
- *  0b10..An error condition has been detected, and the DMA has stopped this channel
  *  0b00..Reserved
  *  0b01..This channel is active and transferring data
+ *  0b10..An error condition has been detected, and the DMA has stopped this channel
  *  0b11..The DMA has transferred all data for this channel, or you have prematurely stopped this channel by
  *        writing to the Stop field of the DMA Write Doorbell Register (DMA_WRITE_DOORBELL_OFF) or DMA Read Doorbell
  *        Register (DMA_READ_DOORBELL_OFF)
@@ -4854,16 +4854,16 @@ typedef struct {
 #define PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_WRCH_0_DMA_FUNC_NUM_MASK (0x1F000U)
 #define PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_WRCH_0_DMA_FUNC_NUM_SHIFT (12U)
 /*! DMA_FUNC_NUM - DMA Channel Physical Function Number.
- *  0b11111..The maximum number of Physical Functions is given by CX_NFUNC, so the maximum value of this field is CX_NFUNC-1.
  *  0b00000..Physical Channel Function Number starts at 0.
+ *  0b11111..The maximum number of Physical Functions is given by CX_NFUNC, so the maximum value of this field is CX_NFUNC-1.
  */
 #define PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_WRCH_0_DMA_FUNC_NUM(x) (((uint32_t)(((uint32_t)(x)) << PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_WRCH_0_DMA_FUNC_NUM_SHIFT)) & PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_WRCH_0_DMA_FUNC_NUM_MASK)
 
 #define PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_WRCH_0_DMA_MEM_TYPE_MASK (0x400000U)
 #define PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_WRCH_0_DMA_MEM_TYPE_SHIFT (22U)
 /*! DMA_MEM_TYPE - Master AXI ACE-Lite Cache Coherency Control.
- *  0b1..memory type
  *  0b0..peripheral type
+ *  0b1..memory type
  */
 #define PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_WRCH_0_DMA_MEM_TYPE(x) (((uint32_t)(((uint32_t)(x)) << PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_WRCH_0_DMA_MEM_TYPE_SHIFT)) & PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_WRCH_0_DMA_MEM_TYPE_MASK)
 
@@ -4992,9 +4992,9 @@ typedef struct {
 #define PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_RDCH_0_CS_MASK (0x60U)
 #define PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_RDCH_0_CS_SHIFT (5U)
 /*! CS - Channel Status (CS).
- *  0b10..Halted. An error condition has been detected, and the DMA has stopped this channel.
  *  0b00..Reserved
  *  0b01..Running. This channel is active and transferring data.
+ *  0b10..Halted. An error condition has been detected, and the DMA has stopped this channel.
  *  0b11..Stopped. The DMA has transferred all data for this channel, or you have prematurely stopped this channel
  *        by writing to the Stop field of the DMA Read Doorbell Register (DMA_WRITE_DOORBELL_OFF) or DMA Read
  *        Doorbell Register (DMA_READ_DOORBELL_OFF).
@@ -5027,16 +5027,16 @@ typedef struct {
 #define PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_RDCH_0_DMA_FUNC_NUM_MASK (0x1F000U)
 #define PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_RDCH_0_DMA_FUNC_NUM_SHIFT (12U)
 /*! DMA_FUNC_NUM - DMA Channel Physical Function Number.
- *  0b11111..The maximum number of Physical Functions is given by CX_NFUNC, so the maximum value of this field is CX_NFUNC-1.
  *  0b00000..Physical Channel Function Number starts at 0.
+ *  0b11111..The maximum number of Physical Functions is given by CX_NFUNC, so the maximum value of this field is CX_NFUNC-1.
  */
 #define PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_RDCH_0_DMA_FUNC_NUM(x) (((uint32_t)(((uint32_t)(x)) << PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_RDCH_0_DMA_FUNC_NUM_SHIFT)) & PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_RDCH_0_DMA_FUNC_NUM_MASK)
 
 #define PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_RDCH_0_DMA_MEM_TYPE_MASK (0x400000U)
 #define PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_RDCH_0_DMA_MEM_TYPE_SHIFT (22U)
 /*! DMA_MEM_TYPE - Master AXI ACE-Lite Cache Coherency Control.
- *  0b1..main memory
  *  0b0..peripheral
+ *  0b1..main memory
  */
 #define PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_RDCH_0_DMA_MEM_TYPE(x) (((uint32_t)(((uint32_t)(x)) << PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_RDCH_0_DMA_MEM_TYPE_SHIFT)) & PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_RDCH_0_DMA_MEM_TYPE_MASK)
 
@@ -5165,9 +5165,9 @@ typedef struct {
 #define PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_WRCH_1_CS_MASK (0x60U)
 #define PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_WRCH_1_CS_SHIFT (5U)
 /*! CS - Channel Status (CS).
- *  0b10..An error condition has been detected, and the DMA has stopped this channel
  *  0b00..Reserved
  *  0b01..This channel is active and transferring data
+ *  0b10..An error condition has been detected, and the DMA has stopped this channel
  *  0b11..The DMA has transferred all data for this channel, or you have prematurely stopped this channel by
  *        writing to the Stop field of the DMA Write Doorbell Register (DMA_WRITE_DOORBELL_OFF) or DMA Read Doorbell
  *        Register (DMA_READ_DOORBELL_OFF)
@@ -5200,16 +5200,16 @@ typedef struct {
 #define PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_WRCH_1_DMA_FUNC_NUM_MASK (0x1F000U)
 #define PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_WRCH_1_DMA_FUNC_NUM_SHIFT (12U)
 /*! DMA_FUNC_NUM - DMA Channel Physical Function Number.
- *  0b11111..The maximum number of Physical Functions is given by CX_NFUNC, so the maximum value of this field is CX_NFUNC-1.
  *  0b00000..Physical Channel Function Number starts at 0.
+ *  0b11111..The maximum number of Physical Functions is given by CX_NFUNC, so the maximum value of this field is CX_NFUNC-1.
  */
 #define PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_WRCH_1_DMA_FUNC_NUM(x) (((uint32_t)(((uint32_t)(x)) << PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_WRCH_1_DMA_FUNC_NUM_SHIFT)) & PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_WRCH_1_DMA_FUNC_NUM_MASK)
 
 #define PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_WRCH_1_DMA_MEM_TYPE_MASK (0x400000U)
 #define PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_WRCH_1_DMA_MEM_TYPE_SHIFT (22U)
 /*! DMA_MEM_TYPE - Master AXI ACE-Lite Cache Coherency Control.
- *  0b1..memory type
  *  0b0..peripheral type
+ *  0b1..memory type
  */
 #define PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_WRCH_1_DMA_MEM_TYPE(x) (((uint32_t)(((uint32_t)(x)) << PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_WRCH_1_DMA_MEM_TYPE_SHIFT)) & PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_WRCH_1_DMA_MEM_TYPE_MASK)
 
@@ -5338,9 +5338,9 @@ typedef struct {
 #define PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_RDCH_1_CS_MASK (0x60U)
 #define PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_RDCH_1_CS_SHIFT (5U)
 /*! CS - Channel Status (CS).
- *  0b10..Halted. An error condition has been detected, and the DMA has stopped this channel.
  *  0b00..Reserved
  *  0b01..Running. This channel is active and transferring data.
+ *  0b10..Halted. An error condition has been detected, and the DMA has stopped this channel.
  *  0b11..Stopped. The DMA has transferred all data for this channel, or you have prematurely stopped this channel
  *        by writing to the Stop field of the DMA Read Doorbell Register (DMA_WRITE_DOORBELL_OFF) or DMA Read
  *        Doorbell Register (DMA_READ_DOORBELL_OFF).
@@ -5373,16 +5373,16 @@ typedef struct {
 #define PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_RDCH_1_DMA_FUNC_NUM_MASK (0x1F000U)
 #define PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_RDCH_1_DMA_FUNC_NUM_SHIFT (12U)
 /*! DMA_FUNC_NUM - DMA Channel Physical Function Number.
- *  0b11111..The maximum number of Physical Functions is given by CX_NFUNC, so the maximum value of this field is CX_NFUNC-1.
  *  0b00000..Physical Channel Function Number starts at 0.
+ *  0b11111..The maximum number of Physical Functions is given by CX_NFUNC, so the maximum value of this field is CX_NFUNC-1.
  */
 #define PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_RDCH_1_DMA_FUNC_NUM(x) (((uint32_t)(((uint32_t)(x)) << PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_RDCH_1_DMA_FUNC_NUM_SHIFT)) & PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_RDCH_1_DMA_FUNC_NUM_MASK)
 
 #define PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_RDCH_1_DMA_MEM_TYPE_MASK (0x400000U)
 #define PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_RDCH_1_DMA_MEM_TYPE_SHIFT (22U)
 /*! DMA_MEM_TYPE - Master AXI ACE-Lite Cache Coherency Control.
- *  0b1..main memory
  *  0b0..peripheral
+ *  0b1..main memory
  */
 #define PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_RDCH_1_DMA_MEM_TYPE(x) (((uint32_t)(((uint32_t)(x)) << PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_RDCH_1_DMA_MEM_TYPE_SHIFT)) & PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_RDCH_1_DMA_MEM_TYPE_MASK)
 
@@ -5511,9 +5511,9 @@ typedef struct {
 #define PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_WRCH_2_CS_MASK (0x60U)
 #define PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_WRCH_2_CS_SHIFT (5U)
 /*! CS - Channel Status (CS).
- *  0b10..An error condition has been detected, and the DMA has stopped this channel
  *  0b00..Reserved
  *  0b01..This channel is active and transferring data
+ *  0b10..An error condition has been detected, and the DMA has stopped this channel
  *  0b11..The DMA has transferred all data for this channel, or you have prematurely stopped this channel by
  *        writing to the Stop field of the DMA Write Doorbell Register (DMA_WRITE_DOORBELL_OFF) or DMA Read Doorbell
  *        Register (DMA_READ_DOORBELL_OFF)
@@ -5546,16 +5546,16 @@ typedef struct {
 #define PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_WRCH_2_DMA_FUNC_NUM_MASK (0x1F000U)
 #define PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_WRCH_2_DMA_FUNC_NUM_SHIFT (12U)
 /*! DMA_FUNC_NUM - DMA Channel Physical Function Number.
- *  0b11111..The maximum number of Physical Functions is given by CX_NFUNC, so the maximum value of this field is CX_NFUNC-1.
  *  0b00000..Physical Channel Function Number starts at 0.
+ *  0b11111..The maximum number of Physical Functions is given by CX_NFUNC, so the maximum value of this field is CX_NFUNC-1.
  */
 #define PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_WRCH_2_DMA_FUNC_NUM(x) (((uint32_t)(((uint32_t)(x)) << PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_WRCH_2_DMA_FUNC_NUM_SHIFT)) & PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_WRCH_2_DMA_FUNC_NUM_MASK)
 
 #define PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_WRCH_2_DMA_MEM_TYPE_MASK (0x400000U)
 #define PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_WRCH_2_DMA_MEM_TYPE_SHIFT (22U)
 /*! DMA_MEM_TYPE - Master AXI ACE-Lite Cache Coherency Control.
- *  0b1..memory type
  *  0b0..peripheral type
+ *  0b1..memory type
  */
 #define PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_WRCH_2_DMA_MEM_TYPE(x) (((uint32_t)(((uint32_t)(x)) << PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_WRCH_2_DMA_MEM_TYPE_SHIFT)) & PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_WRCH_2_DMA_MEM_TYPE_MASK)
 
@@ -5684,9 +5684,9 @@ typedef struct {
 #define PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_RDCH_2_CS_MASK (0x60U)
 #define PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_RDCH_2_CS_SHIFT (5U)
 /*! CS - Channel Status (CS).
- *  0b10..Halted. An error condition has been detected, and the DMA has stopped this channel.
  *  0b00..Reserved
  *  0b01..Running. This channel is active and transferring data.
+ *  0b10..Halted. An error condition has been detected, and the DMA has stopped this channel.
  *  0b11..Stopped. The DMA has transferred all data for this channel, or you have prematurely stopped this channel
  *        by writing to the Stop field of the DMA Read Doorbell Register (DMA_WRITE_DOORBELL_OFF) or DMA Read
  *        Doorbell Register (DMA_READ_DOORBELL_OFF).
@@ -5719,16 +5719,16 @@ typedef struct {
 #define PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_RDCH_2_DMA_FUNC_NUM_MASK (0x1F000U)
 #define PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_RDCH_2_DMA_FUNC_NUM_SHIFT (12U)
 /*! DMA_FUNC_NUM - DMA Channel Physical Function Number.
- *  0b11111..The maximum number of Physical Functions is given by CX_NFUNC, so the maximum value of this field is CX_NFUNC-1.
  *  0b00000..Physical Channel Function Number starts at 0.
+ *  0b11111..The maximum number of Physical Functions is given by CX_NFUNC, so the maximum value of this field is CX_NFUNC-1.
  */
 #define PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_RDCH_2_DMA_FUNC_NUM(x) (((uint32_t)(((uint32_t)(x)) << PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_RDCH_2_DMA_FUNC_NUM_SHIFT)) & PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_RDCH_2_DMA_FUNC_NUM_MASK)
 
 #define PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_RDCH_2_DMA_MEM_TYPE_MASK (0x400000U)
 #define PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_RDCH_2_DMA_MEM_TYPE_SHIFT (22U)
 /*! DMA_MEM_TYPE - Master AXI ACE-Lite Cache Coherency Control.
- *  0b1..main memory
  *  0b0..peripheral
+ *  0b1..main memory
  */
 #define PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_RDCH_2_DMA_MEM_TYPE(x) (((uint32_t)(((uint32_t)(x)) << PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_RDCH_2_DMA_MEM_TYPE_SHIFT)) & PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_RDCH_2_DMA_MEM_TYPE_MASK)
 
@@ -5857,9 +5857,9 @@ typedef struct {
 #define PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_WRCH_3_CS_MASK (0x60U)
 #define PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_WRCH_3_CS_SHIFT (5U)
 /*! CS - Channel Status (CS).
- *  0b10..An error condition has been detected, and the DMA has stopped this channel
  *  0b00..Reserved
  *  0b01..This channel is active and transferring data
+ *  0b10..An error condition has been detected, and the DMA has stopped this channel
  *  0b11..The DMA has transferred all data for this channel, or you have prematurely stopped this channel by
  *        writing to the Stop field of the DMA Write Doorbell Register (DMA_WRITE_DOORBELL_OFF) or DMA Read Doorbell
  *        Register (DMA_READ_DOORBELL_OFF)
@@ -5892,16 +5892,16 @@ typedef struct {
 #define PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_WRCH_3_DMA_FUNC_NUM_MASK (0x1F000U)
 #define PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_WRCH_3_DMA_FUNC_NUM_SHIFT (12U)
 /*! DMA_FUNC_NUM - DMA Channel Physical Function Number.
- *  0b11111..The maximum number of Physical Functions is given by CX_NFUNC, so the maximum value of this field is CX_NFUNC-1.
  *  0b00000..Physical Channel Function Number starts at 0.
+ *  0b11111..The maximum number of Physical Functions is given by CX_NFUNC, so the maximum value of this field is CX_NFUNC-1.
  */
 #define PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_WRCH_3_DMA_FUNC_NUM(x) (((uint32_t)(((uint32_t)(x)) << PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_WRCH_3_DMA_FUNC_NUM_SHIFT)) & PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_WRCH_3_DMA_FUNC_NUM_MASK)
 
 #define PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_WRCH_3_DMA_MEM_TYPE_MASK (0x400000U)
 #define PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_WRCH_3_DMA_MEM_TYPE_SHIFT (22U)
 /*! DMA_MEM_TYPE - Master AXI ACE-Lite Cache Coherency Control.
- *  0b1..memory type
  *  0b0..peripheral type
+ *  0b1..memory type
  */
 #define PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_WRCH_3_DMA_MEM_TYPE(x) (((uint32_t)(((uint32_t)(x)) << PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_WRCH_3_DMA_MEM_TYPE_SHIFT)) & PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_WRCH_3_DMA_MEM_TYPE_MASK)
 
@@ -6030,9 +6030,9 @@ typedef struct {
 #define PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_RDCH_3_CS_MASK (0x60U)
 #define PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_RDCH_3_CS_SHIFT (5U)
 /*! CS - Channel Status (CS).
- *  0b10..Halted. An error condition has been detected, and the DMA has stopped this channel.
  *  0b00..Reserved
  *  0b01..Running. This channel is active and transferring data.
+ *  0b10..Halted. An error condition has been detected, and the DMA has stopped this channel.
  *  0b11..Stopped. The DMA has transferred all data for this channel, or you have prematurely stopped this channel
  *        by writing to the Stop field of the DMA Read Doorbell Register (DMA_WRITE_DOORBELL_OFF) or DMA Read
  *        Doorbell Register (DMA_READ_DOORBELL_OFF).
@@ -6065,16 +6065,16 @@ typedef struct {
 #define PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_RDCH_3_DMA_FUNC_NUM_MASK (0x1F000U)
 #define PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_RDCH_3_DMA_FUNC_NUM_SHIFT (12U)
 /*! DMA_FUNC_NUM - DMA Channel Physical Function Number.
- *  0b11111..The maximum number of Physical Functions is given by CX_NFUNC, so the maximum value of this field is CX_NFUNC-1.
  *  0b00000..Physical Channel Function Number starts at 0.
+ *  0b11111..The maximum number of Physical Functions is given by CX_NFUNC, so the maximum value of this field is CX_NFUNC-1.
  */
 #define PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_RDCH_3_DMA_FUNC_NUM(x) (((uint32_t)(((uint32_t)(x)) << PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_RDCH_3_DMA_FUNC_NUM_SHIFT)) & PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_RDCH_3_DMA_FUNC_NUM_MASK)
 
 #define PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_RDCH_3_DMA_MEM_TYPE_MASK (0x400000U)
 #define PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_RDCH_3_DMA_MEM_TYPE_SHIFT (22U)
 /*! DMA_MEM_TYPE - Master AXI ACE-Lite Cache Coherency Control.
- *  0b1..main memory
  *  0b0..peripheral
+ *  0b1..main memory
  */
 #define PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_RDCH_3_DMA_MEM_TYPE(x) (((uint32_t)(((uint32_t)(x)) << PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_RDCH_3_DMA_MEM_TYPE_SHIFT)) & PCIE_DMA_IATU_DMA_CH_CONTROL1_OFF_RDCH_3_DMA_MEM_TYPE_MASK)
 

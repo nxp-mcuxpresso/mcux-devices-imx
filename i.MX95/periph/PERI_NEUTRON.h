@@ -44,13 +44,13 @@
 **                          MIMX9596XVZXN_cm7
 **
 **     Version:             rev. 1.0, 2023-01-10
-**     Build:               b240728
+**     Build:               b250415
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for NEUTRON
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -150,7 +150,7 @@ typedef struct {
   __IO uint32_t RES_Y;                             /**< Result Writer Configuration Y, offset: 0x2C */
   __IO uint32_t RES_X;                             /**< Result Writer Configuration X, offset: 0x30 */
        uint8_t RESERVED_0[4];
-  __IO uint32_t ASYMCTRL;                          /**< Asymmetric Control Register, offset: 0x38 */
+       uint32_t ASYMCTRL;                          /**< Asymmetric Control Register, offset: 0x38 */
   __IO uint32_t FLUSH;                             /**< Flush, offset: 0x3C */
   __IO uint32_t INTR;                              /**< Interrupt, offset: 0x40 */
   __IO uint32_t WEIGHTCTRL;                        /**< Weight Control, offset: 0x44 */
@@ -250,14 +250,6 @@ typedef struct {
 #define NEUTRON_FORMAT_SLOW16BIT_SHIFT           (10U)
 /*! SLOW16BIT - Slow 16-bit mode */
 #define NEUTRON_FORMAT_SLOW16BIT(x)              (((uint32_t)(((uint32_t)(x)) << NEUTRON_FORMAT_SLOW16BIT_SHIFT)) & NEUTRON_FORMAT_SLOW16BIT_MASK)
-
-#define NEUTRON_FORMAT_FLOAT_ACC_EN_MASK         (0x800U)
-#define NEUTRON_FORMAT_FLOAT_ACC_EN_SHIFT        (11U)
-/*! FLOAT_ACC_EN - Enable Floating Point Acculmulator
- *  0b0..Disable
- *  0b1..Enable 4
- */
-#define NEUTRON_FORMAT_FLOAT_ACC_EN(x)           (((uint32_t)(((uint32_t)(x)) << NEUTRON_FORMAT_FLOAT_ACC_EN_SHIFT)) & NEUTRON_FORMAT_FLOAT_ACC_EN_MASK)
 
 #define NEUTRON_FORMAT_ACCDNSHIFT_MASK           (0x3000U)
 #define NEUTRON_FORMAT_ACCDNSHIFT_SHIFT          (12U)
@@ -535,20 +527,6 @@ typedef struct {
 #define NEUTRON_RES_X_COUNT(x)                   (((uint32_t)(((uint32_t)(x)) << NEUTRON_RES_X_COUNT_SHIFT)) & NEUTRON_RES_X_COUNT_MASK)
 /*! @} */
 
-/*! @name ASYMCTRL - Asymmetric Control Register */
-/*! @{ */
-
-#define NEUTRON_ASYMCTRL_ZPD_MASK                (0xFFU)
-#define NEUTRON_ASYMCTRL_ZPD_SHIFT               (0U)
-/*! ZPD - Zero point for data */
-#define NEUTRON_ASYMCTRL_ZPD(x)                  (((uint32_t)(((uint32_t)(x)) << NEUTRON_ASYMCTRL_ZPD_SHIFT)) & NEUTRON_ASYMCTRL_ZPD_MASK)
-
-#define NEUTRON_ASYMCTRL_ZPW_MASK                (0xFF00U)
-#define NEUTRON_ASYMCTRL_ZPW_SHIFT               (8U)
-/*! ZPW - Zero point for weight */
-#define NEUTRON_ASYMCTRL_ZPW(x)                  (((uint32_t)(((uint32_t)(x)) << NEUTRON_ASYMCTRL_ZPW_SHIFT)) & NEUTRON_ASYMCTRL_ZPW_MASK)
-/*! @} */
-
 /*! @name FLUSH - Flush */
 /*! @{ */
 
@@ -644,6 +622,16 @@ typedef struct {
 #define NEUTRON_WEIGHTCTRL_USE_WEIGHT_COLUMN_SHIFT (10U)
 /*! USE_WEIGHT_COLUMN - Use Weight Column */
 #define NEUTRON_WEIGHTCTRL_USE_WEIGHT_COLUMN(x)  (((uint32_t)(((uint32_t)(x)) << NEUTRON_WEIGHTCTRL_USE_WEIGHT_COLUMN_SHIFT)) & NEUTRON_WEIGHTCTRL_USE_WEIGHT_COLUMN_MASK)
+
+#define NEUTRON_WEIGHTCTRL_DEPRUNE_ENABLE_MASK   (0x800U)
+#define NEUTRON_WEIGHTCTRL_DEPRUNE_ENABLE_SHIFT  (11U)
+/*! DEPRUNE_ENABLE - Enable Deprune */
+#define NEUTRON_WEIGHTCTRL_DEPRUNE_ENABLE(x)     (((uint32_t)(((uint32_t)(x)) << NEUTRON_WEIGHTCTRL_DEPRUNE_ENABLE_SHIFT)) & NEUTRON_WEIGHTCTRL_DEPRUNE_ENABLE_MASK)
+
+#define NEUTRON_WEIGHTCTRL_DEPRUNE_COMP_SIZE_MASK (0xFFFFF000U)
+#define NEUTRON_WEIGHTCTRL_DEPRUNE_COMP_SIZE_SHIFT (12U)
+/*! DEPRUNE_COMP_SIZE - Size of the compressed stream */
+#define NEUTRON_WEIGHTCTRL_DEPRUNE_COMP_SIZE(x)  (((uint32_t)(((uint32_t)(x)) << NEUTRON_WEIGHTCTRL_DEPRUNE_COMP_SIZE_SHIFT)) & NEUTRON_WEIGHTCTRL_DEPRUNE_COMP_SIZE_MASK)
 /*! @} */
 
 /*! @name CIRCADDR - Circular Address */

@@ -44,13 +44,13 @@
 **                          MIMX9596XVZXN_cm7
 **
 **     Version:             rev. 1.0, 2023-01-10
-**     Build:               b240728
+**     Build:               b250415
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for LDB
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -152,8 +152,8 @@ typedef struct {
 #define LDB_LVDS_PHY_CLOCK_CONTROL_LVDS_PHY_DIV_MASK (0x1U)
 #define LDB_LVDS_PHY_CLOCK_CONTROL_LVDS_PHY_DIV_SHIFT (0U)
 /*! LVDS_PHY_DIV - Defines the PHY clock divider ratio
- *  0b1..PHY clock frequency is equal to PLL clock frequency / 2
  *  0b0..PHY clock frequency is equal to PLL clock frequency
+ *  0b1..PHY clock frequency is equal to PLL clock frequency / 2
  */
 #define LDB_LVDS_PHY_CLOCK_CONTROL_LVDS_PHY_DIV(x) (((uint32_t)(((uint32_t)(x)) << LDB_LVDS_PHY_CLOCK_CONTROL_LVDS_PHY_DIV_SHIFT)) & LDB_LVDS_PHY_CLOCK_CONTROL_LVDS_PHY_DIV_MASK)
 
@@ -168,8 +168,8 @@ typedef struct {
 #define LDB_LVDS_PHY_CLOCK_CONTROL_Serializer_Ch1_clock_Ctrl_MASK (0x4U)
 #define LDB_LVDS_PHY_CLOCK_CONTROL_Serializer_Ch1_clock_Ctrl_SHIFT (2U)
 /*! Serializer_Ch1_clock_Ctrl - LVDS serializer channel 1 clock gate control
- *  0b1..LVDS serializer channel 1 are not clocked
  *  0b0..LVDS serializer channel 1 are clocked
+ *  0b1..LVDS serializer channel 1 are not clocked
  */
 #define LDB_LVDS_PHY_CLOCK_CONTROL_Serializer_Ch1_clock_Ctrl(x) (((uint32_t)(((uint32_t)(x)) << LDB_LVDS_PHY_CLOCK_CONTROL_Serializer_Ch1_clock_Ctrl_SHIFT)) & LDB_LVDS_PHY_CLOCK_CONTROL_Serializer_Ch1_clock_Ctrl_MASK)
 
@@ -192,8 +192,8 @@ typedef struct {
 #define LDB_LVDS_PHY_CLOCK_CONTROL_LVDS_PLL_clock_ctrl_MASK (0x20U)
 #define LDB_LVDS_PHY_CLOCK_CONTROL_LVDS_PLL_clock_ctrl_SHIFT (5U)
 /*! LVDS_PLL_clock_ctrl - Control the clock gating logic of the LVDS PLL input clock
- *  0b1..LVDS PLL input clock are not clocked
  *  0b0..LVDS PLL input clock are clocked
+ *  0b1..LVDS PLL input clock are not clocked
  */
 #define LDB_LVDS_PHY_CLOCK_CONTROL_LVDS_PLL_clock_ctrl(x) (((uint32_t)(((uint32_t)(x)) << LDB_LVDS_PHY_CLOCK_CONTROL_LVDS_PLL_clock_ctrl_SHIFT)) & LDB_LVDS_PHY_CLOCK_CONTROL_LVDS_PLL_clock_ctrl_MASK)
 /*! @} */
@@ -204,8 +204,8 @@ typedef struct {
 #define LDB_PIXEL_MAPPER_CONTROL_CH0_MODE_MASK   (0x3U)
 #define LDB_PIXEL_MAPPER_CONTROL_CH0_MODE_SHIFT  (0U)
 /*! CH0_MODE - LVDS channel 0 operation mode
- *  0b01..Channel enabled, routed to DI0
  *  0b00..Channel disabled
+ *  0b01..Channel enabled, routed to DI0
  *  0b10..Channel disabled
  *  0b11..Channel enabled, routed to DI1
  */
@@ -214,8 +214,8 @@ typedef struct {
 #define LDB_PIXEL_MAPPER_CONTROL_CH1_MODE_MASK   (0xCU)
 #define LDB_PIXEL_MAPPER_CONTROL_CH1_MODE_SHIFT  (2U)
 /*! CH1_MODE - LVDS channel 1 operation mode
- *  0b01..Channel enabled, routed to DI0
  *  0b00..Channel disabled
+ *  0b01..Channel enabled, routed to DI0
  *  0b10..Channel disabled
  *  0b11..Channel enabled, routed to DI1
  */
@@ -224,8 +224,8 @@ typedef struct {
 #define LDB_PIXEL_MAPPER_CONTROL_SPLIT_MODE_MASK (0x10U)
 #define LDB_PIXEL_MAPPER_CONTROL_SPLIT_MODE_SHIFT (4U)
 /*! SPLIT_MODE - Enable split mode
- *  0b1..Split mode is enabled. In this mode both channels should be enabled and working with the same DI.
  *  0b0..Split mode is disabled.
+ *  0b1..Split mode is enabled. In this mode both channels should be enabled and working with the same DI.
  */
 #define LDB_PIXEL_MAPPER_CONTROL_SPLIT_MODE(x)   (((uint32_t)(((uint32_t)(x)) << LDB_PIXEL_MAPPER_CONTROL_SPLIT_MODE_SHIFT)) & LDB_PIXEL_MAPPER_CONTROL_SPLIT_MODE_MASK)
 
@@ -240,16 +240,16 @@ typedef struct {
 #define LDB_PIXEL_MAPPER_CONTROL_CH0_BIT_MAPPING_MASK (0x40U)
 #define LDB_PIXEL_MAPPER_CONTROL_CH0_BIT_MAPPING_SHIFT (6U)
 /*! CH0_BIT_MAPPING - Data mapping for LVDS channel 0
- *  0b1..Use JEIDA standard
  *  0b0..Use SPWG standard
+ *  0b1..Use JEIDA standard
  */
 #define LDB_PIXEL_MAPPER_CONTROL_CH0_BIT_MAPPING(x) (((uint32_t)(((uint32_t)(x)) << LDB_PIXEL_MAPPER_CONTROL_CH0_BIT_MAPPING_SHIFT)) & LDB_PIXEL_MAPPER_CONTROL_CH0_BIT_MAPPING_MASK)
 
 #define LDB_PIXEL_MAPPER_CONTROL_CH1_DATA_WIDTH_MASK (0x80U)
 #define LDB_PIXEL_MAPPER_CONTROL_CH1_DATA_WIDTH_SHIFT (7U)
 /*! CH1_DATA_WIDTH - Data width for LVDS channel 1
- *  0b1..Data width is 24 bits wide
  *  0b0..Data width is 18 bits wide
+ *  0b1..Data width is 24 bits wide
  */
 #define LDB_PIXEL_MAPPER_CONTROL_CH1_DATA_WIDTH(x) (((uint32_t)(((uint32_t)(x)) << LDB_PIXEL_MAPPER_CONTROL_CH1_DATA_WIDTH_SHIFT)) & LDB_PIXEL_MAPPER_CONTROL_CH1_DATA_WIDTH_MASK)
 
@@ -264,8 +264,8 @@ typedef struct {
 #define LDB_PIXEL_MAPPER_CONTROL_DI0_VSYNC_POLARITY_MASK (0x200U)
 #define LDB_PIXEL_MAPPER_CONTROL_DI0_VSYNC_POLARITY_SHIFT (9U)
 /*! DI0_VSYNC_POLARITY - VSYNC polarity select for DI0
- *  0b1..VSYNC is active low
  *  0b0..VSYNC is active high
+ *  0b1..VSYNC is active low
  */
 #define LDB_PIXEL_MAPPER_CONTROL_DI0_VSYNC_POLARITY(x) (((uint32_t)(((uint32_t)(x)) << LDB_PIXEL_MAPPER_CONTROL_DI0_VSYNC_POLARITY_SHIFT)) & LDB_PIXEL_MAPPER_CONTROL_DI0_VSYNC_POLARITY_MASK)
 
@@ -280,8 +280,8 @@ typedef struct {
 #define LDB_PIXEL_MAPPER_CONTROL_CH0_ASYNC_FIFO_RESET_MASK (0x800U)
 #define LDB_PIXEL_MAPPER_CONTROL_CH0_ASYNC_FIFO_RESET_SHIFT (11U)
 /*! CH0_ASYNC_FIFO_RESET - LVDS channel 0 async FIFO software reset
- *  0b1..Software reset
  *  0b0..No action
+ *  0b1..Software reset
  */
 #define LDB_PIXEL_MAPPER_CONTROL_CH0_ASYNC_FIFO_RESET(x) (((uint32_t)(((uint32_t)(x)) << LDB_PIXEL_MAPPER_CONTROL_CH0_ASYNC_FIFO_RESET_SHIFT)) & LDB_PIXEL_MAPPER_CONTROL_CH0_ASYNC_FIFO_RESET_MASK)
 
@@ -402,10 +402,10 @@ typedef struct {
 #define LDB_LVDS0_CONTROL_TEST_MUX_SRC_MASK      (0xC00000U)
 #define LDB_LVDS0_CONTROL_TEST_MUX_SRC_SHIFT     (22U)
 /*! TEST_MUX_SRC - Select which signals to test
- *  0b11..LVDS0_D3_P/N
- *  0b10..LVDS0_D2_P/N
  *  0b00..LVDS0_D0_P/N
  *  0b01..LVDS0_D1_P/N
+ *  0b10..LVDS0_D2_P/N
+ *  0b11..LVDS0_D3_P/N
  */
 #define LDB_LVDS0_CONTROL_TEST_MUX_SRC(x)        (((uint32_t)(((uint32_t)(x)) << LDB_LVDS0_CONTROL_TEST_MUX_SRC_SHIFT)) & LDB_LVDS0_CONTROL_TEST_MUX_SRC_MASK)
 
@@ -437,32 +437,32 @@ typedef struct {
 #define LDB_LVDS1_CONTROL_LVDS_EN_MASK           (0x2U)
 #define LDB_LVDS1_CONTROL_LVDS_EN_SHIFT          (1U)
 /*! LVDS_EN - LVDS PHY enable
- *  0b1..Disable
  *  0b0..Enable. LVDS function is normal.
+ *  0b1..Disable
  */
 #define LDB_LVDS1_CONTROL_LVDS_EN(x)             (((uint32_t)(((uint32_t)(x)) << LDB_LVDS1_CONTROL_LVDS_EN_SHIFT)) & LDB_LVDS1_CONTROL_LVDS_EN_MASK)
 
 #define LDB_LVDS1_CONTROL_BG_EN_MASK             (0x4U)
 #define LDB_LVDS1_CONTROL_BG_EN_SHIFT            (2U)
 /*! BG_EN - Bandgap enable
- *  0b1..Enable
  *  0b0..Disable
+ *  0b1..Enable
  */
 #define LDB_LVDS1_CONTROL_BG_EN(x)               (((uint32_t)(((uint32_t)(x)) << LDB_LVDS1_CONTROL_BG_EN_SHIFT)) & LDB_LVDS1_CONTROL_BG_EN_MASK)
 
 #define LDB_LVDS1_CONTROL_HS_EN_MASK             (0x8U)
 #define LDB_LVDS1_CONTROL_HS_EN_SHIFT            (3U)
 /*! HS_EN - Enable 100 ohm termination in the chip enable which also doubles power dissipation.
- *  0b1..Enable
  *  0b0..Disable
+ *  0b1..Enable
  */
 #define LDB_LVDS1_CONTROL_HS_EN(x)               (((uint32_t)(((uint32_t)(x)) << LDB_LVDS1_CONTROL_HS_EN_SHIFT)) & LDB_LVDS1_CONTROL_HS_EN_MASK)
 
 #define LDB_LVDS1_CONTROL_PRE_EMPH_EN_MASK       (0x10U)
 #define LDB_LVDS1_CONTROL_PRE_EMPH_EN_SHIFT      (4U)
 /*! PRE_EMPH_EN - Enable pre-emphasis
- *  0b1..Enable
  *  0b0..Disable
+ *  0b1..Enable
  */
 #define LDB_LVDS1_CONTROL_PRE_EMPH_EN(x)         (((uint32_t)(((uint32_t)(x)) << LDB_LVDS1_CONTROL_PRE_EMPH_EN_SHIFT)) & LDB_LVDS1_CONTROL_PRE_EMPH_EN_MASK)
 
@@ -494,24 +494,24 @@ typedef struct {
 #define LDB_LVDS1_CONTROL_TEST_DIV4_MASK         (0x100000U)
 #define LDB_LVDS1_CONTROL_TEST_DIV4_SHIFT        (20U)
 /*! TEST_DIV4 - Divide the input signal/clock by 4.
- *  0b1..Enable
  *  0b0..Disable
+ *  0b1..Enable
  */
 #define LDB_LVDS1_CONTROL_TEST_DIV4(x)           (((uint32_t)(((uint32_t)(x)) << LDB_LVDS1_CONTROL_TEST_DIV4_SHIFT)) & LDB_LVDS1_CONTROL_TEST_DIV4_MASK)
 
 #define LDB_LVDS1_CONTROL_TEST_EN_MASK           (0x200000U)
 #define LDB_LVDS1_CONTROL_TEST_EN_SHIFT          (21U)
 /*! TEST_EN - Test enable
- *  0b1..Enable
  *  0b0..Disable
+ *  0b1..Enable
  */
 #define LDB_LVDS1_CONTROL_TEST_EN(x)             (((uint32_t)(((uint32_t)(x)) << LDB_LVDS1_CONTROL_TEST_EN_SHIFT)) & LDB_LVDS1_CONTROL_TEST_EN_MASK)
 
 #define LDB_LVDS1_CONTROL_TEST_MUX_SRC_MASK      (0xC00000U)
 #define LDB_LVDS1_CONTROL_TEST_MUX_SRC_SHIFT     (22U)
 /*! TEST_MUX_SRC - Select which signals to test
- *  0b01..LVDS1_D1_P/N
  *  0b00..LVDS1_D0_P/N
+ *  0b01..LVDS1_D1_P/N
  *  0b10..LVDS1_D2_P/N
  *  0b11..LVDS1_D3_P/N
  */
@@ -520,8 +520,8 @@ typedef struct {
 #define LDB_LVDS1_CONTROL_TEST_RANDOM_NUM_EN_MASK (0x1000000U)
 #define LDB_LVDS1_CONTROL_TEST_RANDOM_NUM_EN_SHIFT (24U)
 /*! TEST_RANDOM_NUM_EN - Random number generator enable
- *  0b1..Enable
  *  0b0..Disable
+ *  0b1..Enable
  */
 #define LDB_LVDS1_CONTROL_TEST_RANDOM_NUM_EN(x)  (((uint32_t)(((uint32_t)(x)) << LDB_LVDS1_CONTROL_TEST_RANDOM_NUM_EN_SHIFT)) & LDB_LVDS1_CONTROL_TEST_RANDOM_NUM_EN_MASK)
 

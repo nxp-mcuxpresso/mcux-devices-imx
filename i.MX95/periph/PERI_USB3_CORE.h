@@ -44,13 +44,13 @@
 **                          MIMX9596XVZXN_cm7
 **
 **     Version:             rev. 1.0, 2023-01-10
-**     Build:               b240728
+**     Build:               b250415
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for USB3_CORE
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -132,7 +132,7 @@
 /** USB3_CORE - Size of Registers Arrays */
 #define USB3_CORE_DB_COUNT                        64u
 #define USB3_CORE_GERRINJCTL_COUNT                2u
-#define USB3_CORE_GTXFIFOSIZX_COUNT               8u
+#define USB3_CORE_GTXFIFOSIZN_COUNT               8u
 #define USB3_CORE_GRXFIFOSIZY_COUNT               3u
 #define USB3_CORE_BRAMADDRERR_COUNT               3u
 
@@ -225,7 +225,7 @@ typedef struct {
        uint8_t RESERVED_15[188];
   __IO uint32_t GUSB3PIPECTL;                      /**< Global USB 3.0 PIPE Control, offset: 0xC2C0 */
        uint8_t RESERVED_16[60];
-  __IO uint32_t GTXFIFOSIZ[USB3_CORE_GTXFIFOSIZX_COUNT]; /**< Global Transmit FIFO Size, array offset: 0xC300, array step: 0x4 */
+  __IO uint32_t GTXFIFOSIZ[USB3_CORE_GTXFIFOSIZN_COUNT]; /**< Global Transmit FIFO Size, array offset: 0xC300, array step: 0x4 */
        uint8_t RESERVED_17[96];
   __IO uint32_t GRXFIFOSIZ[USB3_CORE_GRXFIFOSIZY_COUNT]; /**< Global Receive FIFO Size, array offset: 0xC380, array step: 0x4 */
        uint8_t RESERVED_18[116];
@@ -2637,7 +2637,7 @@ typedef struct {
 
 #define USB3_CORE_GTXFIFOSIZ_TXFDEP_N_MASK       (0xFFFFU)
 #define USB3_CORE_GTXFIFOSIZ_TXFDEP_N_SHIFT      (0U)
-/*! TXFDEP_N - TXFIFO depth */
+/*! TXFDEP_N - TXFIFO Depth */
 #define USB3_CORE_GTXFIFOSIZ_TXFDEP_N(x)         (((uint32_t)(((uint32_t)(x)) << USB3_CORE_GTXFIFOSIZ_TXFDEP_N_SHIFT)) & USB3_CORE_GTXFIFOSIZ_TXFDEP_N_MASK)
 
 #define USB3_CORE_GTXFIFOSIZ_TXFSTADDR_N_MASK    (0xFFFF0000U)
@@ -2825,8 +2825,8 @@ typedef struct {
 #define USB3_CORE_DCFG_DEVSPD_MASK               (0x7U)
 #define USB3_CORE_DCFG_DEVSPD_SHIFT              (0U)
 /*! DEVSPD - Device Speed
- *  0b001..Full-speed (USB 2.0 PHY clock is 30 MHz or 60 MHz)
  *  0b000..High-speed (USB 2.0 PHY clock is 30 MHz or 60 MHz)
+ *  0b001..Full-speed (USB 2.0 PHY clock is 30 MHz or 60 MHz)
  *  0b100..SuperSpeed (USB 3.0 PHY clock is 125 MHz or 250 MHz)
  */
 #define USB3_CORE_DCFG_DEVSPD(x)                 (((uint32_t)(((uint32_t)(x)) << USB3_CORE_DCFG_DEVSPD_SHIFT)) & USB3_CORE_DCFG_DEVSPD_MASK)
@@ -3036,8 +3036,8 @@ typedef struct {
 #define USB3_CORE_DSTS_CONNECTSPD_MASK           (0x7U)
 #define USB3_CORE_DSTS_CONNECTSPD_SHIFT          (0U)
 /*! CONNECTSPD - Connected Speed
- *  0b001..Full-speed (PHY clock is running at 30 or 60 MHz)
  *  0b000..High-speed (PHY clock is running at 30 or 60 MHz)
+ *  0b001..Full-speed (PHY clock is running at 30 or 60 MHz)
  *  0b100..SuperSpeed (PHY clock is running at 125 or 250 MHz)
  */
 #define USB3_CORE_DSTS_CONNECTSPD(x)             (((uint32_t)(((uint32_t)(x)) << USB3_CORE_DSTS_CONNECTSPD_SHIFT)) & USB3_CORE_DSTS_CONNECTSPD_MASK)
@@ -3182,7 +3182,7 @@ typedef struct {
 #define USB3_CORE_DEPCMD0_CMDTYP_MASK            (0xFU)
 #define USB3_CORE_DEPCMD0_CMDTYP_SHIFT           (0U)
 /*! CMDTYP - Command Type
- *  0b0001..Set Endpoint Configuration 64 or 96-bit Parameter
+ *  0b0001..Set endpoint configuration 64 or 96-bit parameter
  */
 #define USB3_CORE_DEPCMD0_CMDTYP(x)              (((uint32_t)(((uint32_t)(x)) << USB3_CORE_DEPCMD0_CMDTYP_SHIFT)) & USB3_CORE_DEPCMD0_CMDTYP_MASK)
 
@@ -3242,7 +3242,7 @@ typedef struct {
 #define USB3_CORE_DEPCMD1_CMDTYP_MASK            (0xFU)
 #define USB3_CORE_DEPCMD1_CMDTYP_SHIFT           (0U)
 /*! CMDTYP - Command Type
- *  0b0001..Set Endpoint Configuration 64 or 96-bit Parameter
+ *  0b0001..Set endpoint configuration 64 or 96-bit parameter
  */
 #define USB3_CORE_DEPCMD1_CMDTYP(x)              (((uint32_t)(((uint32_t)(x)) << USB3_CORE_DEPCMD1_CMDTYP_SHIFT)) & USB3_CORE_DEPCMD1_CMDTYP_MASK)
 
@@ -3302,7 +3302,7 @@ typedef struct {
 #define USB3_CORE_DEPCMD2_CMDTYP_MASK            (0xFU)
 #define USB3_CORE_DEPCMD2_CMDTYP_SHIFT           (0U)
 /*! CMDTYP - Command Type
- *  0b0001..Set Endpoint Configuration 64 or 96-bit Parameter
+ *  0b0001..Set endpoint configuration 64 or 96-bit parameter
  */
 #define USB3_CORE_DEPCMD2_CMDTYP(x)              (((uint32_t)(((uint32_t)(x)) << USB3_CORE_DEPCMD2_CMDTYP_SHIFT)) & USB3_CORE_DEPCMD2_CMDTYP_MASK)
 
@@ -3362,7 +3362,7 @@ typedef struct {
 #define USB3_CORE_DEPCMD3_CMDTYP_MASK            (0xFU)
 #define USB3_CORE_DEPCMD3_CMDTYP_SHIFT           (0U)
 /*! CMDTYP - Command Type
- *  0b0001..Set Endpoint Configuration 64 or 96-bit Parameter
+ *  0b0001..Set endpoint configuration 64 or 96-bit parameter
  */
 #define USB3_CORE_DEPCMD3_CMDTYP(x)              (((uint32_t)(((uint32_t)(x)) << USB3_CORE_DEPCMD3_CMDTYP_SHIFT)) & USB3_CORE_DEPCMD3_CMDTYP_MASK)
 
@@ -3422,7 +3422,7 @@ typedef struct {
 #define USB3_CORE_DEPCMD4_CMDTYP_MASK            (0xFU)
 #define USB3_CORE_DEPCMD4_CMDTYP_SHIFT           (0U)
 /*! CMDTYP - Command Type
- *  0b0001..Set Endpoint Configuration 64 or 96-bit Parameter
+ *  0b0001..Set endpoint configuration 64 or 96-bit parameter
  */
 #define USB3_CORE_DEPCMD4_CMDTYP(x)              (((uint32_t)(((uint32_t)(x)) << USB3_CORE_DEPCMD4_CMDTYP_SHIFT)) & USB3_CORE_DEPCMD4_CMDTYP_MASK)
 
@@ -3482,7 +3482,7 @@ typedef struct {
 #define USB3_CORE_DEPCMD5_CMDTYP_MASK            (0xFU)
 #define USB3_CORE_DEPCMD5_CMDTYP_SHIFT           (0U)
 /*! CMDTYP - Command Type
- *  0b0001..Set Endpoint Configuration 64 or 96-bit Parameter
+ *  0b0001..Set endpoint configuration 64 or 96-bit parameter
  */
 #define USB3_CORE_DEPCMD5_CMDTYP(x)              (((uint32_t)(((uint32_t)(x)) << USB3_CORE_DEPCMD5_CMDTYP_SHIFT)) & USB3_CORE_DEPCMD5_CMDTYP_MASK)
 
@@ -3542,7 +3542,7 @@ typedef struct {
 #define USB3_CORE_DEPCMD6_CMDTYP_MASK            (0xFU)
 #define USB3_CORE_DEPCMD6_CMDTYP_SHIFT           (0U)
 /*! CMDTYP - Command Type
- *  0b0001..Set Endpoint Configuration 64 or 96-bit Parameter
+ *  0b0001..Set endpoint configuration 64 or 96-bit parameter
  */
 #define USB3_CORE_DEPCMD6_CMDTYP(x)              (((uint32_t)(((uint32_t)(x)) << USB3_CORE_DEPCMD6_CMDTYP_SHIFT)) & USB3_CORE_DEPCMD6_CMDTYP_MASK)
 
@@ -3602,7 +3602,7 @@ typedef struct {
 #define USB3_CORE_DEPCMD7_CMDTYP_MASK            (0xFU)
 #define USB3_CORE_DEPCMD7_CMDTYP_SHIFT           (0U)
 /*! CMDTYP - Command Type
- *  0b0001..Set Endpoint Configuration 64 or 96-bit Parameter
+ *  0b0001..Set endpoint configuration 64 or 96-bit parameter
  */
 #define USB3_CORE_DEPCMD7_CMDTYP(x)              (((uint32_t)(((uint32_t)(x)) << USB3_CORE_DEPCMD7_CMDTYP_SHIFT)) & USB3_CORE_DEPCMD7_CMDTYP_MASK)
 
@@ -3662,7 +3662,7 @@ typedef struct {
 #define USB3_CORE_DEPCMD8_CMDTYP_MASK            (0xFU)
 #define USB3_CORE_DEPCMD8_CMDTYP_SHIFT           (0U)
 /*! CMDTYP - Command Type
- *  0b0001..Set Endpoint Configuration 64 or 96-bit Parameter
+ *  0b0001..Set endpoint configuration 64 or 96-bit parameter
  */
 #define USB3_CORE_DEPCMD8_CMDTYP(x)              (((uint32_t)(((uint32_t)(x)) << USB3_CORE_DEPCMD8_CMDTYP_SHIFT)) & USB3_CORE_DEPCMD8_CMDTYP_MASK)
 
@@ -3722,7 +3722,7 @@ typedef struct {
 #define USB3_CORE_DEPCMD9_CMDTYP_MASK            (0xFU)
 #define USB3_CORE_DEPCMD9_CMDTYP_SHIFT           (0U)
 /*! CMDTYP - Command Type
- *  0b0001..Set Endpoint Configuration 64 or 96-bit Parameter
+ *  0b0001..Set endpoint configuration 64 or 96-bit parameter
  */
 #define USB3_CORE_DEPCMD9_CMDTYP(x)              (((uint32_t)(((uint32_t)(x)) << USB3_CORE_DEPCMD9_CMDTYP_SHIFT)) & USB3_CORE_DEPCMD9_CMDTYP_MASK)
 
@@ -3782,7 +3782,7 @@ typedef struct {
 #define USB3_CORE_DEPCMD10_CMDTYP_MASK           (0xFU)
 #define USB3_CORE_DEPCMD10_CMDTYP_SHIFT          (0U)
 /*! CMDTYP - Command Type
- *  0b0001..Set Endpoint Configuration 64 or 96-bit Parameter
+ *  0b0001..Set endpoint configuration 64 or 96-bit parameter
  */
 #define USB3_CORE_DEPCMD10_CMDTYP(x)             (((uint32_t)(((uint32_t)(x)) << USB3_CORE_DEPCMD10_CMDTYP_SHIFT)) & USB3_CORE_DEPCMD10_CMDTYP_MASK)
 
@@ -3842,7 +3842,7 @@ typedef struct {
 #define USB3_CORE_DEPCMD11_CMDTYP_MASK           (0xFU)
 #define USB3_CORE_DEPCMD11_CMDTYP_SHIFT          (0U)
 /*! CMDTYP - Command Type
- *  0b0001..Set Endpoint Configuration 64 or 96-bit Parameter
+ *  0b0001..Set endpoint configuration 64 or 96-bit parameter
  */
 #define USB3_CORE_DEPCMD11_CMDTYP(x)             (((uint32_t)(((uint32_t)(x)) << USB3_CORE_DEPCMD11_CMDTYP_SHIFT)) & USB3_CORE_DEPCMD11_CMDTYP_MASK)
 
@@ -3902,7 +3902,7 @@ typedef struct {
 #define USB3_CORE_DEPCMD12_CMDTYP_MASK           (0xFU)
 #define USB3_CORE_DEPCMD12_CMDTYP_SHIFT          (0U)
 /*! CMDTYP - Command Type
- *  0b0001..Set Endpoint Configuration 64 or 96-bit Parameter
+ *  0b0001..Set endpoint configuration 64 or 96-bit parameter
  */
 #define USB3_CORE_DEPCMD12_CMDTYP(x)             (((uint32_t)(((uint32_t)(x)) << USB3_CORE_DEPCMD12_CMDTYP_SHIFT)) & USB3_CORE_DEPCMD12_CMDTYP_MASK)
 
@@ -3962,7 +3962,7 @@ typedef struct {
 #define USB3_CORE_DEPCMD13_CMDTYP_MASK           (0xFU)
 #define USB3_CORE_DEPCMD13_CMDTYP_SHIFT          (0U)
 /*! CMDTYP - Command Type
- *  0b0001..Set Endpoint Configuration 64 or 96-bit Parameter
+ *  0b0001..Set endpoint configuration 64 or 96-bit parameter
  */
 #define USB3_CORE_DEPCMD13_CMDTYP(x)             (((uint32_t)(((uint32_t)(x)) << USB3_CORE_DEPCMD13_CMDTYP_SHIFT)) & USB3_CORE_DEPCMD13_CMDTYP_MASK)
 
@@ -4022,7 +4022,7 @@ typedef struct {
 #define USB3_CORE_DEPCMD14_CMDTYP_MASK           (0xFU)
 #define USB3_CORE_DEPCMD14_CMDTYP_SHIFT          (0U)
 /*! CMDTYP - Command Type
- *  0b0001..Set Endpoint Configuration 64 or 96-bit Parameter
+ *  0b0001..Set endpoint configuration 64 or 96-bit parameter
  */
 #define USB3_CORE_DEPCMD14_CMDTYP(x)             (((uint32_t)(((uint32_t)(x)) << USB3_CORE_DEPCMD14_CMDTYP_SHIFT)) & USB3_CORE_DEPCMD14_CMDTYP_MASK)
 
@@ -4082,7 +4082,7 @@ typedef struct {
 #define USB3_CORE_DEPCMD15_CMDTYP_MASK           (0xFU)
 #define USB3_CORE_DEPCMD15_CMDTYP_SHIFT          (0U)
 /*! CMDTYP - Command Type
- *  0b0001..Set Endpoint Configuration 64 or 96-bit Parameter
+ *  0b0001..Set endpoint configuration 64 or 96-bit parameter
  */
 #define USB3_CORE_DEPCMD15_CMDTYP(x)             (((uint32_t)(((uint32_t)(x)) << USB3_CORE_DEPCMD15_CMDTYP_SHIFT)) & USB3_CORE_DEPCMD15_CMDTYP_MASK)
 

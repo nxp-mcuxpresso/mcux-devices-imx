@@ -44,13 +44,13 @@
 **                          MIMX9596XVZXN_cm7
 **
 **     Version:             rev. 1.0, 2023-01-10
-**     Build:               b240728
+**     Build:               b250415
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for ANALOG_SFA
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -238,6 +238,11 @@ typedef struct {
 #define ANALOG_SFA_CTRL_CUT_SEL_SHIFT            (24U)
 /*! CUT_SEL - CUT_SEL */
 #define ANALOG_SFA_CTRL_CUT_SEL(x)               (((uint32_t)(((uint32_t)(x)) << ANALOG_SFA_CTRL_CUT_SEL_SHIFT)) & ANALOG_SFA_CTRL_CUT_SEL_MASK)
+
+#define ANALOG_SFA_CTRL_CUT_PIN_EN_MASK          (0x80000000U)
+#define ANALOG_SFA_CTRL_CUT_PIN_EN_SHIFT         (31U)
+/*! CUT_PIN_EN - CUT_PIN_EN */
+#define ANALOG_SFA_CTRL_CUT_PIN_EN(x)            (((uint32_t)(((uint32_t)(x)) << ANALOG_SFA_CTRL_CUT_PIN_EN_SHIFT)) & ANALOG_SFA_CTRL_CUT_PIN_EN_MASK)
 /*! @} */
 
 /*! @name CTRL_EXT - Signal Frequency Analyser (SFA) Control Extended */
@@ -247,11 +252,6 @@ typedef struct {
 #define ANALOG_SFA_CTRL_EXT_CUT_CLK_EN_SHIFT     (0U)
 /*! CUT_CLK_EN - CUT_CLK_EN */
 #define ANALOG_SFA_CTRL_EXT_CUT_CLK_EN(x)        (((uint32_t)(((uint32_t)(x)) << ANALOG_SFA_CTRL_EXT_CUT_CLK_EN_SHIFT)) & ANALOG_SFA_CTRL_EXT_CUT_CLK_EN_MASK)
-
-#define ANALOG_SFA_CTRL_EXT_CUT_PIN_EN_MASK      (0x10000U)
-#define ANALOG_SFA_CTRL_EXT_CUT_PIN_EN_SHIFT     (16U)
-/*! CUT_PIN_EN - CUT_PIN_EN */
-#define ANALOG_SFA_CTRL_EXT_CUT_PIN_EN(x)        (((uint32_t)(((uint32_t)(x)) << ANALOG_SFA_CTRL_EXT_CUT_PIN_EN_SHIFT)) & ANALOG_SFA_CTRL_EXT_CUT_PIN_EN_MASK)
 /*! @} */
 
 /*! @name CNT_STAT - Signal Frequency Analyser Count Status Register */

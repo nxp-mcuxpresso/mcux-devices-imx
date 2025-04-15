@@ -44,13 +44,13 @@
 **                          MIMX9596XVZXN_cm7
 **
 **     Version:             rev. 1.0, 2023-01-10
-**     Build:               b240728
+**     Build:               b250415
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for ENET_PHY_CTRL_EX
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -166,14 +166,6 @@ typedef struct {
 
 /*! @name GLOBAL_CTRL_EX_1 - PHY Global Extra Control 1 */
 /*! @{ */
-
-#define ENET_PHY_CTRL_EX_GLOBAL_CTRL_EX_1_PHY_TEST_FLYOVER_EN_MASK (0x1U)
-#define ENET_PHY_CTRL_EX_GLOBAL_CTRL_EX_1_PHY_TEST_FLYOVER_EN_SHIFT (0U)
-/*! PHY_TEST_FLYOVER_EN - Enable Flyover Test Mode
- *  0b0..Disables
- *  0b1..Enables
- */
-#define ENET_PHY_CTRL_EX_GLOBAL_CTRL_EX_1_PHY_TEST_FLYOVER_EN(x) (((uint16_t)(((uint16_t)(x)) << ENET_PHY_CTRL_EX_GLOBAL_CTRL_EX_1_PHY_TEST_FLYOVER_EN_SHIFT)) & ENET_PHY_CTRL_EX_GLOBAL_CTRL_EX_1_PHY_TEST_FLYOVER_EN_MASK)
 
 #define ENET_PHY_CTRL_EX_GLOBAL_CTRL_EX_1_PHY_TEST_STOP_CLK_EN_MASK (0x10U)
 #define ENET_PHY_CTRL_EX_GLOBAL_CTRL_EX_1_PHY_TEST_STOP_CLK_EN_SHIFT (4U)

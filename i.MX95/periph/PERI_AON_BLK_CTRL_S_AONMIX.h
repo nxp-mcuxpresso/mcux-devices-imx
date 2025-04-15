@@ -44,13 +44,13 @@
 **                          MIMX9596XVZXN_cm7
 **
 **     Version:             rev. 1.0, 2023-01-10
-**     Build:               b240728
+**     Build:               b250415
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for AON_BLK_CTRL_S_AONMIX
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -587,10 +587,10 @@ typedef struct {
 #define AON_BLK_CTRL_S_AONMIX_M33_CFG_TCM_SIZE_MASK (0x18U)
 #define AON_BLK_CTRL_S_AONMIX_M33_CFG_TCM_SIZE_SHIFT (3U)
 /*! TCM_SIZE - M33 TCM SIZE
- *  0b11..Reserved
- *  0b10..Double Sys TCM, 512KB Sys TCM
- *  0b01..Double Code TCM, 512KB Code TCM
  *  0b00..Regular TCM, 256KB Code TCM and 256KB Sys TCM
+ *  0b01..Double Code TCM, 512KB Code TCM
+ *  0b10..Double Sys TCM, 512KB Sys TCM
+ *  0b11..Reserved
  */
 #define AON_BLK_CTRL_S_AONMIX_M33_CFG_TCM_SIZE(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_M33_CFG_TCM_SIZE_SHIFT)) & AON_BLK_CTRL_S_AONMIX_M33_CFG_TCM_SIZE_MASK)
 /*! @} */
@@ -648,8 +648,8 @@ typedef struct {
 #define AON_BLK_CTRL_S_AONMIX_AXBS_AON_CTRL_M0_HIGH_PRIORITY_MASK (0x2U)
 #define AON_BLK_CTRL_S_AONMIX_AXBS_AON_CTRL_M0_HIGH_PRIORITY_SHIFT (1U)
 /*! M0_HIGH_PRIORITY - M0 High Priority Control Bit
- *  0b1..High priority
  *  0b0..Default priority
+ *  0b1..High priority
  */
 #define AON_BLK_CTRL_S_AONMIX_AXBS_AON_CTRL_M0_HIGH_PRIORITY(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_AXBS_AON_CTRL_M0_HIGH_PRIORITY_SHIFT)) & AON_BLK_CTRL_S_AONMIX_AXBS_AON_CTRL_M0_HIGH_PRIORITY_MASK)
 
@@ -700,8 +700,8 @@ typedef struct {
 #define AON_BLK_CTRL_S_AONMIX_DAP_ACCESS_STKYBIT_A55_MASK (0x2U)
 #define AON_BLK_CTRL_S_AONMIX_DAP_ACCESS_STKYBIT_A55_SHIFT (1U)
 /*! A55 - A55 DAP_ACCESS_STKYBIT
- *  0b1..A55 core can be accessed by DAP
  *  0b0..A55 core cannot be accessed by DAP
+ *  0b1..A55 core can be accessed by DAP
  */
 #define AON_BLK_CTRL_S_AONMIX_DAP_ACCESS_STKYBIT_A55(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_DAP_ACCESS_STKYBIT_A55_SHIFT)) & AON_BLK_CTRL_S_AONMIX_DAP_ACCESS_STKYBIT_A55_MASK)
 /*! @} */
@@ -712,216 +712,216 @@ typedef struct {
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_aonmix_MASK (0x2U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_aonmix_SHIFT (1U)
 /*! aonmix - AON domain cold reset handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with ELE when resetting the reset region.
+ *  0b1..Enable handshake with ELE when resetting the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_aonmix(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_aonmix_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_aonmix_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_M33_platform_MASK (0x4U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_M33_platform_SHIFT (2U)
 /*! M33_platform - CM33 platform cold reset handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with ELE when resetting the reset region.
+ *  0b1..Enable handshake with ELE when resetting the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_M33_platform(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_M33_platform_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_M33_platform_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_ELE_MASK (0x8U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_ELE_SHIFT (3U)
 /*! ELE - ELE cold reset handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with ELE when resetting the reset region.
+ *  0b1..Enable handshake with ELE when resetting the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_ELE(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_ELE_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_ELE_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_Cameramix_MASK (0x20U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_Cameramix_SHIFT (5U)
 /*! Cameramix - Camera domain cold reset handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with ELE when resetting the reset region.
+ *  0b1..Enable handshake with ELE when resetting the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_Cameramix(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_Cameramix_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_Cameramix_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_A55_cpu0_MASK (0x80U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_A55_cpu0_SHIFT (7U)
 /*! A55_cpu0 - CA55_CPU0 cold reset handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with ELE when resetting the reset region.
+ *  0b1..Enable handshake with ELE when resetting the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_A55_cpu0(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_A55_cpu0_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_A55_cpu0_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_A55_cpu1_MASK (0x100U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_A55_cpu1_SHIFT (8U)
 /*! A55_cpu1 - CA55_CPU1 cold reset handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with ELE when resetting the reset region.
+ *  0b1..Enable handshake with ELE when resetting the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_A55_cpu1(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_A55_cpu1_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_A55_cpu1_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_A55_cpu2_MASK (0x200U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_A55_cpu2_SHIFT (9U)
 /*! A55_cpu2 - CA55_CPU2 cold reset handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with ELE when resetting the reset region.
+ *  0b1..Enable handshake with ELE when resetting the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_A55_cpu2(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_A55_cpu2_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_A55_cpu2_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_A55_cpu3_MASK (0x400U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_A55_cpu3_SHIFT (10U)
 /*! A55_cpu3 - CA55_CPU3 cold reset handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with ELE when resetting the reset region.
+ *  0b1..Enable handshake with ELE when resetting the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_A55_cpu3(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_A55_cpu3_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_A55_cpu3_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_A55_cpu4_MASK (0x800U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_A55_cpu4_SHIFT (11U)
 /*! A55_cpu4 - CA55_CPU4 cold reset handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with ELE when resetting the reset region.
+ *  0b1..Enable handshake with ELE when resetting the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_A55_cpu4(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_A55_cpu4_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_A55_cpu4_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_A55_cpu5_MASK (0x1000U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_A55_cpu5_SHIFT (12U)
 /*! A55_cpu5 - CA55_CPU5 cold reset handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with ELE when resetting the reset region.
+ *  0b1..Enable handshake with ELE when resetting the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_A55_cpu5(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_A55_cpu5_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_A55_cpu5_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_A55_platform_MASK (0x2000U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_A55_platform_SHIFT (13U)
 /*! A55_platform - CA55_Platform cold reset handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with ELE when resetting the reset region.
+ *  0b1..Enable handshake with ELE when resetting the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_A55_platform(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_A55_platform_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_A55_platform_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_ddrmix_top_MASK (0x4000U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_ddrmix_top_SHIFT (14U)
 /*! ddrmix_top - DDR domain cold reset handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with ELE when resetting the reset region.
+ *  0b1..Enable handshake with ELE when resetting the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_ddrmix_top(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_ddrmix_top_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_ddrmix_top_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_ddr_phy_MASK (0x8000U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_ddr_phy_SHIFT (15U)
 /*! ddr_phy - DDR PHY cold reset handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with ELE when resetting the reset region.
+ *  0b1..Enable handshake with ELE when resetting the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_ddr_phy(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_ddr_phy_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_ddr_phy_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_display_MASK (0x10000U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_display_SHIFT (16U)
 /*! display - Display domain cold reset handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with ELE when resetting the reset region.
+ *  0b1..Enable handshake with ELE when resetting the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_display(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_display_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_display_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_gpu_MASK (0x20000U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_gpu_SHIFT (17U)
 /*! gpu - GPU domain cold reset handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with ELE when resetting the reset region.
+ *  0b1..Enable handshake with ELE when resetting the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_gpu(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_gpu_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_gpu_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_hsio_top_MASK (0x40000U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_hsio_top_SHIFT (18U)
 /*! hsio_top - HSIO domain cold reset handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with ELE when resetting the reset region.
+ *  0b1..Enable handshake with ELE when resetting the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_hsio_top(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_hsio_top_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_hsio_top_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_hsio_aon_MASK (0x80000U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_hsio_aon_SHIFT (19U)
 /*! hsio_aon - HSIO_AON cold reset handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with ELE when resetting the reset region.
+ *  0b1..Enable handshake with ELE when resetting the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_hsio_aon(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_hsio_aon_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_hsio_aon_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_m7mix_MASK (0x100000U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_m7mix_SHIFT (20U)
 /*! m7mix - M7 domain cold reset handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with ELE when resetting the reset region.
+ *  0b1..Enable handshake with ELE when resetting the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_m7mix(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_m7mix_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_m7mix_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_netc_MASK (0x200000U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_netc_SHIFT (21U)
 /*! netc - NETC domain cold reset handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with ELE when resetting the reset region.
+ *  0b1..Enable handshake with ELE when resetting the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_netc(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_netc_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_netc_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_noc_MASK (0x400000U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_noc_SHIFT (22U)
 /*! noc - NOC cold reset handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with ELE when resetting the reset region.
+ *  0b1..Enable handshake with ELE when resetting the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_noc(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_noc_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_noc_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_npu_MASK (0x800000U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_npu_SHIFT (23U)
 /*! npu - NPU cold reset handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with ELE when resetting the reset region.
+ *  0b1..Enable handshake with ELE when resetting the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_npu(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_npu_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_npu_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_vpu_MASK (0x1000000U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_vpu_SHIFT (24U)
 /*! vpu - VPU cold reset handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with ELE when resetting the reset region.
+ *  0b1..Enable handshake with ELE when resetting the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_vpu(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_vpu_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_vpu_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_wakeupmix_top_MASK (0x2000000U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_wakeupmix_top_SHIFT (25U)
 /*! wakeupmix_top - wakeupmix_top cold reset handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with ELE when resetting the reset region.
+ *  0b1..Enable handshake with ELE when resetting the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_wakeupmix_top(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_wakeupmix_top_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_wakeupmix_top_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_wakeupmix_jtag_MASK (0x4000000U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_wakeupmix_jtag_SHIFT (26U)
 /*! wakeupmix_jtag - wakeupmix_jtag cold reset handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with ELE when resetting the reset region.
+ *  0b1..Enable handshake with ELE when resetting the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_wakeupmix_jtag(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_wakeupmix_jtag_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_wakeupmix_jtag_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_wakeupmix_wdog_3_4_MASK (0x8000000U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_wakeupmix_wdog_3_4_SHIFT (27U)
 /*! wakeupmix_wdog_3_4 - wakeupmix_wdog_3_4 cold reset handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with ELE when resetting the reset region.
+ *  0b1..Enable handshake with ELE when resetting the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_wakeupmix_wdog_3_4(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_wakeupmix_wdog_3_4_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_wakeupmix_wdog_3_4_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_wakeupmix_wdog5_MASK (0x10000000U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_wakeupmix_wdog5_SHIFT (28U)
 /*! wakeupmix_wdog5 - wakeupmix_wdog5 cold reset handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with ELE when resetting the reset region.
+ *  0b1..Enable handshake with ELE when resetting the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_wakeupmix_wdog5(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_wakeupmix_wdog5_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_wakeupmix_wdog5_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_aonmix_power_MASK (0x40000000U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_aonmix_power_SHIFT (30U)
 /*! aonmix_power - AON domain low power handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with ELE when powering down the reset region.
+ *  0b1..Enable handshake with ELE when powering down the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_aonmix_power(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_aonmix_power_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_ELE_aonmix_power_MASK)
 /*! @} */
@@ -932,160 +932,160 @@ typedef struct {
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_cameramix_MASK (0x1U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_cameramix_SHIFT (0U)
 /*! cameramix - Camera domain low power handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with ELE when powering down the reset region.
+ *  0b1..Enable handshake with ELE when powering down the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_cameramix(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_cameramix_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_cameramix_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_A55_cpu0_MASK (0x4U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_A55_cpu0_SHIFT (2U)
 /*! A55_cpu0 - CA55_CPU0 low power handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with ELE when powering down the reset region.
+ *  0b1..Enable handshake with ELE when powering down the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_A55_cpu0(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_A55_cpu0_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_A55_cpu0_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_A55_cpu1_MASK (0x8U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_A55_cpu1_SHIFT (3U)
 /*! A55_cpu1 - CA55_CPU1 low power handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with ELE when powering down the reset region.
+ *  0b1..Enable handshake with ELE when powering down the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_A55_cpu1(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_A55_cpu1_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_A55_cpu1_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_A55_cpu2_MASK (0x10U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_A55_cpu2_SHIFT (4U)
 /*! A55_cpu2 - CA55_CPU2 low power handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with ELE when powering down the reset region.
+ *  0b1..Enable handshake with ELE when powering down the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_A55_cpu2(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_A55_cpu2_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_A55_cpu2_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_A55_cpu3_MASK (0x20U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_A55_cpu3_SHIFT (5U)
 /*! A55_cpu3 - CA55_CPU3 low power handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with ELE when powering down the reset region.
+ *  0b1..Enable handshake with ELE when powering down the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_A55_cpu3(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_A55_cpu3_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_A55_cpu3_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_A55_cpu4_MASK (0x40U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_A55_cpu4_SHIFT (6U)
 /*! A55_cpu4 - CA55_CPU4 low power handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with ELE when powering down the reset region.
+ *  0b1..Enable handshake with ELE when powering down the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_A55_cpu4(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_A55_cpu4_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_A55_cpu4_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_A55_cpu5_MASK (0x80U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_A55_cpu5_SHIFT (7U)
 /*! A55_cpu5 - CA55_CPU5 low power handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with ELE when powering down the reset region.
+ *  0b1..Enable handshake with ELE when powering down the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_A55_cpu5(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_A55_cpu5_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_A55_cpu5_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_A55_platform_MASK (0x100U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_A55_platform_SHIFT (8U)
 /*! A55_platform - CA55_Platform low power handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with ELE when powering down the reset region.
+ *  0b1..Enable handshake with ELE when powering down the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_A55_platform(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_A55_platform_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_A55_platform_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_ddr_MASK (0x200U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_ddr_SHIFT (9U)
 /*! ddr - DDR domain low power handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with ELE when powering down the reset region.
+ *  0b1..Enable handshake with ELE when powering down the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_ddr(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_ddr_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_ddr_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_display_MASK (0x400U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_display_SHIFT (10U)
 /*! display - Display domain low power handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with ELE when powering down the reset region.
+ *  0b1..Enable handshake with ELE when powering down the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_display(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_display_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_display_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_gpu_MASK (0x800U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_gpu_SHIFT (11U)
 /*! gpu - GPU domain low power handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with ELE when powering down the reset region.
+ *  0b1..Enable handshake with ELE when powering down the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_gpu(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_gpu_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_gpu_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_hsio_top_MASK (0x1000U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_hsio_top_SHIFT (12U)
 /*! hsio_top - HSIO domain low power handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with ELE when powering down the reset region.
+ *  0b1..Enable handshake with ELE when powering down the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_hsio_top(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_hsio_top_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_hsio_top_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_hsio_aon_MASK (0x2000U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_hsio_aon_SHIFT (13U)
 /*! hsio_aon - HSIO_AON low power handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with ELE when powering down the reset region.
+ *  0b1..Enable handshake with ELE when powering down the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_hsio_aon(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_hsio_aon_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_hsio_aon_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_m7_platform_MASK (0x4000U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_m7_platform_SHIFT (14U)
 /*! m7_platform - M7 Platform low power handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with ELE when powering down the reset region.
+ *  0b1..Enable handshake with ELE when powering down the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_m7_platform(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_m7_platform_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_m7_platform_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_netc_MASK (0x8000U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_netc_SHIFT (15U)
 /*! netc - NETC domain low power handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with ELE when powering down the reset region.
+ *  0b1..Enable handshake with ELE when powering down the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_netc(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_netc_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_netc_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_noc_MASK (0x10000U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_noc_SHIFT (16U)
 /*! noc - NOC low power handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with ELE when powering down the reset region.
+ *  0b1..Enable handshake with ELE when powering down the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_noc(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_noc_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_noc_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_npu_MASK (0x20000U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_npu_SHIFT (17U)
 /*! npu - NPU low power handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with ELE when powering down the reset region.
+ *  0b1..Enable handshake with ELE when powering down the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_npu(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_npu_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_npu_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_vpu_MASK (0x40000U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_vpu_SHIFT (18U)
 /*! vpu - VPU low power handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with ELE when powering down the reset region.
+ *  0b1..Enable handshake with ELE when powering down the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_vpu(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_vpu_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_vpu_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_wakeup_MASK (0x80000U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_wakeup_SHIFT (19U)
 /*! wakeup - WAKEUP low power handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with ELE when powering down the reset region.
+ *  0b1..Enable handshake with ELE when powering down the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_wakeup(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_wakeup_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_wakeup_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_osc24mhz_MASK (0x100000U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_osc24mhz_SHIFT (20U)
-/*! osc24mhz - OSC 24MHz low power handshake enable
- *  0b1..Enable
- *  0b0..Disable
+/*! osc24mhz - OSC 24MHz clock on/off handshake enable
+ *  0b0..Bypass handshake with ELE when the OSC24 MHz clock is turned on/off.
+ *  0b1..Enable handshake with ELE when the OSC24 MHz clock is on/off.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_osc24mhz(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_osc24mhz_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_ELE_osc24mhz_MASK)
 /*! @} */
@@ -1096,216 +1096,216 @@ typedef struct {
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_aonmix_MASK (0x2U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_aonmix_SHIFT (1U)
 /*! aonmix - AON domain cold reset handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with SM when resetting the reset region.
+ *  0b1..Enable handshake with SM when resetting the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_aonmix(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_aonmix_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_aonmix_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_M33_platform_MASK (0x4U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_M33_platform_SHIFT (2U)
 /*! M33_platform - CM33 platform cold reset handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with SM when resetting the reset region.
+ *  0b1..Enable handshake with SM when resetting the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_M33_platform(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_M33_platform_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_M33_platform_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_ELE_MASK (0x8U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_ELE_SHIFT (3U)
 /*! ELE - ELE cold reset handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with SM when resetting the reset region.
+ *  0b1..Enable handshake with SM when resetting the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_ELE(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_ELE_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_ELE_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_Cameramix_MASK (0x20U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_Cameramix_SHIFT (5U)
 /*! Cameramix - Camera domain cold reset handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with SM when resetting the reset region.
+ *  0b1..Enable handshake with SM when resetting the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_Cameramix(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_Cameramix_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_Cameramix_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_A55_cpu0_MASK (0x80U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_A55_cpu0_SHIFT (7U)
 /*! A55_cpu0 - CA55_CPU0 cold reset handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with SM when resetting the reset region.
+ *  0b1..Enable handshake with SM when resetting the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_A55_cpu0(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_A55_cpu0_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_A55_cpu0_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_A55_cpu1_MASK (0x100U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_A55_cpu1_SHIFT (8U)
 /*! A55_cpu1 - CA55_CPU1 cold reset handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with SM when resetting the reset region.
+ *  0b1..Enable handshake with SM when resetting the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_A55_cpu1(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_A55_cpu1_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_A55_cpu1_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_A55_cpu2_MASK (0x200U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_A55_cpu2_SHIFT (9U)
 /*! A55_cpu2 - CA55_CPU2 cold reset handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with SM when resetting the reset region.
+ *  0b1..Enable handshake with SM when resetting the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_A55_cpu2(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_A55_cpu2_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_A55_cpu2_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_A55_cpu3_MASK (0x400U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_A55_cpu3_SHIFT (10U)
 /*! A55_cpu3 - CA55_CPU3 cold reset handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with SM when resetting the reset region.
+ *  0b1..Enable handshake with SM when resetting the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_A55_cpu3(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_A55_cpu3_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_A55_cpu3_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_A55_cpu4_MASK (0x800U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_A55_cpu4_SHIFT (11U)
 /*! A55_cpu4 - CA55_CPU4 cold reset handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with SM when resetting the reset region.
+ *  0b1..Enable handshake with SM when resetting the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_A55_cpu4(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_A55_cpu4_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_A55_cpu4_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_A55_cpu5_MASK (0x1000U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_A55_cpu5_SHIFT (12U)
 /*! A55_cpu5 - CA55_CPU5 cold reset handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with SM when resetting the reset region.
+ *  0b1..Enable handshake with SM when resetting the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_A55_cpu5(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_A55_cpu5_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_A55_cpu5_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_A55_platform_MASK (0x2000U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_A55_platform_SHIFT (13U)
 /*! A55_platform - CA55_Platform cold reset handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with SM when resetting the reset region.
+ *  0b1..Enable handshake with SM when resetting the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_A55_platform(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_A55_platform_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_A55_platform_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_ddrmix_top_MASK (0x4000U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_ddrmix_top_SHIFT (14U)
 /*! ddrmix_top - DDR domain cold reset handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with SM when resetting the reset region.
+ *  0b1..Enable handshake with SM when resetting the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_ddrmix_top(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_ddrmix_top_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_ddrmix_top_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_ddr_phy_MASK (0x8000U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_ddr_phy_SHIFT (15U)
 /*! ddr_phy - DDR PHY cold reset handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with SM when resetting the reset region.
+ *  0b1..Enable handshake with SM when resetting the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_ddr_phy(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_ddr_phy_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_ddr_phy_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_display_MASK (0x10000U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_display_SHIFT (16U)
 /*! display - Display domain cold reset handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with SM when resetting the reset region.
+ *  0b1..Enable handshake with SM when resetting the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_display(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_display_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_display_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_gpu_MASK (0x20000U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_gpu_SHIFT (17U)
 /*! gpu - GPU domain cold reset handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with SM when resetting the reset region.
+ *  0b1..Enable handshake with SM when resetting the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_gpu(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_gpu_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_gpu_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_hsio_top_MASK (0x40000U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_hsio_top_SHIFT (18U)
 /*! hsio_top - HSIO domain cold reset handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with SM when resetting the reset region.
+ *  0b1..Enable handshake with SM when resetting the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_hsio_top(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_hsio_top_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_hsio_top_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_hsio_aon_MASK (0x80000U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_hsio_aon_SHIFT (19U)
 /*! hsio_aon - HSIO_AON cold reset handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with SM when resetting the reset region.
+ *  0b1..Enable handshake with SM when resetting the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_hsio_aon(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_hsio_aon_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_hsio_aon_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_m7mix_MASK (0x100000U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_m7mix_SHIFT (20U)
 /*! m7mix - M7 domain cold reset handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with SM when resetting the reset region.
+ *  0b1..Enable handshake with SM when resetting the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_m7mix(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_m7mix_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_m7mix_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_netc_MASK (0x200000U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_netc_SHIFT (21U)
 /*! netc - NETC domain cold reset handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with SM when resetting the reset region.
+ *  0b1..Enable handshake with SM when resetting the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_netc(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_netc_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_netc_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_noc_MASK (0x400000U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_noc_SHIFT (22U)
 /*! noc - NOC cold reset handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with SM when resetting the reset region.
+ *  0b1..Enable handshake with SM when resetting the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_noc(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_noc_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_noc_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_npu_MASK (0x800000U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_npu_SHIFT (23U)
 /*! npu - NPU cold reset handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with SM when resetting the reset region.
+ *  0b1..Enable handshake with SM when resetting the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_npu(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_npu_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_npu_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_vpu_MASK (0x1000000U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_vpu_SHIFT (24U)
 /*! vpu - VPU cold reset handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with SM when resetting the reset region.
+ *  0b1..Enable handshake with SM when resetting the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_vpu(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_vpu_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_vpu_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_wakeupmix_top_MASK (0x2000000U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_wakeupmix_top_SHIFT (25U)
 /*! wakeupmix_top - wakeupmix_top cold reset handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with SM when resetting the reset region.
+ *  0b1..Enable handshake with SM when resetting the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_wakeupmix_top(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_wakeupmix_top_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_wakeupmix_top_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_wakeupmix_jtag_MASK (0x4000000U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_wakeupmix_jtag_SHIFT (26U)
 /*! wakeupmix_jtag - wakeupmix_jtag cold reset handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with SM when resetting the reset region.
+ *  0b1..Enable handshake with SM when resetting the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_wakeupmix_jtag(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_wakeupmix_jtag_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_wakeupmix_jtag_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_wakeupmix_wdog_3_4_MASK (0x8000000U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_wakeupmix_wdog_3_4_SHIFT (27U)
 /*! wakeupmix_wdog_3_4 - wakeupmix_wdog_3_4 cold reset handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with SM when resetting the reset region.
+ *  0b1..Enable handshake with SM when resetting the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_wakeupmix_wdog_3_4(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_wakeupmix_wdog_3_4_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_wakeupmix_wdog_3_4_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_wakeupmix_wdog5_MASK (0x10000000U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_wakeupmix_wdog5_SHIFT (28U)
 /*! wakeupmix_wdog5 - wakeupmix_wdog5 cold reset handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with SM when resetting the reset region.
+ *  0b1..Enable handshake with SM when resetting the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_wakeupmix_wdog5(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_wakeupmix_wdog5_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_wakeupmix_wdog5_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_aonmix_power_MASK (0x40000000U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_aonmix_power_SHIFT (30U)
 /*! aonmix_power - AON domain low power handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with SM when powering down the reset region.
+ *  0b1..Enable handshake with SM when powering down the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_aonmix_power(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_aonmix_power_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE_SM_aonmix_power_MASK)
 /*! @} */
@@ -1316,160 +1316,160 @@ typedef struct {
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_cameramix_MASK (0x1U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_cameramix_SHIFT (0U)
 /*! cameramix - Camera domain low power handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with SM when powering down the reset region.
+ *  0b1..Enable handshake with SM powering down the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_cameramix(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_cameramix_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_cameramix_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_A55_cpu0_MASK (0x4U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_A55_cpu0_SHIFT (2U)
 /*! A55_cpu0 - CA55_CPU0 low power handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with SM when powering down the reset region.
+ *  0b1..Enable handshake with SM when powering down the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_A55_cpu0(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_A55_cpu0_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_A55_cpu0_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_A55_cpu1_MASK (0x8U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_A55_cpu1_SHIFT (3U)
 /*! A55_cpu1 - CA55_CPU1 low power handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with SM when powering down the reset region.
+ *  0b1..Enable handshake with SM when powering down the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_A55_cpu1(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_A55_cpu1_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_A55_cpu1_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_A55_cpu2_MASK (0x10U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_A55_cpu2_SHIFT (4U)
 /*! A55_cpu2 - CA55_CPU2 low power handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with SM when powering down the reset region.
+ *  0b1..Enable handshake with SM when powering down the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_A55_cpu2(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_A55_cpu2_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_A55_cpu2_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_A55_cpu3_MASK (0x20U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_A55_cpu3_SHIFT (5U)
 /*! A55_cpu3 - CA55_CPU3 low power handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with SM when powering down the reset region.
+ *  0b1..Enable handshake with SM when powering down the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_A55_cpu3(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_A55_cpu3_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_A55_cpu3_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_A55_cpu4_MASK (0x40U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_A55_cpu4_SHIFT (6U)
 /*! A55_cpu4 - CA55_CPU4 low power handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with SM when powering down the reset region.
+ *  0b1..Enable handshake with SM when powering down the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_A55_cpu4(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_A55_cpu4_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_A55_cpu4_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_A55_cpu5_MASK (0x80U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_A55_cpu5_SHIFT (7U)
 /*! A55_cpu5 - CA55_CPU5 low power handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with SM when powering down the reset region.
+ *  0b1..Enable handshake with SM when powering down the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_A55_cpu5(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_A55_cpu5_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_A55_cpu5_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_A55_platform_MASK (0x100U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_A55_platform_SHIFT (8U)
 /*! A55_platform - CA55_Platform low power handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with SM when powering down the reset region.
+ *  0b1..Enable handshake with SM when powering down the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_A55_platform(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_A55_platform_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_A55_platform_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_ddr_MASK (0x200U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_ddr_SHIFT (9U)
 /*! ddr - DDR domain low power handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with SM when powering down the reset region.
+ *  0b1..Enable handshake with SM when powering down the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_ddr(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_ddr_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_ddr_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_display_MASK (0x400U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_display_SHIFT (10U)
 /*! display - Display domain low power handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with SM when powering down the reset region.
+ *  0b1..Enable handshake with SM when powering down the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_display(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_display_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_display_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_gpu_MASK (0x800U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_gpu_SHIFT (11U)
 /*! gpu - GPU domain low power handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with SM when powering down the reset region.
+ *  0b1..Enable handshake with SM when powering down the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_gpu(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_gpu_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_gpu_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_hsio_top_MASK (0x1000U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_hsio_top_SHIFT (12U)
 /*! hsio_top - HSIO domain low power handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with SM when powering down the reset region.
+ *  0b1..Enable handshake with SM when powering down the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_hsio_top(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_hsio_top_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_hsio_top_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_hsio_aon_MASK (0x2000U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_hsio_aon_SHIFT (13U)
 /*! hsio_aon - HSIO_AON low power handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with SM when powering down the reset region.
+ *  0b1..Enable handshake with SM when powering down the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_hsio_aon(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_hsio_aon_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_hsio_aon_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_m7_platform_MASK (0x4000U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_m7_platform_SHIFT (14U)
 /*! m7_platform - M7 Platform low power handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with SM when powering down the reset region.
+ *  0b1..Enable handshake with SM when powering down the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_m7_platform(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_m7_platform_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_m7_platform_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_netc_MASK (0x8000U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_netc_SHIFT (15U)
 /*! netc - NETC domain low power handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with SM when powering down the reset region.
+ *  0b1..Enable handshake with SM when powering down the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_netc(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_netc_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_netc_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_noc_MASK (0x10000U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_noc_SHIFT (16U)
 /*! noc - NOC low power handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with SM when powering down the reset region.
+ *  0b1..Enable handshake with SM when powering down the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_noc(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_noc_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_noc_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_npu_MASK (0x20000U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_npu_SHIFT (17U)
 /*! npu - NPU low power handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with SM when powering down the reset region.
+ *  0b1..Enable handshake with SM when powering down the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_npu(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_npu_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_npu_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_vpu_MASK (0x40000U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_vpu_SHIFT (18U)
 /*! vpu - VPU low power handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with SM when powering down the reset region.
+ *  0b1..Enable handshake with SM when powering down the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_vpu(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_vpu_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_vpu_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_wakeup_MASK (0x80000U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_wakeup_SHIFT (19U)
 /*! wakeup - WAKEUP low power handshake enable
- *  0b1..Enable
- *  0b0..Disable
+ *  0b0..Bypass handshake with SM when powering down the reset region.
+ *  0b1..Enable handshake with SM when powering down the reset region.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_wakeup(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_wakeup_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_wakeup_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_osc24mhz_MASK (0x100000U)
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_osc24mhz_SHIFT (20U)
-/*! osc24mhz - OSC 24MHz low power handshake enable
- *  0b1..Enable
- *  0b0..Disable
+/*! osc24mhz - OSC 24MHz clock on/off handshake enable
+ *  0b0..Bypass handshake with SM when the OSC24 MHz clock is turned on/off.
+ *  0b1..Enable handshake with SM when the OSC24 MHz clock is on/off.
  */
 #define AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_osc24mhz(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_osc24mhz_SHIFT)) & AON_BLK_CTRL_S_AONMIX_LP_HANDSHAKE2_SM_osc24mhz_MASK)
 /*! @} */
@@ -1488,8 +1488,8 @@ typedef struct {
 #define AON_BLK_CTRL_S_AONMIX_SM_LP_HANDSHAKE_STATUS_stat_MASK (0x2U)
 #define AON_BLK_CTRL_S_AONMIX_SM_LP_HANDSHAKE_STATUS_stat_SHIFT (1U)
 /*! stat - Status for clock/reset/power
- *  0b1..On
  *  0b0..Off
+ *  0b1..On
  */
 #define AON_BLK_CTRL_S_AONMIX_SM_LP_HANDSHAKE_STATUS_stat(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_SM_LP_HANDSHAKE_STATUS_stat_SHIFT)) & AON_BLK_CTRL_S_AONMIX_SM_LP_HANDSHAKE_STATUS_stat_MASK)
 
@@ -1501,8 +1501,8 @@ typedef struct {
 #define AON_BLK_CTRL_S_AONMIX_SM_LP_HANDSHAKE_STATUS_autoack_MASK (0x200U)
 #define AON_BLK_CTRL_S_AONMIX_SM_LP_HANDSHAKE_STATUS_autoack_SHIFT (9U)
 /*! autoack - Auto acknowledge enable bit
- *  0b1..Auto acknowledge enabled
  *  0b0..Auto acknowledge disabled
+ *  0b1..Auto acknowledge enabled
  */
 #define AON_BLK_CTRL_S_AONMIX_SM_LP_HANDSHAKE_STATUS_autoack(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_SM_LP_HANDSHAKE_STATUS_autoack_SHIFT)) & AON_BLK_CTRL_S_AONMIX_SM_LP_HANDSHAKE_STATUS_autoack_MASK)
 /*! @} */
@@ -1513,40 +1513,40 @@ typedef struct {
 #define AON_BLK_CTRL_S_AONMIX_CA55_CPUWAIT_CPU0_WAIT_MASK (0x1U)
 #define AON_BLK_CTRL_S_AONMIX_CA55_CPUWAIT_CPU0_WAIT_SHIFT (0U)
 /*! CPU0_WAIT - Configure CPU0 in CPU WAIT mode
- *  0b1..Core stops working
  *  0b0..Core works normally
+ *  0b1..Core stops working
  */
 #define AON_BLK_CTRL_S_AONMIX_CA55_CPUWAIT_CPU0_WAIT(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_CA55_CPUWAIT_CPU0_WAIT_SHIFT)) & AON_BLK_CTRL_S_AONMIX_CA55_CPUWAIT_CPU0_WAIT_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_CA55_CPUWAIT_CPU1_WAIT_MASK (0x2U)
 #define AON_BLK_CTRL_S_AONMIX_CA55_CPUWAIT_CPU1_WAIT_SHIFT (1U)
 /*! CPU1_WAIT - Configure CPU1 in CPU WAIT mode
- *  0b1..Core stops working
  *  0b0..Core works normally
+ *  0b1..Core stops working
  */
 #define AON_BLK_CTRL_S_AONMIX_CA55_CPUWAIT_CPU1_WAIT(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_CA55_CPUWAIT_CPU1_WAIT_SHIFT)) & AON_BLK_CTRL_S_AONMIX_CA55_CPUWAIT_CPU1_WAIT_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_CA55_CPUWAIT_CPU2_WAIT_MASK (0x4U)
 #define AON_BLK_CTRL_S_AONMIX_CA55_CPUWAIT_CPU2_WAIT_SHIFT (2U)
 /*! CPU2_WAIT - Configure CPU2 in CPU WAIT mode
- *  0b1..Core stops working
  *  0b0..Core works normally
+ *  0b1..Core stops working
  */
 #define AON_BLK_CTRL_S_AONMIX_CA55_CPUWAIT_CPU2_WAIT(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_CA55_CPUWAIT_CPU2_WAIT_SHIFT)) & AON_BLK_CTRL_S_AONMIX_CA55_CPUWAIT_CPU2_WAIT_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_CA55_CPUWAIT_CPU3_WAIT_MASK (0x8U)
 #define AON_BLK_CTRL_S_AONMIX_CA55_CPUWAIT_CPU3_WAIT_SHIFT (3U)
 /*! CPU3_WAIT - Configure CPU3 in CPU WAIT mode
- *  0b1..Core stops working
  *  0b0..Core works normally
+ *  0b1..Core stops working
  */
 #define AON_BLK_CTRL_S_AONMIX_CA55_CPUWAIT_CPU3_WAIT(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_CA55_CPUWAIT_CPU3_WAIT_SHIFT)) & AON_BLK_CTRL_S_AONMIX_CA55_CPUWAIT_CPU3_WAIT_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_CA55_CPUWAIT_CPU4_WAIT_MASK (0x10U)
 #define AON_BLK_CTRL_S_AONMIX_CA55_CPUWAIT_CPU4_WAIT_SHIFT (4U)
 /*! CPU4_WAIT - Configure CPU4 in CPU WAIT mode
- *  0b1..Core stops working
  *  0b0..Core works normally
+ *  0b1..Core stops working
  */
 #define AON_BLK_CTRL_S_AONMIX_CA55_CPUWAIT_CPU4_WAIT(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_CA55_CPUWAIT_CPU4_WAIT_SHIFT)) & AON_BLK_CTRL_S_AONMIX_CA55_CPUWAIT_CPU4_WAIT_MASK)
 
@@ -1737,8 +1737,8 @@ typedef struct {
 #define AON_BLK_CTRL_S_AONMIX_ELE_IRQ_MASK_wdg_reset_MASK (0x200U)
 #define AON_BLK_CTRL_S_AONMIX_ELE_IRQ_MASK_wdg_reset_SHIFT (9U)
 /*! wdg_reset - WDOG reset
- *  0b1..Mask interrupt
  *  0b0..Unmask interrupt
+ *  0b1..Mask interrupt
  */
 #define AON_BLK_CTRL_S_AONMIX_ELE_IRQ_MASK_wdg_reset(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_ELE_IRQ_MASK_wdg_reset_SHIFT)) & AON_BLK_CTRL_S_AONMIX_ELE_IRQ_MASK_wdg_reset_MASK)
 
@@ -1861,72 +1861,72 @@ typedef struct {
 #define AON_BLK_CTRL_S_AONMIX_ELE_RESET_REQ_MASK_noclk_fdet1_MASK (0x2U)
 #define AON_BLK_CTRL_S_AONMIX_ELE_RESET_REQ_MASK_noclk_fdet1_SHIFT (1U)
 /*! noclk_fdet1 - Missing reference clock reset request.
- *  0b1..Mask reset request
  *  0b0..Unmask reset request
+ *  0b1..Mask reset request
  */
 #define AON_BLK_CTRL_S_AONMIX_ELE_RESET_REQ_MASK_noclk_fdet1(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_ELE_RESET_REQ_MASK_noclk_fdet1_SHIFT)) & AON_BLK_CTRL_S_AONMIX_ELE_RESET_REQ_MASK_noclk_fdet1_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_ELE_RESET_REQ_MASK_noclk_fdet2_MASK (0x4U)
 #define AON_BLK_CTRL_S_AONMIX_ELE_RESET_REQ_MASK_noclk_fdet2_SHIFT (2U)
 /*! noclk_fdet2 - Missing ELE clock reset request.
- *  0b1..Mask reset request
  *  0b0..Unmask reset request
+ *  0b1..Mask reset request
  */
 #define AON_BLK_CTRL_S_AONMIX_ELE_RESET_REQ_MASK_noclk_fdet2(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_ELE_RESET_REQ_MASK_noclk_fdet2_SHIFT)) & AON_BLK_CTRL_S_AONMIX_ELE_RESET_REQ_MASK_noclk_fdet2_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_ELE_RESET_REQ_MASK_noclk_fdet3_MASK (0x8U)
 #define AON_BLK_CTRL_S_AONMIX_ELE_RESET_REQ_MASK_noclk_fdet3_SHIFT (3U)
 /*! noclk_fdet3 - Missing reference clock reset request.
- *  0b1..Mask reset request
  *  0b0..Unmask reset request
+ *  0b1..Mask reset request
  */
 #define AON_BLK_CTRL_S_AONMIX_ELE_RESET_REQ_MASK_noclk_fdet3(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_ELE_RESET_REQ_MASK_noclk_fdet3_SHIFT)) & AON_BLK_CTRL_S_AONMIX_ELE_RESET_REQ_MASK_noclk_fdet3_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_ELE_RESET_REQ_MASK_sys_reset_req_MASK (0x10U)
 #define AON_BLK_CTRL_S_AONMIX_ELE_RESET_REQ_MASK_sys_reset_req_SHIFT (4U)
 /*! sys_reset_req - System reset request
- *  0b1..Mask reset request
  *  0b0..Unmask reset request
+ *  0b1..Mask reset request
  */
 #define AON_BLK_CTRL_S_AONMIX_ELE_RESET_REQ_MASK_sys_reset_req(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_ELE_RESET_REQ_MASK_sys_reset_req_SHIFT)) & AON_BLK_CTRL_S_AONMIX_ELE_RESET_REQ_MASK_sys_reset_req_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_ELE_RESET_REQ_MASK_reset_req_32k_MASK (0x20U)
 #define AON_BLK_CTRL_S_AONMIX_ELE_RESET_REQ_MASK_reset_req_32k_SHIFT (5U)
 /*! reset_req_32k - Reset request for missing reference clock.
- *  0b1..Mask reset request
  *  0b0..Unmask reset request
+ *  0b1..Mask reset request
  */
 #define AON_BLK_CTRL_S_AONMIX_ELE_RESET_REQ_MASK_reset_req_32k(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_ELE_RESET_REQ_MASK_reset_req_32k_SHIFT)) & AON_BLK_CTRL_S_AONMIX_ELE_RESET_REQ_MASK_reset_req_32k_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_ELE_RESET_REQ_MASK_reset_req_MASK (0x40U)
 #define AON_BLK_CTRL_S_AONMIX_ELE_RESET_REQ_MASK_reset_req_SHIFT (6U)
 /*! reset_req - Edgelock enclave reset request
- *  0b1..Mask reset request
  *  0b0..Unmask reset request
+ *  0b1..Mask reset request
  */
 #define AON_BLK_CTRL_S_AONMIX_ELE_RESET_REQ_MASK_reset_req(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_ELE_RESET_REQ_MASK_reset_req_SHIFT)) & AON_BLK_CTRL_S_AONMIX_ELE_RESET_REQ_MASK_reset_req_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_ELE_RESET_REQ_MASK_sys_fail_MASK (0x80U)
 #define AON_BLK_CTRL_S_AONMIX_ELE_RESET_REQ_MASK_sys_fail_SHIFT (7U)
 /*! sys_fail - System failure, reset chip
- *  0b1..Mask reset request
  *  0b0..Unmask reset request
+ *  0b1..Mask reset request
  */
 #define AON_BLK_CTRL_S_AONMIX_ELE_RESET_REQ_MASK_sys_fail(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_ELE_RESET_REQ_MASK_sys_fail_SHIFT)) & AON_BLK_CTRL_S_AONMIX_ELE_RESET_REQ_MASK_sys_fail_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_ELE_RESET_REQ_MASK_lc_bricked_MASK (0x100U)
 #define AON_BLK_CTRL_S_AONMIX_ELE_RESET_REQ_MASK_lc_bricked_SHIFT (8U)
 /*! lc_bricked - Lifecycle is bricked state
- *  0b1..Mask reset request
  *  0b0..Unmask reset request
+ *  0b1..Mask reset request
  */
 #define AON_BLK_CTRL_S_AONMIX_ELE_RESET_REQ_MASK_lc_bricked(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_ELE_RESET_REQ_MASK_lc_bricked_SHIFT)) & AON_BLK_CTRL_S_AONMIX_ELE_RESET_REQ_MASK_lc_bricked_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_ELE_RESET_REQ_MASK_wdg_reset_MASK (0x400U)
 #define AON_BLK_CTRL_S_AONMIX_ELE_RESET_REQ_MASK_wdg_reset_SHIFT (10U)
 /*! wdg_reset - Watchdog reset request
- *  0b1..Mask reset request
  *  0b0..Unmask reset request
+ *  0b1..Mask reset request
  */
 #define AON_BLK_CTRL_S_AONMIX_ELE_RESET_REQ_MASK_wdg_reset(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_ELE_RESET_REQ_MASK_wdg_reset_SHIFT)) & AON_BLK_CTRL_S_AONMIX_ELE_RESET_REQ_MASK_wdg_reset_MASK)
 /*! @} */
@@ -1937,8 +1937,8 @@ typedef struct {
 #define AON_BLK_CTRL_S_AONMIX_ELE_HALT_STATUS_ELE_HALT_ACK_MASK (0x1U)
 #define AON_BLK_CTRL_S_AONMIX_ELE_HALT_STATUS_ELE_HALT_ACK_SHIFT (0U)
 /*! ELE_HALT_ACK - EdgeLock halt and clock status
- *  0b1..Remove the clear signal. This bit is not self-clearing and need SW to clear.
  *  0b0..Clear EdgeLock halt exit interrupt
+ *  0b1..Remove the clear signal. This bit is not self-clearing and need SW to clear.
  */
 #define AON_BLK_CTRL_S_AONMIX_ELE_HALT_STATUS_ELE_HALT_ACK(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_ELE_HALT_STATUS_ELE_HALT_ACK_SHIFT)) & AON_BLK_CTRL_S_AONMIX_ELE_HALT_STATUS_ELE_HALT_ACK_MASK)
 
@@ -1977,56 +1977,56 @@ typedef struct {
 #define AON_BLK_CTRL_S_AONMIX_NMI_MASK_CM7_MASK  (0x2U)
 #define AON_BLK_CTRL_S_AONMIX_NMI_MASK_CM7_SHIFT (1U)
 /*! CM7 - CM7 NMI mask
- *  0b1..NMI is masked
  *  0b0..NMI is usable
+ *  0b1..NMI is masked
  */
 #define AON_BLK_CTRL_S_AONMIX_NMI_MASK_CM7(x)    (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_NMI_MASK_CM7_SHIFT)) & AON_BLK_CTRL_S_AONMIX_NMI_MASK_CM7_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_NMI_MASK_NMI_PIN_MASK_MASK (0x4U)
 #define AON_BLK_CTRL_S_AONMIX_NMI_MASK_NMI_PIN_MASK_SHIFT (2U)
 /*! NMI_PIN_MASK - NMI PIN mask bit
- *  0b1..NMI is masked
  *  0b0..NMI is usable
+ *  0b1..NMI is masked
  */
 #define AON_BLK_CTRL_S_AONMIX_NMI_MASK_NMI_PIN_MASK(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_NMI_MASK_NMI_PIN_MASK_SHIFT)) & AON_BLK_CTRL_S_AONMIX_NMI_MASK_NMI_PIN_MASK_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_NMI_MASK_WDG1_NMI_MASK_MASK (0x8U)
 #define AON_BLK_CTRL_S_AONMIX_NMI_MASK_WDG1_NMI_MASK_SHIFT (3U)
 /*! WDG1_NMI_MASK - WDG1 NMI mask bit
- *  0b1..NMI is masked
  *  0b0..NMI is usable
+ *  0b1..NMI is masked
  */
 #define AON_BLK_CTRL_S_AONMIX_NMI_MASK_WDG1_NMI_MASK(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_NMI_MASK_WDG1_NMI_MASK_SHIFT)) & AON_BLK_CTRL_S_AONMIX_NMI_MASK_WDG1_NMI_MASK_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_NMI_MASK_WDG2_NMI_MASK_MASK (0x10U)
 #define AON_BLK_CTRL_S_AONMIX_NMI_MASK_WDG2_NMI_MASK_SHIFT (4U)
 /*! WDG2_NMI_MASK - WDG2 NMI mask bit
- *  0b1..NMI is masked
  *  0b0..NMI is usable
+ *  0b1..NMI is masked
  */
 #define AON_BLK_CTRL_S_AONMIX_NMI_MASK_WDG2_NMI_MASK(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_NMI_MASK_WDG2_NMI_MASK_SHIFT)) & AON_BLK_CTRL_S_AONMIX_NMI_MASK_WDG2_NMI_MASK_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_NMI_MASK_WDG3_NMI_MASK_MASK (0x20U)
 #define AON_BLK_CTRL_S_AONMIX_NMI_MASK_WDG3_NMI_MASK_SHIFT (5U)
 /*! WDG3_NMI_MASK - WDG3 NMI mask bit
- *  0b1..NMI is masked
  *  0b0..NMI is usable
+ *  0b1..NMI is masked
  */
 #define AON_BLK_CTRL_S_AONMIX_NMI_MASK_WDG3_NMI_MASK(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_NMI_MASK_WDG3_NMI_MASK_SHIFT)) & AON_BLK_CTRL_S_AONMIX_NMI_MASK_WDG3_NMI_MASK_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_NMI_MASK_WDG4_NMI_MASK_MASK (0x40U)
 #define AON_BLK_CTRL_S_AONMIX_NMI_MASK_WDG4_NMI_MASK_SHIFT (6U)
 /*! WDG4_NMI_MASK - WDG4 NMI mask bit
- *  0b1..NMI is masked
  *  0b0..NMI is usable
+ *  0b1..NMI is masked
  */
 #define AON_BLK_CTRL_S_AONMIX_NMI_MASK_WDG4_NMI_MASK(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_NMI_MASK_WDG4_NMI_MASK_SHIFT)) & AON_BLK_CTRL_S_AONMIX_NMI_MASK_WDG4_NMI_MASK_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_NMI_MASK_WDG5_NMI_MASK_MASK (0x80U)
 #define AON_BLK_CTRL_S_AONMIX_NMI_MASK_WDG5_NMI_MASK_SHIFT (7U)
 /*! WDG5_NMI_MASK - WDG5 NMI mask bit
- *  0b1..NMI is masked
  *  0b0..NMI is usable
+ *  0b1..NMI is masked
  */
 #define AON_BLK_CTRL_S_AONMIX_NMI_MASK_WDG5_NMI_MASK(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_NMI_MASK_WDG5_NMI_MASK_SHIFT)) & AON_BLK_CTRL_S_AONMIX_NMI_MASK_WDG5_NMI_MASK_MASK)
 /*! @} */
@@ -2051,24 +2051,24 @@ typedef struct {
 #define AON_BLK_CTRL_S_AONMIX_WDOG_ANY_MASK_wdog1_MASK (0x1U)
 #define AON_BLK_CTRL_S_AONMIX_WDOG_ANY_MASK_wdog1_SHIFT (0U)
 /*! wdog1 - wdog1 to wdog_any mask bit
- *  0b1..Mask
  *  0b0..Unmask
+ *  0b1..Mask
  */
 #define AON_BLK_CTRL_S_AONMIX_WDOG_ANY_MASK_wdog1(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_WDOG_ANY_MASK_wdog1_SHIFT)) & AON_BLK_CTRL_S_AONMIX_WDOG_ANY_MASK_wdog1_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_WDOG_ANY_MASK_wdog2_MASK (0x2U)
 #define AON_BLK_CTRL_S_AONMIX_WDOG_ANY_MASK_wdog2_SHIFT (1U)
 /*! wdog2 - wdog2 to wdog_any mask bit
- *  0b1..Mask
  *  0b0..Unmask
+ *  0b1..Mask
  */
 #define AON_BLK_CTRL_S_AONMIX_WDOG_ANY_MASK_wdog2(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_WDOG_ANY_MASK_wdog2_SHIFT)) & AON_BLK_CTRL_S_AONMIX_WDOG_ANY_MASK_wdog2_MASK)
 
 #define AON_BLK_CTRL_S_AONMIX_WDOG_ANY_MASK_wdog3_MASK (0x4U)
 #define AON_BLK_CTRL_S_AONMIX_WDOG_ANY_MASK_wdog3_SHIFT (2U)
 /*! wdog3 - wdog3 to wdog_any mask bit
- *  0b1..Mask
  *  0b0..Unmask
+ *  0b1..Mask
  */
 #define AON_BLK_CTRL_S_AONMIX_WDOG_ANY_MASK_wdog3(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_WDOG_ANY_MASK_wdog3_SHIFT)) & AON_BLK_CTRL_S_AONMIX_WDOG_ANY_MASK_wdog3_MASK)
 
@@ -2083,8 +2083,8 @@ typedef struct {
 #define AON_BLK_CTRL_S_AONMIX_WDOG_ANY_MASK_wdog5_MASK (0x10U)
 #define AON_BLK_CTRL_S_AONMIX_WDOG_ANY_MASK_wdog5_SHIFT (4U)
 /*! wdog5 - wdog5 to wdog_any mask bit
- *  0b1..Mask
  *  0b0..Unmask
+ *  0b1..Mask
  */
 #define AON_BLK_CTRL_S_AONMIX_WDOG_ANY_MASK_wdog5(x) (((uint32_t)(((uint32_t)(x)) << AON_BLK_CTRL_S_AONMIX_WDOG_ANY_MASK_wdog5_SHIFT)) & AON_BLK_CTRL_S_AONMIX_WDOG_ANY_MASK_wdog5_MASK)
 /*! @} */

@@ -44,13 +44,13 @@
 **                          MIMX9596XVZXN_cm7
 **
 **     Version:             rev. 1.0, 2023-01-10
-**     Build:               b240728
+**     Build:               b250415
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for HSIO_GHZ_LN_PLL
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -181,16 +181,16 @@ typedef struct {
 #define HSIO_GHZ_LN_PLL_CTRL_POWERUP_MASK        (0x1U)
 #define HSIO_GHZ_LN_PLL_CTRL_POWERUP_SHIFT       (0U)
 /*! POWERUP - Power Up
- *  0b0..Disables PLL.
- *  0b1..Enables PLL
+ *  0b0..Disable
+ *  0b1..Enable
  */
 #define HSIO_GHZ_LN_PLL_CTRL_POWERUP(x)          (((uint32_t)(((uint32_t)(x)) << HSIO_GHZ_LN_PLL_CTRL_POWERUP_SHIFT)) & HSIO_GHZ_LN_PLL_CTRL_POWERUP_MASK)
 
 #define HSIO_GHZ_LN_PLL_CTRL_CLKMUX_EN_MASK      (0x2U)
 #define HSIO_GHZ_LN_PLL_CTRL_CLKMUX_EN_SHIFT     (1U)
 /*! CLKMUX_EN - CLKMUX Enable
- *  0b0..Disables output clock mux.
- *  0b1..Enables output clock mux.
+ *  0b0..Disable
+ *  0b1..Enable
  */
 #define HSIO_GHZ_LN_PLL_CTRL_CLKMUX_EN(x)        (((uint32_t)(((uint32_t)(x)) << HSIO_GHZ_LN_PLL_CTRL_CLKMUX_EN_SHIFT)) & HSIO_GHZ_LN_PLL_CTRL_CLKMUX_EN_MASK)
 
@@ -198,31 +198,31 @@ typedef struct {
 #define HSIO_GHZ_LN_PLL_CTRL_CLKMUX_BYPASS_SHIFT (2U)
 /*! CLKMUX_BYPASS - CLKMUX_Bypass
  *  0b0..Normal mode
- *  0b1..PLL bypass mode
+ *  0b1..PLL Bypass mode
  */
 #define HSIO_GHZ_LN_PLL_CTRL_CLKMUX_BYPASS(x)    (((uint32_t)(((uint32_t)(x)) << HSIO_GHZ_LN_PLL_CTRL_CLKMUX_BYPASS_SHIFT)) & HSIO_GHZ_LN_PLL_CTRL_CLKMUX_BYPASS_MASK)
 
 #define HSIO_GHZ_LN_PLL_CTRL_SPREADCTL_MASK      (0x100U)
 #define HSIO_GHZ_LN_PLL_CTRL_SPREADCTL_SHIFT     (8U)
 /*! SPREADCTL - Modulation Type Select
- *  0b0..Modulation is centered around nominal frequency.
- *  0b1..Modulation is spread below nominal frequency.
+ *  0b0..Centered around nominal frequency
+ *  0b1..Spread below nominal frequency
  */
 #define HSIO_GHZ_LN_PLL_CTRL_SPREADCTL(x)        (((uint32_t)(((uint32_t)(x)) << HSIO_GHZ_LN_PLL_CTRL_SPREADCTL_SHIFT)) & HSIO_GHZ_LN_PLL_CTRL_SPREADCTL_MASK)
 
 #define HSIO_GHZ_LN_PLL_CTRL_HW_CTRL_SEL_MASK    (0x10000U)
 #define HSIO_GHZ_LN_PLL_CTRL_HW_CTRL_SEL_SHIFT   (16U)
 /*! HW_CTRL_SEL - Hardware Control Select
- *  0b0..Disables hardware control. PLL is controlled by register.
- *  0b1..Enables hardware control. PLL is controlled by hardware inputs. In this case, NUMERATOR[MFN] cannot be changed dynamically.
+ *  0b0..Disable
+ *  0b1..Enable
  */
 #define HSIO_GHZ_LN_PLL_CTRL_HW_CTRL_SEL(x)      (((uint32_t)(((uint32_t)(x)) << HSIO_GHZ_LN_PLL_CTRL_HW_CTRL_SEL_SHIFT)) & HSIO_GHZ_LN_PLL_CTRL_HW_CTRL_SEL_MASK)
 
 #define HSIO_GHZ_LN_PLL_CTRL_LOCK_BYPASS_MASK    (0x80000000U)
 #define HSIO_GHZ_LN_PLL_CTRL_LOCK_BYPASS_SHIFT   (31U)
 /*! LOCK_BYPASS - Lock Bypass
- *  0b0..Disables bypass for the lock detector.
- *  0b1..Enables bypass for the lock detector.
+ *  0b0..Disable
+ *  0b1..Enable
  */
 #define HSIO_GHZ_LN_PLL_CTRL_LOCK_BYPASS(x)      (((uint32_t)(((uint32_t)(x)) << HSIO_GHZ_LN_PLL_CTRL_LOCK_BYPASS_SHIFT)) & HSIO_GHZ_LN_PLL_CTRL_LOCK_BYPASS_MASK)
 /*! @} */
@@ -238,8 +238,8 @@ typedef struct {
 #define HSIO_GHZ_LN_PLL_SPREAD_SPECTRUM_ENABLE_MASK (0x8000U)
 #define HSIO_GHZ_LN_PLL_SPREAD_SPECTRUM_ENABLE_SHIFT (15U)
 /*! ENABLE - Enable
- *  0b0..Disables the spread spectrum modulation.
- *  0b1..Enables the spread spectrum modulation.
+ *  0b0..Disable
+ *  0b1..Enable
  */
 #define HSIO_GHZ_LN_PLL_SPREAD_SPECTRUM_ENABLE(x) (((uint32_t)(((uint32_t)(x)) << HSIO_GHZ_LN_PLL_SPREAD_SPECTRUM_ENABLE_SHIFT)) & HSIO_GHZ_LN_PLL_SPREAD_SPECTRUM_ENABLE_MASK)
 

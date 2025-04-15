@@ -44,13 +44,13 @@
 **                          MIMX9596XVZXN_cm7
 **
 **     Version:             rev. 1.0, 2023-01-10
-**     Build:               b240728
+**     Build:               b250415
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for IDBG2
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -257,6 +257,10 @@ typedef struct {
 #define IDBG2_DONE_STAT_PKT_MASK                 (0x800U)
 #define IDBG2_DONE_STAT_PKT_SHIFT                (11U)
 #define IDBG2_DONE_STAT_PKT(x)                   (((uint32_t)(((uint32_t)(x)) << IDBG2_DONE_STAT_PKT_SHIFT)) & IDBG2_DONE_STAT_PKT_MASK)
+
+#define IDBG2_DONE_STAT_RUN_MASK                 (0x80000000U)
+#define IDBG2_DONE_STAT_RUN_SHIFT                (31U)
+#define IDBG2_DONE_STAT_RUN(x)                   (((uint32_t)(((uint32_t)(x)) << IDBG2_DONE_STAT_RUN_SHIFT)) & IDBG2_DONE_STAT_RUN_MASK)
 /*! @} */
 
 

@@ -44,13 +44,13 @@
 **                          MIMX9596XVZXN_cm7
 **
 **     Version:             rev. 1.0, 2023-01-10
-**     Build:               b240728
+**     Build:               b250415
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for GPC
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -344,24 +344,24 @@ typedef struct {
 #define GPC_CMC_MODE_STAT_WAKEUP_TRANS_BUSY_MASK (0x200U)
 #define GPC_CMC_MODE_STAT_WAKEUP_TRANS_BUSY_SHIFT (9U)
 /*! WAKEUP_TRANS_BUSY - Busy on CPU mode transition of wakeup, not include set point trans busy.
- *  0b1..Wakeup transition busy
  *  0b0..Wakeup transition not busy
+ *  0b1..Wakeup transition busy
  */
 #define GPC_CMC_MODE_STAT_WAKEUP_TRANS_BUSY(x)   (((uint32_t)(((uint32_t)(x)) << GPC_CMC_MODE_STAT_WAKEUP_TRANS_BUSY_SHIFT)) & GPC_CMC_MODE_STAT_WAKEUP_TRANS_BUSY_MASK)
 
 #define GPC_CMC_MODE_STAT_SLEEPING_IDLE_MASK     (0x400U)
 #define GPC_CMC_MODE_STAT_SLEEPING_IDLE_SHIFT    (10U)
 /*! SLEEPING_IDLE - Completed CPU mode and set point transition of sleep sequence, in a sleeping_idle state.
- *  0b1..In sleeping idle state
  *  0b0..Not in sleeping idle state
+ *  0b1..In sleeping idle state
  */
 #define GPC_CMC_MODE_STAT_SLEEPING_IDLE(x)       (((uint32_t)(((uint32_t)(x)) << GPC_CMC_MODE_STAT_SLEEPING_IDLE_SHIFT)) & GPC_CMC_MODE_STAT_SLEEPING_IDLE_MASK)
 
 #define GPC_CMC_MODE_STAT_SLEEP_REQUEST_MASK     (0x10000U)
 #define GPC_CMC_MODE_STAT_SLEEP_REQUEST_SHIFT    (16U)
 /*! SLEEP_REQUEST - Status of sleep_request input port
- *  0b1..Sleep request is asserted
  *  0b0..Sleep request is not asserted
+ *  0b1..Sleep request is asserted
  */
 #define GPC_CMC_MODE_STAT_SLEEP_REQUEST(x)       (((uint32_t)(((uint32_t)(x)) << GPC_CMC_MODE_STAT_SLEEP_REQUEST_SHIFT)) & GPC_CMC_MODE_STAT_SLEEP_REQUEST_MASK)
 
@@ -381,9 +381,9 @@ typedef struct {
 #define GPC_CMC_MODE_STAT_FSM_STATE_MASK         (0x1F000000U)
 #define GPC_CMC_MODE_STAT_FSM_STATE_SHIFT        (24U)
 /*! FSM_STATE - CPU mode trans FSM state.
- *  0b00010..SLEEP_SYSMAN
  *  0b00000..IDLE_RUN
  *  0b00001..SLEEP_A55_HDSK
+ *  0b00010..SLEEP_SYSMAN
  *  0b00011..SLEEP_SSAR
  *  0b01000..SLEEP_RESET
  *  0b01011..SLEEP_SYS

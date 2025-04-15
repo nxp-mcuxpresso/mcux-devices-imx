@@ -44,13 +44,13 @@
 **                          MIMX9596XVZXN_cm7
 **
 **     Version:             rev. 1.0, 2023-01-10
-**     Build:               b240728
+**     Build:               b250415
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for ENETC_SI
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -893,6 +893,7 @@ typedef struct {
 
 #define ENETC_SI_PSIVMSGRCVAR0_MSIZE_MASK        (0x1FU)
 #define ENETC_SI_PSIVMSGRCVAR0_MSIZE_SHIFT       (0U)
+/*! MSIZE - Message size */
 #define ENETC_SI_PSIVMSGRCVAR0_MSIZE(x)          (((uint32_t)(((uint32_t)(x)) << ENETC_SI_PSIVMSGRCVAR0_MSIZE_SHIFT)) & ENETC_SI_PSIVMSGRCVAR0_MSIZE_MASK)
 
 #define ENETC_SI_PSIVMSGRCVAR0_ADDRL_MASK        (0xFFFFFFC0U)
@@ -947,6 +948,7 @@ typedef struct {
 
 #define ENETC_SI_VSIMSGSNDAR0_MSIZE_MASK         (0x1FU)
 #define ENETC_SI_VSIMSGSNDAR0_MSIZE_SHIFT        (0U)
+/*! MSIZE - Message size */
 #define ENETC_SI_VSIMSGSNDAR0_MSIZE(x)           (((uint32_t)(((uint32_t)(x)) << ENETC_SI_VSIMSGSNDAR0_MSIZE_SHIFT)) & ENETC_SI_VSIMSGSNDAR0_MSIZE_MASK)
 
 #define ENETC_SI_VSIMSGSNDAR0_ADDRL_MASK         (0xFFFFFFC0U)

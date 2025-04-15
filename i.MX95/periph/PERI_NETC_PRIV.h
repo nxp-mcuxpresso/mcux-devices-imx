@@ -44,13 +44,13 @@
 **                          MIMX9596XVZXN_cm7
 **
 **     Version:             rev. 1.0, 2023-01-10
-**     Build:               b240728
+**     Build:               b250415
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for NETC_PRIV
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -215,7 +215,7 @@ typedef struct {
  *  0b00..Disabled
  *  0b01..Single Bit ECC Error
  *  0b10..Multi Bit ECC Error
- *  0b11..Reserved (disabled)
+ *  0b11..EDC Error
  */
 #define NETC_PRIV_MEICR_ARM(x)                   (((uint32_t)(((uint32_t)(x)) << NETC_PRIV_MEICR_ARM_SHIFT)) & NETC_PRIV_MEICR_ARM_MASK)
 /*! @} */
@@ -237,7 +237,10 @@ typedef struct {
 
 #define NETC_PRIV_CMECR_THRESHOLD_MASK           (0xFFU)
 #define NETC_PRIV_CMECR_THRESHOLD_SHIFT          (0U)
-/*! THRESHOLD - Threshold */
+/*! THRESHOLD - Threshold
+ *  0b00000000..Disables reporting of single bit ECC errors.
+ *  *..Determines the threshold value (1-255) of single bit ECC errors to be detected.
+ */
 #define NETC_PRIV_CMECR_THRESHOLD(x)             (((uint32_t)(((uint32_t)(x)) << NETC_PRIV_CMECR_THRESHOLD_SHIFT)) & NETC_PRIV_CMECR_THRESHOLD_MASK)
 /*! @} */
 

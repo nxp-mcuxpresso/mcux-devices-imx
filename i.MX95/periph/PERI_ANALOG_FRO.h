@@ -44,13 +44,13 @@
 **                          MIMX9596XVZXN_cm7
 **
 **     Version:             rev. 1.0, 2023-01-10
-**     Build:               b240728
+**     Build:               b250415
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for ANALOG_FRO
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -174,6 +174,13 @@ typedef struct {
     __I  uint32_t CLR;                               /**< FRO Trim Count, offset: 0x268 */
     __I  uint32_t TOG;                               /**< FRO Trim Count, offset: 0x26C */
   } TRIMCNT;
+       uint8_t RESERVED_1[16];
+  struct {                                         /* offset: 0x280 */
+    __IO uint32_t RW;                                /**< Trim Configuration 3, offset: 0x280 */
+    __IO uint32_t SET;                               /**< Trim Configuration 3, offset: 0x284 */
+    __IO uint32_t CLR;                               /**< Trim Configuration 3, offset: 0x288 */
+    __IO uint32_t TOG;                               /**< Trim Configuration 3, offset: 0x28C */
+  } CNFG3;
 } ANALOG_FRO_Type;
 
 /* ----------------------------------------------------------------------------
@@ -236,16 +243,16 @@ typedef struct {
 #define ANALOG_FRO_CSR_CLKGATE_MASK              (0x1F00U)
 #define ANALOG_FRO_CSR_CLKGATE_SHIFT             (8U)
 /*! CLKGATE - FRO Clock Enable
- *  0bxxxx0..Disables FRO divider 1 clock
- *  0bxxxx1..Enables FRO divider 1 clock
- *  0bxxx0x..Disables FRO divider 2 clock
- *  0bxxx1x..Enables FRO divider 2 clock
- *  0bxx0xx..Disables FRO divider 3 clock
- *  0bxx1xx..Enables FRO divider 3 clock
- *  0bx0xxx..Disables FRO divider 6 clock
- *  0bx1xxx..Enables FRO divider 6 clock
  *  0b0xxxx..Disables FRO divider 10 clock
  *  0b1xxxx..Enables FRO divider 10 clock
+ *  0bx0xxx..Disables FRO divider 6 clock
+ *  0bx1xxx..Enables FRO divider 6 clock
+ *  0bxx0xx..Disables FRO divider 3 clock
+ *  0bxx1xx..Enables FRO divider 3 clock
+ *  0bxxx0x..Disables FRO divider 2 clock
+ *  0bxxx1x..Enables FRO divider 2 clock
+ *  0bxxxx0..Disables FRO divider 1 clock
+ *  0bxxxx1..Enables FRO divider 1 clock
  */
 #define ANALOG_FRO_CSR_CLKGATE(x)                (((uint32_t)(((uint32_t)(x)) << ANALOG_FRO_CSR_CLKGATE_SHIFT)) & ANALOG_FRO_CSR_CLKGATE_MASK)
 
@@ -300,7 +307,7 @@ typedef struct {
 
 #define ANALOG_FRO_CNFG1_FSTUPEN_MASK            (0x800U)
 #define ANALOG_FRO_CNFG1_FSTUPEN_SHIFT           (11U)
-/*! FSTUPEN - FRO Fast Enable
+/*! FSTUPEN - FRO Fast Startup Enable
  *  0b0..Disable
  *  0b1..Enable
  */
@@ -404,6 +411,15 @@ typedef struct {
 #define ANALOG_FRO_TRIMCNT_TRIMCNT_SHIFT         (0U)
 /*! TRIMCNT - Trim Expected Count */
 #define ANALOG_FRO_TRIMCNT_TRIMCNT(x)            (((uint32_t)(((uint32_t)(x)) << ANALOG_FRO_TRIMCNT_TRIMCNT_SHIFT)) & ANALOG_FRO_TRIMCNT_TRIMCNT_MASK)
+/*! @} */
+
+/*! @name CNFG3 - Trim Configuration 3 */
+/*! @{ */
+
+#define ANALOG_FRO_CNFG3_TRIM2_DELAY_MASK        (0xFFFU)
+#define ANALOG_FRO_CNFG3_TRIM2_DELAY_SHIFT       (0U)
+/*! TRIM2_DELAY - Trim 2 Delay Register */
+#define ANALOG_FRO_CNFG3_TRIM2_DELAY(x)          (((uint32_t)(((uint32_t)(x)) << ANALOG_FRO_CNFG3_TRIM2_DELAY_SHIFT)) & ANALOG_FRO_CNFG3_TRIM2_DELAY_MASK)
 /*! @} */
 
 

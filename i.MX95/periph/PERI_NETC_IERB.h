@@ -44,13 +44,13 @@
 **                          MIMX9596XVZXN_cm7
 **
 **     Version:             rev. 1.0, 2023-01-10
-**     Build:               b240728
+**     Build:               b250415
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for NETC_IERB
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -805,6 +805,11 @@ typedef struct {
 /*! FP - Indicates if frame preemption is supported */
 #define NETC_IERB_L0MCAPR_FP(x)                  (((uint32_t)(((uint32_t)(x)) << NETC_IERB_L0MCAPR_FP_SHIFT)) & NETC_IERB_L0MCAPR_FP_MASK)
 
+#define NETC_IERB_L0MCAPR_MIN_MPDU_MASK          (0x1000U)
+#define NETC_IERB_L0MCAPR_MIN_MPDU_SHIFT         (12U)
+/*! MIN_MPDU - Minimum MAC Protocol Data Unit (PDU) size check */
+#define NETC_IERB_L0MCAPR_MIN_MPDU(x)            (((uint32_t)(((uint32_t)(x)) << NETC_IERB_L0MCAPR_MIN_MPDU_SHIFT)) & NETC_IERB_L0MCAPR_MIN_MPDU_MASK)
+
 #define NETC_IERB_L0MCAPR_MII_PROT_MASK          (0xF000000U)
 #define NETC_IERB_L0MCAPR_MII_PROT_SHIFT         (24U)
 /*! MII_PROT - Indicates the MII protocol supported */
@@ -912,6 +917,11 @@ typedef struct {
 /*! FP - Indicates if frame preemption is supported */
 #define NETC_IERB_L1MCAPR_FP(x)                  (((uint32_t)(((uint32_t)(x)) << NETC_IERB_L1MCAPR_FP_SHIFT)) & NETC_IERB_L1MCAPR_FP_MASK)
 
+#define NETC_IERB_L1MCAPR_MIN_MPDU_MASK          (0x1000U)
+#define NETC_IERB_L1MCAPR_MIN_MPDU_SHIFT         (12U)
+/*! MIN_MPDU - Minimum MAC Protocol Data Unit (PDU) size check */
+#define NETC_IERB_L1MCAPR_MIN_MPDU(x)            (((uint32_t)(((uint32_t)(x)) << NETC_IERB_L1MCAPR_MIN_MPDU_SHIFT)) & NETC_IERB_L1MCAPR_MIN_MPDU_MASK)
+
 #define NETC_IERB_L1MCAPR_MII_PROT_MASK          (0xF000000U)
 #define NETC_IERB_L1MCAPR_MII_PROT_SHIFT         (24U)
 /*! MII_PROT - Indicates the MII protocol supported */
@@ -1018,6 +1028,11 @@ typedef struct {
 #define NETC_IERB_L2MCAPR_FP_SHIFT               (9U)
 /*! FP - Indicates if frame preemption is supported */
 #define NETC_IERB_L2MCAPR_FP(x)                  (((uint32_t)(((uint32_t)(x)) << NETC_IERB_L2MCAPR_FP_SHIFT)) & NETC_IERB_L2MCAPR_FP_MASK)
+
+#define NETC_IERB_L2MCAPR_MIN_MPDU_MASK          (0x1000U)
+#define NETC_IERB_L2MCAPR_MIN_MPDU_SHIFT         (12U)
+/*! MIN_MPDU - Minimum MAC Protocol Data Unit (PDU) size check */
+#define NETC_IERB_L2MCAPR_MIN_MPDU(x)            (((uint32_t)(((uint32_t)(x)) << NETC_IERB_L2MCAPR_MIN_MPDU_SHIFT)) & NETC_IERB_L2MCAPR_MIN_MPDU_MASK)
 
 #define NETC_IERB_L2MCAPR_MII_PROT_MASK          (0xF000000U)
 #define NETC_IERB_L2MCAPR_MII_PROT_SHIFT         (24U)

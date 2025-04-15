@@ -44,13 +44,13 @@
 **                          MIMX9596XVZXN_cm7
 **
 **     Version:             rev. 1.0, 2023-01-10
-**     Build:               b240728
+**     Build:               b250415
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for SerDes_SS
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -173,7 +173,7 @@ typedef struct {
   __IO uint32_t PCIE_PHY_EXT_TX_EQ_CTRL_3;         /**< PCIe PHY TX Equalization Control For Gen3 Speed, offset: 0xB8 */
        uint8_t RESERVED_8[36];
   __I  uint32_t SS_RO_REG_0;                       /**< Subsystem Read-Only Register 0, offset: 0xE0 */
-  __I  uint32_t SS_RO_REG_1;                       /**< Subsystem Read-Only Register 1, offset: 0xE4 */
+       uint8_t RESERVED_9[4];
   __I  uint32_t SS_RO_REG_2;                       /**< Subsystem Read-Only Register 2, offset: 0xE8 */
   __I  uint32_t SS_RO_REG_3;                       /**< Subsystem Read-Only Register 3, offset: 0xEC */
   __IO uint32_t SS_RW_REG_0;                       /**< Subsystem Read/Write Register 0, offset: 0xF0 */
@@ -182,7 +182,7 @@ typedef struct {
   __IO uint32_t SS_RW_REG_3;                       /**< Subsystem Read/Write Register 3, offset: 0xFC */
   __IO uint32_t SS_RW_REG_4;                       /**< Subsystem Read/Write Register 4, offset: 0x100 */
   __IO uint32_t SS_RW_REG_5;                       /**< Subsystem Read/Write Register 5, offset: 0x104 */
-       uint8_t RESERVED_9[3832];
+       uint8_t RESERVED_10[3832];
   __I  uint32_t PCIE_SUBSYSTEM_VERSION;            /**< PCIe Subsystem Version, offset: 0x1000 */
   __IO uint32_t PE0_CLKREQ_CTRL;                   /**< PCIe Controller Clock Request Override, offset: 0x1004 */
   __IO uint32_t PE0_LUT_ACSCTRL;                   /**< LUT access Control, offset: 0x1008 */
@@ -192,9 +192,9 @@ typedef struct {
   __IO uint32_t PE0_LUT_INT_CTRL;                  /**< LUT Interrupt Control, offset: 0x1018 */
   __I  uint32_t PE0_LUT_CREQID;                    /**< LUT Request ID Register, offset: 0x101C */
   __IO uint32_t FLR_CTRL_STS;                      /**< Function Level Reset (FLR) Control and Status Register, offset: 0x1020 */
-       uint8_t RESERVED_10[28];
+       uint8_t RESERVED_11[28];
   __IO uint32_t LINK_INT_CTRL_STS;                 /**< Link Interrupt Control And Status, offset: 0x1040 */
-       uint8_t RESERVED_11[12];
+       uint8_t RESERVED_12[12];
   __IO uint32_t PE0_GEN_CTRL_1;                    /**< PCIe Controller 0 General Control 1, offset: 0x1050 */
   __IO uint32_t PE0_GEN_CTRL_2;                    /**< PCIe Controller 0 General Control 2, offset: 0x1054 */
   __IO uint32_t PE0_GEN_CTRL_3;                    /**< PCIe Controller 0 General Control 3, offset: 0x1058 */
@@ -210,7 +210,7 @@ typedef struct {
   __IO uint32_t PE0_TX_MSG_REQ;                    /**< PCIe Controller 0 Transmit Message Request, offset: 0x1080 */
   __I  uint32_t PE0_RX_SLOT_PWR_PAYLD;             /**< DW data of Set_Slot_Power_Limit message, offset: 0x1084 */
   __I  uint32_t PE0_RX_CURR_LTR_LATENCY;           /**< Current LTR values, offset: 0x1088 */
-       uint8_t RESERVED_12[4];
+       uint8_t RESERVED_13[4];
   __I  uint32_t PE0_RX_MSG_HDR_1;                  /**< PCIe Controller 0 Receive Message Header 1, offset: 0x1090 */
   __I  uint32_t PE0_RX_MSG_HDR_2;                  /**< PCIe Controller 0 Receive Message Header 2, offset: 0x1094 */
   __I  uint32_t PE0_RX_MSG_HDR_3;                  /**< PCIe Controller 0 Receive Message Header 3, offset: 0x1098 */
@@ -218,25 +218,25 @@ typedef struct {
   __IO uint32_t PE0_RX_MSG_STS;                    /**< PCIe Controller 0 Receive Message Status, offset: 0x10A0 */
   __IO uint32_t PE0_RX_MSG_CAP_CTRL;               /**< PCIe Controller 0 Receive Message Capture Control, offset: 0x10A4 */
   __IO uint32_t PE0_RX_MSG_INT_CTRL;               /**< PCIe Controller 0 Receive Message Interrupt Control, offset: 0x10A8 */
-       uint8_t RESERVED_13[4];
+       uint8_t RESERVED_14[4];
   __I  uint32_t PE0_LINK_DBG_1;                    /**< PCIe Controller 0 Link Debug 1, offset: 0x10B0 */
   __I  uint32_t PE0_LINK_DBG_2;                    /**< PCIe Controller 0 Link Debug 2, offset: 0x10B4 */
-       uint8_t RESERVED_14[8];
+       uint8_t RESERVED_15[8];
   __I  uint32_t PE0_AXI_MSTR_DBG_1;                /**< PCIe Controller 0 AXI Master Debug 1, offset: 0x10C0 */
   __I  uint32_t PE0_AXI_MSTR_DBG_2;                /**< PCIe Controller 0 AXI Master Debug 2, offset: 0x10C4 */
-       uint8_t RESERVED_15[8];
+       uint8_t RESERVED_16[8];
   __I  uint32_t PE0_AXI_SLV_DBG_1;                 /**< PCIe Controller 0 AXI Slave Debug 1, offset: 0x10D0 */
   __I  uint32_t PE0_AXI_SLV_DBG_2;                 /**< PCIe Controller 0 AXI Slave Debug 2, offset: 0x10D4 */
-       uint8_t RESERVED_16[8];
+       uint8_t RESERVED_17[8];
   __IO uint32_t PE0_ERR_STS;                       /**< PCIe Controller 0 Error Status, offset: 0x10E0 */
   __IO uint32_t PE0_ERR_INT_CTRL;                  /**< PCIe Controller 0 Error Interrupt Control, offset: 0x10E4 */
   __IO uint32_t PE0_INT_STS;                       /**< PCIe Controller 0 Interrupt Status, offset: 0x10E8 */
   __IO uint32_t PE0_MSI_GEN_CTRL;                  /**< PCIe Controller 0 MSI Generation Control, offset: 0x10EC */
   __IO uint32_t PE0_FSM_TRACK_1;                   /**< PCIe Controller 0 FSM Track 1, offset: 0x10F0 */
   __I  uint32_t PE0_FSM_TRACK_2;                   /**< PCIe Controller 0 FSM Track 2, offset: 0x10F4 */
-       uint8_t RESERVED_17[7944];
+       uint8_t RESERVED_18[7944];
   __IO uint32_t APB_BRIDGE_TO_CTRL;                /**< APB Bridge Timeout Control, offset: 0x3000 */
-       uint8_t RESERVED_18[4];
+       uint8_t RESERVED_19[4];
   __IO uint32_t PHY_REG_ADDR;                      /**< PHY Register Address, offset: 0x3008 */
   __IO uint32_t PHY_REG_DATA;                      /**< PHY Register Data, offset: 0x300C */
   __IO uint32_t RST_CTRL;                          /**< Reset Control, offset: 0x3010 */
@@ -1093,25 +1093,6 @@ typedef struct {
 #define SerDes_SS_SS_RO_REG_0_MSTR_ARMISC_INFO_DMA(x) (((uint32_t)(((uint32_t)(x)) << SerDes_SS_SS_RO_REG_0_MSTR_ARMISC_INFO_DMA_SHIFT)) & SerDes_SS_SS_RO_REG_0_MSTR_ARMISC_INFO_DMA_MASK)
 /*! @} */
 
-/*! @name SS_RO_REG_1 - Subsystem Read-Only Register 1 */
-/*! @{ */
-
-#define SerDes_SS_SS_RO_REG_1_MSTR_AWMISC_INFO_DMA_MASK (0x3FU)
-#define SerDes_SS_SS_RO_REG_1_MSTR_AWMISC_INFO_DMA_SHIFT (0U)
-/*! MSTR_AWMISC_INFO_DMA - DMA Bits Of The AXI Write Master Transaction */
-#define SerDes_SS_SS_RO_REG_1_MSTR_AWMISC_INFO_DMA(x) (((uint32_t)(((uint32_t)(x)) << SerDes_SS_SS_RO_REG_1_MSTR_AWMISC_INFO_DMA_SHIFT)) & SerDes_SS_SS_RO_REG_1_MSTR_AWMISC_INFO_DMA_MASK)
-
-#define SerDes_SS_SS_RO_REG_1_SLV_BMISC_INFO_MASK (0x1FFC0U)
-#define SerDes_SS_SS_RO_REG_1_SLV_BMISC_INFO_SHIFT (6U)
-/*! SLV_BMISC_INFO - Miscellaneous Write Information */
-#define SerDes_SS_SS_RO_REG_1_SLV_BMISC_INFO(x)  (((uint32_t)(((uint32_t)(x)) << SerDes_SS_SS_RO_REG_1_SLV_BMISC_INFO_SHIFT)) & SerDes_SS_SS_RO_REG_1_SLV_BMISC_INFO_MASK)
-
-#define SerDes_SS_SS_RO_REG_1_SLV_RMISC_INFO_MASK (0xFFE0000U)
-#define SerDes_SS_SS_RO_REG_1_SLV_RMISC_INFO_SHIFT (17U)
-/*! SLV_RMISC_INFO - Miscellaneous Read Information */
-#define SerDes_SS_SS_RO_REG_1_SLV_RMISC_INFO(x)  (((uint32_t)(((uint32_t)(x)) << SerDes_SS_SS_RO_REG_1_SLV_RMISC_INFO_SHIFT)) & SerDes_SS_SS_RO_REG_1_SLV_RMISC_INFO_MASK)
-/*! @} */
-
 /*! @name SS_RO_REG_2 - Subsystem Read-Only Register 2 */
 /*! @{ */
 
@@ -1140,7 +1121,6 @@ typedef struct {
  *  0b001..Unsupported request
  *  0b010..Request retry status
  *  0b100..Completer abort
- *  *..
  */
 #define SerDes_SS_SS_RW_REG_0_MSTR_RMISC_INFO_CPL_STAT(x) (((uint32_t)(((uint32_t)(x)) << SerDes_SS_SS_RW_REG_0_MSTR_RMISC_INFO_CPL_STAT_SHIFT)) & SerDes_SS_SS_RW_REG_0_MSTR_RMISC_INFO_CPL_STAT_MASK)
 
@@ -1270,6 +1250,22 @@ typedef struct {
  */
 #define SerDes_SS_SS_RW_REG_1_PARITY_MODE_SLV_RD_DATA(x) (((uint32_t)(((uint32_t)(x)) << SerDes_SS_SS_RW_REG_1_PARITY_MODE_SLV_RD_DATA_SHIFT)) & SerDes_SS_SS_RW_REG_1_PARITY_MODE_SLV_RD_DATA_MASK)
 
+#define SerDes_SS_SS_RW_REG_1_CLKREQ_SW_OVRD_EN_MASK (0x100U)
+#define SerDes_SS_SS_RW_REG_1_CLKREQ_SW_OVRD_EN_SHIFT (8U)
+/*! CLKREQ_SW_OVRD_EN - CLKREQ Software Override Enable
+ *  0b0..Do not enable software override
+ *  0b1..Enable software override
+ */
+#define SerDes_SS_SS_RW_REG_1_CLKREQ_SW_OVRD_EN(x) (((uint32_t)(((uint32_t)(x)) << SerDes_SS_SS_RW_REG_1_CLKREQ_SW_OVRD_EN_SHIFT)) & SerDes_SS_SS_RW_REG_1_CLKREQ_SW_OVRD_EN_MASK)
+
+#define SerDes_SS_SS_RW_REG_1_CLKREQ_SW_OVRD_VAL_MASK (0x200U)
+#define SerDes_SS_SS_RW_REG_1_CLKREQ_SW_OVRD_VAL_SHIFT (9U)
+/*! CLKREQ_SW_OVRD_VAL - CLKREQ Software Override Value
+ *  0b0..Drive 0 on CLKREQ
+ *  0b1..Drive 1 on CLKREQ
+ */
+#define SerDes_SS_SS_RW_REG_1_CLKREQ_SW_OVRD_VAL(x) (((uint32_t)(((uint32_t)(x)) << SerDes_SS_SS_RW_REG_1_CLKREQ_SW_OVRD_VAL_SHIFT)) & SerDes_SS_SS_RW_REG_1_CLKREQ_SW_OVRD_VAL_MASK)
+
 #define SerDes_SS_SS_RW_REG_1_SYS_AUX_PWR_DET_MASK (0x80000000U)
 #define SerDes_SS_SS_RW_REG_1_SYS_AUX_PWR_DET_SHIFT (31U)
 /*! SYS_AUX_PWR_DET - System AUX Power Detection
@@ -1390,7 +1386,7 @@ typedef struct {
 
 #define SerDes_SS_PE0_LUT_DATA2_REQID_MASK       (0xFFFF0000U)
 #define SerDes_SS_PE0_LUT_DATA2_REQID_SHIFT      (16U)
-/*! REQID - REQID value to matched with master port RID (in RC mode) and {BAR#, PF#, VFA, VF# } (in EP mode) */
+/*! REQID - REQID value to matched with master port RID */
 #define SerDes_SS_PE0_LUT_DATA2_REQID(x)         (((uint32_t)(((uint32_t)(x)) << SerDes_SS_PE0_LUT_DATA2_REQID_SHIFT)) & SerDes_SS_PE0_LUT_DATA2_REQID_MASK)
 /*! @} */
 
@@ -1546,7 +1542,6 @@ typedef struct {
 /*! DEVICE_TYPE - Device Type
  *  0b0000..Endpoint
  *  0b0100..Root port of root complex
- *  *..
  */
 #define SerDes_SS_PE0_GEN_CTRL_1_DEVICE_TYPE(x)  (((uint32_t)(((uint32_t)(x)) << SerDes_SS_PE0_GEN_CTRL_1_DEVICE_TYPE_SHIFT)) & SerDes_SS_PE0_GEN_CTRL_1_DEVICE_TYPE_MASK)
 
@@ -1801,7 +1796,6 @@ typedef struct {
  *  0b010..D2
  *  0b011..D3
  *  0b100..Uninitialized
- *  *..
  */
 #define SerDes_SS_PE0_PM_STS_PM_DSTATE(x)        (((uint32_t)(((uint32_t)(x)) << SerDes_SS_PE0_PM_STS_PM_DSTATE_SHIFT)) & SerDes_SS_PE0_PM_STS_PM_DSTATE_MASK)
 
@@ -1884,12 +1878,50 @@ typedef struct {
 
 #define SerDes_SS_PE0_PM_STS_PM_MASTER_STATE_MASK (0x1F00000U)
 #define SerDes_SS_PE0_PM_STS_PM_MASTER_STATE_SHIFT (20U)
-/*! PM_MASTER_STATE - Power management master FSM state */
+/*! PM_MASTER_STATE - Power management master FSM state
+ *  0b00000..IDLE
+ *  0b00001..L0
+ *  0b00010..L0S
+ *  0b00011..ENTER_L0S
+ *  0b00100..EXIT_L0S
+ *  0b00101..WAIT_PMCSR_CPL_SENT
+ *  0b01000..L1
+ *  0b01001..L1_BLOCK_TLP
+ *  0b01010..L1_WAIT_LAST_TLP_ACK
+ *  0b01011..L1_WAIT_PMDLLP_ACK
+ *  0b01100..L1_LINK_ENTR_L1
+ *  0b01101..L1_EXIT
+ *  0b01111..PREP_4L1
+ *  0b10000..L23_BLOCK_TLP
+ *  0b10001..L23_WAIT_LAST_TLP_ACK
+ *  0b10010..L23_WAIT_PMDLLP_ACK
+ *  0b10011..L23_ENTR_L23
+ *  0b10100..L23RDY
+ *  0b10101..PREP_4L23
+ *  0b10110..L23RDY_WAIT4ALIVE
+ *  0b10111..L0S_BLOCK_TLP
+ *  0b11000..WAIT_LAST_PMDLLP
+ *  0b11001..WAIT_DSTATE_UPDATE
+ */
 #define SerDes_SS_PE0_PM_STS_PM_MASTER_STATE(x)  (((uint32_t)(((uint32_t)(x)) << SerDes_SS_PE0_PM_STS_PM_MASTER_STATE_SHIFT)) & SerDes_SS_PE0_PM_STS_PM_MASTER_STATE_MASK)
 
 #define SerDes_SS_PE0_PM_STS_PM_SLAVE_STATE_MASK (0x3E000000U)
 #define SerDes_SS_PE0_PM_STS_PM_SLAVE_STATE_SHIFT (25U)
-/*! PM_SLAVE_STATE - Power management slave FSM state */
+/*! PM_SLAVE_STATE - Power management slave FSM state
+ *  0b00000..S_IDLE
+ *  0b00001..S_RESPOND_NAK
+ *  0b00010..S_BLOCK_TLP
+ *  0b00011..S_WAIT_LAST_TLP_ACK
+ *  0b00100..S_WAIT_EIDLE
+ *  0b00101..S_LINK_ENTR_L1
+ *  0b00110..S_L1
+ *  0b00111..S_L1_EXIT
+ *  0b01000..S_L23RDY
+ *  0b01001..S_LINK_ENTR_L23
+ *  0b01010..S_L23RDY_WAIT4ALIVE
+ *  0b01011..S_ACK_WAIT4IDLE
+ *  0b01100..S_WAIT_LAST_PMDLLP
+ */
 #define SerDes_SS_PE0_PM_STS_PM_SLAVE_STATE(x)   (((uint32_t)(((uint32_t)(x)) << SerDes_SS_PE0_PM_STS_PM_SLAVE_STATE_SHIFT)) & SerDes_SS_PE0_PM_STS_PM_SLAVE_STATE_MASK)
 /*! @} */
 
@@ -2448,7 +2480,6 @@ typedef struct {
  *  0b001..P0s (L0s): Low recovery time, power saving
  *  0b010..P1 (L1): Longer recovery time, additional power saving
  *  0b011..P2 (L2): Lowest power state
- *  *..
  */
 #define SerDes_SS_PE0_LINK_DBG_2_PHY_POWRDOWN(x) (((uint32_t)(((uint32_t)(x)) << SerDes_SS_PE0_LINK_DBG_2_PHY_POWRDOWN_SHIFT)) & SerDes_SS_PE0_LINK_DBG_2_PHY_POWRDOWN_MASK)
 
@@ -2599,8 +2630,8 @@ typedef struct {
 #define SerDes_SS_PE0_ERR_STS_VC_QOVERFLOW_MASK  (0x10000U)
 #define SerDes_SS_PE0_ERR_STS_VC_QOVERFLOW_SHIFT (16U)
 /*! VC_QOVERFLOW - RADM Queue Overflow Error
- *  0b0..No overflow error detected
  *  0b0..No effect
+ *  0b0..No overflow error detected
  *  0b1..Overflow error detected
  *  0b1..Return this field's value to 0
  */
@@ -2622,8 +2653,8 @@ typedef struct {
 #define SerDes_SS_PE0_ERR_STS_LINK_DOWN_STS_MASK (0x40000000U)
 #define SerDes_SS_PE0_ERR_STS_LINK_DOWN_STS_SHIFT (30U)
 /*! LINK_DOWN_STS - Link Down Event
- *  0b0..No link down error detected
  *  0b0..No effect
+ *  0b0..No link down error detected
  *  0b1..Link down error detected
  *  0b1..Return this field's value to 0
  */
@@ -2632,10 +2663,10 @@ typedef struct {
 #define SerDes_SS_PE0_ERR_STS_APBSLV_TIMEOUT_STS_MASK (0x80000000U)
 #define SerDes_SS_PE0_ERR_STS_APBSLV_TIMEOUT_STS_SHIFT (31U)
 /*! APBSLV_TIMEOUT_STS - APB Slave Timeout Error
- *  0b0..No timeout error detected
  *  0b0..No effect
- *  0b1..Timeout error detected
+ *  0b0..No timeout error detected
  *  0b1..Return this field's value to 0
+ *  0b1..Timeout error detected
  */
 #define SerDes_SS_PE0_ERR_STS_APBSLV_TIMEOUT_STS(x) (((uint32_t)(((uint32_t)(x)) << SerDes_SS_PE0_ERR_STS_APBSLV_TIMEOUT_STS_SHIFT)) & SerDes_SS_PE0_ERR_STS_APBSLV_TIMEOUT_STS_MASK)
 /*! @} */

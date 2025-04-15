@@ -44,13 +44,13 @@
 **                          MIMX9596XVZXN_cm7
 **
 **     Version:             rev. 1.0, 2023-01-10
-**     Build:               b240728
+**     Build:               b250415
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for CAMERA_DSI_STREAM_CSR
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -134,6 +134,7 @@ typedef struct {
   __IO uint32_t DSI_HOST_CONFIGURATION;            /**< DSI Host Configuration, offset: 0x0 */
   __IO uint32_t DSI_PARITY_ERROR_STATUS;           /**< DSI Parity Error Status, offset: 0x4 */
   __IO uint32_t DSI_PARITY_ERROR_THRESHOLD;        /**< DSI Parity Error Threshold, offset: 0x8 */
+  __IO uint32_t DSI_PARITY_ERROR_INJECTION;        /**< DSI Parity Error Injection, offset: 0xC */
 } CAMERA_DSI_STREAM_CSR_Type;
 
 /* ----------------------------------------------------------------------------
@@ -186,8 +187,8 @@ typedef struct {
 #define CAMERA_DSI_STREAM_CSR_DSI_PARITY_ERROR_STATUS_Parity0_error_MASK (0x1U)
 #define CAMERA_DSI_STREAM_CSR_DSI_PARITY_ERROR_STATUS_Parity0_error_SHIFT (0U)
 /*! Parity0_error - Parity 0 error status
- *  0b1..The number of detected errors on parity 0 is equal to or above the DSI_PARITY_ERROR_THRESHOLD[parity0_error_max]
  *  0b0..The number of detected errors on parity 0 is below the DSI_PARITY_ERROR_THRESHOLD[parity0_error_max]
+ *  0b1..The number of detected errors on parity 0 is equal to or above the DSI_PARITY_ERROR_THRESHOLD[parity0_error_max]
  */
 #define CAMERA_DSI_STREAM_CSR_DSI_PARITY_ERROR_STATUS_Parity0_error(x) (((uint32_t)(((uint32_t)(x)) << CAMERA_DSI_STREAM_CSR_DSI_PARITY_ERROR_STATUS_Parity0_error_SHIFT)) & CAMERA_DSI_STREAM_CSR_DSI_PARITY_ERROR_STATUS_Parity0_error_MASK)
 
@@ -214,10 +215,25 @@ typedef struct {
 #define CAMERA_DSI_STREAM_CSR_DSI_PARITY_ERROR_THRESHOLD_parity123_error_max_MASK (0x3FF0000U)
 #define CAMERA_DSI_STREAM_CSR_DSI_PARITY_ERROR_THRESHOLD_parity123_error_max_SHIFT (16U)
 /*! parity123_error_max - Max parity 123 threshold
- *  0b0000000001-0b1111111111..Maximum number of parity 123 errors.
  *  0b0000000000..The error check for parity 123 is disabled.
+ *  0b0000000001-0b1111111111..Maximum number of parity 123 errors.
  */
 #define CAMERA_DSI_STREAM_CSR_DSI_PARITY_ERROR_THRESHOLD_parity123_error_max(x) (((uint32_t)(((uint32_t)(x)) << CAMERA_DSI_STREAM_CSR_DSI_PARITY_ERROR_THRESHOLD_parity123_error_max_SHIFT)) & CAMERA_DSI_STREAM_CSR_DSI_PARITY_ERROR_THRESHOLD_parity123_error_max_MASK)
+/*! @} */
+
+/*! @name DSI_PARITY_ERROR_INJECTION - DSI Parity Error Injection */
+/*! @{ */
+
+#define CAMERA_DSI_STREAM_CSR_DSI_PARITY_ERROR_INJECTION_error_inject_MASK (0xFU)
+#define CAMERA_DSI_STREAM_CSR_DSI_PARITY_ERROR_INJECTION_error_inject_SHIFT (0U)
+/*! error_inject - Set the error injection bits.
+ *  0b0000..The error injection bit is disabled. Intended value during functional usage.
+ *  0b0001..Error injection on vsync, hsync and dataen signal
+ *  0b0010..Error injection on pl_data[35:24]
+ *  0b0100..Error injection on pl_data[23:12]
+ *  0b1000..Error injection on pl_data[11:0]
+ */
+#define CAMERA_DSI_STREAM_CSR_DSI_PARITY_ERROR_INJECTION_error_inject(x) (((uint32_t)(((uint32_t)(x)) << CAMERA_DSI_STREAM_CSR_DSI_PARITY_ERROR_INJECTION_error_inject_SHIFT)) & CAMERA_DSI_STREAM_CSR_DSI_PARITY_ERROR_INJECTION_error_inject_MASK)
 /*! @} */
 
 

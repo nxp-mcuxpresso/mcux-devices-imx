@@ -44,13 +44,13 @@
 **                          MIMX9596XVZXN_cm7
 **
 **     Version:             rev. 1.0, 2023-01-10
-**     Build:               b240728
+**     Build:               b250415
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for CAN
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -256,8 +256,8 @@ typedef struct {
 #define CAN_MCR_FDEN_MASK                        (0x800U)
 #define CAN_MCR_FDEN_SHIFT                       (11U)
 /*! FDEN - CAN FD Operation Enable
- *  0b1..Enable
  *  0b0..Disable
+ *  0b1..Enable
  */
 #define CAN_MCR_FDEN(x)                          (((uint32_t)(((uint32_t)(x)) << CAN_MCR_FDEN_SHIFT)) & CAN_MCR_FDEN_MASK)
 

@@ -44,13 +44,13 @@
 **                          MIMX9596XVZXN_cm7
 **
 **     Version:             rev. 1.0, 2023-01-10
-**     Build:               b240728
+**     Build:               b250415
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for NETC_ETH_LINK
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -473,6 +473,11 @@ typedef struct {
 #define NETC_ETH_LINK_PM0_MDIO_CFG_BSY2_SHIFT    (0U)
 /*! BSY2 - MDIO busy (same as bit 31) */
 #define NETC_ETH_LINK_PM0_MDIO_CFG_BSY2(x)       (((uint32_t)(((uint32_t)(x)) << NETC_ETH_LINK_PM0_MDIO_CFG_BSY2_SHIFT)) & NETC_ETH_LINK_PM0_MDIO_CFG_BSY2_MASK)
+
+#define NETC_ETH_LINK_PM0_MDIO_CFG_MDIO_RD_ER_MASK (0x2U)
+#define NETC_ETH_LINK_PM0_MDIO_CFG_MDIO_RD_ER_SHIFT (1U)
+/*! MDIO_RD_ER - MDIO error */
+#define NETC_ETH_LINK_PM0_MDIO_CFG_MDIO_RD_ER(x) (((uint32_t)(((uint32_t)(x)) << NETC_ETH_LINK_PM0_MDIO_CFG_MDIO_RD_ER_SHIFT)) & NETC_ETH_LINK_PM0_MDIO_CFG_MDIO_RD_ER_MASK)
 
 #define NETC_ETH_LINK_PM0_MDIO_CFG_MDIO_HOLD_MASK (0x1CU)
 #define NETC_ETH_LINK_PM0_MDIO_CFG_MDIO_HOLD_SHIFT (2U)
@@ -2516,7 +2521,7 @@ typedef struct {
 
 #define NETC_ETH_LINK_PEMDIOSR_REQ_TYPE_MASK     (0x80000U)
 #define NETC_ETH_LINK_PEMDIOSR_REQ_TYPE_SHIFT    (19U)
-/*! REQ_TYPE - Port ID */
+/*! REQ_TYPE - Request type */
 #define NETC_ETH_LINK_PEMDIOSR_REQ_TYPE(x)       (((uint32_t)(((uint32_t)(x)) << NETC_ETH_LINK_PEMDIOSR_REQ_TYPE_SHIFT)) & NETC_ETH_LINK_PEMDIOSR_REQ_TYPE_MASK)
 /*! @} */
 

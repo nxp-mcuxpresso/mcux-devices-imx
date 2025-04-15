@@ -44,13 +44,13 @@
 **                          MIMX9596XVZXN_cm7
 **
 **     Version:             rev. 1.0, 2023-01-10
-**     Build:               b240728
+**     Build:               b250415
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for JPEG_DEC_WRAP
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -130,7 +130,7 @@
  */
 
 /** JPEG_DEC_WRAP - Size of Registers Arrays */
-#define JPEG_DEC_WRAP_BITSTRM_SLOT_REGS_COUNT     4u
+#define JPEG_DEC_WRAP_SLOT_REGS_COUNT             4u
 
 /** JPEG_DEC_WRAP - Register Layout Typedef */
 typedef struct {
@@ -152,7 +152,7 @@ typedef struct {
     __I  uint32_t SLOT_CUR_DESCPT_PTR;               /**< Current Descriptors, array offset: 0x1000C, array step: 0x10000 */
     __IO uint32_t SLOT_NXT_DESCPT_PTR;               /**< Next Descriptors, array offset: 0x10010, array step: 0x10000 */
          uint8_t RESERVED_0[65516];
-  } BITSTRM_SLOT_REGS[JPEG_DEC_WRAP_BITSTRM_SLOT_REGS_COUNT];
+  } SLOT_REGS[JPEG_DEC_WRAP_SLOT_REGS_COUNT];
 } JPEG_DEC_WRAP_Type;
 
 /* ----------------------------------------------------------------------------
@@ -207,7 +207,6 @@ typedef struct {
  *  0b0010..Enables SLOT1.
  *  0b0100..Enables SLOT2.
  *  0b1000..Enables SLOT3.
- *  *..
  */
 #define JPEG_DEC_WRAP_GLB_CTRL_SLOT_EN(x)        (((uint32_t)(((uint32_t)(x)) << JPEG_DEC_WRAP_GLB_CTRL_SLOT_EN_SHIFT)) & JPEG_DEC_WRAP_GLB_CTRL_SLOT_EN_MASK)
 /*! @} */
@@ -332,30 +331,30 @@ typedef struct {
 #define JPEG_DEC_WRAP_SLOT_STATUS_STMBUF_HALF_MASK (0x1U)
 #define JPEG_DEC_WRAP_SLOT_STATUS_STMBUF_HALF_SHIFT (0U)
 /*! STMBUF_HALF - Stream Buffer Half Flag
- *  0b0..The bit stream buffer pointer for the current slot has not passed half of the buffer size.
- *  0b1..The bit stream buffer pointer for the current slot passed half of the buffer size.
  *  0b0..No effect
+ *  0b0..The bit stream buffer pointer for the current slot has not passed half of the buffer size.
  *  0b1..Clears the flag.
+ *  0b1..The bit stream buffer pointer for the current slot passed half of the buffer size.
  */
 #define JPEG_DEC_WRAP_SLOT_STATUS_STMBUF_HALF(x) (((uint32_t)(((uint32_t)(x)) << JPEG_DEC_WRAP_SLOT_STATUS_STMBUF_HALF_SHIFT)) & JPEG_DEC_WRAP_SLOT_STATUS_STMBUF_HALF_MASK)
 
 #define JPEG_DEC_WRAP_SLOT_STATUS_STMBUF_RTND_MASK (0x2U)
 #define JPEG_DEC_WRAP_SLOT_STATUS_STMBUF_RTND_SHIFT (1U)
 /*! STMBUF_RTND - Stream Buffer Returned Flag
- *  0b0..The bit stream buffer pointer for the current slot has not passed the top mark of the buffer.
- *  0b1..The bit stream buffer pointer for the current slot passed the top mark of the buffer.
  *  0b0..No effect
+ *  0b0..The bit stream buffer pointer for the current slot has not passed the top mark of the buffer.
  *  0b1..Clears the flag.
+ *  0b1..The bit stream buffer pointer for the current slot passed the top mark of the buffer.
  */
 #define JPEG_DEC_WRAP_SLOT_STATUS_STMBUF_RTND(x) (((uint32_t)(((uint32_t)(x)) << JPEG_DEC_WRAP_SLOT_STATUS_STMBUF_RTND_SHIFT)) & JPEG_DEC_WRAP_SLOT_STATUS_STMBUF_RTND_MASK)
 
 #define JPEG_DEC_WRAP_SLOT_STATUS_SWITCHED_IN_MASK (0x4U)
 #define JPEG_DEC_WRAP_SLOT_STATUS_SWITCHED_IN_SHIFT (2U)
 /*! SWITCHED_IN - Switched In Flag
- *  0b0..The current slot is not switched in during context switching.
- *  0b1..The current slot is switched in during context switching.
  *  0b0..No effect
+ *  0b0..The current slot is not switched in during context switching.
  *  0b1..Clears the flag.
+ *  0b1..The current slot is switched in during context switching.
  */
 #define JPEG_DEC_WRAP_SLOT_STATUS_SWITCHED_IN(x) (((uint32_t)(((uint32_t)(x)) << JPEG_DEC_WRAP_SLOT_STATUS_SWITCHED_IN_SHIFT)) & JPEG_DEC_WRAP_SLOT_STATUS_SWITCHED_IN_MASK)
 
@@ -363,9 +362,9 @@ typedef struct {
 #define JPEG_DEC_WRAP_SLOT_STATUS_FRMDONE_SHIFT  (3U)
 /*! FRMDONE - Frame Done Flag
  *  0b0..Decoding is not completed.
- *  0b1..Decoding is completed.
  *  0b0..No effect
  *  0b1..Clears the flag.
+ *  0b1..Decoding is completed.
  */
 #define JPEG_DEC_WRAP_SLOT_STATUS_FRMDONE(x)     (((uint32_t)(((uint32_t)(x)) << JPEG_DEC_WRAP_SLOT_STATUS_FRMDONE_SHIFT)) & JPEG_DEC_WRAP_SLOT_STATUS_FRMDONE_MASK)
 
@@ -373,8 +372,8 @@ typedef struct {
 #define JPEG_DEC_WRAP_SLOT_STATUS_DECERR_SHIFT   (8U)
 /*! DECERR - Decoding Error Flag
  *  0b0..No decoding error occurred.
- *  0b1..A decoding error occurred.
  *  0b0..No effect
+ *  0b1..A decoding error occurred.
  *  0b1..Clears the flag.
  */
 #define JPEG_DEC_WRAP_SLOT_STATUS_DECERR(x)      (((uint32_t)(((uint32_t)(x)) << JPEG_DEC_WRAP_SLOT_STATUS_DECERR_SHIFT)) & JPEG_DEC_WRAP_SLOT_STATUS_DECERR_MASK)
@@ -383,8 +382,8 @@ typedef struct {
 #define JPEG_DEC_WRAP_SLOT_STATUS_DES_RD_ERR_SHIFT (9U)
 /*! DES_RD_ERR - Descriptor Read Error Flag
  *  0b0..No descriptor read error occurred.
- *  0b1..A descriptor read error occurred.
  *  0b0..No effect
+ *  0b1..A descriptor read error occurred.
  *  0b1..Clears the flag.
  */
 #define JPEG_DEC_WRAP_SLOT_STATUS_DES_RD_ERR(x)  (((uint32_t)(((uint32_t)(x)) << JPEG_DEC_WRAP_SLOT_STATUS_DES_RD_ERR_SHIFT)) & JPEG_DEC_WRAP_SLOT_STATUS_DES_RD_ERR_MASK)
@@ -393,8 +392,8 @@ typedef struct {
 #define JPEG_DEC_WRAP_SLOT_STATUS_BIT_RD_ERR_SHIFT (10U)
 /*! BIT_RD_ERR - Bit Read Error Flag
  *  0b0..No bit read error occurred.
- *  0b1..A bit read error occurred.
  *  0b0..No effect
+ *  0b1..A bit read error occurred.
  *  0b1..Clear the flag
  */
 #define JPEG_DEC_WRAP_SLOT_STATUS_BIT_RD_ERR(x)  (((uint32_t)(((uint32_t)(x)) << JPEG_DEC_WRAP_SLOT_STATUS_BIT_RD_ERR_SHIFT)) & JPEG_DEC_WRAP_SLOT_STATUS_BIT_RD_ERR_MASK)
@@ -402,9 +401,9 @@ typedef struct {
 #define JPEG_DEC_WRAP_SLOT_STATUS_PIXEL_WT_ERR_MASK (0x800U)
 #define JPEG_DEC_WRAP_SLOT_STATUS_PIXEL_WT_ERR_SHIFT (11U)
 /*! PIXEL_WT_ERR - Pixel Write Error Flag
+ *  0b0..No effect
  *  0b0..No pixel write error occurred.
  *  0b1..A pixel write error occurred.
- *  0b0..No effect
  *  0b1..Clears the flag.
  */
 #define JPEG_DEC_WRAP_SLOT_STATUS_PIXEL_WT_ERR(x) (((uint32_t)(((uint32_t)(x)) << JPEG_DEC_WRAP_SLOT_STATUS_PIXEL_WT_ERR_SHIFT)) & JPEG_DEC_WRAP_SLOT_STATUS_PIXEL_WT_ERR_MASK)

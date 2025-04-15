@@ -44,13 +44,13 @@
 **                          MIMX9596XVZXN_cm7
 **
 **     Version:             rev. 1.0, 2023-01-10
-**     Build:               b240728
+**     Build:               b250415
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for VPU_JPEG_ENC_WRAP
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -310,14 +310,6 @@ typedef struct {
  */
 #define VPU_JPEG_ENC_WRAP_STM_CTRL_BITBUF_PTR_CLR(x) (((uint32_t)(((uint32_t)(x)) << VPU_JPEG_ENC_WRAP_STM_CTRL_BITBUF_PTR_CLR_SHIFT)) & VPU_JPEG_ENC_WRAP_STM_CTRL_BITBUF_PTR_CLR_MASK)
 
-#define VPU_JPEG_ENC_WRAP_STM_CTRL_AUTO_START_MASK (0x100U)
-#define VPU_JPEG_ENC_WRAP_STM_CTRL_AUTO_START_SHIFT (8U)
-/*! AUTO_START - Auto Start
- *  0b0..Do not write 1 to CTRL[GO] in the JPEG encoder automatically.
- *  0b1..Writes 1 to CTRL[GO] in the JPEG encoder automatically.
- */
-#define VPU_JPEG_ENC_WRAP_STM_CTRL_AUTO_START(x) (((uint32_t)(((uint32_t)(x)) << VPU_JPEG_ENC_WRAP_STM_CTRL_AUTO_START_SHIFT)) & VPU_JPEG_ENC_WRAP_STM_CTRL_AUTO_START_MASK)
-
 #define VPU_JPEG_ENC_WRAP_STM_CTRL_CONFIG_MOD_MASK (0x200U)
 #define VPU_JPEG_ENC_WRAP_STM_CTRL_CONFIG_MOD_SHIFT (9U)
 /*! CONFIG_MOD - Configuration Mode
@@ -334,8 +326,8 @@ typedef struct {
 #define VPU_JPEG_ENC_WRAP_SLOT_STATUS_STMBUF_HALF_SHIFT (0U)
 /*! STMBUF_HALF - Stream Buffer Half Flag
  *  0b0..Buffer did not pass the half mark.
- *  0b1..Buffer passed the half mark.
  *  0b0..No effect
+ *  0b1..Buffer passed the half mark.
  *  0b1..Clears the flag.
  */
 #define VPU_JPEG_ENC_WRAP_SLOT_STATUS_STMBUF_HALF(x) (((uint32_t)(((uint32_t)(x)) << VPU_JPEG_ENC_WRAP_SLOT_STATUS_STMBUF_HALF_SHIFT)) & VPU_JPEG_ENC_WRAP_SLOT_STATUS_STMBUF_HALF_MASK)
@@ -344,8 +336,8 @@ typedef struct {
 #define VPU_JPEG_ENC_WRAP_SLOT_STATUS_STMBUF_RTND_SHIFT (1U)
 /*! STMBUF_RTND - Stream Buffer Returned Flag
  *  0b0..Buffer did not pass the top mark.
- *  0b1..Buffer passed the top mark.
  *  0b0..No effect
+ *  0b1..Buffer passed the top mark.
  *  0b1..Clears the flag.
  */
 #define VPU_JPEG_ENC_WRAP_SLOT_STATUS_STMBUF_RTND(x) (((uint32_t)(((uint32_t)(x)) << VPU_JPEG_ENC_WRAP_SLOT_STATUS_STMBUF_RTND_SHIFT)) & VPU_JPEG_ENC_WRAP_SLOT_STATUS_STMBUF_RTND_MASK)
@@ -354,9 +346,9 @@ typedef struct {
 #define VPU_JPEG_ENC_WRAP_SLOT_STATUS_SWITCHED_IN_SHIFT (2U)
 /*! SWITCHED_IN - Switched-In Flag
  *  0b0..Did not switch.
- *  0b1..Switched to current slot.
  *  0b0..No effect
  *  0b1..Clears the flag.
+ *  0b1..Switched to current slot.
  */
 #define VPU_JPEG_ENC_WRAP_SLOT_STATUS_SWITCHED_IN(x) (((uint32_t)(((uint32_t)(x)) << VPU_JPEG_ENC_WRAP_SLOT_STATUS_SWITCHED_IN_SHIFT)) & VPU_JPEG_ENC_WRAP_SLOT_STATUS_SWITCHED_IN_MASK)
 
@@ -364,9 +356,9 @@ typedef struct {
 #define VPU_JPEG_ENC_WRAP_SLOT_STATUS_FRMDONE_SHIFT (3U)
 /*! FRMDONE - Frame Done Flag
  *  0b0..Full frame is not encoded.
- *  0b1..Full frame is encoded.
  *  0b0..No effect
  *  0b1..Clears the flag.
+ *  0b1..Full frame is encoded.
  */
 #define VPU_JPEG_ENC_WRAP_SLOT_STATUS_FRMDONE(x) (((uint32_t)(((uint32_t)(x)) << VPU_JPEG_ENC_WRAP_SLOT_STATUS_FRMDONE_SHIFT)) & VPU_JPEG_ENC_WRAP_SLOT_STATUS_FRMDONE_MASK)
 
@@ -374,9 +366,9 @@ typedef struct {
 #define VPU_JPEG_ENC_WRAP_SLOT_STATUS_ENC_CONFG_ERR_SHIFT (8U)
 /*! ENC_CONFG_ERR - Encoder Configure Error Flag
  *  0b0..Error did not occur.
- *  0b1..Error occurred.
  *  0b0..No effect
  *  0b1..Clears the flag.
+ *  0b1..Error occurred.
  */
 #define VPU_JPEG_ENC_WRAP_SLOT_STATUS_ENC_CONFG_ERR(x) (((uint32_t)(((uint32_t)(x)) << VPU_JPEG_ENC_WRAP_SLOT_STATUS_ENC_CONFG_ERR_SHIFT)) & VPU_JPEG_ENC_WRAP_SLOT_STATUS_ENC_CONFG_ERR_MASK)
 
@@ -384,9 +376,9 @@ typedef struct {
 #define VPU_JPEG_ENC_WRAP_SLOT_STATUS_DES_RD_ERR_SHIFT (9U)
 /*! DES_RD_ERR - Descriptor Read Error Flag
  *  0b0..Error did not occur.
- *  0b1..Error occurred.
  *  0b0..No effect
  *  0b1..Clears the flag.
+ *  0b1..Error occurred.
  */
 #define VPU_JPEG_ENC_WRAP_SLOT_STATUS_DES_RD_ERR(x) (((uint32_t)(((uint32_t)(x)) << VPU_JPEG_ENC_WRAP_SLOT_STATUS_DES_RD_ERR_SHIFT)) & VPU_JPEG_ENC_WRAP_SLOT_STATUS_DES_RD_ERR_MASK)
 
@@ -394,9 +386,9 @@ typedef struct {
 #define VPU_JPEG_ENC_WRAP_SLOT_STATUS_BIT_WT_ERR_SHIFT (10U)
 /*! BIT_WT_ERR - Bit Write Error Flag
  *  0b0..Error did not occur.
- *  0b1..Error occurred.
  *  0b0..No effect
  *  0b1..Clears the flag.
+ *  0b1..Error occurred.
  */
 #define VPU_JPEG_ENC_WRAP_SLOT_STATUS_BIT_WT_ERR(x) (((uint32_t)(((uint32_t)(x)) << VPU_JPEG_ENC_WRAP_SLOT_STATUS_BIT_WT_ERR_SHIFT)) & VPU_JPEG_ENC_WRAP_SLOT_STATUS_BIT_WT_ERR_MASK)
 
@@ -404,9 +396,9 @@ typedef struct {
 #define VPU_JPEG_ENC_WRAP_SLOT_STATUS_IMG_RD_ERR_SHIFT (11U)
 /*! IMG_RD_ERR - Image Read Error Flag
  *  0b0..Error did not occur.
- *  0b1..Error occurred.
  *  0b0..No effect
  *  0b1..Clears the flag.
+ *  0b1..Error occurred.
  */
 #define VPU_JPEG_ENC_WRAP_SLOT_STATUS_IMG_RD_ERR(x) (((uint32_t)(((uint32_t)(x)) << VPU_JPEG_ENC_WRAP_SLOT_STATUS_IMG_RD_ERR_SHIFT)) & VPU_JPEG_ENC_WRAP_SLOT_STATUS_IMG_RD_ERR_MASK)
 

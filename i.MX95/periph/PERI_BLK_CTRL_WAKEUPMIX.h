@@ -44,13 +44,13 @@
 **                          MIMX9596XVZXN_cm7
 **
 **     Version:             rev. 1.0, 2023-01-10
-**     Build:               b240728
+**     Build:               b250415
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for BLK_CTRL_WAKEUPMIX
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -317,48 +317,48 @@ typedef struct {
 #define BLK_CTRL_WAKEUPMIX_AXI_ATTR_CFG_arcache_usdhc1_MASK (0x1U)
 #define BLK_CTRL_WAKEUPMIX_AXI_ATTR_CFG_arcache_usdhc1_SHIFT (0U)
 /*! arcache_usdhc1 - Static value of arcache[1] = CACHEABLE (C) for AXI initiator usdhc1
- *  0b1..Cacheable reads
  *  0b0..Non-cacheable reads
+ *  0b1..Cacheable reads
  */
 #define BLK_CTRL_WAKEUPMIX_AXI_ATTR_CFG_arcache_usdhc1(x) (((uint32_t)(((uint32_t)(x)) << BLK_CTRL_WAKEUPMIX_AXI_ATTR_CFG_arcache_usdhc1_SHIFT)) & BLK_CTRL_WAKEUPMIX_AXI_ATTR_CFG_arcache_usdhc1_MASK)
 
 #define BLK_CTRL_WAKEUPMIX_AXI_ATTR_CFG_awcache_usdhc1_MASK (0x2U)
 #define BLK_CTRL_WAKEUPMIX_AXI_ATTR_CFG_awcache_usdhc1_SHIFT (1U)
 /*! awcache_usdhc1 - Static value of awcache[1] = CACHEABLE (C) for AXI initiator usdhc1
- *  0b1..Cacheable writes
  *  0b0..Non-cacheable writes
+ *  0b1..Cacheable writes
  */
 #define BLK_CTRL_WAKEUPMIX_AXI_ATTR_CFG_awcache_usdhc1(x) (((uint32_t)(((uint32_t)(x)) << BLK_CTRL_WAKEUPMIX_AXI_ATTR_CFG_awcache_usdhc1_SHIFT)) & BLK_CTRL_WAKEUPMIX_AXI_ATTR_CFG_awcache_usdhc1_MASK)
 
 #define BLK_CTRL_WAKEUPMIX_AXI_ATTR_CFG_arcache_usdhc2_MASK (0x4U)
 #define BLK_CTRL_WAKEUPMIX_AXI_ATTR_CFG_arcache_usdhc2_SHIFT (2U)
 /*! arcache_usdhc2 - Static value of arcache[1] = CACHEABLE (C) for AXI initiator usdhc2
- *  0b1..Cacheable reads
  *  0b0..Non-cacheable reads
+ *  0b1..Cacheable reads
  */
 #define BLK_CTRL_WAKEUPMIX_AXI_ATTR_CFG_arcache_usdhc2(x) (((uint32_t)(((uint32_t)(x)) << BLK_CTRL_WAKEUPMIX_AXI_ATTR_CFG_arcache_usdhc2_SHIFT)) & BLK_CTRL_WAKEUPMIX_AXI_ATTR_CFG_arcache_usdhc2_MASK)
 
 #define BLK_CTRL_WAKEUPMIX_AXI_ATTR_CFG_awcache_usdhc2_MASK (0x8U)
 #define BLK_CTRL_WAKEUPMIX_AXI_ATTR_CFG_awcache_usdhc2_SHIFT (3U)
 /*! awcache_usdhc2 - Static value of awcache[1] = CACHEABLE (C) for AXI initiator usdhc2
- *  0b1..Cacheable writes
  *  0b0..Non-cacheable writes
+ *  0b1..Cacheable writes
  */
 #define BLK_CTRL_WAKEUPMIX_AXI_ATTR_CFG_awcache_usdhc2(x) (((uint32_t)(((uint32_t)(x)) << BLK_CTRL_WAKEUPMIX_AXI_ATTR_CFG_awcache_usdhc2_SHIFT)) & BLK_CTRL_WAKEUPMIX_AXI_ATTR_CFG_awcache_usdhc2_MASK)
 
 #define BLK_CTRL_WAKEUPMIX_AXI_ATTR_CFG_arcache_usdhc3_MASK (0x10U)
 #define BLK_CTRL_WAKEUPMIX_AXI_ATTR_CFG_arcache_usdhc3_SHIFT (4U)
 /*! arcache_usdhc3 - Static value of arcache[1] = CACHEABLE (C) for AXI initiator usdhc3
- *  0b1..Cacheable reads
  *  0b0..Non-cacheable reads
+ *  0b1..Cacheable reads
  */
 #define BLK_CTRL_WAKEUPMIX_AXI_ATTR_CFG_arcache_usdhc3(x) (((uint32_t)(((uint32_t)(x)) << BLK_CTRL_WAKEUPMIX_AXI_ATTR_CFG_arcache_usdhc3_SHIFT)) & BLK_CTRL_WAKEUPMIX_AXI_ATTR_CFG_arcache_usdhc3_MASK)
 
 #define BLK_CTRL_WAKEUPMIX_AXI_ATTR_CFG_awcache_usdhc3_MASK (0x20U)
 #define BLK_CTRL_WAKEUPMIX_AXI_ATTR_CFG_awcache_usdhc3_SHIFT (5U)
 /*! awcache_usdhc3 - Static value of awcache[1] = CACHEABLE (C) for AXI initiator usdhc3
- *  0b1..Cacheable writes
  *  0b0..Non-cacheable writes
+ *  0b1..Cacheable writes
  */
 #define BLK_CTRL_WAKEUPMIX_AXI_ATTR_CFG_awcache_usdhc3(x) (((uint32_t)(((uint32_t)(x)) << BLK_CTRL_WAKEUPMIX_AXI_ATTR_CFG_awcache_usdhc3_SHIFT)) & BLK_CTRL_WAKEUPMIX_AXI_ATTR_CFG_awcache_usdhc3_MASK)
 /*! @} */
