@@ -62,13 +62,13 @@
 **                          MIMX8US5DVP08_dsp1
 **
 **     Version:             rev. 5.0, 2023-04-27
-**     Build:               b240823
+**     Build:               b250331
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for TSTMR
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -90,7 +90,7 @@
 */
 
 /*!
- * @file TSTMR.h
+ * @file PERI_TSTMR.h
  * @version 5.0
  * @date 2023-04-27
  * @brief CMSIS Peripheral Access Layer for TSTMR
@@ -98,8 +98,8 @@
  * CMSIS Peripheral Access Layer for TSTMR
  */
 
-#if !defined(TSTMR_H_)
-#define TSTMR_H_                                 /**< Symbol preventing repeated inclusion */
+#if !defined(PERI_TSTMR_H_)
+#define PERI_TSTMR_H_                            /**< Symbol preventing repeated inclusion */
 
 #if (defined(CPU_MIMX8UD3CVP08_ca35) || defined(CPU_MIMX8UD3DVK08_ca35) || defined(CPU_MIMX8UD3DVP08_ca35))
 #include "MIMX8UD3_ca35_COMMON.h"
@@ -257,5 +257,5 @@ typedef struct {
  */ /* end of group Peripheral_access_layer */
 
 
-#endif  /* TSTMR_H_ */
+#endif  /* PERI_TSTMR_H_ */
 

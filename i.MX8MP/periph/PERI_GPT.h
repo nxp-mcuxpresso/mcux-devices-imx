@@ -34,7 +34,7 @@
 **                          MIMX8ML8DVNLZ_dsp
 **
 **     Version:             rev. 5.0, 2021-03-01
-**     Build:               b250115
+**     Build:               b250331
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for GPT
@@ -62,7 +62,7 @@
 */
 
 /*!
- * @file GPT.h
+ * @file PERI_GPT.h
  * @version 5.0
  * @date 2021-03-01
  * @brief CMSIS Peripheral Access Layer for GPT
@@ -70,8 +70,8 @@
  * CMSIS Peripheral Access Layer for GPT
  */
 
-#if !defined(GPT_H_)
-#define GPT_H_                                   /**< Symbol preventing repeated inclusion */
+#if !defined(PERI_GPT_H_)
+#define PERI_GPT_H_                              /**< Symbol preventing repeated inclusion */
 
 #if (defined(CPU_MIMX8ML2CVNKZ_ca53) || defined(CPU_MIMX8ML2DVNLZ_ca53))
 #include "MIMX8ML2_ca53_COMMON.h"
@@ -472,5 +472,5 @@ typedef struct {
  */ /* end of group Peripheral_access_layer */
 
 
-#endif  /* GPT_H_ */
+#endif  /* PERI_GPT_H_ */
 

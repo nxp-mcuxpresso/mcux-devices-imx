@@ -7,13 +7,13 @@
 **     Compiler:            Xtensa Compiler
 **     Reference manual:    IMX8ULPRM, Rev. D, December. 2022
 **     Version:             rev. 5.0, 2023-04-27
-**     Build:               b240823
+**     Build:               b250331
 **
 **     Abstract:
 **         Peripheral Access Layer for MIMX8UD3_dsp0
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com

@@ -66,13 +66,13 @@
 **                          MIMX9352XVVXM_cm33
 **
 **     Version:             rev. 1.0, 2021-11-16
-**     Build:               b240711
+**     Build:               b250331
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for S3MU
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -86,7 +86,7 @@
 */
 
 /*!
- * @file S3MU.h
+ * @file PERI_S3MU.h
  * @version 1.0
  * @date 2021-11-16
  * @brief CMSIS Peripheral Access Layer for S3MU
@@ -94,8 +94,8 @@
  * CMSIS Peripheral Access Layer for S3MU
  */
 
-#if !defined(S3MU_H_)
-#define S3MU_H_                                  /**< Symbol preventing repeated inclusion */
+#if !defined(PERI_S3MU_H_)
+#define PERI_S3MU_H_                             /**< Symbol preventing repeated inclusion */
 
 #if (defined(CPU_MIMX9301CVVXD_ca55) || defined(CPU_MIMX9301DVVXD_ca55))
 #include "MIMX9301_ca55_COMMON.h"
@@ -196,7 +196,7 @@ typedef struct {
   __I  uint32_t RSR;                               /**< Receive Status Register, offset: 0x12C */
        uint8_t RESERVED_1[204];
   __IO uint32_t UNUSED1;                           /**< Unused Register 1, offset: 0x1FC */
-  __O  uint32_t TR[S3MU_TR_COUNT];                 /**< Transmit Register, array offset: 0x200, array step: 0x4 */
+  __IO uint32_t TR[S3MU_TR_COUNT];                 /**< Transmit Register, array offset: 0x200, array step: 0x4 */
        uint8_t RESERVED_2[96];
   __I  uint32_t RR[S3MU_RR_COUNT];                 /**< Receive Register, array offset: 0x280, array step: 0x4 */
 } S3MU_Type;
@@ -359,5 +359,5 @@ typedef struct {
  */ /* end of group Peripheral_access_layer */
 
 
-#endif  /* S3MU_H_ */
+#endif  /* PERI_S3MU_H_ */
 

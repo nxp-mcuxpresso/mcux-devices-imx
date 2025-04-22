@@ -34,7 +34,7 @@
 **                          MIMX8ML8DVNLZ_dsp
 **
 **     Version:             rev. 5.0, 2021-03-01
-**     Build:               b250115
+**     Build:               b250331
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for APBH
@@ -62,7 +62,7 @@
 */
 
 /*!
- * @file APBH.h
+ * @file PERI_APBH.h
  * @version 5.0
  * @date 2021-03-01
  * @brief CMSIS Peripheral Access Layer for APBH
@@ -70,8 +70,8 @@
  * CMSIS Peripheral Access Layer for APBH
  */
 
-#if !defined(APBH_H_)
-#define APBH_H_                                  /**< Symbol preventing repeated inclusion */
+#if !defined(PERI_APBH_H_)
+#define PERI_APBH_H_                             /**< Symbol preventing repeated inclusion */
 
 #if (defined(CPU_MIMX8ML2CVNKZ_ca53) || defined(CPU_MIMX8ML2DVNLZ_ca53))
 #include "MIMX8ML2_ca53_COMMON.h"
@@ -2215,5 +2215,5 @@ typedef struct {
  */ /* end of group Peripheral_access_layer */
 
 
-#endif  /* APBH_H_ */
+#endif  /* PERI_APBH_H_ */
 

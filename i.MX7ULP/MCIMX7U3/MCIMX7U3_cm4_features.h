@@ -1,7 +1,7 @@
 /*
 ** ###################################################################
 **     Version:             rev. 7.0, 2018-11-05
-**     Build:               b250408
+**     Build:               b250411
 **
 **     Abstract:
 **         Chip specific module features.
@@ -636,10 +636,10 @@
 
 /* @brief Has separate DMA RX and TX requests. */
 #define FSL_FEATURE_LPI2C_HAS_SEPARATE_DMA_RX_TX_REQn(x) (1)
-/* @brief Has dedicated interrupt for master and slave. */
-#define FSL_FEATURE_LPI2C_HAS_ROLE_SPLIT_IRQ (0)
 /* @brief Capacity (number of entries) of the transmit/receive FIFO (or zero if no FIFO is available). */
 #define FSL_FEATURE_LPI2C_FIFO_SIZEn(x) (4)
+/* @brief Has dedicated interrupt for master and slave. */
+#define FSL_FEATURE_LPI2C_HAS_ROLE_SPLIT_IRQ (0)
 
 /* LPIT module features */
 
@@ -946,16 +946,28 @@
 
 /* @brief QSPI lookup table depth. */
 #define FSL_FEATURE_QSPI_LUT_DEPTH (64)
+/* @brief QSPI LUT SEQ unit. */
+#define FSL_FEATURE_QSPI_LUT_SEQ_UNIT (4U)
 /* @brief QSPI Tx FIFO depth. */
 #define FSL_FEATURE_QSPI_TXFIFO_DEPTH (16)
 /* @brief QSPI Rx FIFO depth. */
 #define FSL_FEATURE_QSPI_RXFIFO_DEPTH (16)
 /* @brief QSPI AHB buffer count. */
 #define FSL_FEATURE_QSPI_AHB_BUFFER_COUNT (4)
+/* @brief QSPI AHB buffer size in byte. */
+#define FSL_FEATURE_QSPI_AHB_BUFFER_SIZE (128U)
+/* @brief QSPI AMBA base address. */
+#define FSL_FEATURE_QSPI_AMBA_BASE (0xC0000000U)
+/* @brief QSPI AHB buffer ARDB base address. */
+#define FSL_FEATURE_QSPI_ARDB_BASE (0x24000000U)
 /* @brief QSPI has command usage error flag. */
 #define FSL_FEATURE_QSPI_HAS_IP_COMMAND_USAGE_ERROR (0)
 /* @brief QSPI support parallel mode. */
 #define FSL_FEATURE_QSPI_SUPPORT_PARALLEL_MODE (0)
+/* @brief QSPI support individual mode. */
+#define FSL_FEATURE_QSPI_SUPPORT_INDIVIDUAL_MODE (0)
+/* @brief QSPI supoorts single mode. */
+#define FSL_FEATURE_QSPI_SUPPORT_SINGLE_MODE (0)
 /* @brief QSPI support dual die. */
 #define FSL_FEATURE_QSPI_SUPPORT_DUAL_DIE (0)
 /* @brief there is  no SCLKCFG bit in MCR register. */
@@ -970,10 +982,10 @@
 #define FSL_FEATURE_QSPI_HAS_NO_SFACR (0)
 /* @brief there is no TDH bit in FLSHCR register. */
 #define FSL_FEATURE_QSPI_HAS_NO_TDH (0)
-/* @brief QSPI AHB buffer size in byte. */
-#define FSL_FEATURE_QSPI_AHB_BUFFER_SIZE (128U)
 /* @brief there is no END_CFG bit in MCR register. */
 #define FSL_FEATURE_QSPI_HAS_NO_MCR_END (0)
+/* @brief QSPI has no SOCCR register. */
+#define FSL_FEATURE_QSPI_HAS_NO_SOCCR_REG (0)
 /* @brief there is DLLCRA register. */
 #define FSL_FEATURE_QSPI_HAS_DLLCRA (0)
 /* @brief there is data learning feature. */
@@ -984,10 +996,10 @@
 #define FSL_FEATURE_QSPI_HAS_AHB_SEQ_ERR (1)
 /* @brief there is Tx buffer enough data available flag. */
 #define FSL_FEATURE_QSPI_HAS_TX_BUFF_ENOUGH_DATA (1)
-/* @brief QSPI AMBA base address. */
-#define FSL_FEATURE_QSPI_AMBA_BASE (0xC0000000U)
-/* @brief QSPI AHB buffer ARDB base address. */
-#define FSL_FEATURE_QSPI_ARDB_BASE (0x24000000U)
+/* @brief QSPI has DDR mode. */
+#define FSL_FEATURE_QSPI_HAS_DDR (1)
+/* @brief SOC specific configuration is needed. */
+#define FSL_FEATURE_QSPI_HAS_SOC_SPECIFIC_CONFIG (0)
 
 /* SCG module features */
 

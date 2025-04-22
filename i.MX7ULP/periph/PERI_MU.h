@@ -7,13 +7,13 @@
 **                          MCIMX7U5DVP07
 **
 **     Version:             rev. 7.0, 2018-11-05
-**     Build:               b240708
+**     Build:               b250410
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for MU
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -39,7 +39,7 @@
 */
 
 /*!
- * @file MU.h
+ * @file PERI_MU.h
  * @version 7.0
  * @date 2018-11-05
  * @brief CMSIS Peripheral Access Layer for MU
@@ -47,8 +47,8 @@
  * CMSIS Peripheral Access Layer for MU
  */
 
-#if !defined(MU_H_)
-#define MU_H_                                    /**< Symbol preventing repeated inclusion */
+#if !defined(PERI_MU_H_)
+#define PERI_MU_H_                               /**< Symbol preventing repeated inclusion */
 
 #if (defined(CPU_MCIMX7U3CVP06) || defined(CPU_MCIMX7U3DVK07))
 #include "MCIMX7U3_cm4_COMMON.h"
@@ -439,5 +439,5 @@ typedef struct {
  */ /* end of group Peripheral_access_layer */
 
 
-#endif  /* MU_H_ */
+#endif  /* PERI_MU_H_ */
 

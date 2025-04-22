@@ -66,13 +66,13 @@
 **                          MIMX9352XVVXM_cm33
 **
 **     Version:             rev. 1.0, 2021-11-16
-**     Build:               b240711
+**     Build:               b250331
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for MIPI_CSI
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -86,7 +86,7 @@
 */
 
 /*!
- * @file MIPI_CSI.h
+ * @file PERI_MIPI_CSI.h
  * @version 1.0
  * @date 2021-11-16
  * @brief CMSIS Peripheral Access Layer for MIPI_CSI
@@ -94,8 +94,8 @@
  * CMSIS Peripheral Access Layer for MIPI_CSI
  */
 
-#if !defined(MIPI_CSI_H_)
-#define MIPI_CSI_H_                              /**< Symbol preventing repeated inclusion */
+#if !defined(PERI_MIPI_CSI_H_)
+#define PERI_MIPI_CSI_H_                         /**< Symbol preventing repeated inclusion */
 
 #if (defined(CPU_MIMX9301CVVXD_ca55) || defined(CPU_MIMX9301DVVXD_ca55))
 #include "MIMX9301_ca55_COMMON.h"
@@ -453,8 +453,8 @@ typedef struct {
 #define MIPI_CSI_PPI_PG_CONFIG_ppi_pg_pattern_MASK (0x1U)
 #define MIPI_CSI_PPI_PG_CONFIG_ppi_pg_pattern_SHIFT (0U)
 /*! ppi_pg_pattern - Configures the PPI Pattern Generator's pattern:
- *  0b1..Horizontal Pattern
  *  0b0..Vertical Pattern
+ *  0b1..Horizontal Pattern
  */
 #define MIPI_CSI_PPI_PG_CONFIG_ppi_pg_pattern(x) (((uint32_t)(((uint32_t)(x)) << MIPI_CSI_PPI_PG_CONFIG_ppi_pg_pattern_SHIFT)) & MIPI_CSI_PPI_PG_CONFIG_ppi_pg_pattern_MASK)
 
@@ -484,8 +484,8 @@ typedef struct {
 #define MIPI_CSI_PPI_PG_STATUS_ppi_pg_status_MASK (0x1U)
 #define MIPI_CSI_PPI_PG_STATUS_ppi_pg_status_SHIFT (0U)
 /*! ppi_pg_status - PPI Pattern Generator status:
- *  0b1..PPI PG is running
  *  0b0..PPIPG is inactive
+ *  0b1..PPI PG is running
  */
 #define MIPI_CSI_PPI_PG_STATUS_ppi_pg_status(x)  (((uint32_t)(((uint32_t)(x)) << MIPI_CSI_PPI_PG_STATUS_ppi_pg_status_SHIFT)) & MIPI_CSI_PPI_PG_STATUS_ppi_pg_status_MASK)
 /*! @} */
@@ -504,16 +504,16 @@ typedef struct {
 #define MIPI_CSI_IPI_MODE_ipi_color_com_MASK     (0x100U)
 #define MIPI_CSI_IPI_MODE_ipi_color_com_SHIFT    (8U)
 /*! ipi_color_com - Indicates how color mode components are delivered as follows:
- *  0b1..16 bits interface
  *  0b0..48 bits interface
+ *  0b1..16 bits interface
  */
 #define MIPI_CSI_IPI_MODE_ipi_color_com(x)       (((uint32_t)(((uint32_t)(x)) << MIPI_CSI_IPI_MODE_ipi_color_com_SHIFT)) & MIPI_CSI_IPI_MODE_ipi_color_com_MASK)
 
 #define MIPI_CSI_IPI_MODE_ipi_cut_through_MASK   (0x10000U)
 #define MIPI_CSI_IPI_MODE_ipi_cut_through_SHIFT  (16U)
 /*! ipi_cut_through - Indicates cut-through mode state:
- *  0b1..Cut-through mode active
  *  0b0..Cut-through mode inactive
+ *  0b1..Cut-through mode active
  */
 #define MIPI_CSI_IPI_MODE_ipi_cut_through(x)     (((uint32_t)(((uint32_t)(x)) << MIPI_CSI_IPI_MODE_ipi_cut_through_SHIFT)) & MIPI_CSI_IPI_MODE_ipi_cut_through_MASK)
 
@@ -654,8 +654,8 @@ typedef struct {
 #define MIPI_CSI_IPI_ADV_FEATURES_ipi_sync_event_mode_MASK (0x1000000U)
 #define MIPI_CSI_IPI_ADV_FEATURES_ipi_sync_event_mode_SHIFT (24U)
 /*! ipi_sync_event_mode - For Camera Mode:
- *  0b1..Legacy mode. Frame Start triggers a sync event.
  *  0b0..Frame Start does not trigger any sync event.
+ *  0b1..Legacy mode. Frame Start triggers a sync event.
  */
 #define MIPI_CSI_IPI_ADV_FEATURES_ipi_sync_event_mode(x) (((uint32_t)(((uint32_t)(x)) << MIPI_CSI_IPI_ADV_FEATURES_ipi_sync_event_mode_SHIFT)) & MIPI_CSI_IPI_ADV_FEATURES_ipi_sync_event_mode_MASK)
 /*! @} */
@@ -1032,5 +1032,5 @@ typedef struct {
  */ /* end of group Peripheral_access_layer */
 
 
-#endif  /* MIPI_CSI_H_ */
+#endif  /* PERI_MIPI_CSI_H_ */
 

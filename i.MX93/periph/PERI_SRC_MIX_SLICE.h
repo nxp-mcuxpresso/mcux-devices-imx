@@ -66,13 +66,13 @@
 **                          MIMX9352XVVXM_cm33
 **
 **     Version:             rev. 1.0, 2021-11-16
-**     Build:               b240711
+**     Build:               b250331
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for SRC_MIX_SLICE
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -86,7 +86,7 @@
 */
 
 /*!
- * @file SRC_MIX_SLICE.h
+ * @file PERI_SRC_MIX_SLICE.h
  * @version 1.0
  * @date 2021-11-16
  * @brief CMSIS Peripheral Access Layer for SRC_MIX_SLICE
@@ -94,8 +94,8 @@
  * CMSIS Peripheral Access Layer for SRC_MIX_SLICE
  */
 
-#if !defined(SRC_MIX_SLICE_H_)
-#define SRC_MIX_SLICE_H_                         /**< Symbol preventing repeated inclusion */
+#if !defined(PERI_SRC_MIX_SLICE_H_)
+#define PERI_SRC_MIX_SLICE_H_                    /**< Symbol preventing repeated inclusion */
 
 #if (defined(CPU_MIMX9301CVVXD_ca55) || defined(CPU_MIMX9301DVVXD_ca55))
 #include "MIMX9301_ca55_COMMON.h"
@@ -581,32 +581,32 @@ typedef struct {
 #define SRC_MIX_SLICE_SINGLE_RESET_SW_CTRL_RST_CTRL_SOFT_2_MASK (0x10U)
 #define SRC_MIX_SLICE_SINGLE_RESET_SW_CTRL_RST_CTRL_SOFT_2_SHIFT (4U)
 /*! RST_CTRL_SOFT_2 - Locked by LPM_MODE field.
- *  0b1..No effect or software reset deassert
  *  0b0..Software reset assert
+ *  0b1..No effect or software reset deassert
  */
 #define SRC_MIX_SLICE_SINGLE_RESET_SW_CTRL_RST_CTRL_SOFT_2(x) (((uint32_t)(((uint32_t)(x)) << SRC_MIX_SLICE_SINGLE_RESET_SW_CTRL_RST_CTRL_SOFT_2_SHIFT)) & SRC_MIX_SLICE_SINGLE_RESET_SW_CTRL_RST_CTRL_SOFT_2_MASK)
 
 #define SRC_MIX_SLICE_SINGLE_RESET_SW_CTRL_RST_CTRL_SOFT_3_MASK (0x40U)
 #define SRC_MIX_SLICE_SINGLE_RESET_SW_CTRL_RST_CTRL_SOFT_3_SHIFT (6U)
 /*! RST_CTRL_SOFT_3 - Locked by LPM_MODE field.
- *  0b1..No effect or software reset deassert
  *  0b0..Software reset assert
+ *  0b1..No effect or software reset deassert
  */
 #define SRC_MIX_SLICE_SINGLE_RESET_SW_CTRL_RST_CTRL_SOFT_3(x) (((uint32_t)(((uint32_t)(x)) << SRC_MIX_SLICE_SINGLE_RESET_SW_CTRL_RST_CTRL_SOFT_3_SHIFT)) & SRC_MIX_SLICE_SINGLE_RESET_SW_CTRL_RST_CTRL_SOFT_3_MASK)
 
 #define SRC_MIX_SLICE_SINGLE_RESET_SW_CTRL_RST_CTRL_SOFT_4_MASK (0x100U)
 #define SRC_MIX_SLICE_SINGLE_RESET_SW_CTRL_RST_CTRL_SOFT_4_SHIFT (8U)
 /*! RST_CTRL_SOFT_4 - Locked by LPM_MODE field.
- *  0b1..No effect or software reset deassert
  *  0b0..Software reset assert
+ *  0b1..No effect or software reset deassert
  */
 #define SRC_MIX_SLICE_SINGLE_RESET_SW_CTRL_RST_CTRL_SOFT_4(x) (((uint32_t)(((uint32_t)(x)) << SRC_MIX_SLICE_SINGLE_RESET_SW_CTRL_RST_CTRL_SOFT_4_SHIFT)) & SRC_MIX_SLICE_SINGLE_RESET_SW_CTRL_RST_CTRL_SOFT_4_MASK)
 
 #define SRC_MIX_SLICE_SINGLE_RESET_SW_CTRL_RST_CTRL_SOFT_5_MASK (0x400U)
 #define SRC_MIX_SLICE_SINGLE_RESET_SW_CTRL_RST_CTRL_SOFT_5_SHIFT (10U)
 /*! RST_CTRL_SOFT_5 - Locked by LPM_MODE field.
- *  0b1..No effect or software reset deassert
  *  0b0..software reset assert
+ *  0b1..No effect or software reset deassert
  */
 #define SRC_MIX_SLICE_SINGLE_RESET_SW_CTRL_RST_CTRL_SOFT_5(x) (((uint32_t)(((uint32_t)(x)) << SRC_MIX_SLICE_SINGLE_RESET_SW_CTRL_RST_CTRL_SOFT_5_SHIFT)) & SRC_MIX_SLICE_SINGLE_RESET_SW_CTRL_RST_CTRL_SOFT_5_MASK)
 /*! @} */
@@ -1059,5 +1059,5 @@ typedef struct {
  */ /* end of group Peripheral_access_layer */
 
 
-#endif  /* SRC_MIX_SLICE_H_ */
+#endif  /* PERI_SRC_MIX_SLICE_H_ */
 

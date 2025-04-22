@@ -66,13 +66,13 @@
 **                          MIMX9352XVVXM_cm33
 **
 **     Version:             rev. 1.0, 2021-11-16
-**     Build:               b240711
+**     Build:               b250331
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for LPSPI
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -86,7 +86,7 @@
 */
 
 /*!
- * @file LPSPI.h
+ * @file PERI_LPSPI.h
  * @version 1.0
  * @date 2021-11-16
  * @brief CMSIS Peripheral Access Layer for LPSPI
@@ -94,8 +94,8 @@
  * CMSIS Peripheral Access Layer for LPSPI
  */
 
-#if !defined(LPSPI_H_)
-#define LPSPI_H_                                 /**< Symbol preventing repeated inclusion */
+#if !defined(PERI_LPSPI_H_)
+#define PERI_LPSPI_H_                            /**< Symbol preventing repeated inclusion */
 
 #if (defined(CPU_MIMX9301CVVXD_ca55) || defined(CPU_MIMX9301DVVXD_ca55))
 #include "MIMX9301_ca55_COMMON.h"
@@ -231,7 +231,6 @@ typedef struct {
 #define LPSPI_VERID_FEATURE_SHIFT                (0U)
 /*! FEATURE - Module Identification Number
  *  0b0000000000000100..Standard feature set supporting a 32-bit shift register.
- *  *..
  */
 #define LPSPI_VERID_FEATURE(x)                   (((uint32_t)(((uint32_t)(x)) << LPSPI_VERID_FEATURE_SHIFT)) & LPSPI_VERID_FEATURE_MASK)
 
@@ -888,5 +887,5 @@ typedef struct {
  */ /* end of group Peripheral_access_layer */
 
 
-#endif  /* LPSPI_H_ */
+#endif  /* PERI_LPSPI_H_ */
 

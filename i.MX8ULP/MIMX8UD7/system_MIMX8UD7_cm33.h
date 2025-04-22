@@ -10,7 +10,7 @@
 **
 **     Reference manual:    IMX8ULPRM, Rev. D, December. 2022
 **     Version:             rev. 5.0, 2023-04-27
-**     Build:               b240823
+**     Build:               b250331
 **
 **     Abstract:
 **         Provides a system configuration function and a global variable that
@@ -18,7 +18,7 @@
 **         the oscillator (PLL) that is part of the microcontroller device.
 **
 **     Copyright 2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -42,7 +42,7 @@
 /*!
  * @file MIMX8UD7_cm33
  * @version 1.0
- * @date 230824
+ * @date 310325
  * @brief Device specific configuration file for MIMX8UD7_cm33 (header file)
  *
  * Provides a system configuration function and a global variable that contains

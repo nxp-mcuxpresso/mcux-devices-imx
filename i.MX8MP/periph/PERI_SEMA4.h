@@ -34,7 +34,7 @@
 **                          MIMX8ML8DVNLZ_dsp
 **
 **     Version:             rev. 5.0, 2021-03-01
-**     Build:               b250115
+**     Build:               b250331
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for SEMA4
@@ -62,7 +62,7 @@
 */
 
 /*!
- * @file SEMA4.h
+ * @file PERI_SEMA4.h
  * @version 5.0
  * @date 2021-03-01
  * @brief CMSIS Peripheral Access Layer for SEMA4
@@ -70,8 +70,8 @@
  * CMSIS Peripheral Access Layer for SEMA4
  */
 
-#if !defined(SEMA4_H_)
-#define SEMA4_H_                                 /**< Symbol preventing repeated inclusion */
+#if !defined(PERI_SEMA4_H_)
+#define PERI_SEMA4_H_                            /**< Symbol preventing repeated inclusion */
 
 #if (defined(CPU_MIMX8ML2CVNKZ_ca53) || defined(CPU_MIMX8ML2DVNLZ_ca53))
 #include "MIMX8ML2_ca53_COMMON.h"
@@ -708,5 +708,5 @@ typedef struct {
  */ /* end of group Peripheral_access_layer */
 
 
-#endif  /* SEMA4_H_ */
+#endif  /* PERI_SEMA4_H_ */
 

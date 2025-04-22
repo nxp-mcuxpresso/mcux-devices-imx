@@ -22,13 +22,13 @@
 **                          MIMX8MQ7DVAJZ_cm4
 **
 **     Version:             rev. 4.0, 2018-01-26
-**     Build:               b240708
+**     Build:               b250410
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for SDMACORE
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -48,7 +48,7 @@
 */
 
 /*!
- * @file SDMACORE.h
+ * @file PERI_SDMACORE.h
  * @version 4.0
  * @date 2018-01-26
  * @brief CMSIS Peripheral Access Layer for SDMACORE
@@ -56,8 +56,8 @@
  * CMSIS Peripheral Access Layer for SDMACORE
  */
 
-#if !defined(SDMACORE_H_)
-#define SDMACORE_H_                              /**< Symbol preventing repeated inclusion */
+#if !defined(PERI_SDMACORE_H_)
+#define PERI_SDMACORE_H_                         /**< Symbol preventing repeated inclusion */
 
 #if (defined(CPU_MIMX8MD6CVAHZ_ca53) || defined(CPU_MIMX8MD6DVAJZ_ca53))
 #include "MIMX8MD6_ca53_COMMON.h"
@@ -414,15 +414,15 @@ typedef struct {
  *  0b0000..Program
  *  0b0001..Data
  *  0b0010..Change of Flow
+ *  0b0010..Change of Flow in Sleep
  *  0b0011..Change of Flow in Loop
+ *  0b0011..Change Flow Loop Sleep
  *  0b0100..Debug
  *  0b0101..Functional Unit
  *  0b0110..Sleep
  *  0b0111..Save
  *  0b1000..Program in Sleep
  *  0b1001..Data in Sleep
- *  0b0010..Change of Flow in Sleep
- *  0b0011..Change Flow Loop Sleep
  *  0b1100..Debug in Sleep
  *  0b1101..Functional Unit in Sleep
  *  0b1110..Sleep after Reset
@@ -513,5 +513,5 @@ typedef struct {
  */ /* end of group Peripheral_access_layer */
 
 
-#endif  /* SDMACORE_H_ */
+#endif  /* PERI_SDMACORE_H_ */
 

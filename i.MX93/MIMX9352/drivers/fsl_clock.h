@@ -1047,9 +1047,9 @@ typedef enum _clock_lpcg
     }
 
 /*! @brief Clock ip name array for TPM. */
-#define TPM_CLOCKS                                                                    \
-    {                                                                                 \
-        kCLOCK_Tpm1, kCLOCK_Tpm2, kCLOCK_Tpm3, kCLOCK_Tpm4, kCLOCK_Tpm5, kCLOCK_Tpm6, \
+#define TPM_CLOCKS                                                                                      \
+    {                                                                                                   \
+        kCLOCK_IpInvalid, kCLOCK_Tpm1, kCLOCK_Tpm2, kCLOCK_Tpm3, kCLOCK_Tpm4, kCLOCK_Tpm5, kCLOCK_Tpm6, \
     }
 
 /*! @brief Clock ip name array for FLEXIO. */

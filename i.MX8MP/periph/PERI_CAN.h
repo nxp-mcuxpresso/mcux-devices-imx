@@ -34,7 +34,7 @@
 **                          MIMX8ML8DVNLZ_dsp
 **
 **     Version:             rev. 5.0, 2021-03-01
-**     Build:               b250115
+**     Build:               b250331
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for CAN
@@ -62,7 +62,7 @@
 */
 
 /*!
- * @file CAN.h
+ * @file PERI_CAN.h
  * @version 5.0
  * @date 2021-03-01
  * @brief CMSIS Peripheral Access Layer for CAN
@@ -70,8 +70,8 @@
  * CMSIS Peripheral Access Layer for CAN
  */
 
-#if !defined(CAN_H_)
-#define CAN_H_                                   /**< Symbol preventing repeated inclusion */
+#if !defined(PERI_CAN_H_)
+#define PERI_CAN_H_                              /**< Symbol preventing repeated inclusion */
 
 #if (defined(CPU_MIMX8ML2CVNKZ_ca53) || defined(CPU_MIMX8ML2DVNLZ_ca53))
 #include "MIMX8ML2_ca53_COMMON.h"
@@ -150,7 +150,7 @@
  */
 
 /** CAN - Size of Registers Arrays */
-#define CAN_MB_COUNT                              64u
+#define CAN_MB_SIZE_MB_GROUP_MB_COUNT             64u
 #define CAN_RXIMR_COUNT                           64u
 
 /** CAN - Register Layout Typedef */
@@ -181,7 +181,7 @@ typedef struct {
     __IO uint32_t ID;                                /**< Message Buffer 0 ID Register..Message Buffer 63 ID Register, array offset: 0x84, array step: 0x10 */
     __IO uint32_t WORD0;                             /**< Message Buffer 0 WORD0 Register..Message Buffer 63 WORD0 Register, array offset: 0x88, array step: 0x10 */
     __IO uint32_t WORD1;                             /**< Message Buffer 0 WORD1 Register..Message Buffer 63 WORD1 Register, array offset: 0x8C, array step: 0x10 */
-  } MB[CAN_MB_COUNT];
+  } MB[CAN_MB_SIZE_MB_GROUP_MB_COUNT];
        uint8_t RESERVED_3[1024];
   __IO uint32_t RXIMR[CAN_RXIMR_COUNT];            /**< Rx Individual Mask registers, array offset: 0x880, array step: 0x4 */
        uint8_t RESERVED_4[352];
@@ -1608,5 +1608,5 @@ typedef struct {
  */ /* end of group Peripheral_access_layer */
 
 
-#endif  /* CAN_H_ */
+#endif  /* PERI_CAN_H_ */
 

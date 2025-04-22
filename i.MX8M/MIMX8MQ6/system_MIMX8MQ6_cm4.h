@@ -47,7 +47,7 @@
  * (PLL) that is part of the microcontroller device.
  */
 #ifndef _SYSTEM_MIMX8MQ6_cm4_H_
-#define _SYSTEM_MIMX8MQ6_cm4_H_                  /**< Symbol preventing repeated inclusion */
+#define _SYSTEM_MIMX8MQ6_cm4_H_                    /**< Symbol preventing repeated inclusion */
 
 #ifdef __cplusplus
 extern "C" {

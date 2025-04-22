@@ -62,13 +62,13 @@
 **                          MIMX8US5DVP08_dsp1
 **
 **     Version:             rev. 5.0, 2023-04-27
-**     Build:               b240823
+**     Build:               b250331
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for LPIT
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -90,7 +90,7 @@
 */
 
 /*!
- * @file LPIT.h
+ * @file PERI_LPIT.h
  * @version 5.0
  * @date 2023-04-27
  * @brief CMSIS Peripheral Access Layer for LPIT
@@ -98,8 +98,8 @@
  * CMSIS Peripheral Access Layer for LPIT
  */
 
-#if !defined(LPIT_H_)
-#define LPIT_H_                                  /**< Symbol preventing repeated inclusion */
+#if !defined(PERI_LPIT_H_)
+#define PERI_LPIT_H_                             /**< Symbol preventing repeated inclusion */
 
 #if (defined(CPU_MIMX8UD3CVP08_ca35) || defined(CPU_MIMX8UD3DVK08_ca35) || defined(CPU_MIMX8UD3DVP08_ca35))
 #include "MIMX8UD3_ca35_COMMON.h"
@@ -196,7 +196,7 @@ typedef struct {
   __IO uint32_t MSR;                               /**< Module Status, offset: 0xC */
   __IO uint32_t MIER;                              /**< Module Interrupt Enable, offset: 0x10 */
   __IO uint32_t SETTEN;                            /**< Set Timer Enable, offset: 0x14 */
-  __O  uint32_t CLRTEN;                            /**< Clear Timer Enable, offset: 0x18 */
+  __IO uint32_t CLRTEN;                            /**< Clear Timer Enable, offset: 0x18 */
        uint8_t RESERVED_0[4];
   struct {                                         /* offset: 0x20, array step: 0x10 */
     __IO uint32_t TVAL;                              /**< Timer Value, array offset: 0x20, array step: 0x10 */
@@ -572,5 +572,5 @@ typedef struct {
  */ /* end of group Peripheral_access_layer */
 
 
-#endif  /* LPIT_H_ */
+#endif  /* PERI_LPIT_H_ */
 

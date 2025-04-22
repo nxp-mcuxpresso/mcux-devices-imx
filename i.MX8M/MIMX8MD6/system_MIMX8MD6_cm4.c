@@ -50,10 +50,11 @@
 #include <stdint.h>
 #include "fsl_device_registers.h"
 
+
 /*!
  * @brief CCM reg macros to extract corresponding registers bit field.
  */
-#define CCM_BIT_FIELD_VAL(val, mask, shift) (((val)&mask) >> shift)
+#define CCM_BIT_FIELD_VAL(val, mask, shift)  (((val) & mask) >> shift)
 
 /*!
  * @brief CCM reg macros to get corresponding registers values.
@@ -165,6 +166,7 @@ uint32_t GetSSCGPllFreq(const volatile uint32_t *base)
     return (uint32_t)(pll2InputClock * divf2 / outDiv);
 }
 
+
 /* ----------------------------------------------------------------------------
    -- Core clock
    ---------------------------------------------------------------------------- */
@@ -175,47 +177,47 @@ uint32_t SystemCoreClock = DEFAULT_SYSTEM_CLOCK;
    -- SystemInit()
    ---------------------------------------------------------------------------- */
 
-void SystemInit(void)
-{
+void SystemInit (void) {
 #if ((__FPU_PRESENT == 1) && (__FPU_USED == 1))
-    SCB->CPACR |= ((3UL << 10 * 2) | (3UL << 11 * 2)); /* set CP10, CP11 Full Access */
-#endif                                                 /* ((__FPU_PRESENT == 1) && (__FPU_USED == 1)) */
+  SCB->CPACR |= ((3UL << 10*2) | (3UL << 11*2));    /* set CP10, CP11 Full Access */
+#endif /* ((__FPU_PRESENT == 1) && (__FPU_USED == 1)) */
 
-    /* Initialize Cache */
-    /* Enable Code Bus Cache */
-    /* set command to invalidate all ways, and write GO bit to initiate command */
-    LMEM->PCCCR |= LMEM_PCCCR_INVW1_MASK | LMEM_PCCCR_INVW0_MASK;
-    LMEM->PCCCR |= LMEM_PCCCR_GO_MASK;
-    /* Wait until the command completes */
-    while ((LMEM->PCCCR & LMEM_PCCCR_GO_MASK) != 0U)
-    {
-    }
-    /* Enable cache, enable write buffer */
-    LMEM->PCCCR |= (LMEM_PCCCR_ENWRBUF_MASK | LMEM_PCCCR_ENCACHE_MASK);
+  /* Initialize Cache */
+  /* Enable Code Bus Cache */
+  /* set command to invalidate all ways, and write GO bit to initiate command */
+  LMEM->PCCCR |= LMEM_PCCCR_INVW1_MASK | LMEM_PCCCR_INVW0_MASK;
+  LMEM->PCCCR |= LMEM_PCCCR_GO_MASK;
+  /* Wait until the command completes */
+  while ((LMEM->PCCCR & LMEM_PCCCR_GO_MASK) != 0U)
+  {
+  }
+  /* Enable cache, enable write buffer */
+  LMEM->PCCCR |= (LMEM_PCCCR_ENWRBUF_MASK | LMEM_PCCCR_ENCACHE_MASK);
 
-    /* Enable System Bus Cache */
-    /* set command to invalidate all ways, and write GO bit to initiate command */
-    LMEM->PSCCR |= LMEM_PSCCR_INVW1_MASK | LMEM_PSCCR_INVW0_MASK;
-    LMEM->PSCCR |= LMEM_PSCCR_GO_MASK;
-    /* Wait until the command completes */
-    while ((LMEM->PSCCR & LMEM_PSCCR_GO_MASK) != 0U)
-    {
-    }
-    /* Enable cache, enable write buffer */
-    LMEM->PSCCR |= (LMEM_PSCCR_ENWRBUF_MASK | LMEM_PSCCR_ENCACHE_MASK);
+  /* Enable System Bus Cache */
+  /* set command to invalidate all ways, and write GO bit to initiate command */
+  LMEM->PSCCR |= LMEM_PSCCR_INVW1_MASK | LMEM_PSCCR_INVW0_MASK;
+  LMEM->PSCCR |= LMEM_PSCCR_GO_MASK;
+  /* Wait until the command completes */
+  while ((LMEM->PSCCR & LMEM_PSCCR_GO_MASK) != 0U)
+  {
+  }
+  /* Enable cache, enable write buffer */
+  LMEM->PSCCR |= (LMEM_PSCCR_ENWRBUF_MASK | LMEM_PSCCR_ENCACHE_MASK);
 
-    __ISB();
-    __DSB();
+  __ISB();
+  __DSB();
 
-    SystemInitHook();
+  SystemInitHook();
 }
 
 /* ----------------------------------------------------------------------------
    -- SystemCoreClockUpdate()
    ---------------------------------------------------------------------------- */
 
-void SystemCoreClockUpdate(void)
-{
+void SystemCoreClockUpdate (void) {
+
+
     volatile uint32_t *M4_ClockRoot = (volatile uint32_t *)(&(CCM)->ROOT[1].TARGET_ROOT);
     uint32_t pre  = ((*M4_ClockRoot & CCM_TARGET_ROOT_PRE_PODF_MASK) >> CCM_TARGET_ROOT_PRE_PODF_SHIFT) + 1U;
     uint32_t post = ((*M4_ClockRoot & CCM_TARGET_ROOT_POST_PODF_MASK) >> CCM_TARGET_ROOT_POST_PODF_SHIFT) + 1U;
@@ -254,13 +256,13 @@ void SystemCoreClockUpdate(void)
     }
 
     SystemCoreClock = freq / pre / post;
+
 }
 
 /* ----------------------------------------------------------------------------
    -- SystemInitHook()
    ---------------------------------------------------------------------------- */
 
-__attribute__((weak)) void SystemInitHook(void)
-{
-    /* Void implementation of the weak function. */
+__attribute__ ((weak)) void SystemInitHook (void) {
+  /* Void implementation of the weak function. */
 }

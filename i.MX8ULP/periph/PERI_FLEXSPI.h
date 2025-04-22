@@ -62,13 +62,13 @@
 **                          MIMX8US5DVP08_dsp1
 **
 **     Version:             rev. 5.0, 2023-04-27
-**     Build:               b240823
+**     Build:               b250331
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for FLEXSPI
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -90,7 +90,7 @@
 */
 
 /*!
- * @file FLEXSPI.h
+ * @file PERI_FLEXSPI.h
  * @version 5.0
  * @date 2023-04-27
  * @brief CMSIS Peripheral Access Layer for FLEXSPI
@@ -98,8 +98,8 @@
  * CMSIS Peripheral Access Layer for FLEXSPI
  */
 
-#if !defined(FLEXSPI_H_)
-#define FLEXSPI_H_                               /**< Symbol preventing repeated inclusion */
+#if !defined(PERI_FLEXSPI_H_)
+#define PERI_FLEXSPI_H_                          /**< Symbol preventing repeated inclusion */
 
 #if (defined(CPU_MIMX8UD3CVP08_ca35) || defined(CPU_MIMX8UD3DVK08_ca35) || defined(CPU_MIMX8UD3DVP08_ca35))
 #include "MIMX8UD3_ca35_COMMON.h"
@@ -217,7 +217,7 @@ typedef struct {
   __IO uint32_t IPCR0;                             /**< IP Control 0, offset: 0xA0 */
   __IO uint32_t IPCR1;                             /**< IP Control 1, offset: 0xA4 */
        uint8_t RESERVED_3[8];
-  __O  uint32_t IPCMD;                             /**< IP Command, offset: 0xB0 */
+  __IO uint32_t IPCMD;                             /**< IP Command, offset: 0xB0 */
   __IO uint32_t DLPR;                              /**< Data Learning Pattern, offset: 0xB4 */
   __IO uint32_t IPRXFCR;                           /**< IP Receive FIFO Control, offset: 0xB8 */
   __IO uint32_t IPTXFCR;                           /**< IP Transmit FIFO Control, offset: 0xBC */
@@ -1409,5 +1409,5 @@ typedef struct {
  */ /* end of group Peripheral_access_layer */
 
 
-#endif  /* FLEXSPI_H_ */
+#endif  /* PERI_FLEXSPI_H_ */
 

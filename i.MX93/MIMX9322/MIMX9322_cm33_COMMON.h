@@ -10,13 +10,13 @@
 **
 **     Reference manual:    IMX93RM, Internal, November. 2021
 **     Version:             rev. 1.0, 2021-11-16
-**     Build:               b240823
+**     Build:               b250331
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for MIMX9322_cm33
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -2981,13 +2981,13 @@ typedef enum IRQn {
   /** Peripheral TPM6 base pointer */
   #define TPM6_NS                                  ((TPM_Type *)TPM6_BASE_NS)
   /** Array initializer of TPM peripheral base addresses */
-  #define TPM_BASE_ADDRS                           { TPM1_BASE, TPM2_BASE, TPM3_BASE, TPM4_BASE, TPM5_BASE, TPM6_BASE }
+  #define TPM_BASE_ADDRS                           { 0u, TPM1_BASE, TPM2_BASE, TPM3_BASE, TPM4_BASE, TPM5_BASE, TPM6_BASE }
   /** Array initializer of TPM peripheral base pointers */
-  #define TPM_BASE_PTRS                            { TPM1, TPM2, TPM3, TPM4, TPM5, TPM6 }
+  #define TPM_BASE_PTRS                            { (TPM_Type *)0u, TPM1, TPM2, TPM3, TPM4, TPM5, TPM6 }
   /** Array initializer of TPM peripheral base addresses */
-  #define TPM_BASE_ADDRS_NS                        { TPM1_BASE_NS, TPM2_BASE_NS, TPM3_BASE_NS, TPM4_BASE_NS, TPM5_BASE_NS, TPM6_BASE_NS }
+  #define TPM_BASE_ADDRS_NS                        { 0u, TPM1_BASE_NS, TPM2_BASE_NS, TPM3_BASE_NS, TPM4_BASE_NS, TPM5_BASE_NS, TPM6_BASE_NS }
   /** Array initializer of TPM peripheral base pointers */
-  #define TPM_BASE_PTRS_NS                         { TPM1_NS, TPM2_NS, TPM3_NS, TPM4_NS, TPM5_NS, TPM6_NS }
+  #define TPM_BASE_PTRS_NS                         { (TPM_Type *)0u, TPM1_NS, TPM2_NS, TPM3_NS, TPM4_NS, TPM5_NS, TPM6_NS }
 #else
   /** Peripheral TPM1 base address */
   #define TPM1_BASE                                (0x44310000u)
@@ -3014,12 +3014,12 @@ typedef enum IRQn {
   /** Peripheral TPM6 base pointer */
   #define TPM6                                     ((TPM_Type *)TPM6_BASE)
   /** Array initializer of TPM peripheral base addresses */
-  #define TPM_BASE_ADDRS                           { TPM1_BASE, TPM2_BASE, TPM3_BASE, TPM4_BASE, TPM5_BASE, TPM6_BASE }
+  #define TPM_BASE_ADDRS                           { 0u, TPM1_BASE, TPM2_BASE, TPM3_BASE, TPM4_BASE, TPM5_BASE, TPM6_BASE }
   /** Array initializer of TPM peripheral base pointers */
-  #define TPM_BASE_PTRS                            { TPM1, TPM2, TPM3, TPM4, TPM5, TPM6 }
+  #define TPM_BASE_PTRS                            { (TPM_Type *)0u, TPM1, TPM2, TPM3, TPM4, TPM5, TPM6 }
 #endif
 /** Interrupt vectors for the TPM peripheral type */
-#define TPM_IRQS                                 { TPM1_IRQn, TPM2_IRQn, TPM3_IRQn, TPM4_IRQn, TPM5_IRQn, TPM6_IRQn }
+#define TPM_IRQS                                 { NotAvail_IRQn, TPM1_IRQn, TPM2_IRQn, TPM3_IRQn, TPM4_IRQn, TPM5_IRQn, TPM6_IRQn }
 
 /* TRDC_MBC0 - Peripheral instance base addresses */
 #if (defined(__ARM_FEATURE_CMSE) && (__ARM_FEATURE_CMSE & 0x2))

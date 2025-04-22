@@ -34,7 +34,7 @@
 **                          MIMX8ML8DVNLZ_dsp
 **
 **     Version:             rev. 5.0, 2021-03-01
-**     Build:               b250115
+**     Build:               b250331
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for HTX_PVI
@@ -62,7 +62,7 @@
 */
 
 /*!
- * @file HTX_PVI.h
+ * @file PERI_HTX_PVI.h
  * @version 5.0
  * @date 2021-03-01
  * @brief CMSIS Peripheral Access Layer for HTX_PVI
@@ -70,8 +70,8 @@
  * CMSIS Peripheral Access Layer for HTX_PVI
  */
 
-#if !defined(HTX_PVI_H_)
-#define HTX_PVI_H_                               /**< Symbol preventing repeated inclusion */
+#if !defined(PERI_HTX_PVI_H_)
+#define PERI_HTX_PVI_H_                          /**< Symbol preventing repeated inclusion */
 
 #if (defined(CPU_MIMX8ML2CVNKZ_ca53) || defined(CPU_MIMX8ML2DVNLZ_ca53))
 #include "MIMX8ML2_ca53_COMMON.h"
@@ -540,5 +540,5 @@ typedef struct {
  */ /* end of group Peripheral_access_layer */
 
 
-#endif  /* HTX_PVI_H_ */
+#endif  /* PERI_HTX_PVI_H_ */
 

@@ -34,7 +34,7 @@
 **                          MIMX8ML8DVNLZ_dsp
 **
 **     Version:             rev. 5.0, 2021-03-01
-**     Build:               b250115
+**     Build:               b250331
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for VPU_G2
@@ -62,7 +62,7 @@
 */
 
 /*!
- * @file VPU_G2.h
+ * @file PERI_VPU_G2.h
  * @version 5.0
  * @date 2021-03-01
  * @brief CMSIS Peripheral Access Layer for VPU_G2
@@ -70,8 +70,8 @@
  * CMSIS Peripheral Access Layer for VPU_G2
  */
 
-#if !defined(VPU_G2_H_)
-#define VPU_G2_H_                                /**< Symbol preventing repeated inclusion */
+#if !defined(PERI_VPU_G2_H_)
+#define PERI_VPU_G2_H_                           /**< Symbol preventing repeated inclusion */
 
 #if (defined(CPU_MIMX8ML2CVNKZ_ca53) || defined(CPU_MIMX8ML2DVNLZ_ca53))
 #include "MIMX8ML2_ca53_COMMON.h"
@@ -3397,5 +3397,5 @@ typedef struct {
  */ /* end of group Peripheral_access_layer */
 
 
-#endif  /* VPU_G2_H_ */
+#endif  /* PERI_VPU_G2_H_ */
 

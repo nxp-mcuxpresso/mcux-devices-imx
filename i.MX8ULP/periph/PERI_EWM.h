@@ -62,13 +62,13 @@
 **                          MIMX8US5DVP08_dsp1
 **
 **     Version:             rev. 5.0, 2023-04-27
-**     Build:               b240823
+**     Build:               b250331
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for EWM
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -90,7 +90,7 @@
 */
 
 /*!
- * @file EWM.h
+ * @file PERI_EWM.h
  * @version 5.0
  * @date 2023-04-27
  * @brief CMSIS Peripheral Access Layer for EWM
@@ -98,8 +98,8 @@
  * CMSIS Peripheral Access Layer for EWM
  */
 
-#if !defined(EWM_H_)
-#define EWM_H_                                   /**< Symbol preventing repeated inclusion */
+#if !defined(PERI_EWM_H_)
+#define PERI_EWM_H_                              /**< Symbol preventing repeated inclusion */
 
 #if (defined(CPU_MIMX8UD3CVP08_ca35) || defined(CPU_MIMX8UD3DVK08_ca35) || defined(CPU_MIMX8UD3DVP08_ca35))
 #include "MIMX8UD3_ca35_COMMON.h"
@@ -188,7 +188,7 @@
 /** EWM - Register Layout Typedef */
 typedef struct {
   __IO uint8_t CTRL;                               /**< Control, offset: 0x0 */
-  __O  uint8_t SERV;                               /**< Service, offset: 0x1 */
+  __IO uint8_t SERV;                               /**< Service, offset: 0x1 */
   __IO uint8_t CMPL;                               /**< Compare Low, offset: 0x2 */
   __IO uint8_t CMPH;                               /**< Compare High, offset: 0x3 */
        uint8_t RESERVED_0[1];
@@ -312,5 +312,5 @@ typedef struct {
  */ /* end of group Peripheral_access_layer */
 
 
-#endif  /* EWM_H_ */
+#endif  /* PERI_EWM_H_ */
 

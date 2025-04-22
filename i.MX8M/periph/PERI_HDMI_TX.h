@@ -22,13 +22,13 @@
 **                          MIMX8MQ7DVAJZ_cm4
 **
 **     Version:             rev. 4.0, 2018-01-26
-**     Build:               b240708
+**     Build:               b250410
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for HDMI_TX
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -48,7 +48,7 @@
 */
 
 /*!
- * @file HDMI_TX.h
+ * @file PERI_HDMI_TX.h
  * @version 4.0
  * @date 2018-01-26
  * @brief CMSIS Peripheral Access Layer for HDMI_TX
@@ -56,8 +56,8 @@
  * CMSIS Peripheral Access Layer for HDMI_TX
  */
 
-#if !defined(HDMI_TX_H_)
-#define HDMI_TX_H_                               /**< Symbol preventing repeated inclusion */
+#if !defined(PERI_HDMI_TX_H_)
+#define PERI_HDMI_TX_H_                          /**< Symbol preventing repeated inclusion */
 
 #if (defined(CPU_MIMX8MD6CVAHZ_ca53) || defined(CPU_MIMX8MD6DVAJZ_ca53))
 #include "MIMX8MD6_ca53_COMMON.h"
@@ -2070,5 +2070,5 @@ typedef struct {
  */ /* end of group Peripheral_access_layer */
 
 
-#endif  /* HDMI_TX_H_ */
+#endif  /* PERI_HDMI_TX_H_ */
 

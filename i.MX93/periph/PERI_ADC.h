@@ -66,13 +66,13 @@
 **                          MIMX9352XVVXM_cm33
 **
 **     Version:             rev. 1.0, 2021-11-16
-**     Build:               b240814
+**     Build:               b250331
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for ADC
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -86,7 +86,7 @@
 */
 
 /*!
- * @file ADC.h
+ * @file PERI_ADC.h
  * @version 1.0
  * @date 2021-11-16
  * @brief CMSIS Peripheral Access Layer for ADC
@@ -94,8 +94,8 @@
  * CMSIS Peripheral Access Layer for ADC
  */
 
-#if !defined(ADC_H_)
-#define ADC_H_                                   /**< Symbol preventing repeated inclusion */
+#if !defined(PERI_ADC_H_)
+#define PERI_ADC_H_                              /**< Symbol preventing repeated inclusion */
 
 #if (defined(CPU_MIMX9301CVVXD_ca55) || defined(CPU_MIMX9301DVVXD_ca55))
 #include "MIMX9301_ca55_COMMON.h"
@@ -421,10 +421,10 @@ typedef struct {
 /*! ADCSTATUS - ADC Status
  *  0b000..Idle
  *  0b001..Power-down
- *  0b100..Sample
- *  0b110..Conversion
  *  0b010..Wait state (waiting to start conversion after [external trigger]).
  *  0b011..Busy in calibration
+ *  0b100..Sample
+ *  0b110..Conversion
  */
 #define ADC_MSR_ADCSTATUS(x)                     (((uint32_t)(((uint32_t)(x)) << ADC_MSR_ADCSTATUS_SHIFT)) & ADC_MSR_ADCSTATUS_MASK)
 
@@ -502,8 +502,8 @@ typedef struct {
 #define ADC_MSR_CALFAIL_SHIFT                    (30U)
 /*! CALFAIL - Calibration Failed
  *  0b0..Calibration passed (must be checked with CALBUSY = 0b)
- *  0b1..Calibration failed
  *  0b0..No effect
+ *  0b1..Calibration failed
  *  0b1..Clear the flag
  */
 #define ADC_MSR_CALFAIL(x)                       (((uint32_t)(((uint32_t)(x)) << ADC_MSR_CALFAIL_SHIFT)) & ADC_MSR_CALFAIL_MASK)
@@ -524,8 +524,8 @@ typedef struct {
 #define ADC_ISR_ECH_SHIFT                        (0U)
 /*! ECH - End of Conversion Chain
  *  0b0..End of conversion chain has not occurred
- *  0b1..End of conversion chain has occurred
  *  0b0..No effect
+ *  0b1..End of conversion chain has occurred
  *  0b1..Clear the flag
  */
 #define ADC_ISR_ECH(x)                           (((uint32_t)(((uint32_t)(x)) << ADC_ISR_ECH_SHIFT)) & ADC_ISR_ECH_MASK)
@@ -534,8 +534,8 @@ typedef struct {
 #define ADC_ISR_EOC_SHIFT                        (1U)
 /*! EOC - End of Channel Conversion
  *  0b0..Channel end of conversion has not occurred
- *  0b1..Channel end of conversion has occurred
  *  0b0..No effect
+ *  0b1..Channel end of conversion has occurred
  *  0b1..Clear the flag
  */
 #define ADC_ISR_EOC(x)                           (((uint32_t)(((uint32_t)(x)) << ADC_ISR_EOC_SHIFT)) & ADC_ISR_EOC_MASK)
@@ -544,8 +544,8 @@ typedef struct {
 #define ADC_ISR_JECH_SHIFT                       (2U)
 /*! JECH - Injected End of Conversion Chain
  *  0b0..Injected channel end of conversion chain has not occurred
- *  0b1..Injected channel end of conversion chain has occurred
  *  0b0..No effect
+ *  0b1..Injected channel end of conversion chain has occurred
  *  0b1..Clear the flag
  */
 #define ADC_ISR_JECH(x)                          (((uint32_t)(((uint32_t)(x)) << ADC_ISR_JECH_SHIFT)) & ADC_ISR_JECH_MASK)
@@ -554,8 +554,8 @@ typedef struct {
 #define ADC_ISR_JEOC_SHIFT                       (3U)
 /*! JEOC - Injected Channel End of Conversion
  *  0b0..Injected channel end of conversion has not occurred
- *  0b1..Injected channel end of conversion has occurred
  *  0b0..No effect
+ *  0b1..Injected channel end of conversion has occurred
  *  0b1..Clear the flag
  */
 #define ADC_ISR_JEOC(x)                          (((uint32_t)(((uint32_t)(x)) << ADC_ISR_JEOC_SHIFT)) & ADC_ISR_JEOC_MASK)
@@ -568,8 +568,8 @@ typedef struct {
 #define ADC_CEOCFR0_EOC_CH0_SHIFT                (0U)
 /*! EOC_CH0 - Channel 0 EOC Status
  *  0b0..Conversion not complete
- *  0b1..Conversion complete
  *  0b0..No effect
+ *  0b1..Conversion complete
  *  0b1..Clear the flag
  */
 #define ADC_CEOCFR0_EOC_CH0(x)                   (((uint32_t)(((uint32_t)(x)) << ADC_CEOCFR0_EOC_CH0_SHIFT)) & ADC_CEOCFR0_EOC_CH0_MASK)
@@ -578,8 +578,8 @@ typedef struct {
 #define ADC_CEOCFR0_EOC_CH1_SHIFT                (1U)
 /*! EOC_CH1 - Channel 1 EOC Status
  *  0b0..Conversion not complete
- *  0b1..Conversion complete
  *  0b0..No effect
+ *  0b1..Conversion complete
  *  0b1..Clear the flag
  */
 #define ADC_CEOCFR0_EOC_CH1(x)                   (((uint32_t)(((uint32_t)(x)) << ADC_CEOCFR0_EOC_CH1_SHIFT)) & ADC_CEOCFR0_EOC_CH1_MASK)
@@ -588,8 +588,8 @@ typedef struct {
 #define ADC_CEOCFR0_EOC_CH2_SHIFT                (2U)
 /*! EOC_CH2 - Channel 2 EOC Status
  *  0b0..Conversion not complete
- *  0b1..Conversion complete
  *  0b0..No effect
+ *  0b1..Conversion complete
  *  0b1..Clear the flag
  */
 #define ADC_CEOCFR0_EOC_CH2(x)                   (((uint32_t)(((uint32_t)(x)) << ADC_CEOCFR0_EOC_CH2_SHIFT)) & ADC_CEOCFR0_EOC_CH2_MASK)
@@ -598,8 +598,8 @@ typedef struct {
 #define ADC_CEOCFR0_EOC_CH3_SHIFT                (3U)
 /*! EOC_CH3 - Channel 3 EOC Status
  *  0b0..Conversion not complete
- *  0b1..Conversion complete
  *  0b0..No effect
+ *  0b1..Conversion complete
  *  0b1..Clear the flag
  */
 #define ADC_CEOCFR0_EOC_CH3(x)                   (((uint32_t)(((uint32_t)(x)) << ADC_CEOCFR0_EOC_CH3_SHIFT)) & ADC_CEOCFR0_EOC_CH3_MASK)
@@ -608,8 +608,8 @@ typedef struct {
 #define ADC_CEOCFR0_EOC_CH4_SHIFT                (4U)
 /*! EOC_CH4 - Channel 4 EOC Status
  *  0b0..Conversion not complete
- *  0b1..Conversion complete
  *  0b0..No effect
+ *  0b1..Conversion complete
  *  0b1..Clear the flag
  */
 #define ADC_CEOCFR0_EOC_CH4(x)                   (((uint32_t)(((uint32_t)(x)) << ADC_CEOCFR0_EOC_CH4_SHIFT)) & ADC_CEOCFR0_EOC_CH4_MASK)
@@ -618,8 +618,8 @@ typedef struct {
 #define ADC_CEOCFR0_EOC_CH5_SHIFT                (5U)
 /*! EOC_CH5 - Channel 5 EOC Status
  *  0b0..Conversion not complete
- *  0b1..Conversion complete
  *  0b0..No effect
+ *  0b1..Conversion complete
  *  0b1..Clear the flag
  */
 #define ADC_CEOCFR0_EOC_CH5(x)                   (((uint32_t)(((uint32_t)(x)) << ADC_CEOCFR0_EOC_CH5_SHIFT)) & ADC_CEOCFR0_EOC_CH5_MASK)
@@ -628,8 +628,8 @@ typedef struct {
 #define ADC_CEOCFR0_EOC_CH6_SHIFT                (6U)
 /*! EOC_CH6 - Channel 6 EOC Status
  *  0b0..Conversion not complete
- *  0b1..Conversion complete
  *  0b0..No effect
+ *  0b1..Conversion complete
  *  0b1..Clear the flag
  */
 #define ADC_CEOCFR0_EOC_CH6(x)                   (((uint32_t)(((uint32_t)(x)) << ADC_CEOCFR0_EOC_CH6_SHIFT)) & ADC_CEOCFR0_EOC_CH6_MASK)
@@ -638,8 +638,8 @@ typedef struct {
 #define ADC_CEOCFR0_EOC_CH7_SHIFT                (7U)
 /*! EOC_CH7 - Channel 7 EOC Status
  *  0b0..Conversion not complete
- *  0b1..Conversion complete
  *  0b0..No effect
+ *  0b1..Conversion complete
  *  0b1..Clear the flag
  */
 #define ADC_CEOCFR0_EOC_CH7(x)                   (((uint32_t)(((uint32_t)(x)) << ADC_CEOCFR0_EOC_CH7_SHIFT)) & ADC_CEOCFR0_EOC_CH7_MASK)
@@ -652,8 +652,8 @@ typedef struct {
 #define ADC_CEOCFR1_EOC_CH32_SHIFT               (0U)
 /*! EOC_CH32 - Channel 32 EOC Status
  *  0b0..Conversion not complete
- *  0b1..Conversion complete
  *  0b0..No effect
+ *  0b1..Conversion complete
  *  0b1..Clear the flag
  */
 #define ADC_CEOCFR1_EOC_CH32(x)                  (((uint32_t)(((uint32_t)(x)) << ADC_CEOCFR1_EOC_CH32_SHIFT)) & ADC_CEOCFR1_EOC_CH32_MASK)
@@ -662,8 +662,8 @@ typedef struct {
 #define ADC_CEOCFR1_EOC_CH33_SHIFT               (1U)
 /*! EOC_CH33 - Channel 33 EOC Status
  *  0b0..Conversion not complete
- *  0b1..Conversion complete
  *  0b0..No effect
+ *  0b1..Conversion complete
  *  0b1..Clear the flag
  */
 #define ADC_CEOCFR1_EOC_CH33(x)                  (((uint32_t)(((uint32_t)(x)) << ADC_CEOCFR1_EOC_CH33_SHIFT)) & ADC_CEOCFR1_EOC_CH33_MASK)
@@ -672,8 +672,8 @@ typedef struct {
 #define ADC_CEOCFR1_EOC_CH34_SHIFT               (2U)
 /*! EOC_CH34 - Channel 34 EOC Status
  *  0b0..Conversion not complete
- *  0b1..Conversion complete
  *  0b0..No effect
+ *  0b1..Conversion complete
  *  0b1..Clear the flag
  */
 #define ADC_CEOCFR1_EOC_CH34(x)                  (((uint32_t)(((uint32_t)(x)) << ADC_CEOCFR1_EOC_CH34_SHIFT)) & ADC_CEOCFR1_EOC_CH34_MASK)
@@ -682,8 +682,8 @@ typedef struct {
 #define ADC_CEOCFR1_EOC_CH35_SHIFT               (3U)
 /*! EOC_CH35 - Channel 35 EOC Status
  *  0b0..Conversion not complete
- *  0b1..Conversion complete
  *  0b0..No effect
+ *  0b1..Conversion complete
  *  0b1..Clear the flag
  */
 #define ADC_CEOCFR1_EOC_CH35(x)                  (((uint32_t)(((uint32_t)(x)) << ADC_CEOCFR1_EOC_CH35_SHIFT)) & ADC_CEOCFR1_EOC_CH35_MASK)
@@ -692,8 +692,8 @@ typedef struct {
 #define ADC_CEOCFR1_EOC_CH36_SHIFT               (4U)
 /*! EOC_CH36 - Channel 36 EOC Status
  *  0b0..Conversion not complete
- *  0b1..Conversion complete
  *  0b0..No effect
+ *  0b1..Conversion complete
  *  0b1..Clear the flag
  */
 #define ADC_CEOCFR1_EOC_CH36(x)                  (((uint32_t)(((uint32_t)(x)) << ADC_CEOCFR1_EOC_CH36_SHIFT)) & ADC_CEOCFR1_EOC_CH36_MASK)
@@ -702,8 +702,8 @@ typedef struct {
 #define ADC_CEOCFR1_EOC_CH37_SHIFT               (5U)
 /*! EOC_CH37 - Channel 37 EOC Status
  *  0b0..Conversion not complete
- *  0b1..Conversion complete
  *  0b0..No effect
+ *  0b1..Conversion complete
  *  0b1..Clear the flag
  */
 #define ADC_CEOCFR1_EOC_CH37(x)                  (((uint32_t)(((uint32_t)(x)) << ADC_CEOCFR1_EOC_CH37_SHIFT)) & ADC_CEOCFR1_EOC_CH37_MASK)
@@ -712,8 +712,8 @@ typedef struct {
 #define ADC_CEOCFR1_EOC_CH38_SHIFT               (6U)
 /*! EOC_CH38 - Channel 38 EOC Status
  *  0b0..Conversion not complete
- *  0b1..Conversion complete
  *  0b0..No effect
+ *  0b1..Conversion complete
  *  0b1..Clear the flag
  */
 #define ADC_CEOCFR1_EOC_CH38(x)                  (((uint32_t)(((uint32_t)(x)) << ADC_CEOCFR1_EOC_CH38_SHIFT)) & ADC_CEOCFR1_EOC_CH38_MASK)
@@ -722,8 +722,8 @@ typedef struct {
 #define ADC_CEOCFR1_EOC_CH39_SHIFT               (7U)
 /*! EOC_CH39 - Channel 39 EOC Status
  *  0b0..Conversion not complete
- *  0b1..Conversion complete
  *  0b0..No effect
+ *  0b1..Conversion complete
  *  0b1..Clear the flag
  */
 #define ADC_CEOCFR1_EOC_CH39(x)                  (((uint32_t)(((uint32_t)(x)) << ADC_CEOCFR1_EOC_CH39_SHIFT)) & ADC_CEOCFR1_EOC_CH39_MASK)
@@ -908,8 +908,8 @@ typedef struct {
 #define ADC_WTISR_WDG0L_SHIFT                    (0U)
 /*! WDG0L - Channel 0 Watchdog Low Threshold Interrupt
  *  0b0..Interrupt not asserted
- *  0b1..Interrupt asserted
  *  0b0..No effect
+ *  0b1..Interrupt asserted
  *  0b1..Clear the flag
  */
 #define ADC_WTISR_WDG0L(x)                       (((uint32_t)(((uint32_t)(x)) << ADC_WTISR_WDG0L_SHIFT)) & ADC_WTISR_WDG0L_MASK)
@@ -918,8 +918,8 @@ typedef struct {
 #define ADC_WTISR_WDG0H_SHIFT                    (1U)
 /*! WDG0H - Channel 0 Watchdog High Threshold Interrupt
  *  0b0..Interrupt not asserted
- *  0b1..Interrupt asserted
  *  0b0..No effect
+ *  0b1..Interrupt asserted
  *  0b1..Clear the flag
  */
 #define ADC_WTISR_WDG0H(x)                       (((uint32_t)(((uint32_t)(x)) << ADC_WTISR_WDG0H_SHIFT)) & ADC_WTISR_WDG0H_MASK)
@@ -928,8 +928,8 @@ typedef struct {
 #define ADC_WTISR_WDG1L_SHIFT                    (2U)
 /*! WDG1L - Channel 1 Watchdog Low Threshold Interrupt
  *  0b0..Interrupt not asserted
- *  0b1..Interrupt asserted
  *  0b0..No effect
+ *  0b1..Interrupt asserted
  *  0b1..Clear the flag
  */
 #define ADC_WTISR_WDG1L(x)                       (((uint32_t)(((uint32_t)(x)) << ADC_WTISR_WDG1L_SHIFT)) & ADC_WTISR_WDG1L_MASK)
@@ -938,8 +938,8 @@ typedef struct {
 #define ADC_WTISR_WDG1H_SHIFT                    (3U)
 /*! WDG1H - Channel 1 Watchdog High Threshold Interrupt
  *  0b0..Interrupt not asserted
- *  0b1..Interrupt asserted
  *  0b0..No effect
+ *  0b1..Interrupt asserted
  *  0b1..Clear the flag
  */
 #define ADC_WTISR_WDG1H(x)                       (((uint32_t)(((uint32_t)(x)) << ADC_WTISR_WDG1H_SHIFT)) & ADC_WTISR_WDG1H_MASK)
@@ -948,8 +948,8 @@ typedef struct {
 #define ADC_WTISR_WDG2L_SHIFT                    (4U)
 /*! WDG2L - Channel 2 Watchdog Low Threshold Interrupt
  *  0b0..Interrupt not asserted
- *  0b1..Interrupt asserted
  *  0b0..No effect
+ *  0b1..Interrupt asserted
  *  0b1..Clear the flag
  */
 #define ADC_WTISR_WDG2L(x)                       (((uint32_t)(((uint32_t)(x)) << ADC_WTISR_WDG2L_SHIFT)) & ADC_WTISR_WDG2L_MASK)
@@ -958,8 +958,8 @@ typedef struct {
 #define ADC_WTISR_WDG2H_SHIFT                    (5U)
 /*! WDG2H - Channel 2 Watchdog High Threshold Interrupt
  *  0b0..Interrupt not asserted
- *  0b1..Interrupt asserted
  *  0b0..No effect
+ *  0b1..Interrupt asserted
  *  0b1..Clear the flag
  */
 #define ADC_WTISR_WDG2H(x)                       (((uint32_t)(((uint32_t)(x)) << ADC_WTISR_WDG2H_SHIFT)) & ADC_WTISR_WDG2H_MASK)
@@ -968,8 +968,8 @@ typedef struct {
 #define ADC_WTISR_WDG3L_SHIFT                    (6U)
 /*! WDG3L - Channel 3 Watchdog Low Threshold Interrupt
  *  0b0..Interrupt not asserted
- *  0b1..Interrupt asserted
  *  0b0..No effect
+ *  0b1..Interrupt asserted
  *  0b1..Clear the flag
  */
 #define ADC_WTISR_WDG3L(x)                       (((uint32_t)(((uint32_t)(x)) << ADC_WTISR_WDG3L_SHIFT)) & ADC_WTISR_WDG3L_MASK)
@@ -978,8 +978,8 @@ typedef struct {
 #define ADC_WTISR_WDG3H_SHIFT                    (7U)
 /*! WDG3H - Channel 3 Watchdog High Threshold Interrupt
  *  0b0..Interrupt not asserted
- *  0b1..Interrupt asserted
  *  0b0..No effect
+ *  0b1..Interrupt asserted
  *  0b1..Clear the flag
  */
 #define ADC_WTISR_WDG3H(x)                       (((uint32_t)(((uint32_t)(x)) << ADC_WTISR_WDG3H_SHIFT)) & ADC_WTISR_WDG3H_MASK)
@@ -988,8 +988,8 @@ typedef struct {
 #define ADC_WTISR_WDG4L_SHIFT                    (8U)
 /*! WDG4L - Channel 4 Watchdog Low Threshold Interrupt
  *  0b0..Interrupt not asserted
- *  0b1..Interrupt asserted
  *  0b0..No effect
+ *  0b1..Interrupt asserted
  *  0b1..Clear the flag
  */
 #define ADC_WTISR_WDG4L(x)                       (((uint32_t)(((uint32_t)(x)) << ADC_WTISR_WDG4L_SHIFT)) & ADC_WTISR_WDG4L_MASK)
@@ -998,8 +998,8 @@ typedef struct {
 #define ADC_WTISR_WDG4H_SHIFT                    (9U)
 /*! WDG4H - Channel 4 Watchdog High Threshold Interrupt
  *  0b0..Interrupt not asserted
- *  0b1..Interrupt asserted
  *  0b0..No effect
+ *  0b1..Interrupt asserted
  *  0b1..Clear the flag
  */
 #define ADC_WTISR_WDG4H(x)                       (((uint32_t)(((uint32_t)(x)) << ADC_WTISR_WDG4H_SHIFT)) & ADC_WTISR_WDG4H_MASK)
@@ -1008,8 +1008,8 @@ typedef struct {
 #define ADC_WTISR_WDG5L_SHIFT                    (10U)
 /*! WDG5L - Channel 5 Watchdog Low Threshold Interrupt
  *  0b0..Interrupt not asserted
- *  0b1..Interrupt asserted
  *  0b0..No effect
+ *  0b1..Interrupt asserted
  *  0b1..Clear the flag
  */
 #define ADC_WTISR_WDG5L(x)                       (((uint32_t)(((uint32_t)(x)) << ADC_WTISR_WDG5L_SHIFT)) & ADC_WTISR_WDG5L_MASK)
@@ -1018,8 +1018,8 @@ typedef struct {
 #define ADC_WTISR_WDG5H_SHIFT                    (11U)
 /*! WDG5H - Channel 5 Watchdog High Threshold Interrupt
  *  0b0..Interrupt not asserted
- *  0b1..Interrupt asserted
  *  0b0..No effect
+ *  0b1..Interrupt asserted
  *  0b1..Clear the flag
  */
 #define ADC_WTISR_WDG5H(x)                       (((uint32_t)(((uint32_t)(x)) << ADC_WTISR_WDG5H_SHIFT)) & ADC_WTISR_WDG5H_MASK)
@@ -1028,8 +1028,8 @@ typedef struct {
 #define ADC_WTISR_WDG6L_SHIFT                    (12U)
 /*! WDG6L - Channel 6 Watchdog Low Threshold Interrupt
  *  0b0..Interrupt not asserted
- *  0b1..Interrupt asserted
  *  0b0..No effect
+ *  0b1..Interrupt asserted
  *  0b1..Clear the flag
  */
 #define ADC_WTISR_WDG6L(x)                       (((uint32_t)(((uint32_t)(x)) << ADC_WTISR_WDG6L_SHIFT)) & ADC_WTISR_WDG6L_MASK)
@@ -1038,8 +1038,8 @@ typedef struct {
 #define ADC_WTISR_WDG6H_SHIFT                    (13U)
 /*! WDG6H - Channel 6 Watchdog High Threshold Interrupt
  *  0b0..Interrupt not asserted
- *  0b1..Interrupt asserted
  *  0b0..No effect
+ *  0b1..Interrupt asserted
  *  0b1..Clear the flag
  */
 #define ADC_WTISR_WDG6H(x)                       (((uint32_t)(((uint32_t)(x)) << ADC_WTISR_WDG6H_SHIFT)) & ADC_WTISR_WDG6H_MASK)
@@ -1048,8 +1048,8 @@ typedef struct {
 #define ADC_WTISR_WDG7L_SHIFT                    (14U)
 /*! WDG7L - Channel 7 Watchdog Low Threshold Interrupt
  *  0b0..Interrupt not asserted
- *  0b1..Interrupt asserted
  *  0b0..No effect
+ *  0b1..Interrupt asserted
  *  0b1..Clear the flag
  */
 #define ADC_WTISR_WDG7L(x)                       (((uint32_t)(((uint32_t)(x)) << ADC_WTISR_WDG7L_SHIFT)) & ADC_WTISR_WDG7L_MASK)
@@ -1058,8 +1058,8 @@ typedef struct {
 #define ADC_WTISR_WDG7H_SHIFT                    (15U)
 /*! WDG7H - Channel 7 Watchdog High Threshold Interrupt
  *  0b0..Interrupt not asserted
- *  0b1..Interrupt asserted
  *  0b0..No effect
+ *  0b1..Interrupt asserted
  *  0b1..Clear the flag
  */
 #define ADC_WTISR_WDG7H(x)                       (((uint32_t)(((uint32_t)(x)) << ADC_WTISR_WDG7H_SHIFT)) & ADC_WTISR_WDG7H_MASK)
@@ -2243,8 +2243,8 @@ typedef struct {
 #define ADC_AWORR0_AWOR_CH0_SHIFT                (0U)
 /*! AWOR_CH0 - Analog Watchdog Out of Range for Channel 0
  *  0b0..Converted data is in range
- *  0b1..Converted data is out of range
  *  0b0..No effect
+ *  0b1..Converted data is out of range
  *  0b1..Clear the flag
  */
 #define ADC_AWORR0_AWOR_CH0(x)                   (((uint32_t)(((uint32_t)(x)) << ADC_AWORR0_AWOR_CH0_SHIFT)) & ADC_AWORR0_AWOR_CH0_MASK)
@@ -2253,8 +2253,8 @@ typedef struct {
 #define ADC_AWORR0_AWOR_CH1_SHIFT                (1U)
 /*! AWOR_CH1 - Analog Watchdog Out of Range for Channel 1
  *  0b0..Converted data is in range
- *  0b1..Converted data is out of range
  *  0b0..No effect
+ *  0b1..Converted data is out of range
  *  0b1..Clear the flag
  */
 #define ADC_AWORR0_AWOR_CH1(x)                   (((uint32_t)(((uint32_t)(x)) << ADC_AWORR0_AWOR_CH1_SHIFT)) & ADC_AWORR0_AWOR_CH1_MASK)
@@ -2263,8 +2263,8 @@ typedef struct {
 #define ADC_AWORR0_AWOR_CH2_SHIFT                (2U)
 /*! AWOR_CH2 - Analog Watchdog Out of Range for Channel 2
  *  0b0..Converted data is in range
- *  0b1..Converted data is out of range
  *  0b0..No effect
+ *  0b1..Converted data is out of range
  *  0b1..Clear the flag
  */
 #define ADC_AWORR0_AWOR_CH2(x)                   (((uint32_t)(((uint32_t)(x)) << ADC_AWORR0_AWOR_CH2_SHIFT)) & ADC_AWORR0_AWOR_CH2_MASK)
@@ -2273,8 +2273,8 @@ typedef struct {
 #define ADC_AWORR0_AWOR_CH3_SHIFT                (3U)
 /*! AWOR_CH3 - Analog Watchdog Out of Range for Channel 3
  *  0b0..Converted data is in range
- *  0b1..Converted data is out of range
  *  0b0..No effect
+ *  0b1..Converted data is out of range
  *  0b1..Clear the flag
  */
 #define ADC_AWORR0_AWOR_CH3(x)                   (((uint32_t)(((uint32_t)(x)) << ADC_AWORR0_AWOR_CH3_SHIFT)) & ADC_AWORR0_AWOR_CH3_MASK)
@@ -2283,8 +2283,8 @@ typedef struct {
 #define ADC_AWORR0_AWOR_CH4_SHIFT                (4U)
 /*! AWOR_CH4 - Analog Watchdog Out of Range for Channel 4
  *  0b0..Converted data is in range
- *  0b1..Converted data is out of range
  *  0b0..No effect
+ *  0b1..Converted data is out of range
  *  0b1..Clear the flag
  */
 #define ADC_AWORR0_AWOR_CH4(x)                   (((uint32_t)(((uint32_t)(x)) << ADC_AWORR0_AWOR_CH4_SHIFT)) & ADC_AWORR0_AWOR_CH4_MASK)
@@ -2293,8 +2293,8 @@ typedef struct {
 #define ADC_AWORR0_AWOR_CH5_SHIFT                (5U)
 /*! AWOR_CH5 - Analog Watchdog Out of Range for Channel 5
  *  0b0..Converted data is in range
- *  0b1..Converted data is out of range
  *  0b0..No effect
+ *  0b1..Converted data is out of range
  *  0b1..Clear the flag
  */
 #define ADC_AWORR0_AWOR_CH5(x)                   (((uint32_t)(((uint32_t)(x)) << ADC_AWORR0_AWOR_CH5_SHIFT)) & ADC_AWORR0_AWOR_CH5_MASK)
@@ -2303,8 +2303,8 @@ typedef struct {
 #define ADC_AWORR0_AWOR_CH6_SHIFT                (6U)
 /*! AWOR_CH6 - Analog Watchdog Out of Range for Channel 6
  *  0b0..Converted data is in range
- *  0b1..Converted data is out of range
  *  0b0..No effect
+ *  0b1..Converted data is out of range
  *  0b1..Clear the flag
  */
 #define ADC_AWORR0_AWOR_CH6(x)                   (((uint32_t)(((uint32_t)(x)) << ADC_AWORR0_AWOR_CH6_SHIFT)) & ADC_AWORR0_AWOR_CH6_MASK)
@@ -2313,8 +2313,8 @@ typedef struct {
 #define ADC_AWORR0_AWOR_CH7_SHIFT                (7U)
 /*! AWOR_CH7 - Analog Watchdog Out of Range for Channel 7
  *  0b0..Converted data is in range
- *  0b1..Converted data is out of range
  *  0b0..No effect
+ *  0b1..Converted data is out of range
  *  0b1..Clear the flag
  */
 #define ADC_AWORR0_AWOR_CH7(x)                   (((uint32_t)(((uint32_t)(x)) << ADC_AWORR0_AWOR_CH7_SHIFT)) & ADC_AWORR0_AWOR_CH7_MASK)
@@ -2327,8 +2327,8 @@ typedef struct {
 #define ADC_AWORR1_AWOR_CH32_SHIFT               (0U)
 /*! AWOR_CH32 - Analog Watchdog Out of Range for Channel 32
  *  0b0..Converted data is in range
- *  0b1..Converted data is out of range
  *  0b0..No effect
+ *  0b1..Converted data is out of range
  *  0b1..Clear the flag
  */
 #define ADC_AWORR1_AWOR_CH32(x)                  (((uint32_t)(((uint32_t)(x)) << ADC_AWORR1_AWOR_CH32_SHIFT)) & ADC_AWORR1_AWOR_CH32_MASK)
@@ -2337,8 +2337,8 @@ typedef struct {
 #define ADC_AWORR1_AWOR_CH33_SHIFT               (1U)
 /*! AWOR_CH33 - Analog Watchdog Out of Range for Channel 33
  *  0b0..Converted data is in range
- *  0b1..Converted data is out of range
  *  0b0..No effect
+ *  0b1..Converted data is out of range
  *  0b1..Clear the flag
  */
 #define ADC_AWORR1_AWOR_CH33(x)                  (((uint32_t)(((uint32_t)(x)) << ADC_AWORR1_AWOR_CH33_SHIFT)) & ADC_AWORR1_AWOR_CH33_MASK)
@@ -2347,8 +2347,8 @@ typedef struct {
 #define ADC_AWORR1_AWOR_CH34_SHIFT               (2U)
 /*! AWOR_CH34 - Analog Watchdog Out of Range for Channel 34
  *  0b0..Converted data is in range
- *  0b1..Converted data is out of range
  *  0b0..No effect
+ *  0b1..Converted data is out of range
  *  0b1..Clear the flag
  */
 #define ADC_AWORR1_AWOR_CH34(x)                  (((uint32_t)(((uint32_t)(x)) << ADC_AWORR1_AWOR_CH34_SHIFT)) & ADC_AWORR1_AWOR_CH34_MASK)
@@ -2357,8 +2357,8 @@ typedef struct {
 #define ADC_AWORR1_AWOR_CH35_SHIFT               (3U)
 /*! AWOR_CH35 - Analog Watchdog Out of Range for Channel 35
  *  0b0..Converted data is in range
- *  0b1..Converted data is out of range
  *  0b0..No effect
+ *  0b1..Converted data is out of range
  *  0b1..Clear the flag
  */
 #define ADC_AWORR1_AWOR_CH35(x)                  (((uint32_t)(((uint32_t)(x)) << ADC_AWORR1_AWOR_CH35_SHIFT)) & ADC_AWORR1_AWOR_CH35_MASK)
@@ -2367,8 +2367,8 @@ typedef struct {
 #define ADC_AWORR1_AWOR_CH36_SHIFT               (4U)
 /*! AWOR_CH36 - Analog Watchdog Out of Range for Channel 36
  *  0b0..Converted data is in range
- *  0b1..Converted data is out of range
  *  0b0..No effect
+ *  0b1..Converted data is out of range
  *  0b1..Clear the flag
  */
 #define ADC_AWORR1_AWOR_CH36(x)                  (((uint32_t)(((uint32_t)(x)) << ADC_AWORR1_AWOR_CH36_SHIFT)) & ADC_AWORR1_AWOR_CH36_MASK)
@@ -2377,8 +2377,8 @@ typedef struct {
 #define ADC_AWORR1_AWOR_CH37_SHIFT               (5U)
 /*! AWOR_CH37 - Analog Watchdog Out of Range for Channel 37
  *  0b0..Converted data is in range
- *  0b1..Converted data is out of range
  *  0b0..No effect
+ *  0b1..Converted data is out of range
  *  0b1..Clear the flag
  */
 #define ADC_AWORR1_AWOR_CH37(x)                  (((uint32_t)(((uint32_t)(x)) << ADC_AWORR1_AWOR_CH37_SHIFT)) & ADC_AWORR1_AWOR_CH37_MASK)
@@ -2387,8 +2387,8 @@ typedef struct {
 #define ADC_AWORR1_AWOR_CH38_SHIFT               (6U)
 /*! AWOR_CH38 - Analog Watchdog Out of Range for Channel 38
  *  0b0..Converted data is in range
- *  0b1..Converted data is out of range
  *  0b0..No effect
+ *  0b1..Converted data is out of range
  *  0b1..Clear the flag
  */
 #define ADC_AWORR1_AWOR_CH38(x)                  (((uint32_t)(((uint32_t)(x)) << ADC_AWORR1_AWOR_CH38_SHIFT)) & ADC_AWORR1_AWOR_CH38_MASK)
@@ -2397,8 +2397,8 @@ typedef struct {
 #define ADC_AWORR1_AWOR_CH39_SHIFT               (7U)
 /*! AWOR_CH39 - Analog Watchdog Out of Range for Channel 39
  *  0b0..Converted data is in range
- *  0b1..Converted data is out of range
  *  0b0..No effect
+ *  0b1..Converted data is out of range
  *  0b1..Clear the flag
  */
 #define ADC_AWORR1_AWOR_CH39(x)                  (((uint32_t)(((uint32_t)(x)) << ADC_AWORR1_AWOR_CH39_SHIFT)) & ADC_AWORR1_AWOR_CH39_MASK)
@@ -2593,8 +2593,8 @@ typedef struct {
 #define ADC_STSR1_ERR_S0_SHIFT                   (11U)
 /*! ERR_S0 - Algorithm S0 Error
  *  0b0..No VREF error
- *  0b1..VREF error occurred
  *  0b0..No effect
+ *  0b1..VREF error occurred
  *  0b1..Clear the flag
  */
 #define ADC_STSR1_ERR_S0(x)                      (((uint32_t)(((uint32_t)(x)) << ADC_STSR1_ERR_S0_SHIFT)) & ADC_STSR1_ERR_S0_MASK)
@@ -2603,8 +2603,8 @@ typedef struct {
 #define ADC_STSR1_ERR_S1_SHIFT                   (12U)
 /*! ERR_S1 - Algorithm S1 Error
  *  0b0..No VDD ERROR
- *  0b1..VDD ERROR occurred
  *  0b0..No effect
+ *  0b1..VDD ERROR occurred
  *  0b1..Clear the flag
  */
 #define ADC_STSR1_ERR_S1(x)                      (((uint32_t)(((uint32_t)(x)) << ADC_STSR1_ERR_S1_SHIFT)) & ADC_STSR1_ERR_S1_MASK)
@@ -2613,8 +2613,8 @@ typedef struct {
 #define ADC_STSR1_ERR_S2_SHIFT                   (13U)
 /*! ERR_S2 - Algorithm S2 Error
  *  0b0..No error occurred on the sampled signal
- *  0b1..Error occurred on the sampled signal
  *  0b0..No effect
+ *  0b1..Error occurred on the sampled signal
  *  0b1..Clear the flag
  */
 #define ADC_STSR1_ERR_S2(x)                      (((uint32_t)(((uint32_t)(x)) << ADC_STSR1_ERR_S2_SHIFT)) & ADC_STSR1_ERR_S2_MASK)
@@ -2623,8 +2623,8 @@ typedef struct {
 #define ADC_STSR1_ERR_C_SHIFT                    (15U)
 /*! ERR_C - Algorithm C Error
  *  0b0..No Algorithm C error
- *  0b1..Algorithm C error occurred
  *  0b0..No effect
+ *  0b1..Algorithm C error occurred
  *  0b1..Clear the flag
  */
 #define ADC_STSR1_ERR_C(x)                       (((uint32_t)(((uint32_t)(x)) << ADC_STSR1_ERR_C_SHIFT)) & ADC_STSR1_ERR_C_MASK)
@@ -2633,8 +2633,8 @@ typedef struct {
 #define ADC_STSR1_WDG_EOA_S_SHIFT                (16U)
 /*! WDG_EOA_S - Watchdog End of Algorithm S
  *  0b0..Self-test end of Algorithm S conversion is not complete.
- *  0b1..Self-test end of Algorithm S conversion is complete.
  *  0b0..No effect
+ *  0b1..Self-test end of Algorithm S conversion is complete.
  *  0b1..Clear the flag
  */
 #define ADC_STSR1_WDG_EOA_S(x)                   (((uint32_t)(((uint32_t)(x)) << ADC_STSR1_WDG_EOA_S_SHIFT)) & ADC_STSR1_WDG_EOA_S_MASK)
@@ -2643,8 +2643,8 @@ typedef struct {
 #define ADC_STSR1_WDG_EOA_C_SHIFT                (18U)
 /*! WDG_EOA_C - Watchdog End of Algorithm C
  *  0b0..Self-test end of Algorithm C conversion is not complete
- *  0b1..Self-test end of Algorithm C conversion is complete
  *  0b0..No effect
+ *  0b1..Self-test end of Algorithm C conversion is complete
  *  0b1..Clear the flag
  */
 #define ADC_STSR1_WDG_EOA_C(x)                   (((uint32_t)(((uint32_t)(x)) << ADC_STSR1_WDG_EOA_C_SHIFT)) & ADC_STSR1_WDG_EOA_C_MASK)
@@ -2653,8 +2653,8 @@ typedef struct {
 #define ADC_STSR1_ST_EOC_SHIFT                   (23U)
 /*! ST_EOC - Self-Test EOC
  *  0b0..Self-test end of conversion is not complete
- *  0b1..Self-test end of conversion is complete
  *  0b0..No effect
+ *  0b1..Self-test end of conversion is complete
  *  0b1..Clear the flag
  */
 #define ADC_STSR1_ST_EOC(x)                      (((uint32_t)(((uint32_t)(x)) << ADC_STSR1_ST_EOC_SHIFT)) & ADC_STSR1_ST_EOC_MASK)
@@ -2663,8 +2663,8 @@ typedef struct {
 #define ADC_STSR1_OVERWR_SHIFT                   (24U)
 /*! OVERWR - Overwrite Error
  *  0b0..No overwrite error
- *  0b1..Overwrite error occurred
  *  0b0..No effect
+ *  0b1..Overwrite error occurred
  *  0b1..Clear the flag
  */
 #define ADC_STSR1_OVERWR(x)                      (((uint32_t)(((uint32_t)(x)) << ADC_STSR1_OVERWR_SHIFT)) & ADC_STSR1_OVERWR_MASK)
@@ -2673,8 +2673,8 @@ typedef struct {
 #define ADC_STSR1_WDTERR_SHIFT                   (25U)
 /*! WDTERR - Watchdog Timer Error
  *  0b0..No failure
- *  0b1..Failure occurred
  *  0b0..No effect
+ *  0b1..Failure occurred
  *  0b1..Clear the flag
  */
 #define ADC_STSR1_WDTERR(x)                      (((uint32_t)(((uint32_t)(x)) << ADC_STSR1_WDTERR_SHIFT)) & ADC_STSR1_WDTERR_MASK)
@@ -2683,8 +2683,8 @@ typedef struct {
 #define ADC_STSR1_WDSERR_SHIFT                   (27U)
 /*! WDSERR - Watchdog Sequence Errors
  *  0b0..No failure
- *  0b1..Failure occurred
  *  0b0..No effect
+ *  0b1..Failure occurred
  *  0b1..Clear the flag
  */
 #define ADC_STSR1_WDSERR(x)                      (((uint32_t)(((uint32_t)(x)) << ADC_STSR1_WDSERR_SHIFT)) & ADC_STSR1_WDSERR_MASK)
@@ -3056,5 +3056,5 @@ typedef struct {
  */ /* end of group Peripheral_access_layer */
 
 
-#endif  /* ADC_H_ */
+#endif  /* PERI_ADC_H_ */
 

@@ -66,13 +66,13 @@
 **                          MIMX9352XVVXM_cm33
 **
 **     Version:             rev. 1.0, 2021-11-16
-**     Build:               b240711
+**     Build:               b250331
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for FLEXIO
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -86,7 +86,7 @@
 */
 
 /*!
- * @file FLEXIO.h
+ * @file PERI_FLEXIO.h
  * @version 1.0
  * @date 2021-11-16
  * @brief CMSIS Peripheral Access Layer for FLEXIO
@@ -94,8 +94,8 @@
  * CMSIS Peripheral Access Layer for FLEXIO
  */
 
-#if !defined(FLEXIO_H_)
-#define FLEXIO_H_                                /**< Symbol preventing repeated inclusion */
+#if !defined(PERI_FLEXIO_H_)
+#define PERI_FLEXIO_H_                           /**< Symbol preventing repeated inclusion */
 
 #if (defined(CPU_MIMX9301CVVXD_ca55) || defined(CPU_MIMX9301DVVXD_ca55))
 #include "MIMX9301_ca55_COMMON.h"
@@ -224,10 +224,10 @@ typedef struct {
   __IO uint32_t PINFEN;                            /**< Pin Falling Edge Enable, offset: 0x5C */
   __IO uint32_t PINOUTD;                           /**< Pin Output Data, offset: 0x60 */
   __IO uint32_t PINOUTE;                           /**< Pin Output Enable, offset: 0x64 */
-  __O  uint32_t PINOUTDIS;                         /**< Pin Output Disable, offset: 0x68 */
-  __O  uint32_t PINOUTCLR;                         /**< Pin Output Clear, offset: 0x6C */
-  __O  uint32_t PINOUTSET;                         /**< Pin Output Set, offset: 0x70 */
-  __O  uint32_t PINOUTTOG;                         /**< Pin Output Toggle, offset: 0x74 */
+  __IO uint32_t PINOUTDIS;                         /**< Pin Output Disable, offset: 0x68 */
+  __IO uint32_t PINOUTCLR;                         /**< Pin Output Clear, offset: 0x6C */
+  __IO uint32_t PINOUTSET;                         /**< Pin Output Set, offset: 0x70 */
+  __IO uint32_t PINOUTTOG;                         /**< Pin Output Toggle, offset: 0x74 */
        uint8_t RESERVED_5[8];
   __IO uint32_t SHIFTCTL[FLEXIO_SHIFTCTL_COUNT];   /**< Shifter Control N, array offset: 0x80, array step: 0x4 */
        uint8_t RESERVED_6[96];
@@ -970,5 +970,5 @@ typedef struct {
  */ /* end of group Peripheral_access_layer */
 
 
-#endif  /* FLEXIO_H_ */
+#endif  /* PERI_FLEXIO_H_ */
 

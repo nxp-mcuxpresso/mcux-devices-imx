@@ -22,13 +22,13 @@
 **                          MIMX8MQ7DVAJZ_cm4
 **
 **     Version:             rev. 4.0, 2018-01-26
-**     Build:               b240708
+**     Build:               b250410
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for ECSPI
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -48,7 +48,7 @@
 */
 
 /*!
- * @file ECSPI.h
+ * @file PERI_ECSPI.h
  * @version 4.0
  * @date 2018-01-26
  * @brief CMSIS Peripheral Access Layer for ECSPI
@@ -56,8 +56,8 @@
  * CMSIS Peripheral Access Layer for ECSPI
  */
 
-#if !defined(ECSPI_H_)
-#define ECSPI_H_                                 /**< Symbol preventing repeated inclusion */
+#if !defined(PERI_ECSPI_H_)
+#define PERI_ECSPI_H_                            /**< Symbol preventing repeated inclusion */
 
 #if (defined(CPU_MIMX8MD6CVAHZ_ca53) || defined(CPU_MIMX8MD6DVAJZ_ca53))
 #include "MIMX8MD6_ca53_COMMON.h"
@@ -287,11 +287,11 @@ typedef struct {
 #define ECSPI_CONFIGREG_SS_CTL_SHIFT             (8U)
 /*! SS_CTL
  *  0b0000..In master mode - only one SPI burst will be transmitted.
- *  0b0001..In master mode - Negate Chip Select (SS) signal between SPI bursts. Multiple SPI bursts will be
- *          transmitted. The SPI transfer will automatically stop when the TXFIFO is empty.
  *  0b0000..In slave mode - an SPI burst is completed when the number of bits received in the shift register is
  *          equal to (BURST LENGTH + 1). Only the n least-significant bits (n = BURST LENGTH[4:0] + 1) of the first
  *          received word are valid. All bits subsequent to the first received word in RXFIFO are valid.
+ *  0b0001..In master mode - Negate Chip Select (SS) signal between SPI bursts. Multiple SPI bursts will be
+ *          transmitted. The SPI transfer will automatically stop when the TXFIFO is empty.
  *  0b0001..Reserved
  */
 #define ECSPI_CONFIGREG_SS_CTL(x)                (((uint32_t)(((uint32_t)(x)) << ECSPI_CONFIGREG_SS_CTL_SHIFT)) & ECSPI_CONFIGREG_SS_CTL_MASK)
@@ -472,8 +472,8 @@ typedef struct {
 #define ECSPI_STATREG_RDR_SHIFT                  (4U)
 /*! RDR
  *  0b0..When RXTDE is set - Number of data entries in the RXFIFO is not greater than RX_THRESHOLD.
- *  0b1..When RXTDE is set - Number of data entries in the RXFIFO is greater than RX_THRESHOLD or a DMA TAIL DMA condition exists.
  *  0b0..When RXTDE is clear - Number of data entries in the RXFIFO is not greater than RX_THRESHOLD.
+ *  0b1..When RXTDE is set - Number of data entries in the RXFIFO is greater than RX_THRESHOLD or a DMA TAIL DMA condition exists.
  *  0b1..When RXTDE is clear - Number of data entries in the RXFIFO is greater than RX_THRESHOLD.
  */
 #define ECSPI_STATREG_RDR(x)                     (((uint32_t)(((uint32_t)(x)) << ECSPI_STATREG_RDR_SHIFT)) & ECSPI_STATREG_RDR_MASK)
@@ -591,5 +591,5 @@ typedef struct {
  */ /* end of group Peripheral_access_layer */
 
 
-#endif  /* ECSPI_H_ */
+#endif  /* PERI_ECSPI_H_ */
 

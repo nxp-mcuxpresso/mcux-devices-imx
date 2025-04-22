@@ -66,13 +66,13 @@
 **                          MIMX9352XVVXM_cm33
 **
 **     Version:             rev. 1.0, 2021-11-16
-**     Build:               b240711
+**     Build:               b250331
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for OCRAM_MECC
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -86,7 +86,7 @@
 */
 
 /*!
- * @file OCRAM_MECC.h
+ * @file PERI_OCRAM_MECC.h
  * @version 1.0
  * @date 2021-11-16
  * @brief CMSIS Peripheral Access Layer for OCRAM_MECC
@@ -94,8 +94,8 @@
  * CMSIS Peripheral Access Layer for OCRAM_MECC
  */
 
-#if !defined(OCRAM_MECC_H_)
-#define OCRAM_MECC_H_                            /**< Symbol preventing repeated inclusion */
+#if !defined(PERI_OCRAM_MECC_H_)
+#define PERI_OCRAM_MECC_H_                       /**< Symbol preventing repeated inclusion */
 
 #if (defined(CPU_MIMX9301CVVXD_ca55) || defined(CPU_MIMX9301DVVXD_ca55))
 #include "MIMX9301_ca55_COMMON.h"
@@ -3641,5 +3641,5 @@ typedef struct {
  */ /* end of group Peripheral_access_layer */
 
 
-#endif  /* OCRAM_MECC_H_ */
+#endif  /* PERI_OCRAM_MECC_H_ */
 

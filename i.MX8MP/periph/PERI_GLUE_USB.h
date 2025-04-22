@@ -34,7 +34,7 @@
 **                          MIMX8ML8DVNLZ_dsp
 **
 **     Version:             rev. 5.0, 2021-03-01
-**     Build:               b250115
+**     Build:               b250331
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for GLUE_USB
@@ -62,7 +62,7 @@
 */
 
 /*!
- * @file GLUE_USB.h
+ * @file PERI_GLUE_USB.h
  * @version 5.0
  * @date 2021-03-01
  * @brief CMSIS Peripheral Access Layer for GLUE_USB
@@ -70,8 +70,8 @@
  * CMSIS Peripheral Access Layer for GLUE_USB
  */
 
-#if !defined(GLUE_USB_H_)
-#define GLUE_USB_H_                              /**< Symbol preventing repeated inclusion */
+#if !defined(PERI_GLUE_USB_H_)
+#define PERI_GLUE_USB_H_                         /**< Symbol preventing repeated inclusion */
 
 #if (defined(CPU_MIMX8ML2CVNKZ_ca53) || defined(CPU_MIMX8ML2DVNLZ_ca53))
 #include "MIMX8ML2_ca53_COMMON.h"
@@ -651,5 +651,5 @@ typedef struct {
  */ /* end of group Peripheral_access_layer */
 
 
-#endif  /* GLUE_USB_H_ */
+#endif  /* PERI_GLUE_USB_H_ */
 

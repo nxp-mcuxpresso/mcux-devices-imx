@@ -4,11 +4,11 @@
 /*            MIMX8UD5_cm33                                                  */
 /*  @version: 5.0                                                            */
 /*  @date:    2023-4-27                                                      */
-/*  @build:   b230607                                                        */
+/*  @build:   b250331                                                        */
 /* ------------------------------------------------------------------------- */
 /*                                                                           */
 /* Copyright 1997-2016 Freescale Semiconductor, Inc.                         */
-/* Copyright 2016-2023 NXP                                                   */
+/* Copyright 2016-2025 NXP                                                   */
 /* SPDX-License-Identifier: BSD-3-Clause                                     */
 /*****************************************************************************/
 /* Version: GCC for ARM Embedded Processors                                  */

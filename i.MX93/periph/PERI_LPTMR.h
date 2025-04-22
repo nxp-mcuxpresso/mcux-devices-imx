@@ -66,13 +66,13 @@
 **                          MIMX9352XVVXM_cm33
 **
 **     Version:             rev. 1.0, 2021-11-16
-**     Build:               b240711
+**     Build:               b250331
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for LPTMR
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -86,7 +86,7 @@
 */
 
 /*!
- * @file LPTMR.h
+ * @file PERI_LPTMR.h
  * @version 1.0
  * @date 2021-11-16
  * @brief CMSIS Peripheral Access Layer for LPTMR
@@ -94,8 +94,8 @@
  * CMSIS Peripheral Access Layer for LPTMR
  */
 
-#if !defined(LPTMR_H_)
-#define LPTMR_H_                                 /**< Symbol preventing repeated inclusion */
+#if !defined(PERI_LPTMR_H_)
+#define PERI_LPTMR_H_                            /**< Symbol preventing repeated inclusion */
 
 #if (defined(CPU_MIMX9301CVVXD_ca55) || defined(CPU_MIMX9301DVVXD_ca55))
 #include "MIMX9301_ca55_COMMON.h"
@@ -362,5 +362,5 @@ typedef struct {
  */ /* end of group Peripheral_access_layer */
 
 
-#endif  /* LPTMR_H_ */
+#endif  /* PERI_LPTMR_H_ */
 
