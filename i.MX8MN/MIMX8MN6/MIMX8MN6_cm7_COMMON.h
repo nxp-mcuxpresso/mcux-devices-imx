@@ -232,7 +232,9 @@ typedef enum IRQn {
 #include "core_cm7.h"                  /* Core Peripheral Access Layer */
 #include "system_MIMX8MN6_cm7.h"       /* Device specific configuration file */
 
+#ifndef MIMX8MN6_cm7_SERIES
 #define MIMX8MN6_cm7_SERIES
+#endif
 /* CPU specific feature definitions */
 #include "MIMX8MN6_cm7_features.h"
 
@@ -996,4 +998,3 @@ typedef enum IRQn {
 
 
 #endif  /* MIMX8MN6_CM7_COMMON_H_ */
-

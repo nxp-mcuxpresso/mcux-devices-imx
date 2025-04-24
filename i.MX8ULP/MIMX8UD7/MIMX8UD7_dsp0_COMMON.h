@@ -139,7 +139,9 @@ typedef enum IRQn {
  */ /* end of group Interrupt_vector_numbers */
 
 
+#ifndef MIMX8UD7_dsp0_SERIES
 #define MIMX8UD7_dsp0_SERIES
+#endif
 /* CPU specific feature definitions */
 #include "MIMX8UD7_dsp0_features.h"
 
@@ -1212,4 +1214,3 @@ typedef enum IRQn {
 
 
 #endif  /* MIMX8UD7_DSP0_COMMON_H_ */
-
