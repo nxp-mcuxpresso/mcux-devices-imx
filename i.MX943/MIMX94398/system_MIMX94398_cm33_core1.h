@@ -86,6 +86,32 @@ extern "C" {
 
 #define SYSTEM_INIT_MEMORY_REGIONS (1)
 
+#if defined (__ARM_FEATURE_CMSE) && (__ARM_FEATURE_CMSE == 3U)
+/*
+ * SCMI(IOMUXC) API using non-security address, so need to convert
+ * security address to non-security address.
+ * bit28 is flag of security address
+ */
+#define IOMUXC_SECURITY_MASK (0x10000000U)
+#define PINCTRL_BASE         (IOMUXC_BASE & (~IOMUXC_SECURITY_MASK))
+#else
+#define PINCTRL_BASE         (IOMUXC_BASE)
+#endif
+
+#define IOMUXC_PADCTL_BASE   (PINCTRL_BASE + 0x304) /* 0x443c0304 */
+#define IOMUXC_DAISY_BASE (PINCTRL_BASE + 0x608) /* 0x443c0608 */
+
+/* SCMI config */
+#ifndef SCMI_A2P
+#define SCMI_A2P 0U
+#endif
+#ifndef SCMI_NOTIFY
+#define SCMI_NOTIFY 1U
+#endif
+#ifndef SCMI_PRIORITY
+#define SCMI_PRIORITY 2U
+#endif
+
 /**
  * @brief System clock frequency (core clock)
  *
