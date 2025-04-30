@@ -165,7 +165,7 @@
 /* @brief MU has bit CCR0[RSTH] by instance. */
 #define FSL_FEATURE_MU_HAS_RSTH_BY_INSTANCEn(x) (0)
 /* @brief MU has bit CCR0[BOOT]. */
-#define FSL_FEATURE_MU_HAS_BOOT (0)
+#define FSL_FEATURE_MU_HAS_BOOT (1)
 /* @brief MU has bit CCR0[BOOT] by instance. */
 #define FSL_FEATURE_MU_HAS_BOOT_BY_INSTANCEn(x) (0)
 /* @brief MU supports MU reset, CR[MUR]. */

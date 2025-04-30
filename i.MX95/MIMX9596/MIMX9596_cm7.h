@@ -1,17 +1,12 @@
 /*
 ** ###################################################################
-**     Processors:          MIMX9596AVTXN_cm7
-**                          MIMX9596AVYXN_cm7
-**                          MIMX9596AVZXN_cm7
+**     Processors:          MIMX9596AVZXN_cm7
 **                          MIMX9596CVTXN_cm7
-**                          MIMX9596CVYXN_cm7
 **                          MIMX9596CVZXN_cm7
 **                          MIMX9596DVTXN_cm7
-**                          MIMX9596DVYXN_cm7
-**                          MIMX9596DVYXQ_cm7
 **                          MIMX9596DVZXN_cm7
+**                          MIMX9596DVZXQ_cm7
 **                          MIMX9596XVTXN_cm7
-**                          MIMX9596XVYXN_cm7
 **                          MIMX9596XVZXN_cm7
 **
 **     Compilers:           GNU C Compiler
@@ -20,7 +15,7 @@
 **
 **     Reference manual:    iMX95RM rev1 draftM
 **     Version:             rev. 1.0, 2023-01-10
-**     Build:               b250415
+**     Build:               b250427
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for MIMX9596_cm7
