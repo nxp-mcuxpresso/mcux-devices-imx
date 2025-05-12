@@ -75,10 +75,6 @@
 #ifndef _SYSTEM_MIMX94398_cm33_core1_H_
 #define _SYSTEM_MIMX94398_cm33_core1_H_                    /**< Symbol preventing repeated inclusion */
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 #include <stdint.h>
 #include "fsl_device_registers.h"
 
@@ -110,6 +106,63 @@ extern "C" {
 #endif
 #ifndef SCMI_PRIORITY
 #define SCMI_PRIORITY 2U
+#endif
+
+/* MU8_MUA (2*(8-1) = 14) */
+#define SYSTEM_PLATFORM_MU_INST 14
+#define SYSTEM_PLATFORM_MU_IRQ MU8_A_IRQn
+
+/* Logical Machine */
+#define SYSTEM_PLATFORM_LMID_A55 (4U)
+
+/* Doorbell*/
+#define SCMI_DBIR_A2P      0  /* A2P channel */
+#define SCMI_DBIR_NOTIFY   1  /* P2A notify */
+#define SCMI_DBIR_PRIORITY 2U /* P2A priority */
+
+#define SYSTEM_PLATFORM_SMA_ADDR 0
+
+/* BBM(RTC) */
+#define SYSTEM_PLATFORM_RTC_ID 0
+
+/* FUSA */
+#define SYSTEM_PLATFORM_FAULT_ID_FIRST 6U
+#define SYSTEM_PLATFORM_FAULT_MASK     0x1
+#define SYSTEM_PLATFORM_NOTIFY_ENABLE  0x1
+
+/* CPU Id */
+#define SYSTEM_PLATFORM_AP_ID (2U)
+#define SYSTEM_PLATFORM_M33S_ID (8U)
+#define SYSTEM_PLATFORM_M70_ID (1U)
+#define SYSTEM_PLATFORM_M71_ID (7U)
+
+/* Domain id(same with components/power/porting/platform/imx943/hal_power_platform.h) */
+#define SYSTEM_POWER_PLATFORM_MIX_SLICE_IDX_ANA           0U
+#define SYSTEM_POWER_PLATFORM_MIX_SLICE_IDX_AON           1U
+#define SYSTEM_POWER_PLATFORM_MIX_SLICE_IDX_BBSM          2U
+#define SYSTEM_POWER_PLATFORM_MIX_SLICE_IDX_M7_1          3U
+#define SYSTEM_POWER_PLATFORM_MIX_SLICE_IDX_CCMSRCGPC     4U
+#define SYSTEM_POWER_PLATFORM_MIX_SLICE_IDX_A55C0         5U
+#define SYSTEM_POWER_PLATFORM_MIX_SLICE_IDX_A55C1         6U
+#define SYSTEM_POWER_PLATFORM_MIX_SLICE_IDX_A55C2         7U
+#define SYSTEM_POWER_PLATFORM_MIX_SLICE_IDX_A55C3         8U
+#define SYSTEM_POWER_PLATFORM_MIX_SLICE_IDX_A55P          9U
+#define SYSTEM_POWER_PLATFORM_MIX_SLICE_IDX_DDR           10U
+#define SYSTEM_POWER_PLATFORM_MIX_SLICE_IDX_DISPLAY       11U
+#define SYSTEM_POWER_PLATFORM_MIX_SLICE_IDX_M7_0          12U
+#define SYSTEM_POWER_PLATFORM_MIX_SLICE_IDX_HSIO_TOP      13U
+#define SYSTEM_POWER_PLATFORM_MIX_SLICE_IDX_HSIO_WAON     14U
+#define SYSTEM_POWER_PLATFORM_MIX_SLICE_IDX_NETC          15U
+#define SYSTEM_POWER_PLATFORM_MIX_SLICE_IDX_NOC           16U
+#define SYSTEM_POWER_PLATFORM_MIX_SLICE_IDX_NPU           17U
+#define SYSTEM_POWER_PLATFORM_MIX_SLICE_IDX_WAKEUP        18U
+
+#ifndef SYSTEM_PLATFORM_RTC_NOTIFY
+#define SYSTEM_PLATFORM_RTC_NOTIFY 0
+#endif
+
+#ifdef __cplusplus
+extern "C" {
 #endif
 
 /**
@@ -166,6 +219,26 @@ void SystemTimeDelay(uint32_t usec);
  * Init memory regions.
  */
 void SystemInitMemoryRegions(void);
+
+/*!
+ * @brief Initialize MU interface for SM access.
+ */
+void SystemPlatformInit(void);
+
+/*!
+ * @brief Deinitialize MU interface for SM access.
+ */
+void SystemPlatformDeinit(void);
+
+/*!
+ * @brief SM Platform Set System State
+ */
+void SystemPlatformSetSystemState(uint32_t systemState);
+
+/*!
+ * @brief SM Platform Get System State
+ */
+uint32_t SystemPlatformGetSystemState(void);
 
 #ifdef __cplusplus
 }

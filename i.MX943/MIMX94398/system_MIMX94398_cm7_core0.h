@@ -75,10 +75,6 @@
 #ifndef _SYSTEM_MIMX94398_cm7_core0_H_
 #define _SYSTEM_MIMX94398_cm7_core0_H_                    /**< Symbol preventing repeated inclusion */
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 #include <stdint.h>
 #include "fsl_device_registers.h"
 
@@ -98,6 +94,42 @@ extern "C" {
 #endif
 #ifndef SCMI_PRIORITY
 #define SCMI_PRIORITY 2U
+#endif
+
+/* MU5_MUA */
+#define SYSTEM_PLATFORM_MU_INST 8
+#define SYSTEM_PLATFORM_MU_IRQ MU5_A_IRQn
+
+/* Logical Machine */
+#define SYSTEM_PLATFORM_LMID_A55 (4U)
+
+/* Doorbell*/
+#define SCMI_DBIR_A2P      0  /* A2P channel */
+#define SCMI_DBIR_NOTIFY   1  /* P2A notify */
+#define SCMI_DBIR_PRIORITY 2U /* P2A priority */
+
+#define SYSTEM_PLATFORM_SMA_ADDR 0
+
+/* BBM(RTC) */
+#define SYSTEM_PLATFORM_RTC_ID 0
+
+/* FUSA */
+#define SYSTEM_PLATFORM_FAULT_ID_FIRST 6U
+#define SYSTEM_PLATFORM_FAULT_MASK     0x1
+#define SYSTEM_PLATFORM_NOTIFY_ENABLE  0x1
+
+/* CPU Id */
+#define SYSTEM_PLATFORM_AP_ID (2U)
+#define SYSTEM_PLATFORM_M33S_ID (8U)
+#define SYSTEM_PLATFORM_M70_ID (1U)
+#define SYSTEM_PLATFORM_M71_ID (7U)
+
+#ifndef SYSTEM_PLATFORM_RTC_NOTIFY
+#define SYSTEM_PLATFORM_RTC_NOTIFY 0
+#endif
+
+#ifdef __cplusplus
+extern "C" {
 #endif
 
 /**
@@ -154,6 +186,26 @@ void SystemTimeDelay(uint32_t usec);
  * Init memory regions.
  */
 void SystemInitMemoryRegions(void);
+
+/*!
+ * @brief Initialize MU interface for SM access.
+ */
+void SystemPlatformInit(void);
+
+/*!
+ * @brief Deinitialize MU interface for SM access.
+ */
+void SystemPlatformDeinit(void);
+
+/*!
+ * @brief SM Platform Set System State
+ */
+void SystemPlatformSetSystemState(uint32_t systemState);
+
+/*!
+ * @brief SM Platform Get System State
+ */
+uint32_t SystemPlatformGetSystemState(void);
 
 #ifdef __cplusplus
 }
