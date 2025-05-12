@@ -6,12 +6,13 @@
 
 /* Includes */
 
-#include "fsl_ccm.h"
-#include "fsl_cpu.h"
 #include "fsl_power.h"
 #include "fsl_reset.h"
-#include "fsl_src.h"
 #include "fsl_device_registers.h"
+#if CONFIG_DIRECT
+#include "fsl_ccm.h"
+#include "fsl_cpu.h"
+#include "fsl_src.h"
 
 /* Local Defines */
 
@@ -2150,3 +2151,6 @@ bool CPU_ResetVectorGet(uint32_t cpuIdx, uint64_t *vector)
     return rc;
 }
 
+#else
+
+#endif
