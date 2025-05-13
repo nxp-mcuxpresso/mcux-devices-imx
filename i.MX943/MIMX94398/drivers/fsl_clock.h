@@ -384,6 +384,7 @@ typedef enum _clock_ip_name
     kCLOCK_Biss = CLOCK_NUM_SRC + 69, /* clock id for BISS */
     kCLOCK_Buswakeup = CLOCK_NUM_SRC + 70, /* clock id for BUS WAKEUP */
     kCLOCK_Ewm = CLOCK_NUM_SRC + 70, /* clock id for EWM */
+    kCLOCK_Ewm0 = CLOCK_NUM_SRC + 70, /* clock id for EWM */
     kCLOCK_Can2 = CLOCK_NUM_SRC + 71, /* clock id for CAN2 */
     kCLOCK_Can3 = CLOCK_NUM_SRC + 72, /* clock id for CAN3 */
     kCLOCK_Can4 = CLOCK_NUM_SRC + 73, /* clock id for CAN4 */
@@ -1539,6 +1540,52 @@ typedef enum _clock_gate_value
  *! @brief Clock ip name array for GPT.
  */
 #define GPT_CLOCKS                                                \
+    {                                                              \
+        kCLOCK_IpInvalid, kCLOCK_IpInvalid, kCLOCK_IpInvalid, kCLOCK_IpInvalid, kCLOCK_IpInvalid \
+    }
+
+/*
+ *! @brief Clock ip name array for SINC.
+ */
+#define SINC_CLOCKS                                                \
+    {                                                              \
+        kCLOCK_IpInvalid, kCLOCK_IpInvalid, kCLOCK_IpInvalid, kCLOCK_IpInvalid, kCLOCK_IpInvalid \
+    }
+/*
+ *! @brief Clock ip name array for EWM.
+ */
+#define EWM_CLOCKS                                                \
+    {                                                              \
+        kCLOCK_Ewm \
+    }
+
+/*
+ *! @brief Clock ip name array for DCIF.
+ */
+#define DCIF_CLOCKS                                                \
+    {                                                              \
+        kCLOCK_IpInvalid \
+    }
+
+/*
+ *! @brief Clock ip name array for SEMA42.
+ */
+#define SEMA42_CLOCKS                                                \
+    {                                                              \
+        kCLOCK_IpInvalid, kCLOCK_IpInvalid, kCLOCK_IpInvalid \
+    }
+
+/*
+ *! @brief Clock ip name array for EQDC.
+ */
+#define QDC_CLOCKS                                                \
+    {                                                              \
+        kCLOCK_IpInvalid \
+    }
+/*
+ *! @brief Clock ip name array for AOI.
+ */
+#define AOI_CLOCKS                                                \
     {                                                              \
         kCLOCK_IpInvalid, kCLOCK_IpInvalid, kCLOCK_IpInvalid, kCLOCK_IpInvalid, kCLOCK_IpInvalid \
     }
