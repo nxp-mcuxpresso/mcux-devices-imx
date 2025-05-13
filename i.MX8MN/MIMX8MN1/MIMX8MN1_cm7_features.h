@@ -1,7 +1,7 @@
 /*
 ** ###################################################################
 **     Version:             rev. 2.0, 2019-09-23
-**     Build:               b250326
+**     Build:               b250506
 **
 **     Abstract:
 **         Chip specific module features.
@@ -208,6 +208,8 @@
 #define FSL_FEATURE_SAI_HAS_CHANNEL_MODE (1)
 /* @brief Support synchronous with another SAI. */
 #define FSL_FEATURE_SAI_HAS_SYNC_WITH_ANOTHER_SAI (0)
+/* @brief Has Bit Clock Swap option (register bit fields RCR2[BCS]) */
+#define FSL_FEATURE_SAI_HAS_BIT_CLOCK_SWAP (1)
 /* @brief SAI5 AND SAI6 SHARE ONE IRQNUMBER. */
 #define FSL_FEATURE_SAI_SAI5_SAI6_SHARE_IRQ (1)
 
