@@ -1582,6 +1582,7 @@ typedef enum _clock_gate_value
     {                                                              \
         kCLOCK_IpInvalid \
     }
+
 /*
  *! @brief Clock ip name array for AOI.
  */
@@ -1590,6 +1591,13 @@ typedef enum _clock_gate_value
         kCLOCK_IpInvalid, kCLOCK_IpInvalid, kCLOCK_IpInvalid, kCLOCK_IpInvalid, kCLOCK_IpInvalid \
     }
 
+/*
+ *! @brief Clock ip name array for PXP.
+ */
+#define PXP_CLOCKS                                                \
+    {                                                              \
+        kCLOCK_IpInvalid \
+    }
 
 #ifdef CONFIG_DIRECT
 /*******************************************************************************
