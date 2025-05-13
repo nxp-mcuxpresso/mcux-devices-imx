@@ -1419,7 +1419,7 @@ typedef enum _clock_gate_value
 /*! @brief Clock ip name array for EDMA. */
 #define EDMA_CLOCKS                \
     {                              \
-        kCLOCK_Edma1, kCLOCK_Edma2 \
+        kCLOCK_IpInvalid, kCLOCK_IpInvalid, kCLOCK_IpInvalid, kCLOCK_IpInvalid, \
     }
 
 /*! @brief Clock ip name array for ADC. */
@@ -1452,7 +1452,7 @@ typedef enum _clock_gate_value
 /*! @brief Clock ip name array for LPIT. */
 #define LPIT_CLOCKS                                  \
     {                                                \
-        kCLOCK_IpInvalid, kCLOCK_Lpit1, kCLOCK_Lpit2 \
+        kCLOCK_IpInvalid, kCLOCK_IpInvalid, kCLOCK_IpInvalid, kCLOCK_IpInvalid, \
     }
 
 /*! @brief Clock ip name array for LPSPI. */
@@ -1465,31 +1465,25 @@ typedef enum _clock_gate_value
 /*! @brief Clock ip name array for TPM. */
 #define TPM_CLOCKS                                                                    \
     {                                                                                 \
-        kCLOCK_Tpm1, kCLOCK_Tpm2, kCLOCK_Tpm3, kCLOCK_Tpm4, kCLOCK_Tpm5, kCLOCK_Tpm6, \
+        kCLOCK_IpInvalid, kCLOCK_IpInvalid, kCLOCK_Tpm2, kCLOCK_IpInvalid, kCLOCK_Tpm4, kCLOCK_Tpm5, kCLOCK_Tpm6, \
     }
 
 /*! @brief Clock ip name array for FLEXIO. */
 #define FLEXIO_CLOCKS                                    \
     {                                                    \
-        kCLOCK_Flexio1, kCLOCK_Flexio2 \
+        kCLOCK_IpInvalid, kCLOCK_Flexio1, kCLOCK_Flexio2, kCLOCK_Flexio3, kCLOCK_Flexio4, \
     }
 
-/*! @brief Clock ip name array for FLEXSPI. */
-#define FLEXSPI_CLOCKS                    \
+/*! @brief Clock ip name array for XSPI. */
+#define XSPI_CLOCKS                    \
     {                                     \
-        kCLOCK_IpInvalid, kCLOCK_Flexspi1 \
-    }
-
-/*! @brief Clock ip name array for TMU. */
-#define TMU_CLOCKS  \
-    {               \
-        kCLOCK_Tmc, \
+        kCLOCK_IpInvalid, kCLOCK_Xspi1, kCLOCK_Xspi2,  \
     }
 
 /*! @brief Clock ip name array for FLEXCAN. */
 #define FLEXCAN_CLOCKS                              \
     {                                               \
-        kCLOCK_IpInvalid, kCLOCK_Can1, kCLOCK_Can2, \
+        kCLOCK_IpInvalid, kCLOCK_Can1, kCLOCK_Can2, kCLOCK_Can3, kCLOCK_Can4, kCLOCK_Can5, \
     }
 
 /*! @brief Clock ip name array for LPUART. */
@@ -1503,25 +1497,13 @@ typedef enum _clock_gate_value
 /*! @brief Clock ip name array for SAI. */
 #define SAI_CLOCKS                                               \
     {                                                            \
-        kCLOCK_IpInvalid, kCLOCK_Sai1, kCLOCK_Sai2, kCLOCK_Sai3, \
+        kCLOCK_IpInvalid, kCLOCK_Sai1, kCLOCK_Sai2, kCLOCK_Sai3, kCLOCK_Sai4, \
     }
 
 /*! @brief Clock ip name array for PDM. */
 #define PDM_CLOCKS \
     {              \
         kCLOCK_Pdm \
-    }
-
-/*! @brief Clock ip name array for ENET QOS. */
-#define ENETQOS_CLOCKS  \
-    {                   \
-        kCLOCK_Enet_Qos \
-    }
-
-/*! @brief Clock ip name array for ENET. */
-#define ENET_CLOCKS  \
-    {                \
-        kCLOCK_Enet1 \
     }
 
 /*! @brief Clock ip name array for I3C. */
