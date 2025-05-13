@@ -1599,6 +1599,15 @@ typedef enum _clock_gate_value
         kCLOCK_IpInvalid \
     }
 
+/*
+ *! @brief Clock ip name array for QTMR.
+ */
+#define TMR_CLOCKS                                                \
+    {                                                              \
+        kCLOCK_IpInvalid, kCLOCK_IpInvalid, kCLOCK_IpInvalid, kCLOCK_IpInvalid, kCLOCK_IpInvalid, kCLOCK_IpInvalid, kCLOCK_IpInvalid, kCLOCK_IpInvalid \
+    }
+
+
 #ifdef CONFIG_DIRECT
 /*******************************************************************************
  * Clock Root APIs
