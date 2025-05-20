@@ -4,6 +4,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 #include "fsl_clock.h"
+#include "fsl_debug_console.h"
 #ifdef CONFIG_DIRECT
 #include "fsl_fract_pll.h"
 #include "fsl_fro.h"
@@ -1582,7 +1583,10 @@ void CLOCK_EnableClock(clock_ip_name_t clkId)
         return;
     }
     result = SCMI_ClockConfigSet(channel, clockId, attributes, oemConfigVal);
-    while (result != SCMI_ERR_SUCCESS);
+    if (result != SCMI_ERR_SUCCESS)
+    {
+        PRINTF("%s: %d: Failed to enable clock id: %d\r\n", __func__, __LINE__, clockId);
+    }
 }
 
 void CLOCK_DisableClock(clock_ip_name_t clkId)
