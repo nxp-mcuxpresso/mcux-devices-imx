@@ -1741,12 +1741,14 @@ static inline void IOMUXC_SetPinMux(uint32_t muxRegister,
 
     if (muxRegister || inputRegister)
     {
+        int32_t result = SCMI_ERR_SUCCESS;
         uint32_t attributes = SCMI_PINCTRL_SET_ATTR_SELECTOR(SCMI_PINCTRL_SEL_PIN)
             | SCMI_PINCTRL_SET_ATTR_FUNCTION(0U)
             | SCMI_PINCTRL_SET_ATTR_NUM_CONFIGS(numConfigs);
 
-        SCMI_PinctrlSettingsConfigure(SCMI_A2P, (muxRegister - IOMUXC_BASE) / 4U,
+        result = SCMI_PinctrlSettingsConfigure(SCMI_A2P, (muxRegister - IOMUXC_BASE) / 4U,
             0U, attributes, configs);
+        while (result != SCMI_ERR_SUCCESS);
     }
 }
 
@@ -1770,6 +1772,7 @@ static inline void IOMUXC_SetPinConfig(uint32_t muxRegister,
 {
     if (configRegister)
     {
+        int32_t result = SCMI_ERR_SUCCESS;
         uint32_t attributes = SCMI_PINCTRL_SET_ATTR_SELECTOR(SCMI_PINCTRL_SEL_PIN)
             | SCMI_PINCTRL_SET_ATTR_FUNCTION(0U)
             | SCMI_PINCTRL_SET_ATTR_NUM_CONFIGS(1U);
@@ -1777,8 +1780,9 @@ static inline void IOMUXC_SetPinConfig(uint32_t muxRegister,
 
         configs[0].type  = SCMI_PINCTRL_TYPE_CONFIG;
         configs[0].value = configValue;
-        SCMI_PinctrlSettingsConfigure(SCMI_A2P, (configRegister - IOMUXC_PADCTL_BASE) / 4U,
+        result = SCMI_PinctrlSettingsConfigure(SCMI_A2P, (configRegister - IOMUXC_PADCTL_BASE) / 4U,
             0U, attributes, configs);
+        while (result != SCMI_ERR_SUCCESS);
     }
 }
 /*@}*/
