@@ -1851,14 +1851,14 @@ bool CLOCK_SourceSetEnable(uint32_t sourceIdx, bool enable);
  * @param clk : Clock to be enabled.
  * @return  Nothing
  */
-void CLOCK_EnableClock(clock_ip_name_t clkId);
+status_t CLOCK_EnableClock(clock_ip_name_t clkId);
 
 /**
  * @brief Disable the clock for specific IP.
  * @param clk : Clock to be disabled.
  * @return  Nothing
  */
-void CLOCK_DisableClock(clock_ip_name_t clkId);
+status_t CLOCK_DisableClock(clock_ip_name_t clkId);
 
 /**
  * @brief Set rate of the clock for specific IP.

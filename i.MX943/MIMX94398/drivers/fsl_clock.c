@@ -4,7 +4,6 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 #include "fsl_clock.h"
-#include "fsl_debug_console.h"
 #ifdef CONFIG_DIRECT
 #include "fsl_fract_pll.h"
 #include "fsl_fro.h"
@@ -1570,39 +1569,48 @@ bool CLOCK_SourceSetEnable(uint32_t sourceIdx, bool enable)
 }
 
 #else
-void CLOCK_EnableClock(clock_ip_name_t clkId)
+status_t CLOCK_EnableClock(clock_ip_name_t clkId)
 {
     uint32_t channel = SCMI_A2P;
     uint32_t clockId = (uint32_t)clkId;
     uint32_t attributes = SCMI_CLOCK_CONFIG_SET_ENABLE(SCMI_CLOCK_STATE_ENABLE);
     uint32_t oemConfigVal = 0U;
     int32_t result = SCMI_ERR_SUCCESS;
+    status_t status = kStatus_Success;
 
     if (clkId == kCLOCK_IpInvalid)
     {
-        return;
+        return kStatus_InvalidArgument;
     }
     result = SCMI_ClockConfigSet(channel, clockId, attributes, oemConfigVal);
     if (result != SCMI_ERR_SUCCESS)
     {
-        PRINTF("%s: %d: Failed to enable clock id: %d\r\n", __func__, __LINE__, clockId);
+        status = kStatus_Fail;
     }
+
+    return status;
 }
 
-void CLOCK_DisableClock(clock_ip_name_t clkId)
+status_t CLOCK_DisableClock(clock_ip_name_t clkId)
 {
     uint32_t channel = SCMI_A2P;
     uint32_t clockId = (uint32_t)clkId;
     uint32_t attributes = SCMI_CLOCK_CONFIG_SET_ENABLE(SCMI_CLOCK_STATE_DISABLE);
     uint32_t oemConfigVal = 0U;
     int32_t result = SCMI_ERR_SUCCESS;
+    status_t status = kStatus_Success;
 
     if (clkId == kCLOCK_IpInvalid)
     {
-        return;
+        return kStatus_InvalidArgument;
     }
     result = SCMI_ClockConfigSet(channel, clockId, attributes, oemConfigVal);
-    while (result != SCMI_ERR_SUCCESS);
+    if (result != SCMI_ERR_SUCCESS)
+    {
+        status = kStatus_Fail;
+    }
+
+    return status;
 }
 
 status_t CLOCK_SetRate(clk_t *clk)
@@ -1616,7 +1624,7 @@ status_t CLOCK_SetRate(clk_t *clk)
 
     if (clk->clkId == kCLOCK_IpInvalid)
     {
-        return kStatus_Fail;
+        return kStatus_InvalidArgument;
     }
     rate.lower = clk->rate & 0xFFFFFFFF;
     rate.upper = (clk->rate >> 32U) & 0xFFFFFFFF;
@@ -1661,7 +1669,7 @@ status_t CLOCK_SetParent(clk_t *clk)
 
     if (clk->clkId == kCLOCK_IpInvalid || clk->pclkId == kCLOCK_IpInvalid)
     {
-        return kStatus_Fail;
+        return kStatus_InvalidArgument;
     }
 
     result = SCMI_ClockParentSet(channel, clockId, parentId);
