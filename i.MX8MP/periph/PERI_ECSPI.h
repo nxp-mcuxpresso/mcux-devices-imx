@@ -33,8 +33,8 @@
 **                          MIMX8ML8DVNLZ_cm7
 **                          MIMX8ML8DVNLZ_dsp
 **
-**     Version:             rev. 5.0, 2021-03-01
-**     Build:               b250331
+**     Version:             rev. 6.0, 2024-10-29
+**     Build:               b250521
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for ECSPI
@@ -57,14 +57,17 @@
 **         Rev.D Header.
 **     - rev. 5.0 (2021-03-01)
 **         Rev.D Header Final.
+**     - rev. 6.0 (2024-10-29)
+**         Change the device header file from single flat file to multiple files based on peripherals,
+**         each peripheral with dedicated header file located in periphN folder.
 **
 ** ###################################################################
 */
 
 /*!
  * @file PERI_ECSPI.h
- * @version 5.0
- * @date 2021-03-01
+ * @version 6.0
+ * @date 2024-10-29
  * @brief CMSIS Peripheral Access Layer for ECSPI
  *
  * CMSIS Peripheral Access Layer for ECSPI
@@ -499,10 +502,10 @@ typedef struct {
 #define ECSPI_STATREG_RDR_MASK                   (0x10U)
 #define ECSPI_STATREG_RDR_SHIFT                  (4U)
 /*! RDR
- *  0b0..When RXTDE is set - Number of data entries in the RXFIFO is not greater than RX_THRESHOLD.
  *  0b0..When RXTDE is clear - Number of data entries in the RXFIFO is not greater than RX_THRESHOLD.
- *  0b1..When RXTDE is set - Number of data entries in the RXFIFO is greater than RX_THRESHOLD or a DMA TAIL DMA condition exists.
+ *  0b0..When RXTDE is set - Number of data entries in the RXFIFO is not greater than RX_THRESHOLD.
  *  0b1..When RXTDE is clear - Number of data entries in the RXFIFO is greater than RX_THRESHOLD.
+ *  0b1..When RXTDE is set - Number of data entries in the RXFIFO is greater than RX_THRESHOLD or a DMA TAIL DMA condition exists.
  */
 #define ECSPI_STATREG_RDR(x)                     (((uint32_t)(((uint32_t)(x)) << ECSPI_STATREG_RDR_SHIFT)) & ECSPI_STATREG_RDR_MASK)
 

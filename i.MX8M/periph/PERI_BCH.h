@@ -21,8 +21,8 @@
 **                          MIMX8MQ7DVAJZ_ca53
 **                          MIMX8MQ7DVAJZ_cm4
 **
-**     Version:             rev. 4.0, 2018-01-26
-**     Build:               b250410
+**     Version:             rev. 5.0, 2024-10-29
+**     Build:               b250521
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for BCH
@@ -43,14 +43,17 @@
 **         Rev.C Header EAR2
 **     - rev. 4.0 (2018-01-26)
 **         Rev.D Header RFP
+**     - rev. 5.0 (2024-10-29)
+**         Change the device header file from single flat file to multiple files based on peripherals,
+**         each peripheral with dedicated header file located in periphN folder.
 **
 ** ###################################################################
 */
 
 /*!
  * @file PERI_BCH.h
- * @version 4.0
- * @date 2018-01-26
+ * @version 5.0
+ * @date 2024-10-29
  * @brief CMSIS Peripheral Access Layer for BCH
  *
  * CMSIS Peripheral Access Layer for BCH
@@ -2154,8 +2157,8 @@ typedef struct {
 #define BCH_DEBUG0_KES_DEBUG_MODE4K_MASK         (0x2000U)
 #define BCH_DEBUG0_KES_DEBUG_MODE4K_SHIFT        (13U)
 /*! KES_DEBUG_MODE4K
- *  0b1..Mode is set for 4K NAND pages.
  *  0b1..Mode is set for 2K NAND pages.
+ *  0b1..Mode is set for 4K NAND pages.
  */
 #define BCH_DEBUG0_KES_DEBUG_MODE4K(x)           (((uint32_t)(((uint32_t)(x)) << BCH_DEBUG0_KES_DEBUG_MODE4K_SHIFT)) & BCH_DEBUG0_KES_DEBUG_MODE4K_MASK)
 
@@ -2232,8 +2235,8 @@ typedef struct {
 #define BCH_DEBUG0_SET_KES_DEBUG_MODE4K_MASK     (0x2000U)
 #define BCH_DEBUG0_SET_KES_DEBUG_MODE4K_SHIFT    (13U)
 /*! KES_DEBUG_MODE4K
- *  0b1..Mode is set for 4K NAND pages.
  *  0b1..Mode is set for 2K NAND pages.
+ *  0b1..Mode is set for 4K NAND pages.
  */
 #define BCH_DEBUG0_SET_KES_DEBUG_MODE4K(x)       (((uint32_t)(((uint32_t)(x)) << BCH_DEBUG0_SET_KES_DEBUG_MODE4K_SHIFT)) & BCH_DEBUG0_SET_KES_DEBUG_MODE4K_MASK)
 
@@ -2310,8 +2313,8 @@ typedef struct {
 #define BCH_DEBUG0_CLR_KES_DEBUG_MODE4K_MASK     (0x2000U)
 #define BCH_DEBUG0_CLR_KES_DEBUG_MODE4K_SHIFT    (13U)
 /*! KES_DEBUG_MODE4K
- *  0b1..Mode is set for 4K NAND pages.
  *  0b1..Mode is set for 2K NAND pages.
+ *  0b1..Mode is set for 4K NAND pages.
  */
 #define BCH_DEBUG0_CLR_KES_DEBUG_MODE4K(x)       (((uint32_t)(((uint32_t)(x)) << BCH_DEBUG0_CLR_KES_DEBUG_MODE4K_SHIFT)) & BCH_DEBUG0_CLR_KES_DEBUG_MODE4K_MASK)
 
@@ -2388,8 +2391,8 @@ typedef struct {
 #define BCH_DEBUG0_TOG_KES_DEBUG_MODE4K_MASK     (0x2000U)
 #define BCH_DEBUG0_TOG_KES_DEBUG_MODE4K_SHIFT    (13U)
 /*! KES_DEBUG_MODE4K
- *  0b1..Mode is set for 4K NAND pages.
  *  0b1..Mode is set for 2K NAND pages.
+ *  0b1..Mode is set for 4K NAND pages.
  */
 #define BCH_DEBUG0_TOG_KES_DEBUG_MODE4K(x)       (((uint32_t)(((uint32_t)(x)) << BCH_DEBUG0_TOG_KES_DEBUG_MODE4K_SHIFT)) & BCH_DEBUG0_TOG_KES_DEBUG_MODE4K_MASK)
 

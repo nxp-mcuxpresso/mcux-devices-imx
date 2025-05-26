@@ -61,8 +61,8 @@
 **                          MIMX8US5DVP08_dsp0
 **                          MIMX8US5DVP08_dsp1
 **
-**     Version:             rev. 5.0, 2023-04-27
-**     Build:               b250331
+**     Version:             rev. 6.0, 2024-10-29
+**     Build:               b250521
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for LPI2C
@@ -85,14 +85,17 @@
 **         Base on rev B RM
 **     - rev. 5.0 (2023-04-27)
 **         Base on rev D RM
+**     - rev. 6.0 (2024-10-29)
+**         Change the device header file from single flat file to multiple files based on peripherals,
+**         each peripheral with dedicated header file located in periphN folder.
 **
 ** ###################################################################
 */
 
 /*!
  * @file PERI_LPI2C.h
- * @version 5.0
- * @date 2023-04-27
+ * @version 6.0
+ * @date 2024-10-29
  * @brief CMSIS Peripheral Access Layer for LPI2C
  *
  * CMSIS Peripheral Access Layer for LPI2C
@@ -350,8 +353,8 @@ typedef struct {
 /*! EPF - End Packet Flag
  *  0b0..No Stop or repeated Start generated
  *  0b0..No effect
- *  0b1..Stop or repeated Start generated
  *  0b1..Clear the flag
+ *  0b1..Stop or repeated Start generated
  */
 #define LPI2C_MSR_EPF(x)                         (((uint32_t)(((uint32_t)(x)) << LPI2C_MSR_EPF_SHIFT)) & LPI2C_MSR_EPF_MASK)
 
@@ -360,18 +363,18 @@ typedef struct {
 /*! SDF - Stop Detect Flag
  *  0b0..No Stop condition generated
  *  0b0..No effect
- *  0b1..Stop condition generated
  *  0b1..Clear the flag
+ *  0b1..Stop condition generated
  */
 #define LPI2C_MSR_SDF(x)                         (((uint32_t)(((uint32_t)(x)) << LPI2C_MSR_SDF_SHIFT)) & LPI2C_MSR_SDF_MASK)
 
 #define LPI2C_MSR_NDF_MASK                       (0x400U)
 #define LPI2C_MSR_NDF_SHIFT                      (10U)
 /*! NDF - NACK Detect Flag
- *  0b0..No unexpected NACK detected
  *  0b0..No effect
- *  0b1..Unexpected NACK detected
+ *  0b0..No unexpected NACK detected
  *  0b1..Clear the flag
+ *  0b1..Unexpected NACK detected
  */
 #define LPI2C_MSR_NDF(x)                         (((uint32_t)(((uint32_t)(x)) << LPI2C_MSR_NDF_SHIFT)) & LPI2C_MSR_NDF_MASK)
 
@@ -380,8 +383,8 @@ typedef struct {
 /*! ALF - Arbitration Lost Flag
  *  0b0..Controller did not lose arbitration
  *  0b0..No effect
- *  0b1..Controller lost arbitration
  *  0b1..Clear the flag
+ *  0b1..Controller lost arbitration
  */
 #define LPI2C_MSR_ALF(x)                         (((uint32_t)(((uint32_t)(x)) << LPI2C_MSR_ALF_SHIFT)) & LPI2C_MSR_ALF_MASK)
 
@@ -390,18 +393,18 @@ typedef struct {
 /*! FEF - FIFO Error Flag
  *  0b0..No FIFO error
  *  0b0..No effect
- *  0b1..FIFO error
  *  0b1..Clear the flag
+ *  0b1..FIFO error
  */
 #define LPI2C_MSR_FEF(x)                         (((uint32_t)(((uint32_t)(x)) << LPI2C_MSR_FEF_SHIFT)) & LPI2C_MSR_FEF_MASK)
 
 #define LPI2C_MSR_PLTF_MASK                      (0x2000U)
 #define LPI2C_MSR_PLTF_SHIFT                     (13U)
 /*! PLTF - Pin Low Timeout Flag
- *  0b0..Pin low timeout did not occur
  *  0b0..No effect
- *  0b1..Pin low timeout occurred
+ *  0b0..Pin low timeout did not occur
  *  0b1..Clear the flag
+ *  0b1..Pin low timeout occurred
  */
 #define LPI2C_MSR_PLTF(x)                        (((uint32_t)(((uint32_t)(x)) << LPI2C_MSR_PLTF_SHIFT)) & LPI2C_MSR_PLTF_MASK)
 
@@ -410,8 +413,8 @@ typedef struct {
 /*! DMF - Data Match Flag
  *  0b0..Matching data not received
  *  0b0..No effect
- *  0b1..Matching data received
  *  0b1..Clear the flag
+ *  0b1..Matching data received
  */
 #define LPI2C_MSR_DMF(x)                         (((uint32_t)(((uint32_t)(x)) << LPI2C_MSR_DMF_SHIFT)) & LPI2C_MSR_DMF_MASK)
 
@@ -890,10 +893,10 @@ typedef struct {
 #define LPI2C_SSR_RSF_MASK                       (0x100U)
 #define LPI2C_SSR_RSF_SHIFT                      (8U)
 /*! RSF - Repeated Start Flag
- *  0b0..No repeated Start detected
  *  0b0..No effect
- *  0b1..Repeated Start detected
+ *  0b0..No repeated Start detected
  *  0b1..Clear the flag
+ *  0b1..Repeated Start detected
  */
 #define LPI2C_SSR_RSF(x)                         (((uint32_t)(((uint32_t)(x)) << LPI2C_SSR_RSF_SHIFT)) & LPI2C_SSR_RSF_MASK)
 
@@ -902,8 +905,8 @@ typedef struct {
 /*! SDF - Stop Detect Flag
  *  0b0..No Stop detected
  *  0b0..No effect
- *  0b1..Stop detected
  *  0b1..Clear the flag
+ *  0b1..Stop detected
  */
 #define LPI2C_SSR_SDF(x)                         (((uint32_t)(((uint32_t)(x)) << LPI2C_SSR_SDF_SHIFT)) & LPI2C_SSR_SDF_MASK)
 
@@ -922,8 +925,8 @@ typedef struct {
 /*! FEF - FIFO Error Flag
  *  0b0..No FIFO error
  *  0b0..No effect
- *  0b1..FIFO error
  *  0b1..Clear the flag
+ *  0b1..FIFO error
  */
 #define LPI2C_SSR_FEF(x)                         (((uint32_t)(((uint32_t)(x)) << LPI2C_SSR_FEF_SHIFT)) & LPI2C_SSR_FEF_MASK)
 

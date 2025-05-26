@@ -6,8 +6,8 @@
 **
 **     Compiler:            Xtensa Compiler
 **     Reference manual:    IMX8ULPRM, Rev. D, December. 2022
-**     Version:             rev. 5.0, 2023-04-27
-**     Build:               b250331
+**     Version:             rev. 6.0, 2024-10-29
+**     Build:               b250521
 **
 **     Abstract:
 **         Peripheral Access Layer for MIMX8US5_dsp0
@@ -30,14 +30,17 @@
 **         Base on rev B RM
 **     - rev. 5.0 (2023-04-27)
 **         Base on rev D RM
+**     - rev. 6.0 (2024-10-29)
+**         Change the device header file from single flat file to multiple files based on peripherals,
+**         each peripheral with dedicated header file located in periphN folder.
 **
 ** ###################################################################
 */
 
 /*!
  * @file MIMX8US5_dsp0_COMMON.h
- * @version 5.0
- * @date 2023-04-27
+ * @version 6.0
+ * @date 2024-10-29
  * @brief Peripheral Access Layer for MIMX8US5_dsp0
  *
  * Peripheral Access Layer for MIMX8US5_dsp0
@@ -48,7 +51,7 @@
 
 /** Memory map major version (memory maps with equal major version number are
  * compatible) */
-#define MCU_MEM_MAP_VERSION 0x0500U
+#define MCU_MEM_MAP_VERSION 0x0600U
 /** Memory map minor version */
 #define MCU_MEM_MAP_VERSION_MINOR 0x0000U
 
@@ -1204,3 +1207,4 @@ typedef enum IRQn {
 
 
 #endif  /* MIMX8US5_DSP0_COMMON_H_ */
+

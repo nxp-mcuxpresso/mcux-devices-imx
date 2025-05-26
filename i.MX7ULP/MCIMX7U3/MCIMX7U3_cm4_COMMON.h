@@ -8,8 +8,8 @@
 **                          Keil ARM C/C++ Compiler
 **
 **     Reference manual:    IMX7ULPRM, Rev. 0, Nov. 2018
-**     Version:             rev. 7.0, 2018-11-05
-**     Build:               b250410
+**     Version:             rev. 8.0, 2024-10-29
+**     Build:               b250520
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for MCIMX7U3_cm4
@@ -36,14 +36,17 @@
 **         RevB(B0) Header GA
 **     - rev. 7.0 (2018-11-05)
 **         RevA(B1) Header
+**     - rev. 8.0 (2024-10-29)
+**         Change the device header file from single flat file to multiple files based on peripherals,
+**         each peripheral with dedicated header file located in periphN folder.
 **
 ** ###################################################################
 */
 
 /*!
  * @file MCIMX7U3_cm4_COMMON.h
- * @version 7.0
- * @date 2018-11-05
+ * @version 8.0
+ * @date 2024-10-29
  * @brief CMSIS Peripheral Access Layer for MCIMX7U3_cm4
  *
  * CMSIS Peripheral Access Layer for MCIMX7U3_cm4
@@ -54,7 +57,7 @@
 
 /** Memory map major version (memory maps with equal major version number are
  * compatible) */
-#define MCU_MEM_MAP_VERSION 0x0700U
+#define MCU_MEM_MAP_VERSION 0x0800U
 /** Memory map minor version */
 #define MCU_MEM_MAP_VERSION_MINOR 0x0000U
 
@@ -1186,3 +1189,4 @@ typedef enum IRQn {
 
 
 #endif  /* MCIMX7U3_CM4_COMMON_H_ */
+

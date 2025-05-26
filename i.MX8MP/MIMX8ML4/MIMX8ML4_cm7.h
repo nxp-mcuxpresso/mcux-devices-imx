@@ -8,8 +8,8 @@
 **                          Keil ARM C/C++ Compiler
 **
 **     Reference manual:    IMX8MPRM, Rev.D, 12/2020
-**     Version:             rev. 5.0, 2021-03-01
-**     Build:               b250331
+**     Version:             rev. 6.0, 2024-10-29
+**     Build:               b250521
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for MIMX8ML4_cm7
@@ -32,14 +32,17 @@
 **         Rev.D Header.
 **     - rev. 5.0 (2021-03-01)
 **         Rev.D Header Final.
+**     - rev. 6.0 (2024-10-29)
+**         Change the device header file from single flat file to multiple files based on peripherals,
+**         each peripheral with dedicated header file located in periphN folder.
 **
 ** ###################################################################
 */
 
 /*!
  * @file MIMX8ML4_cm7.h
- * @version 5.0
- * @date 2021-03-01
+ * @version 6.0
+ * @date 2024-10-29
  * @brief CMSIS Peripheral Access Layer for MIMX8ML4_cm7
  *
  * CMSIS Peripheral Access Layer for MIMX8ML4_cm7

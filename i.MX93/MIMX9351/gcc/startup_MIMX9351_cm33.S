@@ -2,9 +2,9 @@
 /*  @file:    startup_MIMX9351_cm33.s                                        */
 /*  @purpose: CMSIS Cortex-M33 Core Device Startup File                      */
 /*            MIMX9351_cm33                                                  */
-/*  @version: 1.0                                                            */
-/*  @date:    2021-11-16                                                     */
-/*  @build:   b250331                                                        */
+/*  @version: 2.0                                                            */
+/*  @date:    2024-10-29                                                     */
+/*  @build:   b250521                                                        */
 /* ------------------------------------------------------------------------- */
 /*                                                                           */
 /* Copyright 1997-2016 Freescale Semiconductor, Inc.                         */

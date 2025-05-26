@@ -33,8 +33,8 @@
 **                          MIMX8ML8DVNLZ_cm7
 **                          MIMX8ML8DVNLZ_dsp
 **
-**     Version:             rev. 5.0, 2021-03-01
-**     Build:               b250331
+**     Version:             rev. 6.0, 2024-10-29
+**     Build:               b250521
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for HDMI_TRNG
@@ -57,14 +57,17 @@
 **         Rev.D Header.
 **     - rev. 5.0 (2021-03-01)
 **         Rev.D Header Final.
+**     - rev. 6.0 (2024-10-29)
+**         Change the device header file from single flat file to multiple files based on peripherals,
+**         each peripheral with dedicated header file located in periphN folder.
 **
 ** ###################################################################
 */
 
 /*!
  * @file PERI_HDMI_TRNG.h
- * @version 5.0
- * @date 2021-03-01
+ * @version 6.0
+ * @date 2024-10-29
  * @brief CMSIS Peripheral Access Layer for HDMI_TRNG
  *
  * CMSIS Peripheral Access Layer for HDMI_TRNG
@@ -350,50 +353,50 @@ typedef struct {
 #define HDMI_TRNG_ISTAT_RAND_RDY_MASK            (0x1U)
 #define HDMI_TRNG_ISTAT_RAND_RDY_SHIFT           (0U)
 /*! RAND_RDY - Status and acknowledgment (clearing) of RAND_RDY indicator.
- *  0b0..No unacknowledged RAND_RDY indicator
  *  0b0..NOP
- *  0b1..Unacknowledged RAND_RDY indicator
+ *  0b0..No unacknowledged RAND_RDY indicator
  *  0b1..Acknowledge RAND_RDY indicator
+ *  0b1..Unacknowledged RAND_RDY indicator
  */
 #define HDMI_TRNG_ISTAT_RAND_RDY(x)              (((uint32_t)(((uint32_t)(x)) << HDMI_TRNG_ISTAT_RAND_RDY_SHIFT)) & HDMI_TRNG_ISTAT_RAND_RDY_MASK)
 
 #define HDMI_TRNG_ISTAT_SEED_DONE_MASK           (0x2U)
 #define HDMI_TRNG_ISTAT_SEED_DONE_SHIFT          (1U)
 /*! SEED_DONE - Status and acknowledgment (clearing) of SEED_DONE indicator.
- *  0b0..No unacknowledged SEED_DONE indicator
  *  0b0..NOP
- *  0b1..Unacknowledged SEED_DONE indicator
+ *  0b0..No unacknowledged SEED_DONE indicator
  *  0b1..Acknowledge SEED_DONE indicator
+ *  0b1..Unacknowledged SEED_DONE indicator
  */
 #define HDMI_TRNG_ISTAT_SEED_DONE(x)             (((uint32_t)(((uint32_t)(x)) << HDMI_TRNG_ISTAT_SEED_DONE_SHIFT)) & HDMI_TRNG_ISTAT_SEED_DONE_MASK)
 
 #define HDMI_TRNG_ISTAT_AGE_ALARM_MASK           (0x4U)
 #define HDMI_TRNG_ISTAT_AGE_ALARM_SHIFT          (2U)
 /*! AGE_ALARM - Status and acknowledgment (clearing) of AGE_ALARM indicator.
- *  0b0..No unacknowledged AGE_ALARM indicator
  *  0b0..NOP
- *  0b1..Unacknowledged AGE_ALARM indicator
+ *  0b0..No unacknowledged AGE_ALARM indicator
  *  0b1..Acknowledge AGE_ALARM indicator
+ *  0b1..Unacknowledged AGE_ALARM indicator
  */
 #define HDMI_TRNG_ISTAT_AGE_ALARM(x)             (((uint32_t)(((uint32_t)(x)) << HDMI_TRNG_ISTAT_AGE_ALARM_SHIFT)) & HDMI_TRNG_ISTAT_AGE_ALARM_MASK)
 
 #define HDMI_TRNG_ISTAT_RQST_ALARM_MASK          (0x8U)
 #define HDMI_TRNG_ISTAT_RQST_ALARM_SHIFT         (3U)
 /*! RQST_ALARM - Status and acknowledgment (clearing) of RQST_ALARM indicator.
- *  0b0..No unacknowledged RQST_ALARM indicator
  *  0b0..NOP
- *  0b1..Unacknowledged RQST_ALARM indicator
+ *  0b0..No unacknowledged RQST_ALARM indicator
  *  0b1..Acknowledge RQST_ALARM indicator
+ *  0b1..Unacknowledged RQST_ALARM indicator
  */
 #define HDMI_TRNG_ISTAT_RQST_ALARM(x)            (((uint32_t)(((uint32_t)(x)) << HDMI_TRNG_ISTAT_RQST_ALARM_SHIFT)) & HDMI_TRNG_ISTAT_RQST_ALARM_MASK)
 
 #define HDMI_TRNG_ISTAT_LFSR_LOCKUP_MASK         (0x10U)
 #define HDMI_TRNG_ISTAT_LFSR_LOCKUP_SHIFT        (4U)
 /*! LFSR_LOCKUP - Status and acknowledgment (clearing) of LFSR_LOCKUP indicator.
- *  0b0..No unacknowledged LFSR_LOCKUP indicator
  *  0b0..NOP
- *  0b1..Unacknowledged LFSR_LOCKUP indicator
+ *  0b0..No unacknowledged LFSR_LOCKUP indicator
  *  0b1..Acknowledge LFSR_LOCKUP indicator
+ *  0b1..Unacknowledged LFSR_LOCKUP indicator
  */
 #define HDMI_TRNG_ISTAT_LFSR_LOCKUP(x)           (((uint32_t)(((uint32_t)(x)) << HDMI_TRNG_ISTAT_LFSR_LOCKUP_SHIFT)) & HDMI_TRNG_ISTAT_LFSR_LOCKUP_MASK)
 /*! @} */

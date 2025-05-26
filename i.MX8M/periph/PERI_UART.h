@@ -21,8 +21,8 @@
 **                          MIMX8MQ7DVAJZ_ca53
 **                          MIMX8MQ7DVAJZ_cm4
 **
-**     Version:             rev. 4.0, 2018-01-26
-**     Build:               b250410
+**     Version:             rev. 5.0, 2024-10-29
+**     Build:               b250521
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for UART
@@ -43,14 +43,17 @@
 **         Rev.C Header EAR2
 **     - rev. 4.0 (2018-01-26)
 **         Rev.D Header RFP
+**     - rev. 5.0 (2024-10-29)
+**         Change the device header file from single flat file to multiple files based on peripherals,
+**         each peripheral with dedicated header file located in periphN folder.
 **
 ** ###################################################################
 */
 
 /*!
  * @file PERI_UART.h
- * @version 4.0
- * @date 2018-01-26
+ * @version 5.0
+ * @date 2024-10-29
  * @brief CMSIS Peripheral Access Layer for UART
  *
  * CMSIS Peripheral Access Layer for UART
@@ -482,10 +485,10 @@ typedef struct {
 #define UART_UCR3_INVT_MASK                      (0x2U)
 #define UART_UCR3_INVT_SHIFT                     (1U)
 /*! INVT
- *  0b0..TXD is not inverted
  *  0b0..TXD Active low transmission
- *  0b1..TXD is inverted
+ *  0b0..TXD is not inverted
  *  0b1..TXD Active high transmission
+ *  0b1..TXD is inverted
  */
 #define UART_UCR3_INVT(x)                        (((uint32_t)(((uint32_t)(x)) << UART_UCR3_INVT_SHIFT)) & UART_UCR3_INVT_MASK)
 
@@ -644,10 +647,10 @@ typedef struct {
 #define UART_UCR4_INVR_MASK                      (0x200U)
 #define UART_UCR4_INVR_SHIFT                     (9U)
 /*! INVR
- *  0b0..RXD input is not inverted
  *  0b0..RXD active low detection
- *  0b1..RXD input is inverted
+ *  0b0..RXD input is not inverted
  *  0b1..RXD active high detection
+ *  0b1..RXD input is inverted
  */
 #define UART_UCR4_INVR(x)                        (((uint32_t)(((uint32_t)(x)) << UART_UCR4_INVR_SHIFT)) & UART_UCR4_INVR_MASK)
 

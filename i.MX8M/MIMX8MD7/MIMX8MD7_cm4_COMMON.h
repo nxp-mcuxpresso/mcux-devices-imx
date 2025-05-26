@@ -8,8 +8,8 @@
 **                          Keil ARM C/C++ Compiler
 **
 **     Reference manual:    IMX8MDQLQRM, Rev. 0, Jan. 2018
-**     Version:             rev. 4.0, 2018-01-26
-**     Build:               b250410
+**     Version:             rev. 5.0, 2024-10-29
+**     Build:               b250521
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for MIMX8MD7_cm4
@@ -30,14 +30,17 @@
 **         Rev.C Header EAR2
 **     - rev. 4.0 (2018-01-26)
 **         Rev.D Header RFP
+**     - rev. 5.0 (2024-10-29)
+**         Change the device header file from single flat file to multiple files based on peripherals,
+**         each peripheral with dedicated header file located in periphN folder.
 **
 ** ###################################################################
 */
 
 /*!
  * @file MIMX8MD7_cm4_COMMON.h
- * @version 4.0
- * @date 2018-01-26
+ * @version 5.0
+ * @date 2024-10-29
  * @brief CMSIS Peripheral Access Layer for MIMX8MD7_cm4
  *
  * CMSIS Peripheral Access Layer for MIMX8MD7_cm4
@@ -48,7 +51,7 @@
 
 /** Memory map major version (memory maps with equal major version number are
  * compatible) */
-#define MCU_MEM_MAP_VERSION 0x0400U
+#define MCU_MEM_MAP_VERSION 0x0500U
 /** Memory map minor version */
 #define MCU_MEM_MAP_VERSION_MINOR 0x0000U
 
@@ -1080,3 +1083,4 @@ typedef enum IRQn {
 
 
 #endif  /* MIMX8MD7_CM4_COMMON_H_ */
+

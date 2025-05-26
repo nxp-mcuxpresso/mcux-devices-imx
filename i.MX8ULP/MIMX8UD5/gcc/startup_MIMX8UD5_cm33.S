@@ -2,9 +2,9 @@
 /*  @file:    startup_MIMX8UD5_cm33.s                                        */
 /*  @purpose: CMSIS Cortex-M33 Core Device Startup File                      */
 /*            MIMX8UD5_cm33                                                  */
-/*  @version: 5.0                                                            */
-/*  @date:    2023-4-27                                                      */
-/*  @build:   b250331                                                        */
+/*  @version: 6.0                                                            */
+/*  @date:    2024-10-29                                                     */
+/*  @build:   b250521                                                        */
 /* ------------------------------------------------------------------------- */
 /*                                                                           */
 /* Copyright 1997-2016 Freescale Semiconductor, Inc.                         */

@@ -61,8 +61,8 @@
 **                          MIMX8US5DVP08_dsp0
 **                          MIMX8US5DVP08_dsp1
 **
-**     Version:             rev. 5.0, 2023-04-27
-**     Build:               b250331
+**     Version:             rev. 6.0, 2024-10-29
+**     Build:               b250521
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for LPIT
@@ -85,14 +85,17 @@
 **         Base on rev B RM
 **     - rev. 5.0 (2023-04-27)
 **         Base on rev D RM
+**     - rev. 6.0 (2024-10-29)
+**         Change the device header file from single flat file to multiple files based on peripherals,
+**         each peripheral with dedicated header file located in periphN folder.
 **
 ** ###################################################################
 */
 
 /*!
  * @file PERI_LPIT.h
- * @version 5.0
- * @date 2023-04-27
+ * @version 6.0
+ * @date 2024-10-29
  * @brief CMSIS Peripheral Access Layer for LPIT
  *
  * CMSIS Peripheral Access Layer for LPIT
@@ -290,40 +293,40 @@ typedef struct {
 #define LPIT_MSR_TIF0_MASK                       (0x1U)
 #define LPIT_MSR_TIF0_SHIFT                      (0U)
 /*! TIF0 - Channel 0 Timer Interrupt Flag
- *  0b0..Not timed out
  *  0b0..No effect
- *  0b1..Timed out
+ *  0b0..Not timed out
  *  0b1..Clear the flag
+ *  0b1..Timed out
  */
 #define LPIT_MSR_TIF0(x)                         (((uint32_t)(((uint32_t)(x)) << LPIT_MSR_TIF0_SHIFT)) & LPIT_MSR_TIF0_MASK)
 
 #define LPIT_MSR_TIF1_MASK                       (0x2U)
 #define LPIT_MSR_TIF1_SHIFT                      (1U)
 /*! TIF1 - Channel 1 Timer Interrupt Flag
- *  0b0..Not timed out
  *  0b0..No effect
- *  0b1..Timed out
+ *  0b0..Not timed out
  *  0b1..Clear the flag
+ *  0b1..Timed out
  */
 #define LPIT_MSR_TIF1(x)                         (((uint32_t)(((uint32_t)(x)) << LPIT_MSR_TIF1_SHIFT)) & LPIT_MSR_TIF1_MASK)
 
 #define LPIT_MSR_TIF2_MASK                       (0x4U)
 #define LPIT_MSR_TIF2_SHIFT                      (2U)
 /*! TIF2 - Channel 2 Timer Interrupt Flag
- *  0b0..Not timed out
  *  0b0..No effect
- *  0b1..Timed out
+ *  0b0..Not timed out
  *  0b1..Clear the flag
+ *  0b1..Timed out
  */
 #define LPIT_MSR_TIF2(x)                         (((uint32_t)(((uint32_t)(x)) << LPIT_MSR_TIF2_SHIFT)) & LPIT_MSR_TIF2_MASK)
 
 #define LPIT_MSR_TIF3_MASK                       (0x8U)
 #define LPIT_MSR_TIF3_SHIFT                      (3U)
 /*! TIF3 - Channel 3 Timer Interrupt Flag
- *  0b0..Not timed out
  *  0b0..No effect
- *  0b1..Timed out
+ *  0b0..Not timed out
  *  0b1..Clear the flag
+ *  0b1..Timed out
  */
 #define LPIT_MSR_TIF3(x)                         (((uint32_t)(((uint32_t)(x)) << LPIT_MSR_TIF3_SHIFT)) & LPIT_MSR_TIF3_MASK)
 /*! @} */
