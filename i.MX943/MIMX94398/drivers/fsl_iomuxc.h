@@ -1746,7 +1746,7 @@ static inline void IOMUXC_SetPinMux(uint32_t muxRegister,
             | SCMI_PINCTRL_SET_ATTR_FUNCTION(0U)
             | SCMI_PINCTRL_SET_ATTR_NUM_CONFIGS(numConfigs);
 
-        result = SCMI_PinctrlSettingsConfigure(SCMI_A2P, (muxRegister - IOMUXC_BASE) / 4U,
+        result = SCMI_PinctrlSettingsConfigure(SCMI_A2P, (muxRegister - PINCTRL_BASE) / 4U,
             0U, attributes, configs);
         while (result != SCMI_ERR_SUCCESS);
     }
