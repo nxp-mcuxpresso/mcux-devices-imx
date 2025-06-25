@@ -138,6 +138,12 @@ extern "C" {
 #define SCMI_LMM_POWER_CHANGE_PROCESSED (0)
 #endif
 
+#define SYSTEM_LMID_SM                  (0U)
+#define SYSTEM_LMID_M33S                (1U)
+#define SYSTEM_LMID_M70                 (2U)
+#define SYSTEM_LMID_M71                 (3U)
+#define SYSTEM_LMID_A55                 (4U)
+
 /**
  * @brief System clock frequency (core clock)
  *
