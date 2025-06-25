@@ -186,6 +186,7 @@ void SystemPlatformInit(void)
     /* Configure MU */
     MU_Init(base);
     EnableIRQ(irq);
+    NVIC_SetPriority(irq, SCMI_MU_IRQ_PRIORITY);
     MU_EnableInterrupts(base, kMU_GenInt1InterruptEnable);
     MU_EnableInterrupts(base, kMU_GenInt2InterruptEnable);
 
