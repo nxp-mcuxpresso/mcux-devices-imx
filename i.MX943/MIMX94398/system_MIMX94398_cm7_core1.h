@@ -134,6 +134,10 @@ extern "C" {
 #define SYSTEM_PLATFORM_RTC_NOTIFY 0
 #endif
 
+#ifndef SCMI_LMM_POWER_CHANGE_PROCESSED
+#define SCMI_LMM_POWER_CHANGE_PROCESSED (0)
+#endif
+
 /**
  * @brief System clock frequency (core clock)
  *

@@ -80,6 +80,9 @@
 #include "scmi.h"
 #include "scmi_internal.h"
 #include "smt.h"
+#if SCMI_LMM_POWER_CHANGE_PROCESSED
+#include "app_srtm.h"
+#endif
 
 /* ----------------------------------------------------------------------------
    -- Core clock
@@ -294,7 +297,10 @@ void SystemPlatformHandler(void)
 
                 if (SCMI_LmmEvent(SCMI_NOTIFY, NULL, &eventLm, &notifyFlags) == SCMI_ERR_SUCCESS)
                 {
-                    PRINTF("\nSCMI LMM notification: LM %u, flags=0x%08X\r\n", eventLm, notifyFlags);
+#if SCMI_LMM_POWER_CHANGE_PROCESSED
+                   /* Handle peer acore power changes notification to assure right communication. */
+                   APP_SRTM_HandleLmmPowerChange(eventLm, notifyFlags);
+#endif
                 }
             }
             else if (protocolId == SCMI_PROTOCOL_BBM)
