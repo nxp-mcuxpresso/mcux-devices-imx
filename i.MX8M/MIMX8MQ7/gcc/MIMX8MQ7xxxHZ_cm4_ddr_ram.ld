@@ -28,6 +28,7 @@ STACK_SIZE = DEFINED(__stack_size__) ? __stack_size__ : 0x0400;
 /* Specify the memory areas */
 MEMORY
 {
+  m_stacktop_and_pc     (R)   : ORIGIN = 0x00000000, LENGTH = 0x00000008
   m_interrupts          (RX)  : ORIGIN = 0x80000000, LENGTH = 0x00000240
   m_text                (RX)  : ORIGIN = 0x80000240, LENGTH = 0x001FFDC0
   m_data                (RW)  : ORIGIN = 0x80200000, LENGTH = 0x00200000
@@ -37,6 +38,18 @@ MEMORY
 /* Define output sections */
 SECTIONS
 {
+  /*
+   * The .bin file with .stacktop_and_pc section will be greater than 2GB, so you need convert elf to bin with below command,
+   * e.g.
+   * arm-none-eabi-objcopy -Obinary --remove-section=.stacktop_and_pc rpmsg_lite_str_echo_rtos_remote_cm7.elf rpmsg_lite_str_echo_rtos_remote_cm7.bin
+   */
+  .stacktop_and_pc :
+  {
+    . = ALIGN(4);
+    KEEP(*(.stacktop_and_pc))
+    . = ALIGN(4);
+  } > m_stacktop_and_pc
+
 /* The startup code goes first into internal RAM */
   .interrupts :
   {
