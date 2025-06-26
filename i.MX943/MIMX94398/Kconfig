@@ -31,5 +31,6 @@ config MCUX_HW_DEVICE_MIMX94398
     select MCUX_COMPONENT_driver.clock if MCUX_PRJSEG_module.board.clock
     select MCUX_COMPONENT_component.lpuart_adapter if MCUX_PRJSEG_module.board.console_lite
     select MCUX_COMPONENT_driver.lpuart if MCUX_PRJSEG_module.board.console_lite
+    select MCUX_COMPONENT_component.software_crc_adapter if MCUX_COMPONENT_driver.netc
 
     # component dependency
