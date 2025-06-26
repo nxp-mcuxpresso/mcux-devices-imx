@@ -21,6 +21,8 @@
 ** ###################################################################
 */
 
+define symbol m_stacktop_and_pc_start  = 0x00000000;
+define symbol m_stacktop_and_pc_end    = 0x00000007;
 
 define symbol m_interrupts_start       = 0x77000000;
 define symbol m_interrupts_end         = 0x7700023F;
@@ -47,10 +49,13 @@ if (isdefinedsymbol(__heap_size__)) {
   define symbol __size_heap__          = 0x0400;
 }
 
+define exported symbol __StackTop = m_data_end;
+
 define exported symbol __CACHE_REGION_START   = m_interrupts_start;
 define exported symbol __CACHE_REGION_SIZE    = m_data_end - m_interrupts_start + 1 ;
 
 define memory mem with size = 4G;
+
 define region TEXT_region = mem:[from m_interrupts_start to m_interrupts_end]
                           | mem:[from m_text_start to m_text_end];
 define region DATA_region = mem:[from m_data_start to m_data_end-__size_cstack__];
@@ -66,9 +71,17 @@ define block NCACHE_VAR { section NonCacheable , section NonCacheable.init };
 initialize by copy { readwrite, section .textrw };
 do not initialize  { section .noinit };
 
+/*
+ * The .bin file with .stacktop_and_pc section will be bigger than 2 GB, so please convert .elf/.out with below command,
+ * e.g.
+ * arm-none-eabi-objcopy --remove-section=.stacktop_and_pc rpmsg_lite_str_echo_rtos_remote_cm7.elf rpmsg_lite_str_echo_rtos_remote_cm7_stripped.elf
+ * ielftool --bin rpmsg_lite_str_echo_rtos_remote_cm7_stripped.elf rpmsg_lite_str_echo_rtos_remote_cm7.bin
+ */
+keep{section .stacktop_and_pc};
 keep{section .resource_table};
 
 place at address mem: m_interrupts_start    { readonly section .intvec };
+".stacktop_and_pc": place at address mem: m_stacktop_and_pc_start {section .stacktop_and_pc};
 ".resource_table": place at address mem: m_text_start {section .resource_table};
 place in TEXT_region                        { readonly };
 place in DATA_region                        { block RW };
