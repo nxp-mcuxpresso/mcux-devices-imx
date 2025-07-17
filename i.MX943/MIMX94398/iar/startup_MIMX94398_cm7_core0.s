@@ -2,9 +2,9 @@
 ;  @file:    startup_MIMX94398_cm7_core0.s
 ;  @purpose: CMSIS Cortex-M7 Core Device Startup File
 ;            MIMX94398_cm7_core0
-;  @version: 1.0
-;  @date:    2023-11-1
-;  @build:   b250109
+;  @version: 2.0
+;  @date:    2024-10-29
+;  @build:   b250709
 ; -------------------------------------------------------------------------
 ;
 ; Copyright 1997-2016 Freescale Semiconductor, Inc.
@@ -30,7 +30,7 @@
 
         ;; Forward declaration of sections.
         SECTION CSTACK:DATA:NOROOT(3)
-	SECTION HEAP:DATA:NOROOT(3)
+        SECTION HEAP:DATA:NOROOT(3)
         SECTION RW:DATA:NOROOT(2)
         SECTION QACCESS_CODE_VAR:DATA:NOROOT(3)
         SECTION QACCESS_DATA_VAR:DATA:NOROOT(3)
