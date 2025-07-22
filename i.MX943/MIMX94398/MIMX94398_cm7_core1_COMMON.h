@@ -31,7 +31,7 @@
 **
 **     Reference manual:    iMX943RM rev1 draftK
 **     Version:             rev. 2.0, 2024-10-29
-**     Build:               b250709
+**     Build:               b250721
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for MIMX94398_cm7_core1
@@ -1224,7 +1224,7 @@ typedef enum IRQn {
 
 #ifndef MIMX94398_cm7_core1_SERIES
 #define MIMX94398_cm7_core1_SERIES
-#endif MIMX94398_cm7_core1_SERIES
+#endif
 /* CPU specific feature definitions */
 #include "MIMX94398_cm7_core1_features.h"
 
@@ -5473,9 +5473,9 @@ typedef enum _xbar_output_signal
 /** Peripheral TMR8 base pointer */
 #define TMR8                                     ((TMR_Type *)TMR8_BASE)
 /** Array initializer of TMR peripheral base addresses */
-#define TMR_BASE_ADDRS                           { TMR1_BASE, TMR2_BASE, TMR3_BASE, TMR4_BASE, TMR5_BASE, TMR6_BASE, TMR7_BASE, TMR8_BASE }
+#define TMR_BASE_ADDRS                           { 0u, TMR1_BASE, TMR2_BASE, TMR3_BASE, TMR4_BASE, TMR5_BASE, TMR6_BASE, TMR7_BASE, TMR8_BASE }
 /** Array initializer of TMR peripheral base pointers */
-#define TMR_BASE_PTRS                            { TMR1, TMR2, TMR3, TMR4, TMR5, TMR6, TMR7, TMR8 }
+#define TMR_BASE_PTRS                            { (TMR_Type *)0u, TMR1, TMR2, TMR3, TMR4, TMR5, TMR6, TMR7, TMR8 }
 
 /* TMR_GLOBAL - Peripheral instance base addresses */
 /** Peripheral NETC__ECAM_PCI_EMDIO0_BAR_0__TMR1_GLOBAL base address */

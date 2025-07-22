@@ -31,7 +31,7 @@
 **
 **     Reference manual:    iMX943RM rev1 draftK
 **     Version:             rev. 2.0, 2024-10-29
-**     Build:               b250709
+**     Build:               b250721
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for MIMX94398_cm33_core1
@@ -945,7 +945,7 @@ typedef enum IRQn {
 
 #ifndef MIMX94398_cm33_core1_SERIES
 #define MIMX94398_cm33_core1_SERIES
-#endif MIMX94398_cm33_core1_SERIES
+#endif
 /* CPU specific feature definitions */
 #include "MIMX94398_cm33_core1_features.h"
 
@@ -11202,13 +11202,13 @@ typedef enum _xbar_output_signal
   /** Peripheral TMR8 base pointer */
   #define TMR8_NS                                  ((TMR_Type *)TMR8_BASE_NS)
   /** Array initializer of TMR peripheral base addresses */
-  #define TMR_BASE_ADDRS                           { TMR1_BASE, TMR2_BASE, TMR3_BASE, TMR4_BASE, TMR5_BASE, TMR6_BASE, TMR7_BASE, TMR8_BASE }
+  #define TMR_BASE_ADDRS                           { 0u, TMR1_BASE, TMR2_BASE, TMR3_BASE, TMR4_BASE, TMR5_BASE, TMR6_BASE, TMR7_BASE, TMR8_BASE }
   /** Array initializer of TMR peripheral base pointers */
-  #define TMR_BASE_PTRS                            { TMR1, TMR2, TMR3, TMR4, TMR5, TMR6, TMR7, TMR8 }
+  #define TMR_BASE_PTRS                            { (TMR_Type *)0u, TMR1, TMR2, TMR3, TMR4, TMR5, TMR6, TMR7, TMR8 }
   /** Array initializer of TMR peripheral base addresses */
-  #define TMR_BASE_ADDRS_NS                        { TMR1_BASE_NS, TMR2_BASE_NS, TMR3_BASE_NS, TMR4_BASE_NS, TMR5_BASE_NS, TMR6_BASE_NS, TMR7_BASE_NS, TMR8_BASE_NS }
+  #define TMR_BASE_ADDRS_NS                        { 0u, TMR1_BASE_NS, TMR2_BASE_NS, TMR3_BASE_NS, TMR4_BASE_NS, TMR5_BASE_NS, TMR6_BASE_NS, TMR7_BASE_NS, TMR8_BASE_NS }
   /** Array initializer of TMR peripheral base pointers */
-  #define TMR_BASE_PTRS_NS                         { TMR1_NS, TMR2_NS, TMR3_NS, TMR4_NS, TMR5_NS, TMR6_NS, TMR7_NS, TMR8_NS }
+  #define TMR_BASE_PTRS_NS                         { (TMR_Type *)0u, TMR1_NS, TMR2_NS, TMR3_NS, TMR4_NS, TMR5_NS, TMR6_NS, TMR7_NS, TMR8_NS }
 #else
   /** Peripheral TMR1 base address */
   #define TMR1_BASE                                (0x428D0000u)
@@ -11243,9 +11243,9 @@ typedef enum _xbar_output_signal
   /** Peripheral TMR8 base pointer */
   #define TMR8                                     ((TMR_Type *)TMR8_BASE)
   /** Array initializer of TMR peripheral base addresses */
-  #define TMR_BASE_ADDRS                           { TMR1_BASE, TMR2_BASE, TMR3_BASE, TMR4_BASE, TMR5_BASE, TMR6_BASE, TMR7_BASE, TMR8_BASE }
+  #define TMR_BASE_ADDRS                           { 0u, TMR1_BASE, TMR2_BASE, TMR3_BASE, TMR4_BASE, TMR5_BASE, TMR6_BASE, TMR7_BASE, TMR8_BASE }
   /** Array initializer of TMR peripheral base pointers */
-  #define TMR_BASE_PTRS                            { TMR1, TMR2, TMR3, TMR4, TMR5, TMR6, TMR7, TMR8 }
+  #define TMR_BASE_PTRS                            { (TMR_Type *)0u, TMR1, TMR2, TMR3, TMR4, TMR5, TMR6, TMR7, TMR8 }
 #endif
 
 /* TMR_GLOBAL - Peripheral instance base addresses */

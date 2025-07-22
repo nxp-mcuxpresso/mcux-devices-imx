@@ -31,7 +31,7 @@
 **
 **     Reference manual:    iMX943RM rev1 draftK
 **     Version:             rev. 2.0, 2024-10-29
-**     Build:               b250709
+**     Build:               b250721
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for MIMX94398_cm7_core1

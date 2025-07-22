@@ -1,7 +1,7 @@
 /*
 ** ###################################################################
 **     Version:             rev. 1.0, 2023-11-01
-**     Build:               b250627
+**     Build:               b250707
 **
 **     Abstract:
 **         Chip specific module features.
@@ -74,7 +74,7 @@
 /* @brief I3C availability on the SoC. */
 #define FSL_FEATURE_SOC_I3C_COUNT (2)
 /* @brief I2S availability on the SoC. */
-#define FSL_FEATURE_SOC_I2S_COUNT (3)
+#define FSL_FEATURE_SOC_I2S_COUNT (4)
 /* @brief IOMUXC availability on the SoC. */
 #define FSL_FEATURE_SOC_IOMUXC_COUNT (1)
 /* @brief IOMUXC_GPR availability on the SoC. */
@@ -461,14 +461,14 @@
 #define FSL_FEATURE_I3C_HAS_NO_SCONFIG_IDRAND (1)
 /* @brief Register SCONFIG has HDROK bitfield. */
 #define FSL_FEATURE_I3C_HAS_HDROK (1)
-/* @brief SOC doesn't support slave IBI/MR/HJ. */
-#define FSL_FEATURE_I3C_HAS_NO_SLAVE_IBI_MR_HJ (0)
 /* @brief Has ERRATA_051617. */
 #define FSL_FEATURE_I3C_HAS_ERRATA_051617 (0)
-/* @brief Has ERRATA_052123. */
-#define FSL_FEATURE_I3C_HAS_ERRATA_052123 (0)
+/* @brief SOC does not support slave IBI/MR/HJ */
+#define FSL_FEATURE_I3C_HAS_NO_SLAVE_IBI_MR_HJ (0)
 /* @brief Has ERRATA_052086. */
 #define FSL_FEATURE_I3C_HAS_ERRATA_052086 (0)
+/* @brief Has ERRATA_052123. */
+#define FSL_FEATURE_I3C_HAS_ERRATA_052123 (0)
 /* @brief Has IBI bytes. */
 #define FSL_FEATURE_I3C_HAS_IBI_PAYLOAD_SIZE_OPTIONAL_BYTE (0)
 /* @brief Has SCL delay after START. */
@@ -877,13 +877,15 @@
 /* @brief Receive/transmit FIFO size in item count (register bit fields TCSR[FRDE], TCSR[FRIE], TCSR[FRF], TCR1[TFW], RCSR[FRDE], RCSR[FRIE], RCSR[FRF], RCR1[RFW], registers TFRn, RFRn). */
 #define FSL_FEATURE_SAI_FIFO_COUNTn(x) \
     (((x) == SAI1) ? (32) : \
+    (((x) == SAI2) ? (128) : \
     (((x) == SAI3) ? (128) : \
-    (((x) == SAI4) ? (128) : (-1))))
+    (((x) == SAI4) ? (128) : (-1)))))
 /* @brief Receive/transmit channel number (register bit fields TCR3[TCE], RCR3[RCE], registers TDRn and RDRn). */
 #define FSL_FEATURE_SAI_CHANNEL_COUNTn(x) \
     (((x) == SAI1) ? (2) : \
+    (((x) == SAI2) ? (1) : \
     (((x) == SAI3) ? (1) : \
-    (((x) == SAI4) ? (1) : (-1))))
+    (((x) == SAI4) ? (1) : (-1)))))
 /* @brief Maximum words per frame (register bit fields TCR3[WDFL], TCR4[FRSZ], TMR[TWM], RCR3[WDFL], RCR4[FRSZ], RMR[RWM]). */
 #define FSL_FEATURE_SAI_MAX_WORDS_PER_FRAME (32)
 /* @brief Has support of combining multiple data channel FIFOs into single channel FIFO (register bit fields TCR3[CFR], TCR4[FCOMB], TFR0[WCP], TFR1[WCP], RCR3[CFR], RCR4[FCOMB], RFR0[RCP], RFR1[RCP]). */
