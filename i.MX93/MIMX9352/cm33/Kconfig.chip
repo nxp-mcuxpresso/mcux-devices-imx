@@ -1,0 +1,84 @@
+# Copyright 2025 NXP
+#
+# SPDX-License-Identifier: BSD-3-Clause
+
+# core related
+config MCUX_HW_CORE
+    string
+    default "cm33"
+
+config MCUX_HW_CORE_CM33
+    bool
+    default y
+
+config MCUX_HW_CORE_ID
+    string
+    default "cm33"
+
+config MCUX_HW_CORE_ID_CM33
+    bool
+    default y
+
+config MCUX_HW_DEVICE_CORE
+    string
+    default "MIMX9352_cm33"
+
+config MCUX_HW_FPU
+    string
+    default "SP_FPU"
+
+config MCUX_HW_FPU_TYPE
+    string
+    default "fpv5_sp"
+
+config MCUX_HW_FPV5_SP
+    bool
+    default y
+
+config MCUX_HW_INT_PRIO_BITS
+    int
+    default 3
+
+config MCUX_HW_DSP
+    bool
+    default y
+
+config MCUX_HW_SAU
+    bool
+    default y
+
+config MCUX_HW_SOC_SERIES_MIMX
+    bool
+    default y
+
+config MCUX_HW_SOC_SINGLECORE_DEVICE
+    bool
+    default y
+
+config MCUX_HW_IP_DriverType_XCACHE
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX9352xxxxM
+    select MCUX_COMPONENT_driver.cache_xcache
+
+# For chipmodel generated files
+config MCUX_TOOLCHAIN_LINKER_DEVICE_PREFIX
+    string
+    default "MIMX9352xxxxM" if MCUX_HW_DEVICE_ID_MIMX9352xxxxM
+
+config MCUX_TOOLCHAIN_MCUX_STARTUP
+    string
+    default "mimx9352"
+
+# Toolchain related
+
+config MCUX_TOOLCHAIN_IAR_CPU_IDENTIFIER
+    string
+    default "MIMX9352_M33" if MCUX_HW_DEVICE_ID_MIMX9352xxxxM
+
+config MCUX_TOOLCHAIN_MDK_CPU_IDENTIFIER
+    string
+    default "MIMX9352DVVXM" if MCUX_HW_DEVICE_PART_MIMX9352DVVXM
+    default "MIMX9352AVTXM" if MCUX_HW_DEVICE_PART_MIMX9352AVTXM
+    default "MIMX9352CVVXM" if MCUX_HW_DEVICE_PART_MIMX9352CVVXM
+    default "MIMX9352XVVXM" if MCUX_HW_DEVICE_PART_MIMX9352XVVXM
