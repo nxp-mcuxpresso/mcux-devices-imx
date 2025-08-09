@@ -13,7 +13,14 @@
  *
  * The CPU macro should be declared in the project or makefile.
  */
-#if (defined(CPU_MIMX8MM6CVTKZ_cm4) || defined(CPU_MIMX8MM6DVTLZ_cm4))
+#if (defined(CPU_MIMX8MM6CVTKZ_ca53) || defined(CPU_MIMX8MM6DVTLZ_ca53))
+
+/* CMSIS-style register definitions */
+#include "MIMX8MM6_ca53.h"
+/* CPU specific feature definitions */
+#include "MIMX8MM6_ca53_features.h"
+
+#elif (defined(CPU_MIMX8MM6CVTKZ_cm4) || defined(CPU_MIMX8MM6DVTLZ_cm4))
 
 /* CMSIS-style register definitions */
 #include "MIMX8MM6_cm4.h"
