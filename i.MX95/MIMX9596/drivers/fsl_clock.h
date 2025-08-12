@@ -6,6 +6,8 @@
 
 #ifndef _FSL_CLOCK_H_
 #define _FSL_CLOCK_H_
+
+#include "hal_clock.h"
 #include "fsl_common.h"
 
 /*!
