@@ -511,7 +511,7 @@ typedef enum IRQn {
 
 #ifndef MIMX9596_ca55_SERIES
 #define MIMX9596_ca55_SERIES
-#endif MIMX9596_ca55_SERIES
+#endif
 /* CPU specific feature definitions */
 #include "MIMX9596_ca55_features.h"
 
