@@ -273,10 +273,10 @@ typedef enum IRQn {
  */
 
 #define __CA53_REV                     0x0004    /**< Core revision r0p4 */
-#define __MPU_PRESENT                  0         /**< Defines if an MPU is present or not */
 #define __GIC_PRIO_BITS                5         /**< Number of priority bits implemented in the NVIC */
 #define __Vendor_SysTickConfig         0         /**< Vendor specific implementation of SysTickConfig is defined */
 #define __FPU_PRESENT                  1         /**< Defines if an FPU is present or not */
+#define __FPU_USED                     1         /**< Indicates whether an FPU is used or not */
 #define __MMU_PRESENT                  1         /**< MMU present or not */
 #define __TIM_PRESENT                  1         /**< TIM present or not */
 #define __CACHE_PRESENT                1         /**< CACHE present or not */
