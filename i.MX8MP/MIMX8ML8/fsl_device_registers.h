@@ -15,10 +15,14 @@
  */
 #if (defined(CPU_MIMX8ML8CVNKZ_ca53) || defined(CPU_MIMX8ML8DVNLZ_ca53))
 #include "MIMX8ML8_ca53.h"
+
 #elif (defined(CPU_MIMX8ML8CVNKZ_cm7) || defined(CPU_MIMX8ML8DVNLZ_cm7))
 #include "MIMX8ML8_cm7.h"
+
 #elif (defined(CPU_MIMX8ML8CVNKZ_dsp) || defined(CPU_MIMX8ML8DVNLZ_dsp))
+#define MIMX8ML8_dsp_SERIES
 #include "MIMX8ML8_dsp.h"
+
 #else
   #error "No valid CPU defined!"
 #endif
