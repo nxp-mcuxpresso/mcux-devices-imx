@@ -131,7 +131,7 @@ typedef enum IRQn {
   TPM2_IRQn                    = 62,               /**< Timer PWM module 2 */
   WDOG1_IRQn                   = 63,               /**< Watchdog 1 Interrupt */
   WDOG2_IRQn                   = 64,               /**< Watchdog 2 Interrupt */
-  TRDC_MGR_A _IRQn             = 65,               /**< AONMIX TRDC transfer error interrupt */
+  TRDC_MGR_A_IRQn              = 65,               /**< AONMIX TRDC transfer error interrupt */
   SAI1_IRQn                    = 66,               /**< Serial Audio Interface 1 */
   Reserved67_IRQn              = 67,               /**< AONMIX M33 PS Error */
   Reserved68_IRQn              = 68,               /**< AONMIX M33 TCM Error interrupt */
