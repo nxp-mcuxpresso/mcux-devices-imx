@@ -9,7 +9,7 @@
 **
 **     Reference manual:    MX8MMRM, Rev. 0, 02/2019
 **     Version:             rev. 5.0, 2024-10-29
-**     Build:               b250521
+**     Build:               b250816
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for MIMX8MM2_cm4

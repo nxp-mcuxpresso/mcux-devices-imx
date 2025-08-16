@@ -26,7 +26,7 @@
 **                          MIMX8MM6DVTLZ_cm4
 **
 **     Version:             rev. 5.0, 2024-10-29
-**     Build:               b250521
+**     Build:               b250816
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for MIPI_DSI

@@ -155,13 +155,13 @@
 #define FSL_FEATURE_ENET_INSTANCE_HAS_ADD_1588_TIMER_CHN_INTn(x) (1)
 /* @brief Has threshold for the number of frames in the receive FIFO (register bit field RSEM[STAT_SECTION_EMPTY]). */
 #define FSL_FEATURE_ENET_HAS_RECEIVE_STATUS_THRESHOLD (1)
-/* @brief Has trasfer clock delay (register bit field ECR[TXC_DLY]). */
+/* @brief Has transfer clock delay (register bit field ECR[TXC_DLY]). */
 #define FSL_FEATURE_ENET_HAS_RGMII_TXC_DELAY (0)
 /* @brief Has receive clock delay (register bit field ECR[RXC_DLY]). */
 #define FSL_FEATURE_ENET_HAS_RGMII_RXC_DELAY (0)
 /* @brief PTP Timestamp CAPTURE bit always returns 0 when the capture is not over. */
 #define FSL_FEATURE_ENET_TIMESTAMP_CAPTURE_BIT_INVALID (0)
-/* @brief ENET Has Extra Clock Gate.(RW610). */
+/* @brief ENET Has Extra Clock Gate (RW610). */
 #define FSL_FEATURE_ENET_HAS_EXTRA_CLOCK_GATE (0)
 
 /* GPC module features */

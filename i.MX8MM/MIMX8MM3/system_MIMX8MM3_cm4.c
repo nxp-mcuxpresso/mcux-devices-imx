@@ -9,7 +9,7 @@
 **
 **     Reference manual:    MX8MMRM, Rev. 0, 02/2019
 **     Version:             rev. 5.0, 2024-10-29
-**     Build:               b250521
+**     Build:               b250816
 **
 **     Abstract:
 **         Provides a system configuration function and a global variable that
@@ -42,7 +42,7 @@
 /*!
  * @file MIMX8MM3_cm4
  * @version 1.0
- * @date 210525
+ * @date 160825
  * @brief Device specific configuration file for MIMX8MM3_cm4 (implementation file)
  *
  * Provides a system configuration function and a global variable that contains
