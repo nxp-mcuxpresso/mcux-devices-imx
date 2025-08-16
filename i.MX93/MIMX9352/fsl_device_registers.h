@@ -15,13 +15,17 @@
  */
 #if (defined(CPU_MIMX9352AVTXM_ca55) || defined(CPU_MIMX9352CVVXM_ca55) || defined(CPU_MIMX9352DVVXM_ca55) || defined(CPU_MIMX9352XVVXM_ca55))
 
+#ifndef MIMX9352_ca55_SERIES
 #define MIMX9352_ca55_SERIES
+#endif
 
 #include "MIMX9352_ca55.h"
 
 #elif (defined(CPU_MIMX9352AVTXM_cm33) || defined(CPU_MIMX9352CVVXM_cm33) || defined(CPU_MIMX9352DVVXM_cm33) || defined(CPU_MIMX9352XVVXM_cm33) || defined(CPU_MIMX9352DVUXM_cm33))
 
+#ifndef MIMX9352_cm33_SERIES
 #define MIMX9352_cm33_SERIES
+#endif
 
 /* CMSIS-style register definitions */
 #include "MIMX9352_cm33.h"
