@@ -9,7 +9,7 @@
 **
 **     Reference manual:    IMX8MPRM, Rev.D, 12/2020
 **     Version:             rev. 6.0, 2024-10-29
-**     Build:               b250521
+**     Build:               b250816
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for MIMX8ML8_ca53
@@ -96,7 +96,7 @@ typedef enum IRQn {
   CTI_IRQn                     = 24,               /**< Cortex-A53 Cross trigger interface (CTI) interrupt */
   MAINTENANCE_IRQn             = 25,               /**< Cortex-A53 Virtual CPU Interface Maintenance interrupt */
   HYPERV_TIM_IRQn              = 26,               /**< Cortex-A53 Hypervisor timer interrupt */
-  VIRTUAL_TIM_IRQn             = 27,               /**< Cortex-A53 Virtual timer interrupt */
+  VirtualTimer_IRQn            = 27,               /**< Cortex-A53 Virtual timer interrupt */
   EL2_VIRTUAL_TIM_IRQn         = 28,               /**< Cortex-A53 EL2 Virtual timer interrupt */
   EL3_TIM_IRQn                 = 29,               /**< Cortex-A53 Secure EL3 physical timer */
   EL1_TIM_IRQn                 = 30,               /**< Cortex-A53 Non-secure EL1 physical timer */
@@ -276,7 +276,7 @@ typedef enum IRQn {
 #define __GIC_PRIO_BITS                5         /**< Number of priority bits implemented in the NVIC */
 #define __Vendor_SysTickConfig         0         /**< Vendor specific implementation of SysTickConfig is defined */
 #define __FPU_PRESENT                  1         /**< Defines if an FPU is present or not */
-#define __FPU_USED                     1         /**< Indicates whether an FPU is used or not */
+#define __FPU_USED                     1         /**< FPU used or not */
 #define __MMU_PRESENT                  1         /**< MMU present or not */
 #define __TIM_PRESENT                  1         /**< TIM present or not */
 #define __CACHE_PRESENT                1         /**< CACHE present or not */
@@ -635,12 +635,15 @@ typedef enum IRQn {
 /** Peripheral ENET1 base pointer */
 #define ENET1                                    ((ENET_Type *)ENET1_BASE)
 /** Array initializer of ENET peripheral base addresses */
-#define ENET_BASE_ADDRS                          { ENET1_BASE }
+#define ENET_BASE_ADDRS                          { 0u, ENET1_BASE }
 /** Array initializer of ENET peripheral base pointers */
-#define ENET_BASE_PTRS                           { ENET1 }
+#define ENET_BASE_PTRS                           { (ENET_Type *)0u, ENET1 }
 /** Interrupt vectors for the ENET peripheral type */
-#define ENET_1588_Timer_IRQS                     { ENET1_1588_Timer_IRQn }
-#define ENET_Ts_IRQS                             { ENET1_1588_Timer_IRQn }
+#define ENET_1588_Timer_IRQS                     { NotAvail_IRQn, ENET1_1588_Timer_IRQn }
+#define ENET_Ts_IRQS                             { NotAvail_IRQn, ENET1_1588_Timer_IRQn }
+/* ENET Buffer Descriptor and Buffer Address Alignment. */
+#define ENET_BUFF_ALIGNMENT                      (64U)
+
 
 /* ENET_QOS - Peripheral instance base addresses */
 /** Peripheral ENET_QOS base address */
