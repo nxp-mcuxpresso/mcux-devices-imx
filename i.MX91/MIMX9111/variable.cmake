@@ -8,6 +8,7 @@ mcux_set_variable(device MIMX9111)
 mcux_set_variable(device_root devices)
 mcux_set_variable(soc_series i.MX91)
 mcux_set_variable(soc_periph periph)
+mcux_set_variable(core_id ca55)
 mcux_set_variable(core_id_suffix_name "")
 mcux_set_variable(multicore_foldername .)
 

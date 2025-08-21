@@ -4,7 +4,9 @@
 
 #### device spepcific drivers
 mcux_add_cmakelists(${SdkRootDirPath}/${device_root}/i.MX/i.MX91/${device}/drivers)
-mcux_add_cmakelists(${SdkRootDirPath}/${device_root}/i.MX/i.MX91/${device}/${core_id})
+
+#### device spepcific drivers
+include(${SdkRootDirPath}/devices/arm/device_header_multicore.cmake)
 
 #### i.MX shared drivers/components/middlewares, project segments
 include(${SdkRootDirPath}/devices/i.MX/shared.cmake)
