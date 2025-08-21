@@ -1,12 +1,15 @@
 # Copyright 2025 NXP
 #
 # SPDX-License-Identifier: BSD-3-Clause
-rsource "${core_id}/Kconfig"
 
 rsource "Kconfig.chip"
 rsource "drivers/Kconfig"
 rsource "../../../../devices/arm/Kconfig.common"
 rsource "Kconfig.defconfig"
+
+config MCUX_HW_DEVICE_MIMX9131_CORE_ID_ca55
+    bool
+    default y
 
 ## pinmux dependency
 config MCUX_DEPENDENCY_PINMUX
