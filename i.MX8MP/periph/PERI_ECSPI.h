@@ -34,7 +34,7 @@
 **                          MIMX8ML8DVNLZ_dsp
 **
 **     Version:             rev. 6.0, 2024-10-29
-**     Build:               b250816
+**     Build:               b250821
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for ECSPI

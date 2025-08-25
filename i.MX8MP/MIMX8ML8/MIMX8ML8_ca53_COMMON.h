@@ -9,7 +9,7 @@
 **
 **     Reference manual:    IMX8MPRM, Rev.D, 12/2020
 **     Version:             rev. 6.0, 2024-10-29
-**     Build:               b250816
+**     Build:               b250821
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for MIMX8ML8_ca53
@@ -639,6 +639,9 @@ typedef enum IRQn {
 /** Array initializer of ENET peripheral base pointers */
 #define ENET_BASE_PTRS                           { (ENET_Type *)0u, ENET1 }
 /** Interrupt vectors for the ENET peripheral type */
+#define ENET_Transmit_IRQS                       { NotAvail_IRQn, ENET1_IRQn }
+#define ENET_Receive_IRQS                        { NotAvail_IRQn, ENET1_IRQn }
+#define ENET_Error_IRQS                          { NotAvail_IRQn, ENET1_IRQn }
 #define ENET_1588_Timer_IRQS                     { NotAvail_IRQn, ENET1_1588_Timer_IRQn }
 #define ENET_Ts_IRQS                             { NotAvail_IRQn, ENET1_1588_Timer_IRQn }
 /* ENET Buffer Descriptor and Buffer Address Alignment. */
