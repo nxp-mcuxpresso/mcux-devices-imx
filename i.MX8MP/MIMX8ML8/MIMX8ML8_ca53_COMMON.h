@@ -657,6 +657,8 @@ typedef enum IRQn {
 #define ENET_QOS_BASE_ADDRS                      { ENET_QOS_BASE }
 /** Array initializer of ENET_QOS peripheral base pointers */
 #define ENET_QOS_BASE_PTRS                       { ENET_QOS }
+/** Interrupt vectors for the ENET_QOS peripheral type */
+#define ENET_QOS_IRQS                            { ENET_QOS_IRQn }
 
 /* FLEXSPI - Peripheral instance base addresses */
 /** Peripheral FLEXSPI base address */
