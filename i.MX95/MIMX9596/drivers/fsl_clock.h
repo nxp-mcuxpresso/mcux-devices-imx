@@ -1148,7 +1148,7 @@ typedef enum _clock_gate_value
 /*! @brief Clock ip name array for TPM. */
 #define TPM_CLOCKS                                                                    \
     {                                                                                 \
-        hal_clock_tpm1, hal_clock_tpm2, hal_clock_tpm3, hal_clock_tpm4, hal_clock_tpm5, hal_clock_tpm6, \
+        hal_clock_busaon, hal_clock_tpm2, hal_clock_buswakeup, hal_clock_tpm4, hal_clock_tpm5, hal_clock_tpm6, \
     }
 
 /*! @brief Clock ip name array for FLEXIO. */
