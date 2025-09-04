@@ -202,7 +202,7 @@ config MCUX_HW_IP_DriverType_EDMA4
 
 config MCUX_HW_IP_DriverType_EIM
     bool
-    default y
+    default n
     depends on MCUX_HW_DEVICE_ID_MIMX94398xxxM || MCUX_HW_DEVICE_ID_MIMX94398xxxJ || MCUX_HW_DEVICE_ID_MIMX94398xxxE
 
 config MCUX_HW_IP_DriverType_ENDAT2P2
@@ -222,7 +222,7 @@ config MCUX_HW_IP_DriverType_EQDC
 
 config MCUX_HW_IP_DriverType_ERM
     bool
-    default y
+    default n
     depends on MCUX_HW_DEVICE_ID_MIMX94398xxxM || MCUX_HW_DEVICE_ID_MIMX94398xxxJ || MCUX_HW_DEVICE_ID_MIMX94398xxxE
 
 config MCUX_HW_IP_DriverType_ETHERCAT
@@ -267,7 +267,7 @@ config MCUX_HW_IP_DriverType_HIPERFACE
 
 config MCUX_HW_IP_DriverType_INTM
     bool
-    default y
+    default n
     depends on MCUX_HW_DEVICE_ID_MIMX94398xxxM || MCUX_HW_DEVICE_ID_MIMX94398xxxJ || MCUX_HW_DEVICE_ID_MIMX94398xxxE
 
 config MCUX_HW_IP_DriverType_IRQSTEER_1
@@ -392,7 +392,7 @@ config MCUX_HW_IP_DriverType_SEMA42
 
 config MCUX_HW_IP_DriverType_SFA
     bool
-    default y
+    default n
     depends on MCUX_HW_DEVICE_ID_MIMX94398xxxM || MCUX_HW_DEVICE_ID_MIMX94398xxxJ || MCUX_HW_DEVICE_ID_MIMX94398xxxE
 
 config MCUX_HW_IP_DriverType_SINC
@@ -422,7 +422,7 @@ config MCUX_HW_IP_DriverType_TPM
 
 config MCUX_HW_IP_DriverType_TRDC
     bool
-    default y
+    default n
     depends on MCUX_HW_DEVICE_ID_MIMX94398xxxM || MCUX_HW_DEVICE_ID_MIMX94398xxxJ || MCUX_HW_DEVICE_ID_MIMX94398xxxE
 
 config MCUX_HW_IP_DriverType_TSTMR
@@ -442,12 +442,12 @@ config MCUX_HW_IP_DriverType_XBAR_DSC
 
 config MCUX_HW_IP_DriverType_XCACHE
     bool
-    default y
+    default y if MCUX_HW_CORE_ID_CM33_CORE1
     depends on MCUX_HW_DEVICE_ID_MIMX94398xxxM || MCUX_HW_DEVICE_ID_MIMX94398xxxJ || MCUX_HW_DEVICE_ID_MIMX94398xxxE
 
 config MCUX_HW_IP_DriverType_XSPI
     bool
-    default y
+    default n
     depends on MCUX_HW_DEVICE_ID_MIMX94398xxxM || MCUX_HW_DEVICE_ID_MIMX94398xxxJ || MCUX_HW_DEVICE_ID_MIMX94398xxxE
 
 config MCUX_HW_IP_DriverType_bbsmmix
