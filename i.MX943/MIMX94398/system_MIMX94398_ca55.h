@@ -30,8 +30,8 @@
 **                          Keil ARM C/C++ Compiler
 **
 **     Reference manual:    iMX943RM rev1 draftK
-**     Version:             rev. 1.0, 2023-11-01
-**     Build:               b241210
+**     Version:             rev. 2.0, 2024-10-29
+**     Build:               b250721
 **
 **     Abstract:
 **         Provides a system configuration function and a global variable that
@@ -39,7 +39,7 @@
 **         the oscillator (PLL) that is part of the microcontroller device.
 **
 **     Copyright 2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -68,6 +68,9 @@
 **         +---------------------------------------------------------------------+
 **         | ca55_core3 | a55, ca55, a55_3, ca55_3                               |
 **         +---------------------------------------------------------------------+
+**     - rev. 2.0 (2024-10-29)
+**         Change the device header file from single flat file to multiple files based on peripherals,
+**         each peripheral with dedicated header file located in periphN folder.
 **
 ** ###################################################################
 */
@@ -75,22 +78,23 @@
 /*!
  * @file MIMX94398_ca55
  * @version 1.0
- * @date 2023-11-01
+ * @date 210725
  * @brief Device specific configuration file for MIMX94398_ca55 (header file)
  *
  * Provides a system configuration function and a global variable that contains
  * the system frequency. It configures the device and initializes the oscillator
  * (PLL) that is part of the microcontroller device.
  */
-
 #ifndef _SYSTEM_MIMX94398_ca55_H_
-#define _SYSTEM_MIMX94398_ca55_H_                /**< Symbol preventing repeated inclusion */
+#define _SYSTEM_MIMX94398_ca55_H_                    /**< Symbol preventing repeated inclusion */
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
 #include <stdint.h>
+
+
 
 /* Define clock source values */
 #define DEFAULT_SYSTEM_CLOCK   24000000U /* Default System clock value */
