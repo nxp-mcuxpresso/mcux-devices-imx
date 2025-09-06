@@ -99,6 +99,17 @@ extern "C" {
 /* Define clock source values */
 #define DEFAULT_SYSTEM_CLOCK   24000000U /* Default System clock value */
 
+/* SCMI config */
+#ifndef SCMI_A2P
+#define SCMI_A2P 0U
+#endif
+#ifndef SCMI_NOTIFY
+#define SCMI_NOTIFY 1U
+#endif
+#ifndef SCMI_PRIORITY
+#define SCMI_PRIORITY 2U
+#endif
+
 /**
  * @brief System clock frequency (core clock)
  *
