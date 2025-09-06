@@ -99,6 +99,10 @@ extern "C" {
 /* Define clock source values */
 #define DEFAULT_SYSTEM_CLOCK   24000000U /* Default System clock value */
 
+#define PINCTRL_BASE           (IOMUXC_BASE)
+#define IOMUXC_PADCTL_BASE     (PINCTRL_BASE + 0x304) /* 0x443c0304 */
+#define IOMUXC_DAISY_BASE      (PINCTRL_BASE + 0x608) /* 0x443c0608 */
+
 /* SCMI config */
 #ifndef SCMI_A2P
 #define SCMI_A2P 0U
