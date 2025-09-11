@@ -13,14 +13,12 @@
  *
  * The CPU macro should be declared in the project or makefile.
  */
-#if (defined(CPU_MIMX8MN1CVPIZ_cm7) || defined(CPU_MIMX8MN1CVTIZ_cm7) || defined(CPU_MIMX8MN1DVPIZ_cm7) || \
-    defined(CPU_MIMX8MN1DVTJZ_cm7))
-
-/* CMSIS-style register definitions */
+#if (defined(CPU_MIMX8MN1CVPIZ_ca53) || defined(CPU_MIMX8MN1CVTIZ_ca53) || defined(CPU_MIMX8MN1DVPIZ_ca53) || defined(CPU_MIMX8MN1DVTJZ_ca53))
+#include "MIMX8MN1_ca53.h"
+#elif (defined(CPU_MIMX8MN1CVPIZ_cm7) || defined(CPU_MIMX8MN1CVTIZ_cm7) || defined(CPU_MIMX8MN1DVPIZ_cm7) || defined(CPU_MIMX8MN1DVTJZ_cm7))
 #include "MIMX8MN1_cm7.h"
-
 #else
-    #error "No valid CPU defined!"
+  #error "No valid CPU defined!"
 #endif
 
 #endif /* __FSL_DEVICE_REGISTERS_H__ */
