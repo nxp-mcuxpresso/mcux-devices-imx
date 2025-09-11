@@ -368,11 +368,6 @@ config MCUX_HW_IP_DriverType_STIMER_tmr
     default y
     depends on MCUX_HW_DEVICE_ID_MIMX9594xxxxN
 
-config MCUX_HW_IP_DriverType_TEMPSENSOR
-    bool
-    default y
-    depends on MCUX_HW_DEVICE_ID_MIMX9594xxxxN
-
 config MCUX_HW_IP_DriverType_TPM
     bool
     default y
