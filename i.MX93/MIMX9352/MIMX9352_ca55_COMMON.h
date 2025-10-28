@@ -920,6 +920,8 @@ typedef enum IRQn {
 #define ENET_Error_IRQS                          { ENET_IRQn }
 #define ENET_1588_Timer_IRQS                     { ENET_IRQn }
 #define ENET_Ts_IRQS                             { ENET_IRQn }
+/* ENET Buffer Descriptor and Buffer Address Alignment. */
+#define ENET_BUFF_ALIGNMENT                      (64U)
 
 /* ENET_QOS - Peripheral instance base addresses */
 #if (defined(__ARM_FEATURE_CMSE) && (__ARM_FEATURE_CMSE & 0x2))
