@@ -2,9 +2,9 @@
 /*  @file:    startup_MIMX95N4_cm7.s                                         */
 /*  @purpose: CMSIS Cortex-M7 Core Device Startup File                       */
 /*            MIMX95N4_cm7                                                   */
-/*  @version: 2.0                                                            */
-/*  @date:    2024-10-29                                                     */
-/*  @build:   b250522                                                        */
+/*  @version: 3.0                                                            */
+/*  @date:    2025-11-24                                                     */
+/*  @build:   b251124                                                        */
 /* ------------------------------------------------------------------------- */
 /*                                                                           */
 /* Copyright 1997-2016 Freescale Semiconductor, Inc.                         */
