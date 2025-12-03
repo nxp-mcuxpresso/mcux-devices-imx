@@ -7,7 +7,7 @@
 **     Compiler:            Xtensa Compiler
 **     Reference manual:    IMX8ULPRM, Rev. D, December. 2022
 **     Version:             rev. 6.0, 2024-10-29
-**     Build:               b251112
+**     Build:               b251201
 **
 **     Abstract:
 **         Peripheral Access Layer for MIMX8UD5_dsp0
@@ -813,6 +813,9 @@ typedef enum _mu_core_boot_mode
 #define PDM_BASE_ADDRS                           { PDM_BASE }
 /** Array initializer of PDM peripheral base pointers */
 #define PDM_BASE_PTRS                            { PDM }
+/** Interrupt vectors for the PDM peripheral type */
+#define PDM_HWVAD_Event_IRQS                     { PDM_HWVAD_EVENT_IRQn }
+#define PDM_Event_IRQS                           { PDM_EVENT_IRQn }
 
 /* POWERQUAD - Peripheral instance base addresses */
 /** Peripheral POWERQUAD base address */

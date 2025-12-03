@@ -15,7 +15,7 @@
 **
 **     Reference manual:    iMX95RM rev3
 **     Version:             rev. 3.0, 2025-11-24
-**     Build:               b251124
+**     Build:               b251126
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for MIMX95N4_cm7
@@ -2744,6 +2744,11 @@ typedef enum IRQn {
 #define PDM_BASE_ADDRS                           { PDM_BASE }
 /** Array initializer of PDM peripheral base pointers */
 #define PDM_BASE_PTRS                            { PDM }
+/** Interrupt vectors for the PDM peripheral type */
+#define PDM_HWVAD_Event_IRQS                     { PDM_HWVAD_EVENT_IRQn }
+#define PDM_HWVAD_Error_IRQS                     { PDM_HWVAD_ERROR_IRQn }
+#define PDM_Event_IRQS                           { PDM_EVENT_IRQn }
+#define PDM_Error_IRQS                           { PDM_ERROR_IRQn }
 
 /* PIPE_CONF - Peripheral instance base addresses */
 /** Peripheral CAMERA__ISP__PIPE_CONF base address */

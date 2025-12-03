@@ -10,7 +10,7 @@
 **
 **     Reference manual:    IMX8ULPRM, Rev. D, December. 2022
 **     Version:             rev. 6.0, 2024-10-29
-**     Build:               b251112
+**     Build:               b251201
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for MIMX8US3_cm33
@@ -2306,6 +2306,9 @@ typedef enum _mu_core_boot_mode
   /** Array initializer of PDM peripheral base pointers */
   #define PDM_BASE_PTRS                            { PDM }
 #endif
+/** Interrupt vectors for the PDM peripheral type */
+#define PDM_HWVAD_Event_IRQS                     { PDM_HWVAD_EVENT_IRQn }
+#define PDM_Event_IRQS                           { PDM_EVENT_IRQn }
 
 /* POWERQUAD - Peripheral instance base addresses */
 #if (defined(__ARM_FEATURE_CMSE) && (__ARM_FEATURE_CMSE & 0x2))
