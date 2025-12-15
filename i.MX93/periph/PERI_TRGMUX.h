@@ -64,9 +64,13 @@
 **                          MIMX9352DVVXM_cm33
 **                          MIMX9352XVVXM_ca55
 **                          MIMX9352XVVXM_cm33
+**                          MIMX93W32610GCM_ca55
+**                          MIMX93W32610GCM_cm33
+**                          MIMX93W52610GCM_ca55
+**                          MIMX93W52610GCM_cm33
 **
 **     Version:             rev. 2.0, 2024-10-29
-**     Build:               b250521
+**     Build:               b251202
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for TRGMUX
@@ -140,6 +144,14 @@
 #include "MIMX9352_ca55_COMMON.h"
 #elif (defined(CPU_MIMX9352AVTXM_cm33) || defined(CPU_MIMX9352CVVXM_cm33) || defined(CPU_MIMX9352DVVXM_cm33) || defined(CPU_MIMX9352XVVXM_cm33))
 #include "MIMX9352_cm33_COMMON.h"
+#elif (defined(CPU_MIMX93W32610GCM_ca55))
+#include "MIMX93W32_ca55_COMMON.h"
+#elif (defined(CPU_MIMX93W32610GCM_cm33))
+#include "MIMX93W32_cm33_COMMON.h"
+#elif (defined(CPU_MIMX93W52610GCM_ca55))
+#include "MIMX93W52_ca55_COMMON.h"
+#elif (defined(CPU_MIMX93W52610GCM_cm33))
+#include "MIMX93W52_cm33_COMMON.h"
 #else
   #error "No valid CPU defined!"
 #endif
@@ -184,7 +196,7 @@
 
 /** TRGMUX - Register Layout Typedef */
 typedef struct {
-  __IO uint32_t REG0;                              /**< TRGMUX REG0 Configuration, offset: 0x0 */
+  __IO uint32_t REG0;                              /**< TRGMUX REG0, offset: 0x0 */
 } TRGMUX_Type;
 
 /* ----------------------------------------------------------------------------
@@ -196,7 +208,7 @@ typedef struct {
  * @{
  */
 
-/*! @name REG0 - TRGMUX REG0 Configuration */
+/*! @name REG0 - TRGMUX REG0 */
 /*! @{ */
 
 #define TRGMUX_REG0_SEL0_MASK                    (0xFU)

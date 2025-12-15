@@ -64,9 +64,13 @@
 **                          MIMX9352DVVXM_cm33
 **                          MIMX9352XVVXM_ca55
 **                          MIMX9352XVVXM_cm33
+**                          MIMX93W32610GCM_ca55
+**                          MIMX93W32610GCM_cm33
+**                          MIMX93W52610GCM_ca55
+**                          MIMX93W52610GCM_cm33
 **
 **     Version:             rev. 2.0, 2024-10-29
-**     Build:               b250521
+**     Build:               b251202
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for LPI2C
@@ -140,6 +144,14 @@
 #include "MIMX9352_ca55_COMMON.h"
 #elif (defined(CPU_MIMX9352AVTXM_cm33) || defined(CPU_MIMX9352CVVXM_cm33) || defined(CPU_MIMX9352DVVXM_cm33) || defined(CPU_MIMX9352XVVXM_cm33))
 #include "MIMX9352_cm33_COMMON.h"
+#elif (defined(CPU_MIMX93W32610GCM_ca55))
+#include "MIMX93W32_ca55_COMMON.h"
+#elif (defined(CPU_MIMX93W32610GCM_cm33))
+#include "MIMX93W32_cm33_COMMON.h"
+#elif (defined(CPU_MIMX93W52610GCM_ca55))
+#include "MIMX93W52_ca55_COMMON.h"
+#elif (defined(CPU_MIMX93W52610GCM_cm33))
+#include "MIMX93W52_cm33_COMMON.h"
 #else
   #error "No valid CPU defined!"
 #endif
@@ -1277,16 +1289,16 @@ typedef struct {
 #define LPI2C_SCFGR1_TXCFG_MASK                  (0x400U)
 #define LPI2C_SCFGR1_TXCFG_SHIFT                 (10U)
 /*! TXCFG - Transmit Flag Configuration
- *  0b0..MSR[TDF] is set only during a target-transmit transfer when STDR is empty
- *  0b1..MSR[TDF] is set whenever STDR is empty
+ *  0b0..SSR[TDF] is set only during a target-transmit transfer when STDR is empty
+ *  0b1..SSR[TDF] is set whenever STDR is empty
  */
 #define LPI2C_SCFGR1_TXCFG(x)                    (((uint32_t)(((uint32_t)(x)) << LPI2C_SCFGR1_TXCFG_SHIFT)) & LPI2C_SCFGR1_TXCFG_MASK)
 
 #define LPI2C_SCFGR1_RXCFG_MASK                  (0x800U)
 #define LPI2C_SCFGR1_RXCFG_SHIFT                 (11U)
 /*! RXCFG - Receive Data Configuration
- *  0b0..Return received data, clear MSR[RDF]
- *  0b1..Return SASR and clear SSR[AVF] when SSR[AVF] is set, return received data and clear MSR[RDF] when SSR[AFV] is not set
+ *  0b0..Return received data, clear SSR[RDF]
+ *  0b1..Return SASR and clear SSR[AVF] when SSR[AVF] is set, return received data and clear SSR[RDF] when SSR[AFV] is not set
  */
 #define LPI2C_SCFGR1_RXCFG(x)                    (((uint32_t)(((uint32_t)(x)) << LPI2C_SCFGR1_RXCFG_SHIFT)) & LPI2C_SCFGR1_RXCFG_MASK)
 

@@ -64,9 +64,13 @@
 **                          MIMX9352DVVXM_cm33
 **                          MIMX9352XVVXM_ca55
 **                          MIMX9352XVVXM_cm33
+**                          MIMX93W32610GCM_ca55
+**                          MIMX93W32610GCM_cm33
+**                          MIMX93W52610GCM_ca55
+**                          MIMX93W52610GCM_cm33
 **
 **     Version:             rev. 2.0, 2024-10-29
-**     Build:               b250521
+**     Build:               b251202
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for CCM
@@ -140,6 +144,14 @@
 #include "MIMX9352_ca55_COMMON.h"
 #elif (defined(CPU_MIMX9352AVTXM_cm33) || defined(CPU_MIMX9352CVVXM_cm33) || defined(CPU_MIMX9352DVVXM_cm33) || defined(CPU_MIMX9352XVVXM_cm33))
 #include "MIMX9352_cm33_COMMON.h"
+#elif (defined(CPU_MIMX93W32610GCM_ca55))
+#include "MIMX93W32_ca55_COMMON.h"
+#elif (defined(CPU_MIMX93W32610GCM_cm33))
+#include "MIMX93W32_cm33_COMMON.h"
+#elif (defined(CPU_MIMX93W52610GCM_ca55))
+#include "MIMX93W52_ca55_COMMON.h"
+#elif (defined(CPU_MIMX93W52610GCM_cm33))
+#include "MIMX93W52_cm33_COMMON.h"
 #else
   #error "No valid CPU defined!"
 #endif
@@ -199,7 +211,7 @@ typedef struct {
       __IO uint32_t TOG;                               /**< Clock Root Control Register, offset: 0xC */
     } CLOCK_ROOT_CONTROL;
          uint8_t RESERVED_0[16];
-    __I  uint32_t STATUS0;                           /**< Clock root working status, array offset: 0x20, array step: 0x80 */
+    __IO uint32_t STATUS0;                           /**< Clock root working status, array offset: 0x20, array step: 0x80 */
          uint8_t RESERVED_1[12];
     struct {                                         /* offset: 0x30 */
       __IO uint32_t RW;                                /**< Clock root access control, offset: 0x30 */

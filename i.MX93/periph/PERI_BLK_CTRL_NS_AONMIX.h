@@ -64,9 +64,13 @@
 **                          MIMX9352DVVXM_cm33
 **                          MIMX9352XVVXM_ca55
 **                          MIMX9352XVVXM_cm33
+**                          MIMX93W32610GCM_ca55
+**                          MIMX93W32610GCM_cm33
+**                          MIMX93W52610GCM_ca55
+**                          MIMX93W52610GCM_cm33
 **
 **     Version:             rev. 2.0, 2024-10-29
-**     Build:               b250521
+**     Build:               b251202
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for BLK_CTRL_NS_AONMIX
@@ -140,6 +144,14 @@
 #include "MIMX9352_ca55_COMMON.h"
 #elif (defined(CPU_MIMX9352AVTXM_cm33) || defined(CPU_MIMX9352CVVXM_cm33) || defined(CPU_MIMX9352DVVXM_cm33) || defined(CPU_MIMX9352XVVXM_cm33))
 #include "MIMX9352_cm33_COMMON.h"
+#elif (defined(CPU_MIMX93W32610GCM_ca55))
+#include "MIMX93W32_ca55_COMMON.h"
+#elif (defined(CPU_MIMX93W32610GCM_cm33))
+#include "MIMX93W32_cm33_COMMON.h"
+#elif (defined(CPU_MIMX93W52610GCM_ca55))
+#include "MIMX93W52_ca55_COMMON.h"
+#elif (defined(CPU_MIMX93W52610GCM_cm33))
+#include "MIMX93W52_cm33_COMMON.h"
 #else
   #error "No valid CPU defined!"
 #endif
@@ -237,13 +249,13 @@ typedef struct {
  */
 #define BLK_CTRL_NS_AONMIX_IPG_DEBUG_CA55C0_CAN1(x) (((uint32_t)(((uint32_t)(x)) << BLK_CTRL_NS_AONMIX_IPG_DEBUG_CA55C0_CAN1_SHIFT)) & BLK_CTRL_NS_AONMIX_IPG_DEBUG_CA55C0_CAN1_MASK)
 
-#define BLK_CTRL_NS_AONMIX_IPG_DEBUG_CA55C0_EDMA1_MASK (0x2U)
-#define BLK_CTRL_NS_AONMIX_IPG_DEBUG_CA55C0_EDMA1_SHIFT (1U)
-/*! EDMA1 - Mask bit for debug halted mode
+#define BLK_CTRL_NS_AONMIX_IPG_DEBUG_CA55C0_EDMA3_1_MASK (0x2U)
+#define BLK_CTRL_NS_AONMIX_IPG_DEBUG_CA55C0_EDMA3_1_SHIFT (1U)
+/*! EDMA3_1 - Mask bit for debug halted mode
  *  0b0..Block does not enter debug halted mode with CA55
  *  0b1..Block enters debug halted mode when CA55 is debug halted
  */
-#define BLK_CTRL_NS_AONMIX_IPG_DEBUG_CA55C0_EDMA1(x) (((uint32_t)(((uint32_t)(x)) << BLK_CTRL_NS_AONMIX_IPG_DEBUG_CA55C0_EDMA1_SHIFT)) & BLK_CTRL_NS_AONMIX_IPG_DEBUG_CA55C0_EDMA1_MASK)
+#define BLK_CTRL_NS_AONMIX_IPG_DEBUG_CA55C0_EDMA3_1(x) (((uint32_t)(((uint32_t)(x)) << BLK_CTRL_NS_AONMIX_IPG_DEBUG_CA55C0_EDMA3_1_SHIFT)) & BLK_CTRL_NS_AONMIX_IPG_DEBUG_CA55C0_EDMA3_1_MASK)
 
 #define BLK_CTRL_NS_AONMIX_IPG_DEBUG_CA55C0_LPI2C1_MASK (0x4U)
 #define BLK_CTRL_NS_AONMIX_IPG_DEBUG_CA55C0_LPI2C1_SHIFT (2U)

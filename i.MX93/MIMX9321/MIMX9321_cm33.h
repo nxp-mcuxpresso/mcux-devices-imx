@@ -10,7 +10,7 @@
 **
 **     Reference manual:    IMX93RM, Internal, November. 2021
 **     Version:             rev. 2.0, 2024-10-29
-**     Build:               b250521
+**     Build:               b251202
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for MIMX9321_cm33
@@ -71,7 +71,7 @@
 #include "PERI_I2S.h"
 #include "PERI_I3C.h"
 #include "PERI_IOMUXC1.h"
-#include "PERI_IPC.h"
+#include "PERI_IOMUXC_GPR.h"
 #include "PERI_ISI.h"
 #include "PERI_LCDIF.h"
 #include "PERI_LPI2C.h"

@@ -1,7 +1,7 @@
 /*
 ** ###################################################################
 **     Version:             rev. 2.0, 2025-11-12
-**     Build:               b251112
+**     Build:               b251202
 **
 **     Abstract:
 **         Chip specific module features.
@@ -51,6 +51,8 @@
 #define FSL_FEATURE_SOC_I3C_COUNT (2)
 /* @brief I2S availability on the SoC. */
 #define FSL_FEATURE_SOC_I2S_COUNT (3)
+/* @brief IOMUXC_GPR availability on the SoC. */
+#define FSL_FEATURE_SOC_IOMUXC_GPR_COUNT (1)
 /* @brief ISI availability on the SoC. */
 #define FSL_FEATURE_SOC_ISI_COUNT (1)
 /* @brief LCDIF availability on the SoC. */
@@ -316,9 +318,9 @@
 /* @brief Has threshold for the number of frames in the receive FIFO (register bit field RSEM[STAT_SECTION_EMPTY]). */
 #define FSL_FEATURE_ENET_HAS_RECEIVE_STATUS_THRESHOLD (1)
 /* @brief Has transfer clock delay (register bit field ECR[TXC_DLY]). */
-#define FSL_FEATURE_ENET_HAS_RGMII_TXC_DELAY (1)
+#define FSL_FEATURE_ENET_HAS_RGMII_TXC_DELAY (0)
 /* @brief Has receive clock delay (register bit field ECR[RXC_DLY]). */
-#define FSL_FEATURE_ENET_HAS_RGMII_RXC_DELAY (1)
+#define FSL_FEATURE_ENET_HAS_RGMII_RXC_DELAY (0)
 /* @brief PTP Timestamp CAPTURE bit always returns 0 when the capture is not over. */
 #define FSL_FEATURE_ENET_TIMESTAMP_CAPTURE_BIT_INVALID (0)
 /* @brief ENET Has Extra Clock Gate (RW610). */
@@ -672,7 +674,7 @@
 /* @brief PDM Has no FIR_RDY Bitfield In PDM STAT Register */
 #define FSL_FEATURE_PDM_HAS_NO_FIR_RDY (0)
 /* @brief PDM Has no DOZEN Bitfield In PDM CTRL_1 Register */
-#define FSL_FEATURE_PDM_HAS_NO_DOZEN (1)
+#define FSL_FEATURE_PDM_HAS_NO_DOZEN (0)
 /* @brief PDM Has DEC_BYPASS Bitfield In PDM CTRL_2 Register */
 #define FSL_FEATURE_PDM_HAS_DECIMATION_FILTER_BYPASS (0)
 /* @brief PDM Has DC_OUT_CTRL. */
@@ -762,7 +764,7 @@
 /* @brief Whether TRIG register has effect. */
 #define FSL_FEATURE_TPM_TRIG_HAS_EFFECTn(x) (0)
 /* @brief Has global time base enable. */
-#define FSL_FEATURE_TPM_HAS_GLOBAL_TIME_BASE_EN (1)
+#define FSL_FEATURE_TPM_HAS_GLOBAL_TIME_BASE_EN (0)
 /* @brief Has global time base sync. */
 #define FSL_FEATURE_TPM_HAS_GLOBAL_TIME_BASE_SYNC (1)
 /* @brief Has counter pause on trigger. */
@@ -842,7 +844,7 @@
 /* @brief Has no VSELECT bit in VEND_SPEC register */
 #define FSL_FEATURE_USDHC_HAS_NO_VOLTAGE_SELECT (0)
 /* @brief Has no VS18 bit in HOST_CTRL_CAP register */
-#define FSL_FEATURE_USDHC_HAS_NO_VS18 (0)
+#define FSL_FEATURE_USDHC_HAS_NO_VS18 (1)
 
 /* WDOG module features */
 

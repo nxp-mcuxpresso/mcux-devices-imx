@@ -64,9 +64,13 @@
 **                          MIMX9352DVVXM_cm33
 **                          MIMX9352XVVXM_ca55
 **                          MIMX9352XVVXM_cm33
+**                          MIMX93W32610GCM_ca55
+**                          MIMX93W32610GCM_cm33
+**                          MIMX93W52610GCM_ca55
+**                          MIMX93W52610GCM_cm33
 **
 **     Version:             rev. 2.0, 2024-10-29
-**     Build:               b250521
+**     Build:               b251202
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for SRC_MIX_SLICE
@@ -140,6 +144,14 @@
 #include "MIMX9352_ca55_COMMON.h"
 #elif (defined(CPU_MIMX9352AVTXM_cm33) || defined(CPU_MIMX9352CVVXM_cm33) || defined(CPU_MIMX9352DVVXM_cm33) || defined(CPU_MIMX9352XVVXM_cm33))
 #include "MIMX9352_cm33_COMMON.h"
+#elif (defined(CPU_MIMX93W32610GCM_ca55))
+#include "MIMX93W32_ca55_COMMON.h"
+#elif (defined(CPU_MIMX93W32610GCM_cm33))
+#include "MIMX93W32_cm33_COMMON.h"
+#elif (defined(CPU_MIMX93W52610GCM_ca55))
+#include "MIMX93W52_ca55_COMMON.h"
+#elif (defined(CPU_MIMX93W52610GCM_cm33))
+#include "MIMX93W52_cm33_COMMON.h"
 #else
   #error "No valid CPU defined!"
 #endif
@@ -312,7 +324,13 @@ typedef struct {
 
 #define SRC_MIX_SLICE_LPM_SETTING_0_LPM_SETTING_CD_MASK (0x7U)
 #define SRC_MIX_SLICE_LPM_SETTING_0_LPM_SETTING_CD_SHIFT (0U)
-/*! LPM_SETTING_CD - LPM setting of current domain */
+/*! LPM_SETTING_CD - LPM setting of current domain
+ *  0b000..Power always off
+ *  0b001..Power on when domain n is in RUN, off in WAIT/STOP/SUSPEND
+ *  0b010..Power on when domain n is in RUN/WAIT, off in STOP/SUSPEND
+ *  0b011..Power on when domain n is in RUN/WAIT/STOP, off in SUSPEND
+ *  0b100-0b111..Power always on
+ */
 #define SRC_MIX_SLICE_LPM_SETTING_0_LPM_SETTING_CD(x) (((uint32_t)(((uint32_t)(x)) << SRC_MIX_SLICE_LPM_SETTING_0_LPM_SETTING_CD_SHIFT)) & SRC_MIX_SLICE_LPM_SETTING_0_LPM_SETTING_CD_MASK)
 /*! @} */
 

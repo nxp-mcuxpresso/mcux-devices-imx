@@ -64,9 +64,13 @@
 **                          MIMX9352DVVXM_cm33
 **                          MIMX9352XVVXM_ca55
 **                          MIMX9352XVVXM_cm33
+**                          MIMX93W32610GCM_ca55
+**                          MIMX93W32610GCM_cm33
+**                          MIMX93W52610GCM_ca55
+**                          MIMX93W52610GCM_cm33
 **
 **     Version:             rev. 2.0, 2024-10-29
-**     Build:               b250521
+**     Build:               b251202
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for OTFAD
@@ -140,6 +144,14 @@
 #include "MIMX9352_ca55_COMMON.h"
 #elif (defined(CPU_MIMX9352AVTXM_cm33) || defined(CPU_MIMX9352CVVXM_cm33) || defined(CPU_MIMX9352DVVXM_cm33) || defined(CPU_MIMX9352XVVXM_cm33))
 #include "MIMX9352_cm33_COMMON.h"
+#elif (defined(CPU_MIMX93W32610GCM_ca55))
+#include "MIMX93W32_ca55_COMMON.h"
+#elif (defined(CPU_MIMX93W32610GCM_cm33))
+#include "MIMX93W32_cm33_COMMON.h"
+#elif (defined(CPU_MIMX93W52610GCM_ca55))
+#include "MIMX93W52_ca55_COMMON.h"
+#elif (defined(CPU_MIMX93W52610GCM_cm33))
+#include "MIMX93W52_cm33_COMMON.h"
 #else
   #error "No valid CPU defined!"
 #endif
@@ -265,8 +277,8 @@ typedef struct {
 #define OTFAD_CR_GE_MASK                         (0x80000000U)
 #define OTFAD_CR_GE_SHIFT                        (31U)
 /*! GE - Global OTFAD Enable
- *  0b0..OTFAD has decryption disabled. All data fetched by the QuadSPI bypasses OTFAD processing.
- *  0b1..OTFAD has decryption enabled, and processes data fetched by the QuadSPI as defined by the hardware configuration.
+ *  0b0..OTFAD has decryption disabled. All data fetched by the FLEXSPI bypasses OTFAD processing.
+ *  0b1..OTFAD has decryption enabled, and processes data fetched by the FLEXSPI as defined by the hardware configuration.
  */
 #define OTFAD_CR_GE(x)                           (((uint32_t)(((uint32_t)(x)) << OTFAD_CR_GE_SHIFT)) & OTFAD_CR_GE_MASK)
 /*! @} */
@@ -382,8 +394,8 @@ typedef struct {
 #define OTFAD_SR_GEM_MASK                        (0x20000000U)
 #define OTFAD_SR_GEM_SHIFT                       (29U)
 /*! GEM - Global Enable Mode
- *  0b0..OTFAD is disabled. All data fetched by the QuadSPI bypasses OTFAD processing.
- *  0b1..OTFAD is enabled, and processes data fetched by the QuadSPI as defined by the hardware configuration.
+ *  0b0..OTFAD is disabled. All data fetched by the FLEXSPI bypasses OTFAD processing.
+ *  0b1..OTFAD is enabled, and processes data fetched by the FLEXSPI as defined by the hardware configuration.
  */
 #define OTFAD_SR_GEM(x)                          (((uint32_t)(((uint32_t)(x)) << OTFAD_SR_GEM_SHIFT)) & OTFAD_SR_GEM_MASK)
 

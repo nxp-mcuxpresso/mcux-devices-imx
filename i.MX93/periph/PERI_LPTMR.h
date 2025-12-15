@@ -64,9 +64,13 @@
 **                          MIMX9352DVVXM_cm33
 **                          MIMX9352XVVXM_ca55
 **                          MIMX9352XVVXM_cm33
+**                          MIMX93W32610GCM_ca55
+**                          MIMX93W32610GCM_cm33
+**                          MIMX93W52610GCM_ca55
+**                          MIMX93W52610GCM_cm33
 **
 **     Version:             rev. 2.0, 2024-10-29
-**     Build:               b250521
+**     Build:               b251202
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for LPTMR
@@ -140,6 +144,14 @@
 #include "MIMX9352_ca55_COMMON.h"
 #elif (defined(CPU_MIMX9352AVTXM_cm33) || defined(CPU_MIMX9352CVVXM_cm33) || defined(CPU_MIMX9352DVVXM_cm33) || defined(CPU_MIMX9352XVVXM_cm33))
 #include "MIMX9352_cm33_COMMON.h"
+#elif (defined(CPU_MIMX93W32610GCM_ca55))
+#include "MIMX93W32_ca55_COMMON.h"
+#elif (defined(CPU_MIMX93W32610GCM_cm33))
+#include "MIMX93W32_cm33_COMMON.h"
+#elif (defined(CPU_MIMX93W52610GCM_ca55))
+#include "MIMX93W52_ca55_COMMON.h"
+#elif (defined(CPU_MIMX93W52610GCM_cm33))
+#include "MIMX93W52_cm33_COMMON.h"
 #else
   #error "No valid CPU defined!"
 #endif
@@ -185,7 +197,7 @@
 /** LPTMR - Register Layout Typedef */
 typedef struct {
   __IO uint32_t CSR;                               /**< Control Status, offset: 0x0 */
-  __IO uint32_t PSR;                               /**< Prescale and Glitch Filter, offset: 0x4 */
+  __IO uint32_t PSR;                               /**< Prescaler and Glitch Filter, offset: 0x4 */
   __IO uint32_t CMR;                               /**< Compare, offset: 0x8 */
   __IO uint32_t CNR;                               /**< Counter, offset: 0xC */
 } LPTMR_Type;
@@ -213,8 +225,8 @@ typedef struct {
 #define LPTMR_CSR_TMS_MASK                       (0x2U)
 #define LPTMR_CSR_TMS_SHIFT                      (1U)
 /*! TMS - Timer Mode Select
- *  0b0..Time Counter mode
- *  0b1..Pulse Counter mode
+ *  0b0..Time Counter
+ *  0b1..Pulse Counter
  */
 #define LPTMR_CSR_TMS(x)                         (((uint32_t)(((uint32_t)(x)) << LPTMR_CSR_TMS_SHIFT)) & LPTMR_CSR_TMS_MASK)
 
@@ -256,7 +268,9 @@ typedef struct {
 #define LPTMR_CSR_TCF_SHIFT                      (7U)
 /*! TCF - Timer Compare Flag
  *  0b0..CNR != (CMR + 1)
+ *  0b0..No effect
  *  0b1..CNR = (CMR + 1)
+ *  0b1..Clear the flag
  */
 #define LPTMR_CSR_TCF(x)                         (((uint32_t)(((uint32_t)(x)) << LPTMR_CSR_TCF_SHIFT)) & LPTMR_CSR_TCF_MASK)
 
@@ -269,12 +283,12 @@ typedef struct {
 #define LPTMR_CSR_TDRE(x)                        (((uint32_t)(((uint32_t)(x)) << LPTMR_CSR_TDRE_SHIFT)) & LPTMR_CSR_TDRE_MASK)
 /*! @} */
 
-/*! @name PSR - Prescale and Glitch Filter */
+/*! @name PSR - Prescaler and Glitch Filter */
 /*! @{ */
 
 #define LPTMR_PSR_PCS_MASK                       (0x3U)
 #define LPTMR_PSR_PCS_SHIFT                      (0U)
-/*! PCS - Prescaler/Glitch Filter Clock Select
+/*! PCS - Prescaler and Glitch Filter Clock Select
  *  0b00..Clock 0
  *  0b01..Clock 1
  *  0b10..Clock 2
@@ -284,31 +298,31 @@ typedef struct {
 
 #define LPTMR_PSR_PBYP_MASK                      (0x4U)
 #define LPTMR_PSR_PBYP_SHIFT                     (2U)
-/*! PBYP - Prescaler/Glitch Filter Bypass
- *  0b0..Prescaler/glitch filter enable
- *  0b1..Prescaler/glitch filter bypass
+/*! PBYP - Prescaler and Glitch Filter Bypass
+ *  0b0..Prescaler and glitch filter enable
+ *  0b1..Prescaler and glitch filter bypass
  */
 #define LPTMR_PSR_PBYP(x)                        (((uint32_t)(((uint32_t)(x)) << LPTMR_PSR_PBYP_SHIFT)) & LPTMR_PSR_PBYP_MASK)
 
 #define LPTMR_PSR_PRESCALE_MASK                  (0x78U)
 #define LPTMR_PSR_PRESCALE_SHIFT                 (3U)
-/*! PRESCALE - Prescale/Glitch Filter Value
- *  0b0000..Prescaler divides the prescaler clock by 2; glitch filter does not support this configuration.
- *  0b0001..Prescaler divides the prescaler clock by 4; glitch filter recognizes change on input pin after 2 rising clock edges.
- *  0b0010..Prescaler divides the prescaler clock by 8; glitch filter recognizes change on input pin after 4 rising clock edges.
- *  0b0011..Prescaler divides the prescaler clock by 16; glitch filter recognizes change on input pin after 8 rising clock edges.
- *  0b0100..Prescaler divides the prescaler clock by 32; glitch filter recognizes change on input pin after 16 rising clock edges.
- *  0b0101..Prescaler divides the prescaler clock by 64; glitch filter recognizes change on input pin after 32 rising clock edges.
- *  0b0110..Prescaler divides the prescaler clock by 128; glitch filter recognizes change on input pin after 64 rising clock edges.
- *  0b0111..Prescaler divides the prescaler clock by 256; glitch filter recognizes change on input pin after 128 rising clock edges.
- *  0b1000..Prescaler divides the prescaler clock by 512; glitch filter recognizes change on input pin after 256 rising clock edges.
- *  0b1001..Prescaler divides the prescaler clock by 1024; glitch filter recognizes change on input pin after 512 rising clock edges.
- *  0b1010..Prescaler divides the prescaler clock by 2048; glitch filter recognizes change on input pin after 1024 rising clock edges.
- *  0b1011..Prescaler divides the prescaler clock by 4096; glitch filter recognizes change on input pin after 2048 rising clock edges.
- *  0b1100..Prescaler divides the prescaler clock by 8192; glitch filter recognizes change on input pin after 4096 rising clock edges.
- *  0b1101..Prescaler divides the prescaler clock by 16,384; glitch filter recognizes change on input pin after 8192 rising clock edges.
- *  0b1110..Prescaler divides the prescaler clock by 32,768; glitch filter recognizes change on input pin after 16,384 rising clock edges.
- *  0b1111..Prescaler divides the prescaler clock by 65,536; glitch filter recognizes change on input pin after 32,768 rising clock edges.
+/*! PRESCALE - Prescaler and Glitch Filter Value
+ *  0b0000..Prescaler divides the prescaler clock by 2; glitch filter does not support this configuration
+ *  0b0001..Prescaler divides the prescaler clock by 4; glitch filter recognizes change on input pin after two rising clock edges
+ *  0b0010..Prescaler divides the prescaler clock by 8; glitch filter recognizes change on input pin after four rising clock edges
+ *  0b0011..Prescaler divides the prescaler clock by 16; glitch filter recognizes change on input pin after eight rising clock edges
+ *  0b0100..Prescaler divides the prescaler clock by 32; glitch filter recognizes change on input pin after 16 rising clock edges
+ *  0b0101..Prescaler divides the prescaler clock by 64; glitch filter recognizes change on input pin after 32 rising clock edges
+ *  0b0110..Prescaler divides the prescaler clock by 128; glitch filter recognizes change on input pin after 64 rising clock edges
+ *  0b0111..Prescaler divides the prescaler clock by 256; glitch filter recognizes change on input pin after 128 rising clock edges
+ *  0b1000..Prescaler divides the prescaler clock by 512; glitch filter recognizes change on input pin after 256 rising clock edges
+ *  0b1001..Prescaler divides the prescaler clock by 1024; glitch filter recognizes change on input pin after 512 rising clock edges
+ *  0b1010..Prescaler divides the prescaler clock by 2048; glitch filter recognizes change on input pin after 1024 rising clock edges
+ *  0b1011..Prescaler divides the prescaler clock by 4096; glitch filter recognizes change on input pin after 2048 rising clock edges
+ *  0b1100..Prescaler divides the prescaler clock by 8192; glitch filter recognizes change on input pin after 4096 rising clock edges
+ *  0b1101..Prescaler divides the prescaler clock by 16,384; glitch filter recognizes change on input pin after 8192 rising clock edges
+ *  0b1110..Prescaler divides the prescaler clock by 32,768; glitch filter recognizes change on input pin after 16,384 rising clock edges
+ *  0b1111..Prescaler divides the prescaler clock by 65,536; glitch filter recognizes change on input pin after 32,768 rising clock edges
  */
 #define LPTMR_PSR_PRESCALE(x)                    (((uint32_t)(((uint32_t)(x)) << LPTMR_PSR_PRESCALE_SHIFT)) & LPTMR_PSR_PRESCALE_MASK)
 /*! @} */

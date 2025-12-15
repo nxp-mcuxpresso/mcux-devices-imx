@@ -64,9 +64,13 @@
 **                          MIMX9352DVVXM_cm33
 **                          MIMX9352XVVXM_ca55
 **                          MIMX9352XVVXM_cm33
+**                          MIMX93W32610GCM_ca55
+**                          MIMX93W32610GCM_cm33
+**                          MIMX93W52610GCM_ca55
+**                          MIMX93W52610GCM_cm33
 **
 **     Version:             rev. 2.0, 2024-10-29
-**     Build:               b250521
+**     Build:               b251202
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for NPU
@@ -140,6 +144,14 @@
 #include "MIMX9352_ca55_COMMON.h"
 #elif (defined(CPU_MIMX9352AVTXM_cm33) || defined(CPU_MIMX9352CVVXM_cm33) || defined(CPU_MIMX9352DVVXM_cm33) || defined(CPU_MIMX9352XVVXM_cm33))
 #include "MIMX9352_cm33_COMMON.h"
+#elif (defined(CPU_MIMX93W32610GCM_ca55))
+#include "MIMX93W32_ca55_COMMON.h"
+#elif (defined(CPU_MIMX93W32610GCM_cm33))
+#include "MIMX93W32_cm33_COMMON.h"
+#elif (defined(CPU_MIMX93W52610GCM_ca55))
+#include "MIMX93W52_ca55_COMMON.h"
+#elif (defined(CPU_MIMX93W52610GCM_cm33))
+#include "MIMX93W52_cm33_COMMON.h"
 #else
   #error "No valid CPU defined!"
 #endif
@@ -397,13 +409,8 @@ typedef struct {
 /*! power_q_enable - power_q_enable */
 #define NPU_CMD_power_q_enable(x)                (((uint32_t)(((uint32_t)(x)) << NPU_CMD_power_q_enable_SHIFT)) & NPU_CMD_power_q_enable_MASK)
 
-#define NPU_CMD_stop_request_MASK                (0x10U)
-#define NPU_CMD_stop_request_SHIFT               (4U)
-/*! stop_request - stop_request */
-#define NPU_CMD_stop_request(x)                  (((uint32_t)(((uint32_t)(x)) << NPU_CMD_stop_request_SHIFT)) & NPU_CMD_stop_request_MASK)
-
-#define NPU_CMD_RES0_MASK                        (0xFFE0U)
-#define NPU_CMD_RES0_SHIFT                       (5U)
+#define NPU_CMD_RES0_MASK                        (0xFFF0U)
+#define NPU_CMD_RES0_SHIFT                       (4U)
 /*! RES0 - Reserved */
 #define NPU_CMD_RES0(x)                          (((uint32_t)(((uint32_t)(x)) << NPU_CMD_RES0_SHIFT)) & NPU_CMD_RES0_MASK)
 

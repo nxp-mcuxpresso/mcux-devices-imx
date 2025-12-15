@@ -8,13 +8,13 @@
 **     Compiler:            IAR ANSI C/C++ Compiler for ARM
 **     Reference manual:    IMX93RM, Internal, November. 2021
 **     Version:             rev. 1.0, 2021-11-16
-**     Build:               b231019
+**     Build:               b251202
 **
 **     Abstract:
 **         Linker file for the IAR ANSI C/C++ Compiler for ARM
 **
 **     Copyright 2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2023 NXP
+**     Copyright 2016-2025 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com

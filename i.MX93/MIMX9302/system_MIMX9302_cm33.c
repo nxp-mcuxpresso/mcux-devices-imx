@@ -9,7 +9,7 @@
 **
 **     Reference manual:    IMX93RM, Internal, November. 2021
 **     Version:             rev. 2.0, 2024-10-29
-**     Build:               b250521
+**     Build:               b251202
 **
 **     Abstract:
 **         Provides a system configuration function and a global variable that

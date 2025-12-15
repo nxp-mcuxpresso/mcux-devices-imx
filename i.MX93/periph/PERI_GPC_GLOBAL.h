@@ -64,9 +64,13 @@
 **                          MIMX9352DVVXM_cm33
 **                          MIMX9352XVVXM_ca55
 **                          MIMX9352XVVXM_cm33
+**                          MIMX93W32610GCM_ca55
+**                          MIMX93W32610GCM_cm33
+**                          MIMX93W52610GCM_ca55
+**                          MIMX93W52610GCM_cm33
 **
 **     Version:             rev. 2.0, 2024-10-29
-**     Build:               b250521
+**     Build:               b251202
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for GPC_GLOBAL
@@ -140,6 +144,14 @@
 #include "MIMX9352_ca55_COMMON.h"
 #elif (defined(CPU_MIMX9352AVTXM_cm33) || defined(CPU_MIMX9352CVVXM_cm33) || defined(CPU_MIMX9352DVVXM_cm33) || defined(CPU_MIMX9352XVVXM_cm33))
 #include "MIMX9352_cm33_COMMON.h"
+#elif (defined(CPU_MIMX93W32610GCM_ca55))
+#include "MIMX93W32_ca55_COMMON.h"
+#elif (defined(CPU_MIMX93W32610GCM_cm33))
+#include "MIMX93W32_cm33_COMMON.h"
+#elif (defined(CPU_MIMX93W52610GCM_ca55))
+#include "MIMX93W52_ca55_COMMON.h"
+#elif (defined(CPU_MIMX93W52610GCM_cm33))
+#include "MIMX93W52_cm33_COMMON.h"
 #else
   #error "No valid CPU defined!"
 #endif
@@ -349,7 +361,7 @@ typedef struct {
 
 #define GPC_GLOBAL_PMIC_CTRL_PMIC_STBY_EN_MASK   (0x1U)
 #define GPC_GLOBAL_PMIC_CTRL_PMIC_STBY_EN_SHIFT  (0U)
-/*! PMIC_STBY_EN - Assert the pmic standby request when system sleep */
+/*! PMIC_STBY_EN - Assert the PMIC_STBY_REQ when system sleep */
 #define GPC_GLOBAL_PMIC_CTRL_PMIC_STBY_EN(x)     (((uint32_t)(((uint32_t)(x)) << GPC_GLOBAL_PMIC_CTRL_PMIC_STBY_EN_SHIFT)) & GPC_GLOBAL_PMIC_CTRL_PMIC_STBY_EN_MASK)
 /*! @} */
 
