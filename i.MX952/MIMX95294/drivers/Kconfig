@@ -1,0 +1,39 @@
+# Copyright 2024 NXP
+# All rights reserved.
+#
+# SPDX-License-Identifier: BSD-3-Clause
+
+menu "Device specific drivers configuration"
+
+    config MCUX_COMPONENT_driver.clock
+         bool "clock"
+         default y
+
+    config MCUX_COMPONENT_driver.edma_soc
+         bool "edma_soc"
+
+    config MCUX_COMPONENT_driver.iomuxc
+         bool "iomuxc"
+         default y
+
+    config MCUX_COMPONENT_driver.power
+         bool "power"
+         default y
+
+    config MCUX_COMPONENT_driver.memory
+         bool "memory"
+         default y
+
+    config MCUX_COMPONENT_driver.sentinel
+         bool "sentinel"
+
+    config MCUX_COMPONENT_driver.trdc_soc
+         bool "trdc_soc"
+
+    config MCUX_COMPONENT_driver.irqsteer_1_soc
+         bool "Use irqsteer_1 soc specific driver"
+
+endmenu
+
+
+

@@ -1,0 +1,426 @@
+# Copyright 2025 NXP
+# All rights reserved.
+#
+# SPDX-License-Identifier: BSD-3-Clause
+# core related
+config MCUX_HW_CORE
+    string
+    default "cm7f"
+
+config MCUX_HW_CORE_CM7F
+    bool
+    default y
+
+config MCUX_HW_CORE_ID
+    string
+    default "cm7"
+
+config MCUX_HW_CORE_ID_CM7
+    bool
+    default y
+
+config MCUX_HW_DEVICE_CORE
+    string
+    default "MIMX95294_cm7"
+
+config MCUX_HW_FPU
+    string
+    default "DP_FPU"
+
+config MCUX_HW_FPU_TYPE
+    string
+    default "fpv5_dp"
+
+config MCUX_HW_FPV5_DP
+    bool
+    default y
+
+config MCUX_HW_INT_PRIO_BITS
+    int
+    default 4
+
+config MCUX_HW_SOC_SERIES_KINETIS
+    bool
+    default y
+
+# For chipmodel generated files
+config MCUX_TOOLCHAIN_LINKER_DEVICE_PREFIX
+    string
+    default "MIMX95294xxxN_cm7" if MCUX_HW_DEVICE_ID_MIMX95294xxxN
+
+config MCUX_TOOLCHAIN_MCUX_STARTUP
+    string
+    default "mimx95294_cm7"
+
+# Toolchain related
+config MCUX_TOOLCHAIN_IAR_CPU_IDENTIFIER
+    string
+    default "MIMX95294_M7" if MCUX_HW_DEVICE_ID_MIMX95294xxxN
+
+config MCUX_TOOLCHAIN_MDK_CPU_IDENTIFIER
+    string
+    default "MIMX95294AVZN:cm7" if MCUX_HW_DEVICE_PART_MIMX95294AVZN
+    default "MIMX95294AVYN:cm7" if MCUX_HW_DEVICE_PART_MIMX95294AVYN
+    default "MIMX95294AVTN:cm7" if MCUX_HW_DEVICE_PART_MIMX95294AVTN
+    default "MIMX95294CVZN:cm7" if MCUX_HW_DEVICE_PART_MIMX95294CVZN
+    default "MIMX95294CVYN:cm7" if MCUX_HW_DEVICE_PART_MIMX95294CVYN
+    default "MIMX95294CVTN:cm7" if MCUX_HW_DEVICE_PART_MIMX95294CVTN
+    default "MIMX95294DVZN:cm7" if MCUX_HW_DEVICE_PART_MIMX95294DVZN
+    default "MIMX95294DVYN:cm7" if MCUX_HW_DEVICE_PART_MIMX95294DVYN
+    default "MIMX95294DVTN:cm7" if MCUX_HW_DEVICE_PART_MIMX95294DVTN
+    default "MIMX95294XVZN:cm7" if MCUX_HW_DEVICE_PART_MIMX95294XVZN
+    default "MIMX95294XVYN:cm7" if MCUX_HW_DEVICE_PART_MIMX95294XVYN
+    default "MIMX95294XVTN:cm7" if MCUX_HW_DEVICE_PART_MIMX95294XVTN
+
+# device related
+config MCUX_HW_DEVICE_ID_MIMX95294xxxN
+    bool
+
+choice
+    prompt "Device MIMX95294 Part"
+    config MCUX_HW_DEVICE_PART_MIMX95294AVZN
+    bool "MIMX95294AVZN"
+    select MCUX_HW_DEVICE_ID_MIMX95294xxxN
+    config MCUX_HW_DEVICE_PART_MIMX95294AVYN
+    bool "MIMX95294AVYN"
+    select MCUX_HW_DEVICE_ID_MIMX95294xxxN
+    config MCUX_HW_DEVICE_PART_MIMX95294AVTN
+    bool "MIMX95294AVTN"
+    select MCUX_HW_DEVICE_ID_MIMX95294xxxN
+    config MCUX_HW_DEVICE_PART_MIMX95294CVZN
+    bool "MIMX95294CVZN"
+    select MCUX_HW_DEVICE_ID_MIMX95294xxxN
+    config MCUX_HW_DEVICE_PART_MIMX95294CVYN
+    bool "MIMX95294CVYN"
+    select MCUX_HW_DEVICE_ID_MIMX95294xxxN
+    config MCUX_HW_DEVICE_PART_MIMX95294CVTN
+    bool "MIMX95294CVTN"
+    select MCUX_HW_DEVICE_ID_MIMX95294xxxN
+    config MCUX_HW_DEVICE_PART_MIMX95294DVZN
+    bool "MIMX95294DVZN"
+    select MCUX_HW_DEVICE_ID_MIMX95294xxxN
+    config MCUX_HW_DEVICE_PART_MIMX95294DVYN
+    bool "MIMX95294DVYN"
+    select MCUX_HW_DEVICE_ID_MIMX95294xxxN
+    config MCUX_HW_DEVICE_PART_MIMX95294DVTN
+    bool "MIMX95294DVTN"
+    select MCUX_HW_DEVICE_ID_MIMX95294xxxN
+    config MCUX_HW_DEVICE_PART_MIMX95294XVZN
+    bool "MIMX95294XVZN"
+    select MCUX_HW_DEVICE_ID_MIMX95294xxxN
+    config MCUX_HW_DEVICE_PART_MIMX95294XVYN
+    bool "MIMX95294XVYN"
+    select MCUX_HW_DEVICE_ID_MIMX95294xxxN
+    config MCUX_HW_DEVICE_PART_MIMX95294XVTN
+    bool "MIMX95294XVTN"
+    select MCUX_HW_DEVICE_ID_MIMX95294xxxN
+endchoice
+
+config MCUX_HW_DEVICE_ID
+    string
+    default "MIMX95294xxxN" if MCUX_HW_DEVICE_ID_MIMX95294xxxN
+
+config MCUX_HW_DEVICE_PART
+    string
+    default "MIMX95294AVZN" if MCUX_HW_DEVICE_PART_MIMX95294AVZN
+    default "MIMX95294AVYN" if MCUX_HW_DEVICE_PART_MIMX95294AVYN
+    default "MIMX95294AVTN" if MCUX_HW_DEVICE_PART_MIMX95294AVTN
+    default "MIMX95294CVZN" if MCUX_HW_DEVICE_PART_MIMX95294CVZN
+    default "MIMX95294CVYN" if MCUX_HW_DEVICE_PART_MIMX95294CVYN
+    default "MIMX95294CVTN" if MCUX_HW_DEVICE_PART_MIMX95294CVTN
+    default "MIMX95294DVZN" if MCUX_HW_DEVICE_PART_MIMX95294DVZN
+    default "MIMX95294DVYN" if MCUX_HW_DEVICE_PART_MIMX95294DVYN
+    default "MIMX95294DVTN" if MCUX_HW_DEVICE_PART_MIMX95294DVTN
+    default "MIMX95294XVZN" if MCUX_HW_DEVICE_PART_MIMX95294XVZN
+    default "MIMX95294XVYN" if MCUX_HW_DEVICE_PART_MIMX95294XVYN
+    default "MIMX95294XVTN" if MCUX_HW_DEVICE_PART_MIMX95294XVTN
+
+# ip information
+config MCUX_HW_IP_DriverType_ATU
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX95294xxxN
+config MCUX_HW_IP_DriverType_ASRC
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX95294xxxN
+config MCUX_HW_IP_DriverType_AUDMIX
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX95294xxxN
+config MCUX_HW_IP_DriverType_AXBS
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX95294xxxN
+config MCUX_HW_IP_DriverType_BBNSM
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX95294xxxN
+config MCUX_HW_IP_DriverType_BLK_CTRL_CAMERAMIX
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX95294xxxN
+config MCUX_HW_IP_DriverType_BLK_CTRL_NS_AONMIX
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX95294xxxN
+config MCUX_HW_IP_DriverType_BLK_CTRL_S_AONMIX
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX95294xxxN
+config MCUX_HW_IP_DriverType_BLK_CTRL_WAKEUPMIX
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX95294xxxN
+config MCUX_HW_IP_DriverType_CACHEC
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX95294xxxN
+config MCUX_HW_IP_DriverType_CMU
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX95294xxxN
+config MCUX_HW_IP_DriverType_DDRC
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX95294xxxN
+config MCUX_HW_IP_DriverType_DISPLAY_SEERIS
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX95294xxxN
+config MCUX_HW_IP_DriverType_DMA_CRC
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX95294xxxN
+config MCUX_HW_IP_DriverType_D_IP_ROBLK
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX95294xxxN
+config MCUX_HW_IP_DriverType_EDMA3
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX95294xxxN
+config MCUX_HW_IP_DriverType_EDMA5
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX95294xxxN
+config MCUX_HW_IP_DriverType_EIM
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX95294xxxN
+config MCUX_HW_IP_DriverType_ERM
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX95294xxxN
+config MCUX_HW_IP_DriverType_FLEXCAN
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX95294xxxN
+config MCUX_HW_IP_DriverType_FLEXIO
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX95294xxxN
+config MCUX_HW_IP_DriverType_FRO
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX95294xxxN
+config MCUX_HW_IP_DriverType_INTM
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX95294xxxN
+config MCUX_HW_IP_DriverType_IRQSTEER_1
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX95294xxxN
+config MCUX_HW_IP_DriverType_ISI
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX95294xxxN
+config MCUX_HW_IP_DriverType_JPEG_DECODER
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX95294xxxN
+config MCUX_HW_IP_DriverType_JPEG_ENCODER
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX95294xxxN
+config MCUX_HW_IP_DriverType_JPGDECWRP
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX95294xxxN
+config MCUX_HW_IP_DriverType_JPGENCWRP
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX95294xxxN
+config MCUX_HW_IP_DriverType_JTAGC
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX95294xxxN
+config MCUX_HW_IP_DriverType_I3C
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX95294xxxN
+config MCUX_HW_IP_DriverType_LPI2C
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX95294xxxN
+config MCUX_HW_IP_DriverType_LPIT
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX95294xxxN
+config MCUX_HW_IP_DriverType_LPSPI
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX95294xxxN
+config MCUX_HW_IP_DriverType_LPTMR
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX95294xxxN
+config MCUX_HW_IP_DriverType_LPUART
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX95294xxxN
+config MCUX_HW_IP_DriverType_MCM
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX95294xxxN
+config MCUX_HW_IP_DriverType_MDM_AP
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX95294xxxN
+config MCUX_HW_IP_DriverType_MEMORY
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX95294xxxN
+config MCUX_HW_IP_DriverType_MQS
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX95294xxxN
+config MCUX_HW_IP_DriverType_MSGINTR
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX95294xxxN
+config MCUX_HW_IP_DriverType_MU_1
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX95294xxxN
+config MCUX_HW_IP_DriverType_NETC
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX95294xxxN
+config MCUX_HW_IP_DriverType_NEUTRON
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX95294xxxN
+config MCUX_HW_IP_DriverType_PDM
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX95294xxxN
+config MCUX_HW_IP_DriverType_RGPIO
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX95294xxxN
+config MCUX_HW_IP_DriverType_ROMC
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX95294xxxN
+config MCUX_HW_IP_DriverType_S3MU
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX95294xxxN
+config MCUX_HW_IP_DriverType_SAI
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX95294xxxN
+config MCUX_HW_IP_DriverType_SAR_ADC
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX95294xxxN
+config MCUX_HW_IP_DriverType_SEMA42
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX95294xxxN
+config MCUX_HW_IP_DriverType_SFA
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX95294xxxN
+config MCUX_HW_IP_DriverType_STIMER_tmr
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX95294xxxN
+config MCUX_HW_IP_DriverType_TEMPSENSOR
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX95294xxxN
+config MCUX_HW_IP_DriverType_TPM
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX95294xxxN
+config MCUX_HW_IP_DriverType_TRDC
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX95294xxxN
+config MCUX_HW_IP_DriverType_TRGMUX
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX95294xxxN
+config MCUX_HW_IP_DriverType_TSTMR
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX95294xxxN
+config MCUX_HW_IP_DriverType_XCACHE
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX95294xxxN
+config MCUX_HW_IP_DriverType_XSPI
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX95294xxxN
+config MCUX_HW_IP_DriverType_USBPHY
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX95294xxxN
+config MCUX_HW_IP_DriverType_USB_HOST_DEVICE_EHCI
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX95294xxxN
+config MCUX_HW_IP_DriverType_bbsmmix
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX95294xxxN
+config MCUX_HW_IP_DriverType_blk_ctrl_ddrmix
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX95294xxxN
+config MCUX_HW_IP_DriverType_d_ip_imx95_ccm_syn
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX95294xxxN
+config MCUX_HW_IP_DriverType_ieprc_ierb
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX95294xxxN
+config MCUX_HW_IP_DriverType_ieprc_pci
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX95294xxxN
+config MCUX_HW_IP_DriverType_ieprc_prb
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX95294xxxN
+config MCUX_HW_IP_DriverType_neutrons
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX95294xxxN
+config MCUX_HW_IP_DriverType_MIPI_CSI2_1
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX95294xxxN
+config MCUX_HW_IP_DriverType_MIPI_DSI2
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX95294xxxN
+config MCUX_HW_IP_DriverType_LDB_1
+    bool
+    default y
+    depends on MCUX_HW_DEVICE_ID_MIMX95294xxxN
