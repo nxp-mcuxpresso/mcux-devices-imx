@@ -12330,7 +12330,7 @@ typedef enum
   #define XSPI_BASE_PTRS                           { (XSPI_Type *)0u, XSPI1, XSPI2 }
 #endif
 /** Interrupt vectors for the XSPI peripheral type */
-#define XSPI_IRQS                                { NotAvail_IRQn, XSPI1_IRQn, XSPI2_IRQn  }
+#define XSPI_IRQS                                { {NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn,}, {XSPI1_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn}  }
 #if (defined(__ARM_FEATURE_CMSE) && (__ARM_FEATURE_CMSE & 0x2))
   /* XSPI AMBA address. */
   #define XSPI1_AMBA_BASE      (0x38000000u)
