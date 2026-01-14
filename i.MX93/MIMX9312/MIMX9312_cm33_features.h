@@ -1,13 +1,13 @@
 /*
 ** ###################################################################
 **     Version:             rev. 2.0, 2025-11-12
-**     Build:               b251202
+**     Build:               b260113
 **
 **     Abstract:
 **         Chip specific module features.
 **
 **     Copyright 2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2025 NXP
+**     Copyright 2016-2026 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
