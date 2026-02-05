@@ -1,50 +1,23 @@
 /*
 ** ###################################################################
-**     Processors:          MIMX95294AVTN_ca55
-**                          MIMX95294AVTN_cm33
-**                          MIMX95294AVTN_cm7
-**                          MIMX95294AVYN_ca55
-**                          MIMX95294AVYN_cm33
-**                          MIMX95294AVYN_cm7
-**                          MIMX95294AVZN_ca55
-**                          MIMX95294AVZN_cm33
-**                          MIMX95294AVZN_cm7
-**                          MIMX95294CVTN_ca55
-**                          MIMX95294CVTN_cm33
-**                          MIMX95294CVTN_cm7
-**                          MIMX95294CVYN_ca55
-**                          MIMX95294CVYN_cm33
-**                          MIMX95294CVYN_cm7
-**                          MIMX95294CVZN_ca55
-**                          MIMX95294CVZN_cm33
-**                          MIMX95294CVZN_cm7
-**                          MIMX95294DVTN_ca55
-**                          MIMX95294DVTN_cm33
-**                          MIMX95294DVTN_cm7
-**                          MIMX95294DVYN_ca55
-**                          MIMX95294DVYN_cm33
-**                          MIMX95294DVYN_cm7
-**                          MIMX95294DVZN_ca55
-**                          MIMX95294DVZN_cm33
-**                          MIMX95294DVZN_cm7
-**                          MIMX95294XVTN_ca55
-**                          MIMX95294XVTN_cm33
-**                          MIMX95294XVTN_cm7
-**                          MIMX95294XVYN_ca55
-**                          MIMX95294XVYN_cm33
-**                          MIMX95294XVYN_cm7
-**                          MIMX95294XVZN_ca55
-**                          MIMX95294XVZN_cm33
-**                          MIMX95294XVZN_cm7
+**     Processors:          MIMX9529xxVTx_ca55
+**                          MIMX9529xxVTx_cm33
+**                          MIMX9529xxVTx_cm7
+**                          MIMX9529xxVYx_ca55
+**                          MIMX9529xxVYx_cm33
+**                          MIMX9529xxVYx_cm7
+**                          MIMX9529xxVZx_ca55
+**                          MIMX9529xxVZx_cm33
+**                          MIMX9529xxVZx_cm7
 **
 **     Version:             rev. 2.0, 2024-10-29
-**     Build:               b250903
+**     Build:               b260203
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for NETC_PORT
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2025 NXP
+**     Copyright 2016-2026 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -72,12 +45,12 @@
 #if !defined(PERI_NETC_PORT_H_)
 #define PERI_NETC_PORT_H_                        /**< Symbol preventing repeated inclusion */
 
-#if (defined(CPU_MIMX95294AVTN_ca55) || defined(CPU_MIMX95294AVYN_ca55) || defined(CPU_MIMX95294AVZN_ca55) || defined(CPU_MIMX95294CVTN_ca55) || defined(CPU_MIMX95294CVYN_ca55) || defined(CPU_MIMX95294CVZN_ca55) || defined(CPU_MIMX95294DVTN_ca55) || defined(CPU_MIMX95294DVYN_ca55) || defined(CPU_MIMX95294DVZN_ca55) || defined(CPU_MIMX95294XVTN_ca55) || defined(CPU_MIMX95294XVYN_ca55) || defined(CPU_MIMX95294XVZN_ca55))
-#include "MIMX95294_ca55_COMMON.h"
-#elif (defined(CPU_MIMX95294AVTN_cm33) || defined(CPU_MIMX95294AVYN_cm33) || defined(CPU_MIMX95294AVZN_cm33) || defined(CPU_MIMX95294CVTN_cm33) || defined(CPU_MIMX95294CVYN_cm33) || defined(CPU_MIMX95294CVZN_cm33) || defined(CPU_MIMX95294DVTN_cm33) || defined(CPU_MIMX95294DVYN_cm33) || defined(CPU_MIMX95294DVZN_cm33) || defined(CPU_MIMX95294XVTN_cm33) || defined(CPU_MIMX95294XVYN_cm33) || defined(CPU_MIMX95294XVZN_cm33))
-#include "MIMX95294_cm33_COMMON.h"
-#elif (defined(CPU_MIMX95294AVTN_cm7) || defined(CPU_MIMX95294AVYN_cm7) || defined(CPU_MIMX95294AVZN_cm7) || defined(CPU_MIMX95294CVTN_cm7) || defined(CPU_MIMX95294CVYN_cm7) || defined(CPU_MIMX95294CVZN_cm7) || defined(CPU_MIMX95294DVTN_cm7) || defined(CPU_MIMX95294DVYN_cm7) || defined(CPU_MIMX95294DVZN_cm7) || defined(CPU_MIMX95294XVTN_cm7) || defined(CPU_MIMX95294XVYN_cm7) || defined(CPU_MIMX95294XVZN_cm7))
-#include "MIMX95294_cm7_COMMON.h"
+#if (defined(CPU_MIMX9529xxVTx_ca55) || defined(CPU_MIMX9529xxVYx_ca55) || defined(CPU_MIMX9529xxVZx_ca55))
+#include "MIMX9529_ca55_COMMON.h"
+#elif (defined(CPU_MIMX9529xxVTx_cm33) || defined(CPU_MIMX9529xxVYx_cm33) || defined(CPU_MIMX9529xxVZx_cm33))
+#include "MIMX9529_cm33_COMMON.h"
+#elif (defined(CPU_MIMX9529xxVTx_cm7) || defined(CPU_MIMX9529xxVYx_cm7) || defined(CPU_MIMX9529xxVZx_cm7))
+#include "MIMX9529_cm7_COMMON.h"
 #else
   #error "No valid CPU defined!"
 #endif
@@ -151,11 +124,11 @@ typedef struct {
   __I  uint32_t PTGAGLLR;                          /**< Port time gate scheduling admin gate list length register, offset: 0x118 */
   __I  uint32_t PTGOGLLR;                          /**< Port time gating operational gate list length register, offset: 0x11C */
   __IO uint32_t PTGSATOR;                          /**< Port time gate scheduling advance time offset register, offset: 0x120 */
-  __I  uint32_t PTGSHAR;                           /**< Port time gate scheduling hold advance register, offset: 0x124, not available in all instances (available on 12 out of 24) */
-  __I  uint32_t PTGSRAR;                           /**< Port time gate scheduling release advance register, offset: 0x128, not available in all instances (available on 12 out of 24) */
-  __IO uint32_t PTGSHCR;                           /**< Port time gate scheduling hold configuration register, offset: 0x12C, not available in all instances (available on 12 out of 24) */
+  __I  uint32_t PTGSHAR;                           /**< Port time gate scheduling hold advance register, offset: 0x124, not available in all instances (available on 3 out of 6) */
+  __I  uint32_t PTGSRAR;                           /**< Port time gate scheduling release advance register, offset: 0x128, not available in all instances (available on 3 out of 6) */
+  __IO uint32_t PTGSHCR;                           /**< Port time gate scheduling hold configuration register, offset: 0x12C, not available in all instances (available on 3 out of 6) */
        uint8_t RESERVED_6[4];
-  __IO uint32_t PFPCR;                             /**< Port frame preemption configuration register, offset: 0x134, not available in all instances (available on 12 out of 24) */
+  __IO uint32_t PFPCR;                             /**< Port frame preemption configuration register, offset: 0x134, not available in all instances (available on 3 out of 6) */
   __IO uint32_t PDGSR;                             /**< Port default gate state register, offset: 0x138 */
        uint8_t RESERVED_7[132];
   __I  uint32_t PRXDCR;                            /**< Port Rx discard count register, offset: 0x1C0 */

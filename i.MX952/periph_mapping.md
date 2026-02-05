@@ -1,2 +1,2 @@
 #### Peripheral folder for devices
-* periph:MIMX95294
+* periph:MIMX9529
