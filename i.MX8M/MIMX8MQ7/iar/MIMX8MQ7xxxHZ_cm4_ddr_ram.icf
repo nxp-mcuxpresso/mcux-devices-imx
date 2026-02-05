@@ -4,13 +4,13 @@
 **     Compiler:            IAR ANSI C/C++ Compiler for ARM
 **     Reference manual:    IMX8MDQLQRM, Rev. 0, Jan. 2018
 **     Version:             rev. 4.0, 2018-01-26
-**     Build:               b241122
+**     Build:               b260205
 **
 **     Abstract:
 **         Linker file for the IAR ANSI C/C++ Compiler for ARM
 **
 **     Copyright 2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2026 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -18,6 +18,7 @@
 **
 ** ###################################################################
 */
+
 
 define symbol m_stacktop_and_pc_start  = 0x00000000;
 define symbol m_stacktop_and_pc_end    = 0x00000007;
@@ -53,7 +54,6 @@ define exported symbol __CACHE_REGION_START   = m_interrupts_start;
 define exported symbol __CACHE_REGION_SIZE    = m_data_end - m_interrupts_start + 1 ;
 
 define memory mem with size = 4G;
-
 define region TEXT_region = mem:[from m_interrupts_start to m_interrupts_end]
                           | mem:[from m_text_start to m_text_end];
 define region DATA_region = mem:[from m_data_start to m_data_end-__size_cstack__];

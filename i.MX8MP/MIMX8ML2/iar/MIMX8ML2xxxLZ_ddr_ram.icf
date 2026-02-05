@@ -1,20 +1,18 @@
 /*
 ** ###################################################################
-**     Processors:          MIMX8ML2CVNKZ
-**                          MIMX8ML2DVNLZ
+**     Processors:          MIMX8ML2CVNKZ_cm7
+**                          MIMX8ML2DVNLZ_cm7
 **
 **     Compiler:            IAR ANSI C/C++ Compiler for ARM
 **     Reference manual:    IMX8MPRM, Rev.D, 12/2020
 **     Version:             rev. 5.0, 2021-03-01
-**     Build:               b210301
+**     Build:               b260205
 **
 **     Abstract:
 **         Linker file for the IAR ANSI C/C++ Compiler for ARM
 **
 **     Copyright 2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2021 NXP
-**     All rights reserved.
-**
+**     Copyright 2016-2026 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -22,6 +20,7 @@
 **
 ** ###################################################################
 */
+
 
 define symbol m_stacktop_and_pc_start  = 0x00000000;
 define symbol m_stacktop_and_pc_end    = 0x00000007;
@@ -52,6 +51,7 @@ if (isdefinedsymbol(__heap_size__)) {
 }
 
 define exported symbol __StackTop = m_data_end;
+
 
 define exported symbol __CACHE_REGION_START   = m_interrupts_start;
 define exported symbol __CACHE_REGION_SIZE    = m_data_end - m_interrupts_start + 1 ;

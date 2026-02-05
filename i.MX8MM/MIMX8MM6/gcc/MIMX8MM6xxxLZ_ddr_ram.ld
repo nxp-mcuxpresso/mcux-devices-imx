@@ -1,7 +1,7 @@
 /*
 ** ###################################################################
-**     Processors:          MIMX8MM6CVTKZ
-**                          MIMX8MM6DVTLZ
+**     Processors:          MIMX8MM6CVTKZ_cm4
+**                          MIMX8MM6DVTLZ_cm4
 **
 **     Compiler:            GNU C Compiler
 **     Reference manual:    MX8MMRM, Rev. 0, 02/2019
