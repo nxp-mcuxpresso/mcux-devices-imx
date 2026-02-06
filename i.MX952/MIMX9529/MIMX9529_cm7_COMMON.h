@@ -10,7 +10,7 @@
 **
 **     Reference manual:    iMX952RM rev1 draftM
 **     Version:             rev. 2.0, 2024-10-29
-**     Build:               b260203
+**     Build:               b260206
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for MIMX9529_cm7
@@ -1644,6 +1644,16 @@ typedef enum _asrc_clock_source
 #define DISPLAY_SEERIS_BASE_ADDRS                { DISPLAY_SEERIS_BASE }
 /** Array initializer of DISPLAY_SEERIS peripheral base pointers */
 #define DISPLAY_SEERIS_BASE_PTRS                 { DISPLAY_SEERIS }
+
+/* DISPLAY_SEERIS_LD - Peripheral instance base addresses */
+/** Peripheral DISPLAY_SEERIS_LD base address */
+#define DISPLAY_SEERIS_LD_BASE                   (0x4B720000u)
+/** Peripheral DISPLAY_SEERIS_LD base pointer */
+#define DISPLAY_SEERIS_LD                        ((DISPLAY_SEERIS_LD_Type *)DISPLAY_SEERIS_LD_BASE)
+/** Array initializer of DISPLAY_SEERIS_LD peripheral base addresses */
+#define DISPLAY_SEERIS_LD_BASE_ADDRS             { DISPLAY_SEERIS_LD_BASE }
+/** Array initializer of DISPLAY_SEERIS_LD peripheral base pointers */
+#define DISPLAY_SEERIS_LD_BASE_PTRS              { DISPLAY_SEERIS_LD }
 
 /* DMA - Peripheral instance base addresses */
 /** Peripheral DMA3 base address */

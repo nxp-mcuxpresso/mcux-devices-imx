@@ -10,7 +10,7 @@
 **
 **     Reference manual:    iMX952RM rev1 draftM
 **     Version:             rev. 2.0, 2024-10-29
-**     Build:               b260203
+**     Build:               b260206
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for MIMX9529_cm7
@@ -104,6 +104,7 @@
 #include "PERI_DISPLAY_MIPI_DSI_PHY.h"
 #include "PERI_DISPLAY_PIXEL_INTERLEAVER.h"
 #include "PERI_DISPLAY_SEERIS.h"
+#include "PERI_DISPLAY_SEERIS_LD.h"
 #include "PERI_DITHER.h"
 #include "PERI_DITHER1.h"
 #include "PERI_DMA.h"
