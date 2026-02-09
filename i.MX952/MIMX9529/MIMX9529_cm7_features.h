@@ -953,9 +953,9 @@
 /* @brief Autoupdate frequency threshold */
 #define FSL_FEATURE_XSPI_DLL_REF_VALUE_AUTOUPDATE_FREQ_THRESHOLD (130000000UL)
 /* @brief Reference counts of autoupdate */
-#define FSL_FEATURE_XSPI_DLL_REF_VALUE_AUTOUPDATE_REF_COUNTER (2U)
+#define FSL_FEATURE_XSPI_DLL_REF_VALUE_AUTOUPDATE_REF_COUNTER (8U)
 /* @brief autoupdate resolution */
-#define FSL_FEATURE_XSPI_DLL_REF_VALUE_AUTOUPDATE_RES (4U)
+#define FSL_FEATURE_XSPI_DLL_REF_VALUE_AUTOUPDATE_RES (2U)
 /* @brief Delay Elements in autoupdate_t_div16 offset */
 #define FSL_FEATURE_XSPI_DLL_REF_VALUE_AUTOUPDATE_T_DIV16_OFFSET_DELAY_ELEMENT_COUNT (0U)
 /* @brief Delay Elements in autoupdate offset */
