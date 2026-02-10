@@ -37,7 +37,7 @@
 **         CMSIS Peripheral Access Layer for MIMX94398_ca55
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2025 NXP
+**     Copyright 2016-2026 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -4450,6 +4450,9 @@ typedef enum _xbar_output_signal
 #define RGPIO_BASE_ADDRS                         { 0u, GPIO1_BASE, GPIO2_BASE, GPIO3_BASE, GPIO4_BASE, GPIO5_BASE, GPIO6_BASE, GPIO7_BASE }
 /** Array initializer of RGPIO peripheral base pointers */
 #define RGPIO_BASE_PTRS                          { (RGPIO_Type *)0u, GPIO1, GPIO2, GPIO3, GPIO4, GPIO5, GPIO6, GPIO7 }
+
+/** Interrupt vectors for the RGPIO peripheral type */
+#define RGPIO_IRQS                               { NotAvail_IRQn, GPIO1_INT0_IRQn, GPIO2_INT0_IRQn, GPIO3_INT0_IRQn, GPIO4_INT0_IRQn, GPIO5_INT0_IRQn, GPIO6_INT0_IRQn, GPIO7_INT0_IRQn }
 
 /* S3MU - Peripheral instance base addresses */
 /** Peripheral ELE_MU0_MUA base address */
