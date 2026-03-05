@@ -247,14 +247,14 @@
 **                          MIMX95N6XVZXN_cm33
 **                          MIMX95N6XVZXN_cm7
 **
-**     Version:             rev. 3.0, 2025-11-24
-**     Build:               b251124
+**     Version:             rev. 4.0, 2026-02-28
+**     Build:               b260305
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for ENETC_PF_TMR
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2025 NXP
+**     Copyright 2016-2026 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -268,14 +268,16 @@
 **         each peripheral with dedicated header file located in periphN folder.
 **     - rev. 3.0 (2025-11-24)
 **         Header RFP.
+**     - rev. 4.0 (2026-02-28)
+**         Update Interrupts mapping.
 **
 ** ###################################################################
 */
 
 /*!
  * @file PERI_ENETC_PF_TMR.h
- * @version 3.0
- * @date 2025-11-24
+ * @version 4.0
+ * @date 2026-02-28
  * @brief CMSIS Peripheral Access Layer for ENETC_PF_TMR
  *
  * CMSIS Peripheral Access Layer for ENETC_PF_TMR
@@ -412,6 +414,7 @@
 
 /** ENETC_PF_TMR - Register Layout Typedef */
 typedef struct {
+  struct {                                         /* offset: 0x0, array step: 0xFC */
     __I  uint32_t TMR_ID;                            /**< Module ID, array offset: 0x0, array step: 0xFC */
          uint8_t RESERVED_0[4];
     __I  uint32_t TMR_CAPR;                          /**< Timer Capability, array offset: 0x8, array step: 0xFC */
@@ -452,6 +455,7 @@ typedef struct {
     __I  uint32_t TMR_CUR_TIME_L;                    /**< Timer Current Time Low, array offset: 0xF0, array step: 0xFC */
     __I  uint32_t TMR_CUR_TIME_H;                    /**< Timer Current Time High, array offset: 0xF4, array step: 0xFC */
     __IO uint32_t TMR_PARAM;                         /**< Timer Parameter, array offset: 0xF8, array step: 0xFC */
+  } ALL_REG_ARRAYS[ENETC_PF_TMR_ALL_REG_ARRAYS_COUNT];
 } ENETC_PF_TMR_Type;
 
 /* ----------------------------------------------------------------------------

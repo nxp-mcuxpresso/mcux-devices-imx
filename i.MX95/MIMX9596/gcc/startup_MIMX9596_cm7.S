@@ -2,13 +2,13 @@
 /*  @file:    startup_MIMX9596_cm7.s                                         */
 /*  @purpose: CMSIS Cortex-M7 Core Device Startup File                       */
 /*            MIMX9596_cm7                                                   */
-/*  @version: 3.0                                                            */
-/*  @date:    2025-11-24                                                     */
-/*  @build:   b251124                                                        */
+/*  @version: 4.0                                                            */
+/*  @date:    2026-2-28                                                      */
+/*  @build:   b260305                                                        */
 /* ------------------------------------------------------------------------- */
 /*                                                                           */
 /* Copyright 1997-2016 Freescale Semiconductor, Inc.                         */
-/* Copyright 2016-2025 NXP                                                   */
+/* Copyright 2016-2026 NXP                                                   */
 /* SPDX-License-Identifier: BSD-3-Clause                                     */
 /*****************************************************************************/
 /* Version: GCC for ARM Embedded Processors                                  */
@@ -260,7 +260,7 @@ __isr_vector:
     .long   DISP_IRQSTEER7_IRQHandler                       /* DISPLAYMIX IRQSTEER 7*/
     .long   Reserved236_IRQHandler                          /* CAMERAMIX MU Ored of all (tx,rx,gp,core,murip) interrupt to MUA*/
     .long   ISI_IRQHandler                                  /* CAMERAMIX ISI interrupt Channel 0*/
-    .long   Reserved238_IRQHandler                          /* ISP Processing Interrupt - Context 0*/
+    .long   ISP_IRQHandler                                  /* ISP Processing Interrupt - Context 0*/
     .long   Reserved239_IRQHandler                          /* M7MIX MCM interrupt*/
     .long   IRQSTEER_0_IRQHandler                           /* IRQSTEER0 interrupt*/
     .long   IRQSTEER_1_IRQHandler                           /* IRQSTEER1 interrupt*/
@@ -288,22 +288,118 @@ __isr_vector:
     .long   MSGINTR2_IRQHandler                             /* MSGINTR Instance 2, Interrupts*/
     .long   Reserved264_IRQHandler                          /* V2X-FH MU APCH1 (APP1) interrupt*/
     .long   Reserved265_IRQHandler                          /* V2X-FH MU APHSM2 (HSM2) interrupt*/
-    .long   Reserved266_IRQHandler                          /* CAMERAMIX TRDC transfer error interrupt*/
-    .long   Reserved267_IRQHandler                          /* DISPLAYMIX TRDC transfer error interrupt*/
-    .long   Reserved268_IRQHandler                          /* NETCMIX TRDC transfer error interrupt*/
-    .long   Reserved269_IRQHandler                          /* GPUMIX TRDC transfer error interrupt*/
-    .long   Reserved270_IRQHandler                          /* HSIOMIX TRDC transfer error interrupt*/
-    .long   Reserved271_IRQHandler                          /* VPUMIX TRDC transfer error interrupt*/
-    .long   Reserved272_IRQHandler                          /* AONMIX ERM Single bit corrected ECC Error*/
-    .long   Reserved273_IRQHandler                          /* M7MIX ERM Single bit corrected ECC Error*/
-    .long   Reserved274_IRQHandler                          /* WAKEUPMIX ERM Single bit corrected ECC Error*/
-    .long   Reserved275_IRQHandler                          /* NPUMIX ERM Single bit corrected ECC Error*/
-    .long   Reserved276_IRQHandler                          /* WAKEUPMIX ACP EDMA error interrupt*/
-    .long   Reserved277_IRQHandler                          /* OCRAM_C ECC multiple bit or address error*/
-    .long   Reserved278_IRQHandler                          /* CAMERAMIX Cortex-M0+ Cache write-buffer error*/
-    .long   Reserved279_IRQHandler                          /* CAMERAMIX Cortex-M0+ Cache data parity error*/
-    .long   Reserved280_IRQHandler                          /* V2X-FH MU APSHE (SHE) interrupt*/
-    .long   Reserved281_IRQHandler                          /* V2X-FH MU SCU/APDEBUG (DEBUG) interrupt*/
+    .long   Reserved266_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved267_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved268_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved269_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved270_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved271_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved272_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved273_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved274_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved275_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved276_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved277_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved278_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved279_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved280_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved281_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved282_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved283_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved284_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved285_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved286_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved287_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved288_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved289_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved290_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved291_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved292_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved293_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved294_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved295_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved296_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved297_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved298_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved299_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved300_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved301_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved302_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved303_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved304_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved305_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved306_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved307_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved308_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved309_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved310_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved311_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved312_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved313_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved314_IRQHandler                          /* CAMERAMIX TRDC transfer error interrupt*/
+    .long   Reserved315_IRQHandler                          /* DISPLAYMIX TRDC transfer error interrupt*/
+    .long   Reserved316_IRQHandler                          /* NETCMIX TRDC transfer error interrupt*/
+    .long   Reserved317_IRQHandler                          /* GPUMIX TRDC transfer error interrupt*/
+    .long   Reserved318_IRQHandler                          /* HSIOMIX TRDC transfer error interrupt*/
+    .long   Reserved319_IRQHandler                          /* VPUMIX TRDC transfer error interrupt*/
+    .long   Reserved320_IRQHandler                          /* AONMIX ERM Single bit corrected ECC Error*/
+    .long   Reserved321_IRQHandler                          /* M7MIX ERM Single bit corrected ECC Error*/
+    .long   Reserved322_IRQHandler                          /* WAKEUPMIX ERM Single bit corrected ECC Error*/
+    .long   Reserved323_IRQHandler                          /* NPUMIX ERM Single bit corrected ECC Error*/
+    .long   Reserved324_IRQHandler                          /* WAKEUPMIX ACP EDMA error interrupt*/
+    .long   Reserved325_IRQHandler                          /* OCRAM_C ECC multiple bit or address error*/
+    .long   Reserved326_IRQHandler                          /* CAMERAMIX Cortex-M0+ Cache write-buffer error*/
+    .long   Reserved327_IRQHandler                          /* CAMERAMIX Cortex-M0+ Cache data parity error*/
+    .long   Reserved328_IRQHandler                          /* V2X-FH MU APSHE (SHE) interrupt*/
+    .long   Reserved329_IRQHandler                          /* V2X-FH MU SCU/APDEBUG (DEBUG) interrupt*/
+    .long   Reserved330_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved331_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved332_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved333_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved334_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved335_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved336_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved337_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved338_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved339_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved340_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved341_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved342_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved343_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved344_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved345_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved346_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved347_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved348_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved349_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved350_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved351_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved352_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved353_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved354_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved355_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved356_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved357_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved358_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved359_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved360_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved361_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved362_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved363_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved364_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved365_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved366_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved367_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved368_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved369_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved370_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved371_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved372_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved373_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved374_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved375_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved376_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved377_IRQHandler                          /* Reserved interrupt*/
     .long   DMA5_3_0_1_IRQHandler                           /* eDMA3 channel 0/1 interrupt*/
     .long   DMA5_3_2_3_IRQHandler                           /* eDMA3 channel 2/3 interrupt*/
     .long   DMA5_3_4_5_IRQHandler                           /* eDMA3 channel 4/5 interrupt*/
@@ -318,8 +414,56 @@ __isr_vector:
     .long   DMA5_3_22_23_IRQHandler                         /* eDMA3 channel 22/23 interrupt*/
     .long   DMA5_3_24_25_IRQHandler                         /* eDMA3 channel 24/25 interrupt*/
     .long   DMA5_3_26_27_IRQHandler                         /* eDMA3 channel 26/27 interrupt*/
-    .long   DMA5_3_28_29_IRQHandler                         /* eDMA3 channel 29/29 interrupt*/
+    .long   DMA5_3_28_29_IRQHandler                         /* eDMA3 channel 28/29 interrupt*/
     .long   DMA5_3_30_31_IRQHandler                         /* eDMA3 channel 30/31 interrupt*/
+    .long   Reserved394_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved395_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved396_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved397_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved398_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved399_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved400_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved401_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved402_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved403_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved404_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved405_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved406_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved407_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved408_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved409_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved410_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved411_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved412_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved413_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved414_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved415_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved416_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved417_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved418_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved419_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved420_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved421_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved422_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved423_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved424_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved425_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved426_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved427_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved428_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved429_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved430_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved431_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved432_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved433_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved434_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved435_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved436_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved437_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved438_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved439_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved440_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved441_IRQHandler                          /* Reserved interrupt*/
     .long   DMA5_3_32_33_IRQHandler                         /* eDMA3 channel 32/33 interrupt*/
     .long   DMA5_3_34_35_IRQHandler                         /* eDMA3 channel 34/35 interrupt*/
     .long   DMA5_3_36_37_IRQHandler                         /* eDMA3 channel 36/37 interrupt*/
@@ -336,70 +480,310 @@ __isr_vector:
     .long   DMA5_3_58_59_IRQHandler                         /* eDMA3 channel 58/59 interrupt*/
     .long   DMA5_3_60_61_IRQHandler                         /* eDMA3 channel 60/61 interrupt*/
     .long   DMA5_3_62_63_IRQHandler                         /* eDMA3 channel 62/63 interrupt*/
-    .long   Reserved314_IRQHandler                          /* GPUMIX GPU Interrupt*/
-    .long   Reserved315_IRQHandler                          /* GPUMIX Job Interrupt*/
-    .long   Reserved316_IRQHandler                          /* GPUMIX MMU Interrupt*/
-    .long   Reserved317_IRQHandler                          /* Reserved INTERRUPT*/
-    .long   Reserved318_IRQHandler                          /* Reserved interrupt*/
-    .long   Reserved319_IRQHandler                          /* Reserved interrupt*/
-    .long   Reserved320_IRQHandler                          /* Reserved interrupt*/
-    .long   Reserved321_IRQHandler                          /* Reserved interrupt*/
-    .long   Reserved322_IRQHandler                          /* Reserved interrupt*/
-    .long   Reserved323_IRQHandler                          /* Reserved interrupt*/
-    .long   Reserved324_IRQHandler                          /* Reserved interrupt*/
-    .long   Reserved325_IRQHandler                          /* Reserved interrupt*/
-    .long   Reserved326_IRQHandler                          /* Reserved interrupt*/
-    .long   Reserved327_IRQHandler                          /* Reserved interrupt*/
-    .long   Reserved328_IRQHandler                          /* Reserved interrupt*/
-    .long   Reserved329_IRQHandler                          /* Reserved interrupt*/
-    .long   Reserved330_IRQHandler                          /* NETC iEPRC PCI INT*/
-    .long   Reserved331_IRQHandler                          /* NETC iEPRC PCI INT*/
-    .long   Reserved332_IRQHandler                          /* PCIe Controller 1 INTA*/
-    .long   Reserved333_IRQHandler                          /* PCIe Controller 1 INTB*/
-    .long   Reserved334_IRQHandler                          /* PCIe Controller 1 INTC*/
-    .long   Reserved335_IRQHandler                          /* PCIe Controller 1 INTD*/
-    .long   Reserved336_IRQHandler                          /* PCIe interrupts*/
-    .long   Reserved337_IRQHandler                          /* PCIe Controller EDMA channel interrupt*/
-    .long   Reserved338_IRQHandler                          /* PCIe Controller 1 INTA*/
-    .long   Reserved339_IRQHandler                          /* PCIe Controller 1 INTB*/
-    .long   Reserved340_IRQHandler                          /* PCIe Controller 1 INTC*/
-    .long   Reserved341_IRQHandler                          /* PCIe Controller 1 INTD*/
-    .long   Reserved342_IRQHandler                          /* PCIe miscellaneous interrupts*/
-    .long   Reserved343_IRQHandler                          /* PCIe Controller EDMA channel interrupt*/
-    .long   Reserved344_IRQHandler                          /* Wakeup interrupt from CLKREQ#, WAKEUP#, BEACON_DET*/
-    .long   Reserved345_IRQHandler                          /* NPUMIX Functional interrupt*/
-    .long   Reserved346_IRQHandler                          /* DISPLAYMIX Real-time traffic TBU: Fault Handling RAS Interrupt for a contained error*/
-    .long   Reserved347_IRQHandler                          /* DISPLAYMIX Real-time traffic TBU: Error Handling RAS Interrupt for an uncontained error*/
-    .long   Reserved348_IRQHandler                          /* DISPLAYMIX Real-time traffic TBU: Critical Error Interrupt for an uncontainable error*/
-    .long   Reserved349_IRQHandler                          /* DISPLAYMIX Real-time traffic TBU: PMU Interrupt*/
-    .long   Reserved350_IRQHandler                          /* TCU Event queue, secure interrupt*/
-    .long   Reserved351_IRQHandler                          /* TCU Event queue, non-secure interrupt*/
-    .long   Reserved352_IRQHandler                          /* TCU SYNC complete, non-secure interrupt*/
-    .long   Reserved353_IRQHandler                          /* TCU SYNC complete, secure interrupt*/
-    .long   Reserved354_IRQHandler                          /* TCU global non-secure interrupt*/
-    .long   Reserved355_IRQHandler                          /* TCU global secure interrupt*/
-    .long   Reserved356_IRQHandler                          /* TCU fault handling RAS interrupt for a contained error*/
-    .long   Reserved357_IRQHandler                          /* TCU error recovery RAS interrupt for an uncontained error*/
-    .long   Reserved358_IRQHandler                          /* TCU critical error interrupt, for an uncontainable uncorrected error*/
-    .long   Reserved359_IRQHandler                          /* TCU PMU interrupt*/
-    .long   Reserved360_IRQHandler                          /* TCU Page Request Interface*/
-    .long   Reserved361_IRQHandler                          /* SRC GPC Low Power Handshake Gasket interrupt request for system management*/
-    .long   Reserved362_IRQHandler                          /* CAMERAMIX MU Ored of all*/
-    .long   Reserved363_IRQHandler                          /* CAMERAMIX MU Ored of all*/
-    .long   Reserved364_IRQHandler                          /* CAMERAMIX MU Ored of all*/
-    .long   Reserved365_IRQHandler                          /* CAMERAMIX MU Ored of all*/
-    .long   Reserved366_IRQHandler                          /* CAMERAMIX MU Ored of all*/
-    .long   Reserved367_IRQHandler                          /* CAMERAMIX MU Ored of all*/
-    .long   Reserved368_IRQHandler                          /* CAMERAMIX MU Ored of all*/
-    .long   Reserved369_IRQHandler                          /* CAMERAMIX MU Ored of all*/
-    .long   Reserved370_IRQHandler                          /* CAMERAMIX ISI interrupt Channel 1*/
-    .long   Reserved371_IRQHandler                          /* CAMERAMIX ISI interrupt Channel 2*/
-    .long   Reserved372_IRQHandler                          /* CAMERAMIX ISI interrupt Channel 3*/
-    .long   Reserved373_IRQHandler                          /* CAMERAMIX ISI interrupt Channel 4*/
-    .long   Reserved374_IRQHandler                          /* CAMERAMIX ISI interrupt Channel 5*/
-    .long   Reserved375_IRQHandler                          /* CAMERAMIX ISI interrupt Channel 6*/
-    .long   Reserved376_IRQHandler                          /* CAMERAMIX ISI interrupt Channel 7*/
+    .long   Reserved458_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved459_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved460_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved461_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved462_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved463_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved464_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved465_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved466_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved467_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved468_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved469_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved470_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved471_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved472_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved473_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved474_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved475_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved476_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved477_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved478_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved479_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved480_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved481_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved482_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved483_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved484_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved485_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved486_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved487_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved488_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved489_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved490_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved491_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved492_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved493_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved494_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved495_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved496_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved497_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved498_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved499_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved500_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved501_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved502_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved503_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved504_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved505_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved506_IRQHandler                          /* GPUMIX GPU Interrupt*/
+    .long   Reserved507_IRQHandler                          /* GPUMIX Job Interrupt*/
+    .long   Reserved508_IRQHandler                          /* GPUMIX MMU Interrupt*/
+    .long   Reserved509_IRQHandler                          /* Reserved INTERRUPT*/
+    .long   Reserved510_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved511_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved512_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved513_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved514_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved515_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved516_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved517_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved518_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved519_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved520_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved521_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved522_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved523_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved524_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved525_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved526_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved527_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved528_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved529_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved530_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved531_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved532_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved533_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved534_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved535_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved536_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved537_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved538_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved539_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved540_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved541_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved542_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved543_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved544_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved545_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved546_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved547_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved548_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved549_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved550_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved551_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved552_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved553_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved554_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved555_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved556_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved557_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved558_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved559_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved560_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved561_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved562_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved563_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved564_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved565_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved566_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved567_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved568_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved569_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved570_IRQHandler                          /* NETC iEPRC PCI INT*/
+    .long   Reserved571_IRQHandler                          /* NETC iEPRC PCI INT*/
+    .long   Reserved572_IRQHandler                          /* PCIe Controller 1 INTA*/
+    .long   Reserved573_IRQHandler                          /* PCIe Controller 1 INTB*/
+    .long   Reserved574_IRQHandler                          /* PCIe Controller 1 INTC*/
+    .long   Reserved575_IRQHandler                          /* PCIe Controller 1 INTD*/
+    .long   Reserved576_IRQHandler                          /* PCIe interrupts*/
+    .long   Reserved577_IRQHandler                          /* PCIe Controller EDMA channel interrupt*/
+    .long   Reserved578_IRQHandler                          /* PCIe Controller 1 INTA*/
+    .long   Reserved579_IRQHandler                          /* PCIe Controller 1 INTB*/
+    .long   Reserved580_IRQHandler                          /* PCIe Controller 1 INTC*/
+    .long   Reserved581_IRQHandler                          /* PCIe Controller 1 INTD*/
+    .long   Reserved582_IRQHandler                          /* PCIe miscellaneous interrupts*/
+    .long   Reserved583_IRQHandler                          /* PCIe Controller EDMA channel interrupt*/
+    .long   Reserved584_IRQHandler                          /* Wakeup interrupt from CLKREQ#, WAKEUP#, BEACON_DET*/
+    .long   Reserved585_IRQHandler                          /* NPUMIX Functional interrupt*/
+    .long   Reserved586_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved587_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved588_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved589_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved590_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved591_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved592_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved593_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved594_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved595_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved596_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved597_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved598_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved599_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved600_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved601_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved602_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved603_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved604_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved605_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved606_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved607_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved608_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved609_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved610_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved611_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved612_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved613_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved614_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved615_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved616_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved617_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved618_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved619_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved620_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved621_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved622_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved623_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved624_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved625_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved626_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved627_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved628_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved629_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved630_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved631_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved632_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved633_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved634_IRQHandler                          /* DISPLAYMIX Real-time traffic TBU: Fault Handling RAS Interrupt for a contained error*/
+    .long   Reserved635_IRQHandler                          /* DISPLAYMIX Real-time traffic TBU: Error Handling RAS Interrupt for an uncontained error*/
+    .long   Reserved636_IRQHandler                          /* DISPLAYMIX Real-time traffic TBU: Critical Error Interrupt for an uncontainable error*/
+    .long   Reserved637_IRQHandler                          /* DISPLAYMIX Real-time traffic TBU: PMU Interrupt*/
+    .long   Reserved638_IRQHandler                          /* TCU Event queue, secure interrupt*/
+    .long   Reserved639_IRQHandler                          /* TCU Event queue, non-secure interrupt*/
+    .long   Reserved640_IRQHandler                          /* TCU SYNC complete, non-secure interrupt*/
+    .long   Reserved641_IRQHandler                          /* TCU SYNC complete, secure interrupt*/
+    .long   Reserved642_IRQHandler                          /* TCU global non-secure interrupt*/
+    .long   Reserved643_IRQHandler                          /* TCU global secure interrupt*/
+    .long   Reserved644_IRQHandler                          /* TCU fault handling RAS interrupt for a contained error*/
+    .long   Reserved645_IRQHandler                          /* TCU error recovery RAS interrupt for an uncontained error*/
+    .long   Reserved646_IRQHandler                          /* TCU critical error interrupt, for an uncontainable uncorrected error*/
+    .long   Reserved647_IRQHandler                          /* TCU PMU interrupt*/
+    .long   Reserved648_IRQHandler                          /* TCU Page Request Interface*/
+    .long   Reserved649_IRQHandler                          /* SRC GPC Low Power Handshake Gasket interrupt request for system management*/
+    .long   Reserved650_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved651_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved652_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved653_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved654_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved655_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved656_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved657_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved658_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved659_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved660_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved661_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved662_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved663_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved664_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved665_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved666_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved667_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved668_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved669_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved670_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved671_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved672_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved673_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved674_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved675_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved676_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved677_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved678_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved679_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved680_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved681_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved682_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved683_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved684_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved685_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved686_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved687_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved688_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved689_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved690_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved691_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved692_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved693_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved694_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved695_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved696_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved697_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved698_IRQHandler                          /* CAMERAMIX MU Ored of all*/
+    .long   Reserved699_IRQHandler                          /* CAMERAMIX MU Ored of all*/
+    .long   Reserved700_IRQHandler                          /* CAMERAMIX MU Ored of all*/
+    .long   Reserved701_IRQHandler                          /* CAMERAMIX MU Ored of all*/
+    .long   Reserved702_IRQHandler                          /* CAMERAMIX MU Ored of all*/
+    .long   Reserved703_IRQHandler                          /* CAMERAMIX MU Ored of all*/
+    .long   Reserved704_IRQHandler                          /* CAMERAMIX MU Ored of all*/
+    .long   Reserved705_IRQHandler                          /* CAMERAMIX MU Ored of all*/
+    .long   Reserved706_IRQHandler                          /* CAMERAMIX ISI interrupt Channel 1*/
+    .long   Reserved707_IRQHandler                          /* CAMERAMIX ISI interrupt Channel 2*/
+    .long   Reserved708_IRQHandler                          /* CAMERAMIX ISI interrupt Channel 3*/
+    .long   Reserved709_IRQHandler                          /* CAMERAMIX ISI interrupt Channel 4*/
+    .long   Reserved710_IRQHandler                          /* CAMERAMIX ISI interrupt Channel 5*/
+    .long   Reserved711_IRQHandler                          /* CAMERAMIX ISI interrupt Channel 6*/
+    .long   Reserved712_IRQHandler                          /* CAMERAMIX ISI interrupt Channel 7*/
     .long   DMA5_4_ERROR_IRQHandler                         /* CAMERAMIX EDMA error interrupt*/
+    .long   Reserved714_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved715_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved716_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved717_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved718_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved719_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved720_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved721_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved722_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved723_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved724_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved725_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved726_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved727_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved728_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved729_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved730_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved731_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved732_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved733_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved734_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved735_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved736_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved737_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved738_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved739_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved740_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved741_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved742_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved743_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved744_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved745_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved746_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved747_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved748_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved749_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved750_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved751_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved752_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved753_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved754_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved755_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved756_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved757_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved758_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved759_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved760_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved761_IRQHandler                          /* Reserved interrupt*/
     .long   DMA5_4_0_1_IRQHandler                           /* CAMERAMIX EDMA channel 0 interrupt*/
     .long   DMA5_4_2_3_IRQHandler                           /* CAMERAMIX EDMA channel 2 interrupt*/
     .long   DMA5_4_4_5_IRQHandler                           /* CAMERAMIX EDMA channel 4 interrupt*/
@@ -416,14 +800,62 @@ __isr_vector:
     .long   DMA5_4_26_27_IRQHandler                         /* CAMERAMIX EDMA channel 26 interrupt*/
     .long   DMA5_4_28_29_IRQHandler                         /* CAMERAMIX EDMA channel 28 interrupt*/
     .long   DMA5_4_30_31_IRQHandler                         /* CAMERAMIX EDMA channel 30 interrupt*/
-    .long   Reserved394_IRQHandler                          /* CAMERAMIX CSI Formatting Unit 1: Buffer overflow*/
-    .long   Reserved395_IRQHandler                          /* CAMERAMIX CSI Formatting Unit 1: Interlaced Error*/
-    .long   Reserved396_IRQHandler                          /* CAMERAMIX CSI Formatting Unit 1: Pixel Data Type Error*/
-    .long   Reserved397_IRQHandler                          /* CAMERAMIX CSI Formatting Unit 2: Buffer overflow*/
-    .long   Reserved398_IRQHandler                          /* CAMERAMIX CSI Formatting Unit 2: Interlaced Error*/
-    .long   Reserved399_IRQHandler                          /* CAMERAMIX CSI Formatting Unit 2: Pixel Data Type Error*/
-    .long   Reserved400_IRQHandler                          /* CAMERAMIX CSI1*/
-    .long   Reserved401_IRQHandler                          /* CAMERAMIX CSI2*/
+    .long   Reserved778_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved779_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved780_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved781_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved782_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved783_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved784_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved785_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved786_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved787_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved788_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved789_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved790_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved791_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved792_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved793_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved794_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved795_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved796_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved797_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved798_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved799_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved800_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved801_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved802_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved803_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved804_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved805_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved806_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved807_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved808_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved809_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved810_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved811_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved812_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved813_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved814_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved815_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved816_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved817_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved818_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved819_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved820_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved821_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved822_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved823_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved824_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved825_IRQHandler                          /* Reserved interrupt*/
+    .long   Reserved826_IRQHandler                          /* CAMERAMIX CSI Formatting Unit 1: Buffer overflow*/
+    .long   Reserved827_IRQHandler                          /* CAMERAMIX CSI Formatting Unit 1: Interlaced Error*/
+    .long   Reserved828_IRQHandler                          /* CAMERAMIX CSI Formatting Unit 1: Pixel Data Type Error*/
+    .long   Reserved829_IRQHandler                          /* CAMERAMIX CSI Formatting Unit 2: Buffer overflow*/
+    .long   Reserved830_IRQHandler                          /* CAMERAMIX CSI Formatting Unit 2: Interlaced Error*/
+    .long   Reserved831_IRQHandler                          /* CAMERAMIX CSI Formatting Unit 2: Pixel Data Type Error*/
+    .long   Reserved832_IRQHandler                          /* CAMERAMIX CSI1*/
+    .long   Reserved833_IRQHandler                          /* CAMERAMIX CSI2*/
     .long   0xFFFFFFFF                                      /*  Reserved for user TRIM value*/
 
     .size   __isr_vector, . - __isr_vector
@@ -2463,7 +2895,7 @@ DMA5_4_30_31_IRQHandler:
     def_irq_handler    DISP_IRQSTEER7_DriverIRQHandler
     def_irq_handler    Reserved236_IRQHandler
     def_irq_handler    ISI_IRQHandler
-    def_irq_handler    Reserved238_IRQHandler
+    def_irq_handler    ISP_IRQHandler
     def_irq_handler    Reserved239_IRQHandler
     def_irq_handler    IRQSTEER_0_DriverIRQHandler
     def_irq_handler    IRQSTEER_1_DriverIRQHandler
@@ -2507,38 +2939,38 @@ DMA5_4_30_31_IRQHandler:
     def_irq_handler    Reserved279_IRQHandler
     def_irq_handler    Reserved280_IRQHandler
     def_irq_handler    Reserved281_IRQHandler
-    def_irq_handler    DMA5_3_0_1_DriverIRQHandler
-    def_irq_handler    DMA5_3_2_3_DriverIRQHandler
-    def_irq_handler    DMA5_3_4_5_DriverIRQHandler
-    def_irq_handler    DMA5_3_6_7_DriverIRQHandler
-    def_irq_handler    DMA5_3_8_9_DriverIRQHandler
-    def_irq_handler    DMA5_3_10_11_DriverIRQHandler
-    def_irq_handler    DMA5_3_12_13_DriverIRQHandler
-    def_irq_handler    DMA5_3_14_15_DriverIRQHandler
-    def_irq_handler    DMA5_3_16_17_DriverIRQHandler
-    def_irq_handler    DMA5_3_18_19_DriverIRQHandler
-    def_irq_handler    DMA5_3_20_21_DriverIRQHandler
-    def_irq_handler    DMA5_3_22_23_DriverIRQHandler
-    def_irq_handler    DMA5_3_24_25_DriverIRQHandler
-    def_irq_handler    DMA5_3_26_27_DriverIRQHandler
-    def_irq_handler    DMA5_3_28_29_DriverIRQHandler
-    def_irq_handler    DMA5_3_30_31_DriverIRQHandler
-    def_irq_handler    DMA5_3_32_33_DriverIRQHandler
-    def_irq_handler    DMA5_3_34_35_DriverIRQHandler
-    def_irq_handler    DMA5_3_36_37_DriverIRQHandler
-    def_irq_handler    DMA5_3_38_39_DriverIRQHandler
-    def_irq_handler    DMA5_3_40_41_DriverIRQHandler
-    def_irq_handler    DMA5_3_42_43_DriverIRQHandler
-    def_irq_handler    DMA5_3_44_45_DriverIRQHandler
-    def_irq_handler    DMA5_3_46_47_DriverIRQHandler
-    def_irq_handler    DMA5_3_48_49_DriverIRQHandler
-    def_irq_handler    DMA5_3_50_51_DriverIRQHandler
-    def_irq_handler    DMA5_3_52_53_DriverIRQHandler
-    def_irq_handler    DMA5_3_54_55_DriverIRQHandler
-    def_irq_handler    DMA5_3_56_57_DriverIRQHandler
-    def_irq_handler    DMA5_3_58_59_DriverIRQHandler
-    def_irq_handler    DMA5_3_60_61_DriverIRQHandler
-    def_irq_handler    DMA5_3_62_63_DriverIRQHandler
+    def_irq_handler    Reserved282_IRQHandler
+    def_irq_handler    Reserved283_IRQHandler
+    def_irq_handler    Reserved284_IRQHandler
+    def_irq_handler    Reserved285_IRQHandler
+    def_irq_handler    Reserved286_IRQHandler
+    def_irq_handler    Reserved287_IRQHandler
+    def_irq_handler    Reserved288_IRQHandler
+    def_irq_handler    Reserved289_IRQHandler
+    def_irq_handler    Reserved290_IRQHandler
+    def_irq_handler    Reserved291_IRQHandler
+    def_irq_handler    Reserved292_IRQHandler
+    def_irq_handler    Reserved293_IRQHandler
+    def_irq_handler    Reserved294_IRQHandler
+    def_irq_handler    Reserved295_IRQHandler
+    def_irq_handler    Reserved296_IRQHandler
+    def_irq_handler    Reserved297_IRQHandler
+    def_irq_handler    Reserved298_IRQHandler
+    def_irq_handler    Reserved299_IRQHandler
+    def_irq_handler    Reserved300_IRQHandler
+    def_irq_handler    Reserved301_IRQHandler
+    def_irq_handler    Reserved302_IRQHandler
+    def_irq_handler    Reserved303_IRQHandler
+    def_irq_handler    Reserved304_IRQHandler
+    def_irq_handler    Reserved305_IRQHandler
+    def_irq_handler    Reserved306_IRQHandler
+    def_irq_handler    Reserved307_IRQHandler
+    def_irq_handler    Reserved308_IRQHandler
+    def_irq_handler    Reserved309_IRQHandler
+    def_irq_handler    Reserved310_IRQHandler
+    def_irq_handler    Reserved311_IRQHandler
+    def_irq_handler    Reserved312_IRQHandler
+    def_irq_handler    Reserved313_IRQHandler
     def_irq_handler    Reserved314_IRQHandler
     def_irq_handler    Reserved315_IRQHandler
     def_irq_handler    Reserved316_IRQHandler
@@ -2602,7 +3034,391 @@ DMA5_4_30_31_IRQHandler:
     def_irq_handler    Reserved374_IRQHandler
     def_irq_handler    Reserved375_IRQHandler
     def_irq_handler    Reserved376_IRQHandler
+    def_irq_handler    Reserved377_IRQHandler
+    def_irq_handler    DMA5_3_0_1_DriverIRQHandler
+    def_irq_handler    DMA5_3_2_3_DriverIRQHandler
+    def_irq_handler    DMA5_3_4_5_DriverIRQHandler
+    def_irq_handler    DMA5_3_6_7_DriverIRQHandler
+    def_irq_handler    DMA5_3_8_9_DriverIRQHandler
+    def_irq_handler    DMA5_3_10_11_DriverIRQHandler
+    def_irq_handler    DMA5_3_12_13_DriverIRQHandler
+    def_irq_handler    DMA5_3_14_15_DriverIRQHandler
+    def_irq_handler    DMA5_3_16_17_DriverIRQHandler
+    def_irq_handler    DMA5_3_18_19_DriverIRQHandler
+    def_irq_handler    DMA5_3_20_21_DriverIRQHandler
+    def_irq_handler    DMA5_3_22_23_DriverIRQHandler
+    def_irq_handler    DMA5_3_24_25_DriverIRQHandler
+    def_irq_handler    DMA5_3_26_27_DriverIRQHandler
+    def_irq_handler    DMA5_3_28_29_DriverIRQHandler
+    def_irq_handler    DMA5_3_30_31_DriverIRQHandler
+    def_irq_handler    Reserved394_IRQHandler
+    def_irq_handler    Reserved395_IRQHandler
+    def_irq_handler    Reserved396_IRQHandler
+    def_irq_handler    Reserved397_IRQHandler
+    def_irq_handler    Reserved398_IRQHandler
+    def_irq_handler    Reserved399_IRQHandler
+    def_irq_handler    Reserved400_IRQHandler
+    def_irq_handler    Reserved401_IRQHandler
+    def_irq_handler    Reserved402_IRQHandler
+    def_irq_handler    Reserved403_IRQHandler
+    def_irq_handler    Reserved404_IRQHandler
+    def_irq_handler    Reserved405_IRQHandler
+    def_irq_handler    Reserved406_IRQHandler
+    def_irq_handler    Reserved407_IRQHandler
+    def_irq_handler    Reserved408_IRQHandler
+    def_irq_handler    Reserved409_IRQHandler
+    def_irq_handler    Reserved410_IRQHandler
+    def_irq_handler    Reserved411_IRQHandler
+    def_irq_handler    Reserved412_IRQHandler
+    def_irq_handler    Reserved413_IRQHandler
+    def_irq_handler    Reserved414_IRQHandler
+    def_irq_handler    Reserved415_IRQHandler
+    def_irq_handler    Reserved416_IRQHandler
+    def_irq_handler    Reserved417_IRQHandler
+    def_irq_handler    Reserved418_IRQHandler
+    def_irq_handler    Reserved419_IRQHandler
+    def_irq_handler    Reserved420_IRQHandler
+    def_irq_handler    Reserved421_IRQHandler
+    def_irq_handler    Reserved422_IRQHandler
+    def_irq_handler    Reserved423_IRQHandler
+    def_irq_handler    Reserved424_IRQHandler
+    def_irq_handler    Reserved425_IRQHandler
+    def_irq_handler    Reserved426_IRQHandler
+    def_irq_handler    Reserved427_IRQHandler
+    def_irq_handler    Reserved428_IRQHandler
+    def_irq_handler    Reserved429_IRQHandler
+    def_irq_handler    Reserved430_IRQHandler
+    def_irq_handler    Reserved431_IRQHandler
+    def_irq_handler    Reserved432_IRQHandler
+    def_irq_handler    Reserved433_IRQHandler
+    def_irq_handler    Reserved434_IRQHandler
+    def_irq_handler    Reserved435_IRQHandler
+    def_irq_handler    Reserved436_IRQHandler
+    def_irq_handler    Reserved437_IRQHandler
+    def_irq_handler    Reserved438_IRQHandler
+    def_irq_handler    Reserved439_IRQHandler
+    def_irq_handler    Reserved440_IRQHandler
+    def_irq_handler    Reserved441_IRQHandler
+    def_irq_handler    DMA5_3_32_33_DriverIRQHandler
+    def_irq_handler    DMA5_3_34_35_DriverIRQHandler
+    def_irq_handler    DMA5_3_36_37_DriverIRQHandler
+    def_irq_handler    DMA5_3_38_39_DriverIRQHandler
+    def_irq_handler    DMA5_3_40_41_DriverIRQHandler
+    def_irq_handler    DMA5_3_42_43_DriverIRQHandler
+    def_irq_handler    DMA5_3_44_45_DriverIRQHandler
+    def_irq_handler    DMA5_3_46_47_DriverIRQHandler
+    def_irq_handler    DMA5_3_48_49_DriverIRQHandler
+    def_irq_handler    DMA5_3_50_51_DriverIRQHandler
+    def_irq_handler    DMA5_3_52_53_DriverIRQHandler
+    def_irq_handler    DMA5_3_54_55_DriverIRQHandler
+    def_irq_handler    DMA5_3_56_57_DriverIRQHandler
+    def_irq_handler    DMA5_3_58_59_DriverIRQHandler
+    def_irq_handler    DMA5_3_60_61_DriverIRQHandler
+    def_irq_handler    DMA5_3_62_63_DriverIRQHandler
+    def_irq_handler    Reserved458_IRQHandler
+    def_irq_handler    Reserved459_IRQHandler
+    def_irq_handler    Reserved460_IRQHandler
+    def_irq_handler    Reserved461_IRQHandler
+    def_irq_handler    Reserved462_IRQHandler
+    def_irq_handler    Reserved463_IRQHandler
+    def_irq_handler    Reserved464_IRQHandler
+    def_irq_handler    Reserved465_IRQHandler
+    def_irq_handler    Reserved466_IRQHandler
+    def_irq_handler    Reserved467_IRQHandler
+    def_irq_handler    Reserved468_IRQHandler
+    def_irq_handler    Reserved469_IRQHandler
+    def_irq_handler    Reserved470_IRQHandler
+    def_irq_handler    Reserved471_IRQHandler
+    def_irq_handler    Reserved472_IRQHandler
+    def_irq_handler    Reserved473_IRQHandler
+    def_irq_handler    Reserved474_IRQHandler
+    def_irq_handler    Reserved475_IRQHandler
+    def_irq_handler    Reserved476_IRQHandler
+    def_irq_handler    Reserved477_IRQHandler
+    def_irq_handler    Reserved478_IRQHandler
+    def_irq_handler    Reserved479_IRQHandler
+    def_irq_handler    Reserved480_IRQHandler
+    def_irq_handler    Reserved481_IRQHandler
+    def_irq_handler    Reserved482_IRQHandler
+    def_irq_handler    Reserved483_IRQHandler
+    def_irq_handler    Reserved484_IRQHandler
+    def_irq_handler    Reserved485_IRQHandler
+    def_irq_handler    Reserved486_IRQHandler
+    def_irq_handler    Reserved487_IRQHandler
+    def_irq_handler    Reserved488_IRQHandler
+    def_irq_handler    Reserved489_IRQHandler
+    def_irq_handler    Reserved490_IRQHandler
+    def_irq_handler    Reserved491_IRQHandler
+    def_irq_handler    Reserved492_IRQHandler
+    def_irq_handler    Reserved493_IRQHandler
+    def_irq_handler    Reserved494_IRQHandler
+    def_irq_handler    Reserved495_IRQHandler
+    def_irq_handler    Reserved496_IRQHandler
+    def_irq_handler    Reserved497_IRQHandler
+    def_irq_handler    Reserved498_IRQHandler
+    def_irq_handler    Reserved499_IRQHandler
+    def_irq_handler    Reserved500_IRQHandler
+    def_irq_handler    Reserved501_IRQHandler
+    def_irq_handler    Reserved502_IRQHandler
+    def_irq_handler    Reserved503_IRQHandler
+    def_irq_handler    Reserved504_IRQHandler
+    def_irq_handler    Reserved505_IRQHandler
+    def_irq_handler    Reserved506_IRQHandler
+    def_irq_handler    Reserved507_IRQHandler
+    def_irq_handler    Reserved508_IRQHandler
+    def_irq_handler    Reserved509_IRQHandler
+    def_irq_handler    Reserved510_IRQHandler
+    def_irq_handler    Reserved511_IRQHandler
+    def_irq_handler    Reserved512_IRQHandler
+    def_irq_handler    Reserved513_IRQHandler
+    def_irq_handler    Reserved514_IRQHandler
+    def_irq_handler    Reserved515_IRQHandler
+    def_irq_handler    Reserved516_IRQHandler
+    def_irq_handler    Reserved517_IRQHandler
+    def_irq_handler    Reserved518_IRQHandler
+    def_irq_handler    Reserved519_IRQHandler
+    def_irq_handler    Reserved520_IRQHandler
+    def_irq_handler    Reserved521_IRQHandler
+    def_irq_handler    Reserved522_IRQHandler
+    def_irq_handler    Reserved523_IRQHandler
+    def_irq_handler    Reserved524_IRQHandler
+    def_irq_handler    Reserved525_IRQHandler
+    def_irq_handler    Reserved526_IRQHandler
+    def_irq_handler    Reserved527_IRQHandler
+    def_irq_handler    Reserved528_IRQHandler
+    def_irq_handler    Reserved529_IRQHandler
+    def_irq_handler    Reserved530_IRQHandler
+    def_irq_handler    Reserved531_IRQHandler
+    def_irq_handler    Reserved532_IRQHandler
+    def_irq_handler    Reserved533_IRQHandler
+    def_irq_handler    Reserved534_IRQHandler
+    def_irq_handler    Reserved535_IRQHandler
+    def_irq_handler    Reserved536_IRQHandler
+    def_irq_handler    Reserved537_IRQHandler
+    def_irq_handler    Reserved538_IRQHandler
+    def_irq_handler    Reserved539_IRQHandler
+    def_irq_handler    Reserved540_IRQHandler
+    def_irq_handler    Reserved541_IRQHandler
+    def_irq_handler    Reserved542_IRQHandler
+    def_irq_handler    Reserved543_IRQHandler
+    def_irq_handler    Reserved544_IRQHandler
+    def_irq_handler    Reserved545_IRQHandler
+    def_irq_handler    Reserved546_IRQHandler
+    def_irq_handler    Reserved547_IRQHandler
+    def_irq_handler    Reserved548_IRQHandler
+    def_irq_handler    Reserved549_IRQHandler
+    def_irq_handler    Reserved550_IRQHandler
+    def_irq_handler    Reserved551_IRQHandler
+    def_irq_handler    Reserved552_IRQHandler
+    def_irq_handler    Reserved553_IRQHandler
+    def_irq_handler    Reserved554_IRQHandler
+    def_irq_handler    Reserved555_IRQHandler
+    def_irq_handler    Reserved556_IRQHandler
+    def_irq_handler    Reserved557_IRQHandler
+    def_irq_handler    Reserved558_IRQHandler
+    def_irq_handler    Reserved559_IRQHandler
+    def_irq_handler    Reserved560_IRQHandler
+    def_irq_handler    Reserved561_IRQHandler
+    def_irq_handler    Reserved562_IRQHandler
+    def_irq_handler    Reserved563_IRQHandler
+    def_irq_handler    Reserved564_IRQHandler
+    def_irq_handler    Reserved565_IRQHandler
+    def_irq_handler    Reserved566_IRQHandler
+    def_irq_handler    Reserved567_IRQHandler
+    def_irq_handler    Reserved568_IRQHandler
+    def_irq_handler    Reserved569_IRQHandler
+    def_irq_handler    Reserved570_IRQHandler
+    def_irq_handler    Reserved571_IRQHandler
+    def_irq_handler    Reserved572_IRQHandler
+    def_irq_handler    Reserved573_IRQHandler
+    def_irq_handler    Reserved574_IRQHandler
+    def_irq_handler    Reserved575_IRQHandler
+    def_irq_handler    Reserved576_IRQHandler
+    def_irq_handler    Reserved577_IRQHandler
+    def_irq_handler    Reserved578_IRQHandler
+    def_irq_handler    Reserved579_IRQHandler
+    def_irq_handler    Reserved580_IRQHandler
+    def_irq_handler    Reserved581_IRQHandler
+    def_irq_handler    Reserved582_IRQHandler
+    def_irq_handler    Reserved583_IRQHandler
+    def_irq_handler    Reserved584_IRQHandler
+    def_irq_handler    Reserved585_IRQHandler
+    def_irq_handler    Reserved586_IRQHandler
+    def_irq_handler    Reserved587_IRQHandler
+    def_irq_handler    Reserved588_IRQHandler
+    def_irq_handler    Reserved589_IRQHandler
+    def_irq_handler    Reserved590_IRQHandler
+    def_irq_handler    Reserved591_IRQHandler
+    def_irq_handler    Reserved592_IRQHandler
+    def_irq_handler    Reserved593_IRQHandler
+    def_irq_handler    Reserved594_IRQHandler
+    def_irq_handler    Reserved595_IRQHandler
+    def_irq_handler    Reserved596_IRQHandler
+    def_irq_handler    Reserved597_IRQHandler
+    def_irq_handler    Reserved598_IRQHandler
+    def_irq_handler    Reserved599_IRQHandler
+    def_irq_handler    Reserved600_IRQHandler
+    def_irq_handler    Reserved601_IRQHandler
+    def_irq_handler    Reserved602_IRQHandler
+    def_irq_handler    Reserved603_IRQHandler
+    def_irq_handler    Reserved604_IRQHandler
+    def_irq_handler    Reserved605_IRQHandler
+    def_irq_handler    Reserved606_IRQHandler
+    def_irq_handler    Reserved607_IRQHandler
+    def_irq_handler    Reserved608_IRQHandler
+    def_irq_handler    Reserved609_IRQHandler
+    def_irq_handler    Reserved610_IRQHandler
+    def_irq_handler    Reserved611_IRQHandler
+    def_irq_handler    Reserved612_IRQHandler
+    def_irq_handler    Reserved613_IRQHandler
+    def_irq_handler    Reserved614_IRQHandler
+    def_irq_handler    Reserved615_IRQHandler
+    def_irq_handler    Reserved616_IRQHandler
+    def_irq_handler    Reserved617_IRQHandler
+    def_irq_handler    Reserved618_IRQHandler
+    def_irq_handler    Reserved619_IRQHandler
+    def_irq_handler    Reserved620_IRQHandler
+    def_irq_handler    Reserved621_IRQHandler
+    def_irq_handler    Reserved622_IRQHandler
+    def_irq_handler    Reserved623_IRQHandler
+    def_irq_handler    Reserved624_IRQHandler
+    def_irq_handler    Reserved625_IRQHandler
+    def_irq_handler    Reserved626_IRQHandler
+    def_irq_handler    Reserved627_IRQHandler
+    def_irq_handler    Reserved628_IRQHandler
+    def_irq_handler    Reserved629_IRQHandler
+    def_irq_handler    Reserved630_IRQHandler
+    def_irq_handler    Reserved631_IRQHandler
+    def_irq_handler    Reserved632_IRQHandler
+    def_irq_handler    Reserved633_IRQHandler
+    def_irq_handler    Reserved634_IRQHandler
+    def_irq_handler    Reserved635_IRQHandler
+    def_irq_handler    Reserved636_IRQHandler
+    def_irq_handler    Reserved637_IRQHandler
+    def_irq_handler    Reserved638_IRQHandler
+    def_irq_handler    Reserved639_IRQHandler
+    def_irq_handler    Reserved640_IRQHandler
+    def_irq_handler    Reserved641_IRQHandler
+    def_irq_handler    Reserved642_IRQHandler
+    def_irq_handler    Reserved643_IRQHandler
+    def_irq_handler    Reserved644_IRQHandler
+    def_irq_handler    Reserved645_IRQHandler
+    def_irq_handler    Reserved646_IRQHandler
+    def_irq_handler    Reserved647_IRQHandler
+    def_irq_handler    Reserved648_IRQHandler
+    def_irq_handler    Reserved649_IRQHandler
+    def_irq_handler    Reserved650_IRQHandler
+    def_irq_handler    Reserved651_IRQHandler
+    def_irq_handler    Reserved652_IRQHandler
+    def_irq_handler    Reserved653_IRQHandler
+    def_irq_handler    Reserved654_IRQHandler
+    def_irq_handler    Reserved655_IRQHandler
+    def_irq_handler    Reserved656_IRQHandler
+    def_irq_handler    Reserved657_IRQHandler
+    def_irq_handler    Reserved658_IRQHandler
+    def_irq_handler    Reserved659_IRQHandler
+    def_irq_handler    Reserved660_IRQHandler
+    def_irq_handler    Reserved661_IRQHandler
+    def_irq_handler    Reserved662_IRQHandler
+    def_irq_handler    Reserved663_IRQHandler
+    def_irq_handler    Reserved664_IRQHandler
+    def_irq_handler    Reserved665_IRQHandler
+    def_irq_handler    Reserved666_IRQHandler
+    def_irq_handler    Reserved667_IRQHandler
+    def_irq_handler    Reserved668_IRQHandler
+    def_irq_handler    Reserved669_IRQHandler
+    def_irq_handler    Reserved670_IRQHandler
+    def_irq_handler    Reserved671_IRQHandler
+    def_irq_handler    Reserved672_IRQHandler
+    def_irq_handler    Reserved673_IRQHandler
+    def_irq_handler    Reserved674_IRQHandler
+    def_irq_handler    Reserved675_IRQHandler
+    def_irq_handler    Reserved676_IRQHandler
+    def_irq_handler    Reserved677_IRQHandler
+    def_irq_handler    Reserved678_IRQHandler
+    def_irq_handler    Reserved679_IRQHandler
+    def_irq_handler    Reserved680_IRQHandler
+    def_irq_handler    Reserved681_IRQHandler
+    def_irq_handler    Reserved682_IRQHandler
+    def_irq_handler    Reserved683_IRQHandler
+    def_irq_handler    Reserved684_IRQHandler
+    def_irq_handler    Reserved685_IRQHandler
+    def_irq_handler    Reserved686_IRQHandler
+    def_irq_handler    Reserved687_IRQHandler
+    def_irq_handler    Reserved688_IRQHandler
+    def_irq_handler    Reserved689_IRQHandler
+    def_irq_handler    Reserved690_IRQHandler
+    def_irq_handler    Reserved691_IRQHandler
+    def_irq_handler    Reserved692_IRQHandler
+    def_irq_handler    Reserved693_IRQHandler
+    def_irq_handler    Reserved694_IRQHandler
+    def_irq_handler    Reserved695_IRQHandler
+    def_irq_handler    Reserved696_IRQHandler
+    def_irq_handler    Reserved697_IRQHandler
+    def_irq_handler    Reserved698_IRQHandler
+    def_irq_handler    Reserved699_IRQHandler
+    def_irq_handler    Reserved700_IRQHandler
+    def_irq_handler    Reserved701_IRQHandler
+    def_irq_handler    Reserved702_IRQHandler
+    def_irq_handler    Reserved703_IRQHandler
+    def_irq_handler    Reserved704_IRQHandler
+    def_irq_handler    Reserved705_IRQHandler
+    def_irq_handler    Reserved706_IRQHandler
+    def_irq_handler    Reserved707_IRQHandler
+    def_irq_handler    Reserved708_IRQHandler
+    def_irq_handler    Reserved709_IRQHandler
+    def_irq_handler    Reserved710_IRQHandler
+    def_irq_handler    Reserved711_IRQHandler
+    def_irq_handler    Reserved712_IRQHandler
     def_irq_handler    DMA5_4_ERROR_DriverIRQHandler
+    def_irq_handler    Reserved714_IRQHandler
+    def_irq_handler    Reserved715_IRQHandler
+    def_irq_handler    Reserved716_IRQHandler
+    def_irq_handler    Reserved717_IRQHandler
+    def_irq_handler    Reserved718_IRQHandler
+    def_irq_handler    Reserved719_IRQHandler
+    def_irq_handler    Reserved720_IRQHandler
+    def_irq_handler    Reserved721_IRQHandler
+    def_irq_handler    Reserved722_IRQHandler
+    def_irq_handler    Reserved723_IRQHandler
+    def_irq_handler    Reserved724_IRQHandler
+    def_irq_handler    Reserved725_IRQHandler
+    def_irq_handler    Reserved726_IRQHandler
+    def_irq_handler    Reserved727_IRQHandler
+    def_irq_handler    Reserved728_IRQHandler
+    def_irq_handler    Reserved729_IRQHandler
+    def_irq_handler    Reserved730_IRQHandler
+    def_irq_handler    Reserved731_IRQHandler
+    def_irq_handler    Reserved732_IRQHandler
+    def_irq_handler    Reserved733_IRQHandler
+    def_irq_handler    Reserved734_IRQHandler
+    def_irq_handler    Reserved735_IRQHandler
+    def_irq_handler    Reserved736_IRQHandler
+    def_irq_handler    Reserved737_IRQHandler
+    def_irq_handler    Reserved738_IRQHandler
+    def_irq_handler    Reserved739_IRQHandler
+    def_irq_handler    Reserved740_IRQHandler
+    def_irq_handler    Reserved741_IRQHandler
+    def_irq_handler    Reserved742_IRQHandler
+    def_irq_handler    Reserved743_IRQHandler
+    def_irq_handler    Reserved744_IRQHandler
+    def_irq_handler    Reserved745_IRQHandler
+    def_irq_handler    Reserved746_IRQHandler
+    def_irq_handler    Reserved747_IRQHandler
+    def_irq_handler    Reserved748_IRQHandler
+    def_irq_handler    Reserved749_IRQHandler
+    def_irq_handler    Reserved750_IRQHandler
+    def_irq_handler    Reserved751_IRQHandler
+    def_irq_handler    Reserved752_IRQHandler
+    def_irq_handler    Reserved753_IRQHandler
+    def_irq_handler    Reserved754_IRQHandler
+    def_irq_handler    Reserved755_IRQHandler
+    def_irq_handler    Reserved756_IRQHandler
+    def_irq_handler    Reserved757_IRQHandler
+    def_irq_handler    Reserved758_IRQHandler
+    def_irq_handler    Reserved759_IRQHandler
+    def_irq_handler    Reserved760_IRQHandler
+    def_irq_handler    Reserved761_IRQHandler
     def_irq_handler    DMA5_4_0_1_DriverIRQHandler
     def_irq_handler    DMA5_4_2_3_DriverIRQHandler
     def_irq_handler    DMA5_4_4_5_DriverIRQHandler
@@ -2619,13 +3435,61 @@ DMA5_4_30_31_IRQHandler:
     def_irq_handler    DMA5_4_26_27_DriverIRQHandler
     def_irq_handler    DMA5_4_28_29_DriverIRQHandler
     def_irq_handler    DMA5_4_30_31_DriverIRQHandler
-    def_irq_handler    Reserved394_IRQHandler
-    def_irq_handler    Reserved395_IRQHandler
-    def_irq_handler    Reserved396_IRQHandler
-    def_irq_handler    Reserved397_IRQHandler
-    def_irq_handler    Reserved398_IRQHandler
-    def_irq_handler    Reserved399_IRQHandler
-    def_irq_handler    Reserved400_IRQHandler
-    def_irq_handler    Reserved401_IRQHandler
+    def_irq_handler    Reserved778_IRQHandler
+    def_irq_handler    Reserved779_IRQHandler
+    def_irq_handler    Reserved780_IRQHandler
+    def_irq_handler    Reserved781_IRQHandler
+    def_irq_handler    Reserved782_IRQHandler
+    def_irq_handler    Reserved783_IRQHandler
+    def_irq_handler    Reserved784_IRQHandler
+    def_irq_handler    Reserved785_IRQHandler
+    def_irq_handler    Reserved786_IRQHandler
+    def_irq_handler    Reserved787_IRQHandler
+    def_irq_handler    Reserved788_IRQHandler
+    def_irq_handler    Reserved789_IRQHandler
+    def_irq_handler    Reserved790_IRQHandler
+    def_irq_handler    Reserved791_IRQHandler
+    def_irq_handler    Reserved792_IRQHandler
+    def_irq_handler    Reserved793_IRQHandler
+    def_irq_handler    Reserved794_IRQHandler
+    def_irq_handler    Reserved795_IRQHandler
+    def_irq_handler    Reserved796_IRQHandler
+    def_irq_handler    Reserved797_IRQHandler
+    def_irq_handler    Reserved798_IRQHandler
+    def_irq_handler    Reserved799_IRQHandler
+    def_irq_handler    Reserved800_IRQHandler
+    def_irq_handler    Reserved801_IRQHandler
+    def_irq_handler    Reserved802_IRQHandler
+    def_irq_handler    Reserved803_IRQHandler
+    def_irq_handler    Reserved804_IRQHandler
+    def_irq_handler    Reserved805_IRQHandler
+    def_irq_handler    Reserved806_IRQHandler
+    def_irq_handler    Reserved807_IRQHandler
+    def_irq_handler    Reserved808_IRQHandler
+    def_irq_handler    Reserved809_IRQHandler
+    def_irq_handler    Reserved810_IRQHandler
+    def_irq_handler    Reserved811_IRQHandler
+    def_irq_handler    Reserved812_IRQHandler
+    def_irq_handler    Reserved813_IRQHandler
+    def_irq_handler    Reserved814_IRQHandler
+    def_irq_handler    Reserved815_IRQHandler
+    def_irq_handler    Reserved816_IRQHandler
+    def_irq_handler    Reserved817_IRQHandler
+    def_irq_handler    Reserved818_IRQHandler
+    def_irq_handler    Reserved819_IRQHandler
+    def_irq_handler    Reserved820_IRQHandler
+    def_irq_handler    Reserved821_IRQHandler
+    def_irq_handler    Reserved822_IRQHandler
+    def_irq_handler    Reserved823_IRQHandler
+    def_irq_handler    Reserved824_IRQHandler
+    def_irq_handler    Reserved825_IRQHandler
+    def_irq_handler    Reserved826_IRQHandler
+    def_irq_handler    Reserved827_IRQHandler
+    def_irq_handler    Reserved828_IRQHandler
+    def_irq_handler    Reserved829_IRQHandler
+    def_irq_handler    Reserved830_IRQHandler
+    def_irq_handler    Reserved831_IRQHandler
+    def_irq_handler    Reserved832_IRQHandler
+    def_irq_handler    Reserved833_IRQHandler
 
     .end
