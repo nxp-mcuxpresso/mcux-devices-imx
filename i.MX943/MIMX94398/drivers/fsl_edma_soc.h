@@ -1,5 +1,5 @@
 /*
- * Copyright 2024 NXP
+ * Copyright 2024, 2026 NXP
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
@@ -46,43 +46,46 @@
                 EDMA1_CH29_IRQn, EDMA1_CH30_IRQn, EDMA1_CH31_IRQn                                                                        \
         },                                                                                                           \
         {                                                                                                             \
-            EDMA2_CH0_IRQn, EDMA2_CH1_IRQn, EDMA2_CH2_IRQn, EDMA2_CH3_IRQn, EDMA2_CH4_IRQn, EDMA2_CH5_IRQn, EDMA2_CH6_IRQn,  \
-                EDMA2_CH7_IRQn, EDMA2_CH8_IRQn, EDMA2_CH9_IRQn, EDMA2_CH10_IRQn, EDMA2_CH11_IRQn, EDMA2_CH12_IRQn,       \
-                EDMA2_CH13_IRQn, EDMA2_CH14_IRQn, EDMA2_CH15_IRQn, EDMA2_CH16_IRQn, EDMA2_CH17_IRQn, EDMA2_CH18_IRQn, \
-                EDMA2_CH19_IRQn, EDMA2_CH20_IRQn, EDMA2_CH21_IRQn, EDMA2_CH22_IRQn, EDMA2_CH23_IRQn, EDMA2_CH24_IRQn, \
-                EDMA2_CH25_IRQn, EDMA2_CH26_IRQn, EDMA2_CH27_IRQn, EDMA2_CH28_IRQn, EDMA2_CH29_IRQn, EDMA2_CH30_IRQn, \
-                EDMA2_CH31_IRQn, EDMA2_CH32_IRQn, EDMA2_CH33_IRQn, EDMA2_CH34_IRQn, EDMA2_CH35_IRQn, EDMA2_CH36_IRQn, \
-                EDMA2_CH37_IRQn, EDMA2_CH38_IRQn, EDMA2_CH39_IRQn, EDMA2_CH40_IRQn, EDMA2_CH41_IRQn, EDMA2_CH42_IRQn, \
-                EDMA2_CH43_IRQn, EDMA2_CH44_IRQn, EDMA2_CH45_IRQn, EDMA2_CH46_IRQn, EDMA2_CH47_IRQn, EDMA2_CH48_IRQn, \
-                EDMA2_CH49_IRQn, EDMA2_CH50_IRQn, EDMA2_CH51_IRQn, EDMA2_CH52_IRQn, EDMA2_CH53_IRQn, EDMA2_CH54_IRQn, \
-                EDMA2_CH55_IRQn, EDMA2_CH56_IRQn, EDMA2_CH57_IRQn, EDMA2_CH58_IRQn, EDMA2_CH59_IRQn, EDMA2_CH60_IRQn, \
-                EDMA2_CH61_IRQn, EDMA2_CH62_IRQn, EDMA2_CH63_IRQn,                                                    \
+            /* EDMA2 - Not available on CA55 (routed through IRQSTEER, user should manage manually) */                \
+            NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn,                 \
+                NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn,             \
+                NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn,             \
+                NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn,             \
+                NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn,             \
+                NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn,             \
+                NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn,             \
+                NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn,             \
+                NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn,             \
+                NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn,             \
+                NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn,                                                           \
         },                                                                                                             \
         {                                                                                                             \
-            EDMA3_CH0_IRQn, EDMA3_CH1_IRQn, EDMA3_CH2_IRQn, EDMA3_CH3_IRQn, EDMA3_CH4_IRQn, EDMA3_CH5_IRQn, EDMA3_CH6_IRQn,  \
-                EDMA3_CH7_IRQn, EDMA3_CH8_IRQn, EDMA3_CH9_IRQn, EDMA3_CH10_IRQn, EDMA3_CH11_IRQn, EDMA3_CH12_IRQn,       \
-                EDMA3_CH13_IRQn, EDMA3_CH14_IRQn, EDMA3_CH15_IRQn, EDMA3_CH16_IRQn, EDMA3_CH17_IRQn, EDMA3_CH18_IRQn, \
-                EDMA3_CH19_IRQn, EDMA3_CH20_IRQn, EDMA3_CH21_IRQn, EDMA3_CH22_IRQn, EDMA3_CH23_IRQn, EDMA3_CH24_IRQn, \
-                EDMA3_CH25_IRQn, EDMA3_CH26_IRQn, EDMA3_CH27_IRQn, EDMA3_CH28_IRQn, EDMA3_CH29_IRQn, EDMA3_CH30_IRQn, \
-                EDMA3_CH31_IRQn, EDMA3_CH32_IRQn, EDMA3_CH33_IRQn, EDMA3_CH34_IRQn, EDMA3_CH35_IRQn, EDMA3_CH36_IRQn, \
-                EDMA3_CH37_IRQn, EDMA3_CH38_IRQn, EDMA3_CH39_IRQn, EDMA3_CH40_IRQn, EDMA3_CH41_IRQn, EDMA3_CH42_IRQn, \
-                EDMA3_CH43_IRQn, EDMA3_CH44_IRQn, EDMA3_CH45_IRQn, EDMA3_CH46_IRQn, EDMA3_CH47_IRQn, EDMA3_CH48_IRQn, \
-                EDMA3_CH49_IRQn, EDMA3_CH50_IRQn, EDMA3_CH51_IRQn, EDMA3_CH52_IRQn, EDMA3_CH53_IRQn, EDMA3_CH54_IRQn, \
-                EDMA3_CH55_IRQn, EDMA3_CH56_IRQn, EDMA3_CH57_IRQn, EDMA3_CH58_IRQn, EDMA3_CH59_IRQn, EDMA3_CH60_IRQn, \
-                EDMA3_CH61_IRQn, EDMA3_CH62_IRQn, EDMA3_CH63_IRQn,                                                    \
+            /* EDMA3 - Not available on CA55 (routed through IRQSTEER, user should manage manually) */                \
+            NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn,                 \
+                NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn,             \
+                NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn,             \
+                NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn,             \
+                NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn,             \
+                NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn,             \
+                NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn,             \
+                NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn,             \
+                NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn,             \
+                NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn,             \
+                NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn,                                                           \
         },                                                                                                             \
         {                                                                                                             \
-            EDMA4_CH0_IRQn, EDMA4_CH1_IRQn, EDMA4_CH2_IRQn, EDMA4_CH3_IRQn, EDMA4_CH4_IRQn, EDMA4_CH5_IRQn, EDMA4_CH6_IRQn,  \
-                EDMA4_CH7_IRQn, EDMA4_CH8_IRQn, EDMA4_CH9_IRQn, EDMA4_CH10_IRQn, EDMA4_CH11_IRQn, EDMA4_CH12_IRQn,       \
-                EDMA4_CH13_IRQn, EDMA4_CH14_IRQn, EDMA4_CH15_IRQn, EDMA4_CH16_IRQn, EDMA4_CH17_IRQn, EDMA4_CH18_IRQn, \
-                EDMA4_CH19_IRQn, EDMA4_CH20_IRQn, EDMA4_CH21_IRQn, EDMA4_CH22_IRQn, EDMA4_CH23_IRQn, EDMA4_CH24_IRQn, \
-                EDMA4_CH25_IRQn, EDMA4_CH26_IRQn, EDMA4_CH27_IRQn, EDMA4_CH28_IRQn, EDMA4_CH29_IRQn, EDMA4_CH30_IRQn, \
-                EDMA4_CH31_IRQn, EDMA4_CH32_IRQn, EDMA4_CH33_IRQn, EDMA4_CH34_IRQn, EDMA4_CH35_IRQn, EDMA4_CH36_IRQn, \
-                EDMA4_CH37_IRQn, EDMA4_CH38_IRQn, EDMA4_CH39_IRQn, EDMA4_CH40_IRQn, EDMA4_CH41_IRQn, EDMA4_CH42_IRQn, \
-                EDMA4_CH43_IRQn, EDMA4_CH44_IRQn, EDMA4_CH45_IRQn, EDMA4_CH46_IRQn, EDMA4_CH47_IRQn, EDMA4_CH48_IRQn, \
-                EDMA4_CH49_IRQn, EDMA4_CH50_IRQn, EDMA4_CH51_IRQn, EDMA4_CH52_IRQn, EDMA4_CH53_IRQn, EDMA4_CH54_IRQn, \
-                EDMA4_CH55_IRQn, EDMA4_CH56_IRQn, EDMA4_CH57_IRQn, EDMA4_CH58_IRQn, EDMA4_CH59_IRQn, EDMA4_CH60_IRQn, \
-                EDMA4_CH61_IRQn, EDMA4_CH62_IRQn, EDMA4_CH63_IRQn,                                                    \
+            /* EDMA4 - Not available on CA55 (routed through IRQSTEER CH2, user should manage manually) */            \
+            NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn,                 \
+                NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn,             \
+                NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn,             \
+                NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn,             \
+                NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn,             \
+                NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn,             \
+                NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn,             \
+                NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn,             \
+                NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn,             \
+                NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn,             \
+                NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn,                                                           \
         }                                                                                                             \
     }
 

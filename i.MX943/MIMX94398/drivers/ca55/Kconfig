@@ -1,3 +1,16 @@
 # Copyright 2026 NXP
 #
 # SPDX-License-Identifier: BSD-3-Clause
+
+config MCUX_HAS_COMPONENT_driver.irqsteer_1_soc.ca55
+    bool
+    default y if MCUX_HW_IP_DriverType_IRQSTEER_1
+
+config MCUX_COMPONENT_driver.irqsteer_1_soc.ca55
+    bool "IRQSTEER SOC driver for CA55"
+    depends on MCUX_HAS_COMPONENT_driver.irqsteer_1_soc.ca55
+    select MCUX_COMPONENT_driver.irqsteer_1
+    help
+        Enable IRQSTEER SOC driver for Cortex-A55 core.
+        This driver routes interrupts from peripherals (like EDMA4)
+        through the IRQSTEERA55 instance to the CA55 GIC.

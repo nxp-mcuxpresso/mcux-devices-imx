@@ -7,7 +7,7 @@
 **         Chip specific module features.
 **
 **     Copyright 2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2025 NXP
+**     Copyright 2016-2026 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -475,9 +475,11 @@
 /* IRQSTEER module features */
 
 /* @brief The irq channel maximum numbers of IRQSTEER. */
-#define FSL_FEATURE_IRQSTEER_IRQ_CHAN_MAX_NUM (2)
+#define FSL_FEATURE_IRQSTEER_IRQ_CHAN_MAX_NUM (1)
 /* @brief The extend interrupt maximum numbers of IRQSTEER. */
 #define FSL_FEATURE_IRQSTEER_EXT_INT_MAX_NUM (960)
+/* @brief The first IRQ number that is extended by IRQSTEER (not the IRQSTEER output channel IRQ number). */
+#define FSL_FEATURE_IRQSTEER_IRQ_START_INDEX (224)
 
 /* LPI2C module features */
 
