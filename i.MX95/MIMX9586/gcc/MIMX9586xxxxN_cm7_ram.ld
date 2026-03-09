@@ -1,19 +1,18 @@
 /*
 ** ###################################################################
-**     Processors:          MIMX9596CVTxLAA_cm7
-**                          MIMX9596DVTxMAA_cm7
-**                          MIMX9596XVTxKAA_cm7
+**     Processors:          MIMX9586AVZXN_cm7
+**                          MIMX9586XVZXN_cm7
 **
 **     Compiler:            GNU C Compiler
-**     Reference manual:    iMX95RM rev1 draftM
+**     Reference manual:    iMX95RM rev4
 **     Version:             rev. 1.0, 2021-11-16
-**     Build:               b241122
+**     Build:               b260309
 **
 **     Abstract:
 **         Linker file for the GNU C Compiler
 **
 **     Copyright 2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2026 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -29,18 +28,19 @@ HEAP_SIZE  = DEFINED(__heap_size__)  ? __heap_size__  : 0x0400;
 STACK_SIZE = DEFINED(__stack_size__) ? __stack_size__ : 0x0400;
 M_VECTOR_RAM_SIZE = DEFINED(__ram_vector_table__) ? 0x0620 : 0x0;
 
+/* Memory region from [0x20040000-0x2007FFFF] is reserved for A35 ATF */
 
 /* Specify the memory areas */
 MEMORY
 {
-  m_interrupts          (RX)  : ORIGIN = 0x00000000, LENGTH = 0x00000800
-  m_text                (RX)  : ORIGIN = 0x00000800, LENGTH = 0x0003F800
+  m_interrupts          (RX)  : ORIGIN = 0x00000000, LENGTH = 0x00001000
+  m_text                (RX)  : ORIGIN = 0x00001000, LENGTH = 0x0003F000
   m_m33_suspend_ram     (RW)  : ORIGIN = 0x20000000, LENGTH = 0x00002000
   m_a55_suspend_ram     (RW)  : ORIGIN = 0x20002000, LENGTH = 0x00002000
-  m_data                (RW)  : ORIGIN = 0x20004000, LENGTH = 0x0001a000
-  m_ncache              (RW)  : ORIGIN = 0x2001e000, LENGTH = 0x00010000
-  m_reserved            (RW)  : ORIGIN = 0x2002E000, LENGTH = 0x0000e000
-  m_rsc_tbl             (RW)  : ORIGIN = 0x2003c000, LENGTH = 0x00004000
+  m_data                (RW)  : ORIGIN = 0x20004000, LENGTH = 0x0001A000
+  m_ncache              (RW)  : ORIGIN = 0x2001E000, LENGTH = 0x00010000
+  m_reserved            (RW)  : ORIGIN = 0x2002E000, LENGTH = 0x0000E000
+  m_rsc_tbl             (RW)  : ORIGIN = 0x2003C000, LENGTH = 0x00004000
   m_rsc_tbl_in_dram     (RW)  : ORIGIN = 0x88220000, LENGTH = 0x00004000
 }
 
@@ -257,17 +257,16 @@ SECTIONS
   __StackLimit = __StackTop - STACK_SIZE;
   PROVIDE(__stack = __StackTop);
 
-  /* For Resource table region(store table in tcm) */
+  /* For Resource table region */
   __RscTblStart = ORIGIN(m_rsc_tbl);
   __RscTblEnd = ORIGIN(m_rsc_tbl) + LENGTH(m_rsc_tbl);
   /* For Resource table region(store table in dram) */
   __RscTblInDramStart = ORIGIN(m_rsc_tbl_in_dram);
   __RscTblInDramEnd = ORIGIN(m_rsc_tbl_in_dram) + LENGTH(m_rsc_tbl_in_dram);
 
+  .ARM.attributes 0 : { *(.ARM.attributes) }
    __RESERVED_START = ORIGIN(m_reserved);
    __VECTOR_TABLE_SIZE = LENGTH(m_interrupts);
-  .ARM.attributes 0 : { *(.ARM.attributes) }
 
   ASSERT(__StackLimit >= __HeapLimit, "region m_data overflowed with stack and heap")
 }
-

@@ -1,19 +1,25 @@
 /*
 ** ###################################################################
-**     Processors:          MIMX9596CVTxLAA_cm7
-**                          MIMX9596DVTxMAA_cm7
-**                          MIMX9596XVTxKAA_cm7
+**     Processors:          MIMX95N6AVTXN_cm7
+**                          MIMX95N6AVZXN_cm7
+**                          MIMX95N6CVTXN_cm7
+**                          MIMX95N6CVYXN_cm7
+**                          MIMX95N6CVZXN_cm7
+**                          MIMX95N6DVTXN_cm7
+**                          MIMX95N6DVZXN_cm7
+**                          MIMX95N6XVTXN_cm7
+**                          MIMX95N6XVZXN_cm7
 **
 **     Compiler:            GNU C Compiler
-**     Reference manual:    iMX95RM rev1 draftM
+**     Reference manual:    iMX95RM rev4
 **     Version:             rev. 1.0, 2021-11-16
-**     Build:               b241122
+**     Build:               b260309
 **
 **     Abstract:
 **         Linker file for the GNU C Compiler
 **
 **     Copyright 2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2024 NXP
+**     Copyright 2016-2026 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -35,13 +41,13 @@ M_VECTOR_RAM_SIZE = DEFINED(__ram_vector_table__) ? 0x0620 : 0x0;
 /* Specify the memory areas */
 MEMORY
 {
-  m_interrupts          (RX)  : ORIGIN = 0x80000000, LENGTH = 0x00000800
-  m_text                (RX)  : ORIGIN = 0x80000800, LENGTH = 0x0003F800
-  m_data                (RW)  : ORIGIN = 0x80040000, LENGTH = 0x0001a000
+  m_interrupts          (RX)  : ORIGIN = 0x80000000, LENGTH = 0x00001000
+  m_text                (RX)  : ORIGIN = 0x80001000, LENGTH = 0x0003F000
   m_rsc_tbl             (RW)  : ORIGIN = 0x20000000, LENGTH = 0x00001000
   m_m33_suspend_ram     (RW)  : ORIGIN = 0x20001000, LENGTH = 0x00002000
   m_a55_suspend_ram     (RW)  : ORIGIN = 0x20003000, LENGTH = 0x00001000
-  m_ncache              (RW)  : ORIGIN = 0x2001e000, LENGTH = 0x00010000
+  m_data                (RW)  : ORIGIN = 0x80040000, LENGTH = 0x0001A000
+  m_ncache              (RW)  : ORIGIN = 0x2001E000, LENGTH = 0x00010000
   m_rom_reserved        (RW)  : ORIGIN = 0x2002E000, LENGTH = 0x00012000
 }
 
@@ -257,4 +263,3 @@ SECTIONS
 
   ASSERT(__StackLimit >= __HeapLimit, "region m_data overflowed with stack and heap")
 }
-
