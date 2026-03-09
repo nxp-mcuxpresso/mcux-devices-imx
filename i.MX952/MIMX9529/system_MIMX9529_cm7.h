@@ -53,7 +53,6 @@ extern "C" {
 #endif
 
 #include <stdint.h>
-#include "fsl_common.h"
 #include "scmi.h"
 #include "scmi_internal.h"
 #include "smt.h"
