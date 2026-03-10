@@ -8,7 +8,6 @@
 #define _FSL_IOMUXC_H_
 
 #include "fsl_common.h"
-#include "board.h"
 #include "scmi.h"
 
 /*!
