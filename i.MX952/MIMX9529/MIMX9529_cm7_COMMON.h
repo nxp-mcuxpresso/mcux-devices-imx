@@ -10,7 +10,7 @@
 **
 **     Reference manual:    iMX952RM rev1 draftM
 **     Version:             rev. 2.0, 2024-10-29
-**     Build:               b260206
+**     Build:               b260310
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for MIMX9529_cm7
@@ -1887,6 +1887,10 @@ typedef enum _asrc_clock_source
 #define ENETC_VF_PCI_TYPE0_BASE_PTRS             { NETC_VF1_PCI_HDR_TYPE0, NETC_VF2_PCI_HDR_TYPE0 }
 
 /* ERM - Peripheral instance base addresses */
+/** Peripheral AON__ERMA base address */
+#define AON__ERMA_BASE                           (0x44560000u)
+/** Peripheral AON__ERMA base pointer */
+#define AON__ERMA                                ((ERM_Type *)AON__ERMA_BASE)
 /** Peripheral DISPLAY__ERM base address */
 #define DISPLAY__ERM_BASE                        (0x4B2E0000u)
 /** Peripheral DISPLAY__ERM base pointer */
@@ -1896,9 +1900,9 @@ typedef enum _asrc_clock_source
 /** Peripheral M7__ERM base pointer */
 #define M7__ERM                                  ((ERM_Type *)M7__ERM_BASE)
 /** Array initializer of ERM peripheral base addresses */
-#define ERM_BASE_ADDRS                           { DISPLAY__ERM_BASE, M7__ERM_BASE }
+#define ERM_BASE_ADDRS                           { AON__ERMA_BASE, DISPLAY__ERM_BASE, M7__ERM_BASE }
 /** Array initializer of ERM peripheral base pointers */
-#define ERM_BASE_PTRS                            { DISPLAY__ERM, M7__ERM }
+#define ERM_BASE_PTRS                            { AON__ERMA, DISPLAY__ERM, M7__ERM }
 
 /* FLEXIO - Peripheral instance base addresses */
 /** Peripheral FLEXIO1 base address */
@@ -3336,7 +3340,7 @@ typedef enum _mu_core_boot_mode
 #define WDOG_IRQS                                { WDOG1_IRQn, WDOG2_IRQn, NotAvail_IRQn, WDOG3_IRQn, WDOG4_IRQn, WDOG5_IRQn }
 /* Extra definition */
 #define WDOG_UPDATE_KEY                          (0xD928C520U)
-#define WDOG_REFRESH_KEY                       (0xB480A602U)
+#define WDOG_REFRESH_KEY                         (0xB480A602U)
 
 
 /* XCACHE - Peripheral instance base addresses */

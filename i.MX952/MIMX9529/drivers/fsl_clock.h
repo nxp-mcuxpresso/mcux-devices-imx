@@ -86,7 +86,7 @@ typedef enum _clock_ip_name
     kCLOCK_busaon           = CLOCK_NUM_SRC + 2,   /* clock id for Bus Aon */
     kCLOCK_can1             = CLOCK_NUM_SRC + 3,   /* clock id for Can1 */
     kCLOCK_reserved4        = CLOCK_NUM_SRC + 4,   /* clock id for reserved4 */
-    kCLOCK_i3c1Slow         = CLOCK_NUM_SRC + 5,   /* clock id for I3C1 Slow */
+    kCLOCK_i3c1slow         = CLOCK_NUM_SRC + 5,   /* clock id for I3C1 Slow */
     kCLOCK_lpi2c1           = CLOCK_NUM_SRC + 6,   /* clock id for Lpi2C1 */
     kCLOCK_lpi2c2           = CLOCK_NUM_SRC + 7,   /* clock id for Lpi2C2 */
     kCLOCK_lpspi1           = CLOCK_NUM_SRC + 8,   /* clock id for Lpspi1 */
@@ -204,7 +204,7 @@ typedef enum _clock_ip_name
     kCLOCK_v2xpk            = CLOCK_NUM_SRC + 120, /* clock id for V2X Pk */
     kCLOCK_wakeupaxi        = CLOCK_NUM_SRC + 121, /* clock id for Wakeup Axi */
     kCLOCK_xspislvroot      = CLOCK_NUM_SRC + 122, /* clock id for Xspi Slv Root */
-    kCLOCK_audmix1          = CLOCK_NUM_SRC + 123, /* clock id for audmix1*/
+    kCLOCK_audmix           = CLOCK_NUM_SRC + 123, /* clock id for audmix1*/
     kCLOCK_asrc1            = CLOCK_NUM_SRC + 124, /* clock id for asrc1 Root */
     kCLOCK_asrc2            = CLOCK_NUM_SRC + 125, /* clock id for asrc2 Root */
     kCLOCK_gpt2             = CLOCK_NUM_SRC + 126, /* clock id for gpt2 Root */
@@ -226,10 +226,41 @@ typedef struct _clk
  * Clock Gate Definitions
  ******************************************************************************/
 
+/*! @brief Clock ip name array for EDMA. */
+#define EDMA_CLOCKS                \
+    {                              \
+        kCLOCK_invalid, kCLOCK_invalid, kCLOCK_invalid, kCLOCK_invalid, \
+    }
+
 /*! @brief Clock ip name array for ADC. */
 #define ADC_CLOCKS                \
     {                              \
         kCLOCK_adc \
+    }
+
+/*! @brief Clock ip name array for ADC. */
+#define ASRC_CLOCKS                \
+    {                              \
+        kCLOCK_asrc1,  kCLOCK_asrc2\
+    }
+
+/*! @brief Clock ip name array for EIM. */
+#define EIM_CLOCKS      \
+    {                   \
+        kCLOCK_invalid, kCLOCK_invalid, kCLOCK_invalid,\
+        kCLOCK_invalid, kCLOCK_invalid, kCLOCK_invalid \
+    }
+
+/*! @brief Clock ip name array for ERM. */
+#define ERM_CLOCKS      \
+    {                   \
+        kCLOCK_invalid, kCLOCK_invalid, kCLOCK_invalid\
+    }
+
+/*! @brief Clock ip name array for ISI. */
+#define ISI_CLOCKS      \
+    {                   \
+        kCLOCK_camIsi,  \
     }
 
 /*
@@ -241,6 +272,13 @@ typedef struct _clk
         kCLOCK_Mu_A, kCLOCK_Mu_A \
     }
 */
+
+/*! @brief Clock ip name array for LPIT. */
+#define LPIT_CLOCKS                                     \
+    {                                                   \
+        kCLOCK_invalid, kCLOCK_invalid, kCLOCK_invalid, \
+    }
+
 /*! @brief Clock ip name array for LPI2C. */
 #define LPI2C_CLOCKS                                                                                                \
     {                                                                                                               \
@@ -255,10 +293,18 @@ typedef struct _clk
             kCLOCK_lpspi7, kCLOCK_lpspi8                                                                            \
     }
 
+/*
+ *! @brief Clock ip name array for SEMA42.
+ */
+#define SEMA42_CLOCKS                                                \
+    {                                                              \
+        kCLOCK_invalid, kCLOCK_invalid, kCLOCK_invalid \
+    }
+
 /*! @brief Clock ip name array for TPM. */
 #define TPM_CLOCKS                                                                    \
     {                                                                                 \
-        kCLOCK_tpm1, kCLOCK_tpm2, kCLOCK_tpm3, kCLOCK_tpm4, kCLOCK_tpm5, kCLOCK_tpm6, \
+        kCLOCK_invalid, kCLOCK_tpm2, kCLOCK_invalid, kCLOCK_tpm4, kCLOCK_tpm5, kCLOCK_tpm6, \
     }
 
 /*! @brief Clock ip name array for FLEXIO. */
@@ -267,10 +313,10 @@ typedef struct _clk
         kCLOCK_flexio1, kCLOCK_flexio2 \
     }
 
-/*! @brief Clock ip name array for FLEXSPI. */
-#define FLEXSPI_CLOCKS                    \
+/*! @brief Clock ip name array for XSPI. */
+#define XSPI_CLOCKS                    \
     {                                     \
-        kCLOCK_invalid, kCLOCK_flexspi1 \
+        kCLOCK_invalid, kCLOCK_xspi1 \
     }
 
 /*! @brief Clock ip name array for TMU. */
@@ -313,7 +359,7 @@ typedef struct _clk
 /*! @brief Clock ip name array for I3C. */
 #define I3C_CLOCKS                                 \
     {                                              \
-        kCLOCK_invalid, kCLOCK_i3c1, kCLOCK_i3c2 \
+        kCLOCK_invalid, kCLOCK_i3c1slow, kCLOCK_i3c2slow \
     }
 
 /*******************************************************************************

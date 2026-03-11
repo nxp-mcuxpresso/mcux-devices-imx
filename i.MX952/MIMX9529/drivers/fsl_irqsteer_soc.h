@@ -40,7 +40,7 @@
     } 
 
 #define MULTI_IRQSTEER_CLOCKS \
-    {-1}
+    {kCLOCK_invalid}
 
 #define MULTI_IRQSTEER_IRQS \
     { \

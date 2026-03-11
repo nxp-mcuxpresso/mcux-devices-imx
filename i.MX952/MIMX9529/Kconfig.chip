@@ -295,15 +295,7 @@ config MCUX_HW_IP_DriverType_SEMA42
     bool
     default y
     depends on MCUX_HW_DEVICE_ID_MIMX9529xxxxx
-config MCUX_HW_IP_DriverType_SFA
-    bool
-    default y
-    depends on MCUX_HW_DEVICE_ID_MIMX9529xxxxx
 config MCUX_HW_IP_DriverType_STIMER_tmr
-    bool
-    default y
-    depends on MCUX_HW_DEVICE_ID_MIMX9529xxxxx
-config MCUX_HW_IP_DriverType_TEMPSENSOR
     bool
     default y
     depends on MCUX_HW_DEVICE_ID_MIMX9529xxxxx
@@ -311,19 +303,15 @@ config MCUX_HW_IP_DriverType_TPM
     bool
     default y
     depends on MCUX_HW_DEVICE_ID_MIMX9529xxxxx
-config MCUX_HW_IP_DriverType_TRDC
+config MCUX_HW_IP_DriverType_TRDC_1
     bool
     default y
     depends on MCUX_HW_DEVICE_ID_MIMX9529xxxxx
-config MCUX_HW_IP_DriverType_TRGMUX
+config MCUX_HW_IP_DriverType_TRGMUX_1
     bool
     default y
     depends on MCUX_HW_DEVICE_ID_MIMX9529xxxxx
 config MCUX_HW_IP_DriverType_TSTMR
-    bool
-    default y
-    depends on MCUX_HW_DEVICE_ID_MIMX9529xxxxx
-config MCUX_HW_IP_DriverType_XCACHE
     bool
     default y
     depends on MCUX_HW_DEVICE_ID_MIMX9529xxxxx
