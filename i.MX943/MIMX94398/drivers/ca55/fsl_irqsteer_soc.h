@@ -50,4 +50,18 @@
         } \
     }
 
+#define FSL_IRQSTEER_CH_NUM (6)
+#define FSL_IRQSTEER_CH_MAX (IRQSTEER_AGGREGATED_INT_NUM_PER_GRP)
+#define FSL_IRQSTEER_INT_NUM (FSL_IRQSTEER_CH_NUM * FSL_IRQSTEER_CH_MAX)
+
+typedef void (*irq_steer_func_t)(uint8_t chan_id, uint8_t edma_id, uint8_t edma_ch);
+
+typedef struct _IRQSTEER_IRQ_Info_t
+{
+    uint8_t chan_id;
+    uint8_t edma_id;
+    uint8_t edma_ch;
+    void *pfunc;
+} IRQSTEER_IRQ_Info_t;
+
 #endif /* FSL_IRQSTEER_SOC_H_ */
