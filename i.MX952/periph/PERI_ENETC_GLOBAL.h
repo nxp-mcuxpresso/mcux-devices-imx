@@ -1,17 +1,44 @@
 /*
 ** ###################################################################
-**     Processors:          MIMX9529xxVTx_ca55
+**     Processors:          MIMX9522xxVTx_ca55
+**                          MIMX9522xxVTx_cm33
+**                          MIMX9522xxVTx_cm7
+**                          MIMX9522xxVZx_ca55
+**                          MIMX9522xxVZx_cm33
+**                          MIMX9522xxVZx_cm7
+**                          MIMX9523xxVTx_ca55
+**                          MIMX9523xxVTx_cm33
+**                          MIMX9523xxVTx_cm7
+**                          MIMX9523xxVZx_ca55
+**                          MIMX9523xxVZx_cm33
+**                          MIMX9523xxVZx_cm7
+**                          MIMX9524xxVTx_ca55
+**                          MIMX9524xxVTx_cm33
+**                          MIMX9524xxVTx_cm7
+**                          MIMX9524xxVZx_ca55
+**                          MIMX9524xxVZx_cm33
+**                          MIMX9524xxVZx_cm7
+**                          MIMX9525xxVTx_ca55
+**                          MIMX9525xxVTx_cm33
+**                          MIMX9525xxVTx_cm7
+**                          MIMX9525xxVZx_ca55
+**                          MIMX9525xxVZx_cm33
+**                          MIMX9525xxVZx_cm7
+**                          MIMX9528xxVTx_ca55
+**                          MIMX9528xxVTx_cm33
+**                          MIMX9528xxVTx_cm7
+**                          MIMX9528xxVZx_ca55
+**                          MIMX9528xxVZx_cm33
+**                          MIMX9528xxVZx_cm7
+**                          MIMX9529xxVTx_ca55
 **                          MIMX9529xxVTx_cm33
 **                          MIMX9529xxVTx_cm7
-**                          MIMX9529xxVYx_ca55
-**                          MIMX9529xxVYx_cm33
-**                          MIMX9529xxVYx_cm7
 **                          MIMX9529xxVZx_ca55
 **                          MIMX9529xxVZx_cm33
 **                          MIMX9529xxVZx_cm7
 **
 **     Version:             rev. 2.0, 2024-10-29
-**     Build:               b260206
+**     Build:               b260324
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for ENETC_GLOBAL
@@ -45,11 +72,41 @@
 #if !defined(PERI_ENETC_GLOBAL_H_)
 #define PERI_ENETC_GLOBAL_H_                     /**< Symbol preventing repeated inclusion */
 
-#if (defined(CPU_MIMX9529xxVTx_ca55) || defined(CPU_MIMX9529xxVYx_ca55) || defined(CPU_MIMX9529xxVZx_ca55))
+#if (defined(CPU_MIMX9522xxVTx_ca55) || defined(CPU_MIMX9522xxVZx_ca55))
+#include "MIMX9522_ca55_COMMON.h"
+#elif (defined(CPU_MIMX9522xxVTx_cm33) || defined(CPU_MIMX9522xxVZx_cm33))
+#include "MIMX9522_cm33_COMMON.h"
+#elif (defined(CPU_MIMX9522xxVTx_cm7) || defined(CPU_MIMX9522xxVZx_cm7))
+#include "MIMX9522_cm7_COMMON.h"
+#elif (defined(CPU_MIMX9523xxVTx_ca55) || defined(CPU_MIMX9523xxVZx_ca55))
+#include "MIMX9523_ca55_COMMON.h"
+#elif (defined(CPU_MIMX9523xxVTx_cm33) || defined(CPU_MIMX9523xxVZx_cm33))
+#include "MIMX9523_cm33_COMMON.h"
+#elif (defined(CPU_MIMX9523xxVTx_cm7) || defined(CPU_MIMX9523xxVZx_cm7))
+#include "MIMX9523_cm7_COMMON.h"
+#elif (defined(CPU_MIMX9524xxVTx_ca55) || defined(CPU_MIMX9524xxVZx_ca55))
+#include "MIMX9524_ca55_COMMON.h"
+#elif (defined(CPU_MIMX9524xxVTx_cm33) || defined(CPU_MIMX9524xxVZx_cm33))
+#include "MIMX9524_cm33_COMMON.h"
+#elif (defined(CPU_MIMX9524xxVTx_cm7) || defined(CPU_MIMX9524xxVZx_cm7))
+#include "MIMX9524_cm7_COMMON.h"
+#elif (defined(CPU_MIMX9525xxVTx_ca55) || defined(CPU_MIMX9525xxVZx_ca55))
+#include "MIMX9525_ca55_COMMON.h"
+#elif (defined(CPU_MIMX9525xxVTx_cm33) || defined(CPU_MIMX9525xxVZx_cm33))
+#include "MIMX9525_cm33_COMMON.h"
+#elif (defined(CPU_MIMX9525xxVTx_cm7) || defined(CPU_MIMX9525xxVZx_cm7))
+#include "MIMX9525_cm7_COMMON.h"
+#elif (defined(CPU_MIMX9528xxVTx_ca55) || defined(CPU_MIMX9528xxVZx_ca55))
+#include "MIMX9528_ca55_COMMON.h"
+#elif (defined(CPU_MIMX9528xxVTx_cm33) || defined(CPU_MIMX9528xxVZx_cm33))
+#include "MIMX9528_cm33_COMMON.h"
+#elif (defined(CPU_MIMX9528xxVTx_cm7) || defined(CPU_MIMX9528xxVZx_cm7))
+#include "MIMX9528_cm7_COMMON.h"
+#elif (defined(CPU_MIMX9529xxVTx_ca55) || defined(CPU_MIMX9529xxVZx_ca55))
 #include "MIMX9529_ca55_COMMON.h"
-#elif (defined(CPU_MIMX9529xxVTx_cm33) || defined(CPU_MIMX9529xxVYx_cm33) || defined(CPU_MIMX9529xxVZx_cm33))
+#elif (defined(CPU_MIMX9529xxVTx_cm33) || defined(CPU_MIMX9529xxVZx_cm33))
 #include "MIMX9529_cm33_COMMON.h"
-#elif (defined(CPU_MIMX9529xxVTx_cm7) || defined(CPU_MIMX9529xxVYx_cm7) || defined(CPU_MIMX9529xxVZx_cm7))
+#elif (defined(CPU_MIMX9529xxVTx_cm7) || defined(CPU_MIMX9529xxVZx_cm7))
 #include "MIMX9529_cm7_COMMON.h"
 #else
   #error "No valid CPU defined!"
@@ -148,12 +205,12 @@ typedef struct {
        uint8_t RESERVED_10[280];
   union {                                          /* offset: 0xE20 */
     struct {                                         /* offset: 0xE20 */
-      __IO uint32_t EMDIOUFSBECR;                      /**< EMDIO uncorrectable fatal system bus error configuration register, offset: 0xE20, not available in all instances (available on 3 out of 12) */
-      __IO uint32_t EMDIOUFSBESR;                      /**< EMDIO uncorrectable fatal system bus error status register, offset: 0xE24, not available in all instances (available on 3 out of 12) */
+      __IO uint32_t EMDIOUFSBECR;                      /**< EMDIO uncorrectable fatal system bus error configuration register, offset: 0xE20, not available in all instances (available on 12 out of 48) */
+      __IO uint32_t EMDIOUFSBESR;                      /**< EMDIO uncorrectable fatal system bus error status register, offset: 0xE24, not available in all instances (available on 12 out of 48) */
     } EMDIO;
     struct {                                         /* offset: 0xE20 */
-      __IO uint32_t TUFSBECR;                          /**< Timer uncorrectable fatal system bus error configuration register, offset: 0xE20, not available in all instances (available on 3 out of 12) */
-      __IO uint32_t TUFSBESR;                          /**< Timer uncorrectable fatal system bus error status register, offset: 0xE24, not available in all instances (available on 3 out of 12) */
+      __IO uint32_t TUFSBECR;                          /**< Timer uncorrectable fatal system bus error configuration register, offset: 0xE20, not available in all instances (available on 12 out of 48) */
+      __IO uint32_t TUFSBESR;                          /**< Timer uncorrectable fatal system bus error status register, offset: 0xE24, not available in all instances (available on 12 out of 48) */
     } TIMER;
   };
 } ENETC_GLOBAL_Type;

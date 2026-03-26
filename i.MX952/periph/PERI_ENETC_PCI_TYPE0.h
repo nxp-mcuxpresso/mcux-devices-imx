@@ -1,17 +1,44 @@
 /*
 ** ###################################################################
-**     Processors:          MIMX9529xxVTx_ca55
+**     Processors:          MIMX9522xxVTx_ca55
+**                          MIMX9522xxVTx_cm33
+**                          MIMX9522xxVTx_cm7
+**                          MIMX9522xxVZx_ca55
+**                          MIMX9522xxVZx_cm33
+**                          MIMX9522xxVZx_cm7
+**                          MIMX9523xxVTx_ca55
+**                          MIMX9523xxVTx_cm33
+**                          MIMX9523xxVTx_cm7
+**                          MIMX9523xxVZx_ca55
+**                          MIMX9523xxVZx_cm33
+**                          MIMX9523xxVZx_cm7
+**                          MIMX9524xxVTx_ca55
+**                          MIMX9524xxVTx_cm33
+**                          MIMX9524xxVTx_cm7
+**                          MIMX9524xxVZx_ca55
+**                          MIMX9524xxVZx_cm33
+**                          MIMX9524xxVZx_cm7
+**                          MIMX9525xxVTx_ca55
+**                          MIMX9525xxVTx_cm33
+**                          MIMX9525xxVTx_cm7
+**                          MIMX9525xxVZx_ca55
+**                          MIMX9525xxVZx_cm33
+**                          MIMX9525xxVZx_cm7
+**                          MIMX9528xxVTx_ca55
+**                          MIMX9528xxVTx_cm33
+**                          MIMX9528xxVTx_cm7
+**                          MIMX9528xxVZx_ca55
+**                          MIMX9528xxVZx_cm33
+**                          MIMX9528xxVZx_cm7
+**                          MIMX9529xxVTx_ca55
 **                          MIMX9529xxVTx_cm33
 **                          MIMX9529xxVTx_cm7
-**                          MIMX9529xxVYx_ca55
-**                          MIMX9529xxVYx_cm33
-**                          MIMX9529xxVYx_cm7
 **                          MIMX9529xxVZx_ca55
 **                          MIMX9529xxVZx_cm33
 **                          MIMX9529xxVZx_cm7
 **
 **     Version:             rev. 2.0, 2024-10-29
-**     Build:               b260206
+**     Build:               b260324
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for ENETC_PCI_TYPE0
@@ -45,11 +72,41 @@
 #if !defined(PERI_ENETC_PCI_TYPE0_H_)
 #define PERI_ENETC_PCI_TYPE0_H_                  /**< Symbol preventing repeated inclusion */
 
-#if (defined(CPU_MIMX9529xxVTx_ca55) || defined(CPU_MIMX9529xxVYx_ca55) || defined(CPU_MIMX9529xxVZx_ca55))
+#if (defined(CPU_MIMX9522xxVTx_ca55) || defined(CPU_MIMX9522xxVZx_ca55))
+#include "MIMX9522_ca55_COMMON.h"
+#elif (defined(CPU_MIMX9522xxVTx_cm33) || defined(CPU_MIMX9522xxVZx_cm33))
+#include "MIMX9522_cm33_COMMON.h"
+#elif (defined(CPU_MIMX9522xxVTx_cm7) || defined(CPU_MIMX9522xxVZx_cm7))
+#include "MIMX9522_cm7_COMMON.h"
+#elif (defined(CPU_MIMX9523xxVTx_ca55) || defined(CPU_MIMX9523xxVZx_ca55))
+#include "MIMX9523_ca55_COMMON.h"
+#elif (defined(CPU_MIMX9523xxVTx_cm33) || defined(CPU_MIMX9523xxVZx_cm33))
+#include "MIMX9523_cm33_COMMON.h"
+#elif (defined(CPU_MIMX9523xxVTx_cm7) || defined(CPU_MIMX9523xxVZx_cm7))
+#include "MIMX9523_cm7_COMMON.h"
+#elif (defined(CPU_MIMX9524xxVTx_ca55) || defined(CPU_MIMX9524xxVZx_ca55))
+#include "MIMX9524_ca55_COMMON.h"
+#elif (defined(CPU_MIMX9524xxVTx_cm33) || defined(CPU_MIMX9524xxVZx_cm33))
+#include "MIMX9524_cm33_COMMON.h"
+#elif (defined(CPU_MIMX9524xxVTx_cm7) || defined(CPU_MIMX9524xxVZx_cm7))
+#include "MIMX9524_cm7_COMMON.h"
+#elif (defined(CPU_MIMX9525xxVTx_ca55) || defined(CPU_MIMX9525xxVZx_ca55))
+#include "MIMX9525_ca55_COMMON.h"
+#elif (defined(CPU_MIMX9525xxVTx_cm33) || defined(CPU_MIMX9525xxVZx_cm33))
+#include "MIMX9525_cm33_COMMON.h"
+#elif (defined(CPU_MIMX9525xxVTx_cm7) || defined(CPU_MIMX9525xxVZx_cm7))
+#include "MIMX9525_cm7_COMMON.h"
+#elif (defined(CPU_MIMX9528xxVTx_ca55) || defined(CPU_MIMX9528xxVZx_ca55))
+#include "MIMX9528_ca55_COMMON.h"
+#elif (defined(CPU_MIMX9528xxVTx_cm33) || defined(CPU_MIMX9528xxVZx_cm33))
+#include "MIMX9528_cm33_COMMON.h"
+#elif (defined(CPU_MIMX9528xxVTx_cm7) || defined(CPU_MIMX9528xxVZx_cm7))
+#include "MIMX9528_cm7_COMMON.h"
+#elif (defined(CPU_MIMX9529xxVTx_ca55) || defined(CPU_MIMX9529xxVZx_ca55))
 #include "MIMX9529_ca55_COMMON.h"
-#elif (defined(CPU_MIMX9529xxVTx_cm33) || defined(CPU_MIMX9529xxVYx_cm33) || defined(CPU_MIMX9529xxVZx_cm33))
+#elif (defined(CPU_MIMX9529xxVTx_cm33) || defined(CPU_MIMX9529xxVZx_cm33))
 #include "MIMX9529_cm33_COMMON.h"
-#elif (defined(CPU_MIMX9529xxVTx_cm7) || defined(CPU_MIMX9529xxVYx_cm7) || defined(CPU_MIMX9529xxVZx_cm7))
+#elif (defined(CPU_MIMX9529xxVTx_cm7) || defined(CPU_MIMX9529xxVZx_cm7))
 #include "MIMX9529_cm7_COMMON.h"
 #else
   #error "No valid CPU defined!"
@@ -164,22 +221,22 @@ typedef struct {
   __I  uint32_t PCIE_CFC_RTR_RTR1;                 /**< PCIe RTR readiness time reporting 1 register, offset: 0x144 */
   __I  uint32_t PCIE_CFC_RTR_RTR2;                 /**< PCIe RTR readiness time reporting 2 register, offset: 0x148 */
        uint8_t RESERVED_13[4];
-  __I  uint32_t PCIE_CFC_SRIOV_CAP_HDR;            /**< PCIe SR-IOV capability header, offset: 0x150, not available in all instances (available on 6 out of 12) */
-  __I  uint32_t PCIE_CFC_SRIOV_CAP;                /**< PCIe SR-IOV capability register, offset: 0x154, not available in all instances (available on 6 out of 12) */
-  __IO uint16_t PCIE_CFC_SRIOV_CTL;                /**< PCIe SR-IOV control register, offset: 0x158, not available in all instances (available on 6 out of 12) */
-  __I  uint16_t PCIE_CFC_SRIOV_STAT;               /**< PCIe SR-IOV status register, offset: 0x15A, not available in all instances (available on 6 out of 12) */
-  __I  uint16_t PCIE_CFC_SRIOV_INIT_VFS;           /**< PCIe SR-IOV initial VFs register, offset: 0x15C, not available in all instances (available on 6 out of 12) */
-  __I  uint16_t PCIE_CFC_SRIOV_TOTAL_VFS;          /**< PCIe SR-IOV total VFs register, offset: 0x15E, not available in all instances (available on 6 out of 12) */
-  __IO uint16_t PCIE_CFC_SRIOV_NUM_VFS;            /**< PCIe SR-IOV num VFs register, offset: 0x160, not available in all instances (available on 6 out of 12) */
-  __I  uint16_t PCIE_CFC_SRIOV_FUNC_DEP_LIST;      /**< PCIe SR-IOV function dependency list register, offset: 0x162, not available in all instances (available on 6 out of 12) */
-  __I  uint16_t PCIE_CFC_SRIOV_FIRST_VF_OFF;       /**< PCIe SR-IOV first VF offset register, offset: 0x164, not available in all instances (available on 6 out of 12) */
-  __I  uint16_t PCIE_CFC_SRIOV_VF_STRIDE;          /**< PCIe SR-IOV VF stride register, offset: 0x166, not available in all instances (available on 6 out of 12) */
+  __I  uint32_t PCIE_CFC_SRIOV_CAP_HDR;            /**< PCIe SR-IOV capability header, offset: 0x150, not available in all instances (available on 24 out of 48) */
+  __I  uint32_t PCIE_CFC_SRIOV_CAP;                /**< PCIe SR-IOV capability register, offset: 0x154, not available in all instances (available on 24 out of 48) */
+  __IO uint16_t PCIE_CFC_SRIOV_CTL;                /**< PCIe SR-IOV control register, offset: 0x158, not available in all instances (available on 24 out of 48) */
+  __I  uint16_t PCIE_CFC_SRIOV_STAT;               /**< PCIe SR-IOV status register, offset: 0x15A, not available in all instances (available on 24 out of 48) */
+  __I  uint16_t PCIE_CFC_SRIOV_INIT_VFS;           /**< PCIe SR-IOV initial VFs register, offset: 0x15C, not available in all instances (available on 24 out of 48) */
+  __I  uint16_t PCIE_CFC_SRIOV_TOTAL_VFS;          /**< PCIe SR-IOV total VFs register, offset: 0x15E, not available in all instances (available on 24 out of 48) */
+  __IO uint16_t PCIE_CFC_SRIOV_NUM_VFS;            /**< PCIe SR-IOV num VFs register, offset: 0x160, not available in all instances (available on 24 out of 48) */
+  __I  uint16_t PCIE_CFC_SRIOV_FUNC_DEP_LIST;      /**< PCIe SR-IOV function dependency list register, offset: 0x162, not available in all instances (available on 24 out of 48) */
+  __I  uint16_t PCIE_CFC_SRIOV_FIRST_VF_OFF;       /**< PCIe SR-IOV first VF offset register, offset: 0x164, not available in all instances (available on 24 out of 48) */
+  __I  uint16_t PCIE_CFC_SRIOV_VF_STRIDE;          /**< PCIe SR-IOV VF stride register, offset: 0x166, not available in all instances (available on 24 out of 48) */
        uint8_t RESERVED_14[2];
-  __I  uint16_t PCIE_CFC_SRIOV_VF_DEV_ID;          /**< PCIe SR-IOV VF device ID register, offset: 0x16A, not available in all instances (available on 6 out of 12) */
-  __I  uint32_t PCIE_CFC_SRIOV_SUP_PAGE_SIZES;     /**< PCIe SR-IOV supported page sizes ID register, offset: 0x16C, not available in all instances (available on 6 out of 12) */
-  __I  uint32_t PCIE_CFC_SRIOV_SYS_PAGE_SIZE;      /**< PCIe SR-IOV system page size ID register, offset: 0x170, not available in all instances (available on 6 out of 12) */
-  __I  uint32_t PCIE_CFC_VF_BAR[ENETC_PCI_TYPE0_NUM_VF_BARL_COUNT]; /**< PCIe SR-IOV VF base address register 0..PCIe SR-IOV VF base address register 5, array offset: 0x174, array step: 0x4, not available in all instances (available on 6 out of 12) */
-  __I  uint32_t PCIE_CFC_SRIOV_VF_MIG_STATE_ARR_OFF; /**< PCIe SR-IOV VF migration state array offset register, offset: 0x18C, not available in all instances (available on 6 out of 12) */
+  __I  uint16_t PCIE_CFC_SRIOV_VF_DEV_ID;          /**< PCIe SR-IOV VF device ID register, offset: 0x16A, not available in all instances (available on 24 out of 48) */
+  __I  uint32_t PCIE_CFC_SRIOV_SUP_PAGE_SIZES;     /**< PCIe SR-IOV supported page sizes ID register, offset: 0x16C, not available in all instances (available on 24 out of 48) */
+  __I  uint32_t PCIE_CFC_SRIOV_SYS_PAGE_SIZE;      /**< PCIe SR-IOV system page size ID register, offset: 0x170, not available in all instances (available on 24 out of 48) */
+  __I  uint32_t PCIE_CFC_VF_BAR[ENETC_PCI_TYPE0_NUM_VF_BARL_COUNT]; /**< PCIe SR-IOV VF base address register 0..PCIe SR-IOV VF base address register 5, array offset: 0x174, array step: 0x4, not available in all instances (available on 24 out of 48) */
+  __I  uint32_t PCIE_CFC_SRIOV_VF_MIG_STATE_ARR_OFF; /**< PCIe SR-IOV VF migration state array offset register, offset: 0x18C, not available in all instances (available on 24 out of 48) */
 } ENETC_PCI_TYPE0_Type;
 
 /* ----------------------------------------------------------------------------

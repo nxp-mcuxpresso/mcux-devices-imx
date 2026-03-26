@@ -1,17 +1,44 @@
 /*
 ** ###################################################################
-**     Processors:          MIMX9529xxVTx_ca55
+**     Processors:          MIMX9522xxVTx_ca55
+**                          MIMX9522xxVTx_cm33
+**                          MIMX9522xxVTx_cm7
+**                          MIMX9522xxVZx_ca55
+**                          MIMX9522xxVZx_cm33
+**                          MIMX9522xxVZx_cm7
+**                          MIMX9523xxVTx_ca55
+**                          MIMX9523xxVTx_cm33
+**                          MIMX9523xxVTx_cm7
+**                          MIMX9523xxVZx_ca55
+**                          MIMX9523xxVZx_cm33
+**                          MIMX9523xxVZx_cm7
+**                          MIMX9524xxVTx_ca55
+**                          MIMX9524xxVTx_cm33
+**                          MIMX9524xxVTx_cm7
+**                          MIMX9524xxVZx_ca55
+**                          MIMX9524xxVZx_cm33
+**                          MIMX9524xxVZx_cm7
+**                          MIMX9525xxVTx_ca55
+**                          MIMX9525xxVTx_cm33
+**                          MIMX9525xxVTx_cm7
+**                          MIMX9525xxVZx_ca55
+**                          MIMX9525xxVZx_cm33
+**                          MIMX9525xxVZx_cm7
+**                          MIMX9528xxVTx_ca55
+**                          MIMX9528xxVTx_cm33
+**                          MIMX9528xxVTx_cm7
+**                          MIMX9528xxVZx_ca55
+**                          MIMX9528xxVZx_cm33
+**                          MIMX9528xxVZx_cm7
+**                          MIMX9529xxVTx_ca55
 **                          MIMX9529xxVTx_cm33
 **                          MIMX9529xxVTx_cm7
-**                          MIMX9529xxVYx_ca55
-**                          MIMX9529xxVYx_cm33
-**                          MIMX9529xxVYx_cm7
 **                          MIMX9529xxVZx_ca55
 **                          MIMX9529xxVZx_cm33
 **                          MIMX9529xxVZx_cm7
 **
 **     Version:             rev. 2.0, 2024-10-29
-**     Build:               b260206
+**     Build:               b260324
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for ENETC_SI
@@ -45,11 +72,41 @@
 #if !defined(PERI_ENETC_SI_H_)
 #define PERI_ENETC_SI_H_                         /**< Symbol preventing repeated inclusion */
 
-#if (defined(CPU_MIMX9529xxVTx_ca55) || defined(CPU_MIMX9529xxVYx_ca55) || defined(CPU_MIMX9529xxVZx_ca55))
+#if (defined(CPU_MIMX9522xxVTx_ca55) || defined(CPU_MIMX9522xxVZx_ca55))
+#include "MIMX9522_ca55_COMMON.h"
+#elif (defined(CPU_MIMX9522xxVTx_cm33) || defined(CPU_MIMX9522xxVZx_cm33))
+#include "MIMX9522_cm33_COMMON.h"
+#elif (defined(CPU_MIMX9522xxVTx_cm7) || defined(CPU_MIMX9522xxVZx_cm7))
+#include "MIMX9522_cm7_COMMON.h"
+#elif (defined(CPU_MIMX9523xxVTx_ca55) || defined(CPU_MIMX9523xxVZx_ca55))
+#include "MIMX9523_ca55_COMMON.h"
+#elif (defined(CPU_MIMX9523xxVTx_cm33) || defined(CPU_MIMX9523xxVZx_cm33))
+#include "MIMX9523_cm33_COMMON.h"
+#elif (defined(CPU_MIMX9523xxVTx_cm7) || defined(CPU_MIMX9523xxVZx_cm7))
+#include "MIMX9523_cm7_COMMON.h"
+#elif (defined(CPU_MIMX9524xxVTx_ca55) || defined(CPU_MIMX9524xxVZx_ca55))
+#include "MIMX9524_ca55_COMMON.h"
+#elif (defined(CPU_MIMX9524xxVTx_cm33) || defined(CPU_MIMX9524xxVZx_cm33))
+#include "MIMX9524_cm33_COMMON.h"
+#elif (defined(CPU_MIMX9524xxVTx_cm7) || defined(CPU_MIMX9524xxVZx_cm7))
+#include "MIMX9524_cm7_COMMON.h"
+#elif (defined(CPU_MIMX9525xxVTx_ca55) || defined(CPU_MIMX9525xxVZx_ca55))
+#include "MIMX9525_ca55_COMMON.h"
+#elif (defined(CPU_MIMX9525xxVTx_cm33) || defined(CPU_MIMX9525xxVZx_cm33))
+#include "MIMX9525_cm33_COMMON.h"
+#elif (defined(CPU_MIMX9525xxVTx_cm7) || defined(CPU_MIMX9525xxVZx_cm7))
+#include "MIMX9525_cm7_COMMON.h"
+#elif (defined(CPU_MIMX9528xxVTx_ca55) || defined(CPU_MIMX9528xxVZx_ca55))
+#include "MIMX9528_ca55_COMMON.h"
+#elif (defined(CPU_MIMX9528xxVTx_cm33) || defined(CPU_MIMX9528xxVZx_cm33))
+#include "MIMX9528_cm33_COMMON.h"
+#elif (defined(CPU_MIMX9528xxVTx_cm7) || defined(CPU_MIMX9528xxVZx_cm7))
+#include "MIMX9528_cm7_COMMON.h"
+#elif (defined(CPU_MIMX9529xxVTx_ca55) || defined(CPU_MIMX9529xxVZx_ca55))
 #include "MIMX9529_ca55_COMMON.h"
-#elif (defined(CPU_MIMX9529xxVTx_cm33) || defined(CPU_MIMX9529xxVYx_cm33) || defined(CPU_MIMX9529xxVZx_cm33))
+#elif (defined(CPU_MIMX9529xxVTx_cm33) || defined(CPU_MIMX9529xxVZx_cm33))
 #include "MIMX9529_cm33_COMMON.h"
-#elif (defined(CPU_MIMX9529xxVTx_cm7) || defined(CPU_MIMX9529xxVYx_cm7) || defined(CPU_MIMX9529xxVZx_cm7))
+#elif (defined(CPU_MIMX9529xxVTx_cm7) || defined(CPU_MIMX9529xxVZx_cm7))
 #include "MIMX9529_cm7_COMMON.h"
 #else
   #error "No valid CPU defined!"
@@ -115,7 +172,7 @@ typedef struct {
   __IO uint32_t SIRBGCR;                           /**< Station interface receive BDR group control register, offset: 0x38 */
        uint8_t RESERVED_3[4];
   __IO uint32_t SIBCAR;                            /**< Station interface buffer cache attribute register, offset: 0x40 */
-  __IO uint32_t SIMCAR;                            /**< Station interface message cache attribute register, offset: 0x44, not available in all instances (available on 6 out of 12) */
+  __IO uint32_t SIMCAR;                            /**< Station interface message cache attribute register, offset: 0x44, not available in all instances (available on 24 out of 48) */
   __IO uint32_t SICCAR;                            /**< Station interface command cache attribute register, offset: 0x48 */
        uint8_t RESERVED_4[52];
   __I  uint32_t SIPMAR0;                           /**< Station interface primary MAC address register 0, offset: 0x80 */
@@ -131,20 +188,20 @@ typedef struct {
        uint8_t RESERVED_8[176];
   union {                                          /* offset: 0x204 */
     struct {                                         /* offset: 0x204 */
-      __IO uint32_t PSIMSGRR;                          /**< Physical station interface message receive register, offset: 0x204, not available in all instances (available on 6 out of 12) */
-      __IO uint32_t PSIMSGSR;                          /**< Physical station interface message send register, offset: 0x208, not available in all instances (available on 6 out of 12) */
+      __IO uint32_t PSIMSGRR;                          /**< Physical station interface message receive register, offset: 0x204, not available in all instances (available on 24 out of 48) */
+      __IO uint32_t PSIMSGSR;                          /**< Physical station interface message send register, offset: 0x208, not available in all instances (available on 24 out of 48) */
            uint8_t RESERVED_0[4];
       struct {                                         /* offset: 0x210, array step: 0x8 */
-        __IO uint32_t PSIVMSGRCVAR0;                     /**< PSI VSI 1 message receive address register 0, array offset: 0x210, array step: 0x8, not available in all instances (available on 6 out of 12) */
-        __IO uint32_t PSIVMSGRCVAR1;                     /**< PSI VSI 1 message receive address register 1, array offset: 0x214, array step: 0x8, not available in all instances (available on 6 out of 12) */
+        __IO uint32_t PSIVMSGRCVAR0;                     /**< PSI VSI 1 message receive address register 0, array offset: 0x210, array step: 0x8, not available in all instances (available on 24 out of 48) */
+        __IO uint32_t PSIVMSGRCVAR1;                     /**< PSI VSI 1 message receive address register 1, array offset: 0x214, array step: 0x8, not available in all instances (available on 24 out of 48) */
       } VSI_NUM[ENETC_SI_MSGSR_PSI_A_VSI_NUM_COUNT];
     } PSI_A;
     struct {                                         /* offset: 0x204 */
-      __I  uint32_t VSIMSGSR;                          /**< Virtual station interface message send register, offset: 0x204, not available in all instances (available on 6 out of 12) */
-      __I  uint32_t VSIMSGRR;                          /**< Virtual station interface message receive register, offset: 0x208, not available in all instances (available on 6 out of 12) */
+      __I  uint32_t VSIMSGSR;                          /**< Virtual station interface message send register, offset: 0x204, not available in all instances (available on 24 out of 48) */
+      __I  uint32_t VSIMSGRR;                          /**< Virtual station interface message receive register, offset: 0x208, not available in all instances (available on 24 out of 48) */
            uint8_t RESERVED_0[4];
-      __IO uint32_t VSIMSGSNDAR0;                      /**< Virtual station interface message address send register 0, offset: 0x210, not available in all instances (available on 6 out of 12) */
-      __IO uint32_t VSIMSGSNDAR1;                      /**< Virtual station interface message send address register 1, offset: 0x214, not available in all instances (available on 6 out of 12) */
+      __IO uint32_t VSIMSGSNDAR0;                      /**< Virtual station interface message address send register 0, offset: 0x210, not available in all instances (available on 24 out of 48) */
+      __IO uint32_t VSIMSGSNDAR1;                      /**< Virtual station interface message send address register 1, offset: 0x214, not available in all instances (available on 24 out of 48) */
     } VSI_A;
   };
        uint8_t RESERVED_9[232];
@@ -166,7 +223,7 @@ typedef struct {
   __I  uint32_t SITMCA1;                           /**< Station interface transmit multicast frame counter (ifOutMulticastPkts) 1, offset: 0x33C */
   __I  uint32_t SITDFCR;                           /**< Station interface transmit discard frame counter, offset: 0x340 */
        uint8_t RESERVED_10[172];
-  __I  uint32_t SIBLPR[ENETC_SI_SI_BOOT_LOAD_COUNT]; /**< Station interface boot loader parameter register 0..Station interface boot loader parameter register 1, array offset: 0x3F0, array step: 0x4, not available in all instances (available on 6 out of 12) */
+  __I  uint32_t SIBLPR[ENETC_SI_SI_BOOT_LOAD_COUNT]; /**< Station interface boot loader parameter register 0..Station interface boot loader parameter register 1, array offset: 0x3F0, array step: 0x4, not available in all instances (available on 24 out of 48) */
        uint8_t RESERVED_11[1032];
   __IO uint32_t SICBDRMR;                          /**< Station interface command BDR mode register, offset: 0x800 */
   __I  uint32_t SICBDRSR;                          /**< Station interface command BDR status register, offset: 0x804 */
@@ -186,14 +243,14 @@ typedef struct {
        uint8_t RESERVED_15[244];
   union {                                          /* offset: 0xA00 */
     struct {                                         /* offset: 0xA00 */
-      __IO uint32_t PSIIER;                            /**< Physical station interface interrupt enable register, offset: 0xA00, not available in all instances (available on 6 out of 12) */
+      __IO uint32_t PSIIER;                            /**< Physical station interface interrupt enable register, offset: 0xA00, not available in all instances (available on 24 out of 48) */
            uint8_t RESERVED_0[4];
-      __IO uint32_t PSIIDR;                            /**< Physical station interface interrupt detect register, offset: 0xA08, not available in all instances (available on 6 out of 12) */
+      __IO uint32_t PSIIDR;                            /**< Physical station interface interrupt detect register, offset: 0xA08, not available in all instances (available on 24 out of 48) */
     } PSI;
     struct {                                         /* offset: 0xA00 */
-      __IO uint32_t VSIIER;                            /**< Virtual station interface interrupt enable register, offset: 0xA00, not available in all instances (available on 6 out of 12) */
+      __IO uint32_t VSIIER;                            /**< Virtual station interface interrupt enable register, offset: 0xA00, not available in all instances (available on 24 out of 48) */
            uint8_t RESERVED_0[4];
-      __IO uint32_t VSIIDR;                            /**< Virtual station interface interrupt detect register, offset: 0xA08, not available in all instances (available on 6 out of 12) */
+      __IO uint32_t VSIIDR;                            /**< Virtual station interface interrupt detect register, offset: 0xA08, not available in all instances (available on 24 out of 48) */
     } VSI;
   };
        uint8_t RESERVED_16[12];

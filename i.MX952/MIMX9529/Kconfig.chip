@@ -60,7 +60,6 @@ config MCUX_TOOLCHAIN_IAR_CPU_IDENTIFIER
 config MCUX_TOOLCHAIN_MDK_CPU_IDENTIFIER
     string
     default "MIMX9529xxVZx:cm7" if MCUX_HW_DEVICE_PART_MIMX9529xxVZx
-    default "MIMX9529xxVYx:cm7" if MCUX_HW_DEVICE_PART_MIMX9529xxVYx
     default "MIMX9529xxVTx:cm7" if MCUX_HW_DEVICE_PART_MIMX9529xxVTx
 
 # device related
@@ -71,9 +70,6 @@ choice
     prompt "Device MIMX9529 Part"
     config MCUX_HW_DEVICE_PART_MIMX9529xxVZx
     bool "MIMX9529xxVZx"
-    select MCUX_HW_DEVICE_ID_MIMX9529xxxxx
-    config MCUX_HW_DEVICE_PART_MIMX9529xxVYx
-    bool "MIMX9529xxVYx"
     select MCUX_HW_DEVICE_ID_MIMX9529xxxxx
     config MCUX_HW_DEVICE_PART_MIMX9529xxVTx
     bool "MIMX9529xxVTx"
@@ -87,7 +83,6 @@ config MCUX_HW_DEVICE_ID
 config MCUX_HW_DEVICE_PART
     string
     default "MIMX9529xxVZx" if MCUX_HW_DEVICE_PART_MIMX9529xxVZx
-    default "MIMX9529xxVYx" if MCUX_HW_DEVICE_PART_MIMX9529xxVYx
     default "MIMX9529xxVTx" if MCUX_HW_DEVICE_PART_MIMX9529xxVTx
  
 # ip information

@@ -1,17 +1,44 @@
 /*
 ** ###################################################################
-**     Processors:          MIMX9529xxVTx_ca55
+**     Processors:          MIMX9522xxVTx_ca55
+**                          MIMX9522xxVTx_cm33
+**                          MIMX9522xxVTx_cm7
+**                          MIMX9522xxVZx_ca55
+**                          MIMX9522xxVZx_cm33
+**                          MIMX9522xxVZx_cm7
+**                          MIMX9523xxVTx_ca55
+**                          MIMX9523xxVTx_cm33
+**                          MIMX9523xxVTx_cm7
+**                          MIMX9523xxVZx_ca55
+**                          MIMX9523xxVZx_cm33
+**                          MIMX9523xxVZx_cm7
+**                          MIMX9524xxVTx_ca55
+**                          MIMX9524xxVTx_cm33
+**                          MIMX9524xxVTx_cm7
+**                          MIMX9524xxVZx_ca55
+**                          MIMX9524xxVZx_cm33
+**                          MIMX9524xxVZx_cm7
+**                          MIMX9525xxVTx_ca55
+**                          MIMX9525xxVTx_cm33
+**                          MIMX9525xxVTx_cm7
+**                          MIMX9525xxVZx_ca55
+**                          MIMX9525xxVZx_cm33
+**                          MIMX9525xxVZx_cm7
+**                          MIMX9528xxVTx_ca55
+**                          MIMX9528xxVTx_cm33
+**                          MIMX9528xxVTx_cm7
+**                          MIMX9528xxVZx_ca55
+**                          MIMX9528xxVZx_cm33
+**                          MIMX9528xxVZx_cm7
+**                          MIMX9529xxVTx_ca55
 **                          MIMX9529xxVTx_cm33
 **                          MIMX9529xxVTx_cm7
-**                          MIMX9529xxVYx_ca55
-**                          MIMX9529xxVYx_cm33
-**                          MIMX9529xxVYx_cm7
 **                          MIMX9529xxVZx_ca55
 **                          MIMX9529xxVZx_cm33
 **                          MIMX9529xxVZx_cm7
 **
 **     Version:             rev. 2.0, 2024-10-29
-**     Build:               b260206
+**     Build:               b260324
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for PLL
@@ -45,11 +72,41 @@
 #if !defined(PERI_PLL_H_)
 #define PERI_PLL_H_                              /**< Symbol preventing repeated inclusion */
 
-#if (defined(CPU_MIMX9529xxVTx_ca55) || defined(CPU_MIMX9529xxVYx_ca55) || defined(CPU_MIMX9529xxVZx_ca55))
+#if (defined(CPU_MIMX9522xxVTx_ca55) || defined(CPU_MIMX9522xxVZx_ca55))
+#include "MIMX9522_ca55_COMMON.h"
+#elif (defined(CPU_MIMX9522xxVTx_cm33) || defined(CPU_MIMX9522xxVZx_cm33))
+#include "MIMX9522_cm33_COMMON.h"
+#elif (defined(CPU_MIMX9522xxVTx_cm7) || defined(CPU_MIMX9522xxVZx_cm7))
+#include "MIMX9522_cm7_COMMON.h"
+#elif (defined(CPU_MIMX9523xxVTx_ca55) || defined(CPU_MIMX9523xxVZx_ca55))
+#include "MIMX9523_ca55_COMMON.h"
+#elif (defined(CPU_MIMX9523xxVTx_cm33) || defined(CPU_MIMX9523xxVZx_cm33))
+#include "MIMX9523_cm33_COMMON.h"
+#elif (defined(CPU_MIMX9523xxVTx_cm7) || defined(CPU_MIMX9523xxVZx_cm7))
+#include "MIMX9523_cm7_COMMON.h"
+#elif (defined(CPU_MIMX9524xxVTx_ca55) || defined(CPU_MIMX9524xxVZx_ca55))
+#include "MIMX9524_ca55_COMMON.h"
+#elif (defined(CPU_MIMX9524xxVTx_cm33) || defined(CPU_MIMX9524xxVZx_cm33))
+#include "MIMX9524_cm33_COMMON.h"
+#elif (defined(CPU_MIMX9524xxVTx_cm7) || defined(CPU_MIMX9524xxVZx_cm7))
+#include "MIMX9524_cm7_COMMON.h"
+#elif (defined(CPU_MIMX9525xxVTx_ca55) || defined(CPU_MIMX9525xxVZx_ca55))
+#include "MIMX9525_ca55_COMMON.h"
+#elif (defined(CPU_MIMX9525xxVTx_cm33) || defined(CPU_MIMX9525xxVZx_cm33))
+#include "MIMX9525_cm33_COMMON.h"
+#elif (defined(CPU_MIMX9525xxVTx_cm7) || defined(CPU_MIMX9525xxVZx_cm7))
+#include "MIMX9525_cm7_COMMON.h"
+#elif (defined(CPU_MIMX9528xxVTx_ca55) || defined(CPU_MIMX9528xxVZx_ca55))
+#include "MIMX9528_ca55_COMMON.h"
+#elif (defined(CPU_MIMX9528xxVTx_cm33) || defined(CPU_MIMX9528xxVZx_cm33))
+#include "MIMX9528_cm33_COMMON.h"
+#elif (defined(CPU_MIMX9528xxVTx_cm7) || defined(CPU_MIMX9528xxVZx_cm7))
+#include "MIMX9528_cm7_COMMON.h"
+#elif (defined(CPU_MIMX9529xxVTx_ca55) || defined(CPU_MIMX9529xxVZx_ca55))
 #include "MIMX9529_ca55_COMMON.h"
-#elif (defined(CPU_MIMX9529xxVTx_cm33) || defined(CPU_MIMX9529xxVYx_cm33) || defined(CPU_MIMX9529xxVZx_cm33))
+#elif (defined(CPU_MIMX9529xxVTx_cm33) || defined(CPU_MIMX9529xxVZx_cm33))
 #include "MIMX9529_cm33_COMMON.h"
-#elif (defined(CPU_MIMX9529xxVTx_cm7) || defined(CPU_MIMX9529xxVYx_cm7) || defined(CPU_MIMX9529xxVZx_cm7))
+#elif (defined(CPU_MIMX9529xxVTx_cm7) || defined(CPU_MIMX9529xxVZx_cm7))
 #include "MIMX9529_cm7_COMMON.h"
 #else
   #error "No valid CPU defined!"
@@ -106,22 +163,22 @@ typedef struct {
   } CTRL;
        uint8_t RESERVED_0[32];
   struct {                                         /* offset: 0x30 */
-    __IO uint32_t RW;                                /**< Spread Spectrum, offset: 0x30, not available in all instances (available on 18 out of 21) */
-    __IO uint32_t SET;                               /**< Spread Spectrum, offset: 0x34, not available in all instances (available on 18 out of 21) */
-    __IO uint32_t CLR;                               /**< Spread Spectrum, offset: 0x38, not available in all instances (available on 18 out of 21) */
-    __IO uint32_t TOG;                               /**< Spread Spectrum, offset: 0x3C, not available in all instances (available on 18 out of 21) */
+    __IO uint32_t RW;                                /**< Spread Spectrum, offset: 0x30, not available in all instances (available on 72 out of 84) */
+    __IO uint32_t SET;                               /**< Spread Spectrum, offset: 0x34, not available in all instances (available on 72 out of 84) */
+    __IO uint32_t CLR;                               /**< Spread Spectrum, offset: 0x38, not available in all instances (available on 72 out of 84) */
+    __IO uint32_t TOG;                               /**< Spread Spectrum, offset: 0x3C, not available in all instances (available on 72 out of 84) */
   } SPREAD_SPECTRUM;
   struct {                                         /* offset: 0x40 */
-    __IO uint32_t RW;                                /**< Numerator, offset: 0x40, not available in all instances (available on 18 out of 21) */
-    __IO uint32_t SET;                               /**< Numerator, offset: 0x44, not available in all instances (available on 18 out of 21) */
-    __IO uint32_t CLR;                               /**< Numerator, offset: 0x48, not available in all instances (available on 18 out of 21) */
-    __IO uint32_t TOG;                               /**< Numerator, offset: 0x4C, not available in all instances (available on 18 out of 21) */
+    __IO uint32_t RW;                                /**< Numerator, offset: 0x40, not available in all instances (available on 72 out of 84) */
+    __IO uint32_t SET;                               /**< Numerator, offset: 0x44, not available in all instances (available on 72 out of 84) */
+    __IO uint32_t CLR;                               /**< Numerator, offset: 0x48, not available in all instances (available on 72 out of 84) */
+    __IO uint32_t TOG;                               /**< Numerator, offset: 0x4C, not available in all instances (available on 72 out of 84) */
   } NUMERATOR;
   struct {                                         /* offset: 0x50 */
-    __IO uint32_t RW;                                /**< Denominator, offset: 0x50, not available in all instances (available on 18 out of 21) */
-    __IO uint32_t SET;                               /**< Denominator, offset: 0x54, not available in all instances (available on 18 out of 21) */
-    __IO uint32_t CLR;                               /**< Denominator, offset: 0x58, not available in all instances (available on 18 out of 21) */
-    __IO uint32_t TOG;                               /**< Denominator, offset: 0x5C, not available in all instances (available on 18 out of 21) */
+    __IO uint32_t RW;                                /**< Denominator, offset: 0x50, not available in all instances (available on 72 out of 84) */
+    __IO uint32_t SET;                               /**< Denominator, offset: 0x54, not available in all instances (available on 72 out of 84) */
+    __IO uint32_t CLR;                               /**< Denominator, offset: 0x58, not available in all instances (available on 72 out of 84) */
+    __IO uint32_t TOG;                               /**< Denominator, offset: 0x5C, not available in all instances (available on 72 out of 84) */
   } DENOMINATOR;
   struct {                                         /* offset: 0x60 */
     __IO uint32_t RW;                                /**< PLL Dividers, offset: 0x60 */
@@ -131,20 +188,20 @@ typedef struct {
   } DIV;
   struct {                                         /* offset: 0x70, array step: 0x20 */
     struct {                                         /* offset: 0x70 */
-      __IO uint32_t RW;                                /**< DFS Control, offset: 0x70, not available in all instances (available on 6 out of 21) */
-      __IO uint32_t SET;                               /**< DFS Control, offset: 0x74, not available in all instances (available on 6 out of 21) */
-      __IO uint32_t CLR;                               /**< DFS Control, offset: 0x78, not available in all instances (available on 6 out of 21) */
-      __IO uint32_t TOG;                               /**< DFS Control, offset: 0x7C, not available in all instances (available on 6 out of 21) */
+      __IO uint32_t RW;                                /**< DFS Control, offset: 0x70, not available in all instances (available on 24 out of 84) */
+      __IO uint32_t SET;                               /**< DFS Control, offset: 0x74, not available in all instances (available on 24 out of 84) */
+      __IO uint32_t CLR;                               /**< DFS Control, offset: 0x78, not available in all instances (available on 24 out of 84) */
+      __IO uint32_t TOG;                               /**< DFS Control, offset: 0x7C, not available in all instances (available on 24 out of 84) */
     } DFS_CTRL;
     struct {                                         /* offset: 0x80 */
-      __IO uint32_t RW;                                /**< DFS Division_N, offset: 0x80, not available in all instances (available on 6 out of 21) */
-      __IO uint32_t SET;                               /**< DFS Division_N, offset: 0x84, not available in all instances (available on 6 out of 21) */
-      __IO uint32_t CLR;                               /**< DFS Division_N, offset: 0x88, not available in all instances (available on 6 out of 21) */
-      __IO uint32_t TOG;                               /**< DFS Division_N, offset: 0x8C, not available in all instances (available on 6 out of 21) */
+      __IO uint32_t RW;                                /**< DFS Division_N, offset: 0x80, not available in all instances (available on 24 out of 84) */
+      __IO uint32_t SET;                               /**< DFS Division_N, offset: 0x84, not available in all instances (available on 24 out of 84) */
+      __IO uint32_t CLR;                               /**< DFS Division_N, offset: 0x88, not available in all instances (available on 24 out of 84) */
+      __IO uint32_t TOG;                               /**< DFS Division_N, offset: 0x8C, not available in all instances (available on 24 out of 84) */
     } DFS_DIV;
   } DFS[PLL_DFS_COUNT];
   __I  uint32_t PLL_STATUS;                        /**< PLL Status, offset: 0xF0 */
-  __I  uint32_t DFS_STATUS;                        /**< DFS Status, offset: 0xF4, not available in all instances (available on 6 out of 21) */
+  __I  uint32_t DFS_STATUS;                        /**< DFS Status, offset: 0xF4, not available in all instances (available on 24 out of 84) */
 } PLL_Type;
 
 /* ----------------------------------------------------------------------------

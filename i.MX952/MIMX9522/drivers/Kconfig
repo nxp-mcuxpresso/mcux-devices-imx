@@ -1,0 +1,6 @@
+# Copyright 2026 NXP
+# All rights reserved.
+#
+# SPDX-License-Identifier: BSD-3-Clause
+
+rsource "../../../i.MX952/MIMX9529/drivers/Kconfig"

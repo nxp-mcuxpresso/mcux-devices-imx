@@ -1,5 +1,19 @@
 ---
+#####################################################################################
+# This file is placed under devices/<device>
+#
+# The following components(manifest_content) are translated from the devices/<device>.meta
+# and devices/<device>_device.meta
+#
+# They are used contained the information for manifest generation usage. Currently, they are
+# not related to SW components actions
+#
+# The naming for this component must be consistent in all devices. Generator can get the contents
+# of them directly from the name.
+#
+#####################################################################################
 
+# automatically, from fromChipModel
 device.hardware_data:
   section-type: "manifest_content"
   belong_to: set.device.MIMX9529
@@ -35,8 +49,6 @@ device.hardware_data:
             slave_role:
               - id: "M7SLAVE"
                 name: "Cortex-M7F acts as slave by default"
-            ips:
-              - "DriverType_IRQSTEER_1"
         memory:
           memoryBlock:
             - id: "SRAM_UPPER_m7"
@@ -72,7 +84,6 @@ device.hardware_data:
           flash_size_kb: 0
         part:
           - name: "MIMX9529xxVZx"
-          - name: "MIMX9529xxVYx"
           - name: "MIMX9529xxVTx"
         modules:
 ...
