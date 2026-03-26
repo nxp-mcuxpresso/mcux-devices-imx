@@ -1045,7 +1045,7 @@
 /* @brief Multi IRQ count for one instance */
 #define FSL_FEATURE_XSPI_MULTI_IRQ_COUNT (5U)
 /* @brief XSPI has DDR Mode Enable */
-#define FSL_FEATURE_XSPI_HAS_DDR (0)
+#define FSL_FEATURE_XSPI_HAS_DDR (1)
 /* @brief XSPI has Environment Module Configuration */
 #define FSL_FEATURE_XSPI_HAS_EENV (1)
 
