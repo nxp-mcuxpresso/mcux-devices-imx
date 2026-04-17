@@ -41,7 +41,6 @@ extern "C" {
 #endif
 
 #include <stdint.h>
-#include "fsl_device_registers.h"
 
 #define DEFAULT_SYSTEM_CLOCK 200000000u
 
