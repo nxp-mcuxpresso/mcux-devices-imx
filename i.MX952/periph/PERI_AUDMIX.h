@@ -38,10 +38,10 @@
 **                          MIMX9529xxVZx_cm7
 **
 **     Version:             rev. 2.0, 2024-10-29
-**     Build:               b260324
+**     Build:               b260416
 **
 **     Abstract:
-**         CMSIS Peripheral Access Layer for WAKEUP_AUDMIX
+**         CMSIS Peripheral Access Layer for AUDMIX
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
 **     Copyright 2016-2026 NXP
@@ -61,16 +61,16 @@
 */
 
 /*!
- * @file PERI_WAKEUP_AUDMIX.h
+ * @file PERI_AUDMIX.h
  * @version 2.0
  * @date 2024-10-29
- * @brief CMSIS Peripheral Access Layer for WAKEUP_AUDMIX
+ * @brief CMSIS Peripheral Access Layer for AUDMIX
  *
- * CMSIS Peripheral Access Layer for WAKEUP_AUDMIX
+ * CMSIS Peripheral Access Layer for AUDMIX
  */
 
-#if !defined(PERI_WAKEUP_AUDMIX_H_)
-#define PERI_WAKEUP_AUDMIX_H_                    /**< Symbol preventing repeated inclusion */
+#if !defined(PERI_AUDMIX_H_)
+#define PERI_AUDMIX_H_                           /**< Symbol preventing repeated inclusion */
 
 #if (defined(CPU_MIMX9522xxVTx_ca55) || defined(CPU_MIMX9522xxVZx_ca55))
 #include "MIMX9522_ca55_COMMON.h"
@@ -142,15 +142,15 @@
 #endif
 
 /* ----------------------------------------------------------------------------
-   -- WAKEUP_AUDMIX Peripheral Access Layer
+   -- AUDMIX Peripheral Access Layer
    ---------------------------------------------------------------------------- */
 
 /*!
- * @addtogroup WAKEUP_AUDMIX_Peripheral_Access_Layer WAKEUP_AUDMIX Peripheral Access Layer
+ * @addtogroup AUDMIX_Peripheral_Access_Layer AUDMIX Peripheral Access Layer
  * @{
  */
 
-/** WAKEUP_AUDMIX - Register Layout Typedef */
+/** AUDMIX - Register Layout Typedef */
 typedef struct {
        uint8_t RESERVED_0[512];
   __IO uint32_t CTR;                               /**< Control, offset: 0x200 */
@@ -170,40 +170,40 @@ typedef struct {
   __IO uint32_t ATSTPTGT1;                         /**< Attenuation Step Target, offset: 0x238 */
   __I  uint32_t ATTNVAL1;                          /**< Attenuation Value, offset: 0x23C */
   __I  uint32_t ATSTP1;                            /**< Attenuation Step Number, offset: 0x240 */
-} WAKEUP_AUDMIX_Type;
+} AUDMIX_Type;
 
 /* ----------------------------------------------------------------------------
-   -- WAKEUP_AUDMIX Register Masks
+   -- AUDMIX Register Masks
    ---------------------------------------------------------------------------- */
 
 /*!
- * @addtogroup WAKEUP_AUDMIX_Register_Masks WAKEUP_AUDMIX Register Masks
+ * @addtogroup AUDMIX_Register_Masks AUDMIX Register Masks
  * @{
  */
 
 /*! @name CTR - Control */
 /*! @{ */
 
-#define WAKEUP_AUDMIX_CTR_MIXCLK_MASK            (0x1U)
-#define WAKEUP_AUDMIX_CTR_MIXCLK_SHIFT           (0U)
+#define AUDMIX_CTR_MIXCLK_MASK                   (0x1U)
+#define AUDMIX_CTR_MIXCLK_SHIFT                  (0U)
 /*! MIXCLK - Mixing Clock Source Selection
  *  0b0..TDM 1 interface clock
  *  0b1..TDM 2 interface clock
  */
-#define WAKEUP_AUDMIX_CTR_MIXCLK(x)              (((uint32_t)(((uint32_t)(x)) << WAKEUP_AUDMIX_CTR_MIXCLK_SHIFT)) & WAKEUP_AUDMIX_CTR_MIXCLK_MASK)
+#define AUDMIX_CTR_MIXCLK(x)                     (((uint32_t)(((uint32_t)(x)) << AUDMIX_CTR_MIXCLK_SHIFT)) & AUDMIX_CTR_MIXCLK_MASK)
 
-#define WAKEUP_AUDMIX_CTR_OUTSRC_MASK            (0x6U)
-#define WAKEUP_AUDMIX_CTR_OUTSRC_SHIFT           (1U)
+#define AUDMIX_CTR_OUTSRC_MASK                   (0x6U)
+#define AUDMIX_CTR_OUTSRC_SHIFT                  (1U)
 /*! OUTSRC - Output Source Selection
  *  0b00..Disabled
  *  0b01..TDM 1 audio
  *  0b10..TDM 2 audio
  *  0b11..Mixed audio
  */
-#define WAKEUP_AUDMIX_CTR_OUTSRC(x)              (((uint32_t)(((uint32_t)(x)) << WAKEUP_AUDMIX_CTR_OUTSRC_SHIFT)) & WAKEUP_AUDMIX_CTR_OUTSRC_MASK)
+#define AUDMIX_CTR_OUTSRC(x)                     (((uint32_t)(((uint32_t)(x)) << AUDMIX_CTR_OUTSRC_SHIFT)) & AUDMIX_CTR_OUTSRC_MASK)
 
-#define WAKEUP_AUDMIX_CTR_OUTWIDTH_MASK          (0x38U)
-#define WAKEUP_AUDMIX_CTR_OUTWIDTH_SHIFT         (3U)
+#define AUDMIX_CTR_OUTWIDTH_MASK                 (0x38U)
+#define AUDMIX_CTR_OUTWIDTH_SHIFT                (3U)
 /*! OUTWIDTH - Audio Sample Width in TDM Outgoing Frame
  *  0b000..16-bit
  *  0b001..18-bit
@@ -211,123 +211,123 @@ typedef struct {
  *  0b011..24-bit
  *  0b100-0b111..32-bit
  */
-#define WAKEUP_AUDMIX_CTR_OUTWIDTH(x)            (((uint32_t)(((uint32_t)(x)) << WAKEUP_AUDMIX_CTR_OUTWIDTH_SHIFT)) & WAKEUP_AUDMIX_CTR_OUTWIDTH_MASK)
+#define AUDMIX_CTR_OUTWIDTH(x)                   (((uint32_t)(((uint32_t)(x)) << AUDMIX_CTR_OUTWIDTH_SHIFT)) & AUDMIX_CTR_OUTWIDTH_MASK)
 
-#define WAKEUP_AUDMIX_CTR_OUTCKPOL_MASK          (0x40U)
-#define WAKEUP_AUDMIX_CTR_OUTCKPOL_SHIFT         (6U)
+#define AUDMIX_CTR_OUTCKPOL_MASK                 (0x40U)
+#define AUDMIX_CTR_OUTCKPOL_SHIFT                (6U)
 /*! OUTCKPOL - Polarity of Bit Clock of TDM Out Interface
  *  0b0..Positive edge
  *  0b1..Negative edge
  */
-#define WAKEUP_AUDMIX_CTR_OUTCKPOL(x)            (((uint32_t)(((uint32_t)(x)) << WAKEUP_AUDMIX_CTR_OUTCKPOL_SHIFT)) & WAKEUP_AUDMIX_CTR_OUTCKPOL_MASK)
+#define AUDMIX_CTR_OUTCKPOL(x)                   (((uint32_t)(((uint32_t)(x)) << AUDMIX_CTR_OUTCKPOL_SHIFT)) & AUDMIX_CTR_OUTCKPOL_MASK)
 
-#define WAKEUP_AUDMIX_CTR_MASKRTDF_MASK          (0x80U)
-#define WAKEUP_AUDMIX_CTR_MASKRTDF_SHIFT         (7U)
+#define AUDMIX_CTR_MASKRTDF_MASK                 (0x80U)
+#define AUDMIX_CTR_MASKRTDF_SHIFT                (7U)
 /*! MASKRTDF - Mask Frame rate difference error
  *  0b0..Unmask error
  *  0b1..Mask error
  */
-#define WAKEUP_AUDMIX_CTR_MASKRTDF(x)            (((uint32_t)(((uint32_t)(x)) << WAKEUP_AUDMIX_CTR_MASKRTDF_SHIFT)) & WAKEUP_AUDMIX_CTR_MASKRTDF_MASK)
+#define AUDMIX_CTR_MASKRTDF(x)                   (((uint32_t)(((uint32_t)(x)) << AUDMIX_CTR_MASKRTDF_SHIFT)) & AUDMIX_CTR_MASKRTDF_MASK)
 
-#define WAKEUP_AUDMIX_CTR_MASKCKDF_MASK          (0x100U)
-#define WAKEUP_AUDMIX_CTR_MASKCKDF_SHIFT         (8U)
+#define AUDMIX_CTR_MASKCKDF_MASK                 (0x100U)
+#define AUDMIX_CTR_MASKCKDF_SHIFT                (8U)
 /*! MASKCKDF - Mask Clock frequency difference error
  *  0b0..Unmask error
  *  0b1..Mask error
  */
-#define WAKEUP_AUDMIX_CTR_MASKCKDF(x)            (((uint32_t)(((uint32_t)(x)) << WAKEUP_AUDMIX_CTR_MASKCKDF_SHIFT)) & WAKEUP_AUDMIX_CTR_MASKCKDF_MASK)
+#define AUDMIX_CTR_MASKCKDF(x)                   (((uint32_t)(((uint32_t)(x)) << AUDMIX_CTR_MASKCKDF_SHIFT)) & AUDMIX_CTR_MASKCKDF_MASK)
 
-#define WAKEUP_AUDMIX_CTR_SYNCMODE_MASK          (0x200U)
-#define WAKEUP_AUDMIX_CTR_SYNCMODE_SHIFT         (9U)
+#define AUDMIX_CTR_SYNCMODE_MASK                 (0x200U)
+#define AUDMIX_CTR_SYNCMODE_SHIFT                (9U)
 /*! SYNCMODE - Sync Mode Configuration Enable
  *  0b0..Disables
  *  0b1..Enables
  */
-#define WAKEUP_AUDMIX_CTR_SYNCMODE(x)            (((uint32_t)(((uint32_t)(x)) << WAKEUP_AUDMIX_CTR_SYNCMODE_SHIFT)) & WAKEUP_AUDMIX_CTR_SYNCMODE_MASK)
+#define AUDMIX_CTR_SYNCMODE(x)                   (((uint32_t)(((uint32_t)(x)) << AUDMIX_CTR_SYNCMODE_SHIFT)) & AUDMIX_CTR_SYNCMODE_MASK)
 
-#define WAKEUP_AUDMIX_CTR_SYNCSRC_MASK           (0x400U)
-#define WAKEUP_AUDMIX_CTR_SYNCSRC_SHIFT          (10U)
+#define AUDMIX_CTR_SYNCSRC_MASK                  (0x400U)
+#define AUDMIX_CTR_SYNCSRC_SHIFT                 (10U)
 /*! SYNCSRC - Sync Mode Cock Source
  *  0b0..TDM 1 interface
  *  0b1..TDM 2 interface
  */
-#define WAKEUP_AUDMIX_CTR_SYNCSRC(x)             (((uint32_t)(((uint32_t)(x)) << WAKEUP_AUDMIX_CTR_SYNCSRC_SHIFT)) & WAKEUP_AUDMIX_CTR_SYNCSRC_MASK)
+#define AUDMIX_CTR_SYNCSRC(x)                    (((uint32_t)(((uint32_t)(x)) << AUDMIX_CTR_SYNCSRC_SHIFT)) & AUDMIX_CTR_SYNCSRC_MASK)
 /*! @} */
 
 /*! @name STR - Status */
 /*! @{ */
 
-#define WAKEUP_AUDMIX_STR_RATEDIFF_MASK          (0x1U)
-#define WAKEUP_AUDMIX_STR_RATEDIFF_SHIFT         (0U)
+#define AUDMIX_STR_RATEDIFF_MASK                 (0x1U)
+#define AUDMIX_STR_RATEDIFF_SHIFT                (0U)
 /*! RATEDIFF - Rate Difference
  *  0b0..Match
  *  0b1..Mismatch
  */
-#define WAKEUP_AUDMIX_STR_RATEDIFF(x)            (((uint32_t)(((uint32_t)(x)) << WAKEUP_AUDMIX_STR_RATEDIFF_SHIFT)) & WAKEUP_AUDMIX_STR_RATEDIFF_MASK)
+#define AUDMIX_STR_RATEDIFF(x)                   (((uint32_t)(((uint32_t)(x)) << AUDMIX_STR_RATEDIFF_SHIFT)) & AUDMIX_STR_RATEDIFF_MASK)
 
-#define WAKEUP_AUDMIX_STR_CLKDIFF_MASK           (0x2U)
-#define WAKEUP_AUDMIX_STR_CLKDIFF_SHIFT          (1U)
+#define AUDMIX_STR_CLKDIFF_MASK                  (0x2U)
+#define AUDMIX_STR_CLKDIFF_SHIFT                 (1U)
 /*! CLKDIFF - Bit Cock Difference
  *  0b0..Match
  *  0b1..Mismatch
  */
-#define WAKEUP_AUDMIX_STR_CLKDIFF(x)             (((uint32_t)(((uint32_t)(x)) << WAKEUP_AUDMIX_STR_CLKDIFF_SHIFT)) & WAKEUP_AUDMIX_STR_CLKDIFF_MASK)
+#define AUDMIX_STR_CLKDIFF(x)                    (((uint32_t)(((uint32_t)(x)) << AUDMIX_STR_CLKDIFF_SHIFT)) & AUDMIX_STR_CLKDIFF_MASK)
 
-#define WAKEUP_AUDMIX_STR_MIXSTAT_MASK           (0xCU)
-#define WAKEUP_AUDMIX_STR_MIXSTAT_SHIFT          (2U)
+#define AUDMIX_STR_MIXSTAT_MASK                  (0xCU)
+#define AUDMIX_STR_MIXSTAT_SHIFT                 (2U)
 /*! MIXSTAT - Mixer Status
  *  0b00..Mixer in DISABLED state (no output)
  *  0b01..Mixer in TDM_1 state (output is TDM 1 stream)
  *  0b10..Mixer in TDM_2 state (output is TDM 2 stream)
  *  0b11..Mixer in MIXED state (output is MIXED stream of TDM 1 and TDM 2)
  */
-#define WAKEUP_AUDMIX_STR_MIXSTAT(x)             (((uint32_t)(((uint32_t)(x)) << WAKEUP_AUDMIX_STR_MIXSTAT_SHIFT)) & WAKEUP_AUDMIX_STR_MIXSTAT_MASK)
+#define AUDMIX_STR_MIXSTAT(x)                    (((uint32_t)(((uint32_t)(x)) << AUDMIX_STR_MIXSTAT_SHIFT)) & AUDMIX_STR_MIXSTAT_MASK)
 /*! @} */
 
 /*! @name ATCR0 - Attenuation Control */
 /*! @{ */
 
-#define WAKEUP_AUDMIX_ATCR0_AT_EN_MASK           (0x1U)
-#define WAKEUP_AUDMIX_ATCR0_AT_EN_SHIFT          (0U)
+#define AUDMIX_ATCR0_AT_EN_MASK                  (0x1U)
+#define AUDMIX_ATCR0_AT_EN_SHIFT                 (0U)
 /*! AT_EN - Attenuation Enable
  *  0b0..Disables
  *  0b1..Enables
  */
-#define WAKEUP_AUDMIX_ATCR0_AT_EN(x)             (((uint32_t)(((uint32_t)(x)) << WAKEUP_AUDMIX_ATCR0_AT_EN_SHIFT)) & WAKEUP_AUDMIX_ATCR0_AT_EN_MASK)
+#define AUDMIX_ATCR0_AT_EN(x)                    (((uint32_t)(((uint32_t)(x)) << AUDMIX_ATCR0_AT_EN_SHIFT)) & AUDMIX_ATCR0_AT_EN_MASK)
 
-#define WAKEUP_AUDMIX_ATCR0_AT_UPDN_MASK         (0x2U)
-#define WAKEUP_AUDMIX_ATCR0_AT_UPDN_SHIFT        (1U)
+#define AUDMIX_ATCR0_AT_UPDN_MASK                (0x2U)
+#define AUDMIX_ATCR0_AT_UPDN_SHIFT               (1U)
 /*! AT_UPDN - Attenuation Direction
  *  0b0..Downward
  *  0b1..Upward
  */
-#define WAKEUP_AUDMIX_ATCR0_AT_UPDN(x)           (((uint32_t)(((uint32_t)(x)) << WAKEUP_AUDMIX_ATCR0_AT_UPDN_SHIFT)) & WAKEUP_AUDMIX_ATCR0_AT_UPDN_MASK)
+#define AUDMIX_ATCR0_AT_UPDN(x)                  (((uint32_t)(((uint32_t)(x)) << AUDMIX_ATCR0_AT_UPDN_SHIFT)) & AUDMIX_ATCR0_AT_UPDN_MASK)
 
-#define WAKEUP_AUDMIX_ATCR0_ATSTPDIV_MASK        (0x3FFCU)
-#define WAKEUP_AUDMIX_ATCR0_ATSTPDIV_SHIFT       (2U)
+#define AUDMIX_ATCR0_ATSTPDIV_MASK               (0x3FFCU)
+#define AUDMIX_ATCR0_ATSTPDIV_SHIFT              (2U)
 /*! ATSTPDIV - Step Divider */
-#define WAKEUP_AUDMIX_ATCR0_ATSTPDIV(x)          (((uint32_t)(((uint32_t)(x)) << WAKEUP_AUDMIX_ATCR0_ATSTPDIV_SHIFT)) & WAKEUP_AUDMIX_ATCR0_ATSTPDIV_MASK)
+#define AUDMIX_ATCR0_ATSTPDIV(x)                 (((uint32_t)(((uint32_t)(x)) << AUDMIX_ATCR0_ATSTPDIV_SHIFT)) & AUDMIX_ATCR0_ATSTPDIV_MASK)
 /*! @} */
 
 /*! @name ATIVAL0 - Attenuation Initial Value */
 /*! @{ */
 
-#define WAKEUP_AUDMIX_ATIVAL0_ATINTVAL_MASK      (0x3FFFFU)
-#define WAKEUP_AUDMIX_ATIVAL0_ATINTVAL_SHIFT     (0U)
+#define AUDMIX_ATIVAL0_ATINTVAL_MASK             (0x3FFFFU)
+#define AUDMIX_ATIVAL0_ATINTVAL_SHIFT            (0U)
 /*! ATINTVAL - Attnuation Initial Value
  *  0b100000000000000000..0.5
  *  0b110000000000000000..0.75
  *  0b110000000000000001-0b111111111111111110.....
  *  0b111111111111111111..0.999996185
  */
-#define WAKEUP_AUDMIX_ATIVAL0_ATINTVAL(x)        (((uint32_t)(((uint32_t)(x)) << WAKEUP_AUDMIX_ATIVAL0_ATINTVAL_SHIFT)) & WAKEUP_AUDMIX_ATIVAL0_ATINTVAL_MASK)
+#define AUDMIX_ATIVAL0_ATINTVAL(x)               (((uint32_t)(((uint32_t)(x)) << AUDMIX_ATIVAL0_ATINTVAL_SHIFT)) & AUDMIX_ATIVAL0_ATINTVAL_MASK)
 /*! @} */
 
 /*! @name ATSTPUP0 - Attenuation Step Up Factor */
 /*! @{ */
 
-#define WAKEUP_AUDMIX_ATSTPUP0_ATSTEPUP_MASK     (0x3FFFFU)
-#define WAKEUP_AUDMIX_ATSTPUP0_ATSTEPUP_SHIFT    (0U)
+#define AUDMIX_ATSTPUP0_ATSTEPUP_MASK            (0x3FFFFU)
+#define AUDMIX_ATSTPUP0_ATSTEPUP_SHIFT           (0U)
 /*! ATSTEPUP - Attnuation Step Up Factor
  *  0b100000000000000000..0.5
  *  0b100000000000000001-0b101010101010101001.....
@@ -335,14 +335,14 @@ typedef struct {
  *  0b101010101010101011-0b111111111111111110.....
  *  0b111111111111111111..0.999996185
  */
-#define WAKEUP_AUDMIX_ATSTPUP0_ATSTEPUP(x)       (((uint32_t)(((uint32_t)(x)) << WAKEUP_AUDMIX_ATSTPUP0_ATSTEPUP_SHIFT)) & WAKEUP_AUDMIX_ATSTPUP0_ATSTEPUP_MASK)
+#define AUDMIX_ATSTPUP0_ATSTEPUP(x)              (((uint32_t)(((uint32_t)(x)) << AUDMIX_ATSTPUP0_ATSTEPUP_SHIFT)) & AUDMIX_ATSTPUP0_ATSTEPUP_MASK)
 /*! @} */
 
 /*! @name ATSTPDN0 - Attenuation Step Down Factor */
 /*! @{ */
 
-#define WAKEUP_AUDMIX_ATSTPDN0_ATSTEPDN_MASK     (0x3FFFFU)
-#define WAKEUP_AUDMIX_ATSTPDN0_ATSTEPDN_SHIFT    (0U)
+#define AUDMIX_ATSTPDN0_ATSTEPDN_MASK            (0x3FFFFU)
+#define AUDMIX_ATSTPDN0_ATSTEPDN_SHIFT           (0U)
 /*! ATSTEPDN - Attnuation Step Down Factor
  *  0b100000000000000000..0.5
  *  0b100000000000000001-0b101111111111111111.....
@@ -350,80 +350,80 @@ typedef struct {
  *  0b110000000000000001-0b111111111111111110.....
  *  0b111111111111111111..0.999996185
  */
-#define WAKEUP_AUDMIX_ATSTPDN0_ATSTEPDN(x)       (((uint32_t)(((uint32_t)(x)) << WAKEUP_AUDMIX_ATSTPDN0_ATSTEPDN_SHIFT)) & WAKEUP_AUDMIX_ATSTPDN0_ATSTEPDN_MASK)
+#define AUDMIX_ATSTPDN0_ATSTEPDN(x)              (((uint32_t)(((uint32_t)(x)) << AUDMIX_ATSTPDN0_ATSTEPDN_SHIFT)) & AUDMIX_ATSTPDN0_ATSTEPDN_MASK)
 /*! @} */
 
 /*! @name ATSTPTGT0 - Attenuation Step Target */
 /*! @{ */
 
-#define WAKEUP_AUDMIX_ATSTPTGT0_ATSTPTG_MASK     (0x3FFFFU)
-#define WAKEUP_AUDMIX_ATSTPTGT0_ATSTPTG_SHIFT    (0U)
+#define AUDMIX_ATSTPTGT0_ATSTPTG_MASK            (0x3FFFFU)
+#define AUDMIX_ATSTPTGT0_ATSTPTG_SHIFT           (0U)
 /*! ATSTPTG - Attenuation Step Target Value */
-#define WAKEUP_AUDMIX_ATSTPTGT0_ATSTPTG(x)       (((uint32_t)(((uint32_t)(x)) << WAKEUP_AUDMIX_ATSTPTGT0_ATSTPTG_SHIFT)) & WAKEUP_AUDMIX_ATSTPTGT0_ATSTPTG_MASK)
+#define AUDMIX_ATSTPTGT0_ATSTPTG(x)              (((uint32_t)(((uint32_t)(x)) << AUDMIX_ATSTPTGT0_ATSTPTG_SHIFT)) & AUDMIX_ATSTPTGT0_ATSTPTG_MASK)
 /*! @} */
 
 /*! @name ATTNVAL0 - Attenuation Value */
 /*! @{ */
 
-#define WAKEUP_AUDMIX_ATTNVAL0_ATCURVAL_MASK     (0x3FFFFU)
-#define WAKEUP_AUDMIX_ATTNVAL0_ATCURVAL_SHIFT    (0U)
+#define AUDMIX_ATTNVAL0_ATCURVAL_MASK            (0x3FFFFU)
+#define AUDMIX_ATTNVAL0_ATCURVAL_SHIFT           (0U)
 /*! ATCURVAL - Current Value of Attenuation */
-#define WAKEUP_AUDMIX_ATTNVAL0_ATCURVAL(x)       (((uint32_t)(((uint32_t)(x)) << WAKEUP_AUDMIX_ATTNVAL0_ATCURVAL_SHIFT)) & WAKEUP_AUDMIX_ATTNVAL0_ATCURVAL_MASK)
+#define AUDMIX_ATTNVAL0_ATCURVAL(x)              (((uint32_t)(((uint32_t)(x)) << AUDMIX_ATTNVAL0_ATCURVAL_SHIFT)) & AUDMIX_ATTNVAL0_ATCURVAL_MASK)
 /*! @} */
 
 /*! @name ATSTP0 - Attenuation Step Number */
 /*! @{ */
 
-#define WAKEUP_AUDMIX_ATSTP0_STPCTR_MASK         (0x3FFFFU)
-#define WAKEUP_AUDMIX_ATSTP0_STPCTR_SHIFT        (0U)
+#define AUDMIX_ATSTP0_STPCTR_MASK                (0x3FFFFU)
+#define AUDMIX_ATSTP0_STPCTR_SHIFT               (0U)
 /*! STPCTR - Step Counter Value */
-#define WAKEUP_AUDMIX_ATSTP0_STPCTR(x)           (((uint32_t)(((uint32_t)(x)) << WAKEUP_AUDMIX_ATSTP0_STPCTR_SHIFT)) & WAKEUP_AUDMIX_ATSTP0_STPCTR_MASK)
+#define AUDMIX_ATSTP0_STPCTR(x)                  (((uint32_t)(((uint32_t)(x)) << AUDMIX_ATSTP0_STPCTR_SHIFT)) & AUDMIX_ATSTP0_STPCTR_MASK)
 /*! @} */
 
 /*! @name ATCR1 - Attenuation Control */
 /*! @{ */
 
-#define WAKEUP_AUDMIX_ATCR1_AT_EN_MASK           (0x1U)
-#define WAKEUP_AUDMIX_ATCR1_AT_EN_SHIFT          (0U)
+#define AUDMIX_ATCR1_AT_EN_MASK                  (0x1U)
+#define AUDMIX_ATCR1_AT_EN_SHIFT                 (0U)
 /*! AT_EN - Attenuation Enable
  *  0b0..Disables
  *  0b1..Enables
  */
-#define WAKEUP_AUDMIX_ATCR1_AT_EN(x)             (((uint32_t)(((uint32_t)(x)) << WAKEUP_AUDMIX_ATCR1_AT_EN_SHIFT)) & WAKEUP_AUDMIX_ATCR1_AT_EN_MASK)
+#define AUDMIX_ATCR1_AT_EN(x)                    (((uint32_t)(((uint32_t)(x)) << AUDMIX_ATCR1_AT_EN_SHIFT)) & AUDMIX_ATCR1_AT_EN_MASK)
 
-#define WAKEUP_AUDMIX_ATCR1_AT_UPDN_MASK         (0x2U)
-#define WAKEUP_AUDMIX_ATCR1_AT_UPDN_SHIFT        (1U)
+#define AUDMIX_ATCR1_AT_UPDN_MASK                (0x2U)
+#define AUDMIX_ATCR1_AT_UPDN_SHIFT               (1U)
 /*! AT_UPDN - Attenuation Direction
  *  0b0..Downward
  *  0b1..Upward
  */
-#define WAKEUP_AUDMIX_ATCR1_AT_UPDN(x)           (((uint32_t)(((uint32_t)(x)) << WAKEUP_AUDMIX_ATCR1_AT_UPDN_SHIFT)) & WAKEUP_AUDMIX_ATCR1_AT_UPDN_MASK)
+#define AUDMIX_ATCR1_AT_UPDN(x)                  (((uint32_t)(((uint32_t)(x)) << AUDMIX_ATCR1_AT_UPDN_SHIFT)) & AUDMIX_ATCR1_AT_UPDN_MASK)
 
-#define WAKEUP_AUDMIX_ATCR1_ATSTPDIV_MASK        (0x3FFCU)
-#define WAKEUP_AUDMIX_ATCR1_ATSTPDIV_SHIFT       (2U)
+#define AUDMIX_ATCR1_ATSTPDIV_MASK               (0x3FFCU)
+#define AUDMIX_ATCR1_ATSTPDIV_SHIFT              (2U)
 /*! ATSTPDIV - Step Divider */
-#define WAKEUP_AUDMIX_ATCR1_ATSTPDIV(x)          (((uint32_t)(((uint32_t)(x)) << WAKEUP_AUDMIX_ATCR1_ATSTPDIV_SHIFT)) & WAKEUP_AUDMIX_ATCR1_ATSTPDIV_MASK)
+#define AUDMIX_ATCR1_ATSTPDIV(x)                 (((uint32_t)(((uint32_t)(x)) << AUDMIX_ATCR1_ATSTPDIV_SHIFT)) & AUDMIX_ATCR1_ATSTPDIV_MASK)
 /*! @} */
 
 /*! @name ATIVAL1 - Attenuation Initial Value */
 /*! @{ */
 
-#define WAKEUP_AUDMIX_ATIVAL1_ATINTVAL_MASK      (0x3FFFFU)
-#define WAKEUP_AUDMIX_ATIVAL1_ATINTVAL_SHIFT     (0U)
+#define AUDMIX_ATIVAL1_ATINTVAL_MASK             (0x3FFFFU)
+#define AUDMIX_ATIVAL1_ATINTVAL_SHIFT            (0U)
 /*! ATINTVAL - Attnuation Initial Value
  *  0b100000000000000000..0.5
  *  0b110000000000000000..0.75
  *  0b110000000000000001-0b111111111111111110.....
  *  0b111111111111111111..0.999996185
  */
-#define WAKEUP_AUDMIX_ATIVAL1_ATINTVAL(x)        (((uint32_t)(((uint32_t)(x)) << WAKEUP_AUDMIX_ATIVAL1_ATINTVAL_SHIFT)) & WAKEUP_AUDMIX_ATIVAL1_ATINTVAL_MASK)
+#define AUDMIX_ATIVAL1_ATINTVAL(x)               (((uint32_t)(((uint32_t)(x)) << AUDMIX_ATIVAL1_ATINTVAL_SHIFT)) & AUDMIX_ATIVAL1_ATINTVAL_MASK)
 /*! @} */
 
 /*! @name ATSTPUP1 - Attenuation Step Up Factor */
 /*! @{ */
 
-#define WAKEUP_AUDMIX_ATSTPUP1_ATSTEPUP_MASK     (0x3FFFFU)
-#define WAKEUP_AUDMIX_ATSTPUP1_ATSTEPUP_SHIFT    (0U)
+#define AUDMIX_ATSTPUP1_ATSTEPUP_MASK            (0x3FFFFU)
+#define AUDMIX_ATSTPUP1_ATSTEPUP_SHIFT           (0U)
 /*! ATSTEPUP - Attnuation Step Up Factor
  *  0b100000000000000000..0.5
  *  0b100000000000000001-0b101010101010101001.....
@@ -431,14 +431,14 @@ typedef struct {
  *  0b101010101010101011-0b111111111111111110.....
  *  0b111111111111111111..0.999996185
  */
-#define WAKEUP_AUDMIX_ATSTPUP1_ATSTEPUP(x)       (((uint32_t)(((uint32_t)(x)) << WAKEUP_AUDMIX_ATSTPUP1_ATSTEPUP_SHIFT)) & WAKEUP_AUDMIX_ATSTPUP1_ATSTEPUP_MASK)
+#define AUDMIX_ATSTPUP1_ATSTEPUP(x)              (((uint32_t)(((uint32_t)(x)) << AUDMIX_ATSTPUP1_ATSTEPUP_SHIFT)) & AUDMIX_ATSTPUP1_ATSTEPUP_MASK)
 /*! @} */
 
 /*! @name ATSTPDN1 - Attenuation Step Down Factor */
 /*! @{ */
 
-#define WAKEUP_AUDMIX_ATSTPDN1_ATSTEPDN_MASK     (0x3FFFFU)
-#define WAKEUP_AUDMIX_ATSTPDN1_ATSTEPDN_SHIFT    (0U)
+#define AUDMIX_ATSTPDN1_ATSTEPDN_MASK            (0x3FFFFU)
+#define AUDMIX_ATSTPDN1_ATSTEPDN_SHIFT           (0U)
 /*! ATSTEPDN - Attnuation Step Down Factor
  *  0b100000000000000000..0.5
  *  0b100000000000000001-0b101111111111111111.....
@@ -446,45 +446,45 @@ typedef struct {
  *  0b110000000000000001-0b111111111111111110.....
  *  0b111111111111111111..0.999996185
  */
-#define WAKEUP_AUDMIX_ATSTPDN1_ATSTEPDN(x)       (((uint32_t)(((uint32_t)(x)) << WAKEUP_AUDMIX_ATSTPDN1_ATSTEPDN_SHIFT)) & WAKEUP_AUDMIX_ATSTPDN1_ATSTEPDN_MASK)
+#define AUDMIX_ATSTPDN1_ATSTEPDN(x)              (((uint32_t)(((uint32_t)(x)) << AUDMIX_ATSTPDN1_ATSTEPDN_SHIFT)) & AUDMIX_ATSTPDN1_ATSTEPDN_MASK)
 /*! @} */
 
 /*! @name ATSTPTGT1 - Attenuation Step Target */
 /*! @{ */
 
-#define WAKEUP_AUDMIX_ATSTPTGT1_ATSTPTG_MASK     (0x3FFFFU)
-#define WAKEUP_AUDMIX_ATSTPTGT1_ATSTPTG_SHIFT    (0U)
+#define AUDMIX_ATSTPTGT1_ATSTPTG_MASK            (0x3FFFFU)
+#define AUDMIX_ATSTPTGT1_ATSTPTG_SHIFT           (0U)
 /*! ATSTPTG - Attenuation Step Target Value */
-#define WAKEUP_AUDMIX_ATSTPTGT1_ATSTPTG(x)       (((uint32_t)(((uint32_t)(x)) << WAKEUP_AUDMIX_ATSTPTGT1_ATSTPTG_SHIFT)) & WAKEUP_AUDMIX_ATSTPTGT1_ATSTPTG_MASK)
+#define AUDMIX_ATSTPTGT1_ATSTPTG(x)              (((uint32_t)(((uint32_t)(x)) << AUDMIX_ATSTPTGT1_ATSTPTG_SHIFT)) & AUDMIX_ATSTPTGT1_ATSTPTG_MASK)
 /*! @} */
 
 /*! @name ATTNVAL1 - Attenuation Value */
 /*! @{ */
 
-#define WAKEUP_AUDMIX_ATTNVAL1_ATCURVAL_MASK     (0x3FFFFU)
-#define WAKEUP_AUDMIX_ATTNVAL1_ATCURVAL_SHIFT    (0U)
+#define AUDMIX_ATTNVAL1_ATCURVAL_MASK            (0x3FFFFU)
+#define AUDMIX_ATTNVAL1_ATCURVAL_SHIFT           (0U)
 /*! ATCURVAL - Current Value of Attenuation */
-#define WAKEUP_AUDMIX_ATTNVAL1_ATCURVAL(x)       (((uint32_t)(((uint32_t)(x)) << WAKEUP_AUDMIX_ATTNVAL1_ATCURVAL_SHIFT)) & WAKEUP_AUDMIX_ATTNVAL1_ATCURVAL_MASK)
+#define AUDMIX_ATTNVAL1_ATCURVAL(x)              (((uint32_t)(((uint32_t)(x)) << AUDMIX_ATTNVAL1_ATCURVAL_SHIFT)) & AUDMIX_ATTNVAL1_ATCURVAL_MASK)
 /*! @} */
 
 /*! @name ATSTP1 - Attenuation Step Number */
 /*! @{ */
 
-#define WAKEUP_AUDMIX_ATSTP1_STPCTR_MASK         (0x3FFFFU)
-#define WAKEUP_AUDMIX_ATSTP1_STPCTR_SHIFT        (0U)
+#define AUDMIX_ATSTP1_STPCTR_MASK                (0x3FFFFU)
+#define AUDMIX_ATSTP1_STPCTR_SHIFT               (0U)
 /*! STPCTR - Step Counter Value */
-#define WAKEUP_AUDMIX_ATSTP1_STPCTR(x)           (((uint32_t)(((uint32_t)(x)) << WAKEUP_AUDMIX_ATSTP1_STPCTR_SHIFT)) & WAKEUP_AUDMIX_ATSTP1_STPCTR_MASK)
+#define AUDMIX_ATSTP1_STPCTR(x)                  (((uint32_t)(((uint32_t)(x)) << AUDMIX_ATSTP1_STPCTR_SHIFT)) & AUDMIX_ATSTP1_STPCTR_MASK)
 /*! @} */
 
 
 /*!
  * @}
- */ /* end of group WAKEUP_AUDMIX_Register_Masks */
+ */ /* end of group AUDMIX_Register_Masks */
 
 
 /*!
  * @}
- */ /* end of group WAKEUP_AUDMIX_Peripheral_Access_Layer */
+ */ /* end of group AUDMIX_Peripheral_Access_Layer */
 
 
 /*
@@ -510,5 +510,5 @@ typedef struct {
  */ /* end of group Peripheral_access_layer */
 
 
-#endif  /* PERI_WAKEUP_AUDMIX_H_ */
+#endif  /* PERI_AUDMIX_H_ */
 

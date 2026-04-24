@@ -38,10 +38,10 @@
 **                          MIMX9529xxVZx_cm7
 **
 **     Version:             rev. 2.0, 2024-10-29
-**     Build:               b260324
+**     Build:               b260416
 **
 **     Abstract:
-**         CMSIS Peripheral Access Layer for M7_LSTCU
+**         CMSIS Peripheral Access Layer for CRC
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
 **     Copyright 2016-2026 NXP
@@ -61,16 +61,16 @@
 */
 
 /*!
- * @file PERI_M7_LSTCU.h
+ * @file PERI_CRC.h
  * @version 2.0
  * @date 2024-10-29
- * @brief CMSIS Peripheral Access Layer for M7_LSTCU
+ * @brief CMSIS Peripheral Access Layer for CRC
  *
- * CMSIS Peripheral Access Layer for M7_LSTCU
+ * CMSIS Peripheral Access Layer for CRC
  */
 
-#if !defined(PERI_M7_LSTCU_H_)
-#define PERI_M7_LSTCU_H_                         /**< Symbol preventing repeated inclusion */
+#if !defined(PERI_CRC_H_)
+#define PERI_CRC_H_                              /**< Symbol preventing repeated inclusion */
 
 #if (defined(CPU_MIMX9522xxVTx_ca55) || defined(CPU_MIMX9522xxVZx_ca55))
 #include "MIMX9522_ca55_COMMON.h"
@@ -142,163 +142,130 @@
 #endif
 
 /* ----------------------------------------------------------------------------
-   -- M7_LSTCU Peripheral Access Layer
+   -- CRC Peripheral Access Layer
    ---------------------------------------------------------------------------- */
 
 /*!
- * @addtogroup M7_LSTCU_Peripheral_Access_Layer M7_LSTCU Peripheral Access Layer
+ * @addtogroup CRC_Peripheral_Access_Layer CRC Peripheral Access Layer
  * @{
  */
 
-/** M7_LSTCU - Size of Registers Arrays */
-#define M7_LSTCU_MBIST_SCH_PTR_COUNT              1u
+/** CRC - Size of Registers Arrays */
+#define CRC_CHANNEL_COUNT                         3u
 
-/** M7_LSTCU - Register Layout Typedef */
+/** CRC - Register Layout Typedef */
 typedef struct {
-       uint8_t RESERVED_0[8];
-  __IO uint32_t ERR_STAT;                          /**< Error Status, offset: 0x8 */
-       uint8_t RESERVED_1[4];
-  __IO uint32_t ERR_FM;                            /**< Error Fault Mapping, offset: 0x10 */
-       uint8_t RESERVED_2[76];
-  __I  uint32_t MB_RSTAT0;                         /**< MBIST Run Status 0, offset: 0x60 */
-       uint8_t RESERVED_3[284];
-  __IO uint32_t MBFM0;                             /**< MBIST Fault Mapping 0, offset: 0x180 */
-       uint8_t RESERVED_4[220];
-  __IO uint32_t STAG;                              /**< Stagger, offset: 0x260 */
-       uint8_t RESERVED_5[12];
-  __IO uint32_t PH1_DUR;                           /**< Phase 1 Duration, offset: 0x270 */
-       uint8_t RESERVED_6[140];
-  __IO uint32_t MBPTR[M7_LSTCU_MBIST_SCH_PTR_COUNT]; /**< MBIST Scheduler Pointer, array offset: 0x300, array step: 0x4 */
-} M7_LSTCU_Type;
+  struct {                                         /* offset: 0x0, array step: 0x10 */
+    __IO uint32_t CFG;                               /**< Configuration Register, array offset: 0x0, array step: 0x10 */
+    __IO uint32_t INP;                               /**< Input Register, array offset: 0x4, array step: 0x10 */
+    __IO uint32_t CSTAT;                             /**< Current Status Register, array offset: 0x8, array step: 0x10 */
+    __I  uint32_t OUTP;                              /**< Output Register, array offset: 0xC, array step: 0x10 */
+  } CHANNEL[CRC_CHANNEL_COUNT];
+} CRC_Type;
 
 /* ----------------------------------------------------------------------------
-   -- M7_LSTCU Register Masks
+   -- CRC Register Masks
    ---------------------------------------------------------------------------- */
 
 /*!
- * @addtogroup M7_LSTCU_Register_Masks M7_LSTCU Register Masks
+ * @addtogroup CRC_Register_Masks CRC Register Masks
  * @{
  */
 
-/*! @name ERR_STAT - Error Status */
+/*! @name CFG - Configuration Register */
 /*! @{ */
 
-#define M7_LSTCU_ERR_STAT_INVP_MB_MASK           (0x2U)
-#define M7_LSTCU_ERR_STAT_INVP_MB_SHIFT          (1U)
-/*! INVP_MB - Invalid Pointer MBIST
- *  0b0..No invalid pointer
- *  0b1..Invalid BIST pointer specified
+#define CRC_CFG_INV_MASK                         (0x1U)
+#define CRC_CFG_INV_SHIFT                        (0U)
+/*! INV - Inversion selection
+ *  0b0..No inversion selection applied on the CRC_OUTP content
+ *  0b1..Inversion selection (bit x bit) applied on the CRC_OUTP content
  */
-#define M7_LSTCU_ERR_STAT_INVP_MB(x)             (((uint32_t)(((uint32_t)(x)) << M7_LSTCU_ERR_STAT_INVP_MB_SHIFT)) & M7_LSTCU_ERR_STAT_INVP_MB_MASK)
+#define CRC_CFG_INV(x)                           (((uint32_t)(((uint32_t)(x)) << CRC_CFG_INV_SHIFT)) & CRC_CFG_INV_MASK)
 
-#define M7_LSTCU_ERR_STAT_UFSF_MASK              (0x10000U)
-#define M7_LSTCU_ERR_STAT_UFSF_SHIFT             (16U)
-/*! UFSF - Unrecoverable Fault Status
- *  0b0..No unrecoverable fault
- *  0b1..Unrecoverable fault
+#define CRC_CFG_SWAP_MASK                        (0x2U)
+#define CRC_CFG_SWAP_SHIFT                       (1U)
+/*! SWAP - Swap selection
+ *  0b0..No swap selection applied on the CRC_OUTP content
+ *  0b1..Swap selection (MSB to LSB, LSB to MSB) applied to the CRC_OUTP content
  */
-#define M7_LSTCU_ERR_STAT_UFSF(x)                (((uint32_t)(((uint32_t)(x)) << M7_LSTCU_ERR_STAT_UFSF_SHIFT)) & M7_LSTCU_ERR_STAT_UFSF_MASK)
+#define CRC_CFG_SWAP(x)                          (((uint32_t)(((uint32_t)(x)) << CRC_CFG_SWAP_SHIFT)) & CRC_CFG_SWAP_MASK)
 
-#define M7_LSTCU_ERR_STAT_RFSF_MASK              (0x20000U)
-#define M7_LSTCU_ERR_STAT_RFSF_SHIFT             (17U)
-/*! RFSF - Recoverable Fault Status
- *  0b0..No recoverable fault
- *  0b1..Recoverable fault
+#define CRC_CFG_POLYG_MASK                       (0xCU)
+#define CRC_CFG_POLYG_SHIFT                      (2U)
+/*! POLYG - Polynomial selection
+ *  0b00..CRC-CCITT polynomial
+ *  0b01..CRC-32 polynomial
+ *  0b10..CRC-8 polynomial
+ *  0b11..CRC-8-H2F AUTOSAR polynomial
  */
-#define M7_LSTCU_ERR_STAT_RFSF(x)                (((uint32_t)(((uint32_t)(x)) << M7_LSTCU_ERR_STAT_RFSF_SHIFT)) & M7_LSTCU_ERR_STAT_RFSF_MASK)
+#define CRC_CFG_POLYG(x)                         (((uint32_t)(((uint32_t)(x)) << CRC_CFG_POLYG_SHIFT)) & CRC_CFG_POLYG_MASK)
+
+#define CRC_CFG_SWAP_BITWISE_MASK                (0x10U)
+#define CRC_CFG_SWAP_BITWISE_SHIFT               (4U)
+/*! SWAP_BITWISE - Swap CRC_INP bit-wise
+ *  0b0..Do not swap
+ *  0b1..Perform bit-wise swap on CRC_INP input data internally for CRC-8 and CRC-16 and CRC-32 polynomial calculations
+ */
+#define CRC_CFG_SWAP_BITWISE(x)                  (((uint32_t)(((uint32_t)(x)) << CRC_CFG_SWAP_BITWISE_SHIFT)) & CRC_CFG_SWAP_BITWISE_MASK)
+
+#define CRC_CFG_SWAP_BYTEWISE_MASK               (0x20U)
+#define CRC_CFG_SWAP_BYTEWISE_SHIFT              (5U)
+/*! SWAP_BYTEWISE - Swap CRC_INP byte-wise
+ *  0b0..Do not swap
+ *  0b1..Perform byte-wise swap on CRC_INP input data internally for CRC-16 and CRC-32 polynomial calculations
+ */
+#define CRC_CFG_SWAP_BYTEWISE(x)                 (((uint32_t)(((uint32_t)(x)) << CRC_CFG_SWAP_BYTEWISE_SHIFT)) & CRC_CFG_SWAP_BYTEWISE_MASK)
 /*! @} */
 
-/*! @name ERR_FM - Error Fault Mapping */
+/* The count of CRC_CFG */
+#define CRC_CFG_COUNT                            (3U)
+
+/*! @name INP - Input Register */
 /*! @{ */
 
-#define M7_LSTCU_ERR_FM_INVPFMMB_MASK            (0x2U)
-#define M7_LSTCU_ERR_FM_INVPFMMB_SHIFT           (1U)
-/*! INVPFMMB - Invalid BIST Pointer Fault Mapping During MBIST Scheduling
- *  0b0..Recoverable
- *  0b1..Unrecoverable
- */
-#define M7_LSTCU_ERR_FM_INVPFMMB(x)              (((uint32_t)(((uint32_t)(x)) << M7_LSTCU_ERR_FM_INVPFMMB_SHIFT)) & M7_LSTCU_ERR_FM_INVPFMMB_MASK)
+#define CRC_INP_INP_MASK                         (0xFFFFFFFFU)
+#define CRC_INP_INP_SHIFT                        (0U)
+/*! INP - Input data for the CRC computation */
+#define CRC_INP_INP(x)                           (((uint32_t)(((uint32_t)(x)) << CRC_INP_INP_SHIFT)) & CRC_INP_INP_MASK)
 /*! @} */
 
-/*! @name MB_RSTAT0 - MBIST Run Status 0 */
+/* The count of CRC_INP */
+#define CRC_INP_COUNT                            (3U)
+
+/*! @name CSTAT - Current Status Register */
 /*! @{ */
 
-#define M7_LSTCU_MB_RSTAT0_MBSTAT0_MASK          (0x1U)
-#define M7_LSTCU_MB_RSTAT0_MBSTAT0_SHIFT         (0U)
-/*! MBSTAT0 - MBIST Run Result Status 0
- *  0b0..Pass
- *  0b1..Fail
- */
-#define M7_LSTCU_MB_RSTAT0_MBSTAT0(x)            (((uint32_t)(((uint32_t)(x)) << M7_LSTCU_MB_RSTAT0_MBSTAT0_SHIFT)) & M7_LSTCU_MB_RSTAT0_MBSTAT0_MASK)
+#define CRC_CSTAT_CSTAT_MASK                     (0xFFFFFFFFU)
+#define CRC_CSTAT_CSTAT_SHIFT                    (0U)
+/*! CSTAT - CRC signature status */
+#define CRC_CSTAT_CSTAT(x)                       (((uint32_t)(((uint32_t)(x)) << CRC_CSTAT_CSTAT_SHIFT)) & CRC_CSTAT_CSTAT_MASK)
 /*! @} */
 
-/*! @name MBFM0 - MBIST Fault Mapping 0 */
+/* The count of CRC_CSTAT */
+#define CRC_CSTAT_COUNT                          (3U)
+
+/*! @name OUTP - Output Register */
 /*! @{ */
 
-#define M7_LSTCU_MBFM0_MBSTATFM0_MASK            (0x1U)
-#define M7_LSTCU_MBFM0_MBSTATFM0_SHIFT           (0U)
-/*! MBSTATFM0 - MBIST Fault Mapping n
- *  0b0..Recoverable
- *  0b1..Unrecoverable
- */
-#define M7_LSTCU_MBFM0_MBSTATFM0(x)              (((uint32_t)(((uint32_t)(x)) << M7_LSTCU_MBFM0_MBSTATFM0_SHIFT)) & M7_LSTCU_MBFM0_MBSTATFM0_MASK)
+#define CRC_OUTP_OUTP_MASK                       (0xFFFFFFFFU)
+#define CRC_OUTP_OUTP_SHIFT                      (0U)
+/*! OUTP - Final CRC signature */
+#define CRC_OUTP_OUTP(x)                         (((uint32_t)(((uint32_t)(x)) << CRC_OUTP_OUTP_SHIFT)) & CRC_OUTP_OUTP_MASK)
 /*! @} */
 
-/*! @name STAG - Stagger */
-/*! @{ */
-
-#define M7_LSTCU_STAG_MB_DELAY_MASK              (0xFF00U)
-#define M7_LSTCU_STAG_MB_DELAY_SHIFT             (8U)
-/*! MB_DELAY - MBIST Delay */
-#define M7_LSTCU_STAG_MB_DELAY(x)                (((uint32_t)(((uint32_t)(x)) << M7_LSTCU_STAG_MB_DELAY_SHIFT)) & M7_LSTCU_STAG_MB_DELAY_MASK)
-/*! @} */
-
-/*! @name PH1_DUR - Phase 1 Duration */
-/*! @{ */
-
-#define M7_LSTCU_PH1_DUR_PH1DUR_MASK             (0x3FFU)
-#define M7_LSTCU_PH1_DUR_PH1DUR_SHIFT            (0U)
-/*! PH1DUR - Phase 1 Duration */
-#define M7_LSTCU_PH1_DUR_PH1DUR(x)               (((uint32_t)(((uint32_t)(x)) << M7_LSTCU_PH1_DUR_PH1DUR_SHIFT)) & M7_LSTCU_PH1_DUR_PH1DUR_MASK)
-/*! @} */
-
-/*! @name MBPTR - MBIST Scheduler Pointer */
-/*! @{ */
-
-#define M7_LSTCU_MBPTR_MBPTR_MASK                (0xFFU)
-#define M7_LSTCU_MBPTR_MBPTR_SHIFT               (0U)
-/*! MBPTR - MBIST Pointer */
-#define M7_LSTCU_MBPTR_MBPTR(x)                  (((uint32_t)(((uint32_t)(x)) << M7_LSTCU_MBPTR_MBPTR_SHIFT)) & M7_LSTCU_MBPTR_MBPTR_MASK)
-
-#define M7_LSTCU_MBPTR_MBCSM_MASK                (0x100U)
-#define M7_LSTCU_MBPTR_MBCSM_SHIFT               (8U)
-/*! MBCSM - MBIST Mode
- *  0b0..Sequential
- *  0b1..Concurrent
- */
-#define M7_LSTCU_MBPTR_MBCSM(x)                  (((uint32_t)(((uint32_t)(x)) << M7_LSTCU_MBPTR_MBCSM_SHIFT)) & M7_LSTCU_MBPTR_MBCSM_MASK)
-
-#define M7_LSTCU_MBPTR_MBEOL_MASK                (0x80000000U)
-#define M7_LSTCU_MBPTR_MBEOL_SHIFT               (31U)
-/*! MBEOL - MBIST End of List
- *  0b0..Not end of list
- *  0b1..End of list
- */
-#define M7_LSTCU_MBPTR_MBEOL(x)                  (((uint32_t)(((uint32_t)(x)) << M7_LSTCU_MBPTR_MBEOL_SHIFT)) & M7_LSTCU_MBPTR_MBEOL_MASK)
-/*! @} */
-
-/* The count of M7_LSTCU_MBPTR */
-#define M7_LSTCU_MBPTR_COUNT                     (1U)
+/* The count of CRC_OUTP */
+#define CRC_OUTP_COUNT                           (3U)
 
 
 /*!
  * @}
- */ /* end of group M7_LSTCU_Register_Masks */
+ */ /* end of group CRC_Register_Masks */
 
 
 /*!
  * @}
- */ /* end of group M7_LSTCU_Peripheral_Access_Layer */
+ */ /* end of group CRC_Peripheral_Access_Layer */
 
 
 /*
@@ -324,5 +291,5 @@ typedef struct {
  */ /* end of group Peripheral_access_layer */
 
 
-#endif  /* PERI_M7_LSTCU_H_ */
+#endif  /* PERI_CRC_H_ */
 

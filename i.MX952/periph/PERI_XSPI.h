@@ -38,7 +38,7 @@
 **                          MIMX9529xxVZx_cm7
 **
 **     Version:             rev. 2.0, 2024-10-29
-**     Build:               b260324
+**     Build:               b260416
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for XSPI
@@ -564,14 +564,6 @@ typedef struct {
  *  0b1..Enables
  */
 #define XSPI_MCR_DQS_EN(x)                       (((uint32_t)(((uint32_t)(x)) << XSPI_MCR_DQS_EN_SHIFT)) & XSPI_MCR_DQS_EN_MASK)
-
-#define XSPI_MCR_DDR_EN_MASK                     (0x80U)
-#define XSPI_MCR_DDR_EN_SHIFT                    (7U)
-/*! DDR_EN - DDR Enable
- *  0b0..Disable
- *  0b1..Enable
- */
-#define XSPI_MCR_DDR_EN(x)                       (((uint32_t)(((uint32_t)(x)) << XSPI_MCR_DDR_EN_SHIFT)) & XSPI_MCR_DDR_EN_MASK)
 
 #define XSPI_MCR_VAR_LAT_EN_MASK                 (0x100U)
 #define XSPI_MCR_VAR_LAT_EN_SHIFT                (8U)

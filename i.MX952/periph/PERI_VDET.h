@@ -38,10 +38,10 @@
 **                          MIMX9529xxVZx_cm7
 **
 **     Version:             rev. 2.0, 2024-10-29
-**     Build:               b260324
+**     Build:               b260416
 **
 **     Abstract:
-**         CMSIS Peripheral Access Layer for AON_CRC
+**         CMSIS Peripheral Access Layer for VDET
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
 **     Copyright 2016-2026 NXP
@@ -61,16 +61,16 @@
 */
 
 /*!
- * @file PERI_AON_CRC.h
+ * @file PERI_VDET.h
  * @version 2.0
  * @date 2024-10-29
- * @brief CMSIS Peripheral Access Layer for AON_CRC
+ * @brief CMSIS Peripheral Access Layer for VDET
  *
- * CMSIS Peripheral Access Layer for AON_CRC
+ * CMSIS Peripheral Access Layer for VDET
  */
 
-#if !defined(PERI_AON_CRC_H_)
-#define PERI_AON_CRC_H_                          /**< Symbol preventing repeated inclusion */
+#if !defined(PERI_VDET_H_)
+#define PERI_VDET_H_                             /**< Symbol preventing repeated inclusion */
 
 #if (defined(CPU_MIMX9522xxVTx_ca55) || defined(CPU_MIMX9522xxVZx_ca55))
 #include "MIMX9522_ca55_COMMON.h"
@@ -142,130 +142,57 @@
 #endif
 
 /* ----------------------------------------------------------------------------
-   -- AON_CRC Peripheral Access Layer
+   -- VDET Peripheral Access Layer
    ---------------------------------------------------------------------------- */
 
 /*!
- * @addtogroup AON_CRC_Peripheral_Access_Layer AON_CRC Peripheral Access Layer
+ * @addtogroup VDET_Peripheral_Access_Layer VDET Peripheral Access Layer
  * @{
  */
 
-/** AON_CRC - Size of Registers Arrays */
-#define AON_CRC_CHANNEL_COUNT                     3u
-
-/** AON_CRC - Register Layout Typedef */
+/** VDET - Register Layout Typedef */
 typedef struct {
-  struct {                                         /* offset: 0x0, array step: 0x10 */
-    __IO uint32_t CFG;                               /**< Configuration Register, array offset: 0x0, array step: 0x10 */
-    __IO uint32_t INP;                               /**< Input Register, array offset: 0x4, array step: 0x10 */
-    __IO uint32_t CSTAT;                             /**< Current Status Register, array offset: 0x8, array step: 0x10 */
-    __I  uint32_t OUTP;                              /**< Output Register, array offset: 0xC, array step: 0x10 */
-  } CHANNEL[AON_CRC_CHANNEL_COUNT];
-} AON_CRC_Type;
+       uint8_t RESERVED_0[528];
+  __I  uint32_t TRIM;                              /**< Trim Control, offset: 0x210 */
+} VDET_Type;
 
 /* ----------------------------------------------------------------------------
-   -- AON_CRC Register Masks
+   -- VDET Register Masks
    ---------------------------------------------------------------------------- */
 
 /*!
- * @addtogroup AON_CRC_Register_Masks AON_CRC Register Masks
+ * @addtogroup VDET_Register_Masks VDET Register Masks
  * @{
  */
 
-/*! @name CFG - Configuration Register */
+/*! @name TRIM - Trim Control */
 /*! @{ */
 
-#define AON_CRC_CFG_INV_MASK                     (0x1U)
-#define AON_CRC_CFG_INV_SHIFT                    (0U)
-/*! INV - Inversion selection
- *  0b0..No inversion selection applied on the CRC_OUTP content
- *  0b1..Inversion selection (bit x bit) applied on the CRC_OUTP content
- */
-#define AON_CRC_CFG_INV(x)                       (((uint32_t)(((uint32_t)(x)) << AON_CRC_CFG_INV_SHIFT)) & AON_CRC_CFG_INV_MASK)
+#define VDET_TRIM_CORE_HVD_TRIM_CTRL_LV_MASK     (0x1FU)
+#define VDET_TRIM_CORE_HVD_TRIM_CTRL_LV_SHIFT    (0U)
+/*! CORE_HVD_TRIM_CTRL_LV - Core HVD Threshold Value */
+#define VDET_TRIM_CORE_HVD_TRIM_CTRL_LV(x)       (((uint32_t)(((uint32_t)(x)) << VDET_TRIM_CORE_HVD_TRIM_CTRL_LV_SHIFT)) & VDET_TRIM_CORE_HVD_TRIM_CTRL_LV_MASK)
 
-#define AON_CRC_CFG_SWAP_MASK                    (0x2U)
-#define AON_CRC_CFG_SWAP_SHIFT                   (1U)
-/*! SWAP - Swap selection
- *  0b0..No swap selection applied on the CRC_OUTP content
- *  0b1..Swap selection (MSB to LSB, LSB to MSB) applied to the CRC_OUTP content
- */
-#define AON_CRC_CFG_SWAP(x)                      (((uint32_t)(((uint32_t)(x)) << AON_CRC_CFG_SWAP_SHIFT)) & AON_CRC_CFG_SWAP_MASK)
+#define VDET_TRIM_CORE_LVD_TRIM_CTRL_LV_MASK     (0x1F00U)
+#define VDET_TRIM_CORE_LVD_TRIM_CTRL_LV_SHIFT    (8U)
+/*! CORE_LVD_TRIM_CTRL_LV - Core LVD Threshold Value */
+#define VDET_TRIM_CORE_LVD_TRIM_CTRL_LV(x)       (((uint32_t)(((uint32_t)(x)) << VDET_TRIM_CORE_LVD_TRIM_CTRL_LV_SHIFT)) & VDET_TRIM_CORE_LVD_TRIM_CTRL_LV_MASK)
 
-#define AON_CRC_CFG_POLYG_MASK                   (0xCU)
-#define AON_CRC_CFG_POLYG_SHIFT                  (2U)
-/*! POLYG - Polynomial selection
- *  0b00..CRC-CCITT polynomial
- *  0b01..CRC-32 polynomial
- *  0b10..CRC-8 polynomial
- *  0b11..CRC-8-H2F AUTOSAR polynomial
- */
-#define AON_CRC_CFG_POLYG(x)                     (((uint32_t)(((uint32_t)(x)) << AON_CRC_CFG_POLYG_SHIFT)) & AON_CRC_CFG_POLYG_MASK)
-
-#define AON_CRC_CFG_SWAP_BITWISE_MASK            (0x10U)
-#define AON_CRC_CFG_SWAP_BITWISE_SHIFT           (4U)
-/*! SWAP_BITWISE - Swap CRC_INP bit-wise
- *  0b0..Do not swap
- *  0b1..Perform bit-wise swap on CRC_INP input data internally for CRC-8 and CRC-16 and CRC-32 polynomial calculations
- */
-#define AON_CRC_CFG_SWAP_BITWISE(x)              (((uint32_t)(((uint32_t)(x)) << AON_CRC_CFG_SWAP_BITWISE_SHIFT)) & AON_CRC_CFG_SWAP_BITWISE_MASK)
-
-#define AON_CRC_CFG_SWAP_BYTEWISE_MASK           (0x20U)
-#define AON_CRC_CFG_SWAP_BYTEWISE_SHIFT          (5U)
-/*! SWAP_BYTEWISE - Swap CRC_INP byte-wise
- *  0b0..Do not swap
- *  0b1..Perform byte-wise swap on CRC_INP input data internally for CRC-16 and CRC-32 polynomial calculations
- */
-#define AON_CRC_CFG_SWAP_BYTEWISE(x)             (((uint32_t)(((uint32_t)(x)) << AON_CRC_CFG_SWAP_BYTEWISE_SHIFT)) & AON_CRC_CFG_SWAP_BYTEWISE_MASK)
+#define VDET_TRIM_HV_LVD_TRIM_CTRL_LV_MASK       (0x1F0000U)
+#define VDET_TRIM_HV_LVD_TRIM_CTRL_LV_SHIFT      (16U)
+/*! HV_LVD_TRIM_CTRL_LV - Core HV LVD Threshold Value */
+#define VDET_TRIM_HV_LVD_TRIM_CTRL_LV(x)         (((uint32_t)(((uint32_t)(x)) << VDET_TRIM_HV_LVD_TRIM_CTRL_LV_SHIFT)) & VDET_TRIM_HV_LVD_TRIM_CTRL_LV_MASK)
 /*! @} */
-
-/* The count of AON_CRC_CFG */
-#define AON_CRC_CFG_COUNT                        (3U)
-
-/*! @name INP - Input Register */
-/*! @{ */
-
-#define AON_CRC_INP_INP_MASK                     (0xFFFFFFFFU)
-#define AON_CRC_INP_INP_SHIFT                    (0U)
-/*! INP - Input data for the CRC computation */
-#define AON_CRC_INP_INP(x)                       (((uint32_t)(((uint32_t)(x)) << AON_CRC_INP_INP_SHIFT)) & AON_CRC_INP_INP_MASK)
-/*! @} */
-
-/* The count of AON_CRC_INP */
-#define AON_CRC_INP_COUNT                        (3U)
-
-/*! @name CSTAT - Current Status Register */
-/*! @{ */
-
-#define AON_CRC_CSTAT_CSTAT_MASK                 (0xFFFFFFFFU)
-#define AON_CRC_CSTAT_CSTAT_SHIFT                (0U)
-/*! CSTAT - CRC signature status */
-#define AON_CRC_CSTAT_CSTAT(x)                   (((uint32_t)(((uint32_t)(x)) << AON_CRC_CSTAT_CSTAT_SHIFT)) & AON_CRC_CSTAT_CSTAT_MASK)
-/*! @} */
-
-/* The count of AON_CRC_CSTAT */
-#define AON_CRC_CSTAT_COUNT                      (3U)
-
-/*! @name OUTP - Output Register */
-/*! @{ */
-
-#define AON_CRC_OUTP_OUTP_MASK                   (0xFFFFFFFFU)
-#define AON_CRC_OUTP_OUTP_SHIFT                  (0U)
-/*! OUTP - Final CRC signature */
-#define AON_CRC_OUTP_OUTP(x)                     (((uint32_t)(((uint32_t)(x)) << AON_CRC_OUTP_OUTP_SHIFT)) & AON_CRC_OUTP_OUTP_MASK)
-/*! @} */
-
-/* The count of AON_CRC_OUTP */
-#define AON_CRC_OUTP_COUNT                       (3U)
 
 
 /*!
  * @}
- */ /* end of group AON_CRC_Register_Masks */
+ */ /* end of group VDET_Register_Masks */
 
 
 /*!
  * @}
- */ /* end of group AON_CRC_Peripheral_Access_Layer */
+ */ /* end of group VDET_Peripheral_Access_Layer */
 
 
 /*
@@ -291,5 +218,5 @@ typedef struct {
  */ /* end of group Peripheral_access_layer */
 
 
-#endif  /* PERI_AON_CRC_H_ */
+#endif  /* PERI_VDET_H_ */
 

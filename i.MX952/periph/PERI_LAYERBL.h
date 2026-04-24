@@ -38,10 +38,10 @@
 **                          MIMX9529xxVZx_cm7
 **
 **     Version:             rev. 2.0, 2024-10-29
-**     Build:               b260324
+**     Build:               b260416
 **
 **     Abstract:
-**         CMSIS Peripheral Access Layer for layerbl1
+**         CMSIS Peripheral Access Layer for LAYERBL
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
 **     Copyright 2016-2026 NXP
@@ -61,16 +61,16 @@
 */
 
 /*!
- * @file PERI_layerbl1.h
+ * @file PERI_LAYERBL.h
  * @version 2.0
  * @date 2024-10-29
- * @brief CMSIS Peripheral Access Layer for layerbl1
+ * @brief CMSIS Peripheral Access Layer for LAYERBL
  *
- * CMSIS Peripheral Access Layer for layerbl1
+ * CMSIS Peripheral Access Layer for LAYERBL
  */
 
-#if !defined(PERI_LAYERBL1_H_)
-#define PERI_LAYERBL1_H_                         /**< Symbol preventing repeated inclusion */
+#if !defined(PERI_LAYERBL_H_)
+#define PERI_LAYERBL_H_                          /**< Symbol preventing repeated inclusion */
 
 #if (defined(CPU_MIMX9522xxVTx_ca55) || defined(CPU_MIMX9522xxVZx_ca55))
 #include "MIMX9522_ca55_COMMON.h"
@@ -142,15 +142,15 @@
 #endif
 
 /* ----------------------------------------------------------------------------
-   -- layerbl1 Peripheral Access Layer
+   -- LAYERBL Peripheral Access Layer
    ---------------------------------------------------------------------------- */
 
 /*!
- * @addtogroup layerbl1_Peripheral_Access_Layer layerbl1 Peripheral Access Layer
+ * @addtogroup LAYERBL_Peripheral_Access_Layer LAYERBL Peripheral Access Layer
  * @{
  */
 
-/** layerbl1 - Register Layout Typedef */
+/** LAYERBL - Register Layout Typedef */
 typedef struct {
   __O  uint32_t LU;                                /**< LockUnlock, offset: 0x0 */
   __I  uint32_t LOCKS;                             /**< LockStatus, offset: 0x4 */
@@ -160,22 +160,22 @@ typedef struct {
   __IO uint32_t POSITION;                          /**< Position, offset: 0x14 */
   __I  uint32_t PRIMCOWO;                          /**< PrimControlWord, offset: 0x18 */
   __I  uint32_t SECCONTW;                          /**< SecControlWord, offset: 0x1C */
-} layerbl1_Type;
+} LAYERBL_Type;
 
 /* ----------------------------------------------------------------------------
-   -- layerbl1 Register Masks
+   -- LAYERBL Register Masks
    ---------------------------------------------------------------------------- */
 
 /*!
- * @addtogroup layerbl1_Register_Masks layerbl1 Register Masks
+ * @addtogroup LAYERBL_Register_Masks LAYERBL Register Masks
  * @{
  */
 
 /*! @name LU - LockUnlock */
 /*! @{ */
 
-#define layerbl1_LU_LkUn_MASK                    (0xFFFFFFFFU)
-#define layerbl1_LU_LkUn_SHIFT                   (0U)
+#define LAYERBL_LU_LkUn_MASK                     (0xFFFFFFFFU)
+#define LAYERBL_LU_LkUn_SHIFT                    (0U)
 /*! LkUn - LockUnlock
  *  0b01010110010100011111011101100011..Decrements the unlock counter. When the counter value is null, lock protection is active. Reset counter value is 1.
  *  0b01101001000111011011100100110110..Increments the unlock counter. Max allowed value is 15.
@@ -183,76 +183,76 @@ typedef struct {
  *  0b10110101111000100100011001101110..Disables privilege protection.
  *  0b11111011111010001011000111100110..Freezes current protection status. Writing keys to this register has no more effect until reset.
  */
-#define layerbl1_LU_LkUn(x)                      (((uint32_t)(((uint32_t)(x)) << layerbl1_LU_LkUn_SHIFT)) & layerbl1_LU_LkUn_MASK)
+#define LAYERBL_LU_LkUn(x)                       (((uint32_t)(((uint32_t)(x)) << LAYERBL_LU_LkUn_SHIFT)) & LAYERBL_LU_LkUn_MASK)
 /*! @} */
 
 /*! @name LOCKS - LockStatus */
 /*! @{ */
 
-#define layerbl1_LOCKS_LkSus_MASK                (0x1U)
-#define layerbl1_LOCKS_LkSus_SHIFT               (0U)
+#define LAYERBL_LOCKS_LkSus_MASK                 (0x1U)
+#define LAYERBL_LOCKS_LkSus_SHIFT                (0U)
 /*! LkSus - LockStatus */
-#define layerbl1_LOCKS_LkSus(x)                  (((uint32_t)(((uint32_t)(x)) << layerbl1_LOCKS_LkSus_SHIFT)) & layerbl1_LOCKS_LkSus_MASK)
+#define LAYERBL_LOCKS_LkSus(x)                   (((uint32_t)(((uint32_t)(x)) << LAYERBL_LOCKS_LkSus_SHIFT)) & LAYERBL_LOCKS_LkSus_MASK)
 
-#define layerbl1_LOCKS_PriSt_MASK                (0x10U)
-#define layerbl1_LOCKS_PriSt_SHIFT               (4U)
+#define LAYERBL_LOCKS_PriSt_MASK                 (0x10U)
+#define LAYERBL_LOCKS_PriSt_SHIFT                (4U)
 /*! PriSt - PrivilegeStatus */
-#define layerbl1_LOCKS_PriSt(x)                  (((uint32_t)(((uint32_t)(x)) << layerbl1_LOCKS_PriSt_SHIFT)) & layerbl1_LOCKS_PriSt_MASK)
+#define LAYERBL_LOCKS_PriSt(x)                   (((uint32_t)(((uint32_t)(x)) << LAYERBL_LOCKS_PriSt_SHIFT)) & LAYERBL_LOCKS_PriSt_MASK)
 
-#define layerbl1_LOCKS_FreezeS_MASK              (0x100U)
-#define layerbl1_LOCKS_FreezeS_SHIFT             (8U)
+#define LAYERBL_LOCKS_FreezeS_MASK               (0x100U)
+#define LAYERBL_LOCKS_FreezeS_SHIFT              (8U)
 /*! FreezeS - FreezeStatus */
-#define layerbl1_LOCKS_FreezeS(x)                (((uint32_t)(((uint32_t)(x)) << layerbl1_LOCKS_FreezeS_SHIFT)) & layerbl1_LOCKS_FreezeS_MASK)
+#define LAYERBL_LOCKS_FreezeS(x)                 (((uint32_t)(((uint32_t)(x)) << LAYERBL_LOCKS_FreezeS_SHIFT)) & LAYERBL_LOCKS_FreezeS_MASK)
 /*! @} */
 
 /*! @name STATCON - StaticControl */
 /*! @{ */
 
-#define layerbl1_STATCON_ShdEn_MASK              (0x1U)
-#define layerbl1_STATCON_ShdEn_SHIFT             (0U)
+#define LAYERBL_STATCON_ShdEn_MASK               (0x1U)
+#define LAYERBL_STATCON_ShdEn_SHIFT              (0U)
 /*! ShdEn - ShdEn */
-#define layerbl1_STATCON_ShdEn(x)                (((uint32_t)(((uint32_t)(x)) << layerbl1_STATCON_ShdEn_SHIFT)) & layerbl1_STATCON_ShdEn_MASK)
+#define LAYERBL_STATCON_ShdEn(x)                 (((uint32_t)(((uint32_t)(x)) << LAYERBL_STATCON_ShdEn_SHIFT)) & LAYERBL_STATCON_ShdEn_MASK)
 
-#define layerbl1_STATCON_SdLdSel_MASK            (0x6U)
-#define layerbl1_STATCON_SdLdSel_SHIFT           (1U)
+#define LAYERBL_STATCON_SdLdSel_MASK             (0x6U)
+#define LAYERBL_STATCON_SdLdSel_SHIFT            (1U)
 /*! SdLdSel - ShdLdSel
  *  0b00..Load shadows with shadow load token on primary input (background plane).
  *  0b01..Load shadows with shadow load token on secondary input (foreground plane).
  *  0b10..Load shadows with shadow load token on any input.
  */
-#define layerbl1_STATCON_SdLdSel(x)              (((uint32_t)(((uint32_t)(x)) << layerbl1_STATCON_SdLdSel_SHIFT)) & layerbl1_STATCON_SdLdSel_MASK)
+#define LAYERBL_STATCON_SdLdSel(x)               (((uint32_t)(((uint32_t)(x)) << LAYERBL_STATCON_SdLdSel_SHIFT)) & LAYERBL_STATCON_SdLdSel_MASK)
 
-#define layerbl1_STATCON_SdTokSel_MASK           (0x18U)
-#define layerbl1_STATCON_SdTokSel_SHIFT          (3U)
+#define LAYERBL_STATCON_SdTokSel_MASK            (0x18U)
+#define LAYERBL_STATCON_SdTokSel_SHIFT           (3U)
 /*! SdTokSel - ShdTokSel
  *  0b00..When a token was received on the primary input (background plane).
  *  0b01..When a token was received on the secondary input (foreground plane).
  *  0b10..When a token was received on any input.
  */
-#define layerbl1_STATCON_SdTokSel(x)             (((uint32_t)(((uint32_t)(x)) << layerbl1_STATCON_SdTokSel_SHIFT)) & layerbl1_STATCON_SdTokSel_MASK)
+#define LAYERBL_STATCON_SdTokSel(x)              (((uint32_t)(((uint32_t)(x)) << LAYERBL_STATCON_SdTokSel_SHIFT)) & LAYERBL_STATCON_SdTokSel_MASK)
 /*! @} */
 
 /*! @name CONTR - Control */
 /*! @{ */
 
-#define layerbl1_CONTR_MODE2_MASK                (0x1U)
-#define layerbl1_CONTR_MODE2_SHIFT               (0U)
+#define LAYERBL_CONTR_MODE2_MASK                 (0x1U)
+#define LAYERBL_CONTR_MODE2_SHIFT                (0U)
 /*! MODE2 - MODE
  *  0b0..Module is in neutral mode. Output is same as primary input.
  *  0b1..Module is in blending mode.
  */
-#define layerbl1_CONTR_MODE2(x)                  (((uint32_t)(((uint32_t)(x)) << layerbl1_CONTR_MODE2_SHIFT)) & layerbl1_CONTR_MODE2_MASK)
+#define LAYERBL_CONTR_MODE2(x)                   (((uint32_t)(((uint32_t)(x)) << LAYERBL_CONTR_MODE2_SHIFT)) & LAYERBL_CONTR_MODE2_MASK)
 
-#define layerbl1_CONTR_AlpMaE_MASK               (0x4U)
-#define layerbl1_CONTR_AlpMaE_SHIFT              (2U)
+#define LAYERBL_CONTR_AlpMaE_MASK                (0x4U)
+#define LAYERBL_CONTR_AlpMaE_SHIFT               (2U)
 /*! AlpMaE - AlphaMaskEnable
  *  0b0..AlphaMask feature disabled
  *  0b1..AlphaMask feature enabled
  */
-#define layerbl1_CONTR_AlpMaE(x)                 (((uint32_t)(((uint32_t)(x)) << layerbl1_CONTR_AlpMaE_SHIFT)) & layerbl1_CONTR_AlpMaE_MASK)
+#define LAYERBL_CONTR_AlpMaE(x)                  (((uint32_t)(((uint32_t)(x)) << LAYERBL_CONTR_AlpMaE_SHIFT)) & LAYERBL_CONTR_AlpMaE_MASK)
 
-#define layerbl1_CONTR_AlpMMode_MASK             (0x70U)
-#define layerbl1_CONTR_AlpMMode_SHIFT            (4U)
+#define LAYERBL_CONTR_AlpMMode_MASK              (0x70U)
+#define LAYERBL_CONTR_AlpMMode_SHIFT             (4U)
 /*! AlpMMode - AlphaMaskMode
  *  0b000..Areas with primary input alpha > 128 will be mapped to 255 and the rest will have an alpha value of 0
  *  0b001..The area of the secondary input will get an alpha value of 255 and the rest will be 0
@@ -263,44 +263,44 @@ typedef struct {
  *  0b110..Behaves as if the output of modes PRIM and SEC_INV would be ORed together
  *  0b111..Behaves as if the output of modes PRIM and SEC_INV would be ANDed together
  */
-#define layerbl1_CONTR_AlpMMode(x)               (((uint32_t)(((uint32_t)(x)) << layerbl1_CONTR_AlpMMode_SHIFT)) & layerbl1_CONTR_AlpMMode_MASK)
+#define LAYERBL_CONTR_AlpMMode(x)                (((uint32_t)(((uint32_t)(x)) << LAYERBL_CONTR_AlpMMode_SHIFT)) & LAYERBL_CONTR_AlpMMode_MASK)
 
-#define layerbl1_CONTR_ScLwPaEn_MASK             (0x100U)
-#define layerbl1_CONTR_ScLwPaEn_SHIFT            (8U)
+#define LAYERBL_CONTR_ScLwPaEn_MASK              (0x100U)
+#define LAYERBL_CONTR_ScLwPaEn_SHIFT             (8U)
 /*! ScLwPaEn - SecLowPassEn */
-#define layerbl1_CONTR_ScLwPaEn(x)               (((uint32_t)(((uint32_t)(x)) << layerbl1_CONTR_ScLwPaEn_SHIFT)) & layerbl1_CONTR_ScLwPaEn_MASK)
+#define LAYERBL_CONTR_ScLwPaEn(x)                (((uint32_t)(((uint32_t)(x)) << LAYERBL_CONTR_ScLwPaEn_SHIFT)) & LAYERBL_CONTR_ScLwPaEn_MASK)
 
-#define layerbl1_CONTR_ScReplEn_MASK             (0x200U)
-#define layerbl1_CONTR_ScReplEn_SHIFT            (9U)
+#define LAYERBL_CONTR_ScReplEn_MASK              (0x200U)
+#define LAYERBL_CONTR_ScReplEn_SHIFT             (9U)
 /*! ScReplEn - SecReplicateEn */
-#define layerbl1_CONTR_ScReplEn(x)               (((uint32_t)(((uint32_t)(x)) << layerbl1_CONTR_ScReplEn_SHIFT)) & layerbl1_CONTR_ScReplEn_MASK)
+#define LAYERBL_CONTR_ScReplEn(x)                (((uint32_t)(((uint32_t)(x)) << LAYERBL_CONTR_ScReplEn_SHIFT)) & LAYERBL_CONTR_ScReplEn_MASK)
 
-#define layerbl1_CONTR_ScEREvCD_MASK             (0x3C00U)
-#define layerbl1_CONTR_ScEREvCD_SHIFT            (10U)
+#define LAYERBL_CONTR_ScEREvCD_MASK              (0x3C00U)
+#define LAYERBL_CONTR_ScEREvCD_SHIFT             (10U)
 /*! ScEREvCD - SecEvenRowEvenColDis */
-#define layerbl1_CONTR_ScEREvCD(x)               (((uint32_t)(((uint32_t)(x)) << layerbl1_CONTR_ScEREvCD_SHIFT)) & layerbl1_CONTR_ScEREvCD_MASK)
+#define LAYERBL_CONTR_ScEREvCD(x)                (((uint32_t)(((uint32_t)(x)) << LAYERBL_CONTR_ScEREvCD_SHIFT)) & LAYERBL_CONTR_ScEREvCD_MASK)
 
-#define layerbl1_CONTR_ScEROdCD_MASK             (0x3C000U)
-#define layerbl1_CONTR_ScEROdCD_SHIFT            (14U)
+#define LAYERBL_CONTR_ScEROdCD_MASK              (0x3C000U)
+#define LAYERBL_CONTR_ScEROdCD_SHIFT             (14U)
 /*! ScEROdCD - SecEvenRowOddColDis */
-#define layerbl1_CONTR_ScEROdCD(x)               (((uint32_t)(((uint32_t)(x)) << layerbl1_CONTR_ScEROdCD_SHIFT)) & layerbl1_CONTR_ScEROdCD_MASK)
+#define LAYERBL_CONTR_ScEROdCD(x)                (((uint32_t)(((uint32_t)(x)) << LAYERBL_CONTR_ScEROdCD_SHIFT)) & LAYERBL_CONTR_ScEROdCD_MASK)
 
-#define layerbl1_CONTR_ScORECD_MASK              (0x3C0000U)
-#define layerbl1_CONTR_ScORECD_SHIFT             (18U)
+#define LAYERBL_CONTR_ScORECD_MASK               (0x3C0000U)
+#define LAYERBL_CONTR_ScORECD_SHIFT              (18U)
 /*! ScORECD - SecOddRowEvenColDis */
-#define layerbl1_CONTR_ScORECD(x)                (((uint32_t)(((uint32_t)(x)) << layerbl1_CONTR_ScORECD_SHIFT)) & layerbl1_CONTR_ScORECD_MASK)
+#define LAYERBL_CONTR_ScORECD(x)                 (((uint32_t)(((uint32_t)(x)) << LAYERBL_CONTR_ScORECD_SHIFT)) & LAYERBL_CONTR_ScORECD_MASK)
 
-#define layerbl1_CONTR_ScOROCD_MASK              (0x3C00000U)
-#define layerbl1_CONTR_ScOROCD_SHIFT             (22U)
+#define LAYERBL_CONTR_ScOROCD_MASK               (0x3C00000U)
+#define LAYERBL_CONTR_ScOROCD_SHIFT              (22U)
 /*! ScOROCD - SecOddRowOddColDis */
-#define layerbl1_CONTR_ScOROCD(x)                (((uint32_t)(((uint32_t)(x)) << layerbl1_CONTR_ScOROCD_SHIFT)) & layerbl1_CONTR_ScOROCD_MASK)
+#define LAYERBL_CONTR_ScOROCD(x)                 (((uint32_t)(((uint32_t)(x)) << LAYERBL_CONTR_ScOROCD_SHIFT)) & LAYERBL_CONTR_ScOROCD_MASK)
 /*! @} */
 
 /*! @name BLENDCON - BlendControl */
 /*! @{ */
 
-#define layerbl1_BLENDCON_PRICBLDF_MASK          (0x7U)
-#define layerbl1_BLENDCON_PRICBLDF_SHIFT         (0U)
+#define LAYERBL_BLENDCON_PRICBLDF_MASK           (0x7U)
+#define LAYERBL_BLENDCON_PRICBLDF_SHIFT          (0U)
 /*! PRICBLDF - PRIM_C_BLD_FUNC
  *  0b000..Cout = Cin * 0
  *  0b001..Cout = Cin * 1
@@ -311,10 +311,10 @@ typedef struct {
  *  0b110..Cout = Cin * ALPHA_const
  *  0b111..Cout = Cin * (1 - ALPHA_const)
  */
-#define layerbl1_BLENDCON_PRICBLDF(x)            (((uint32_t)(((uint32_t)(x)) << layerbl1_BLENDCON_PRICBLDF_SHIFT)) & layerbl1_BLENDCON_PRICBLDF_MASK)
+#define LAYERBL_BLENDCON_PRICBLDF(x)             (((uint32_t)(((uint32_t)(x)) << LAYERBL_BLENDCON_PRICBLDF_SHIFT)) & LAYERBL_BLENDCON_PRICBLDF_MASK)
 
-#define layerbl1_BLENDCON_SECCBLDF_MASK          (0x70U)
-#define layerbl1_BLENDCON_SECCBLDF_SHIFT         (4U)
+#define LAYERBL_BLENDCON_SECCBLDF_MASK           (0x70U)
+#define LAYERBL_BLENDCON_SECCBLDF_SHIFT          (4U)
 /*! SECCBLDF - SEC_C_BLD_FUNC
  *  0b000..Cout = Cin * 0
  *  0b001..Cout = Cin * 1
@@ -325,10 +325,10 @@ typedef struct {
  *  0b110..Cout = Cin * ALPHA_const
  *  0b111..Cout = Cin * (1 - ALPHA_const)
  */
-#define layerbl1_BLENDCON_SECCBLDF(x)            (((uint32_t)(((uint32_t)(x)) << layerbl1_BLENDCON_SECCBLDF_SHIFT)) & layerbl1_BLENDCON_SECCBLDF_MASK)
+#define LAYERBL_BLENDCON_SECCBLDF(x)             (((uint32_t)(((uint32_t)(x)) << LAYERBL_BLENDCON_SECCBLDF_SHIFT)) & LAYERBL_BLENDCON_SECCBLDF_MASK)
 
-#define layerbl1_BLENDCON_PRIABLDF_MASK          (0x700U)
-#define layerbl1_BLENDCON_PRIABLDF_SHIFT         (8U)
+#define LAYERBL_BLENDCON_PRIABLDF_MASK           (0x700U)
+#define LAYERBL_BLENDCON_PRIABLDF_SHIFT          (8U)
 /*! PRIABLDF - PRIM_A_BLD_FUNC
  *  0b000..Aout = Ain * 0
  *  0b001..Aout = Ain * 1
@@ -339,10 +339,10 @@ typedef struct {
  *  0b110..Aout = Ain * ALPHA_const
  *  0b111..Aout = Ain * (1 - ALPHA_const)
  */
-#define layerbl1_BLENDCON_PRIABLDF(x)            (((uint32_t)(((uint32_t)(x)) << layerbl1_BLENDCON_PRIABLDF_SHIFT)) & layerbl1_BLENDCON_PRIABLDF_MASK)
+#define LAYERBL_BLENDCON_PRIABLDF(x)             (((uint32_t)(((uint32_t)(x)) << LAYERBL_BLENDCON_PRIABLDF_SHIFT)) & LAYERBL_BLENDCON_PRIABLDF_MASK)
 
-#define layerbl1_BLENDCON_SECABLDF_MASK          (0x7000U)
-#define layerbl1_BLENDCON_SECABLDF_SHIFT         (12U)
+#define LAYERBL_BLENDCON_SECABLDF_MASK           (0x7000U)
+#define LAYERBL_BLENDCON_SECABLDF_SHIFT          (12U)
 /*! SECABLDF - SEC_A_BLD_FUNC
  *  0b000..Aout = Ain * 0
  *  0b001..Aout = Ain * 1
@@ -353,55 +353,55 @@ typedef struct {
  *  0b110..Aout = Ain * ALPHA_const
  *  0b111..Aout = Ain * (1 - ALPHA_const)
  */
-#define layerbl1_BLENDCON_SECABLDF(x)            (((uint32_t)(((uint32_t)(x)) << layerbl1_BLENDCON_SECABLDF_SHIFT)) & layerbl1_BLENDCON_SECABLDF_MASK)
+#define LAYERBL_BLENDCON_SECABLDF(x)             (((uint32_t)(((uint32_t)(x)) << LAYERBL_BLENDCON_SECABLDF_SHIFT)) & LAYERBL_BLENDCON_SECABLDF_MASK)
 
-#define layerbl1_BLENDCON_BlendAlp_MASK          (0xFF0000U)
-#define layerbl1_BLENDCON_BlendAlp_SHIFT         (16U)
+#define LAYERBL_BLENDCON_BlendAlp_MASK           (0xFF0000U)
+#define LAYERBL_BLENDCON_BlendAlp_SHIFT          (16U)
 /*! BlendAlp - BlendAlpha */
-#define layerbl1_BLENDCON_BlendAlp(x)            (((uint32_t)(((uint32_t)(x)) << layerbl1_BLENDCON_BlendAlp_SHIFT)) & layerbl1_BLENDCON_BlendAlp_MASK)
+#define LAYERBL_BLENDCON_BlendAlp(x)             (((uint32_t)(((uint32_t)(x)) << LAYERBL_BLENDCON_BlendAlp_SHIFT)) & LAYERBL_BLENDCON_BlendAlp_MASK)
 /*! @} */
 
 /*! @name POSITION - Position */
 /*! @{ */
 
-#define layerbl1_POSITION_XPOS_MASK              (0xFFFFU)
-#define layerbl1_POSITION_XPOS_SHIFT             (0U)
+#define LAYERBL_POSITION_XPOS_MASK               (0xFFFFU)
+#define LAYERBL_POSITION_XPOS_SHIFT              (0U)
 /*! XPOS - XPOS */
-#define layerbl1_POSITION_XPOS(x)                (((uint32_t)(((uint32_t)(x)) << layerbl1_POSITION_XPOS_SHIFT)) & layerbl1_POSITION_XPOS_MASK)
+#define LAYERBL_POSITION_XPOS(x)                 (((uint32_t)(((uint32_t)(x)) << LAYERBL_POSITION_XPOS_SHIFT)) & LAYERBL_POSITION_XPOS_MASK)
 
-#define layerbl1_POSITION_YPOS_MASK              (0xFFFF0000U)
-#define layerbl1_POSITION_YPOS_SHIFT             (16U)
+#define LAYERBL_POSITION_YPOS_MASK               (0xFFFF0000U)
+#define LAYERBL_POSITION_YPOS_SHIFT              (16U)
 /*! YPOS - YPOS */
-#define layerbl1_POSITION_YPOS(x)                (((uint32_t)(((uint32_t)(x)) << layerbl1_POSITION_YPOS_SHIFT)) & layerbl1_POSITION_YPOS_MASK)
+#define LAYERBL_POSITION_YPOS(x)                 (((uint32_t)(((uint32_t)(x)) << LAYERBL_POSITION_YPOS_SHIFT)) & LAYERBL_POSITION_YPOS_MASK)
 /*! @} */
 
 /*! @name PRIMCOWO - PrimControlWord */
 /*! @{ */
 
-#define layerbl1_PRIMCOWO_PVAL_MASK              (0xFFFFFFFFU)
-#define layerbl1_PRIMCOWO_PVAL_SHIFT             (0U)
+#define LAYERBL_PRIMCOWO_PVAL_MASK               (0xFFFFFFFFU)
+#define LAYERBL_PRIMCOWO_PVAL_SHIFT              (0U)
 /*! PVAL - P_VAL */
-#define layerbl1_PRIMCOWO_PVAL(x)                (((uint32_t)(((uint32_t)(x)) << layerbl1_PRIMCOWO_PVAL_SHIFT)) & layerbl1_PRIMCOWO_PVAL_MASK)
+#define LAYERBL_PRIMCOWO_PVAL(x)                 (((uint32_t)(((uint32_t)(x)) << LAYERBL_PRIMCOWO_PVAL_SHIFT)) & LAYERBL_PRIMCOWO_PVAL_MASK)
 /*! @} */
 
 /*! @name SECCONTW - SecControlWord */
 /*! @{ */
 
-#define layerbl1_SECCONTW_SVAL_MASK              (0xFFFFFFFFU)
-#define layerbl1_SECCONTW_SVAL_SHIFT             (0U)
+#define LAYERBL_SECCONTW_SVAL_MASK               (0xFFFFFFFFU)
+#define LAYERBL_SECCONTW_SVAL_SHIFT              (0U)
 /*! SVAL - S_VAL */
-#define layerbl1_SECCONTW_SVAL(x)                (((uint32_t)(((uint32_t)(x)) << layerbl1_SECCONTW_SVAL_SHIFT)) & layerbl1_SECCONTW_SVAL_MASK)
+#define LAYERBL_SECCONTW_SVAL(x)                 (((uint32_t)(((uint32_t)(x)) << LAYERBL_SECCONTW_SVAL_SHIFT)) & LAYERBL_SECCONTW_SVAL_MASK)
 /*! @} */
 
 
 /*!
  * @}
- */ /* end of group layerbl1_Register_Masks */
+ */ /* end of group LAYERBL_Register_Masks */
 
 
 /*!
  * @}
- */ /* end of group layerbl1_Peripheral_Access_Layer */
+ */ /* end of group LAYERBL_Peripheral_Access_Layer */
 
 
 /*
@@ -427,5 +427,5 @@ typedef struct {
  */ /* end of group Peripheral_access_layer */
 
 
-#endif  /* PERI_LAYERBL1_H_ */
+#endif  /* PERI_LAYERBL_H_ */
 

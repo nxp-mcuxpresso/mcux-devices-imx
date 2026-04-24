@@ -38,10 +38,10 @@
 **                          MIMX9529xxVZx_cm7
 **
 **     Version:             rev. 2.0, 2024-10-29
-**     Build:               b260324
+**     Build:               b260416
 **
 **     Abstract:
-**         CMSIS Peripheral Access Layer for DDR_LSTCU
+**         CMSIS Peripheral Access Layer for TRGMUX
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
 **     Copyright 2016-2026 NXP
@@ -61,16 +61,16 @@
 */
 
 /*!
- * @file PERI_DDR_LSTCU.h
+ * @file PERI_TRGMUX.h
  * @version 2.0
  * @date 2024-10-29
- * @brief CMSIS Peripheral Access Layer for DDR_LSTCU
+ * @brief CMSIS Peripheral Access Layer for TRGMUX
  *
- * CMSIS Peripheral Access Layer for DDR_LSTCU
+ * CMSIS Peripheral Access Layer for TRGMUX
  */
 
-#if !defined(PERI_DDR_LSTCU_H_)
-#define PERI_DDR_LSTCU_H_                        /**< Symbol preventing repeated inclusion */
+#if !defined(PERI_TRGMUX_H_)
+#define PERI_TRGMUX_H_                           /**< Symbol preventing repeated inclusion */
 
 #if (defined(CPU_MIMX9522xxVTx_ca55) || defined(CPU_MIMX9522xxVZx_ca55))
 #include "MIMX9522_ca55_COMMON.h"
@@ -142,163 +142,59 @@
 #endif
 
 /* ----------------------------------------------------------------------------
-   -- DDR_LSTCU Peripheral Access Layer
+   -- TRGMUX Peripheral Access Layer
    ---------------------------------------------------------------------------- */
 
 /*!
- * @addtogroup DDR_LSTCU_Peripheral_Access_Layer DDR_LSTCU Peripheral Access Layer
+ * @addtogroup TRGMUX_Peripheral_Access_Layer TRGMUX Peripheral Access Layer
  * @{
  */
 
-/** DDR_LSTCU - Size of Registers Arrays */
-#define DDR_LSTCU_MBIST_SCH_PTR_COUNT             1u
-
-/** DDR_LSTCU - Register Layout Typedef */
+/** TRGMUX - Register Layout Typedef */
 typedef struct {
-       uint8_t RESERVED_0[8];
-  __IO uint32_t ERR_STAT;                          /**< Error Status, offset: 0x8 */
-       uint8_t RESERVED_1[4];
-  __IO uint32_t ERR_FM;                            /**< Error Fault Mapping, offset: 0x10 */
-       uint8_t RESERVED_2[76];
-  __I  uint32_t MB_RSTAT0;                         /**< MBIST Run Status 0, offset: 0x60 */
-       uint8_t RESERVED_3[284];
-  __IO uint32_t MBFM0;                             /**< MBIST Fault Mapping 0, offset: 0x180 */
-       uint8_t RESERVED_4[220];
-  __IO uint32_t STAG;                              /**< Stagger, offset: 0x260 */
-       uint8_t RESERVED_5[12];
-  __IO uint32_t PH1_DUR;                           /**< Phase 1 Duration, offset: 0x270 */
-       uint8_t RESERVED_6[140];
-  __IO uint32_t MBPTR[DDR_LSTCU_MBIST_SCH_PTR_COUNT]; /**< MBIST Scheduler Pointer, array offset: 0x300, array step: 0x4 */
-} DDR_LSTCU_Type;
+  __IO uint32_t REG0;                              /**< TRGMUX REG0, offset: 0x0 */
+} TRGMUX_Type;
 
 /* ----------------------------------------------------------------------------
-   -- DDR_LSTCU Register Masks
+   -- TRGMUX Register Masks
    ---------------------------------------------------------------------------- */
 
 /*!
- * @addtogroup DDR_LSTCU_Register_Masks DDR_LSTCU Register Masks
+ * @addtogroup TRGMUX_Register_Masks TRGMUX Register Masks
  * @{
  */
 
-/*! @name ERR_STAT - Error Status */
+/*! @name REG0 - TRGMUX REG0 */
 /*! @{ */
 
-#define DDR_LSTCU_ERR_STAT_INVP_MB_MASK          (0x2U)
-#define DDR_LSTCU_ERR_STAT_INVP_MB_SHIFT         (1U)
-/*! INVP_MB - Invalid Pointer MBIST
- *  0b0..No invalid pointer
- *  0b1..Invalid BIST pointer specified
- */
-#define DDR_LSTCU_ERR_STAT_INVP_MB(x)            (((uint32_t)(((uint32_t)(x)) << DDR_LSTCU_ERR_STAT_INVP_MB_SHIFT)) & DDR_LSTCU_ERR_STAT_INVP_MB_MASK)
+#define TRGMUX_REG0_SEL0_MASK                    (0xFU)
+#define TRGMUX_REG0_SEL0_SHIFT                   (0U)
+/*! SEL0 - TRGMUX Source Select 0 */
+#define TRGMUX_REG0_SEL0(x)                      (((uint32_t)(((uint32_t)(x)) << TRGMUX_REG0_SEL0_SHIFT)) & TRGMUX_REG0_SEL0_MASK)
 
-#define DDR_LSTCU_ERR_STAT_UFSF_MASK             (0x10000U)
-#define DDR_LSTCU_ERR_STAT_UFSF_SHIFT            (16U)
-/*! UFSF - Unrecoverable Fault Status
- *  0b0..No unrecoverable fault
- *  0b1..Unrecoverable fault
- */
-#define DDR_LSTCU_ERR_STAT_UFSF(x)               (((uint32_t)(((uint32_t)(x)) << DDR_LSTCU_ERR_STAT_UFSF_SHIFT)) & DDR_LSTCU_ERR_STAT_UFSF_MASK)
+#define TRGMUX_REG0_SEL1_MASK                    (0xF00U)
+#define TRGMUX_REG0_SEL1_SHIFT                   (8U)
+/*! SEL1 - TRGMUX Source Select 1 */
+#define TRGMUX_REG0_SEL1(x)                      (((uint32_t)(((uint32_t)(x)) << TRGMUX_REG0_SEL1_SHIFT)) & TRGMUX_REG0_SEL1_MASK)
 
-#define DDR_LSTCU_ERR_STAT_RFSF_MASK             (0x20000U)
-#define DDR_LSTCU_ERR_STAT_RFSF_SHIFT            (17U)
-/*! RFSF - Recoverable Fault Status
- *  0b0..No recoverable fault
- *  0b1..Recoverable fault
+#define TRGMUX_REG0_LK_MASK                      (0x80000000U)
+#define TRGMUX_REG0_LK_SHIFT                     (31U)
+/*! LK - TRGMUX Register Lock
+ *  0b0..Register is writable
+ *  0b1..Register is not writable until the next system reset
  */
-#define DDR_LSTCU_ERR_STAT_RFSF(x)               (((uint32_t)(((uint32_t)(x)) << DDR_LSTCU_ERR_STAT_RFSF_SHIFT)) & DDR_LSTCU_ERR_STAT_RFSF_MASK)
+#define TRGMUX_REG0_LK(x)                        (((uint32_t)(((uint32_t)(x)) << TRGMUX_REG0_LK_SHIFT)) & TRGMUX_REG0_LK_MASK)
 /*! @} */
-
-/*! @name ERR_FM - Error Fault Mapping */
-/*! @{ */
-
-#define DDR_LSTCU_ERR_FM_INVPFMMB_MASK           (0x2U)
-#define DDR_LSTCU_ERR_FM_INVPFMMB_SHIFT          (1U)
-/*! INVPFMMB - Invalid BIST Pointer Fault Mapping During MBIST Scheduling
- *  0b0..Recoverable
- *  0b1..Unrecoverable
- */
-#define DDR_LSTCU_ERR_FM_INVPFMMB(x)             (((uint32_t)(((uint32_t)(x)) << DDR_LSTCU_ERR_FM_INVPFMMB_SHIFT)) & DDR_LSTCU_ERR_FM_INVPFMMB_MASK)
-/*! @} */
-
-/*! @name MB_RSTAT0 - MBIST Run Status 0 */
-/*! @{ */
-
-#define DDR_LSTCU_MB_RSTAT0_MBSTAT0_MASK         (0x1U)
-#define DDR_LSTCU_MB_RSTAT0_MBSTAT0_SHIFT        (0U)
-/*! MBSTAT0 - MBIST Run Result Status 0
- *  0b0..Pass
- *  0b1..Fail
- */
-#define DDR_LSTCU_MB_RSTAT0_MBSTAT0(x)           (((uint32_t)(((uint32_t)(x)) << DDR_LSTCU_MB_RSTAT0_MBSTAT0_SHIFT)) & DDR_LSTCU_MB_RSTAT0_MBSTAT0_MASK)
-/*! @} */
-
-/*! @name MBFM0 - MBIST Fault Mapping 0 */
-/*! @{ */
-
-#define DDR_LSTCU_MBFM0_MBSTATFM0_MASK           (0x1U)
-#define DDR_LSTCU_MBFM0_MBSTATFM0_SHIFT          (0U)
-/*! MBSTATFM0 - MBIST Fault Mapping n
- *  0b0..Recoverable
- *  0b1..Unrecoverable
- */
-#define DDR_LSTCU_MBFM0_MBSTATFM0(x)             (((uint32_t)(((uint32_t)(x)) << DDR_LSTCU_MBFM0_MBSTATFM0_SHIFT)) & DDR_LSTCU_MBFM0_MBSTATFM0_MASK)
-/*! @} */
-
-/*! @name STAG - Stagger */
-/*! @{ */
-
-#define DDR_LSTCU_STAG_MB_DELAY_MASK             (0xFF00U)
-#define DDR_LSTCU_STAG_MB_DELAY_SHIFT            (8U)
-/*! MB_DELAY - MBIST Delay */
-#define DDR_LSTCU_STAG_MB_DELAY(x)               (((uint32_t)(((uint32_t)(x)) << DDR_LSTCU_STAG_MB_DELAY_SHIFT)) & DDR_LSTCU_STAG_MB_DELAY_MASK)
-/*! @} */
-
-/*! @name PH1_DUR - Phase 1 Duration */
-/*! @{ */
-
-#define DDR_LSTCU_PH1_DUR_PH1DUR_MASK            (0x3FFU)
-#define DDR_LSTCU_PH1_DUR_PH1DUR_SHIFT           (0U)
-/*! PH1DUR - Phase 1 Duration */
-#define DDR_LSTCU_PH1_DUR_PH1DUR(x)              (((uint32_t)(((uint32_t)(x)) << DDR_LSTCU_PH1_DUR_PH1DUR_SHIFT)) & DDR_LSTCU_PH1_DUR_PH1DUR_MASK)
-/*! @} */
-
-/*! @name MBPTR - MBIST Scheduler Pointer */
-/*! @{ */
-
-#define DDR_LSTCU_MBPTR_MBPTR_MASK               (0xFFU)
-#define DDR_LSTCU_MBPTR_MBPTR_SHIFT              (0U)
-/*! MBPTR - MBIST Pointer */
-#define DDR_LSTCU_MBPTR_MBPTR(x)                 (((uint32_t)(((uint32_t)(x)) << DDR_LSTCU_MBPTR_MBPTR_SHIFT)) & DDR_LSTCU_MBPTR_MBPTR_MASK)
-
-#define DDR_LSTCU_MBPTR_MBCSM_MASK               (0x100U)
-#define DDR_LSTCU_MBPTR_MBCSM_SHIFT              (8U)
-/*! MBCSM - MBIST Mode
- *  0b0..Sequential
- *  0b1..Concurrent
- */
-#define DDR_LSTCU_MBPTR_MBCSM(x)                 (((uint32_t)(((uint32_t)(x)) << DDR_LSTCU_MBPTR_MBCSM_SHIFT)) & DDR_LSTCU_MBPTR_MBCSM_MASK)
-
-#define DDR_LSTCU_MBPTR_MBEOL_MASK               (0x80000000U)
-#define DDR_LSTCU_MBPTR_MBEOL_SHIFT              (31U)
-/*! MBEOL - MBIST End of List
- *  0b0..Not end of list
- *  0b1..End of list
- */
-#define DDR_LSTCU_MBPTR_MBEOL(x)                 (((uint32_t)(((uint32_t)(x)) << DDR_LSTCU_MBPTR_MBEOL_SHIFT)) & DDR_LSTCU_MBPTR_MBEOL_MASK)
-/*! @} */
-
-/* The count of DDR_LSTCU_MBPTR */
-#define DDR_LSTCU_MBPTR_COUNT                    (1U)
 
 
 /*!
  * @}
- */ /* end of group DDR_LSTCU_Register_Masks */
+ */ /* end of group TRGMUX_Register_Masks */
 
 
 /*!
  * @}
- */ /* end of group DDR_LSTCU_Peripheral_Access_Layer */
+ */ /* end of group TRGMUX_Peripheral_Access_Layer */
 
 
 /*
@@ -324,5 +220,5 @@ typedef struct {
  */ /* end of group Peripheral_access_layer */
 
 
-#endif  /* PERI_DDR_LSTCU_H_ */
+#endif  /* PERI_TRGMUX_H_ */
 
