@@ -1,5 +1,5 @@
 /*
- * Copyright 2019-2022 NXP
+ * Copyright 2019-2022, 2026 NXP
  * All rights reserved.
  *
  * SPDX-License-Identifier: BSD-3-Clause
@@ -742,6 +742,11 @@ typedef enum _clock_root_control
     kCLOCK_RootGpt6 = (uintptr_t)CCM_BASE + offsetof(CCM_Type, ROOT[112].TARGET_ROOT), /*!< GPT6 Clock control name.*/
 
     kCLOCK_RootWdog = (uintptr_t)CCM_BASE + offsetof(CCM_Type, ROOT[114].TARGET_ROOT), /*!< WDOG Clock control name.*/
+
+    kCLOCK_RootMediaMipiPhy1Ref =
+        (uintptr_t)CCM_BASE + offsetof(CCM_Type, ROOT[123].TARGET_ROOT), /*!< MEDIA MIPI_PHY1 control name.*/
+    kCLOCK_RootMediaDisp1Pix =
+        (uintptr_t)CCM_BASE + offsetof(CCM_Type, ROOT[124].TARGET_ROOT), /*!< MEDIA DISP1 control name.*/
 
     kCLOCK_RootPdm = (uintptr_t)CCM_BASE + offsetof(CCM_Type, ROOT[132].TARGET_ROOT), /*!< PDM Clock control name.*/
 
