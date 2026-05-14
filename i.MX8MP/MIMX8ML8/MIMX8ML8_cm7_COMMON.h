@@ -9,13 +9,13 @@
 **
 **     Reference manual:    IMX8MPRM, Rev.D, 12/2020
 **     Version:             rev. 6.0, 2024-10-29
-**     Build:               b251201
+**     Build:               b260205
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for MIMX8ML8_cm7
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2025 NXP
+**     Copyright 2016-2026 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -1170,11 +1170,11 @@ typedef enum IRQn {
 /** Peripheral SDMAARM3 base pointer */
 #define SDMAARM3                                 ((SDMAARM_Type *)SDMAARM3_BASE)
 /** Array initializer of SDMAARM peripheral base addresses */
-#define SDMAARM_BASE_ADDRS                       { SDMAARM1_BASE, SDMAARM2_BASE, SDMAARM3_BASE }
+#define SDMAARM_BASE_ADDRS                       { 0u, SDMAARM1_BASE, SDMAARM2_BASE, SDMAARM3_BASE }
 /** Array initializer of SDMAARM peripheral base pointers */
-#define SDMAARM_BASE_PTRS                        { SDMAARM1, SDMAARM2, SDMAARM3 }
+#define SDMAARM_BASE_PTRS                        { (SDMAARM_Type *)0u, SDMAARM1, SDMAARM2, SDMAARM3 }
 /** Interrupt vectors for the SDMAARM peripheral type */
-#define SDMAARM_IRQS                             { SDMA1_IRQn, SDMA2_IRQn, SDMA3_IRQn }
+#define SDMAARM_IRQS                             { NotAvail_IRQn, SDMA1_IRQn, SDMA2_IRQn, SDMA3_IRQn }
 
 /* SEMA4 - Peripheral instance base addresses */
 /** Peripheral SEMA4 base address */
@@ -1206,9 +1206,9 @@ typedef enum IRQn {
 /** Peripheral SPBA2 base pointer */
 #define SPBA2                                    ((SPBA_Type *)SPBA2_BASE)
 /** Array initializer of SPBA peripheral base addresses */
-#define SPBA_BASE_ADDRS                          { SPBA1_BASE, SPBA2_BASE }
+#define SPBA_BASE_ADDRS                          { 0u, SPBA1_BASE, SPBA2_BASE }
 /** Array initializer of SPBA peripheral base pointers */
-#define SPBA_BASE_PTRS                           { SPBA1, SPBA2 }
+#define SPBA_BASE_PTRS                           { (SPBA_Type *)0u, SPBA1, SPBA2 }
 
 /* SRC - Peripheral instance base addresses */
 /** Peripheral SRC base address */
