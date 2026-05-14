@@ -11,7 +11,7 @@
 **
 **     Reference manual:    IMX93RM, Internal, November. 2021
 **     Version:             rev. 2.0, 2024-10-29
-**     Build:               b260113
+**     Build:               b260205
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for MIMX9352_cm33
