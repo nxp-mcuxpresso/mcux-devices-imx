@@ -15,13 +15,13 @@
 **
 **     Reference manual:    iMX95RM rev3
 **     Version:             rev. 3.0, 2025-11-24
-**     Build:               b251124
+**     Build:               b260115
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for MIMX95N4_cm7
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2025 NXP
+**     Copyright 2016-2026 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -199,7 +199,6 @@
 #include "PERI_NEUTRON_NPU.h"
 #include "PERI_NOC_BLK_CTRL_NOCMIX.h"
 #include "PERI_NOC_CMU.h"
-#include "PERI_NOC_EIM.h"
 #include "PERI_NOC_GICA.h"
 #include "PERI_NOC_GICD.h"
 #include "PERI_NOC_GICDA.h"

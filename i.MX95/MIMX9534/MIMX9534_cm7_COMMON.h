@@ -14,13 +14,13 @@
 **
 **     Reference manual:    iMX95RM rev3
 **     Version:             rev. 3.0, 2025-11-24
-**     Build:               b251126
+**     Build:               b260122
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for MIMX9534_cm7
 **
 **     Copyright 1997-2016 Freescale Semiconductor, Inc.
-**     Copyright 2016-2025 NXP
+**     Copyright 2016-2026 NXP
 **     SPDX-License-Identifier: BSD-3-Clause
 **
 **     http:                 www.nxp.com
@@ -1215,6 +1215,10 @@ typedef enum IRQn {
 #define M7__EIM_BASE                             (0x4A060000u)
 /** Peripheral M7__EIM base pointer */
 #define M7__EIM                                  ((EIM_Type *)M7__EIM_BASE)
+/** Peripheral NOC__EIMN base address */
+#define NOC__EIMN_BASE                           (0x49270000u)
+/** Peripheral NOC__EIMN base pointer */
+#define NOC__EIMN                                ((EIM_Type *)NOC__EIMN_BASE)
 /** Peripheral NPU__EIM_NPUMIX base address */
 #define NPU__EIM_NPUMIX_BASE                     (0x4A860000u)
 /** Peripheral NPU__EIM_NPUMIX base pointer */
@@ -1224,9 +1228,9 @@ typedef enum IRQn {
 /** Peripheral WAKEUP__EIMW base pointer */
 #define WAKEUP__EIMW                             ((EIM_Type *)WAKEUP__EIMW_BASE)
 /** Array initializer of EIM peripheral base addresses */
-#define EIM_BASE_ADDRS                           { AON__EIMA_BASE, M7__EIM_BASE, NPU__EIM_NPUMIX_BASE, WAKEUP__EIMW_BASE }
+#define EIM_BASE_ADDRS                           { AON__EIMA_BASE, M7__EIM_BASE, NOC__EIMN_BASE, NPU__EIM_NPUMIX_BASE, WAKEUP__EIMW_BASE }
 /** Array initializer of EIM peripheral base pointers */
-#define EIM_BASE_PTRS                            { AON__EIMA, M7__EIM, NPU__EIM_NPUMIX, WAKEUP__EIMW }
+#define EIM_BASE_PTRS                            { AON__EIMA, M7__EIM, NOC__EIMN, NPU__EIM_NPUMIX, WAKEUP__EIMW }
 
 /* ENETC - Peripheral instance base addresses */
 /** Peripheral ENETC0_GLOBAL base address */
@@ -2364,16 +2368,6 @@ typedef enum IRQn {
 /** Array initializer of NOC_CMU peripheral base pointers */
 #define NOC_CMU_BASE_PTRS                        { NOC_CMUN0, NOC_CMUN1 }
 
-/* NOC_EIM - Peripheral instance base addresses */
-/** Peripheral NOC__EIMN base address */
-#define NOC__EIMN_BASE                           (0x49270000u)
-/** Peripheral NOC__EIMN base pointer */
-#define NOC__EIMN                                ((NOC_EIM_Type *)NOC__EIMN_BASE)
-/** Array initializer of NOC_EIM peripheral base addresses */
-#define NOC_EIM_BASE_ADDRS                       { NOC__EIMN_BASE }
-/** Array initializer of NOC_EIM peripheral base pointers */
-#define NOC_EIM_BASE_PTRS                        { NOC__EIMN }
-
 /* NOC_GICA - Peripheral instance base addresses */
 /** Peripheral NOC__GIC__GICA base address */
 #define NOC__GIC__GICA_BASE                      (0x48010000u)
@@ -3178,6 +3172,9 @@ typedef enum IRQn {
 #define TSTMR_BASE_ADDRS                         { 0u, TSTMR1_BASE, TSTMR2_BASE }
 /** Array initializer of TSTMR peripheral base pointers */
 #define TSTMR_BASE_PTRS                          { (TSTMR_Type *)0u, TSTMR1, TSTMR2 }
+/* Extra definition */
+#define TSTMR_CLOCK_FREQUENCY_MHZ                (24U)
+
 
 /* USB - Peripheral instance base addresses */
 /** Peripheral USBC base address */
@@ -3386,6 +3383,10 @@ typedef enum IRQn {
 #define WDOG_BASE_ADDRS                          { WDOG1_BASE, WDOG2_BASE, WDOG3_BASE, WDOG4_BASE, WDOG5_BASE }
 /** Array initializer of WDOG peripheral base pointers */
 #define WDOG_BASE_PTRS                           { WDOG1, WDOG2, WDOG3, WDOG4, WDOG5 }
+/* Extra definition */
+#define WDOG_UPDATE_KEY                          (0xD928C520U)
+#define WDOG_REFRESH_KEY                       (0xB480A602U)
+
 
 /* XCACHE - Peripheral instance base addresses */
 /** Peripheral M33_CACHE_CTRLPC base address */
