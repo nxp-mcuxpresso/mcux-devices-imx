@@ -10,3 +10,7 @@ include(${SdkRootDirPath}/devices/arm/device_header_multicore.cmake)
 
 #### i.MX shared drivers/components/middlewares, project segments
 include(${SdkRootDirPath}/devices/i.MX/shared.cmake)
+
+mcux_add_source(
+    SOURCES exception.c
+)
