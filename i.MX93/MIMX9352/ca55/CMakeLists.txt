@@ -4,3 +4,7 @@
 
 #### device spepcific drivers
 include(${SdkRootDirPath}/devices/arm/device_header_multicore.cmake)
+
+mcux_add_source(
+    SOURCES exception.c
+)
