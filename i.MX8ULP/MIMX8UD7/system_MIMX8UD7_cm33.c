@@ -78,6 +78,7 @@ static uint32_t getPll0Freq(void)
     }
 
     mult = ((CGC_RTD->PLL0CFG & CGC_PLL0CFG_MULT_MASK) >> CGC_PLL0CFG_MULT_SHIFT);
+    assert(freq <= UINT32_MAX / pll0Multi[mult]);
     freq *= pll0Multi[mult]; /* Multiplier. */
 
     return freq;
@@ -102,7 +103,8 @@ static uint32_t getPll1Freq(void)
     plldenom = (CGC_RTD->PLL1DENOM & CGC_PLL1DENOM_DENOM_MASK) >> CGC_PLL1DENOM_DENOM_SHIFT;
     freqTmp  = (uint64_t)freq * (uint64_t)pllnum / (uint64_t)plldenom;
     mult     = (CGC_RTD->PLL1CFG & CGC_PLL1CFG_MULT_MASK) >> CGC_PLL1CFG_MULT_SHIFT;
-    freq     = freq * mult + (uint32_t)freqTmp;
+    assert(freq * mult <= UINT32_MAX - (uint32_t)(freqTmp & 0xFFFFFFFFU));
+    freq     = freq * mult + (uint32_t)(freqTmp & 0xFFFFFFFFU);
 
     return freq;
 }
@@ -159,13 +161,13 @@ void SystemCoreClockUpdate(void)
             /* PLL0 PFD0 */
             CGCOUTClock = getPll0Freq();
             fracValue   = (CGC_RTD->PLL0PFDCFG & CGC_PLL0PFDCFG_PFD0_MASK) >> CGC_PLL0PFDCFG_PFD0_SHIFT;
-            CGCOUTClock = (uint32_t)(((uint64_t)CGCOUTClock * 18U) / fracValue);
+            CGCOUTClock = (uint32_t)((((uint64_t)CGCOUTClock * 18U) / fracValue) & 0xFFFFFFFFU);
             break;
         case CGC_CM33CLK_SCS(2):
             /* PLL1 PFD0 */
             CGCOUTClock = getPll1Freq();
             fracValue   = (CGC_RTD->PLL1PFDCFG & CGC_PLL1PFDCFG_PFD0_MASK) >> CGC_PLL1PFDCFG_PFD0_SHIFT;
-            CGCOUTClock = (uint32_t)(((uint64_t)CGCOUTClock * 18U) / fracValue);
+            CGCOUTClock = (uint32_t)((((uint64_t)CGCOUTClock * 18U) / fracValue) & 0xFFFFFFFFU);
             break;
         case CGC_CM33CLK_SCS(3):
             /* OSCCLK */
