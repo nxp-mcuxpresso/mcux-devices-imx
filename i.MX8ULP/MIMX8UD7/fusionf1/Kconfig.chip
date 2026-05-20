@@ -23,7 +23,7 @@ config MCUX_HW_DEVICE_CORE
     string
     default "MIMX8UD7_dsp0"
 
-config MCUX_HW_SOC_SERIES_KINETIS
+config MCUX_HW_SOC_SERIES_MIMX
     bool
     default y
 
