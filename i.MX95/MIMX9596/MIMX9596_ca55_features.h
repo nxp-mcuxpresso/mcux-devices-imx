@@ -146,63 +146,13 @@
 /* @brief MU does not support enable clock of the other core, CR[CLKE] or CCR[CLKE]. */
 #define FSL_FEATURE_MU_NO_CLKE (1)
 /* @brief MU has bit CCR0[RSTH]. */
-#define FSL_FEATURE_MU_HAS_RSTH (1)
+#define FSL_FEATURE_MU_HAS_RSTH (0)
 /* @brief MU has bit CCR0[RSTH] by instance. */
-#define FSL_FEATURE_MU_HAS_RSTH_BY_INSTANCEn(x) \
-    (((x) == MU5_MUA) ? (0) : \
-    (((x) == MU7_MUB) ? (0) : \
-    (((x) == MU8_MUB) ? (0) : \
-    (((x) == AON__MUI_A1__MUA) ? (0) : \
-    (((x) == AON__MUI_A1__MUB) ? (1) : \
-    (((x) == AON__MUI_A2__MUA) ? (0) : \
-    (((x) == AON__MUI_A2__MUB) ? (1) : \
-    (((x) == AON__MUI_A3__MUA) ? (0) : \
-    (((x) == AON__MUI_A3__MUB) ? (1) : \
-    (((x) == AON__MUI_A4__MUA) ? (0) : \
-    (((x) == AON__MUI_A4__MUB) ? (1) : \
-    (((x) == AON__MUI_A5__MUB) ? (1) : \
-    (((x) == AON__MUI_A6__MUA) ? (0) : \
-    (((x) == AON__MUI_A6__MUB) ? (0) : \
-    (((x) == CAMERA__MUI_A1__MUA) ? (0) : \
-    (((x) == CAMERA__MUI_A2__MUA) ? (0) : \
-    (((x) == CAMERA__MUI_A3__MUA) ? (0) : \
-    (((x) == CAMERA__MUI_A4__MUA) ? (0) : \
-    (((x) == CAMERA__MUI_A5__MUA) ? (0) : \
-    (((x) == CAMERA__MUI_A6__MUA) ? (0) : \
-    (((x) == CAMERA__MUI_A7__MUA) ? (0) : \
-    (((x) == CAMERA__MUI_A8__MUA) ? (0) : \
-    (((x) == CAMERA__MUI_A9__MUA) ? (0) : \
-    (((x) == WAKEUP__MUI_A7__MUA) ? (0) : \
-    (((x) == WAKEUP__MUI_A8__MUA) ? (0) : (-1))))))))))))))))))))))))))
+#define FSL_FEATURE_MU_HAS_RSTH_BY_INSTANCEn(x) (0)
 /* @brief MU has bit CCR0[BOOT]. */
-#define FSL_FEATURE_MU_HAS_BOOT (1)
+#define FSL_FEATURE_MU_HAS_BOOT (0)
 /* @brief MU has bit CCR0[BOOT] by instance. */
-#define FSL_FEATURE_MU_HAS_BOOT_BY_INSTANCEn(x) \
-    (((x) == MU5_MUA) ? (0) : \
-    (((x) == MU7_MUB) ? (0) : \
-    (((x) == MU8_MUB) ? (0) : \
-    (((x) == AON__MUI_A1__MUA) ? (0) : \
-    (((x) == AON__MUI_A1__MUB) ? (1) : \
-    (((x) == AON__MUI_A2__MUA) ? (0) : \
-    (((x) == AON__MUI_A2__MUB) ? (1) : \
-    (((x) == AON__MUI_A3__MUA) ? (0) : \
-    (((x) == AON__MUI_A3__MUB) ? (1) : \
-    (((x) == AON__MUI_A4__MUA) ? (0) : \
-    (((x) == AON__MUI_A4__MUB) ? (1) : \
-    (((x) == AON__MUI_A5__MUB) ? (1) : \
-    (((x) == AON__MUI_A6__MUA) ? (0) : \
-    (((x) == AON__MUI_A6__MUB) ? (0) : \
-    (((x) == CAMERA__MUI_A1__MUA) ? (0) : \
-    (((x) == CAMERA__MUI_A2__MUA) ? (0) : \
-    (((x) == CAMERA__MUI_A3__MUA) ? (0) : \
-    (((x) == CAMERA__MUI_A4__MUA) ? (0) : \
-    (((x) == CAMERA__MUI_A5__MUA) ? (0) : \
-    (((x) == CAMERA__MUI_A6__MUA) ? (0) : \
-    (((x) == CAMERA__MUI_A7__MUA) ? (0) : \
-    (((x) == CAMERA__MUI_A8__MUA) ? (0) : \
-    (((x) == CAMERA__MUI_A9__MUA) ? (0) : \
-    (((x) == WAKEUP__MUI_A7__MUA) ? (0) : \
-    (((x) == WAKEUP__MUI_A8__MUA) ? (0) : (-1))))))))))))))))))))))))))
+#define FSL_FEATURE_MU_HAS_BOOT_BY_INSTANCEn(x) (0)
 /* @brief MU supports MU reset, CR[MUR]. */
 #define FSL_FEATURE_MU_HAS_MUR (1)
 /* @brief MU supports hardware reset, CR[HR] or CCR0[HR]. */
