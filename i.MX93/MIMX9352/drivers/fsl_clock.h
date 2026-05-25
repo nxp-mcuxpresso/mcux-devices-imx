@@ -7,7 +7,11 @@
 #ifndef _FSL_CLOCK_H_
 #define _FSL_CLOCK_H_
 
-#include "fsl_common.h"
+#include "fsl_device_registers.h"
+#include <stdint.h>
+#include <stdbool.h>
+#include <stddef.h>
+#include <assert.h>
 
 /*! @brief CLOCK driver version. */
 #define FSL_CLOCK_DRIVER_VERSION (MAKE_VERSION(1, 0, 1))
