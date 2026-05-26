@@ -151,7 +151,12 @@ void SystemInit(void)
    -- SystemInitHook()
    ---------------------------------------------------------------------------- */
 
+#if defined(__ICCARM__)
+#pragma weak SystemInitHook
+void SystemInitHook(void)
+#else
 __attribute__((weak)) void SystemInitHook(void)
+#endif
 {
     /* Void implementation of the weak function. */
 }

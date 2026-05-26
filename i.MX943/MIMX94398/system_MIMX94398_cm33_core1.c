@@ -146,7 +146,12 @@ void SystemInitMemoryRegions(void)
 /* ----------------------------------------------------------------------------
    -- SystemInit()
    ---------------------------------------------------------------------------- */
+#if defined(__ICCARM__)
+#pragma weak SystemInit
+void SystemInit(void)
+#else
 __attribute__((weak)) void SystemInit(void)
+#endif
 {
 #if ((__FPU_PRESENT == 1) && (__FPU_USED == 1))
     SCB->CPACR |= ((3UL << 10*2) | (3UL << 11*2));    /* set CP10, CP11 Full Access in Secure mode */
@@ -168,7 +173,12 @@ __attribute__((weak)) void SystemInit(void)
    -- SystemInitHook()
    ---------------------------------------------------------------------------- */
 
+#if defined(__ICCARM__)
+#pragma weak SystemInitHook
+void SystemInitHook(void)
+#else
 __attribute__((weak)) void SystemInitHook(void)
+#endif
 {
     /* Void implementation of the weak function. */
 }
