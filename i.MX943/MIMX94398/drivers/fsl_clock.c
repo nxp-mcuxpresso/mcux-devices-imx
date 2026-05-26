@@ -700,7 +700,7 @@ const uint8_t g_clockRootMux[CLOCK_NUM_ROOT][CLOCK_NUM_ROOT_MUX_SEL] =
  */
 const ccm_gpr_sel_attr_t g_clockGprSel[CLOCK_NUM_GPR_SEL] =
 {
-    [CLOCK_GPR_SEL_EXT]
+    [CLOCK_GPR_SEL_EXT] = 
     {
         .selIdx = 0U,
         .selMask = 0x1U,
@@ -710,7 +710,7 @@ const ccm_gpr_sel_attr_t g_clockGprSel[CLOCK_NUM_GPR_SEL] =
     },
     /* EXT2/EXT3/EXT4 all tied to GND */
 
-    [CLOCK_GPR_SEL_A55C0]
+    [CLOCK_GPR_SEL_A55C0] = 
     {
         .selIdx = 1U,
         .selMask = CCM_GPR_SHARED1_CA55_CORE0_CLOCK_SELECT_MASK,
@@ -719,7 +719,7 @@ const ccm_gpr_sel_attr_t g_clockGprSel[CLOCK_NUM_GPR_SEL] =
         .selMux[1] = CLOCK_SRC_ARMPLL_PFD0,
     },
 
-    [CLOCK_GPR_SEL_A55C1]
+    [CLOCK_GPR_SEL_A55C1] = 
     {
         .selIdx = 1U,
         .selMask = CCM_GPR_SHARED1_CA55_CORE1_CLOCK_SELECT_MASK,
@@ -728,7 +728,7 @@ const ccm_gpr_sel_attr_t g_clockGprSel[CLOCK_NUM_GPR_SEL] =
         .selMux[1] = CLOCK_SRC_ARMPLL_PFD0,
     },
 
-    [CLOCK_GPR_SEL_A55C2]
+    [CLOCK_GPR_SEL_A55C2] = 
     {
         .selIdx = 1U,
         .selMask = CCM_GPR_SHARED1_CA55_CORE2_CLOCK_SELECT_MASK,
@@ -737,7 +737,7 @@ const ccm_gpr_sel_attr_t g_clockGprSel[CLOCK_NUM_GPR_SEL] =
         .selMux[1] = CLOCK_SRC_ARMPLL_PFD1,
     },
 
-    [CLOCK_GPR_SEL_A55C3]
+    [CLOCK_GPR_SEL_A55C3] = 
     {
         .selIdx = 1U,
         .selMask = CCM_GPR_SHARED1_CA55_CORE3_CLOCK_SELECT_MASK,
@@ -746,7 +746,7 @@ const ccm_gpr_sel_attr_t g_clockGprSel[CLOCK_NUM_GPR_SEL] =
         .selMux[1] = CLOCK_SRC_ARMPLL_PFD1,
     },
 
-    [CLOCK_GPR_SEL_A55P]
+    [CLOCK_GPR_SEL_A55P] = 
     {
         .selIdx = 1U,
         .selMask = CCM_GPR_SHARED1_CA55_PLATFORM_CLOCK_SELECT_MASK,
@@ -755,7 +755,7 @@ const ccm_gpr_sel_attr_t g_clockGprSel[CLOCK_NUM_GPR_SEL] =
         .selMux[1] = CLOCK_SRC_ARMPLL_PFD3,
     },
 
-    [CLOCK_GPR_SEL_DRAM]
+    [CLOCK_GPR_SEL_DRAM] = 
     {
         .selIdx = 2U,
         .selMask = CCM_GPR_SHARED2_DRAM_PLL_BYPASS_MASK,
@@ -764,7 +764,7 @@ const ccm_gpr_sel_attr_t g_clockGprSel[CLOCK_NUM_GPR_SEL] =
         .selMux[1] = CLOCK_NUM_SRC + CLOCK_ROOT_DRAMALT,
     },
 
-    [CLOCK_GPR_SEL_TEMPSENSE]
+    [CLOCK_GPR_SEL_TEMPSENSE] = 
     {
         .selIdx = 2U,
         .selMask = CCM_GPR_SHARED2_ANAMIX_TEMPSENSE_CLK_SEL_MASK,
@@ -777,7 +777,7 @@ const ccm_gpr_sel_attr_t g_clockGprSel[CLOCK_NUM_GPR_SEL] =
 /* CCM CGC attributes */
 const ccm_cgc_attr_t g_clockCgcAttr[CLOCK_NUM_CGC] =
 {
-    [CLOCK_CGC_NPU]
+    [CLOCK_CGC_NPU] = 
     {
         .lpcgIdx = 2U,
         .rootIdx = CLOCK_ROOT_NPU,
