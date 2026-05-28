@@ -2,65 +2,6 @@
 # All rights reserved.
 #
 # SPDX-License-Identifier: BSD-3-Clause
-# core related
-config MCUX_HW_CORE
-    string
-    default "cm7f"
-
-config MCUX_HW_CORE_CM7F
-    bool
-    default y
-
-config MCUX_HW_CORE_ID
-    string
-    default "cm7"
-
-config MCUX_HW_CORE_ID_CM7
-    bool
-    default y
-
-config MCUX_HW_DEVICE_CORE
-    string
-    default "MIMX9529_cm7"
-
-config MCUX_HW_FPU
-    string
-    default "DP_FPU"
-
-config MCUX_HW_FPU_TYPE
-    string
-    default "fpv5_dp"
-
-config MCUX_HW_FPV5_DP
-    bool
-    default y
-
-config MCUX_HW_INT_PRIO_BITS
-    int
-    default 4
-
-config MCUX_HW_SOC_SERIES_MIMX
-    bool
-    default y
-
-# For chipmodel generated files
-config MCUX_TOOLCHAIN_LINKER_DEVICE_PREFIX
-    string
-    default "MIMX9529_cm7" if MCUX_HW_DEVICE_ID_MIMX9529xxxxx
-
-config MCUX_TOOLCHAIN_MCUX_STARTUP
-    string
-    default "mimx9529_cm7"
-
-# Toolchain related
-config MCUX_TOOLCHAIN_IAR_CPU_IDENTIFIER
-    string
-    default "MIMX9529_M7" if MCUX_HW_DEVICE_ID_MIMX9529xxxxx
-
-config MCUX_TOOLCHAIN_MDK_CPU_IDENTIFIER
-    string
-    default "MIMX9529xxVZx:cm7" if MCUX_HW_DEVICE_PART_MIMX9529xxVZx
-    default "MIMX9529xxVTx:cm7" if MCUX_HW_DEVICE_PART_MIMX9529xxVTx
 
 # device related
 config MCUX_HW_DEVICE_ID_MIMX9529xxxxx
