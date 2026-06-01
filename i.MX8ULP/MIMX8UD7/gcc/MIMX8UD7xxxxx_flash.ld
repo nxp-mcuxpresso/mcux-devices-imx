@@ -51,7 +51,7 @@ MEMORY
   m_interrupts          (RX)  : ORIGIN = 0x04032000, LENGTH = 0x00000320
   m_text                (RX)  : ORIGIN = 0x04032320, LENGTH = 0x003CDCE0
   m_data                (RW)  : ORIGIN = 0x0FFD0000, LENGTH = 0x00030000
-  m_m33_suspend_ram     (RW)  : ORIGIN = 0x20000000, LENGTH = 0x00004000
+  m_rsc_tbl             (RW)  : ORIGIN = 0x20000000, LENGTH = 0x00001000
   m_a35_suspend_ram     (RW)  : ORIGIN = 0x20004000, LENGTH = 0x00004000
   m_ncache              (RW)  : ORIGIN = 0x20030000, LENGTH = 0x00008000
 }
@@ -252,12 +252,6 @@ SECTIONS
     __END_BSS = .;
   } > m_data
 
-  .m33_suspend :
-  {
-    *(M33SuspendRam)
-    . = ALIGN(4);
-  } > m_m33_suspend_ram
-
   .heap :
   {
     . = ALIGN(8);
@@ -279,6 +273,10 @@ SECTIONS
   __StackTop   = ORIGIN(m_data) + LENGTH(m_data);
   __StackLimit = __StackTop - STACK_SIZE;
   PROVIDE(__stack = __StackTop);
+
+  /* For Resource table region in dtcm, Cortex-A read the resource table from here */
+  __RscTblStart = ORIGIN(m_rsc_tbl);
+  __RscTblEnd = ORIGIN(m_rsc_tbl) + LENGTH(m_rsc_tbl);
 
   .ARM.attributes 0 : { *(.ARM.attributes) }
 
