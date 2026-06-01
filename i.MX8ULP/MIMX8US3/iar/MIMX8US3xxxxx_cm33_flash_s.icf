@@ -77,7 +77,7 @@ define region DATA_region = mem:[from m_data_start to m_data_end]
                           | mem:[from m_data_2_start to m_data_2_end-__size_cstack__];
 define region CSTACK_region = mem:[from m_data_2_end-__size_cstack__+1 to m_data_2_end];
 define region m_interrupts_ram_region = mem:[from m_interrupts_ram_start to m_interrupts_ram_end];
-define region M33_SUSPEND_region = mem:[from m_m33_suspend_ram_start to m_m33_suspend_ram_end];
+define region RSC_TBL_region = mem:[from m_rsc_tbl_start to m_rsc_tbl_end];
 define region A35_SUSPEND_region = mem:[from m_a35_suspend_ram_start to m_a35_suspend_ram_end];
 define region VENEER_TABLE_region     = mem:[from m_veneer_table_start to m_veneer_table_start + m_veneer_table_size - 1];
 
@@ -89,7 +89,7 @@ define block QACCESS_CODE_VAR   with alignment = 32 { section CodeQuickAccess };
 define block QACCESS_DATA_VAR   with alignment = 32 { section DataQuickAccess };
 
 initialize by copy { readwrite, section .textrw, section DataQuickAccess, section CodeQuickAccess };
-do not initialize  { section .noinit, section M33SuspendRam, section A35SuspendRam };
+do not initialize  { section .noinit, section A35SuspendRam };
 
 keep{section .resource_table};
 
@@ -103,6 +103,5 @@ place in DATA_region                        { block ZI };
 place in DATA_region                        { last block HEAP };
 place in CSTACK_region                      { block CSTACK };
 place in m_interrupts_ram_region            { section m_interrupts_ram };
-place in M33_SUSPEND_region                 { section M33SuspendRam };
 place in A35_SUSPEND_region                 { section A35SuspendRam };
 place in VENEER_TABLE_region                { section Veneer$$CMSE  };

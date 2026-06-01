@@ -225,11 +225,6 @@ SECTIONS
     __END_BSS = .;
   } > m_data
 
-  .m33_suspend :
-  {
-    *(M33SuspendRam)
-    . = ALIGN(4);
-  } > m_m33_suspend_ram
 
   .heap :
   {
@@ -252,6 +247,10 @@ SECTIONS
   __StackTop   = ORIGIN(m_data) + LENGTH(m_data);
   __StackLimit = __StackTop - STACK_SIZE;
   PROVIDE(__stack = __StackTop);
+
+  /* For Resource table region in dtcm, Cortex-A read the resource table from here */
+  __RscTblStart = ORIGIN(m_rsc_tbl);
+  __RscTblEnd = ORIGIN(m_rsc_tbl) + LENGTH(m_rsc_tbl);
 
   .ARM.attributes 0 : { *(.ARM.attributes) }
 
