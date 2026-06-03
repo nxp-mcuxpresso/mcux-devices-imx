@@ -9,7 +9,7 @@
 **
 **     Reference manual:    iMX952RM rev1 draftM
 **     Version:             rev. 2.0, 2024-10-29
-**     Build:               b260416
+**     Build:               b260206
 **
 **     Abstract:
 **         Provides a system configuration function and a global variable that
@@ -52,9 +52,69 @@ extern "C" {
 #endif
 
 #include <stdint.h>
+#include "fsl_common.h"
 
 /* Define clock source values */
 #define DEFAULT_SYSTEM_CLOCK   24000000U /* Default System clock value */
+/* MU5_MUA */
+#define SYSTEM_PLATFORM_MU_INST 8
+
+#define SCMI_A2P    0
+#define SCMI_NOTIFY 1
+#define SCMI_P2A    2
+
+/* Pinctrl */
+#define IOMUXC_PADCTL_BASE	(IOMUXC_BASE + 0x230) /* 0x443c0230 */
+#define IOMUXC_DAISY_BASE 	(IOMUXC_BASE + 0x460) /* 0x443c0460 */
+#define SYSTEM_PLATFORM_PINCTRL_MUX_MODE_MASK  (0x7U)
+#define SYSTEM_PLATFORM_PINCTRL_MUX_MODE_SHIFT (0U)
+#define SYSTEM_PLATFORM_PINCTRL_MUX_MODE(x) \
+    (((uint32_t)(((uint32_t)(x)) << SYSTEM_PLATFORM_PINCTRL_MUX_MODE_SHIFT)) & SYSTEM_PLATFORM_PINCTRL_MUX_MODE_MASK)
+
+#define SYSTEM_PLATFORM_PINCTRL_SION_MASK  (0x10U)
+#define SYSTEM_PLATFORM_PINCTRL_SION_SHIFT (4U)
+#define SYSTEM_PLATFORM_PINCTRL_SION(x) \
+    (((uint32_t)(((uint32_t)(x)) << SYSTEM_PLATFORM_PINCTRL_SION_SHIFT)) & SYSTEM_PLATFORM_PINCTRL_SION_MASK)
+
+#define SYSTEM_PLATFORM_PINCTRL_BASE         IOMUXC_BASE
+#define SYSTEM_PLATFORM_PINCTRL_MUXREG_OFF   (SYSTEM_PLATFORM_PINCTRL_BASE)
+#define SYSTEM_PLATFORM_PINCTRL_CFGREG_OFF   (SYSTEM_PLATFORM_PINCTRL_BASE + 0x230U) /* 0x443c0230 */
+#define SYSTEM_PLATFORM_PINCTRL_DAISYREG_OFF (SYSTEM_PLATFORM_PINCTRL_BASE + 0x460U) /* 0x443c0460 */
+
+/* Doorbell*/
+#define SYSTEM_PLATFORM_DBIR_A2P      0  /* A2P channel */
+#define SYSTEM_PLATFORM_DBIR_NOTIFY   1  /* P2A notify */
+#define SYSTEM_PLATFORM_DBIR_PRIORITY 2U /* P2A priority */
+
+#define SYSTEM_PLATFORM_SMA_ADDR 0
+
+/* LMM */
+#define SYSTEM_PLATFORM_LMID_M7  1
+#define SYSTEM_PLATFORM_LMID_A55 2
+
+/* BBM(RTC) */
+#define SYSTEM_PLATFORM_RTC_ID 0
+
+/* FUSA */
+#define SYSTEM_PLATFORM_FAULT_ID_FIRST 6U
+#define SYSTEM_PLATFORM_FAULT_MASK     0x1
+#define SCMI_NOTIFY_ENABLE  0x1
+
+#ifndef SCMI_LMM_POWER_CHANGE_PROCESSED
+#define SCMI_LMM_POWER_CHANGE_PROCESSED (0)
+#endif
+
+#define SCMI_MU_IRQ_PRIORITY   (3U)
+
+/* MISC */
+#define SYSTEM_MISC_CTRL_SD3_WAKE    0U  /*!< PCAL6408A-0 */
+#define SYSTEM_MISC_CTRL_M2E_WAKE    1U  /*!< PCAL6408A-4 */
+#define SYSTEM_MISC_CTRL_BT_WAKE     2U  /*!< PCAL6408A-5 */
+#define SYSTEM_MISC_CTRL_M2M_WAKE    3U  /*!< PCAL6408A-6 */
+#define SYSTEM_MISC_CTRL_BUTTON      4U  /*!< PCAL6408A-7 */
+#define SYSTEM_MISC_CTRL_TEST        5U  /*!< Test */
+#define SYSTEM_MISC_CTRL_PCA2131     6U  /*!< PCA2131 raw access */
+#define SYSTEM_MISC_CTRL_TEST_A      7U  /*!< Test action */
 
 /**
  * @brief System clock frequency (core clock)

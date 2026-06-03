@@ -9,7 +9,7 @@
 **
 **     Reference manual:    iMX952RM rev1 draftM
 **     Version:             rev. 2.0, 2024-10-29
-**     Build:               b260416
+**     Build:               b260206
 **
 **     Abstract:
 **         Provides a system configuration function and a global variable that
@@ -47,10 +47,13 @@
 
 #include <stdint.h>
 #include "fsl_device_registers.h"
-
-
-
-
+#include "fsl_mu.h"
+#include "scmi.h"
+#include "scmi_internal.h"
+#include "smt.h"
+#if SCMI_LMM_POWER_CHANGE_PROCESSED
+#include "app_srtm.h"
+#endif
 
 /* ----------------------------------------------------------------------------
    -- Core clock
