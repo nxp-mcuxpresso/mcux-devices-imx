@@ -15,12 +15,11 @@ menu "Device specific drivers configuration"
 
     config MCUX_COMPONENT_driver.trdc_soc
          bool "trdc_soc"
-         default y
+         default n
 
     config MCUX_COMPONENT_driver.clock
          bool "clock"
          default y
-         imply MCUX_COMPONENT_driver.fract_pll
 
     config MCUX_COMPONENT_driver.edma_soc
          bool "edma_soc"
@@ -33,11 +32,11 @@ menu "Device specific drivers configuration"
 
     config MCUX_COMPONENT_driver.supply
          bool "supply"
-         default y
+         default n
 
     config MCUX_COMPONENT_driver.cpu
          bool "cpu"
-         default y
+         default n
 
     config MCUX_COMPONENT_driver.memory
          bool "memory"
@@ -45,17 +44,17 @@ menu "Device specific drivers configuration"
 
     config MCUX_COMPONENT_driver.power
          bool "power"
-         default y
+         default n
 
     config MCUX_COMPONENT_driver.ccm
          bool "ccm"
-         default y
+         default n
 
     config MCUX_COMPONENT_driver.src1
          bool "src1"
-         default y
+         default n
 
     config MCUX_COMPONENT_driver.fro
          bool "fro"
-         default y
+         default n
 endmenu
