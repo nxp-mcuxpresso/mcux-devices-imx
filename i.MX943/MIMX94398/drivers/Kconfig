@@ -44,7 +44,7 @@ menu "Device specific drivers configuration"
 
     config MCUX_COMPONENT_driver.power
          bool "power"
-         default n
+         default y
 
     config MCUX_COMPONENT_driver.ccm
          bool "ccm"
