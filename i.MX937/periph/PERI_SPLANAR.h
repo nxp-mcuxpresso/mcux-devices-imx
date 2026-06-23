@@ -17,7 +17,7 @@
 **                          MIMX9375xxVZx_cm7
 **
 **     Version:             rev. 1.0, 2026-04-09
-**     Build:               b260416
+**     Build:               b260624
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for splanar

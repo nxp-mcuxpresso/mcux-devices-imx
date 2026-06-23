@@ -17,7 +17,7 @@
 **                          MIMX9375xxVZx_cm7
 **
 **     Version:             rev. 1.0, 2026-04-09
-**     Build:               b260416
+**     Build:               b260624
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for ENETC_PF_TMR
@@ -319,8 +319,8 @@ typedef struct {
 #define ENETC_PF_TMR_TMR_CTRL_TE_MASK            (0x4U)
 #define ENETC_PF_TMR_TMR_CTRL_TE_SHIFT           (2U)
 /*! TE - Timer Enable
- *  0b0..Disables
- *  0b1..Enables
+ *  0b0..Disabled
+ *  0b1..Enabled
  */
 #define ENETC_PF_TMR_TMR_CTRL_TE(x)              (((uint32_t)(((uint32_t)(x)) << ENETC_PF_TMR_TMR_CTRL_TE_SHIFT)) & ENETC_PF_TMR_TMR_CTRL_TE_MASK)
 
@@ -363,14 +363,6 @@ typedef struct {
  *  0b1..Falling edge
  */
 #define ENETC_PF_TMR_TMR_CTRL_ETEP2(x)           (((uint32_t)(((uint32_t)(x)) << ENETC_PF_TMR_TMR_CTRL_ETEP2_SHIFT)) & ENETC_PF_TMR_TMR_CTRL_ETEP2_MASK)
-
-#define ENETC_PF_TMR_TMR_CTRL_LDR_MASK           (0x800U)
-#define ENETC_PF_TMR_TMR_CTRL_LDR_SHIFT          (11U)
-/*! LDR - Timer Leader Mode
- *  0b0..Follower
- *  0b1..Leader
- */
-#define ENETC_PF_TMR_TMR_CTRL_LDR(x)             (((uint32_t)(((uint32_t)(x)) << ENETC_PF_TMR_TMR_CTRL_LDR_SHIFT)) & ENETC_PF_TMR_TMR_CTRL_LDR_MASK)
 
 #define ENETC_PF_TMR_TMR_CTRL_COMP_MODE_MASK     (0x8000U)
 #define ENETC_PF_TMR_TMR_CTRL_COMP_MODE_SHIFT    (15U)
@@ -560,88 +552,88 @@ typedef struct {
 #define ENETC_PF_TMR_TMR_TEMASK_PP3EN_MASK       (0x20U)
 #define ENETC_PF_TMR_TMR_TEMASK_PP3EN_SHIFT      (5U)
 /*! PP3EN - Periodic Pulse Event 3 Interrupt Enable
- *  0b0..Disables
- *  0b1..Enables
+ *  0b0..Disabled
+ *  0b1..Enabled
  */
 #define ENETC_PF_TMR_TMR_TEMASK_PP3EN(x)         (((uint32_t)(((uint32_t)(x)) << ENETC_PF_TMR_TMR_TEMASK_PP3EN_SHIFT)) & ENETC_PF_TMR_TMR_TEMASK_PP3EN_MASK)
 
 #define ENETC_PF_TMR_TMR_TEMASK_PP2EN_MASK       (0x40U)
 #define ENETC_PF_TMR_TMR_TEMASK_PP2EN_SHIFT      (6U)
 /*! PP2EN - Periodic Pulse Event 2 Interrupt Enable
- *  0b0..Disables
- *  0b1..Enables
+ *  0b0..Disabled
+ *  0b1..Enabled
  */
 #define ENETC_PF_TMR_TMR_TEMASK_PP2EN(x)         (((uint32_t)(((uint32_t)(x)) << ENETC_PF_TMR_TMR_TEMASK_PP2EN_SHIFT)) & ENETC_PF_TMR_TMR_TEMASK_PP2EN_MASK)
 
 #define ENETC_PF_TMR_TMR_TEMASK_PP1EN_MASK       (0x80U)
 #define ENETC_PF_TMR_TMR_TEMASK_PP1EN_SHIFT      (7U)
 /*! PP1EN - Periodic Pulse Event 1 Interrupt Enable
- *  0b0..Disables
- *  0b1..Enables
+ *  0b0..Disabled
+ *  0b1..Enabled
  */
 #define ENETC_PF_TMR_TMR_TEMASK_PP1EN(x)         (((uint32_t)(((uint32_t)(x)) << ENETC_PF_TMR_TMR_TEMASK_PP1EN_SHIFT)) & ENETC_PF_TMR_TMR_TEMASK_PP1EN_MASK)
 
 #define ENETC_PF_TMR_TMR_TEMASK_ALM1EN_MASK      (0x10000U)
 #define ENETC_PF_TMR_TMR_TEMASK_ALM1EN_SHIFT     (16U)
 /*! ALM1EN - Timer Alarm 1 Event Interrupt Enable
- *  0b0..Disables
- *  0b1..Enables
+ *  0b0..Disabled
+ *  0b1..Enabled
  */
 #define ENETC_PF_TMR_TMR_TEMASK_ALM1EN(x)        (((uint32_t)(((uint32_t)(x)) << ENETC_PF_TMR_TMR_TEMASK_ALM1EN_SHIFT)) & ENETC_PF_TMR_TMR_TEMASK_ALM1EN_MASK)
 
 #define ENETC_PF_TMR_TMR_TEMASK_ALM2EN_MASK      (0x20000U)
 #define ENETC_PF_TMR_TMR_TEMASK_ALM2EN_SHIFT     (17U)
 /*! ALM2EN - Timer Alarm 2 Event Interrupt Enable
- *  0b0..Disables
- *  0b1..Enables
+ *  0b0..Disabled
+ *  0b1..Enabled
  */
 #define ENETC_PF_TMR_TMR_TEMASK_ALM2EN(x)        (((uint32_t)(((uint32_t)(x)) << ENETC_PF_TMR_TMR_TEMASK_ALM2EN_SHIFT)) & ENETC_PF_TMR_TMR_TEMASK_ALM2EN_MASK)
 
 #define ENETC_PF_TMR_TMR_TEMASK_ETS1_THREN_MASK  (0x100000U)
 #define ENETC_PF_TMR_TMR_TEMASK_ETS1_THREN_SHIFT (20U)
 /*! ETS1_THREN - External Trigger 1 Timestamp FIFO Threshold Level Hit Interrupt Enable
- *  0b0..Disables
- *  0b1..Enables
+ *  0b0..Disabled
+ *  0b1..Enabled
  */
 #define ENETC_PF_TMR_TMR_TEMASK_ETS1_THREN(x)    (((uint32_t)(((uint32_t)(x)) << ENETC_PF_TMR_TMR_TEMASK_ETS1_THREN_SHIFT)) & ENETC_PF_TMR_TMR_TEMASK_ETS1_THREN_MASK)
 
 #define ENETC_PF_TMR_TMR_TEMASK_ETS2_THREN_MASK  (0x200000U)
 #define ENETC_PF_TMR_TMR_TEMASK_ETS2_THREN_SHIFT (21U)
 /*! ETS2_THREN - External Trigger 2 Timestamp FIFO Threshold Level Hit Interrupt Enable
- *  0b0..Disables
- *  0b1..Enables
+ *  0b0..Disabled
+ *  0b1..Enabled
  */
 #define ENETC_PF_TMR_TMR_TEMASK_ETS2_THREN(x)    (((uint32_t)(((uint32_t)(x)) << ENETC_PF_TMR_TMR_TEMASK_ETS2_THREN_SHIFT)) & ENETC_PF_TMR_TMR_TEMASK_ETS2_THREN_MASK)
 
 #define ENETC_PF_TMR_TMR_TEMASK_ETS1EN_MASK      (0x1000000U)
 #define ENETC_PF_TMR_TMR_TEMASK_ETS1EN_SHIFT     (24U)
 /*! ETS1EN - External Trigger 1 Sample Event Interrupt Enable
- *  0b0..Disables
- *  0b1..Enables
+ *  0b0..Disabled
+ *  0b1..Enabled
  */
 #define ENETC_PF_TMR_TMR_TEMASK_ETS1EN(x)        (((uint32_t)(((uint32_t)(x)) << ENETC_PF_TMR_TMR_TEMASK_ETS1EN_SHIFT)) & ENETC_PF_TMR_TMR_TEMASK_ETS1EN_MASK)
 
 #define ENETC_PF_TMR_TMR_TEMASK_ETS2EN_MASK      (0x2000000U)
 #define ENETC_PF_TMR_TMR_TEMASK_ETS2EN_SHIFT     (25U)
 /*! ETS2EN - External Trigger 2 Sample Event Interrupt Enable
- *  0b0..Disables
- *  0b1..Enables
+ *  0b0..Disabled
+ *  0b1..Enabled
  */
 #define ENETC_PF_TMR_TMR_TEMASK_ETS2EN(x)        (((uint32_t)(((uint32_t)(x)) << ENETC_PF_TMR_TMR_TEMASK_ETS2EN_SHIFT)) & ENETC_PF_TMR_TMR_TEMASK_ETS2EN_MASK)
 
 #define ENETC_PF_TMR_TMR_TEMASK_ETS1_OVEN_MASK   (0x10000000U)
 #define ENETC_PF_TMR_TMR_TEMASK_ETS1_OVEN_SHIFT  (28U)
 /*! ETS1_OVEN - External Trigger 1 Timestamp FIFO Overflow Event Interrupt Enable
- *  0b0..Disables
- *  0b1..Enables
+ *  0b0..Disabled
+ *  0b1..Enabled
  */
 #define ENETC_PF_TMR_TMR_TEMASK_ETS1_OVEN(x)     (((uint32_t)(((uint32_t)(x)) << ENETC_PF_TMR_TMR_TEMASK_ETS1_OVEN_SHIFT)) & ENETC_PF_TMR_TMR_TEMASK_ETS1_OVEN_MASK)
 
 #define ENETC_PF_TMR_TMR_TEMASK_ETS2_OVEN_MASK   (0x20000000U)
 #define ENETC_PF_TMR_TMR_TEMASK_ETS2_OVEN_SHIFT  (29U)
 /*! ETS2_OVEN - External Trigger 2 Timestamp FIFO Overflow Event Interrupt Enable
- *  0b0..Disables
- *  0b1..Enables
+ *  0b0..Disabled
+ *  0b1..Enabled
  */
 #define ENETC_PF_TMR_TMR_TEMASK_ETS2_OVEN(x)     (((uint32_t)(((uint32_t)(x)) << ENETC_PF_TMR_TMR_TEMASK_ETS2_OVEN_SHIFT)) & ENETC_PF_TMR_TMR_TEMASK_ETS2_OVEN_MASK)
 /*! @} */
@@ -745,7 +737,7 @@ typedef struct {
 
 #define ENETC_PF_TMR_TMR_PRSC_PRSC_OCK_MASK      (0xFFFFU)
 #define ENETC_PF_TMR_TMR_PRSC_PRSC_OCK_SHIFT     (0U)
-/*! PRSC_OCK - Output Clock Division Prescale Factor */
+/*! PRSC_OCK - Output clock Prescale Factor */
 #define ENETC_PF_TMR_TMR_PRSC_PRSC_OCK(x)        (((uint32_t)(((uint32_t)(x)) << ENETC_PF_TMR_TMR_PRSC_PRSC_OCK_SHIFT)) & ENETC_PF_TMR_TMR_PRSC_PRSC_OCK_MASK)
 /*! @} */
 
@@ -830,8 +822,8 @@ typedef struct {
 #define ENETC_PF_TMR_TMR_ALARM_CTRL_ALARM1_PW_MASK (0x1FU)
 #define ENETC_PF_TMR_TMR_ALARM_CTRL_ALARM1_PW_SHIFT (0U)
 /*! ALARM1_PW - Alarm 1 Pulse Width Selector
- *  0b00000..Alarm is turned off by writing to ALARM1_L register address
- *  0b00001-0b11111..Number of timer generated clocks the alarm is active for
+ *  0b00000..Alarm stays asserted until the alarm is deactivated by writing to TMR_ALARM1_L register
+ *  0b00001-0b11111..Number of prescaled clock periods alarm is asserted
  */
 #define ENETC_PF_TMR_TMR_ALARM_CTRL_ALARM1_PW(x) (((uint32_t)(((uint32_t)(x)) << ENETC_PF_TMR_TMR_ALARM_CTRL_ALARM1_PW_SHIFT)) & ENETC_PF_TMR_TMR_ALARM_CTRL_ALARM1_PW_MASK)
 
@@ -839,15 +831,15 @@ typedef struct {
 #define ENETC_PF_TMR_TMR_ALARM_CTRL_PG1_SHIFT    (7U)
 /*! PG1 - Alarm 1 Pulse Generation Time
  *  0b0..Immediately
- *  0b1..Synchronous to timer generated clock
+ *  0b1..Aligned to scaled down timer clock
  */
 #define ENETC_PF_TMR_TMR_ALARM_CTRL_PG1(x)       (((uint32_t)(((uint32_t)(x)) << ENETC_PF_TMR_TMR_ALARM_CTRL_PG1_SHIFT)) & ENETC_PF_TMR_TMR_ALARM_CTRL_PG1_MASK)
 
 #define ENETC_PF_TMR_TMR_ALARM_CTRL_ALARM2_PW_MASK (0x1F00U)
 #define ENETC_PF_TMR_TMR_ALARM_CTRL_ALARM2_PW_SHIFT (8U)
 /*! ALARM2_PW - Alarm 2 Pulse Width Selector
- *  0b00000..Alarm is turned off by writing to ALARM2_L register address
- *  0b00001-0b11111..Number of timer generated clocks the alarm is active for
+ *  0b00000..Alarm stays asserted until the alarm is disactivated by writing to TMR_ALARM2_L register
+ *  0b00001-0b11111..Number of prescaled clock periods alarm is asserted
  */
 #define ENETC_PF_TMR_TMR_ALARM_CTRL_ALARM2_PW(x) (((uint32_t)(((uint32_t)(x)) << ENETC_PF_TMR_TMR_ALARM_CTRL_ALARM2_PW_SHIFT)) & ENETC_PF_TMR_TMR_ALARM_CTRL_ALARM2_PW_MASK)
 
@@ -855,7 +847,7 @@ typedef struct {
 #define ENETC_PF_TMR_TMR_ALARM_CTRL_PG2_SHIFT    (15U)
 /*! PG2 - Alarm 2 Pulse Generation Time
  *  0b0..Immediately
- *  0b1..Synchronous to timer generated clock
+ *  0b1..Aligned to scaled down timer clock
  */
 #define ENETC_PF_TMR_TMR_ALARM_CTRL_PG2(x)       (((uint32_t)(((uint32_t)(x)) << ENETC_PF_TMR_TMR_ALARM_CTRL_PG2_SHIFT)) & ENETC_PF_TMR_TMR_ALARM_CTRL_PG2_MASK)
 /*! @} */
@@ -901,7 +893,7 @@ typedef struct {
 #define ENETC_PF_TMR_TMR_FIPER_CTRL_PG1_SHIFT    (6U)
 /*! PG1 - FIPER1 Pulse Generation Time
  *  0b0..Immediately after interval timer expires
- *  0b1..Synchronous to timer generated clock
+ *  0b1..Aligned to scaled down timer clock
  */
 #define ENETC_PF_TMR_TMR_FIPER_CTRL_PG1(x)       (((uint32_t)(((uint32_t)(x)) << ENETC_PF_TMR_TMR_FIPER_CTRL_PG1_SHIFT)) & ENETC_PF_TMR_TMR_FIPER_CTRL_PG1_MASK)
 
@@ -933,7 +925,7 @@ typedef struct {
 #define ENETC_PF_TMR_TMR_FIPER_CTRL_PG2_SHIFT    (14U)
 /*! PG2 - FIPER2 Pulse Generation Time
  *  0b0..Immediately after interval timer expires
- *  0b1..Synchronous to timer generated clock
+ *  0b1..Aligned to scaled down timer clock
  */
 #define ENETC_PF_TMR_TMR_FIPER_CTRL_PG2(x)       (((uint32_t)(((uint32_t)(x)) << ENETC_PF_TMR_TMR_FIPER_CTRL_PG2_SHIFT)) & ENETC_PF_TMR_TMR_FIPER_CTRL_PG2_MASK)
 
@@ -965,7 +957,7 @@ typedef struct {
 #define ENETC_PF_TMR_TMR_FIPER_CTRL_PG3_SHIFT    (22U)
 /*! PG3 - FIPER3 Pulse Generation Time
  *  0b0..Immediately after interval timer expires
- *  0b1..Synchronous to timer generated clock
+ *  0b1..Aligned to scaled down timer clock
  */
 #define ENETC_PF_TMR_TMR_FIPER_CTRL_PG3(x)       (((uint32_t)(((uint32_t)(x)) << ENETC_PF_TMR_TMR_FIPER_CTRL_PG3_SHIFT)) & ENETC_PF_TMR_TMR_FIPER_CTRL_PG3_MASK)
 

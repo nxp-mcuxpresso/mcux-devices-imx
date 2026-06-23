@@ -17,7 +17,7 @@
 **                          MIMX9375xxVZx_cm7
 **
 **     Version:             rev. 1.0, 2026-04-09
-**     Build:               b260416
+**     Build:               b260624
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for HSIO_BLK_CTRL_HSIOMIX
@@ -138,14 +138,13 @@ typedef struct {
   __I  uint32_t PCIE1_DEBUG_SIGNAL;                /**< PCIe1 Debug Trace Bus, offset: 0x90 */
        uint8_t RESERVED_8[4];
   __I  uint32_t PCIE1_PHY_DTB_OUT;                 /**< Digital Test Bus Output, offset: 0x98 */
-  __IO uint32_t LPCG_FORCE_ON_OFF_SEL;             /**< Force ON OFF Select of LPCG, offset: 0x9C */
-  __IO uint32_t LPCG_FORCE_ON_OFF;                 /**< LPCG Force ON OFF Control, offset: 0xA0 */
+       uint8_t RESERVED_9[8];
   __IO uint32_t USB_SLAVE_RD_HURRY;                /**< USB AXI Bus Read Hurry Signal, offset: 0xA4 */
   __IO uint32_t USB_SLAVE_RD_PRESS;                /**< USB AXI Bus Read Press Signal, offset: 0xA8 */
   __IO uint32_t USB_SLAVE_WR_HURRY;                /**< USB AXI Bus Write Hurry Signal, offset: 0xAC */
-       uint8_t RESERVED_9[4];
-  __IO uint32_t USB_SLAVE_WR_PRESS;                /**< USB AXI Bus Write Press Signal, offset: 0xB4 */
        uint8_t RESERVED_10[4];
+  __IO uint32_t USB_SLAVE_WR_PRESS;                /**< USB AXI Bus Write Press Signal, offset: 0xB4 */
+       uint8_t RESERVED_11[4];
   __IO uint32_t CR_PARA_CLK_GATE;                  /**< cr_para Clock Gate Signal, offset: 0xBC */
   __IO uint32_t LFAST_IO_REG;                      /**< General Purpose Register for LFAST IO, offset: 0xC0 */
   __IO uint32_t APB_IPS_ERR_GEN;                   /**< USB and PCIe IPS/APB Bus Error Signal Generation Control, offset: 0xC4 */
@@ -187,14 +186,6 @@ typedef struct {
  */
 #define HSIO_BLK_CTRL_HSIOMIX_GPR_REG0_USB2_BYPASS_LOGIC_SEL(x) (((uint32_t)(((uint32_t)(x)) << HSIO_BLK_CTRL_HSIOMIX_GPR_REG0_USB2_BYPASS_LOGIC_SEL_SHIFT)) & HSIO_BLK_CTRL_HSIOMIX_GPR_REG0_USB2_BYPASS_LOGIC_SEL_MASK)
 
-#define HSIO_BLK_CTRL_HSIOMIX_GPR_REG0_USB_PHY_REF_CLK_SEL_MASK (0x40U)
-#define HSIO_BLK_CTRL_HSIOMIX_GPR_REG0_USB_PHY_REF_CLK_SEL_SHIFT (6U)
-/*! USB_PHY_REF_CLK_SEL - USB PHY Reference Clock Selection
- *  0b0..24 MHz external oscillator
- *  0b1..100 MHz high performance PLL
- */
-#define HSIO_BLK_CTRL_HSIOMIX_GPR_REG0_USB_PHY_REF_CLK_SEL(x) (((uint32_t)(((uint32_t)(x)) << HSIO_BLK_CTRL_HSIOMIX_GPR_REG0_USB_PHY_REF_CLK_SEL_SHIFT)) & HSIO_BLK_CTRL_HSIOMIX_GPR_REG0_USB_PHY_REF_CLK_SEL_MASK)
-
 #define HSIO_BLK_CTRL_HSIOMIX_GPR_REG0_CFG_READY_MASK (0x80U)
 #define HSIO_BLK_CTRL_HSIOMIX_GPR_REG0_CFG_READY_SHIFT (7U)
 /*! CFG_READY - Configuration Ready */
@@ -233,14 +224,6 @@ typedef struct {
  */
 #define HSIO_BLK_CTRL_HSIOMIX_USB1_WAKEUP_CTRL_OTG_ID_WAKEUP_EN(x) (((uint32_t)(((uint32_t)(x)) << HSIO_BLK_CTRL_HSIOMIX_USB1_WAKEUP_CTRL_OTG_ID_WAKEUP_EN_SHIFT)) & HSIO_BLK_CTRL_HSIOMIX_USB1_WAKEUP_CTRL_OTG_ID_WAKEUP_EN_MASK)
 
-#define HSIO_BLK_CTRL_HSIOMIX_USB1_WAKEUP_CTRL_OTG_U3_WAKE_EN_MASK (0x8U)
-#define HSIO_BLK_CTRL_HSIOMIX_USB1_WAKEUP_CTRL_OTG_U3_WAKE_EN_SHIFT (3U)
-/*! OTG_U3_WAKE_EN - Enable Signal for Wakeup from U3 State
- *  0b0..Disable
- *  0b1..Enable
- */
-#define HSIO_BLK_CTRL_HSIOMIX_USB1_WAKEUP_CTRL_OTG_U3_WAKE_EN(x) (((uint32_t)(((uint32_t)(x)) << HSIO_BLK_CTRL_HSIOMIX_USB1_WAKEUP_CTRL_OTG_U3_WAKE_EN_SHIFT)) & HSIO_BLK_CTRL_HSIOMIX_USB1_WAKEUP_CTRL_OTG_U3_WAKE_EN_MASK)
-
 #define HSIO_BLK_CTRL_HSIOMIX_USB1_WAKEUP_CTRL_OTG_VBUS_SOURCE_SEL_MASK (0x10U)
 #define HSIO_BLK_CTRL_HSIOMIX_USB1_WAKEUP_CTRL_OTG_VBUS_SOURCE_SEL_SHIFT (4U)
 /*! OTG_VBUS_SOURCE_SEL - OTG VBUS Source Select
@@ -248,14 +231,6 @@ typedef struct {
  *  0b1..Select sessvld
  */
 #define HSIO_BLK_CTRL_HSIOMIX_USB1_WAKEUP_CTRL_OTG_VBUS_SOURCE_SEL(x) (((uint32_t)(((uint32_t)(x)) << HSIO_BLK_CTRL_HSIOMIX_USB1_WAKEUP_CTRL_OTG_VBUS_SOURCE_SEL_SHIFT)) & HSIO_BLK_CTRL_HSIOMIX_USB1_WAKEUP_CTRL_OTG_VBUS_SOURCE_SEL_MASK)
-
-#define HSIO_BLK_CTRL_HSIOMIX_USB1_WAKEUP_CTRL_OTG_CONN_WAKEUP_EN_MASK (0x20U)
-#define HSIO_BLK_CTRL_HSIOMIX_USB1_WAKEUP_CTRL_OTG_CONN_WAKEUP_EN_SHIFT (5U)
-/*! OTG_CONN_WAKEUP_EN - Enable Signal for Wakeup from Connection or Disconnection
- *  0b0..Disable
- *  0b1..Enable
- */
-#define HSIO_BLK_CTRL_HSIOMIX_USB1_WAKEUP_CTRL_OTG_CONN_WAKEUP_EN(x) (((uint32_t)(((uint32_t)(x)) << HSIO_BLK_CTRL_HSIOMIX_USB1_WAKEUP_CTRL_OTG_CONN_WAKEUP_EN_SHIFT)) & HSIO_BLK_CTRL_HSIOMIX_USB1_WAKEUP_CTRL_OTG_CONN_WAKEUP_EN_MASK)
 
 #define HSIO_BLK_CTRL_HSIOMIX_USB1_WAKEUP_CTRL_AUTORESUME_EN_MASK (0x100U)
 #define HSIO_BLK_CTRL_HSIOMIX_USB1_WAKEUP_CTRL_AUTORESUME_EN_SHIFT (8U)
@@ -350,14 +325,6 @@ typedef struct {
  */
 #define HSIO_BLK_CTRL_HSIOMIX_USB2_WAKEUP_CTRL_OTG_ID_WAKEUP_EN(x) (((uint32_t)(((uint32_t)(x)) << HSIO_BLK_CTRL_HSIOMIX_USB2_WAKEUP_CTRL_OTG_ID_WAKEUP_EN_SHIFT)) & HSIO_BLK_CTRL_HSIOMIX_USB2_WAKEUP_CTRL_OTG_ID_WAKEUP_EN_MASK)
 
-#define HSIO_BLK_CTRL_HSIOMIX_USB2_WAKEUP_CTRL_OTG_U3_WAKE_EN_MASK (0x8U)
-#define HSIO_BLK_CTRL_HSIOMIX_USB2_WAKEUP_CTRL_OTG_U3_WAKE_EN_SHIFT (3U)
-/*! OTG_U3_WAKE_EN - Enable Signal for Wakeup from U3 State
- *  0b0..Disable
- *  0b1..Enable
- */
-#define HSIO_BLK_CTRL_HSIOMIX_USB2_WAKEUP_CTRL_OTG_U3_WAKE_EN(x) (((uint32_t)(((uint32_t)(x)) << HSIO_BLK_CTRL_HSIOMIX_USB2_WAKEUP_CTRL_OTG_U3_WAKE_EN_SHIFT)) & HSIO_BLK_CTRL_HSIOMIX_USB2_WAKEUP_CTRL_OTG_U3_WAKE_EN_MASK)
-
 #define HSIO_BLK_CTRL_HSIOMIX_USB2_WAKEUP_CTRL_OTG_VBUS_SOURCE_SEL_MASK (0x10U)
 #define HSIO_BLK_CTRL_HSIOMIX_USB2_WAKEUP_CTRL_OTG_VBUS_SOURCE_SEL_SHIFT (4U)
 /*! OTG_VBUS_SOURCE_SEL - OTG VBUS Source Select
@@ -365,11 +332,6 @@ typedef struct {
  *  0b1..Select ssvld
  */
 #define HSIO_BLK_CTRL_HSIOMIX_USB2_WAKEUP_CTRL_OTG_VBUS_SOURCE_SEL(x) (((uint32_t)(((uint32_t)(x)) << HSIO_BLK_CTRL_HSIOMIX_USB2_WAKEUP_CTRL_OTG_VBUS_SOURCE_SEL_SHIFT)) & HSIO_BLK_CTRL_HSIOMIX_USB2_WAKEUP_CTRL_OTG_VBUS_SOURCE_SEL_MASK)
-
-#define HSIO_BLK_CTRL_HSIOMIX_USB2_WAKEUP_CTRL_OTG_CONN_WAKEUP_EN_MASK (0x20U)
-#define HSIO_BLK_CTRL_HSIOMIX_USB2_WAKEUP_CTRL_OTG_CONN_WAKEUP_EN_SHIFT (5U)
-/*! OTG_CONN_WAKEUP_EN - Enable Signal for Wakeup from Connection or Disconnection */
-#define HSIO_BLK_CTRL_HSIOMIX_USB2_WAKEUP_CTRL_OTG_CONN_WAKEUP_EN(x) (((uint32_t)(((uint32_t)(x)) << HSIO_BLK_CTRL_HSIOMIX_USB2_WAKEUP_CTRL_OTG_CONN_WAKEUP_EN_SHIFT)) & HSIO_BLK_CTRL_HSIOMIX_USB2_WAKEUP_CTRL_OTG_CONN_WAKEUP_EN_MASK)
 
 #define HSIO_BLK_CTRL_HSIOMIX_USB2_WAKEUP_CTRL_AUTORESUME_EN_MASK (0x100U)
 #define HSIO_BLK_CTRL_HSIOMIX_USB2_WAKEUP_CTRL_AUTORESUME_EN_SHIFT (8U)
@@ -455,11 +417,6 @@ typedef struct {
 /*! OTG_ID_WAKEUP_INTERRUPT - Wakeup Interrupt Status form ID */
 #define HSIO_BLK_CTRL_HSIOMIX_USB1_WAKEUP_STATUS_OTG_ID_WAKEUP_INTERRUPT(x) (((uint32_t)(((uint32_t)(x)) << HSIO_BLK_CTRL_HSIOMIX_USB1_WAKEUP_STATUS_OTG_ID_WAKEUP_INTERRUPT_SHIFT)) & HSIO_BLK_CTRL_HSIOMIX_USB1_WAKEUP_STATUS_OTG_ID_WAKEUP_INTERRUPT_MASK)
 
-#define HSIO_BLK_CTRL_HSIOMIX_USB1_WAKEUP_STATUS_OTG_U3_WAKEUP_INTERRUP_MASK (0x8U)
-#define HSIO_BLK_CTRL_HSIOMIX_USB1_WAKEUP_STATUS_OTG_U3_WAKEUP_INTERRUP_SHIFT (3U)
-/*! OTG_U3_WAKEUP_INTERRUP - Wakeup Interrupt Status form U3 State */
-#define HSIO_BLK_CTRL_HSIOMIX_USB1_WAKEUP_STATUS_OTG_U3_WAKEUP_INTERRUP(x) (((uint32_t)(((uint32_t)(x)) << HSIO_BLK_CTRL_HSIOMIX_USB1_WAKEUP_STATUS_OTG_U3_WAKEUP_INTERRUP_SHIFT)) & HSIO_BLK_CTRL_HSIOMIX_USB1_WAKEUP_STATUS_OTG_U3_WAKEUP_INTERRUP_MASK)
-
 #define HSIO_BLK_CTRL_HSIOMIX_USB1_WAKEUP_STATUS_OTG_PHY_LINESTATE0_0_MASK (0x10U)
 #define HSIO_BLK_CTRL_HSIOMIX_USB1_WAKEUP_STATUS_OTG_PHY_LINESTATE0_0_SHIFT (4U)
 /*! OTG_PHY_LINESTATE0_0 - Wakeup Source Linestate[0] */
@@ -485,11 +442,6 @@ typedef struct {
 /*! OTG_PHY_OTGSESSVLD0 - Wakeup Source Session Valid */
 #define HSIO_BLK_CTRL_HSIOMIX_USB1_WAKEUP_STATUS_OTG_PHY_OTGSESSVLD0(x) (((uint32_t)(((uint32_t)(x)) << HSIO_BLK_CTRL_HSIOMIX_USB1_WAKEUP_STATUS_OTG_PHY_OTGSESSVLD0_SHIFT)) & HSIO_BLK_CTRL_HSIOMIX_USB1_WAKEUP_STATUS_OTG_PHY_OTGSESSVLD0_MASK)
 
-#define HSIO_BLK_CTRL_HSIOMIX_USB1_WAKEUP_STATUS_PIPE_RXELECIDLE_MASK (0x200U)
-#define HSIO_BLK_CTRL_HSIOMIX_USB1_WAKEUP_STATUS_PIPE_RXELECIDLE_SHIFT (9U)
-/*! PIPE_RXELECIDLE - Wakeup Source pipe_rxelecidel */
-#define HSIO_BLK_CTRL_HSIOMIX_USB1_WAKEUP_STATUS_PIPE_RXELECIDLE(x) (((uint32_t)(((uint32_t)(x)) << HSIO_BLK_CTRL_HSIOMIX_USB1_WAKEUP_STATUS_PIPE_RXELECIDLE_SHIFT)) & HSIO_BLK_CTRL_HSIOMIX_USB1_WAKEUP_STATUS_PIPE_RXELECIDLE_MASK)
-
 #define HSIO_BLK_CTRL_HSIOMIX_USB1_WAKEUP_STATUS_OTG_HOST_MODE_MASK (0x400U)
 #define HSIO_BLK_CTRL_HSIOMIX_USB1_WAKEUP_STATUS_OTG_HOST_MODE_SHIFT (10U)
 /*! OTG_HOST_MODE - USB drd Mode Indicator
@@ -497,16 +449,6 @@ typedef struct {
  *  0b1..Host mode
  */
 #define HSIO_BLK_CTRL_HSIOMIX_USB1_WAKEUP_STATUS_OTG_HOST_MODE(x) (((uint32_t)(((uint32_t)(x)) << HSIO_BLK_CTRL_HSIOMIX_USB1_WAKEUP_STATUS_OTG_HOST_MODE_SHIFT)) & HSIO_BLK_CTRL_HSIOMIX_USB1_WAKEUP_STATUS_OTG_HOST_MODE_MASK)
-
-#define HSIO_BLK_CTRL_HSIOMIX_USB1_WAKEUP_STATUS_PIPE3_POWERDOWN_MASK (0x1800U)
-#define HSIO_BLK_CTRL_HSIOMIX_USB1_WAKEUP_STATUS_PIPE3_POWERDOWN_SHIFT (11U)
-/*! PIPE3_POWERDOWN - Pipe Power-down */
-#define HSIO_BLK_CTRL_HSIOMIX_USB1_WAKEUP_STATUS_PIPE3_POWERDOWN(x) (((uint32_t)(((uint32_t)(x)) << HSIO_BLK_CTRL_HSIOMIX_USB1_WAKEUP_STATUS_PIPE3_POWERDOWN_SHIFT)) & HSIO_BLK_CTRL_HSIOMIX_USB1_WAKEUP_STATUS_PIPE3_POWERDOWN_MASK)
-
-#define HSIO_BLK_CTRL_HSIOMIX_USB1_WAKEUP_STATUS_OTG_CONN_WAKEUP_INTERRUPT_MASK (0x2000U)
-#define HSIO_BLK_CTRL_HSIOMIX_USB1_WAKEUP_STATUS_OTG_CONN_WAKEUP_INTERRUPT_SHIFT (13U)
-/*! OTG_CONN_WAKEUP_INTERRUPT - Wakeup Interrupt Status of Connection */
-#define HSIO_BLK_CTRL_HSIOMIX_USB1_WAKEUP_STATUS_OTG_CONN_WAKEUP_INTERRUPT(x) (((uint32_t)(((uint32_t)(x)) << HSIO_BLK_CTRL_HSIOMIX_USB1_WAKEUP_STATUS_OTG_CONN_WAKEUP_INTERRUPT_SHIFT)) & HSIO_BLK_CTRL_HSIOMIX_USB1_WAKEUP_STATUS_OTG_CONN_WAKEUP_INTERRUPT_MASK)
 
 #define HSIO_BLK_CTRL_HSIOMIX_USB1_WAKEUP_STATUS_OTG_WAKEUP_INTERRUPT_MASK (0x80000000U)
 #define HSIO_BLK_CTRL_HSIOMIX_USB1_WAKEUP_STATUS_OTG_WAKEUP_INTERRUPT_SHIFT (31U)
@@ -531,11 +473,6 @@ typedef struct {
 #define HSIO_BLK_CTRL_HSIOMIX_USB2_WAKEUP_STATUS_OTG_ID_WAKEUP_INTERRUPT_SHIFT (2U)
 /*! OTG_ID_WAKEUP_INTERRUPT - Wakeup Interrupt Status form ID */
 #define HSIO_BLK_CTRL_HSIOMIX_USB2_WAKEUP_STATUS_OTG_ID_WAKEUP_INTERRUPT(x) (((uint32_t)(((uint32_t)(x)) << HSIO_BLK_CTRL_HSIOMIX_USB2_WAKEUP_STATUS_OTG_ID_WAKEUP_INTERRUPT_SHIFT)) & HSIO_BLK_CTRL_HSIOMIX_USB2_WAKEUP_STATUS_OTG_ID_WAKEUP_INTERRUPT_MASK)
-
-#define HSIO_BLK_CTRL_HSIOMIX_USB2_WAKEUP_STATUS_OTG_U3_WAKEUP_INTERRUP_MASK (0x8U)
-#define HSIO_BLK_CTRL_HSIOMIX_USB2_WAKEUP_STATUS_OTG_U3_WAKEUP_INTERRUP_SHIFT (3U)
-/*! OTG_U3_WAKEUP_INTERRUP - Wakeup Interrupt Status form U3 State */
-#define HSIO_BLK_CTRL_HSIOMIX_USB2_WAKEUP_STATUS_OTG_U3_WAKEUP_INTERRUP(x) (((uint32_t)(((uint32_t)(x)) << HSIO_BLK_CTRL_HSIOMIX_USB2_WAKEUP_STATUS_OTG_U3_WAKEUP_INTERRUP_SHIFT)) & HSIO_BLK_CTRL_HSIOMIX_USB2_WAKEUP_STATUS_OTG_U3_WAKEUP_INTERRUP_MASK)
 
 #define HSIO_BLK_CTRL_HSIOMIX_USB2_WAKEUP_STATUS_OTG_PHY_LINESTATE0_0_MASK (0x10U)
 #define HSIO_BLK_CTRL_HSIOMIX_USB2_WAKEUP_STATUS_OTG_PHY_LINESTATE0_0_SHIFT (4U)
@@ -562,11 +499,6 @@ typedef struct {
 /*! OTG_PHY_OTGSESSVLD0 - Wakeup Source Session Valid */
 #define HSIO_BLK_CTRL_HSIOMIX_USB2_WAKEUP_STATUS_OTG_PHY_OTGSESSVLD0(x) (((uint32_t)(((uint32_t)(x)) << HSIO_BLK_CTRL_HSIOMIX_USB2_WAKEUP_STATUS_OTG_PHY_OTGSESSVLD0_SHIFT)) & HSIO_BLK_CTRL_HSIOMIX_USB2_WAKEUP_STATUS_OTG_PHY_OTGSESSVLD0_MASK)
 
-#define HSIO_BLK_CTRL_HSIOMIX_USB2_WAKEUP_STATUS_PIPE_RXELECIDLE_MASK (0x200U)
-#define HSIO_BLK_CTRL_HSIOMIX_USB2_WAKEUP_STATUS_PIPE_RXELECIDLE_SHIFT (9U)
-/*! PIPE_RXELECIDLE - Wakeup Source pipe_rxelecidel */
-#define HSIO_BLK_CTRL_HSIOMIX_USB2_WAKEUP_STATUS_PIPE_RXELECIDLE(x) (((uint32_t)(((uint32_t)(x)) << HSIO_BLK_CTRL_HSIOMIX_USB2_WAKEUP_STATUS_PIPE_RXELECIDLE_SHIFT)) & HSIO_BLK_CTRL_HSIOMIX_USB2_WAKEUP_STATUS_PIPE_RXELECIDLE_MASK)
-
 #define HSIO_BLK_CTRL_HSIOMIX_USB2_WAKEUP_STATUS_OTG_HOST_MODE_MASK (0x400U)
 #define HSIO_BLK_CTRL_HSIOMIX_USB2_WAKEUP_STATUS_OTG_HOST_MODE_SHIFT (10U)
 /*! OTG_HOST_MODE - USB drd Mode Indicator
@@ -574,16 +506,6 @@ typedef struct {
  *  0b1..Host mode
  */
 #define HSIO_BLK_CTRL_HSIOMIX_USB2_WAKEUP_STATUS_OTG_HOST_MODE(x) (((uint32_t)(((uint32_t)(x)) << HSIO_BLK_CTRL_HSIOMIX_USB2_WAKEUP_STATUS_OTG_HOST_MODE_SHIFT)) & HSIO_BLK_CTRL_HSIOMIX_USB2_WAKEUP_STATUS_OTG_HOST_MODE_MASK)
-
-#define HSIO_BLK_CTRL_HSIOMIX_USB2_WAKEUP_STATUS_PIPE3_POWERDOWN_MASK (0x1800U)
-#define HSIO_BLK_CTRL_HSIOMIX_USB2_WAKEUP_STATUS_PIPE3_POWERDOWN_SHIFT (11U)
-/*! PIPE3_POWERDOWN - Pipe Power-down */
-#define HSIO_BLK_CTRL_HSIOMIX_USB2_WAKEUP_STATUS_PIPE3_POWERDOWN(x) (((uint32_t)(((uint32_t)(x)) << HSIO_BLK_CTRL_HSIOMIX_USB2_WAKEUP_STATUS_PIPE3_POWERDOWN_SHIFT)) & HSIO_BLK_CTRL_HSIOMIX_USB2_WAKEUP_STATUS_PIPE3_POWERDOWN_MASK)
-
-#define HSIO_BLK_CTRL_HSIOMIX_USB2_WAKEUP_STATUS_OTG_CONN_WAKEUP_INTERRUPT_MASK (0x2000U)
-#define HSIO_BLK_CTRL_HSIOMIX_USB2_WAKEUP_STATUS_OTG_CONN_WAKEUP_INTERRUPT_SHIFT (13U)
-/*! OTG_CONN_WAKEUP_INTERRUPT - Wakeup Interrupt Status of Connection */
-#define HSIO_BLK_CTRL_HSIOMIX_USB2_WAKEUP_STATUS_OTG_CONN_WAKEUP_INTERRUPT(x) (((uint32_t)(((uint32_t)(x)) << HSIO_BLK_CTRL_HSIOMIX_USB2_WAKEUP_STATUS_OTG_CONN_WAKEUP_INTERRUPT_SHIFT)) & HSIO_BLK_CTRL_HSIOMIX_USB2_WAKEUP_STATUS_OTG_CONN_WAKEUP_INTERRUPT_MASK)
 
 #define HSIO_BLK_CTRL_HSIOMIX_USB2_WAKEUP_STATUS_OTG_WAKEUP_INTERRUPT_MASK (0x80000000U)
 #define HSIO_BLK_CTRL_HSIOMIX_USB2_WAKEUP_STATUS_OTG_WAKEUP_INTERRUPT_SHIFT (31U)
@@ -755,382 +677,6 @@ typedef struct {
 #define HSIO_BLK_CTRL_HSIOMIX_PCIE1_PHY_DTB_OUT_PCIE1_PHY_DTB_OUT_SHIFT (0U)
 /*! PCIE1_PHY_DTB_OUT - Digital Test Bus Output */
 #define HSIO_BLK_CTRL_HSIOMIX_PCIE1_PHY_DTB_OUT_PCIE1_PHY_DTB_OUT(x) (((uint32_t)(((uint32_t)(x)) << HSIO_BLK_CTRL_HSIOMIX_PCIE1_PHY_DTB_OUT_PCIE1_PHY_DTB_OUT_SHIFT)) & HSIO_BLK_CTRL_HSIOMIX_PCIE1_PHY_DTB_OUT_PCIE1_PHY_DTB_OUT_MASK)
-/*! @} */
-
-/*! @name LPCG_FORCE_ON_OFF_SEL - Force ON OFF Select of LPCG */
-/*! @{ */
-
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_hsiomix_root_clk_MASK (0x1U)
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_hsiomix_root_clk_SHIFT (0U)
-/*! ipc_hsiomix_root_clk - Force ON OFF Select of ipc_hsiomix_root_clk
- *  0b0..Not selected
- *  0b1..Selected
- */
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_hsiomix_root_clk(x) (((uint32_t)(((uint32_t)(x)) << HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_hsiomix_root_clk_SHIFT)) & HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_hsiomix_root_clk_MASK)
-
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_bus_netcmix_133_enet_phy_MASK (0x2U)
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_bus_netcmix_133_enet_phy_SHIFT (1U)
-/*! bus_netcmix_133_enet_phy - Force ON OFF Select of bus_netcmix_133_enet_phy
- *  0b0..Not selected
- *  0b1..Selected
- */
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_bus_netcmix_133_enet_phy(x) (((uint32_t)(((uint32_t)(x)) << HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_bus_netcmix_133_enet_phy_SHIFT)) & HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_bus_netcmix_133_enet_phy_MASK)
-
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_test_netc_eth_500M_DIV1_MASK (0x4U)
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_test_netc_eth_500M_DIV1_SHIFT (2U)
-/*! ipc_test_netc_eth_500M_DIV1 - Force ON OFF Select of ipc_test_netc_eth_500M_DIV1
- *  0b0..Not selected
- *  0b1..Selected
- */
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_test_netc_eth_500M_DIV1(x) (((uint32_t)(((uint32_t)(x)) << HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_test_netc_eth_500M_DIV1_SHIFT)) & HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_test_netc_eth_500M_DIV1_MASK)
-
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_mgr_clk_MASK (0x8U)
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_mgr_clk_SHIFT (3U)
-/*! ipc_mgr_clk - Force ON OFF Select of ipc_mgr_clk
- *  0b0..Not selected
- *  0b1..Selected
- */
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_mgr_clk(x) (((uint32_t)(((uint32_t)(x)) << HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_mgr_clk_SHIFT)) & HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_mgr_clk_MASK)
-
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_hsiomix_gpr_clk_MASK (0x10U)
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_hsiomix_gpr_clk_SHIFT (4U)
-/*! ipc_hsiomix_gpr_clk - Force ON OFF Select of ipc_hsiomix_gpr_clk
- *  0b0..Not selected
- *  0b1..Selected
- */
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_hsiomix_gpr_clk(x) (((uint32_t)(((uint32_t)(x)) << HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_hsiomix_gpr_clk_SHIFT)) & HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_hsiomix_gpr_clk_MASK)
-
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_trout_24M_root_clk_MASK (0x20U)
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_trout_24M_root_clk_SHIFT (5U)
-/*! ipc_trout_24M_root_clk - Force ON OFF Select of ipc_trout_24M_root_clk
- *  0b0..Not selected
- *  0b1..Selected
- */
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_trout_24M_root_clk(x) (((uint32_t)(((uint32_t)(x)) << HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_trout_24M_root_clk_SHIFT)) & HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_trout_24M_root_clk_MASK)
-
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_hsiomix_24M_clk_root_MASK (0x40U)
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_hsiomix_24M_clk_root_SHIFT (6U)
-/*! ipc_hsiomix_24M_clk_root - Force ON OFF Select of ipc_hsiomix_24M_clk_root
- *  0b0..Not selected
- *  0b1..Selected
- */
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_hsiomix_24M_clk_root(x) (((uint32_t)(((uint32_t)(x)) << HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_hsiomix_24M_clk_root_SHIFT)) & HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_hsiomix_24M_clk_root_MASK)
-
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_pll_ai_clk_MASK (0x80U)
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_pll_ai_clk_SHIFT (7U)
-/*! ipc_pll_ai_clk - Force ON OFF Select of ipc_pll_ai_clk
- *  0b0..Not selected
- *  0b1..Selected
- */
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_pll_ai_clk(x) (((uint32_t)(((uint32_t)(x)) << HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_pll_ai_clk_SHIFT)) & HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_pll_ai_clk_MASK)
-
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_usb2_clk_MASK (0x100U)
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_usb2_clk_SHIFT (8U)
-/*! ipc_usb2_clk - Force ON OFF Select of ipc_usb2_clk
- *  0b0..Not selected
- *  0b1..Selected
- */
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_usb2_clk(x) (((uint32_t)(((uint32_t)(x)) << HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_usb2_clk_SHIFT)) & HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_usb2_clk_MASK)
-
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_usb2_32k_sw_clk_MASK (0x200U)
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_usb2_32k_sw_clk_SHIFT (9U)
-/*! ipc_usb2_32k_sw_clk - Force ON OFF Select of ipc_usb2_32k_sw_clk
- *  0b0..Not selected
- *  0b1..Selected
- */
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_usb2_32k_sw_clk(x) (((uint32_t)(((uint32_t)(x)) << HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_usb2_32k_sw_clk_SHIFT)) & HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_usb2_32k_sw_clk_MASK)
-
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_usb2_32k_clk_MASK (0x400U)
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_usb2_32k_clk_SHIFT (10U)
-/*! ipc_usb2_32k_clk - Force ON OFF Select of ipc_usb2_32k_clk
- *  0b0..Not selected
- *  0b1..Selected
- */
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_usb2_32k_clk(x) (((uint32_t)(((uint32_t)(x)) << HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_usb2_32k_clk_SHIFT)) & HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_usb2_32k_clk_MASK)
-
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_pcie1_clk_MASK (0x800U)
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_pcie1_clk_SHIFT (11U)
-/*! ipc_pcie1_clk - Force ON OFF Select of ipc_pcie1_clk
- *  0b0..Not selected
- *  0b1..Selected
- */
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_pcie1_clk(x) (((uint32_t)(((uint32_t)(x)) << HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_pcie1_clk_SHIFT)) & HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_pcie1_clk_MASK)
-
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_pcie1_auxclk_MASK (0x1000U)
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_pcie1_auxclk_SHIFT (12U)
-/*! ipc_pcie1_auxclk - Force ON OFF Select of ipc_pcie1_auxclk
- *  0b0..Not selected
- *  0b1..Selected
- */
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_pcie1_auxclk(x) (((uint32_t)(((uint32_t)(x)) << HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_pcie1_auxclk_SHIFT)) & HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_pcie1_auxclk_MASK)
-
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_test_pcie_157M_clk_MASK (0x2000U)
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_test_pcie_157M_clk_SHIFT (13U)
-/*! ipc_test_pcie_157M_clk - Force ON OFF Select of ipc_test_pcie_157M_clk
- *  0b0..Not selected
- *  0b1..Selected
- */
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_test_pcie_157M_clk(x) (((uint32_t)(((uint32_t)(x)) << HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_test_pcie_157M_clk_SHIFT)) & HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_test_pcie_157M_clk_MASK)
-
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_test_pcie_400M_clk_MASK (0x4000U)
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_test_pcie_400M_clk_SHIFT (14U)
-/*! ipc_test_pcie_400M_clk - Force ON OFF Select of ipc_test_pcie_400M_clk
- *  0b0..Not selected
- *  0b1..Selected
- */
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_test_pcie_400M_clk(x) (((uint32_t)(((uint32_t)(x)) << HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_test_pcie_400M_clk_SHIFT)) & HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_test_pcie_400M_clk_MASK)
-
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_test_pcie_500M_clk_MASK (0x8000U)
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_test_pcie_500M_clk_SHIFT (15U)
-/*! ipc_test_pcie_500M_clk - Force ON OFF Select of ipc_test_pcie_500M_clk
- *  0b0..Not selected
- *  0b1..Selected
- */
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_test_pcie_500M_clk(x) (((uint32_t)(((uint32_t)(x)) << HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_test_pcie_500M_clk_SHIFT)) & HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_test_pcie_500M_clk_MASK)
-
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_usb2_scan_60M_clk_MASK (0x10000U)
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_usb2_scan_60M_clk_SHIFT (16U)
-/*! ipc_usb2_scan_60M_clk - Force ON OFF Select of ipc_usb2_scan_60M_clk
- *  0b0..Not selected
- *  0b1..Selected
- */
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_usb2_scan_60M_clk(x) (((uint32_t)(((uint32_t)(x)) << HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_usb2_scan_60M_clk_SHIFT)) & HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_usb2_scan_60M_clk_MASK)
-
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_usb2_scan_100M_clk_MASK (0x20000U)
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_usb2_scan_100M_clk_SHIFT (17U)
-/*! ipc_usb2_scan_100M_clk - Force ON OFF Select of ipc_usb2_scan_100M_clk
- *  0b0..Not selected
- *  0b1..Selected
- */
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_usb2_scan_100M_clk(x) (((uint32_t)(((uint32_t)(x)) << HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_usb2_scan_100M_clk_SHIFT)) & HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_usb2_scan_100M_clk_MASK)
-
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_usb2_scan_480M_clk_MASK (0x40000U)
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_usb2_scan_480M_clk_SHIFT (18U)
-/*! ipc_usb2_scan_480M_clk - Force ON OFF Select of ipc_usb2_scan_480M_clk
- *  0b0..Not selected
- *  0b1..Selected
- */
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_usb2_scan_480M_clk(x) (((uint32_t)(((uint32_t)(x)) << HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_usb2_scan_480M_clk_SHIFT)) & HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_usb2_scan_480M_clk_MASK)
-
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_pcie_phyref_bist_clk_MASK (0x80000U)
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_pcie_phyref_bist_clk_SHIFT (19U)
-/*! ipc_pcie_phyref_bist_clk - Force ON OFF Select of ipc_pcie_phyref_bist_clk
- *  0b0..Not selected
- *  0b1..Selected
- */
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_pcie_phyref_bist_clk(x) (((uint32_t)(((uint32_t)(x)) << HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_pcie_phyref_bist_clk_SHIFT)) & HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_pcie_phyref_bist_clk_MASK)
-
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_netcmix_clk_root_333_enet_phy_MASK (0x100000U)
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_netcmix_clk_root_333_enet_phy_SHIFT (20U)
-/*! netcmix_clk_root_333_enet_phy - Force ON OFF Select of netcmix_clk_root_333_enet_phy
- *  0b0..Not selected
- *  0b1..Selected
- */
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_netcmix_clk_root_333_enet_phy(x) (((uint32_t)(((uint32_t)(x)) << HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_netcmix_clk_root_333_enet_phy_SHIFT)) & HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_netcmix_clk_root_333_enet_phy_MASK)
-
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_test_netc_eth_200M_DIV2_MASK (0x200000U)
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_test_netc_eth_200M_DIV2_SHIFT (21U)
-/*! ipc_test_netc_eth_200M_DIV2 - Force ON OFF Select of ipc_test_netc_eth_200M_DIV2
- *  0b0..Not selected
- *  0b1..Selected
- */
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_test_netc_eth_200M_DIV2(x) (((uint32_t)(((uint32_t)(x)) << HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_test_netc_eth_200M_DIV2_SHIFT)) & HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_test_netc_eth_200M_DIV2_MASK)
-
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_test_netc_eth_625M_DIV2_MASK (0x400000U)
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_test_netc_eth_625M_DIV2_SHIFT (22U)
-/*! ipc_test_netc_eth_625M_DIV2 - Force ON OFF Select of ipc_test_netc_eth_625M_DIV2
- *  0b0..Not selected
- *  0b1..Selected
- */
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_test_netc_eth_625M_DIV2(x) (((uint32_t)(((uint32_t)(x)) << HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_test_netc_eth_625M_DIV2_SHIFT)) & HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_SEL_ipc_test_netc_eth_625M_DIV2_MASK)
-/*! @} */
-
-/*! @name LPCG_FORCE_ON_OFF - LPCG Force ON OFF Control */
-/*! @{ */
-
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_hsiomix_root_clk_MASK (0x1U)
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_hsiomix_root_clk_SHIFT (0U)
-/*! ipc_hsiomix_root_clk - Force ON OFF of ipc_hsiomix_root_clk
- *  0b0..Disables
- *  0b1..Enables
- */
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_hsiomix_root_clk(x) (((uint32_t)(((uint32_t)(x)) << HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_hsiomix_root_clk_SHIFT)) & HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_hsiomix_root_clk_MASK)
-
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_bus_netcmix_133_enet_phy_MASK (0x2U)
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_bus_netcmix_133_enet_phy_SHIFT (1U)
-/*! bus_netcmix_133_enet_phy - Force ON OFF of bus_netcmix_133_enet_phy
- *  0b0..Disables
- *  0b1..Enables
- */
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_bus_netcmix_133_enet_phy(x) (((uint32_t)(((uint32_t)(x)) << HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_bus_netcmix_133_enet_phy_SHIFT)) & HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_bus_netcmix_133_enet_phy_MASK)
-
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_test_netc_eth_500M_DIV1_MASK (0x4U)
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_test_netc_eth_500M_DIV1_SHIFT (2U)
-/*! ipc_test_netc_eth_500M_DIV1 - Force ON OFF of ipc_test_netc_eth_500M_DIV1
- *  0b0..Disables
- *  0b1..Enables
- */
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_test_netc_eth_500M_DIV1(x) (((uint32_t)(((uint32_t)(x)) << HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_test_netc_eth_500M_DIV1_SHIFT)) & HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_test_netc_eth_500M_DIV1_MASK)
-
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_mgr_clk_MASK (0x8U)
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_mgr_clk_SHIFT (3U)
-/*! ipc_mgr_clk - Force ON OFF of ipc_mgr_clk
- *  0b0..Disables
- *  0b1..Enables
- */
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_mgr_clk(x) (((uint32_t)(((uint32_t)(x)) << HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_mgr_clk_SHIFT)) & HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_mgr_clk_MASK)
-
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_hsiomix_gpr_clk_MASK (0x10U)
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_hsiomix_gpr_clk_SHIFT (4U)
-/*! ipc_hsiomix_gpr_clk - Force ON OFF of ipc_hsiomix_gpr_clk
- *  0b0..Disables
- *  0b1..Enables
- */
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_hsiomix_gpr_clk(x) (((uint32_t)(((uint32_t)(x)) << HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_hsiomix_gpr_clk_SHIFT)) & HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_hsiomix_gpr_clk_MASK)
-
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_trout_24M_root_clk_MASK (0x20U)
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_trout_24M_root_clk_SHIFT (5U)
-/*! ipc_trout_24M_root_clk - Force ON OFF of ipc_trout_24M_root_clk
- *  0b0..Disables
- *  0b1..Enables
- */
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_trout_24M_root_clk(x) (((uint32_t)(((uint32_t)(x)) << HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_trout_24M_root_clk_SHIFT)) & HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_trout_24M_root_clk_MASK)
-
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_hsiomix_24M_clk_root_MASK (0x40U)
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_hsiomix_24M_clk_root_SHIFT (6U)
-/*! ipc_hsiomix_24M_clk_root - Force ON OFF of ipc_hsiomix_24M_clk_root
- *  0b0..Disables
- *  0b1..Enables
- */
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_hsiomix_24M_clk_root(x) (((uint32_t)(((uint32_t)(x)) << HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_hsiomix_24M_clk_root_SHIFT)) & HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_hsiomix_24M_clk_root_MASK)
-
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_pll_ai_clk_MASK (0x80U)
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_pll_ai_clk_SHIFT (7U)
-/*! ipc_pll_ai_clk - Force ON OFF of ipc_pll_ai_clk
- *  0b0..Disables
- *  0b1..Enables
- */
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_pll_ai_clk(x) (((uint32_t)(((uint32_t)(x)) << HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_pll_ai_clk_SHIFT)) & HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_pll_ai_clk_MASK)
-
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_usb2_clk_MASK (0x100U)
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_usb2_clk_SHIFT (8U)
-/*! ipc_usb2_clk - Force ON OFF of ipc_usb2_clk
- *  0b0..Disables
- *  0b1..Enables
- */
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_usb2_clk(x) (((uint32_t)(((uint32_t)(x)) << HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_usb2_clk_SHIFT)) & HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_usb2_clk_MASK)
-
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_usb2_32k_sw_clk_MASK (0x200U)
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_usb2_32k_sw_clk_SHIFT (9U)
-/*! ipc_usb2_32k_sw_clk - Force ON OFF of ipc_usb2_32k_sw_clk
- *  0b0..Disables
- *  0b1..Enables
- */
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_usb2_32k_sw_clk(x) (((uint32_t)(((uint32_t)(x)) << HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_usb2_32k_sw_clk_SHIFT)) & HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_usb2_32k_sw_clk_MASK)
-
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_usb2_32k_clk_MASK (0x400U)
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_usb2_32k_clk_SHIFT (10U)
-/*! ipc_usb2_32k_clk - Force ON OFF of ipc_usb2_32k_clk
- *  0b0..Disables
- *  0b1..Enables
- */
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_usb2_32k_clk(x) (((uint32_t)(((uint32_t)(x)) << HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_usb2_32k_clk_SHIFT)) & HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_usb2_32k_clk_MASK)
-
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_pcie1_clk_MASK (0x800U)
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_pcie1_clk_SHIFT (11U)
-/*! ipc_pcie1_clk - Force ON OFF of ipc_pcie1_clk
- *  0b0..Disables
- *  0b1..Enables
- */
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_pcie1_clk(x) (((uint32_t)(((uint32_t)(x)) << HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_pcie1_clk_SHIFT)) & HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_pcie1_clk_MASK)
-
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_pcie1_auxclk_MASK (0x1000U)
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_pcie1_auxclk_SHIFT (12U)
-/*! ipc_pcie1_auxclk - Force ON OFF of ipc_pcie1_auxclk
- *  0b0..Disables
- *  0b1..Enables
- */
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_pcie1_auxclk(x) (((uint32_t)(((uint32_t)(x)) << HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_pcie1_auxclk_SHIFT)) & HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_pcie1_auxclk_MASK)
-
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_test_pcie_157M_clk_MASK (0x2000U)
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_test_pcie_157M_clk_SHIFT (13U)
-/*! ipc_test_pcie_157M_clk - Force ON OFF of ipc_test_pcie_157M_clk
- *  0b0..Disables
- *  0b1..Enables
- */
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_test_pcie_157M_clk(x) (((uint32_t)(((uint32_t)(x)) << HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_test_pcie_157M_clk_SHIFT)) & HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_test_pcie_157M_clk_MASK)
-
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_test_pcie_400M_clk_MASK (0x4000U)
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_test_pcie_400M_clk_SHIFT (14U)
-/*! ipc_test_pcie_400M_clk - Force ON OFF of ipc_test_pcie_400M_clk
- *  0b0..Disables
- *  0b1..Enables
- */
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_test_pcie_400M_clk(x) (((uint32_t)(((uint32_t)(x)) << HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_test_pcie_400M_clk_SHIFT)) & HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_test_pcie_400M_clk_MASK)
-
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_test_pcie_500M_clk_MASK (0x8000U)
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_test_pcie_500M_clk_SHIFT (15U)
-/*! ipc_test_pcie_500M_clk - Force ON OFF of ipc_test_pcie_500M_clk
- *  0b0..Disables
- *  0b1..Enables
- */
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_test_pcie_500M_clk(x) (((uint32_t)(((uint32_t)(x)) << HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_test_pcie_500M_clk_SHIFT)) & HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_test_pcie_500M_clk_MASK)
-
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_usb2_scan_60M_clk_MASK (0x10000U)
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_usb2_scan_60M_clk_SHIFT (16U)
-/*! ipc_usb2_scan_60M_clk - Force ON OFF of ipc_usb2_scan_60M_clk
- *  0b0..Disables
- *  0b1..Enables
- */
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_usb2_scan_60M_clk(x) (((uint32_t)(((uint32_t)(x)) << HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_usb2_scan_60M_clk_SHIFT)) & HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_usb2_scan_60M_clk_MASK)
-
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_usb2_scan_100M_clk_MASK (0x20000U)
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_usb2_scan_100M_clk_SHIFT (17U)
-/*! ipc_usb2_scan_100M_clk - Force ON OFF of ipc_usb2_scan_100M_clk
- *  0b0..Disables
- *  0b1..Enables
- */
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_usb2_scan_100M_clk(x) (((uint32_t)(((uint32_t)(x)) << HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_usb2_scan_100M_clk_SHIFT)) & HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_usb2_scan_100M_clk_MASK)
-
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_usb2_scan_480M_clk_MASK (0x40000U)
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_usb2_scan_480M_clk_SHIFT (18U)
-/*! ipc_usb2_scan_480M_clk - Force ON OFF of ipc_usb2_scan_480M_clk
- *  0b0..Disables
- *  0b1..Enables
- */
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_usb2_scan_480M_clk(x) (((uint32_t)(((uint32_t)(x)) << HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_usb2_scan_480M_clk_SHIFT)) & HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_usb2_scan_480M_clk_MASK)
-
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_pcie_phyref_bist_clk_MASK (0x80000U)
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_pcie_phyref_bist_clk_SHIFT (19U)
-/*! ipc_pcie_phyref_bist_clk - Force ON OFF of ipc_pcie_phyref_bist_clk
- *  0b0..Disables
- *  0b1..Enables
- */
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_pcie_phyref_bist_clk(x) (((uint32_t)(((uint32_t)(x)) << HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_pcie_phyref_bist_clk_SHIFT)) & HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_pcie_phyref_bist_clk_MASK)
-
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_netcmix_clk_root_333_enet_phy_MASK (0x100000U)
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_netcmix_clk_root_333_enet_phy_SHIFT (20U)
-/*! netcmix_clk_root_333_enet_phy - Force ON OFF of netcmix_clk_root_333_enet_phy
- *  0b0..Disables
- *  0b1..Enables
- */
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_netcmix_clk_root_333_enet_phy(x) (((uint32_t)(((uint32_t)(x)) << HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_netcmix_clk_root_333_enet_phy_SHIFT)) & HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_netcmix_clk_root_333_enet_phy_MASK)
-
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_test_netc_eth_200M_DIV2_MASK (0x200000U)
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_test_netc_eth_200M_DIV2_SHIFT (21U)
-/*! ipc_test_netc_eth_200M_DIV2 - Force ON OFF of ipc_test_netc_eth_200M_DIV2
- *  0b0..Disables
- *  0b1..Enables
- */
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_test_netc_eth_200M_DIV2(x) (((uint32_t)(((uint32_t)(x)) << HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_test_netc_eth_200M_DIV2_SHIFT)) & HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_test_netc_eth_200M_DIV2_MASK)
-
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_test_netc_eth_625M_DIV2_MASK (0x400000U)
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_test_netc_eth_625M_DIV2_SHIFT (22U)
-/*! ipc_test_netc_eth_625M_DIV2 - Force ON OFF of ipc_test_netc_eth_625M_DIV2
- *  0b0..Disables
- *  0b1..Enables
- */
-#define HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_test_netc_eth_625M_DIV2(x) (((uint32_t)(((uint32_t)(x)) << HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_test_netc_eth_625M_DIV2_SHIFT)) & HSIO_BLK_CTRL_HSIOMIX_LPCG_FORCE_ON_OFF_ipc_test_netc_eth_625M_DIV2_MASK)
 /*! @} */
 
 /*! @name USB_SLAVE_RD_HURRY - USB AXI Bus Read Hurry Signal */

@@ -17,7 +17,7 @@
 **                          MIMX9375xxVZx_cm7
 **
 **     Version:             rev. 1.0, 2026-04-09
-**     Build:               b260416
+**     Build:               b260624
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for LPSPI
@@ -602,29 +602,29 @@ typedef struct {
 /*! @name FCR - FIFO Control */
 /*! @{ */
 
-#define LPSPI_FCR_TXWATER_MASK                   (0xFU)  /* Merged from fields with different position or width, of widths (3, 4), largest definition used */
+#define LPSPI_FCR_TXWATER_MASK                   (0xFU)
 #define LPSPI_FCR_TXWATER_SHIFT                  (0U)
 /*! TXWATER - Transmit FIFO Watermark */
-#define LPSPI_FCR_TXWATER(x)                     (((uint32_t)(((uint32_t)(x)) << LPSPI_FCR_TXWATER_SHIFT)) & LPSPI_FCR_TXWATER_MASK)  /* Merged from fields with different position or width, of widths (3, 4), largest definition used */
+#define LPSPI_FCR_TXWATER(x)                     (((uint32_t)(((uint32_t)(x)) << LPSPI_FCR_TXWATER_SHIFT)) & LPSPI_FCR_TXWATER_MASK)
 
-#define LPSPI_FCR_RXWATER_MASK                   (0xF0000U)  /* Merged from fields with different position or width, of widths (3, 4), largest definition used */
+#define LPSPI_FCR_RXWATER_MASK                   (0xF0000U)
 #define LPSPI_FCR_RXWATER_SHIFT                  (16U)
 /*! RXWATER - Receive FIFO Watermark */
-#define LPSPI_FCR_RXWATER(x)                     (((uint32_t)(((uint32_t)(x)) << LPSPI_FCR_RXWATER_SHIFT)) & LPSPI_FCR_RXWATER_MASK)  /* Merged from fields with different position or width, of widths (3, 4), largest definition used */
+#define LPSPI_FCR_RXWATER(x)                     (((uint32_t)(((uint32_t)(x)) << LPSPI_FCR_RXWATER_SHIFT)) & LPSPI_FCR_RXWATER_MASK)
 /*! @} */
 
 /*! @name FSR - FIFO Status */
 /*! @{ */
 
-#define LPSPI_FSR_TXCOUNT_MASK                   (0x1FU)  /* Merged from fields with different position or width, of widths (4, 5), largest definition used */
+#define LPSPI_FSR_TXCOUNT_MASK                   (0x1FU)
 #define LPSPI_FSR_TXCOUNT_SHIFT                  (0U)
 /*! TXCOUNT - Transmit FIFO Count */
-#define LPSPI_FSR_TXCOUNT(x)                     (((uint32_t)(((uint32_t)(x)) << LPSPI_FSR_TXCOUNT_SHIFT)) & LPSPI_FSR_TXCOUNT_MASK)  /* Merged from fields with different position or width, of widths (4, 5), largest definition used */
+#define LPSPI_FSR_TXCOUNT(x)                     (((uint32_t)(((uint32_t)(x)) << LPSPI_FSR_TXCOUNT_SHIFT)) & LPSPI_FSR_TXCOUNT_MASK)
 
-#define LPSPI_FSR_RXCOUNT_MASK                   (0x1F0000U)  /* Merged from fields with different position or width, of widths (4, 5), largest definition used */
+#define LPSPI_FSR_RXCOUNT_MASK                   (0x1F0000U)
 #define LPSPI_FSR_RXCOUNT_SHIFT                  (16U)
 /*! RXCOUNT - Receive FIFO Count */
-#define LPSPI_FSR_RXCOUNT(x)                     (((uint32_t)(((uint32_t)(x)) << LPSPI_FSR_RXCOUNT_SHIFT)) & LPSPI_FSR_RXCOUNT_MASK)  /* Merged from fields with different position or width, of widths (4, 5), largest definition used */
+#define LPSPI_FSR_RXCOUNT(x)                     (((uint32_t)(((uint32_t)(x)) << LPSPI_FSR_RXCOUNT_SHIFT)) & LPSPI_FSR_RXCOUNT_MASK)
 /*! @} */
 
 /*! @name TCR - Transmit Command */

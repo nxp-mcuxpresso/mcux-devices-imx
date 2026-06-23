@@ -17,7 +17,7 @@
 **                          MIMX9375xxVZx_cm7
 **
 **     Version:             rev. 1.0, 2026-04-09
-**     Build:               b260416
+**     Build:               b260624
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for BLK_CTRL_NS_AONMIX
@@ -1244,10 +1244,7 @@ typedef struct {
 #define BLK_CTRL_NS_AONMIX_PCIE_ENET_COMBO_PHY_combophy_mode_SHIFT (0U)
 /*! combophy_mode - COMBO PHY Mode Select
  *  0b000..PCIe
- *  0b001..PCIe
- *  0b010..PCIe
  *  0b011..Ethernet
- *  0b100..Ethernet
  */
 #define BLK_CTRL_NS_AONMIX_PCIE_ENET_COMBO_PHY_combophy_mode(x) (((uint32_t)(((uint32_t)(x)) << BLK_CTRL_NS_AONMIX_PCIE_ENET_COMBO_PHY_combophy_mode_SHIFT)) & BLK_CTRL_NS_AONMIX_PCIE_ENET_COMBO_PHY_combophy_mode_MASK)
 /*! @} */

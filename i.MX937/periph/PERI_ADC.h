@@ -17,7 +17,7 @@
 **                          MIMX9375xxVZx_cm7
 **
 **     Version:             rev. 1.0, 2026-04-09
-**     Build:               b260416
+**     Build:               b260624
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for ADC
@@ -189,7 +189,7 @@ typedef struct {
   __IO uint32_t STAW1AR;                           /**< Self-Test Analog Watchdog 1A, offset: 0x384 */
   __IO uint32_t STAW1BR;                           /**< Self-Test Analog Watchdog 1B, offset: 0x388 */
   __IO uint32_t STAW2R;                            /**< Self-Test Analog Watchdog 2, offset: 0x38C */
-       uint32_t STAW3R;                            /**< Self-Test Analog Watchdog 3, offset: 0x390 */
+  __I  uint32_t STAW3R;                            /**< Self-Test Analog Watchdog 3, offset: 0x390 */
   __IO uint32_t STAW4R;                            /**< Self-Test Analog Watchdog 4, offset: 0x394 */
   __IO uint32_t STAW5R;                            /**< Self-Test Analog Watchdog 5, offset: 0x398 */
   __I  uint32_t CALSTAT;                           /**< Calibration Status, offset: 0x39C */

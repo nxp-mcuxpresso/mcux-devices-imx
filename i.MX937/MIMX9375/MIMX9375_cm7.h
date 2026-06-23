@@ -9,7 +9,7 @@
 **
 **     Reference manual:    iMX937RM Rev. 1 Draft A
 **     Version:             rev. 1.0, 2026-04-09
-**     Build:               b260416
+**     Build:               b260624
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for MIMX9375_cm7
@@ -57,7 +57,6 @@
 #include "PERI_BLK_CTRL_S_AONMIX.h"
 #include "PERI_BLK_CTRL_WAKEUPMIX.h"
 #include "PERI_CACHE_ECC_MCM.h"
-#include "PERI_CAMERA_DSI_CAMID_CSR.h"
 #include "PERI_CAMERA_PHY_CSR.h"
 #include "PERI_CAN.h"
 #include "PERI_CCM.h"
@@ -78,18 +77,16 @@
 #include "PERI_CORTEXA_BLK_CTRL.h"
 #include "PERI_CRC.h"
 #include "PERI_CSI2_CONTROLLER.h"
-#include "PERI_CSTCU.h"
 #include "PERI_DDRC.h"
 #include "PERI_DDR_BLK_CTRL_DDRMIX.h"
 #include "PERI_DISPLA0C.h"
 #include "PERI_DISPLA1C.h"
 #include "PERI_DISPLAY_BLK_CTRL_DISPLAYMIX.h"
-#include "PERI_DISPLAY_CM0_CSR.h"
 #include "PERI_DISPLAY_DSI_CSR.h"
 #include "PERI_DISPLAY_MIPI_DSI_PHY.h"
+#include "PERI_DISPLAY_OCRAM_MECC.h"
 #include "PERI_DISPLAY_PIXEL_INTERLEAVER.h"
 #include "PERI_DISPLAY_SEERIS.h"
-#include "PERI_DISPLAY_SEERIS_LD.h"
 #include "PERI_DITHER.h"
 #include "PERI_DMA.h"
 #include "PERI_DMA5.h"
@@ -103,14 +100,12 @@
 #include "PERI_DSI_V2_HOST_IPI.h"
 #include "PERI_DSI_V2_HOST_MAIN.h"
 #include "PERI_DSI_V2_HOST_PHY.h"
-#include "PERI_EIM.h"
 #include "PERI_ENETC_GLOBAL.h"
 #include "PERI_ENETC_PCI_TYPE0.h"
 #include "PERI_ENETC_PF_EMDIO.h"
 #include "PERI_ENETC_PF_TMR.h"
 #include "PERI_ENETC_SI.h"
 #include "PERI_ENETC_VF_PCI_TYPE0.h"
-#include "PERI_ERM.h"
 #include "PERI_EXTDST.h"
 #include "PERI_EXTDST0C.h"
 #include "PERI_EXTDST1C.h"
@@ -251,13 +246,11 @@
 #include "PERI_LPSPI.h"
 #include "PERI_LPTMR.h"
 #include "PERI_LPUART.h"
-#include "PERI_LSTCU.h"
 #include "PERI_LUT3D.h"
 #include "PERI_LUT3D1.h"
 #include "PERI_LUT3D2.h"
 #include "PERI_LUT3D3.h"
 #include "PERI_M7_A7_APB_MCM.h"
-#include "PERI_M7_TCU.h"
 #include "PERI_MATRIX.h"
 #include "PERI_MATRIX1.h"
 #include "PERI_MATRIX2.h"
@@ -269,7 +262,6 @@
 #include "PERI_MATRIXL2.h"
 #include "PERI_MATRIXL3.h"
 #include "PERI_MCM.h"
-#include "PERI_MECC.h"
 #include "PERI_MSGINTR.h"
 #include "PERI_MU.h"
 #include "PERI_NETC_ENETC.h"

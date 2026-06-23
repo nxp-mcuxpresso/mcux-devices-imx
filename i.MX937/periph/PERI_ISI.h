@@ -17,7 +17,7 @@
 **                          MIMX9375xxVZx_cm7
 **
 **     Version:             rev. 1.0, 2026-04-09
-**     Build:               b260416
+**     Build:               b260624
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for ISI
@@ -152,7 +152,7 @@ typedef struct {
     __IO uint32_t OUT_BUF2_ADDR_Y;                   /**< Channel 0 RGB or Luma (Y) Output Buffer 2 Address..Channel 7 RGB or Luma (Y) Output Buffer 2 Address, array offset: 0x8C, array step: 0x10000 */
     __IO uint32_t OUT_BUF2_ADDR_U;                   /**< Channel 0 Chroma (U/Cb/UV/CbCr) Output Buffer 2 Address..Channel 7 Chroma (U/Cb/UV/CbCr) Output Buffer 2 Address, array offset: 0x90, array step: 0x10000 */
     __IO uint32_t OUT_BUF2_ADDR_V;                   /**< Channel 0 Chroma (V/Cr) Output Buffer 2 Address..Channel 7 Chroma (V/Cr) Output Buffer 2 Address, array offset: 0x94, array step: 0x10000 */
-    __IO uint32_t SCL_IMG_CFG;                       /**< Channel 0 Scaled Image Configuration..Channel 7 Scaled Image Configuration, array offset: 0x98, array step: 0x10000 */
+    __I  uint32_t RESERVED_REG3;                     /**< Reserved register, array offset: 0x98, array step: 0x10000 */
     __IO uint32_t FLOW_CTRL;                         /**< Channel 0 Flow Control..Channel 7 Flow Control, array offset: 0x9C, array step: 0x10000 */
     __IO uint32_t Y_BUF1_XTND_ADDR;                  /**< Channel 0 Output Y-Buffer 1 Extended Address..Channel 7 Output Y-Buffer 1 Extended Address, array offset: 0xA0, array step: 0x10000 */
     __IO uint32_t U_BUF1_XTND_ADDR;                  /**< Channel 0 Output U-Buffer 1 Extended Address..Channel 7 Output U-Buffer 1 Extended Address, array offset: 0xA4, array step: 0x10000 */
@@ -166,9 +166,9 @@ typedef struct {
     __IO uint32_t STAT_DATA_ADDR_OFFSET;             /**< RAW32 Statistics Data Offset, array offset: 0xC4, array step: 0x10000 */
     __IO uint32_t IMG_CFG2;                          /**< Channel 0 Image Configuration 2..Channel 7 Image Configuration 2, array offset: 0xC8, array step: 0x10000 */
     __IO uint32_t IMG_CFG3;                          /**< Channel 0 Image Configuration 3..Channel 7 Image Configuration 3, array offset: 0xCC, array step: 0x10000 */
-    __IO uint32_t OUT_BUF_MAX_SIZE_Y;                /**< Channel 0 RGB or Luma (Y) Output Buffer Max Size..Channel 7 RGB or Luma (Y) Output Buffer Max Size, array offset: 0xD0, array step: 0x10000 */
-    __IO uint32_t OUT_BUF_MAX_SIZE_U;                /**< Channel 0 Chroma (U/Cb/UV/CbCr) Output Buffer Max Size..Channel 7 Chroma (U/Cb/UV/CbCr) Output Buffer Max Size, array offset: 0xD4, array step: 0x10000 */
-    __IO uint32_t OUT_BUF_MAX_SIZE_V;                /**< Channel 0 Chroma (V/Cr) Output Buffer Max Size..Channel 7 Chroma (V/Cr) Output Buffer Max Size, array offset: 0xD8, array step: 0x10000 */
+    __IO uint32_t OUT_BUF_MAX_SIZE_Y;                /**< Channel 0 RGB or Luma (Y) Output Buffer Maximum Size..Channel 7 RGB or Luma (Y) Output Buffer Maximum Size, array offset: 0xD0, array step: 0x10000 */
+    __IO uint32_t OUT_BUF_MAX_SIZE_U;                /**< Channel 0 Chroma (U/Cb/UV/CbCr) Output Buffer Maximum Size..Channel 7 Chroma (U/Cb/UV/CbCr) Output Buffer Maximum Size, array offset: 0xD4, array step: 0x10000 */
+    __IO uint32_t OUT_BUF_MAX_SIZE_V;                /**< Channel 0 Chroma (V/Cr) Output Buffer Maximum Size..Channel 7 Chroma (V/Cr) Output Buffer Maximum Size, array offset: 0xD8, array step: 0x10000 */
          uint8_t RESERVED_1[65316];
   } CHNL[ISI_CHNL_COUNT];
 } ISI_Type;
@@ -218,6 +218,17 @@ typedef struct {
 #define ISI_CTRL_SEC_LB_SRC_SHIFT                (8U)
 /*! SEC_LB_SRC - Secondary Line Buffer Source */
 #define ISI_CTRL_SEC_LB_SRC(x)                   (((uint32_t)(((uint32_t)(x)) << ISI_CTRL_SEC_LB_SRC_SHIFT)) & ISI_CTRL_SEC_LB_SRC_MASK)
+
+#define ISI_CTRL_DEST_MASK                       (0x7000U)
+#define ISI_CTRL_DEST_SHIFT                      (12U)
+/*! DEST - Output Image Destination
+ *  0b000..Output image is stored in memory only
+ *  0b010..Output image is sent to both memory and display controller 0.
+ *  0b011..Output image is sent to both memory and display controller 1.
+ *  0b110..Output image is sent to display controller 0 only.
+ *  0b111..Output image is sent to display controller 1 only.
+ */
+#define ISI_CTRL_DEST(x)                         (((uint32_t)(((uint32_t)(x)) << ISI_CTRL_DEST_SHIFT)) & ISI_CTRL_DEST_MASK)
 
 #define ISI_CTRL_VC_ID_1_MASK                    (0x10000U)
 #define ISI_CTRL_VC_ID_1_SHIFT                   (16U)
@@ -1464,22 +1475,8 @@ typedef struct {
 /* The count of ISI_OUT_BUF2_ADDR_V */
 #define ISI_OUT_BUF2_ADDR_V_COUNT                (8U)
 
-/*! @name SCL_IMG_CFG - Channel 0 Scaled Image Configuration..Channel 7 Scaled Image Configuration */
-/*! @{ */
-
-#define ISI_SCL_IMG_CFG_WIDTH_MASK               (0x1FFFU)
-#define ISI_SCL_IMG_CFG_WIDTH_SHIFT              (0U)
-/*! WIDTH - Scaled Image Width (Pixels) */
-#define ISI_SCL_IMG_CFG_WIDTH(x)                 (((uint32_t)(((uint32_t)(x)) << ISI_SCL_IMG_CFG_WIDTH_SHIFT)) & ISI_SCL_IMG_CFG_WIDTH_MASK)
-
-#define ISI_SCL_IMG_CFG_HEIGHT_MASK              (0x3FFF0000U)
-#define ISI_SCL_IMG_CFG_HEIGHT_SHIFT             (16U)
-/*! HEIGHT - Scaled Image Height (Lines) */
-#define ISI_SCL_IMG_CFG_HEIGHT(x)                (((uint32_t)(((uint32_t)(x)) << ISI_SCL_IMG_CFG_HEIGHT_SHIFT)) & ISI_SCL_IMG_CFG_HEIGHT_MASK)
-/*! @} */
-
-/* The count of ISI_SCL_IMG_CFG */
-#define ISI_SCL_IMG_CFG_COUNT                    (8U)
+/* The count of ISI_RESERVED_REG3 */
+#define ISI_RESERVED_REG3_COUNT                  (8U)
 
 /*! @name FLOW_CTRL - Channel 0 Flow Control..Channel 7 Flow Control */
 /*! @{ */
@@ -1634,36 +1631,36 @@ typedef struct {
 /* The count of ISI_IMG_CFG3 */
 #define ISI_IMG_CFG3_COUNT                       (8U)
 
-/*! @name OUT_BUF_MAX_SIZE_Y - Channel 0 RGB or Luma (Y) Output Buffer Max Size..Channel 7 RGB or Luma (Y) Output Buffer Max Size */
+/*! @name OUT_BUF_MAX_SIZE_Y - Channel 0 RGB or Luma (Y) Output Buffer Maximum Size..Channel 7 RGB or Luma (Y) Output Buffer Maximum Size */
 /*! @{ */
 
 #define ISI_OUT_BUF_MAX_SIZE_Y_MS_MASK           (0xFFFFFFFFU)
 #define ISI_OUT_BUF_MAX_SIZE_Y_MS_SHIFT          (0U)
-/*! MS - Max Size */
+/*! MS - Maximum Size */
 #define ISI_OUT_BUF_MAX_SIZE_Y_MS(x)             (((uint32_t)(((uint32_t)(x)) << ISI_OUT_BUF_MAX_SIZE_Y_MS_SHIFT)) & ISI_OUT_BUF_MAX_SIZE_Y_MS_MASK)
 /*! @} */
 
 /* The count of ISI_OUT_BUF_MAX_SIZE_Y */
 #define ISI_OUT_BUF_MAX_SIZE_Y_COUNT             (8U)
 
-/*! @name OUT_BUF_MAX_SIZE_U - Channel 0 Chroma (U/Cb/UV/CbCr) Output Buffer Max Size..Channel 7 Chroma (U/Cb/UV/CbCr) Output Buffer Max Size */
+/*! @name OUT_BUF_MAX_SIZE_U - Channel 0 Chroma (U/Cb/UV/CbCr) Output Buffer Maximum Size..Channel 7 Chroma (U/Cb/UV/CbCr) Output Buffer Maximum Size */
 /*! @{ */
 
 #define ISI_OUT_BUF_MAX_SIZE_U_MS_MASK           (0xFFFFFFFFU)
 #define ISI_OUT_BUF_MAX_SIZE_U_MS_SHIFT          (0U)
-/*! MS - Max Size */
+/*! MS - Maximum Size */
 #define ISI_OUT_BUF_MAX_SIZE_U_MS(x)             (((uint32_t)(((uint32_t)(x)) << ISI_OUT_BUF_MAX_SIZE_U_MS_SHIFT)) & ISI_OUT_BUF_MAX_SIZE_U_MS_MASK)
 /*! @} */
 
 /* The count of ISI_OUT_BUF_MAX_SIZE_U */
 #define ISI_OUT_BUF_MAX_SIZE_U_COUNT             (8U)
 
-/*! @name OUT_BUF_MAX_SIZE_V - Channel 0 Chroma (V/Cr) Output Buffer Max Size..Channel 7 Chroma (V/Cr) Output Buffer Max Size */
+/*! @name OUT_BUF_MAX_SIZE_V - Channel 0 Chroma (V/Cr) Output Buffer Maximum Size..Channel 7 Chroma (V/Cr) Output Buffer Maximum Size */
 /*! @{ */
 
 #define ISI_OUT_BUF_MAX_SIZE_V_MS_MASK           (0xFFFFFFFFU)
 #define ISI_OUT_BUF_MAX_SIZE_V_MS_SHIFT          (0U)
-/*! MS - Max Size */
+/*! MS - Maximum Size */
 #define ISI_OUT_BUF_MAX_SIZE_V_MS(x)             (((uint32_t)(((uint32_t)(x)) << ISI_OUT_BUF_MAX_SIZE_V_MS_SHIFT)) & ISI_OUT_BUF_MAX_SIZE_V_MS_MASK)
 /*! @} */
 

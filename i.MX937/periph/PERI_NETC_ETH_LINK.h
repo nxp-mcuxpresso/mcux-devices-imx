@@ -17,7 +17,7 @@
 **                          MIMX9375xxVZx_cm7
 **
 **     Version:             rev. 1.0, 2026-04-09
-**     Build:               b260416
+**     Build:               b260624
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for NETC_ETH_LINK
@@ -289,7 +289,7 @@ typedef struct {
   __IO uint32_t PM1_IF_MODE;                       /**< Port MAC 1 Interface Mode Control Register, offset: 0x700, not available in all instances (available on 5 out of 10) */
   __I  uint32_t PM1_IF_STATUS;                     /**< Port MAC 1 Interface Status Register, offset: 0x704, not available in all instances (available on 5 out of 10) */
        uint8_t RESERVED_34[248];
-  __IO uint32_t MAC_MERGE_MMCSR;                   /**< Port MAC Merge Control and Status Register, offset: 0x800, not available in all instances (available on 5 out of 10) */
+  __IO uint32_t MAC_MERGE_MMCSR;                   /**< Port MAC Merge Control and Status Register, offset: 0x800 */
        uint8_t RESERVED_35[4];
   __IO uint32_t MAC_MERGE_MMFAECR;                 /**< Port MAC Merge Frame Assembly Error Count Register, offset: 0x808, not available in all instances (available on 5 out of 10) */
   __IO uint32_t MAC_MERGE_MMFSECR;                 /**< Port MAC Merge Frame SMD Error Count Register, offset: 0x80C, not available in all instances (available on 5 out of 10) */
@@ -463,10 +463,10 @@ typedef struct {
 /*! BSY2 - MDIO busy (same as bit 31) */
 #define NETC_ETH_LINK_PM0_MDIO_CFG_BSY2(x)       (((uint32_t)(((uint32_t)(x)) << NETC_ETH_LINK_PM0_MDIO_CFG_BSY2_SHIFT)) & NETC_ETH_LINK_PM0_MDIO_CFG_BSY2_MASK)
 
-#define NETC_ETH_LINK_PM0_MDIO_CFG_MDIO_RD_ER_MASK (0x2U)
-#define NETC_ETH_LINK_PM0_MDIO_CFG_MDIO_RD_ER_SHIFT (1U)
-/*! MDIO_RD_ER - MDIO error */
-#define NETC_ETH_LINK_PM0_MDIO_CFG_MDIO_RD_ER(x) (((uint32_t)(((uint32_t)(x)) << NETC_ETH_LINK_PM0_MDIO_CFG_MDIO_RD_ER_SHIFT)) & NETC_ETH_LINK_PM0_MDIO_CFG_MDIO_RD_ER_MASK)
+#define NETC_ETH_LINK_PM0_MDIO_CFG_MDIO_ER_MASK  (0x2U)
+#define NETC_ETH_LINK_PM0_MDIO_CFG_MDIO_ER_SHIFT (1U)
+/*! MDIO_ER - MDIO error */
+#define NETC_ETH_LINK_PM0_MDIO_CFG_MDIO_ER(x)    (((uint32_t)(((uint32_t)(x)) << NETC_ETH_LINK_PM0_MDIO_CFG_MDIO_ER_SHIFT)) & NETC_ETH_LINK_PM0_MDIO_CFG_MDIO_ER_MASK)
 
 #define NETC_ETH_LINK_PM0_MDIO_CFG_MDIO_HOLD_MASK (0x1CU)
 #define NETC_ETH_LINK_PM0_MDIO_CFG_MDIO_HOLD_SHIFT (2U)
@@ -594,6 +594,11 @@ typedef struct {
 /*! MGI - Magic packet detection indication event */
 #define NETC_ETH_LINK_PM0_IEVENT_MGI(x)          (((uint32_t)(((uint32_t)(x)) << NETC_ETH_LINK_PM0_IEVENT_MGI_SHIFT)) & NETC_ETH_LINK_PM0_IEVENT_MGI_MASK)
 
+#define NETC_ETH_LINK_PM0_IEVENT_TX_TSERR_MASK   (0x10000U)
+#define NETC_ETH_LINK_PM0_IEVENT_TX_TSERR_SHIFT  (16U)
+/*! TX_TSERR - Transmit Timestamping detection Error */
+#define NETC_ETH_LINK_PM0_IEVENT_TX_TSERR(x)     (((uint32_t)(((uint32_t)(x)) << NETC_ETH_LINK_PM0_IEVENT_TX_TSERR_SHIFT)) & NETC_ETH_LINK_PM0_IEVENT_TX_TSERR_MASK)
+
 #define NETC_ETH_LINK_PM0_IEVENT_TX_CSD_MASK     (0x200000U)
 #define NETC_ETH_LINK_PM0_IEVENT_TX_CSD_SHIFT    (21U)
 /*! TX_CSD - Tx Clock Stop Detection */
@@ -666,6 +671,11 @@ typedef struct {
 #define NETC_ETH_LINK_PM0_IMASK_MGI_SHIFT        (14U)
 /*! MGI - Magic packet detection indication event mask. */
 #define NETC_ETH_LINK_PM0_IMASK_MGI(x)           (((uint32_t)(((uint32_t)(x)) << NETC_ETH_LINK_PM0_IMASK_MGI_SHIFT)) & NETC_ETH_LINK_PM0_IMASK_MGI_MASK)
+
+#define NETC_ETH_LINK_PM0_IMASK_IMASK_MASK       (0x10000U)
+#define NETC_ETH_LINK_PM0_IMASK_IMASK_SHIFT      (16U)
+/*! IMASK - Transmit timestamping error interrupt mask. */
+#define NETC_ETH_LINK_PM0_IMASK_IMASK(x)         (((uint32_t)(((uint32_t)(x)) << NETC_ETH_LINK_PM0_IMASK_IMASK_SHIFT)) & NETC_ETH_LINK_PM0_IMASK_IMASK_MASK)
 
 #define NETC_ETH_LINK_PM0_IMASK_TX_CSD_MASK      (0x200000U)
 #define NETC_ETH_LINK_PM0_IMASK_TX_CSD_SHIFT     (21U)
@@ -1295,14 +1305,15 @@ typedef struct {
 
 #define NETC_ETH_LINK_PM0_IF_MODE_REVMII_MASK    (0x8U)
 #define NETC_ETH_LINK_PM0_IF_MODE_REVMII_SHIFT   (3U)
-/*! REVMII - Reverse Mode
- *  0b0..Reverse mode disabled - port is in MAC mode
- *  0b1..Reverse mode enabled - port is in PHY mode
+/*! REVMII - Standard Reverse Mode
+ *  0b0..Standard reverse mode disabled - port is in MAC mode or static reverse mode
+ *  0b1..Standard reverse mode enabled - port is in PHY mode with target MDIO enabled. This mode is supported for full duplex operation only.
  */
 #define NETC_ETH_LINK_PM0_IF_MODE_REVMII(x)      (((uint32_t)(((uint32_t)(x)) << NETC_ETH_LINK_PM0_IF_MODE_REVMII_SHIFT)) & NETC_ETH_LINK_PM0_IF_MODE_REVMII_MASK)
 
 #define NETC_ETH_LINK_PM0_IF_MODE_M10_MASK       (0x10U)
 #define NETC_ETH_LINK_PM0_IF_MODE_M10_SHIFT      (4U)
+/*! M10 - RMII Speed Control / MII Speed Status */
 #define NETC_ETH_LINK_PM0_IF_MODE_M10(x)         (((uint32_t)(((uint32_t)(x)) << NETC_ETH_LINK_PM0_IF_MODE_M10_SHIFT)) & NETC_ETH_LINK_PM0_IF_MODE_M10_MASK)
 
 #define NETC_ETH_LINK_PM0_IF_MODE_HD_MASK        (0x40U)
@@ -1531,6 +1542,11 @@ typedef struct {
 /*! MGI - Magic packet detection indication event */
 #define NETC_ETH_LINK_PM1_IEVENT_MGI(x)          (((uint32_t)(((uint32_t)(x)) << NETC_ETH_LINK_PM1_IEVENT_MGI_SHIFT)) & NETC_ETH_LINK_PM1_IEVENT_MGI_MASK)
 
+#define NETC_ETH_LINK_PM1_IEVENT_TX_TSERR_MASK   (0x10000U)
+#define NETC_ETH_LINK_PM1_IEVENT_TX_TSERR_SHIFT  (16U)
+/*! TX_TSERR - Transmit Timestamping detection Error */
+#define NETC_ETH_LINK_PM1_IEVENT_TX_TSERR(x)     (((uint32_t)(((uint32_t)(x)) << NETC_ETH_LINK_PM1_IEVENT_TX_TSERR_SHIFT)) & NETC_ETH_LINK_PM1_IEVENT_TX_TSERR_MASK)
+
 #define NETC_ETH_LINK_PM1_IEVENT_TX_CSD_MASK     (0x200000U)
 #define NETC_ETH_LINK_PM1_IEVENT_TX_CSD_SHIFT    (21U)
 /*! TX_CSD - Tx Clock Stop Detection */
@@ -1603,6 +1619,11 @@ typedef struct {
 #define NETC_ETH_LINK_PM1_IMASK_MGI_SHIFT        (14U)
 /*! MGI - Magic packet detection indication event mask. */
 #define NETC_ETH_LINK_PM1_IMASK_MGI(x)           (((uint32_t)(((uint32_t)(x)) << NETC_ETH_LINK_PM1_IMASK_MGI_SHIFT)) & NETC_ETH_LINK_PM1_IMASK_MGI_MASK)
+
+#define NETC_ETH_LINK_PM1_IMASK_IMASK_MASK       (0x10000U)
+#define NETC_ETH_LINK_PM1_IMASK_IMASK_SHIFT      (16U)
+/*! IMASK - Transmit timestamping error interrupt mask. */
+#define NETC_ETH_LINK_PM1_IMASK_IMASK(x)         (((uint32_t)(((uint32_t)(x)) << NETC_ETH_LINK_PM1_IMASK_IMASK_SHIFT)) & NETC_ETH_LINK_PM1_IMASK_IMASK_MASK)
 
 #define NETC_ETH_LINK_PM1_IMASK_TX_CSD_MASK      (0x200000U)
 #define NETC_ETH_LINK_PM1_IMASK_TX_CSD_SHIFT     (21U)
@@ -2232,14 +2253,15 @@ typedef struct {
 
 #define NETC_ETH_LINK_PM1_IF_MODE_REVMII_MASK    (0x8U)
 #define NETC_ETH_LINK_PM1_IF_MODE_REVMII_SHIFT   (3U)
-/*! REVMII - Reverse Mode
- *  0b0..Reverse mode disabled - port is in MAC mode
- *  0b1..Reverse mode enabled - port is in PHY mode
+/*! REVMII - Standard Reverse Mode
+ *  0b0..Standard reverse mode disabled - port is in MAC mode or static reverse mode
+ *  0b1..Standard reverse mode enabled - port is in PHY mode with target MDIO enabled. This mode is supported for full duplex operation only.
  */
 #define NETC_ETH_LINK_PM1_IF_MODE_REVMII(x)      (((uint32_t)(((uint32_t)(x)) << NETC_ETH_LINK_PM1_IF_MODE_REVMII_SHIFT)) & NETC_ETH_LINK_PM1_IF_MODE_REVMII_MASK)
 
 #define NETC_ETH_LINK_PM1_IF_MODE_M10_MASK       (0x10U)
 #define NETC_ETH_LINK_PM1_IF_MODE_M10_SHIFT      (4U)
+/*! M10 - RMII Speed Control / MII Speed Status */
 #define NETC_ETH_LINK_PM1_IF_MODE_M10(x)         (((uint32_t)(((uint32_t)(x)) << NETC_ETH_LINK_PM1_IF_MODE_M10_SHIFT)) & NETC_ETH_LINK_PM1_IF_MODE_M10_MASK)
 
 #define NETC_ETH_LINK_PM1_IF_MODE_HD_MASK        (0x40U)

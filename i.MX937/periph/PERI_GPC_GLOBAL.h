@@ -17,7 +17,7 @@
 **                          MIMX9375xxVZx_cm7
 **
 **     Version:             rev. 1.0, 2026-04-09
-**     Build:               b260416
+**     Build:               b260624
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for GPC_GLOBAL
@@ -126,7 +126,7 @@ typedef struct {
        uint8_t RESERVED_5[4];
   __IO uint32_t GPC_PMIC_STBY_ACK_CTRL;            /**< PMIC standby acknowledge control, offset: 0x108 */
        uint8_t RESERVED_6[244];
-  __IO uint32_t GPC_ROSC_CTRL;                     /**< RCOSC control, offset: 0x200 */
+  __IO uint32_t GPC_ROSC_CTRL;                     /**< ROSC control, offset: 0x200 */
        uint8_t RESERVED_7[8];
   __IO uint32_t GPC_ELE_HDSK_CTRL;                 /**< ELE Handshake control, offset: 0x20C */
 } GPC_GLOBAL_Type;
@@ -204,8 +204,8 @@ typedef struct {
 #define GPC_GLOBAL_GPC_SYS_SLEEP_SYSTEM_SLEEP_EN_MASK (0x1U)
 #define GPC_GLOBAL_GPC_SYS_SLEEP_SYSTEM_SLEEP_EN_SHIFT (0U)
 /*! SYSTEM_SLEEP_EN - Run into system sleep
- *  0b0..run into system sleep
- *  0b1..do not run into system sleep
+ *  0b0..Do not run into system sleep
+ *  0b1..Run into system sleep
  */
 #define GPC_GLOBAL_GPC_SYS_SLEEP_SYSTEM_SLEEP_EN(x) (((uint32_t)(((uint32_t)(x)) << GPC_GLOBAL_GPC_SYS_SLEEP_SYSTEM_SLEEP_EN_SHIFT)) & GPC_GLOBAL_GPC_SYS_SLEEP_SYSTEM_SLEEP_EN_MASK)
 
@@ -292,12 +292,12 @@ typedef struct {
 #define GPC_GLOBAL_GPC_PMIC_STBY_ACK_CTRL_STBY_OFF_CNT_MODE(x) (((uint32_t)(((uint32_t)(x)) << GPC_GLOBAL_GPC_PMIC_STBY_ACK_CTRL_STBY_OFF_CNT_MODE_SHIFT)) & GPC_GLOBAL_GPC_PMIC_STBY_ACK_CTRL_STBY_OFF_CNT_MODE_MASK)
 /*! @} */
 
-/*! @name GPC_ROSC_CTRL - RCOSC control */
+/*! @name GPC_ROSC_CTRL - ROSC control */
 /*! @{ */
 
 #define GPC_GLOBAL_GPC_ROSC_CTRL_ROSC_OFF_EN_MASK (0x1U)
 #define GPC_GLOBAL_GPC_ROSC_CTRL_ROSC_OFF_EN_SHIFT (0U)
-/*! ROSC_OFF_EN - Shut off the 24 MHz RCOSC clock when system sleep
+/*! ROSC_OFF_EN - Shut off the 24 MHz ROSC clock when system sleep
  *  0b0..Keep 24 MHz ROSC clock running during system sleep
  *  0b1..Shut off 24 MHz ROSC clock during system sleep
  */

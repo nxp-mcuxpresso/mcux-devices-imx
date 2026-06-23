@@ -17,7 +17,7 @@
 **                          MIMX9375xxVZx_cm7
 **
 **     Version:             rev. 1.0, 2026-04-09
-**     Build:               b260416
+**     Build:               b260624
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for DMA5
@@ -119,52 +119,52 @@ typedef struct {
   __IO uint32_t MP_CSR;                            /**< Management Page Control, offset: 0x0 */
   __I  uint32_t MP_ES;                             /**< Management Page Error Status, offset: 0x4 */
   __I  uint32_t MP_INT_LOW;                        /**< Management Page Interrupt Request Status, offset: 0x8 */
-  __I  uint32_t MP_INT_HIGH;                       /**< Management Page Interrupt Request Status, offset: 0xC, available only on: WAKEUP.EDMA5_2_MP/EDMA5_2, WAKEUP.EDMA5_3_MP/EDMA5_3 (missing on CAMERA.EDMA5_4_MP/EDMA5_4) */
+  __I  uint32_t MP_INT_HIGH;                       /**< Management Page Interrupt Request Status, offset: 0xC */
   __I  uint32_t MP_HRS_LOW;                        /**< Hardware Request Status, offset: 0x10 */
-  __I  uint32_t MP_HRS_HIGH;                       /**< Hardware Request Status, offset: 0x14, available only on: WAKEUP.EDMA5_2_MP/EDMA5_2, WAKEUP.EDMA5_3_MP/EDMA5_3 (missing on CAMERA.EDMA5_4_MP/EDMA5_4) */
+  __I  uint32_t MP_HRS_HIGH;                       /**< Hardware Request Status, offset: 0x14 */
        uint8_t RESERVED_0[8];
   __IO uint32_t MP_STOPCH;                         /**< Stop Channel, offset: 0x20 */
        uint8_t RESERVED_1[12];
   __I  uint32_t MP_SSR_LOW;                        /**< Stop Status, offset: 0x30 */
-  __I  uint32_t MP_SSR_HIGH;                       /**< Stop Status, offset: 0x34, available only on: WAKEUP.EDMA5_2_MP/EDMA5_2, WAKEUP.EDMA5_3_MP/EDMA5_3 (missing on CAMERA.EDMA5_4_MP/EDMA5_4) */
+  __I  uint32_t MP_SSR_HIGH;                       /**< Stop Status, offset: 0x34 */
        uint8_t RESERVED_2[200];
-  __IO uint32_t CH_GRPRI[DMA5_MP_GRPRI_COUNT];     /**< Channel Arbitration Group, array offset: 0x100, array step: 0x4, irregular array, not all indices are valid */
-  __IO uint32_t CH_MUX[DMA5_MP_CHMUX_COUNT];       /**< Channel Multiplexor Configuration, array offset: 0x200, array step: 0x4, available only on: WAKEUP.EDMA5_2_MP/EDMA5_2, WAKEUP.EDMA5_3_MP/EDMA5_3 (missing on CAMERA.EDMA5_4_MP/EDMA5_4) */
+  __IO uint32_t CH_GRPRI[DMA5_MP_GRPRI_COUNT];     /**< Channel Arbitration Group, array offset: 0x100, array step: 0x4 */
+  __IO uint32_t CH_MUX[DMA5_MP_CHMUX_COUNT];       /**< Channel Multiplexor Configuration, array offset: 0x200, array step: 0x4 */
        uint8_t RESERVED_3[256];
-  __IO uint32_t CH_PROT[DMA5_MP_CHPROT_COUNT];     /**< Channel Protection, array offset: 0x400, array step: 0x4, irregular array, not all indices are valid */
+  __IO uint32_t CH_PROT[DMA5_MP_CHPROT_COUNT];     /**< Channel Protection, array offset: 0x400, array step: 0x4 */
        uint8_t RESERVED_4[64256];
   struct {                                         /* offset: 0x10000, array step: 0x8000 */
-    __IO uint32_t CH_CSR;                            /**< Channel Control and Status, array offset: 0x10000, array step: 0x8000, irregular array, not all indices are valid */
-    __IO uint32_t CH_ES;                             /**< Channel Error Status, array offset: 0x10004, array step: 0x8000, irregular array, not all indices are valid */
-    __IO uint32_t CH_INT;                            /**< Channel Interrupt Status, array offset: 0x10008, array step: 0x8000, irregular array, not all indices are valid */
-    __IO uint32_t CH_SBR;                            /**< Channel System Bus, array offset: 0x1000C, array step: 0x8000, irregular array, not all indices are valid */
-    __IO uint32_t CH_PRI;                            /**< Channel Priority, array offset: 0x10010, array step: 0x8000, irregular array, not all indices are valid */
+    __IO uint32_t CH_CSR;                            /**< Channel Control and Status, array offset: 0x10000, array step: 0x8000 */
+    __IO uint32_t CH_ES;                             /**< Channel Error Status, array offset: 0x10004, array step: 0x8000 */
+    __IO uint32_t CH_INT;                            /**< Channel Interrupt Status, array offset: 0x10008, array step: 0x8000 */
+    __IO uint32_t CH_SBR;                            /**< Channel System Bus, array offset: 0x1000C, array step: 0x8000 */
+    __IO uint32_t CH_PRI;                            /**< Channel Priority, array offset: 0x10010, array step: 0x8000 */
          uint8_t RESERVED_0[4];
-    __IO uint32_t CH_MATTR;                          /**< Memory Attributes, array offset: 0x10018, array step: 0x8000, irregular array, not all indices are valid */
+    __IO uint32_t CH_MATTR;                          /**< Memory Attributes, array offset: 0x10018, array step: 0x8000 */
          uint8_t RESERVED_1[4];
-    __IO uint32_t SADDR;                             /**< TCD Source Address, array offset: 0x10020, array step: 0x8000, irregular array, not all indices are valid */
-    __IO uint32_t SADDR_HIGH;                        /**< TCD Source Address, array offset: 0x10024, array step: 0x8000, irregular array, not all indices are valid */
-    __IO uint16_t SOFF;                              /**< TCD Signed Source Address Offset, array offset: 0x10028, array step: 0x8000, irregular array, not all indices are valid */
-    __IO uint16_t ATTR;                              /**< TCD Transfer Attributes, array offset: 0x1002A, array step: 0x8000, irregular array, not all indices are valid */
+    __IO uint32_t SADDR;                             /**< TCD Source Address, array offset: 0x10020, array step: 0x8000 */
+    __IO uint32_t SADDR_HIGH;                        /**< TCD Source Address, array offset: 0x10024, array step: 0x8000 */
+    __IO uint16_t SOFF;                              /**< TCD Signed Source Address Offset, array offset: 0x10028, array step: 0x8000 */
+    __IO uint16_t ATTR;                              /**< TCD Transfer Attributes, array offset: 0x1002A, array step: 0x8000 */
     union {                                          /* offset: 0x1002C, array step: 0x8000 */
-      __IO uint32_t NBYTES_MLOFFNO;                    /**< TCD Transfer Size Without Minor Loop Offsets, array offset: 0x1002C, array step: 0x8000, irregular array, not all indices are valid */
-      __IO uint32_t NBYTES_MLOFFYES;                   /**< TCD Transfer Size with Minor Loop Offsets, array offset: 0x1002C, array step: 0x8000, irregular array, not all indices are valid */
+      __IO uint32_t NBYTES_MLOFFNO;                    /**< TCD Transfer Size Without Minor Loop Offsets, array offset: 0x1002C, array step: 0x8000 */
+      __IO uint32_t NBYTES_MLOFFYES;                   /**< TCD Transfer Size with Minor Loop Offsets, array offset: 0x1002C, array step: 0x8000 */
     };
-    __IO uint32_t SLAST_SDA;                         /**< TCD Last Source Address Adjustment and Store DADDR Address, array offset: 0x10030, array step: 0x8000, irregular array, not all indices are valid */
-    __IO uint32_t SLAST_SDA_HIGH;                    /**< TCD Last Source Address Adjustment and Store DADDR Address, array offset: 0x10034, array step: 0x8000, irregular array, not all indices are valid */
-    __IO uint32_t DADDR;                             /**< TCD Destination Address, array offset: 0x10038, array step: 0x8000, irregular array, not all indices are valid */
-    __IO uint32_t DADDR_HIGH;                        /**< TCD Destination Address, array offset: 0x1003C, array step: 0x8000, irregular array, not all indices are valid */
-    __IO uint32_t DLAST_SGA;                         /**< TCD Last Destination Address Adjustment and Scatter/Gather Address, array offset: 0x10040, array step: 0x8000, irregular array, not all indices are valid */
-    __IO uint32_t DLAST_SGA_HIGH;                    /**< TCD Last Destination Address Adjustment and Scatter/Gather Address, array offset: 0x10044, array step: 0x8000, irregular array, not all indices are valid */
-    __IO uint16_t DOFF;                              /**< TCD Signed Destination Address Offset, array offset: 0x10048, array step: 0x8000, irregular array, not all indices are valid */
+    __IO uint32_t SLAST_SDA;                         /**< TCD Last Source Address Adjustment and Store DADDR Address, array offset: 0x10030, array step: 0x8000 */
+    __IO uint32_t SLAST_SDA_HIGH;                    /**< TCD Last Source Address Adjustment and Store DADDR Address, array offset: 0x10034, array step: 0x8000 */
+    __IO uint32_t DADDR;                             /**< TCD Destination Address, array offset: 0x10038, array step: 0x8000 */
+    __IO uint32_t DADDR_HIGH;                        /**< TCD Destination Address, array offset: 0x1003C, array step: 0x8000 */
+    __IO uint32_t DLAST_SGA;                         /**< TCD Last Destination Address Adjustment and Scatter/Gather Address, array offset: 0x10040, array step: 0x8000 */
+    __IO uint32_t DLAST_SGA_HIGH;                    /**< TCD Last Destination Address Adjustment and Scatter/Gather Address, array offset: 0x10044, array step: 0x8000 */
+    __IO uint16_t DOFF;                              /**< TCD Signed Destination Address Offset, array offset: 0x10048, array step: 0x8000 */
     union {                                          /* offset: 0x1004A, array step: 0x8000 */
-      __IO uint16_t CITER_ELINKNO;                     /**< TCD Current Major Loop Count (Minor Loop Channel Linking Disabled), array offset: 0x1004A, array step: 0x8000, irregular array, not all indices are valid */
-      __IO uint16_t CITER_ELINKYES;                    /**< TCD Current Major Loop Count (Minor Loop Channel Linking Enabled), array offset: 0x1004A, array step: 0x8000, irregular array, not all indices are valid */
+      __IO uint16_t CITER_ELINKNO;                     /**< TCD Current Major Loop Count (Minor Loop Channel Linking Disabled), array offset: 0x1004A, array step: 0x8000 */
+      __IO uint16_t CITER_ELINKYES;                    /**< TCD Current Major Loop Count (Minor Loop Channel Linking Enabled), array offset: 0x1004A, array step: 0x8000 */
     };
-    __IO uint16_t CSR;                               /**< TCD Control and Status, array offset: 0x1004C, array step: 0x8000, irregular array, not all indices are valid */
+    __IO uint16_t CSR;                               /**< TCD Control and Status, array offset: 0x1004C, array step: 0x8000 */
     union {                                          /* offset: 0x1004E, array step: 0x8000 */
-      __IO uint16_t BITER_ELINKNO;                     /**< TCD Beginning Major Loop Count (Minor Loop Channel Linking Disabled), array offset: 0x1004E, array step: 0x8000, irregular array, not all indices are valid */
-      __IO uint16_t BITER_ELINKYES;                    /**< TCD Beginning Major Loop Count (Minor Loop Channel Linking Enabled), array offset: 0x1004E, array step: 0x8000, irregular array, not all indices are valid */
+      __IO uint16_t BITER_ELINKNO;                     /**< TCD Beginning Major Loop Count (Minor Loop Channel Linking Disabled), array offset: 0x1004E, array step: 0x8000 */
+      __IO uint16_t BITER_ELINKYES;                    /**< TCD Beginning Major Loop Count (Minor Loop Channel Linking Enabled), array offset: 0x1004E, array step: 0x8000 */
     };
          uint8_t RESERVED_2[32688];
   } TCD[DMA5_TCD_COUNT];
@@ -243,10 +243,10 @@ typedef struct {
 /*! VER - eDMA Version */
 #define DMA5_MP_CSR_VER(x)                       (((uint32_t)(((uint32_t)(x)) << DMA5_MP_CSR_VER_SHIFT)) & DMA5_MP_CSR_VER_MASK)
 
-#define DMA5_MP_CSR_ACTIVE_ID_MASK               (0x3F000000U)  /* Merged from fields with different position or width, of widths (5, 6), largest definition used */
+#define DMA5_MP_CSR_ACTIVE_ID_MASK               (0x3F000000U)
 #define DMA5_MP_CSR_ACTIVE_ID_SHIFT              (24U)
 /*! ACTIVE_ID - Active Channel ID */
-#define DMA5_MP_CSR_ACTIVE_ID(x)                 (((uint32_t)(((uint32_t)(x)) << DMA5_MP_CSR_ACTIVE_ID_SHIFT)) & DMA5_MP_CSR_ACTIVE_ID_MASK)  /* Merged from fields with different position or width, of widths (5, 6), largest definition used */
+#define DMA5_MP_CSR_ACTIVE_ID(x)                 (((uint32_t)(((uint32_t)(x)) << DMA5_MP_CSR_ACTIVE_ID_SHIFT)) & DMA5_MP_CSR_ACTIVE_ID_MASK)
 
 #define DMA5_MP_CSR_ACTIVE_MASK                  (0x80000000U)
 #define DMA5_MP_CSR_ACTIVE_SHIFT                 (31U)
@@ -340,10 +340,10 @@ typedef struct {
  */
 #define DMA5_MP_ES_UCE(x)                        (((uint32_t)(((uint32_t)(x)) << DMA5_MP_ES_UCE_SHIFT)) & DMA5_MP_ES_UCE_MASK)
 
-#define DMA5_MP_ES_ERRCHN_MASK                   (0x3F000000U)  /* Merged from fields with different position or width, of widths (5, 6), largest definition used */
+#define DMA5_MP_ES_ERRCHN_MASK                   (0x3F000000U)
 #define DMA5_MP_ES_ERRCHN_SHIFT                  (24U)
 /*! ERRCHN - Error Channel Number or Canceled Channel Number */
-#define DMA5_MP_ES_ERRCHN(x)                     (((uint32_t)(((uint32_t)(x)) << DMA5_MP_ES_ERRCHN_SHIFT)) & DMA5_MP_ES_ERRCHN_MASK)  /* Merged from fields with different position or width, of widths (5, 6), largest definition used */
+#define DMA5_MP_ES_ERRCHN(x)                     (((uint32_t)(((uint32_t)(x)) << DMA5_MP_ES_ERRCHN_SHIFT)) & DMA5_MP_ES_ERRCHN_MASK)
 
 #define DMA5_MP_ES_VLD_MASK                      (0x80000000U)
 #define DMA5_MP_ES_VLD_SHIFT                     (31U)
@@ -393,10 +393,10 @@ typedef struct {
 /*! @name MP_STOPCH - Stop Channel */
 /*! @{ */
 
-#define DMA5_MP_STOPCH_STOPCH_MASK               (0x3FU)  /* Merged from fields with different position or width, of widths (5, 6), largest definition used */
+#define DMA5_MP_STOPCH_STOPCH_MASK               (0x3FU)
 #define DMA5_MP_STOPCH_STOPCH_SHIFT              (0U)
 /*! STOPCH - Stop Channel */
-#define DMA5_MP_STOPCH_STOPCH(x)                 (((uint32_t)(((uint32_t)(x)) << DMA5_MP_STOPCH_STOPCH_SHIFT)) & DMA5_MP_STOPCH_STOPCH_MASK)  /* Merged from fields with different position or width, of widths (5, 6), largest definition used */
+#define DMA5_MP_STOPCH_STOPCH(x)                 (((uint32_t)(((uint32_t)(x)) << DMA5_MP_STOPCH_STOPCH_SHIFT)) & DMA5_MP_STOPCH_STOPCH_MASK)
 
 #define DMA5_MP_STOPCH_ERR_MASK                  (0x80U)
 #define DMA5_MP_STOPCH_ERR_SHIFT                 (7U)
@@ -452,10 +452,10 @@ typedef struct {
 /*! @name CH_PROT - Channel Protection */
 /*! @{ */
 
-#define DMA5_CH_PROT_MID_MASK                    (0x1FU)  /* Merged from fields with different position or width, of widths (4, 5), largest definition used */
+#define DMA5_CH_PROT_MID_MASK                    (0xFU)
 #define DMA5_CH_PROT_MID_SHIFT                   (0U)
 /*! MID - Initiator ID */
-#define DMA5_CH_PROT_MID(x)                      (((uint32_t)(((uint32_t)(x)) << DMA5_CH_PROT_MID_SHIFT)) & DMA5_CH_PROT_MID_MASK)  /* Merged from fields with different position or width, of widths (4, 5), largest definition used */
+#define DMA5_CH_PROT_MID(x)                      (((uint32_t)(((uint32_t)(x)) << DMA5_CH_PROT_MID_SHIFT)) & DMA5_CH_PROT_MID_MASK)
 
 #define DMA5_CH_PROT_INSTR_MASK                  (0x2000U)
 #define DMA5_CH_PROT_INSTR_SHIFT                 (13U)
@@ -697,10 +697,10 @@ typedef struct {
 /*! @name CH_SBR - Channel System Bus */
 /*! @{ */
 
-#define DMA5_CH_SBR_MID_MASK                     (0x1FU)  /* Merged from fields with different position or width, of widths (4, 5), largest definition used */
+#define DMA5_CH_SBR_MID_MASK                     (0xFU)
 #define DMA5_CH_SBR_MID_SHIFT                    (0U)
 /*! MID - Initiator ID */
-#define DMA5_CH_SBR_MID(x)                       (((uint32_t)(((uint32_t)(x)) << DMA5_CH_SBR_MID_SHIFT)) & DMA5_CH_SBR_MID_MASK)  /* Merged from fields with different position or width, of widths (4, 5), largest definition used */
+#define DMA5_CH_SBR_MID(x)                       (((uint32_t)(((uint32_t)(x)) << DMA5_CH_SBR_MID_SHIFT)) & DMA5_CH_SBR_MID_MASK)
 
 #define DMA5_CH_SBR_INSTR_MASK                   (0x2000U)
 #define DMA5_CH_SBR_INSTR_SHIFT                  (13U)
@@ -726,10 +726,10 @@ typedef struct {
  */
 #define DMA5_CH_SBR_EMI(x)                       (((uint32_t)(((uint32_t)(x)) << DMA5_CH_SBR_EMI_SHIFT)) & DMA5_CH_SBR_EMI_MASK)
 
-#define DMA5_CH_SBR_ATTR_MASK                    (0x7E0000U)  /* Merged from fields with different position or width, of widths (5, 6), largest definition used */
+#define DMA5_CH_SBR_ATTR_MASK                    (0x7E0000U)
 #define DMA5_CH_SBR_ATTR_SHIFT                   (17U)
 /*! ATTR - Attribute Output */
-#define DMA5_CH_SBR_ATTR(x)                      (((uint32_t)(((uint32_t)(x)) << DMA5_CH_SBR_ATTR_SHIFT)) & DMA5_CH_SBR_ATTR_MASK)  /* Merged from fields with different position or width, of widths (5, 6), largest definition used */
+#define DMA5_CH_SBR_ATTR(x)                      (((uint32_t)(((uint32_t)(x)) << DMA5_CH_SBR_ATTR_SHIFT)) & DMA5_CH_SBR_ATTR_MASK)
 /*! @} */
 
 /* The count of DMA5_CH_SBR */
@@ -838,10 +838,10 @@ typedef struct {
 /*! @name SADDR_HIGH - TCD Source Address */
 /*! @{ */
 
-#define DMA5_SADDR_HIGH_SADDR_MASK               (0xFFFFFFFFU)  /* Merged from fields with different position or width, of widths (12, 32), largest definition used */
+#define DMA5_SADDR_HIGH_SADDR_MASK               (0xFFFFFFFFU)
 #define DMA5_SADDR_HIGH_SADDR_SHIFT              (0U)
 /*! SADDR - Source Address */
-#define DMA5_SADDR_HIGH_SADDR(x)                 (((uint32_t)(((uint32_t)(x)) << DMA5_SADDR_HIGH_SADDR_SHIFT)) & DMA5_SADDR_HIGH_SADDR_MASK)  /* Merged from fields with different position or width, of widths (12, 32), largest definition used */
+#define DMA5_SADDR_HIGH_SADDR(x)                 (((uint32_t)(((uint32_t)(x)) << DMA5_SADDR_HIGH_SADDR_SHIFT)) & DMA5_SADDR_HIGH_SADDR_MASK)
 /*! @} */
 
 /* The count of DMA5_SADDR_HIGH */
@@ -983,10 +983,10 @@ typedef struct {
 /*! @name SLAST_SDA_HIGH - TCD Last Source Address Adjustment and Store DADDR Address */
 /*! @{ */
 
-#define DMA5_SLAST_SDA_HIGH_SLAST_SDA_MASK       (0xFFFFFFFFU)  /* Merged from fields with different position or width, of widths (12, 32), largest definition used */
+#define DMA5_SLAST_SDA_HIGH_SLAST_SDA_MASK       (0xFFFFFFFFU)
 #define DMA5_SLAST_SDA_HIGH_SLAST_SDA_SHIFT      (0U)
 /*! SLAST_SDA - Last Source Address Adjustment and Store DADDR Address */
-#define DMA5_SLAST_SDA_HIGH_SLAST_SDA(x)         (((uint32_t)(((uint32_t)(x)) << DMA5_SLAST_SDA_HIGH_SLAST_SDA_SHIFT)) & DMA5_SLAST_SDA_HIGH_SLAST_SDA_MASK)  /* Merged from fields with different position or width, of widths (12, 32), largest definition used */
+#define DMA5_SLAST_SDA_HIGH_SLAST_SDA(x)         (((uint32_t)(((uint32_t)(x)) << DMA5_SLAST_SDA_HIGH_SLAST_SDA_SHIFT)) & DMA5_SLAST_SDA_HIGH_SLAST_SDA_MASK)
 /*! @} */
 
 /* The count of DMA5_SLAST_SDA_HIGH */
@@ -1007,10 +1007,10 @@ typedef struct {
 /*! @name DADDR_HIGH - TCD Destination Address */
 /*! @{ */
 
-#define DMA5_DADDR_HIGH_DADDR_MASK               (0xFFFFFFFFU)  /* Merged from fields with different position or width, of widths (12, 32), largest definition used */
+#define DMA5_DADDR_HIGH_DADDR_MASK               (0xFFFFFFFFU)
 #define DMA5_DADDR_HIGH_DADDR_SHIFT              (0U)
 /*! DADDR - Destination Address */
-#define DMA5_DADDR_HIGH_DADDR(x)                 (((uint32_t)(((uint32_t)(x)) << DMA5_DADDR_HIGH_DADDR_SHIFT)) & DMA5_DADDR_HIGH_DADDR_MASK)  /* Merged from fields with different position or width, of widths (12, 32), largest definition used */
+#define DMA5_DADDR_HIGH_DADDR(x)                 (((uint32_t)(((uint32_t)(x)) << DMA5_DADDR_HIGH_DADDR_SHIFT)) & DMA5_DADDR_HIGH_DADDR_MASK)
 /*! @} */
 
 /* The count of DMA5_DADDR_HIGH */
@@ -1031,10 +1031,10 @@ typedef struct {
 /*! @name DLAST_SGA_HIGH - TCD Last Destination Address Adjustment and Scatter/Gather Address */
 /*! @{ */
 
-#define DMA5_DLAST_SGA_HIGH_DLAST_SGA_MASK       (0xFFFFFFFFU)  /* Merged from fields with different position or width, of widths (12, 32), largest definition used */
+#define DMA5_DLAST_SGA_HIGH_DLAST_SGA_MASK       (0xFFFFFFFFU)
 #define DMA5_DLAST_SGA_HIGH_DLAST_SGA_SHIFT      (0U)
 /*! DLAST_SGA - Final Destination Address Adjustment and Scatter/Gather Address */
-#define DMA5_DLAST_SGA_HIGH_DLAST_SGA(x)         (((uint32_t)(((uint32_t)(x)) << DMA5_DLAST_SGA_HIGH_DLAST_SGA_SHIFT)) & DMA5_DLAST_SGA_HIGH_DLAST_SGA_MASK)  /* Merged from fields with different position or width, of widths (12, 32), largest definition used */
+#define DMA5_DLAST_SGA_HIGH_DLAST_SGA(x)         (((uint32_t)(((uint32_t)(x)) << DMA5_DLAST_SGA_HIGH_DLAST_SGA_SHIFT)) & DMA5_DLAST_SGA_HIGH_DLAST_SGA_MASK)
 /*! @} */
 
 /* The count of DMA5_DLAST_SGA_HIGH */
@@ -1080,10 +1080,10 @@ typedef struct {
 /*! CITER - Current Major Iteration Count */
 #define DMA5_CITER_ELINKYES_CITER(x)             (((uint16_t)(((uint16_t)(x)) << DMA5_CITER_ELINKYES_CITER_SHIFT)) & DMA5_CITER_ELINKYES_CITER_MASK)
 
-#define DMA5_CITER_ELINKYES_LINKCH_MASK          (0x7E00U)  /* Merged from fields with different position or width, of widths (5, 6), largest definition used */
+#define DMA5_CITER_ELINKYES_LINKCH_MASK          (0x7E00U)
 #define DMA5_CITER_ELINKYES_LINKCH_SHIFT         (9U)
 /*! LINKCH - Minor Loop Link Channel Number */
-#define DMA5_CITER_ELINKYES_LINKCH(x)            (((uint16_t)(((uint16_t)(x)) << DMA5_CITER_ELINKYES_LINKCH_SHIFT)) & DMA5_CITER_ELINKYES_LINKCH_MASK)  /* Merged from fields with different position or width, of widths (5, 6), largest definition used */
+#define DMA5_CITER_ELINKYES_LINKCH(x)            (((uint16_t)(((uint16_t)(x)) << DMA5_CITER_ELINKYES_LINKCH_SHIFT)) & DMA5_CITER_ELINKYES_LINKCH_MASK)
 
 #define DMA5_CITER_ELINKYES_ELINK_MASK           (0x8000U)
 #define DMA5_CITER_ELINKYES_ELINK_SHIFT          (15U)
@@ -1211,10 +1211,10 @@ typedef struct {
 /*! BITER - Starting Major Iteration Count */
 #define DMA5_BITER_ELINKYES_BITER(x)             (((uint16_t)(((uint16_t)(x)) << DMA5_BITER_ELINKYES_BITER_SHIFT)) & DMA5_BITER_ELINKYES_BITER_MASK)
 
-#define DMA5_BITER_ELINKYES_LINKCH_MASK          (0x7E00U)  /* Merged from fields with different position or width, of widths (5, 6), largest definition used */
+#define DMA5_BITER_ELINKYES_LINKCH_MASK          (0x7E00U)
 #define DMA5_BITER_ELINKYES_LINKCH_SHIFT         (9U)
 /*! LINKCH - Link Channel Number */
-#define DMA5_BITER_ELINKYES_LINKCH(x)            (((uint16_t)(((uint16_t)(x)) << DMA5_BITER_ELINKYES_LINKCH_SHIFT)) & DMA5_BITER_ELINKYES_LINKCH_MASK)  /* Merged from fields with different position or width, of widths (5, 6), largest definition used */
+#define DMA5_BITER_ELINKYES_LINKCH(x)            (((uint16_t)(((uint16_t)(x)) << DMA5_BITER_ELINKYES_LINKCH_SHIFT)) & DMA5_BITER_ELINKYES_LINKCH_MASK)
 
 #define DMA5_BITER_ELINKYES_ELINK_MASK           (0x8000U)
 #define DMA5_BITER_ELINKYES_ELINK_SHIFT          (15U)

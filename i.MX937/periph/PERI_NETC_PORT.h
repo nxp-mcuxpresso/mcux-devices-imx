@@ -17,7 +17,7 @@
 **                          MIMX9375xxVZx_cm7
 **
 **     Version:             rev. 1.0, 2026-04-09
-**     Build:               b260416
+**     Build:               b260624
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for NETC_PORT
@@ -139,11 +139,11 @@ typedef struct {
   __I  uint32_t PTGAGLLR;                          /**< Port time gate scheduling admin gate list length register, offset: 0x118 */
   __I  uint32_t PTGOGLLR;                          /**< Port time gating operational gate list length register, offset: 0x11C */
   __IO uint32_t PTGSATOR;                          /**< Port time gate scheduling advance time offset register, offset: 0x120 */
-  __I  uint32_t PTGSHAR;                           /**< Port time gate scheduling hold advance register, offset: 0x124, not available in all instances (available on 5 out of 10) */
-  __I  uint32_t PTGSRAR;                           /**< Port time gate scheduling release advance register, offset: 0x128, not available in all instances (available on 5 out of 10) */
-  __IO uint32_t PTGSHCR;                           /**< Port time gate scheduling hold configuration register, offset: 0x12C, not available in all instances (available on 5 out of 10) */
+  __I  uint32_t PTGSHAR;                           /**< Port time gate scheduling hold advance register, offset: 0x124, available only on: NETC.NETC.ENETC0_PORT/ENETC0_PORT (missing on NETC.NETC.ENETC1_PORT/ENETC1_PORT) */
+  __I  uint32_t PTGSRAR;                           /**< Port time gate scheduling release advance register, offset: 0x128, available only on: NETC.NETC.ENETC0_PORT/ENETC0_PORT (missing on NETC.NETC.ENETC1_PORT/ENETC1_PORT) */
+  __IO uint32_t PTGSHCR;                           /**< Port time gate scheduling hold configuration register, offset: 0x12C, available only on: NETC.NETC.ENETC0_PORT/ENETC0_PORT (missing on NETC.NETC.ENETC1_PORT/ENETC1_PORT) */
        uint8_t RESERVED_6[4];
-  __IO uint32_t PFPCR;                             /**< Port frame preemption configuration register, offset: 0x134, not available in all instances (available on 5 out of 10) */
+  __IO uint32_t PFPCR;                             /**< Port frame preemption configuration register, offset: 0x134, available only on: NETC.NETC.ENETC0_PORT/ENETC0_PORT (missing on NETC.NETC.ENETC1_PORT/ENETC1_PORT) */
   __IO uint32_t PDGSR;                             /**< Port default gate state register, offset: 0x138 */
        uint8_t RESERVED_7[132];
   __I  uint32_t PRXDCR;                            /**< Port Rx discard count register, offset: 0x1C0 */
@@ -524,7 +524,7 @@ typedef struct {
 /*! @name PTGSHAR - Port time gate scheduling hold advance register */
 /*! @{ */
 
-#define NETC_PORT_PTGSHAR_HOLDADVANCE_MASK       (0xFFFFU)
+#define NETC_PORT_PTGSHAR_HOLDADVANCE_MASK       (0x7FFFFU)
 #define NETC_PORT_PTGSHAR_HOLDADVANCE_SHIFT      (0U)
 #define NETC_PORT_PTGSHAR_HOLDADVANCE(x)         (((uint32_t)(((uint32_t)(x)) << NETC_PORT_PTGSHAR_HOLDADVANCE_SHIFT)) & NETC_PORT_PTGSHAR_HOLDADVANCE_MASK)
 /*! @} */

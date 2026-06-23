@@ -17,7 +17,7 @@
 **                          MIMX9375xxVZx_cm7
 **
 **     Version:             rev. 1.0, 2026-04-09
-**     Build:               b260416
+**     Build:               b260624
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for NOC_BLK_CTRL_NOCMIX
@@ -153,7 +153,7 @@ typedef struct {
   __IO uint32_t NIU_TO_CTRL_DISPLAY_BE;            /**< DISPLAYMIX (Best Effort) NIU Timeout Control, offset: 0xE8 */
   __IO uint32_t NIU_TO_CTRL_VPU;                   /**< VPUMIX NIU Timeout Control, offset: 0xEC */
   __IO uint32_t INITIATOR_TIMEOUT;                 /**< Initiator Timeout Status, offset: 0xF0 */
-  __IO uint32_t NIU_TO_CTRL_M7;                    /**< WAKEUPMIX NIU Timeout Control, offset: 0xF4 */
+  __IO uint32_t NIU_TO_CTRL_M7;                    /**< M7MIX NIU Timeout Control, offset: 0xF4 */
   __IO uint32_t AXI_LIMIT_BEAT_LIMITER_11;         /**< AXI Beat Limiter 11 Configuration, offset: 0xF8 */
   __IO uint32_t ATU_CONF;                          /**< ATU Configuration, offset: 0xFC */
   __IO uint32_t LPCG_CFG_0;                        /**< NOCMIX LPCG Configuration Control, offset: 0x100 */
@@ -1315,7 +1315,7 @@ typedef struct {
 #define NOC_BLK_CTRL_NOCMIX_INITIATOR_TIMEOUT_m_e_12_wr_timeout(x) (((uint32_t)(((uint32_t)(x)) << NOC_BLK_CTRL_NOCMIX_INITIATOR_TIMEOUT_m_e_12_wr_timeout_SHIFT)) & NOC_BLK_CTRL_NOCMIX_INITIATOR_TIMEOUT_m_e_12_wr_timeout_MASK)
 /*! @} */
 
-/*! @name NIU_TO_CTRL_M7 - WAKEUPMIX NIU Timeout Control */
+/*! @name NIU_TO_CTRL_M7 - M7MIX NIU Timeout Control */
 /*! @{ */
 
 #define NOC_BLK_CTRL_NOCMIX_NIU_TO_CTRL_M7_CLK_DIV_RATIO_MASK (0x7U)

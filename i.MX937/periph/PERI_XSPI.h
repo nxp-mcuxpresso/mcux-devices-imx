@@ -17,7 +17,7 @@
 **                          MIMX9375xxVZx_cm7
 **
 **     Version:             rev. 1.0, 2026-04-09
-**     Build:               b260416
+**     Build:               b260624
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for XSPI
@@ -978,7 +978,7 @@ typedef struct {
 #define XSPI_AWITO_AWICNTEN_MASK                 (0x80000000U)
 #define XSPI_AWITO_AWICNTEN_SHIFT                (31U)
 /*! AWICNTEN - AHB Write Idle Count Enable
- *  0b0..AHB idle counter value (8'd255)
+ *  0b0..AHB idle counter value 255
  *  0b1..AWITOVAL value
  */
 #define XSPI_AWITO_AWICNTEN(x)                   (((uint32_t)(((uint32_t)(x)) << XSPI_AWITO_AWICNTEN_SHIFT)) & XSPI_AWITO_AWICNTEN_MASK)
@@ -6861,7 +6861,7 @@ typedef struct {
 
 #define XSPI_RBCT_SUB_WMRK_MASK                  (0x7FU)
 #define XSPI_RBCT_SUB_WMRK_SHIFT                 (0U)
-/*! WMRK - RX buffer watermarkfor TGn */
+/*! WMRK - RX buffer watermark for TGn */
 #define XSPI_RBCT_SUB_WMRK(x)                    (((uint32_t)(((uint32_t)(x)) << XSPI_RBCT_SUB_WMRK_SHIFT)) & XSPI_RBCT_SUB_WMRK_MASK)
 /*! @} */
 

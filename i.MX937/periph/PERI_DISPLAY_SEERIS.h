@@ -17,7 +17,7 @@
 **                          MIMX9375xxVZx_cm7
 **
 **     Version:             rev. 1.0, 2026-04-09
-**     Build:               b260416
+**     Build:               b260624
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for DISPLAY_SEERIS
@@ -147,14 +147,6 @@ typedef struct {
  *  0b001..MDR7
  */
 #define DISPLAY_SEERIS_IPIDENT_IPEvol(x)         (((uint32_t)(((uint32_t)(x)) << DISPLAY_SEERIS_IPIDENT_IPEvol_SHIFT)) & DISPLAY_SEERIS_IPIDENT_IPEvol_MASK)
-
-#define DISPLAY_SEERIS_IPIDENT_LD_MASK           (0x8000U)
-#define DISPLAY_SEERIS_IPIDENT_LD_SHIFT          (15U)
-/*! LD - LD
- *  0b0..Local Dimming endabled
- *  0b1..Local Dimming disabled
- */
-#define DISPLAY_SEERIS_IPIDENT_LD(x)             (((uint32_t)(((uint32_t)(x)) << DISPLAY_SEERIS_IPIDENT_LD_SHIFT)) & DISPLAY_SEERIS_IPIDENT_LD_MASK)
 
 #define DISPLAY_SEERIS_IPIDENT_IPFeatuS_MASK     (0xF0000U)
 #define DISPLAY_SEERIS_IPIDENT_IPFeatuS_SHIFT    (16U)

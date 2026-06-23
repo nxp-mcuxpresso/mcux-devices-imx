@@ -17,7 +17,7 @@
 **                          MIMX9375xxVZx_cm7
 **
 **     Version:             rev. 1.0, 2026-04-09
-**     Build:               b260416
+**     Build:               b260624
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for WDOG
@@ -187,12 +187,7 @@ typedef struct {
 
 #define WDOG_CS_CLK_MASK                         (0x300U)
 #define WDOG_CS_CLK_SHIFT                        (8U)
-/*! CLK - WDOG Clock
- *  0b00..IPG
- *  0b01..LPO
- *  0b10..INT
- *  0b11..EXT
- */
+/*! CLK - WDOG Clock */
 #define WDOG_CS_CLK(x)                           (((uint32_t)(((uint32_t)(x)) << WDOG_CS_CLK_SHIFT)) & WDOG_CS_CLK_MASK)
 
 #define WDOG_CS_RCS_MASK                         (0x400U)

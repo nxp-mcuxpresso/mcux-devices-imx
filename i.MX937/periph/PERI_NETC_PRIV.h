@@ -17,7 +17,7 @@
 **                          MIMX9375xxVZx_cm7
 **
 **     Version:             rev. 1.0, 2026-04-09
-**     Build:               b260416
+**     Build:               b260624
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for NETC_PRIV
@@ -194,7 +194,7 @@ typedef struct {
  *  0b00..Disabled
  *  0b01..Single Bit ECC Error
  *  0b10..Multi Bit ECC Error
- *  0b11..EDC Error
+ *  0b11..Reserved
  */
 #define NETC_PRIV_MEICR_ARM(x)                   (((uint32_t)(((uint32_t)(x)) << NETC_PRIV_MEICR_ARM_SHIFT)) & NETC_PRIV_MEICR_ARM_MASK)
 /*! @} */

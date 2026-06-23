@@ -17,7 +17,7 @@
 **                          MIMX9375xxVZx_cm7
 **
 **     Version:             rev. 1.0, 2026-04-09
-**     Build:               b260416
+**     Build:               b260624
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for CAN
@@ -368,7 +368,7 @@ typedef struct {
 
 #define CAN_MCR_SLFWAK_MASK                      (0x400000U)
 #define CAN_MCR_SLFWAK_SHIFT                     (22U)
-/*! SLFWAK - Self Wake-up
+/*! SLFWAK - Self-Wake-Up Feature
  *  0b0..Disable
  *  0b1..Enable
  */
@@ -2803,7 +2803,7 @@ typedef struct {
 
 #define CAN_ERRSR_HANCEIOF_MASK                  (0x8U)
 #define CAN_ERRSR_HANCEIOF_SHIFT                 (3U)
-/*! HANCEIOF - Host Access With Noncorrectable Error Interrupt Overrun Flag
+/*! HANCEIOF - Host Access with Noncorrectable Error Interrupt Overrun Flag
  *  0b0..No errors detected
  *  0b1..Error detected
  */

@@ -9,7 +9,7 @@
 **
 **     Reference manual:    iMX937RM Rev. 1 Draft A
 **     Version:             rev. 1.0, 2026-04-09
-**     Build:               b260416
+**     Build:               b260624
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for MIMX9375_cm7
@@ -1320,16 +1320,6 @@ typedef enum _asrc_clock_source
 /** Array initializer of CACHE_ECC_MCM peripheral base pointers */
 #define CACHE_ECC_MCM_BASE_PTRS                  { AON__M33_CACHE_CTRL_ECC0__CM33_CACHE_ECC_MCM }
 
-/* CAMERA_DSI_CAMID_CSR - Peripheral instance base addresses */
-/** Peripheral CAMERA__DSI_CAMID_CSR base address */
-#define CAMERA__DSI_CAMID_CSR_BASE               (0x4ADE0000u)
-/** Peripheral CAMERA__DSI_CAMID_CSR base pointer */
-#define CAMERA__DSI_CAMID_CSR                    ((CAMERA_DSI_CAMID_CSR_Type *)CAMERA__DSI_CAMID_CSR_BASE)
-/** Array initializer of CAMERA_DSI_CAMID_CSR peripheral base addresses */
-#define CAMERA_DSI_CAMID_CSR_BASE_ADDRS          { CAMERA__DSI_CAMID_CSR_BASE }
-/** Array initializer of CAMERA_DSI_CAMID_CSR peripheral base pointers */
-#define CAMERA_DSI_CAMID_CSR_BASE_PTRS           { CAMERA__DSI_CAMID_CSR }
-
 /* CAMERA_PHY_CSR - Peripheral instance base addresses */
 /** Peripheral CAMERA__PHY_CSR base address */
 #define CAMERA__PHY_CSR_BASE                     (0x4AD20000u)
@@ -1376,62 +1366,14 @@ typedef enum _asrc_clock_source
 #define CCM_BASE_PTRS                            { CCM_CTRL }
 
 /* CMU - Peripheral instance base addresses */
-/** Peripheral ANALOG__CMU0 base address */
-#define ANALOG__CMU0_BASE                        (0x44670000u)
-/** Peripheral ANALOG__CMU0 base pointer */
-#define ANALOG__CMU0                             ((CMU_Type *)ANALOG__CMU0_BASE)
-/** Peripheral AON__CMUA1 base address */
-#define AON__CMUA1_BASE                          (0x44540000u)
-/** Peripheral AON__CMUA1 base pointer */
-#define AON__CMUA1                               ((CMU_Type *)AON__CMUA1_BASE)
 /** Peripheral AON__CMUA2 base address */
 #define AON__CMUA2_BASE                          (0x44650000u)
 /** Peripheral AON__CMUA2 base pointer */
 #define AON__CMUA2                               ((CMU_Type *)AON__CMUA2_BASE)
-/** Peripheral DDRC__CMU_1 base address */
-#define DDRC__CMU_1_BASE                         (0x4E060000u)
-/** Peripheral DDRC__CMU_1 base pointer */
-#define DDRC__CMU_1                              ((CMU_Type *)DDRC__CMU_1_BASE)
-/** Peripheral DDRC__CMU_2 base address */
-#define DDRC__CMU_2_BASE                         (0x4E070000u)
-/** Peripheral DDRC__CMU_2 base pointer */
-#define DDRC__CMU_2                              ((CMU_Type *)DDRC__CMU_2_BASE)
-/** Peripheral DISPLAY__CMU0 base address */
-#define DISPLAY__CMU0_BASE                       (0x4B2B0000u)
-/** Peripheral DISPLAY__CMU0 base pointer */
-#define DISPLAY__CMU0                            ((CMU_Type *)DISPLAY__CMU0_BASE)
-/** Peripheral DISPLAY__CMU1 base address */
-#define DISPLAY__CMU1_BASE                       (0x4B2C0000u)
-/** Peripheral DISPLAY__CMU1 base pointer */
-#define DISPLAY__CMU1                            ((CMU_Type *)DISPLAY__CMU1_BASE)
-/** Peripheral M7__CMU_M0 base address */
-#define M7__CMU_M0_BASE                          (0x4A080000u)
-/** Peripheral M7__CMU_M0 base pointer */
-#define M7__CMU_M0                               ((CMU_Type *)M7__CMU_M0_BASE)
-/** Peripheral M7__CMU_M1 base address */
-#define M7__CMU_M1_BASE                          (0x4A090000u)
-/** Peripheral M7__CMU_M1 base pointer */
-#define M7__CMU_M1                               ((CMU_Type *)M7__CMU_M1_BASE)
-/** Peripheral NOC__CMU_N0 base address */
-#define NOC__CMU_N0_BASE                         (0x49070000u)
-/** Peripheral NOC__CMU_N0 base pointer */
-#define NOC__CMU_N0                              ((CMU_Type *)NOC__CMU_N0_BASE)
-/** Peripheral NOC__CMU_N1 base address */
-#define NOC__CMU_N1_BASE                         (0x49080000u)
-/** Peripheral NOC__CMU_N1 base pointer */
-#define NOC__CMU_N1                              ((CMU_Type *)NOC__CMU_N1_BASE)
-/** Peripheral WAKEUP__CMU1 base address */
-#define WAKEUP__CMU1_BASE                        (0x42370000u)
-/** Peripheral WAKEUP__CMU1 base pointer */
-#define WAKEUP__CMU1                             ((CMU_Type *)WAKEUP__CMU1_BASE)
-/** Peripheral WAKEUP__CMU2 base address */
-#define WAKEUP__CMU2_BASE                        (0x423C0000u)
-/** Peripheral WAKEUP__CMU2 base pointer */
-#define WAKEUP__CMU2                             ((CMU_Type *)WAKEUP__CMU2_BASE)
 /** Array initializer of CMU peripheral base addresses */
-#define CMU_BASE_ADDRS                           { ANALOG__CMU0_BASE, AON__CMUA1_BASE, AON__CMUA2_BASE, DDRC__CMU_1_BASE, DDRC__CMU_2_BASE, DISPLAY__CMU0_BASE, DISPLAY__CMU1_BASE, M7__CMU_M0_BASE, M7__CMU_M1_BASE, NOC__CMU_N0_BASE, NOC__CMU_N1_BASE, WAKEUP__CMU1_BASE, WAKEUP__CMU2_BASE }
+#define CMU_BASE_ADDRS                           { AON__CMUA2_BASE }
 /** Array initializer of CMU peripheral base pointers */
-#define CMU_BASE_PTRS                            { ANALOG__CMU0, AON__CMUA1, AON__CMUA2, DDRC__CMU_1, DDRC__CMU_2, DISPLAY__CMU0, DISPLAY__CMU1, M7__CMU_M0, M7__CMU_M1, NOC__CMU_N0, NOC__CMU_N1, WAKEUP__CMU1, WAKEUP__CMU2 }
+#define CMU_BASE_PTRS                            { AON__CMUA2 }
 
 /* CONSTFR - Peripheral instance base addresses */
 /** Peripheral DISPLAY__SEERIS__CONSTFR base address */
@@ -1489,16 +1431,6 @@ typedef enum _asrc_clock_source
 /** Array initializer of CSI2_CONTROLLER peripheral base pointers */
 #define CSI2_CONTROLLER_BASE_PTRS                { CAMERA__CSI_COMPLEX__PRIMARY_CSI2_CONTROLLER, CAMERA__CSI_COMPLEX__SECONDARY_CSI2_CONTROLLER }
 
-/* CSTCU - Peripheral instance base addresses */
-/** Peripheral AON__CSTCU base address */
-#define AON__CSTCU_BASE                          (0x44590000u)
-/** Peripheral AON__CSTCU base pointer */
-#define AON__CSTCU                               ((CSTCU_Type *)AON__CSTCU_BASE)
-/** Array initializer of CSTCU peripheral base addresses */
-#define CSTCU_BASE_ADDRS                         { AON__CSTCU_BASE }
-/** Array initializer of CSTCU peripheral base pointers */
-#define CSTCU_BASE_PTRS                          { AON__CSTCU }
-
 /* DDRC - Peripheral instance base addresses */
 /** Peripheral DDRC base address */
 #define DDRC_BASE                                (0x4E080000u)
@@ -1529,16 +1461,6 @@ typedef enum _asrc_clock_source
 /** Array initializer of DISPLAY_BLK_CTRL_DISPLAYMIX peripheral base pointers */
 #define DISPLAY_BLK_CTRL_DISPLAYMIX_BASE_PTRS    { DISPLAY__BLK_CTRL_DISPLAYMIX }
 
-/* DISPLAY_CM0_CSR - Peripheral instance base addresses */
-/** Peripheral DISPLAY__CM0_CSR base address */
-#define DISPLAY__CM0_CSR_BASE                    (0x4B070000u)
-/** Peripheral DISPLAY__CM0_CSR base pointer */
-#define DISPLAY__CM0_CSR                         ((DISPLAY_CM0_CSR_Type *)DISPLAY__CM0_CSR_BASE)
-/** Array initializer of DISPLAY_CM0_CSR peripheral base addresses */
-#define DISPLAY_CM0_CSR_BASE_ADDRS               { DISPLAY__CM0_CSR_BASE }
-/** Array initializer of DISPLAY_CM0_CSR peripheral base pointers */
-#define DISPLAY_CM0_CSR_BASE_PTRS                { DISPLAY__CM0_CSR }
-
 /* DISPLAY_DSI_CSR - Peripheral instance base addresses */
 /** Peripheral DISPLAY__DSI_CSR base address */
 #define DISPLAY__DSI_CSR_BASE                    (0x4B0A0000u)
@@ -1559,6 +1481,16 @@ typedef enum _asrc_clock_source
 /** Array initializer of DISPLAY_MIPI_DSI_PHY peripheral base pointers */
 #define DISPLAY_MIPI_DSI_PHY_BASE_PTRS           { DISPLAY__MIPI_DSI_PHY }
 
+/* DISPLAY_OCRAM_MECC - Peripheral instance base addresses */
+/** Peripheral DISPLAY__OCRAM_MECC base address */
+#define DISPLAY__OCRAM_MECC_BASE                 (0x4B0F0000u)
+/** Peripheral DISPLAY__OCRAM_MECC base pointer */
+#define DISPLAY__OCRAM_MECC                      ((DISPLAY_OCRAM_MECC_Type *)DISPLAY__OCRAM_MECC_BASE)
+/** Array initializer of DISPLAY_OCRAM_MECC peripheral base addresses */
+#define DISPLAY_OCRAM_MECC_BASE_ADDRS            { DISPLAY__OCRAM_MECC_BASE }
+/** Array initializer of DISPLAY_OCRAM_MECC peripheral base pointers */
+#define DISPLAY_OCRAM_MECC_BASE_PTRS             { DISPLAY__OCRAM_MECC }
+
 /* DISPLAY_PIXEL_INTERLEAVER - Peripheral instance base addresses */
 /** Peripheral DISPLAY__PIXEL_INTERLEAVER base address */
 #define DISPLAY__PIXEL_INTERLEAVER_BASE          (0x4B0D0000u)
@@ -1578,16 +1510,6 @@ typedef enum _asrc_clock_source
 #define DISPLAY_SEERIS_BASE_ADDRS                { DISPLAY_SEERIS_BASE }
 /** Array initializer of DISPLAY_SEERIS peripheral base pointers */
 #define DISPLAY_SEERIS_BASE_PTRS                 { DISPLAY_SEERIS }
-
-/* DISPLAY_SEERIS_LD - Peripheral instance base addresses */
-/** Peripheral DISPLAY_SEERIS_LD base address */
-#define DISPLAY_SEERIS_LD_BASE                   (0x4B720000u)
-/** Peripheral DISPLAY_SEERIS_LD base pointer */
-#define DISPLAY_SEERIS_LD                        ((DISPLAY_SEERIS_LD_Type *)DISPLAY_SEERIS_LD_BASE)
-/** Array initializer of DISPLAY_SEERIS_LD peripheral base addresses */
-#define DISPLAY_SEERIS_LD_BASE_ADDRS             { DISPLAY_SEERIS_LD_BASE }
-/** Array initializer of DISPLAY_SEERIS_LD peripheral base pointers */
-#define DISPLAY_SEERIS_LD_BASE_PTRS              { DISPLAY_SEERIS_LD }
 
 /* DITHER - Peripheral instance base addresses */
 /** Peripheral DISPLAY__SEERIS__DITHER base address */
@@ -1625,14 +1547,10 @@ typedef enum _asrc_clock_source
 #define EDMA5_3_BASE                             (0x42A10000u)
 /** Peripheral EDMA5_3 base pointer */
 #define EDMA5_3                                  ((DMA5_Type *)EDMA5_3_BASE)
-/** Peripheral EDMA5_4 base address */
-#define EDMA5_4_BASE                             (0x4AE10000u)
-/** Peripheral EDMA5_4 base pointer */
-#define EDMA5_4                                  ((DMA5_Type *)EDMA5_4_BASE)
 /** Array initializer of DMA5 peripheral base addresses */
-#define DMA5_BASE_ADDRS                          { 0u, 0u, EDMA5_2_BASE, EDMA5_3_BASE, EDMA5_4_BASE }
+#define DMA5_BASE_ADDRS                          { 0u, 0u, EDMA5_2_BASE, EDMA5_3_BASE }
 /** Array initializer of DMA5 peripheral base pointers */
-#define DMA5_BASE_PTRS                           { (DMA5_Type *)0u, (DMA5_Type *)0u, EDMA5_2, EDMA5_3, EDMA5_4 }
+#define DMA5_BASE_PTRS                           { (DMA5_Type *)0u, (DMA5_Type *)0u, EDMA5_2, EDMA5_3 }
 
 /* DMA_CRC - Peripheral instance base addresses */
 /** Peripheral WAKEUP__DMA_CRC2 base address */
@@ -1731,36 +1649,6 @@ typedef enum _asrc_clock_source
 #define DSI_V2_HOST_PHY_BASE_ADDRS               { DISPLAY__MIPI_DSI_HOST__DSI_V2_HOST_PHY_BASE }
 /** Array initializer of DSI_V2_HOST_PHY peripheral base pointers */
 #define DSI_V2_HOST_PHY_BASE_PTRS                { DISPLAY__MIPI_DSI_HOST__DSI_V2_HOST_PHY }
-
-/* EIM - Peripheral instance base addresses */
-/** Peripheral AON__EIMA base address */
-#define AON__EIMA_BASE                           (0x44550000u)
-/** Peripheral AON__EIMA base pointer */
-#define AON__EIMA                                ((EIM_Type *)AON__EIMA_BASE)
-/** Peripheral DISPLAY__EIM base address */
-#define DISPLAY__EIM_BASE                        (0x4B2F0000u)
-/** Peripheral DISPLAY__EIM base pointer */
-#define DISPLAY__EIM                             ((EIM_Type *)DISPLAY__EIM_BASE)
-/** Peripheral M7__EIM base address */
-#define M7__EIM_BASE                             (0x4A060000u)
-/** Peripheral M7__EIM base pointer */
-#define M7__EIM                                  ((EIM_Type *)M7__EIM_BASE)
-/** Peripheral NOC__EIMN base address */
-#define NOC__EIMN_BASE                           (0x49270000u)
-/** Peripheral NOC__EIMN base pointer */
-#define NOC__EIMN                                ((EIM_Type *)NOC__EIMN_BASE)
-/** Peripheral NPU__EIM_NPUMIX base address */
-#define NPU__EIM_NPUMIX_BASE                     (0x4A860000u)
-/** Peripheral NPU__EIM_NPUMIX base pointer */
-#define NPU__EIM_NPUMIX                          ((EIM_Type *)NPU__EIM_NPUMIX_BASE)
-/** Peripheral WAKEUP__EIMW base address */
-#define WAKEUP__EIMW_BASE                        (0x423A0000u)
-/** Peripheral WAKEUP__EIMW base pointer */
-#define WAKEUP__EIMW                             ((EIM_Type *)WAKEUP__EIMW_BASE)
-/** Array initializer of EIM peripheral base addresses */
-#define EIM_BASE_ADDRS                           { AON__EIMA_BASE, DISPLAY__EIM_BASE, M7__EIM_BASE, NOC__EIMN_BASE, NPU__EIM_NPUMIX_BASE, WAKEUP__EIMW_BASE }
-/** Array initializer of EIM peripheral base pointers */
-#define EIM_BASE_PTRS                            { AON__EIMA, DISPLAY__EIM, M7__EIM, NOC__EIMN, NPU__EIM_NPUMIX, WAKEUP__EIMW }
 
 /* ENETC_GLOBAL - Peripheral instance base addresses */
 /** Peripheral EMDIO_GLOBAL base address */
@@ -1861,24 +1749,6 @@ typedef enum _asrc_clock_source
 #define ENETC_VF_PCI_TYPE0_BASE_ADDRS            { NETC_VF1_PCI_HDR_TYPE0_BASE, NETC_VF2_PCI_HDR_TYPE0_BASE }
 /** Array initializer of ENETC_VF_PCI_TYPE0 peripheral base pointers */
 #define ENETC_VF_PCI_TYPE0_BASE_PTRS             { NETC_VF1_PCI_HDR_TYPE0, NETC_VF2_PCI_HDR_TYPE0 }
-
-/* ERM - Peripheral instance base addresses */
-/** Peripheral AON__ERMA base address */
-#define AON__ERMA_BASE                           (0x44560000u)
-/** Peripheral AON__ERMA base pointer */
-#define AON__ERMA                                ((ERM_Type *)AON__ERMA_BASE)
-/** Peripheral DISPLAY__ERM base address */
-#define DISPLAY__ERM_BASE                        (0x4B2E0000u)
-/** Peripheral DISPLAY__ERM base pointer */
-#define DISPLAY__ERM                             ((ERM_Type *)DISPLAY__ERM_BASE)
-/** Peripheral M7__ERM base address */
-#define M7__ERM_BASE                             (0x4A070000u)
-/** Peripheral M7__ERM base pointer */
-#define M7__ERM                                  ((ERM_Type *)M7__ERM_BASE)
-/** Array initializer of ERM peripheral base addresses */
-#define ERM_BASE_ADDRS                           { AON__ERMA_BASE, DISPLAY__ERM_BASE, M7__ERM_BASE }
-/** Array initializer of ERM peripheral base pointers */
-#define ERM_BASE_PTRS                            { AON__ERMA, DISPLAY__ERM, M7__ERM }
 
 /* EXTDST - Peripheral instance base addresses */
 /** Peripheral DISPLAY__SEERIS__EXTDST base address */
@@ -2340,16 +2210,12 @@ typedef enum _asrc_clock_source
 #define LPSPI8_BASE                              (0x42340000u)
 /** Peripheral LPSPI8 base pointer */
 #define LPSPI8                                   ((LPSPI_Type *)LPSPI8_BASE)
-/** Peripheral LPSPI9 base address */
-#define LPSPI9_BASE                              (0x4B100000u)
-/** Peripheral LPSPI9 base pointer */
-#define LPSPI9                                   ((LPSPI_Type *)LPSPI9_BASE)
 /** Array initializer of LPSPI peripheral base addresses */
-#define LPSPI_BASE_ADDRS                         { 0u, LPSPI1_BASE, LPSPI2_BASE, LPSPI3_BASE, LPSPI4_BASE, LPSPI5_BASE, LPSPI6_BASE, LPSPI7_BASE, LPSPI8_BASE, LPSPI9_BASE }
+#define LPSPI_BASE_ADDRS                         { 0u, LPSPI1_BASE, LPSPI2_BASE, LPSPI3_BASE, LPSPI4_BASE, LPSPI5_BASE, LPSPI6_BASE, LPSPI7_BASE, LPSPI8_BASE }
 /** Array initializer of LPSPI peripheral base pointers */
-#define LPSPI_BASE_PTRS                          { (LPSPI_Type *)0u, LPSPI1, LPSPI2, LPSPI3, LPSPI4, LPSPI5, LPSPI6, LPSPI7, LPSPI8, LPSPI9 }
+#define LPSPI_BASE_PTRS                          { (LPSPI_Type *)0u, LPSPI1, LPSPI2, LPSPI3, LPSPI4, LPSPI5, LPSPI6, LPSPI7, LPSPI8 }
 /** Interrupt vectors for the LPSPI peripheral type */
-#define LPSPI_IRQS                               { NotAvail_IRQn, LPSPI1_IRQn, LPSPI2_IRQn, LPSPI3_IRQn, LPSPI4_IRQn, LPSPI5_IRQn, LPSPI6_IRQn, LPSPI7_IRQn, LPSPI8_IRQn, LPSPI9_IRQn }
+#define LPSPI_IRQS                               { NotAvail_IRQn, LPSPI1_IRQn, LPSPI2_IRQn, LPSPI3_IRQn, LPSPI4_IRQn, LPSPI5_IRQn, LPSPI6_IRQn, LPSPI7_IRQn, LPSPI8_IRQn }
 
 /* LPTMR - Peripheral instance base addresses */
 /** Peripheral LPTMR1 base address */
@@ -2407,40 +2273,6 @@ typedef enum _asrc_clock_source
 /** Interrupt vectors for the LPUART peripheral type */
 #define LPUART_RX_TX_IRQS                        { NotAvail_IRQn, LPUART1_IRQn, LPUART2_IRQn, LPUART3_IRQn, LPUART4_IRQn, LPUART5_IRQn, LPUART6_IRQn, LPUART7_IRQn, LPUART8_IRQn }
 
-/* LSTCU - Peripheral instance base addresses */
-/** Peripheral AON__LSTCUA base address */
-#define AON__LSTCUA_BASE                         (0x445A0000u)
-/** Peripheral AON__LSTCUA base pointer */
-#define AON__LSTCUA                              ((LSTCU_Type *)AON__LSTCUA_BASE)
-/** Peripheral CAMERA__LSTCU base address */
-#define CAMERA__LSTCU_BASE                       (0x4AF20000u)
-/** Peripheral CAMERA__LSTCU base pointer */
-#define CAMERA__LSTCU                            ((LSTCU_Type *)CAMERA__LSTCU_BASE)
-/** Peripheral DDRC__LSTCU base address */
-#define DDRC__LSTCU_BASE                         (0x4E050000u)
-/** Peripheral DDRC__LSTCU base pointer */
-#define DDRC__LSTCU                              ((LSTCU_Type *)DDRC__LSTCU_BASE)
-/** Peripheral DISPLAY__LSTCU base address */
-#define DISPLAY__LSTCU_BASE                      (0x4B2D0000u)
-/** Peripheral DISPLAY__LSTCU base pointer */
-#define DISPLAY__LSTCU                           ((LSTCU_Type *)DISPLAY__LSTCU_BASE)
-/** Peripheral M7__LSTCU_M7MIX base address */
-#define M7__LSTCU_M7MIX_BASE                     (0x4A050000u)
-/** Peripheral M7__LSTCU_M7MIX base pointer */
-#define M7__LSTCU_M7MIX                          ((LSTCU_Type *)M7__LSTCU_M7MIX_BASE)
-/** Peripheral NOC__LSTCUN base address */
-#define NOC__LSTCUN_BASE                         (0x490B0000u)
-/** Peripheral NOC__LSTCUN base pointer */
-#define NOC__LSTCUN                              ((LSTCU_Type *)NOC__LSTCUN_BASE)
-/** Peripheral NPU__LSTCU_NPUMIX base address */
-#define NPU__LSTCU_NPUMIX_BASE                   (0x4A850000u)
-/** Peripheral NPU__LSTCU_NPUMIX base pointer */
-#define NPU__LSTCU_NPUMIX                        ((LSTCU_Type *)NPU__LSTCU_NPUMIX_BASE)
-/** Array initializer of LSTCU peripheral base addresses */
-#define LSTCU_BASE_ADDRS                         { AON__LSTCUA_BASE, CAMERA__LSTCU_BASE, DDRC__LSTCU_BASE, DISPLAY__LSTCU_BASE, M7__LSTCU_M7MIX_BASE, NOC__LSTCUN_BASE, NPU__LSTCU_NPUMIX_BASE }
-/** Array initializer of LSTCU peripheral base pointers */
-#define LSTCU_BASE_PTRS                          { AON__LSTCUA, CAMERA__LSTCU, DDRC__LSTCU, DISPLAY__LSTCU, M7__LSTCU_M7MIX, NOC__LSTCUN, NPU__LSTCU_NPUMIX }
-
 /* M7_A7_APB_MCM - Peripheral instance base addresses */
 /** Peripheral M7__A7_APB_MCM1 base address */
 #define M7__A7_APB_MCM1_BASE                     (0x4A0A0000u)
@@ -2451,16 +2283,6 @@ typedef enum _asrc_clock_source
 /** Array initializer of M7_A7_APB_MCM peripheral base pointers */
 #define M7_A7_APB_MCM_BASE_PTRS                  { M7__A7_APB_MCM1 }
 
-/* M7_TCU - Peripheral instance base addresses */
-/** Peripheral M7__TCU base address */
-#define M7__TCU_BASE                             (0x4A000000u)
-/** Peripheral M7__TCU base pointer */
-#define M7__TCU                                  ((M7_TCU_Type *)M7__TCU_BASE)
-/** Array initializer of M7_TCU peripheral base addresses */
-#define M7_TCU_BASE_ADDRS                        { M7__TCU_BASE }
-/** Array initializer of M7_TCU peripheral base pointers */
-#define M7_TCU_BASE_PTRS                         { M7__TCU }
-
 /* MCM - Peripheral instance base addresses */
 /** Peripheral AON__MCM base address */
 #define AON__MCM_BASE                            (0xE0080000u)
@@ -2470,20 +2292,6 @@ typedef enum _asrc_clock_source
 #define MCM_BASE_ADDRS                           { AON__MCM_BASE }
 /** Array initializer of MCM peripheral base pointers */
 #define MCM_BASE_PTRS                            { AON__MCM }
-
-/* MECC - Peripheral instance base addresses */
-/** Peripheral CAMERA__OCRAM_MECC base address */
-#define CAMERA__OCRAM_MECC_BASE                  (0x4ADD0000u)
-/** Peripheral CAMERA__OCRAM_MECC base pointer */
-#define CAMERA__OCRAM_MECC                       ((MECC_Type *)CAMERA__OCRAM_MECC_BASE)
-/** Peripheral DISPLAY__OCRAM_MECC base address */
-#define DISPLAY__OCRAM_MECC_BASE                 (0x4B0F0000u)
-/** Peripheral DISPLAY__OCRAM_MECC base pointer */
-#define DISPLAY__OCRAM_MECC                      ((MECC_Type *)DISPLAY__OCRAM_MECC_BASE)
-/** Array initializer of MECC peripheral base addresses */
-#define MECC_BASE_ADDRS                          { CAMERA__OCRAM_MECC_BASE, DISPLAY__OCRAM_MECC_BASE }
-/** Array initializer of MECC peripheral base pointers */
-#define MECC_BASE_PTRS                           { CAMERA__OCRAM_MECC, DISPLAY__OCRAM_MECC }
 
 /* MSGINTR - Peripheral instance base addresses */
 /** Peripheral MSGINTR1 base address */
@@ -2566,56 +2374,12 @@ typedef enum _asrc_clock_source
 #define MU8_MUB_BASE                             (0x42360000u)
 /** Peripheral MU8_MUB base pointer */
 #define MU8_MUB                                  ((MU_Type *)MU8_MUB_BASE)
-/** Peripheral CAMERA__MUI_A1__MUA base address */
-#define CAMERA__MUI_A1__MUA_BASE                 (0x4AC60000u)
-/** Peripheral CAMERA__MUI_A1__MUA base pointer */
-#define CAMERA__MUI_A1__MUA                      ((MU_Type *)CAMERA__MUI_A1__MUA_BASE)
-/** Peripheral CAMERA__MUI_A2__MUA base address */
-#define CAMERA__MUI_A2__MUA_BASE                 (0x4AC70000u)
-/** Peripheral CAMERA__MUI_A2__MUA base pointer */
-#define CAMERA__MUI_A2__MUA                      ((MU_Type *)CAMERA__MUI_A2__MUA_BASE)
-/** Peripheral CAMERA__MUI_A3__MUA base address */
-#define CAMERA__MUI_A3__MUA_BASE                 (0x4AC80000u)
-/** Peripheral CAMERA__MUI_A3__MUA base pointer */
-#define CAMERA__MUI_A3__MUA                      ((MU_Type *)CAMERA__MUI_A3__MUA_BASE)
-/** Peripheral CAMERA__MUI_A4__MUA base address */
-#define CAMERA__MUI_A4__MUA_BASE                 (0x4AC90000u)
-/** Peripheral CAMERA__MUI_A4__MUA base pointer */
-#define CAMERA__MUI_A4__MUA                      ((MU_Type *)CAMERA__MUI_A4__MUA_BASE)
-/** Peripheral CAMERA__MUI_A5__MUA base address */
-#define CAMERA__MUI_A5__MUA_BASE                 (0x4ACA0000u)
-/** Peripheral CAMERA__MUI_A5__MUA base pointer */
-#define CAMERA__MUI_A5__MUA                      ((MU_Type *)CAMERA__MUI_A5__MUA_BASE)
-/** Peripheral CAMERA__MUI_A6__MUA base address */
-#define CAMERA__MUI_A6__MUA_BASE                 (0x4ACB0000u)
-/** Peripheral CAMERA__MUI_A6__MUA base pointer */
-#define CAMERA__MUI_A6__MUA                      ((MU_Type *)CAMERA__MUI_A6__MUA_BASE)
-/** Peripheral CAMERA__MUI_A7__MUA base address */
-#define CAMERA__MUI_A7__MUA_BASE                 (0x4ACC0000u)
-/** Peripheral CAMERA__MUI_A7__MUA base pointer */
-#define CAMERA__MUI_A7__MUA                      ((MU_Type *)CAMERA__MUI_A7__MUA_BASE)
-/** Peripheral CAMERA__MUI_A8__MUA base address */
-#define CAMERA__MUI_A8__MUA_BASE                 (0x4ACD0000u)
-/** Peripheral CAMERA__MUI_A8__MUA base pointer */
-#define CAMERA__MUI_A8__MUA                      ((MU_Type *)CAMERA__MUI_A8__MUA_BASE)
-/** Peripheral CAMERA__MUI_A9__MUA base address */
-#define CAMERA__MUI_A9__MUA_BASE                 (0x4ACE0000u)
-/** Peripheral CAMERA__MUI_A9__MUA base pointer */
-#define CAMERA__MUI_A9__MUA                      ((MU_Type *)CAMERA__MUI_A9__MUA_BASE)
-/** Peripheral DISPLAY__MUI_A1__MUA base address */
-#define DISPLAY__MUI_A1__MUA_BASE                (0x4B080000u)
-/** Peripheral DISPLAY__MUI_A1__MUA base pointer */
-#define DISPLAY__MUI_A1__MUA                     ((MU_Type *)DISPLAY__MUI_A1__MUA_BASE)
-/** Peripheral DISPLAY__MUI_A2__MUA base address */
-#define DISPLAY__MUI_A2__MUA_BASE                (0x4B090000u)
-/** Peripheral DISPLAY__MUI_A2__MUA base pointer */
-#define DISPLAY__MUI_A2__MUA                     ((MU_Type *)DISPLAY__MUI_A2__MUA_BASE)
 /** Array initializer of MU peripheral base addresses */
-#define MU_BASE_ADDRS                            { MU1_MUA_BASE, MU1_MUB_BASE, MU2_MUA_BASE, MU2_MUB_BASE, MU3_MUA_BASE, MU3_MUB_BASE, MU4_MUA_BASE, MU4_MUB_BASE, MU5_MUA_BASE, MU5_MUB_BASE, MU6_MUA_BASE, MU6_MUB_BASE, MU7_MUA_BASE, MU7_MUB_BASE, MU8_MUA_BASE, MU8_MUB_BASE, CAMERA__MUI_A1__MUA_BASE, CAMERA__MUI_A2__MUA_BASE, CAMERA__MUI_A3__MUA_BASE, CAMERA__MUI_A4__MUA_BASE, CAMERA__MUI_A5__MUA_BASE, CAMERA__MUI_A6__MUA_BASE, CAMERA__MUI_A7__MUA_BASE, CAMERA__MUI_A8__MUA_BASE, CAMERA__MUI_A9__MUA_BASE, DISPLAY__MUI_A1__MUA_BASE, DISPLAY__MUI_A2__MUA_BASE }
+#define MU_BASE_ADDRS                            { MU1_MUA_BASE, MU1_MUB_BASE, MU2_MUA_BASE, MU2_MUB_BASE, MU3_MUA_BASE, MU3_MUB_BASE, MU4_MUA_BASE, MU4_MUB_BASE, MU5_MUA_BASE, MU5_MUB_BASE, MU6_MUA_BASE, MU6_MUB_BASE, MU7_MUA_BASE, MU7_MUB_BASE, MU8_MUA_BASE, MU8_MUB_BASE }
 /** Array initializer of MU peripheral base pointers */
-#define MU_BASE_PTRS                             { MU1_MUA, MU1_MUB, MU2_MUA, MU2_MUB, MU3_MUA, MU3_MUB, MU4_MUA, MU4_MUB, MU5_MUA, MU5_MUB, MU6_MUA, MU6_MUB, MU7_MUA, MU7_MUB, MU8_MUA, MU8_MUB, CAMERA__MUI_A1__MUA, CAMERA__MUI_A2__MUA, CAMERA__MUI_A3__MUA, CAMERA__MUI_A4__MUA, CAMERA__MUI_A5__MUA, CAMERA__MUI_A6__MUA, CAMERA__MUI_A7__MUA, CAMERA__MUI_A8__MUA, CAMERA__MUI_A9__MUA, DISPLAY__MUI_A1__MUA, DISPLAY__MUI_A2__MUA }
+#define MU_BASE_PTRS                             { MU1_MUA, MU1_MUB, MU2_MUA, MU2_MUB, MU3_MUA, MU3_MUB, MU4_MUA, MU4_MUB, MU5_MUA, MU5_MUB, MU6_MUA, MU6_MUB, MU7_MUA, MU7_MUB, MU8_MUA, MU8_MUB }
 /** Interrupt vectors for the MU peripheral type */
-#define MU_IRQS                                  { MU1_A_IRQn, MU1_B_IRQn, MU2_A_IRQn, MU2_B_IRQn, MU3_A_IRQn, MU3_B_IRQn, MU4_A_IRQn, MU4_B_IRQn, MU5_A_IRQn, MU5_B_IRQn, MU6_A_IRQn, MU6_B_IRQn, MU7_A_IRQn, MU7_B_IRQn, MU8_A_IRQn, MU8_B_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn, NotAvail_IRQn }
+#define MU_IRQS                                  { MU1_A_IRQn, MU1_B_IRQn, MU2_A_IRQn, MU2_B_IRQn, MU3_A_IRQn, MU3_B_IRQn, MU4_A_IRQn, MU4_B_IRQn, MU5_A_IRQn, MU5_B_IRQn, MU6_A_IRQn, MU6_B_IRQn, MU7_A_IRQn, MU7_B_IRQn, MU8_A_IRQn, MU8_B_IRQn }
 /*!
  * @brief Core boot mode.
  */
@@ -3446,16 +3210,12 @@ typedef enum _mu_core_boot_mode
 #define WDOG5_BASE                               (0x420D0000u)
 /** Peripheral WDOG5 base pointer */
 #define WDOG5                                    ((WDOG_Type *)WDOG5_BASE)
-/** Peripheral WDOG6 base address */
-#define WDOG6_BASE                               (0x4B2A0000u)
-/** Peripheral WDOG6 base pointer */
-#define WDOG6                                    ((WDOG_Type *)WDOG6_BASE)
 /** Array initializer of WDOG peripheral base addresses */
-#define WDOG_BASE_ADDRS                          { WDOG1_BASE, WDOG2_BASE, WDOG3_BASE, WDOG4_BASE, WDOG5_BASE, WDOG6_BASE }
+#define WDOG_BASE_ADDRS                          { WDOG1_BASE, WDOG2_BASE, WDOG3_BASE, WDOG4_BASE, WDOG5_BASE }
 /** Array initializer of WDOG peripheral base pointers */
-#define WDOG_BASE_PTRS                           { WDOG1, WDOG2, WDOG3, WDOG4, WDOG5, WDOG6 }
+#define WDOG_BASE_PTRS                           { WDOG1, WDOG2, WDOG3, WDOG4, WDOG5 }
 /** Interrupt vectors for the WDOG peripheral type */
-#define WDOG_IRQS                                { WDOG1_IRQn, WDOG2_IRQn, WDOG3_IRQn, WDOG4_IRQn, WDOG5_IRQn, NotAvail_IRQn }
+#define WDOG_IRQS                                { WDOG1_IRQn, WDOG2_IRQn, WDOG3_IRQn, WDOG4_IRQn, WDOG5_IRQn }
 /* Extra definition */
 #define WDOG_UPDATE_KEY                          (0xD928C520U)
 #define WDOG_REFRESH_KEY                         (0xB480A602U)

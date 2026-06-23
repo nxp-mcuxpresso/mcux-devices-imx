@@ -17,7 +17,7 @@
 **                          MIMX9375xxVZx_cm7
 **
 **     Version:             rev. 1.0, 2026-04-09
-**     Build:               b260416
+**     Build:               b260624
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for idhash0c
@@ -167,7 +167,7 @@ typedef struct {
  *  0b000..Source is FrameGen#0 output.
  *  0b001..Source is Matrix#0 output.
  *  0b010..Source is LuT3D#0 output.
- *  0b011..Source is LocalDimming#0 output.
+ *  0b011..Reserved
  *  0b100..Source is GammaCor#0 output.
  *  0b101..Source is Dither#0 output.
  */

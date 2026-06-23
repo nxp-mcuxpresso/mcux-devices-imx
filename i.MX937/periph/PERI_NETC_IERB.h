@@ -17,7 +17,7 @@
 **                          MIMX9375xxVZx_cm7
 **
 **     Version:             rev. 1.0, 2026-04-09
-**     Build:               b260416
+**     Build:               b260624
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for NETC_IERB
@@ -378,10 +378,12 @@ typedef struct {
 
 #define NETC_IERB_HTAHPCR_BLIMIT_MASK            (0xFFFFU)
 #define NETC_IERB_HTAHPCR_BLIMIT_SHIFT           (0U)
+/*! BLIMIT - Byte limit */
 #define NETC_IERB_HTAHPCR_BLIMIT(x)              (((uint32_t)(((uint32_t)(x)) << NETC_IERB_HTAHPCR_BLIMIT_SHIFT)) & NETC_IERB_HTAHPCR_BLIMIT_MASK)
 
 #define NETC_IERB_HTAHPCR_FLIMIT_MASK            (0xFF000000U)
 #define NETC_IERB_HTAHPCR_FLIMIT_SHIFT           (24U)
+/*! FLIMIT - Frame limit */
 #define NETC_IERB_HTAHPCR_FLIMIT(x)              (((uint32_t)(((uint32_t)(x)) << NETC_IERB_HTAHPCR_FLIMIT_SHIFT)) & NETC_IERB_HTAHPCR_FLIMIT_MASK)
 /*! @} */
 
@@ -393,10 +395,12 @@ typedef struct {
 
 #define NETC_IERB_HTALPCR_BLIMIT_MASK            (0xFFFFU)
 #define NETC_IERB_HTALPCR_BLIMIT_SHIFT           (0U)
+/*! BLIMIT - Byte limit */
 #define NETC_IERB_HTALPCR_BLIMIT(x)              (((uint32_t)(((uint32_t)(x)) << NETC_IERB_HTALPCR_BLIMIT_SHIFT)) & NETC_IERB_HTALPCR_BLIMIT_MASK)
 
 #define NETC_IERB_HTALPCR_FLIMIT_MASK            (0xFF000000U)
 #define NETC_IERB_HTALPCR_FLIMIT_SHIFT           (24U)
+/*! FLIMIT - Frame limit */
 #define NETC_IERB_HTALPCR_FLIMIT(x)              (((uint32_t)(((uint32_t)(x)) << NETC_IERB_HTALPCR_FLIMIT_SHIFT)) & NETC_IERB_HTALPCR_FLIMIT_MASK)
 /*! @} */
 
@@ -408,18 +412,22 @@ typedef struct {
 
 #define NETC_IERB_HBTMAR_NUM_WORDS_MASK          (0x3FFFU)
 #define NETC_IERB_HBTMAR_NUM_WORDS_SHIFT         (0U)
+/*! NUM_WORDS - Number of words */
 #define NETC_IERB_HBTMAR_NUM_WORDS(x)            (((uint32_t)(((uint32_t)(x)) << NETC_IERB_HBTMAR_NUM_WORDS_SHIFT)) & NETC_IERB_HBTMAR_NUM_WORDS_MASK)
 
 #define NETC_IERB_HBTMAR_MIN_WORDS_MASK          (0xFF0000U)
 #define NETC_IERB_HBTMAR_MIN_WORDS_SHIFT         (16U)
+/*! MIN_WORDS - Minimum number of words */
 #define NETC_IERB_HBTMAR_MIN_WORDS(x)            (((uint32_t)(((uint32_t)(x)) << NETC_IERB_HBTMAR_MIN_WORDS_SHIFT)) & NETC_IERB_HBTMAR_MIN_WORDS_MASK)
 
 #define NETC_IERB_HBTMAR_NEPW_MASK               (0x7000000U)
 #define NETC_IERB_HBTMAR_NEPW_SHIFT              (24U)
+/*! NEPW - Number of entries per word */
 #define NETC_IERB_HBTMAR_NEPW(x)                 (((uint32_t)(((uint32_t)(x)) << NETC_IERB_HBTMAR_NEPW_SHIFT)) & NETC_IERB_HBTMAR_NEPW_MASK)
 
 #define NETC_IERB_HBTMAR_MLOC_MASK               (0xC0000000U)
 #define NETC_IERB_HBTMAR_MLOC_SHIFT              (30U)
+/*! MLOC - Memory location */
 #define NETC_IERB_HBTMAR_MLOC(x)                 (((uint32_t)(((uint32_t)(x)) << NETC_IERB_HBTMAR_MLOC_SHIFT)) & NETC_IERB_HBTMAR_MLOC_MASK)
 /*! @} */
 
@@ -451,6 +459,7 @@ typedef struct {
 
 #define NETC_IERB_NETCFLRCR_VALUE_MASK           (0x1FFU)
 #define NETC_IERB_NETCFLRCR_VALUE_SHIFT          (0U)
+/*! VALUE - Time duration value */
 #define NETC_IERB_NETCFLRCR_VALUE(x)             (((uint32_t)(((uint32_t)(x)) << NETC_IERB_NETCFLRCR_VALUE_SHIFT)) & NETC_IERB_NETCFLRCR_VALUE_MASK)
 
 #define NETC_IERB_NETCFLRCR_SCALE_MASK           (0xE00U)
@@ -464,6 +473,7 @@ typedef struct {
 
 #define NETC_IERB_NETCCLKFR_FRAC_MASK            (0xFFFFFFFFU)
 #define NETC_IERB_NETCCLKFR_FRAC_SHIFT           (0U)
+/*! FRAC - Clock period fraction */
 #define NETC_IERB_NETCCLKFR_FRAC(x)              (((uint32_t)(((uint32_t)(x)) << NETC_IERB_NETCCLKFR_FRAC_SHIFT)) & NETC_IERB_NETCCLKFR_FRAC_MASK)
 /*! @} */
 
@@ -510,6 +520,7 @@ typedef struct {
 
 #define NETC_IERB_SBOTCR_OT_LIMIT_MASK           (0xFFFFFFFFU)
 #define NETC_IERB_SBOTCR_OT_LIMIT_SHIFT          (0U)
+/*! OT_LIMIT - Outstanding transactions limit */
 #define NETC_IERB_SBOTCR_OT_LIMIT(x)             (((uint32_t)(((uint32_t)(x)) << NETC_IERB_SBOTCR_OT_LIMIT_SHIFT)) & NETC_IERB_SBOTCR_OT_LIMIT_MASK)
 /*! @} */
 
@@ -518,6 +529,7 @@ typedef struct {
 
 #define NETC_IERB_SGLTTR_LAG_TIME_MASK           (0x1FU)
 #define NETC_IERB_SGLTTR_LAG_TIME_SHIFT          (0U)
+/*! LAG_TIME - Lag time */
 #define NETC_IERB_SGLTTR_LAG_TIME(x)             (((uint32_t)(((uint32_t)(x)) << NETC_IERB_SGLTTR_LAG_TIME_SHIFT)) & NETC_IERB_SGLTTR_LAG_TIME_MASK)
 /*! @} */
 
@@ -526,14 +538,17 @@ typedef struct {
 
 #define NETC_IERB_RCMSICAR_MSI_WRCACHE_MASK      (0xFU)
 #define NETC_IERB_RCMSICAR_MSI_WRCACHE_SHIFT     (0U)
+/*! MSI_WRCACHE - NSI-X write cache */
 #define NETC_IERB_RCMSICAR_MSI_WRCACHE(x)        (((uint32_t)(((uint32_t)(x)) << NETC_IERB_RCMSICAR_MSI_WRCACHE_SHIFT)) & NETC_IERB_RCMSICAR_MSI_WRCACHE_MASK)
 
 #define NETC_IERB_RCMSICAR_MSI_WRDOMAIN_MASK     (0x30U)
 #define NETC_IERB_RCMSICAR_MSI_WRDOMAIN_SHIFT    (4U)
+/*! MSI_WRDOMAIN - MSI-X write domain */
 #define NETC_IERB_RCMSICAR_MSI_WRDOMAIN(x)       (((uint32_t)(((uint32_t)(x)) << NETC_IERB_RCMSICAR_MSI_WRDOMAIN_SHIFT)) & NETC_IERB_RCMSICAR_MSI_WRDOMAIN_MASK)
 
 #define NETC_IERB_RCMSICAR_MSI_WRSNP_MASK        (0xC0U)
 #define NETC_IERB_RCMSICAR_MSI_WRSNP_SHIFT       (6U)
+/*! MSI_WRSNP - MSI-X write snoop */
 #define NETC_IERB_RCMSICAR_MSI_WRSNP(x)          (((uint32_t)(((uint32_t)(x)) << NETC_IERB_RCMSICAR_MSI_WRSNP_SHIFT)) & NETC_IERB_RCMSICAR_MSI_WRSNP_MASK)
 /*! @} */
 
@@ -545,6 +560,7 @@ typedef struct {
 
 #define NETC_IERB_RCMSIAMQR_AWQOS_MASK           (0xF00000U)
 #define NETC_IERB_RCMSIAMQR_AWQOS_SHIFT          (20U)
+/*! AWQOS - Write QOS type */
 #define NETC_IERB_RCMSIAMQR_AWQOS(x)             (((uint32_t)(((uint32_t)(x)) << NETC_IERB_RCMSIAMQR_AWQOS_SHIFT)) & NETC_IERB_RCMSIAMQR_AWQOS_MASK)
 /*! @} */
 
@@ -556,6 +572,7 @@ typedef struct {
 
 #define NETC_IERB_EMDIOMCR_NUM_MSIX_MASK         (0x1U)
 #define NETC_IERB_EMDIOMCR_NUM_MSIX_SHIFT        (0U)
+/*! NUM_MSIX - Number of MSI-X vectors */
 #define NETC_IERB_EMDIOMCR_NUM_MSIX(x)           (((uint32_t)(((uint32_t)(x)) << NETC_IERB_EMDIOMCR_NUM_MSIX_SHIFT)) & NETC_IERB_EMDIOMCR_NUM_MSIX_MASK)
 /*! @} */
 
@@ -564,10 +581,12 @@ typedef struct {
 
 #define NETC_IERB_EMDIO_CFH_DIDVID_VENDOR_ID_MASK (0xFFFFU)
 #define NETC_IERB_EMDIO_CFH_DIDVID_VENDOR_ID_SHIFT (0U)
+/*! VENDOR_ID - Vendor ID */
 #define NETC_IERB_EMDIO_CFH_DIDVID_VENDOR_ID(x)  (((uint32_t)(((uint32_t)(x)) << NETC_IERB_EMDIO_CFH_DIDVID_VENDOR_ID_SHIFT)) & NETC_IERB_EMDIO_CFH_DIDVID_VENDOR_ID_MASK)
 
 #define NETC_IERB_EMDIO_CFH_DIDVID_DEVICE_ID_MASK (0xFFFF0000U)
 #define NETC_IERB_EMDIO_CFH_DIDVID_DEVICE_ID_SHIFT (16U)
+/*! DEVICE_ID - Device ID */
 #define NETC_IERB_EMDIO_CFH_DIDVID_DEVICE_ID(x)  (((uint32_t)(((uint32_t)(x)) << NETC_IERB_EMDIO_CFH_DIDVID_DEVICE_ID_SHIFT)) & NETC_IERB_EMDIO_CFH_DIDVID_DEVICE_ID_MASK)
 /*! @} */
 
@@ -576,10 +595,12 @@ typedef struct {
 
 #define NETC_IERB_EMDIO_CFH_SIDSVID_SUBSYSTEM_VENDOR_ID_MASK (0xFFFFU)
 #define NETC_IERB_EMDIO_CFH_SIDSVID_SUBSYSTEM_VENDOR_ID_SHIFT (0U)
+/*! SUBSYSTEM_VENDOR_ID - Subsystem vendor ID */
 #define NETC_IERB_EMDIO_CFH_SIDSVID_SUBSYSTEM_VENDOR_ID(x) (((uint32_t)(((uint32_t)(x)) << NETC_IERB_EMDIO_CFH_SIDSVID_SUBSYSTEM_VENDOR_ID_SHIFT)) & NETC_IERB_EMDIO_CFH_SIDSVID_SUBSYSTEM_VENDOR_ID_MASK)
 
 #define NETC_IERB_EMDIO_CFH_SIDSVID_SUBSYSTEM_DEVICE_ID_MASK (0xFFFF0000U)
 #define NETC_IERB_EMDIO_CFH_SIDSVID_SUBSYSTEM_DEVICE_ID_SHIFT (16U)
+/*! SUBSYSTEM_DEVICE_ID - Subsystem device ID */
 #define NETC_IERB_EMDIO_CFH_SIDSVID_SUBSYSTEM_DEVICE_ID(x) (((uint32_t)(((uint32_t)(x)) << NETC_IERB_EMDIO_CFH_SIDSVID_SUBSYSTEM_DEVICE_ID_SHIFT)) & NETC_IERB_EMDIO_CFH_SIDSVID_SUBSYSTEM_DEVICE_ID_MASK)
 /*! @} */
 
@@ -597,6 +618,7 @@ typedef struct {
 
 #define NETC_IERB_EMDIOBLPR_PARAM_VAL_MASK       (0xFFFFFFFFU)
 #define NETC_IERB_EMDIOBLPR_PARAM_VAL_SHIFT      (0U)
+/*! PARAM_VAL - Parameter value */
 #define NETC_IERB_EMDIOBLPR_PARAM_VAL(x)         (((uint32_t)(((uint32_t)(x)) << NETC_IERB_EMDIOBLPR_PARAM_VAL_SHIFT)) & NETC_IERB_EMDIOBLPR_PARAM_VAL_MASK)
 /*! @} */
 
@@ -608,10 +630,12 @@ typedef struct {
 
 #define NETC_IERB_EMDIO_CFG_MDIO_MODE_MASK       (0x10U)
 #define NETC_IERB_EMDIO_CFG_MDIO_MODE_SHIFT      (4U)
+/*! MDIO_MODE - MDIO pin mode */
 #define NETC_IERB_EMDIO_CFG_MDIO_MODE(x)         (((uint32_t)(((uint32_t)(x)) << NETC_IERB_EMDIO_CFG_MDIO_MODE_SHIFT)) & NETC_IERB_EMDIO_CFG_MDIO_MODE_MASK)
 
 #define NETC_IERB_EMDIO_CFG_MDC_MODE_MASK        (0x20U)
 #define NETC_IERB_EMDIO_CFG_MDC_MODE_SHIFT       (5U)
+/*! MDC_MODE - MDC pin mode */
 #define NETC_IERB_EMDIO_CFG_MDC_MODE(x)          (((uint32_t)(((uint32_t)(x)) << NETC_IERB_EMDIO_CFG_MDC_MODE_SHIFT)) & NETC_IERB_EMDIO_CFG_MDC_MODE_MASK)
 /*! @} */
 
@@ -620,10 +644,12 @@ typedef struct {
 
 #define NETC_IERB_EMDIORIDAR_RID_MASK            (0xFFFFU)
 #define NETC_IERB_EMDIORIDAR_RID_SHIFT           (0U)
+/*! RID - Routing ID */
 #define NETC_IERB_EMDIORIDAR_RID(x)              (((uint32_t)(((uint32_t)(x)) << NETC_IERB_EMDIORIDAR_RID_SHIFT)) & NETC_IERB_EMDIORIDAR_RID_MASK)
 
 #define NETC_IERB_EMDIORIDAR_PBUS_MASK           (0xFF0000U)
 #define NETC_IERB_EMDIORIDAR_PBUS_SHIFT          (16U)
+/*! PBUS - Physical bus number */
 #define NETC_IERB_EMDIORIDAR_PBUS(x)             (((uint32_t)(((uint32_t)(x)) << NETC_IERB_EMDIORIDAR_PBUS_SHIFT)) & NETC_IERB_EMDIORIDAR_PBUS_MASK)
 /*! @} */
 
@@ -632,6 +658,7 @@ typedef struct {
 
 #define NETC_IERB_TMCR_NUM_MSIX_MASK             (0x1U)
 #define NETC_IERB_TMCR_NUM_MSIX_SHIFT            (0U)
+/*! NUM_MSIX - Number of MSI-X vectors */
 #define NETC_IERB_TMCR_NUM_MSIX(x)               (((uint32_t)(((uint32_t)(x)) << NETC_IERB_TMCR_NUM_MSIX_SHIFT)) & NETC_IERB_TMCR_NUM_MSIX_MASK)
 /*! @} */
 
@@ -643,10 +670,12 @@ typedef struct {
 
 #define NETC_IERB_T_CFH_DIDVID_VENDOR_ID_MASK    (0xFFFFU)
 #define NETC_IERB_T_CFH_DIDVID_VENDOR_ID_SHIFT   (0U)
+/*! VENDOR_ID - Vendor ID */
 #define NETC_IERB_T_CFH_DIDVID_VENDOR_ID(x)      (((uint32_t)(((uint32_t)(x)) << NETC_IERB_T_CFH_DIDVID_VENDOR_ID_SHIFT)) & NETC_IERB_T_CFH_DIDVID_VENDOR_ID_MASK)
 
 #define NETC_IERB_T_CFH_DIDVID_DEVICE_ID_MASK    (0xFFFF0000U)
 #define NETC_IERB_T_CFH_DIDVID_DEVICE_ID_SHIFT   (16U)
+/*! DEVICE_ID - Device ID */
 #define NETC_IERB_T_CFH_DIDVID_DEVICE_ID(x)      (((uint32_t)(((uint32_t)(x)) << NETC_IERB_T_CFH_DIDVID_DEVICE_ID_SHIFT)) & NETC_IERB_T_CFH_DIDVID_DEVICE_ID_MASK)
 /*! @} */
 
@@ -658,10 +687,12 @@ typedef struct {
 
 #define NETC_IERB_T_CFH_SIDSVID_SUBSYSTEM_VENDOR_ID_MASK (0xFFFFU)
 #define NETC_IERB_T_CFH_SIDSVID_SUBSYSTEM_VENDOR_ID_SHIFT (0U)
+/*! SUBSYSTEM_VENDOR_ID - Subsystem vendor ID */
 #define NETC_IERB_T_CFH_SIDSVID_SUBSYSTEM_VENDOR_ID(x) (((uint32_t)(((uint32_t)(x)) << NETC_IERB_T_CFH_SIDSVID_SUBSYSTEM_VENDOR_ID_SHIFT)) & NETC_IERB_T_CFH_SIDSVID_SUBSYSTEM_VENDOR_ID_MASK)
 
 #define NETC_IERB_T_CFH_SIDSVID_SUBSYSTEM_DEVICE_ID_MASK (0xFFFF0000U)
 #define NETC_IERB_T_CFH_SIDSVID_SUBSYSTEM_DEVICE_ID_SHIFT (16U)
+/*! SUBSYSTEM_DEVICE_ID - Subsystem device ID */
 #define NETC_IERB_T_CFH_SIDSVID_SUBSYSTEM_DEVICE_ID(x) (((uint32_t)(((uint32_t)(x)) << NETC_IERB_T_CFH_SIDSVID_SUBSYSTEM_DEVICE_ID_SHIFT)) & NETC_IERB_T_CFH_SIDSVID_SUBSYSTEM_DEVICE_ID_MASK)
 /*! @} */
 
@@ -685,6 +716,7 @@ typedef struct {
 
 #define NETC_IERB_TBLPR_PARAM_VAL_MASK           (0xFFFFFFFFU)
 #define NETC_IERB_TBLPR_PARAM_VAL_SHIFT          (0U)
+/*! PARAM_VAL - Parameter value */
 #define NETC_IERB_TBLPR_PARAM_VAL(x)             (((uint32_t)(((uint32_t)(x)) << NETC_IERB_TBLPR_PARAM_VAL_SHIFT)) & NETC_IERB_TBLPR_PARAM_VAL_MASK)
 /*! @} */
 
@@ -699,10 +731,12 @@ typedef struct {
 
 #define NETC_IERB_TRIDAR_RID_MASK                (0xFFFFU)
 #define NETC_IERB_TRIDAR_RID_SHIFT               (0U)
+/*! RID - Routing ID */
 #define NETC_IERB_TRIDAR_RID(x)                  (((uint32_t)(((uint32_t)(x)) << NETC_IERB_TRIDAR_RID_SHIFT)) & NETC_IERB_TRIDAR_RID_MASK)
 
 #define NETC_IERB_TRIDAR_PBUS_MASK               (0xFF0000U)
 #define NETC_IERB_TRIDAR_PBUS_SHIFT              (16U)
+/*! PBUS - Physical bus number */
 #define NETC_IERB_TRIDAR_PBUS(x)                 (((uint32_t)(((uint32_t)(x)) << NETC_IERB_TRIDAR_PBUS_SHIFT)) & NETC_IERB_TRIDAR_PBUS_MASK)
 /*! @} */
 
@@ -831,7 +865,7 @@ typedef struct {
 
 #define NETC_IERB_L0IOCAPR_REVMII_MASK           (0x80000000U)
 #define NETC_IERB_L0IOCAPR_REVMII_SHIFT          (31U)
-/*! REVMII - Reverse Mode Device Configuration */
+/*! REVMII - Standard Reverse Mode Device Configuration */
 #define NETC_IERB_L0IOCAPR_REVMII(x)             (((uint32_t)(((uint32_t)(x)) << NETC_IERB_L0IOCAPR_REVMII_SHIFT)) & NETC_IERB_L0IOCAPR_REVMII_MASK)
 /*! @} */
 
@@ -953,7 +987,7 @@ typedef struct {
 
 #define NETC_IERB_L1IOCAPR_REVMII_MASK           (0x80000000U)
 #define NETC_IERB_L1IOCAPR_REVMII_SHIFT          (31U)
-/*! REVMII - Reverse Mode Device Configuration */
+/*! REVMII - Standard Reverse Mode Device Configuration */
 #define NETC_IERB_L1IOCAPR_REVMII(x)             (((uint32_t)(((uint32_t)(x)) << NETC_IERB_L1IOCAPR_REVMII_SHIFT)) & NETC_IERB_L1IOCAPR_REVMII_MASK)
 /*! @} */
 

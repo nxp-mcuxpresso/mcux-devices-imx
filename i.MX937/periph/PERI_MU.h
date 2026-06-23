@@ -17,7 +17,7 @@
 **                          MIMX9375xxVZx_cm7
 **
 **     Version:             rev. 1.0, 2026-04-09
-**     Build:               b260416
+**     Build:               b260624
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for MU
@@ -121,7 +121,7 @@ typedef struct {
   __IO uint32_t CCR0;                              /**< Core Control 0, offset: 0x10 */
   __IO uint32_t CIER0;                             /**< Core Interrupt Enable 0, offset: 0x14 */
   __IO uint32_t CSSR0;                             /**< Core Sticky Status 0, offset: 0x18 */
-  __I  uint32_t CSR0;                              /**< Core Status 0, offset: 0x1C, not available in all instances (available on 125 out of 220) */
+  __I  uint32_t CSR0;                              /**< Core Status 0, offset: 0x1C, not available in all instances (available on 105 out of 110) */
        uint8_t RESERVED_0[224];
   __IO uint32_t FCR;                               /**< Flag Control, offset: 0x100 */
   __I  uint32_t FSR;                               /**< Flag Status, offset: 0x104 */
@@ -426,24 +426,24 @@ typedef struct {
 #define MU_CSSR0_HALT_MASK                       (0x10U)
 #define MU_CSSR0_HALT_SHIFT                      (4U)
 /*! HALT - Processor B Halt Mode Entry Interrupt Pending Flag
- *  0b0..Processor A did not enter Halt Mode.
- *  0b1..Processor A entered Halt Mode.
+ *  0b0..Processor B did not enter Halt Mode.
+ *  0b1..Processor B entered Halt Mode.
  */
 #define MU_CSSR0_HALT(x)                         (((uint32_t)(((uint32_t)(x)) << MU_CSSR0_HALT_SHIFT)) & MU_CSSR0_HALT_MASK)
 
 #define MU_CSSR0_WAIT_MASK                       (0x20U)
 #define MU_CSSR0_WAIT_SHIFT                      (5U)
 /*! WAIT - Processor B Wait Mode Entry Interrupt Pending
- *  0b0..Processor A did not enter Wait Mode.
- *  0b1..Processor A entered Wait Mode.
+ *  0b0..Processor B did not enter Wait Mode.
+ *  0b1..Processor B entered Wait Mode.
  */
 #define MU_CSSR0_WAIT(x)                         (((uint32_t)(((uint32_t)(x)) << MU_CSSR0_WAIT_SHIFT)) & MU_CSSR0_WAIT_MASK)
 
 #define MU_CSSR0_STOP_MASK                       (0x40U)
 #define MU_CSSR0_STOP_SHIFT                      (6U)
 /*! STOP - Processor B Stop Mode Entry Interrupt Pending Flag
- *  0b0..Processor A did not enter Stop mode.
- *  0b1..Processor A entered Stop mode.
+ *  0b0..Processor B did not enter Stop mode.
+ *  0b1..Processor B entered Stop mode.
  */
 #define MU_CSSR0_STOP(x)                         (((uint32_t)(((uint32_t)(x)) << MU_CSSR0_STOP_SHIFT)) & MU_CSSR0_STOP_MASK)
 

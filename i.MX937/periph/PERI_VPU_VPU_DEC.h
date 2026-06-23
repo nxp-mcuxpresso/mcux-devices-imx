@@ -17,7 +17,7 @@
 **                          MIMX9375xxVZx_cm7
 **
 **     Version:             rev. 1.0, 2026-04-09
-**     Build:               b260416
+**     Build:               b260624
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for VPU_VPU_DEC
@@ -201,8 +201,8 @@ typedef struct {
     __I  uint32_t VPU_REMAP_CTRL_CONTROL_REG_VM;     /**< Remap Control, offset: 0x60 */
   };
   union {                                          /* offset: 0x64 */
-    __IO uint32_t VPU_REMAP_VADDR_CONTROL_REG;       /**< Remap Virutal Address, offset: 0x64 */
-    __I  uint32_t VPU_REMAP_VADDR_CONTROL_REG_VM;    /**< Remap Virutal Address, offset: 0x64 */
+    __IO uint32_t VPU_REMAP_VADDR_CONTROL_REG;       /**< Remap Virtual Address, offset: 0x64 */
+    __I  uint32_t VPU_REMAP_VADDR_CONTROL_REG_VM;    /**< Remap Virtual Address, offset: 0x64 */
   };
   union {                                          /* offset: 0x68 */
     __IO uint32_t VPU_REMAP_PADDR_CONTROL_REG;       /**< Remap Physical Address, offset: 0x68 */
@@ -383,9 +383,9 @@ typedef struct {
     __I  uint32_t RET_QUERY_STD_DEF0;                /**< Standard definition, offset: 0x124 */
   };
   union {                                          /* offset: 0x128 */
-    __IO uint32_t CMD_INIT_SEC_AXI_SIZE;             /**< Seconary AXI memory size, offset: 0x128 */
+    __IO uint32_t CMD_INIT_SEC_AXI_SIZE;             /**< Secondary AXI memory size, offset: 0x128 */
     __IO uint32_t CMD_SEQ_CHANGE_ENABLE_FLAG;        /**< Sequence change flag, offset: 0x128 */
-    __IO uint32_t CMD_WAKEUP_SEC_AXI_SIZE;           /**< Seconary AXI memory size, offset: 0x128 */
+    __IO uint32_t CMD_WAKEUP_SEC_AXI_SIZE;           /**< Secondary AXI memory size, offset: 0x128 */
     __I  uint32_t RET_QUERY_BW_FBD_C_AXI_READ;       /**< FBD AXI read chroma bandwidth, offset: 0x128 */
     __I  uint32_t RET_QUERY_DEC_ASPECT_RATIO;        /**< Sample Aspect Ratio, offset: 0x128 */
     __I  uint32_t RET_QUERY_PF_STG_0_BLOCK_START;    /**< Blocking start tick of stage 0, offset: 0x128 */
@@ -624,7 +624,7 @@ typedef struct {
   __O  uint32_t VCPU_RESTART;                      /**< V-CPU Restart Request, offset: 0x1058 */
   __IO uint32_t VPU_CLK_MASK;                      /**< VPU Clock Control, offset: 0x105C */
   __IO uint32_t VPU_REMAP_CTRL;                    /**< Remap Control, offset: 0x1060 */
-  __IO uint32_t VPU_REMAP_VADDR;                   /**< Remap Virutal Address, offset: 0x1064 */
+  __IO uint32_t VPU_REMAP_VADDR;                   /**< Remap Virtual Address, offset: 0x1064 */
   __IO uint32_t VPU_REMAP_PADDR;                   /**< Remap Physical Address, offset: 0x1068 */
   __IO uint32_t VPU_REMAP_CORE_START;              /**< VPU Start Request, offset: 0x106C */
   __IO uint32_t VPU_BUSY_STATUS;                   /**< VPU Busy Status, offset: 0x1070 */
@@ -1777,7 +1777,7 @@ typedef struct {
 #define VPU_VPU_DEC_VPU_REMAP_CTRL_CONTROL_REG_VM_RSVD0(x) (((uint32_t)(((uint32_t)(x)) << VPU_VPU_DEC_VPU_REMAP_CTRL_CONTROL_REG_VM_RSVD0_SHIFT)) & VPU_VPU_DEC_VPU_REMAP_CTRL_CONTROL_REG_VM_RSVD0_MASK)
 /*! @} */
 
-/*! @name VPU_REMAP_VADDR_CONTROL_REG - Remap Virutal Address */
+/*! @name VPU_REMAP_VADDR_CONTROL_REG - Remap Virtual Address */
 /*! @{ */
 
 #define VPU_VPU_DEC_VPU_REMAP_VADDR_CONTROL_REG_VPU_REMAP_VADDR_MASK (0xFFFFF000U)
@@ -1785,7 +1785,7 @@ typedef struct {
 #define VPU_VPU_DEC_VPU_REMAP_VADDR_CONTROL_REG_VPU_REMAP_VADDR(x) (((uint32_t)(((uint32_t)(x)) << VPU_VPU_DEC_VPU_REMAP_VADDR_CONTROL_REG_VPU_REMAP_VADDR_SHIFT)) & VPU_VPU_DEC_VPU_REMAP_VADDR_CONTROL_REG_VPU_REMAP_VADDR_MASK)
 /*! @} */
 
-/*! @name VPU_REMAP_VADDR_CONTROL_REG_VM - Remap Virutal Address */
+/*! @name VPU_REMAP_VADDR_CONTROL_REG_VM - Remap Virtual Address */
 /*! @{ */
 
 #define VPU_VPU_DEC_VPU_REMAP_VADDR_CONTROL_REG_VM_VPU_REMAP_VADDR_MASK (0xFFFFF000U)
@@ -2965,7 +2965,7 @@ typedef struct {
 #define VPU_VPU_DEC_RET_QUERY_STD_DEF0_MAP_CONVERTER_REG(x) (((uint32_t)(((uint32_t)(x)) << VPU_VPU_DEC_RET_QUERY_STD_DEF0_MAP_CONVERTER_REG_SHIFT)) & VPU_VPU_DEC_RET_QUERY_STD_DEF0_MAP_CONVERTER_REG_MASK)
 /*! @} */
 
-/*! @name CMD_INIT_SEC_AXI_SIZE - Seconary AXI memory size */
+/*! @name CMD_INIT_SEC_AXI_SIZE - Secondary AXI memory size */
 /*! @{ */
 
 #define VPU_VPU_DEC_CMD_INIT_SEC_AXI_SIZE_SEC_AXI_MEM_SIZE_MASK (0xFFFFFFFFU)
@@ -3013,7 +3013,7 @@ typedef struct {
 #define VPU_VPU_DEC_CMD_SEQ_CHANGE_ENABLE_FLAG_RSVD0(x) (((uint32_t)(((uint32_t)(x)) << VPU_VPU_DEC_CMD_SEQ_CHANGE_ENABLE_FLAG_RSVD0_SHIFT)) & VPU_VPU_DEC_CMD_SEQ_CHANGE_ENABLE_FLAG_RSVD0_MASK)
 /*! @} */
 
-/*! @name CMD_WAKEUP_SEC_AXI_SIZE - Seconary AXI memory size */
+/*! @name CMD_WAKEUP_SEC_AXI_SIZE - Secondary AXI memory size */
 /*! @{ */
 
 #define VPU_VPU_DEC_CMD_WAKEUP_SEC_AXI_SIZE_SEC_AXI_MEM_SIZE_MASK (0xFFFFFFFFU)
@@ -4749,7 +4749,7 @@ typedef struct {
 #define VPU_VPU_DEC_VPU_REMAP_CTRL_EN_REMAP_INFO(x) (((uint32_t)(((uint32_t)(x)) << VPU_VPU_DEC_VPU_REMAP_CTRL_EN_REMAP_INFO_SHIFT)) & VPU_VPU_DEC_VPU_REMAP_CTRL_EN_REMAP_INFO_MASK)
 /*! @} */
 
-/*! @name VPU_REMAP_VADDR - Remap Virutal Address */
+/*! @name VPU_REMAP_VADDR - Remap Virtual Address */
 /*! @{ */
 
 #define VPU_VPU_DEC_VPU_REMAP_VADDR_VPU_REMAP_VADDR_MASK (0xFFFFF000U)

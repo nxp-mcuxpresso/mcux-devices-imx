@@ -17,7 +17,7 @@
 **                          MIMX9375xxVZx_cm7
 **
 **     Version:             rev. 1.0, 2026-04-09
-**     Build:               b260416
+**     Build:               b260624
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for FRO
@@ -199,14 +199,6 @@ typedef struct {
  */
 #define FRO_CSR_TRUPEN(x)                        (((uint32_t)(((uint32_t)(x)) << FRO_CSR_TRUPEN_SHIFT)) & FRO_CSR_TRUPEN_MASK)
 
-#define FRO_CSR_COARSEN_MASK                     (0x40U)
-#define FRO_CSR_COARSEN_SHIFT                    (6U)
-/*! COARSEN - Coarse Trim Enable
- *  0b0..Disable
- *  0b1..Enable
- */
-#define FRO_CSR_COARSEN(x)                       (((uint32_t)(((uint32_t)(x)) << FRO_CSR_COARSEN_SHIFT)) & FRO_CSR_COARSEN_MASK)
-
 #define FRO_CSR_TUNEONCE_MASK                    (0x80U)
 #define FRO_CSR_TUNEONCE_SHIFT                   (7U)
 /*! TUNEONCE - Tune Once Control */
@@ -215,8 +207,8 @@ typedef struct {
 #define FRO_CSR_CLKGATE_MASK                     (0x1F00U)
 #define FRO_CSR_CLKGATE_SHIFT                    (8U)
 /*! CLKGATE - FRO Clock Enable
- *  0b0xxxx..Disables FRO divider 10 clock
- *  0b1xxxx..Enables FRO divider 10 clock
+ *  0b0xxxx..Disables FRO divider 8 clock
+ *  0b1xxxx..Enables FRO divider 8 clock
  *  0bx0xxx..Disables FRO divider 6 clock
  *  0bx1xxx..Enables FRO divider 6 clock
  *  0bxx0xx..Disables FRO divider 3 clock

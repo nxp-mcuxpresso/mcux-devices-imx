@@ -17,7 +17,7 @@
 **                          MIMX9375xxVZx_cm7
 **
 **     Version:             rev. 1.0, 2026-04-09
-**     Build:               b260416
+**     Build:               b260624
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for GPU_TRDC_MGR
@@ -1429,8 +1429,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_CFG_W0_NSE0_MASK (0x8U)
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_CFG_W0_NSE0_SHIFT (3U)
 /*! NSE0 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_CFG_W0_NSE0(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_CFG_W0_NSE0_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_CFG_W0_NSE0_MASK)
@@ -1452,8 +1452,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_CFG_W0_NSE1_MASK (0x80U)
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_CFG_W0_NSE1_SHIFT (7U)
 /*! NSE1 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_CFG_W0_NSE1(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_CFG_W0_NSE1_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_CFG_W0_NSE1_MASK)
@@ -1475,8 +1475,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_CFG_W0_NSE2_MASK (0x800U)
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_CFG_W0_NSE2_SHIFT (11U)
 /*! NSE2 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_CFG_W0_NSE2(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_CFG_W0_NSE2_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_CFG_W0_NSE2_MASK)
@@ -1498,8 +1498,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_CFG_W0_NSE3_MASK (0x8000U)
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_CFG_W0_NSE3_SHIFT (15U)
 /*! NSE3 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_CFG_W0_NSE3(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_CFG_W0_NSE3_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_CFG_W0_NSE3_MASK)
@@ -1521,8 +1521,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_CFG_W0_NSE4_MASK (0x80000U)
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_CFG_W0_NSE4_SHIFT (19U)
 /*! NSE4 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_CFG_W0_NSE4(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_CFG_W0_NSE4_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_CFG_W0_NSE4_MASK)
@@ -1544,8 +1544,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_CFG_W0_NSE5_MASK (0x800000U)
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_CFG_W0_NSE5_SHIFT (23U)
 /*! NSE5 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_CFG_W0_NSE5(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_CFG_W0_NSE5_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_CFG_W0_NSE5_MASK)
@@ -1567,8 +1567,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_CFG_W0_NSE6_MASK (0x8000000U)
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_CFG_W0_NSE6_SHIFT (27U)
 /*! NSE6 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_CFG_W0_NSE6(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_CFG_W0_NSE6_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_CFG_W0_NSE6_MASK)
@@ -1590,8 +1590,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_CFG_W0_NSE7_MASK (0x80000000U)
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_CFG_W0_NSE7_SHIFT (31U)
 /*! NSE7 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_CFG_W0_NSE7(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_CFG_W0_NSE7_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_CFG_W0_NSE7_MASK)
@@ -1603,8 +1603,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT0_MASK (0x1U)
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT0_SHIFT (0U)
 /*! BIT0 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT0(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT0_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT0_MASK)
@@ -1612,8 +1612,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT1_MASK (0x2U)
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT1_SHIFT (1U)
 /*! BIT1 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT1(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT1_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT1_MASK)
@@ -1621,8 +1621,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT2_MASK (0x4U)
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT2_SHIFT (2U)
 /*! BIT2 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT2(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT2_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT2_MASK)
@@ -1630,8 +1630,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT3_MASK (0x8U)
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT3_SHIFT (3U)
 /*! BIT3 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT3(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT3_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT3_MASK)
@@ -1639,8 +1639,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT4_MASK (0x10U)
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT4_SHIFT (4U)
 /*! BIT4 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT4(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT4_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT4_MASK)
@@ -1648,8 +1648,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT5_MASK (0x20U)
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT5_SHIFT (5U)
 /*! BIT5 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT5(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT5_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT5_MASK)
@@ -1657,8 +1657,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT6_MASK (0x40U)
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT6_SHIFT (6U)
 /*! BIT6 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT6(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT6_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT6_MASK)
@@ -1666,8 +1666,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT7_MASK (0x80U)
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT7_SHIFT (7U)
 /*! BIT7 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT7(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT7_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT7_MASK)
@@ -1675,8 +1675,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT8_MASK (0x100U)
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT8_SHIFT (8U)
 /*! BIT8 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT8(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT8_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT8_MASK)
@@ -1684,8 +1684,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT9_MASK (0x200U)
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT9_SHIFT (9U)
 /*! BIT9 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT9(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT9_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT9_MASK)
@@ -1693,8 +1693,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT10_MASK (0x400U)
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT10_SHIFT (10U)
 /*! BIT10 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT10(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT10_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT10_MASK)
@@ -1702,8 +1702,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT11_MASK (0x800U)
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT11_SHIFT (11U)
 /*! BIT11 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT11(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT11_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT11_MASK)
@@ -1711,8 +1711,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT12_MASK (0x1000U)
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT12_SHIFT (12U)
 /*! BIT12 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT12(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT12_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT12_MASK)
@@ -1720,8 +1720,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT13_MASK (0x2000U)
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT13_SHIFT (13U)
 /*! BIT13 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT13(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT13_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT13_MASK)
@@ -1729,8 +1729,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT14_MASK (0x4000U)
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT14_SHIFT (14U)
 /*! BIT14 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT14(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT14_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT14_MASK)
@@ -1738,8 +1738,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT15_MASK (0x8000U)
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT15_SHIFT (15U)
 /*! BIT15 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT15(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT15_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT15_MASK)
@@ -1747,8 +1747,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT16_MASK (0x10000U)
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT16_SHIFT (16U)
 /*! BIT16 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT16(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT16_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT16_MASK)
@@ -1756,8 +1756,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT17_MASK (0x20000U)
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT17_SHIFT (17U)
 /*! BIT17 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT17(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT17_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT17_MASK)
@@ -1765,8 +1765,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT18_MASK (0x40000U)
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT18_SHIFT (18U)
 /*! BIT18 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT18(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT18_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT18_MASK)
@@ -1774,8 +1774,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT19_MASK (0x80000U)
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT19_SHIFT (19U)
 /*! BIT19 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT19(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT19_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT19_MASK)
@@ -1783,8 +1783,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT20_MASK (0x100000U)
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT20_SHIFT (20U)
 /*! BIT20 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT20(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT20_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT20_MASK)
@@ -1792,8 +1792,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT21_MASK (0x200000U)
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT21_SHIFT (21U)
 /*! BIT21 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT21(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT21_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT21_MASK)
@@ -1801,8 +1801,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT22_MASK (0x400000U)
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT22_SHIFT (22U)
 /*! BIT22 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT22(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT22_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT22_MASK)
@@ -1810,8 +1810,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT23_MASK (0x800000U)
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT23_SHIFT (23U)
 /*! BIT23 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT23(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT23_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT23_MASK)
@@ -1819,8 +1819,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT24_MASK (0x1000000U)
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT24_SHIFT (24U)
 /*! BIT24 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT24(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT24_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT24_MASK)
@@ -1828,8 +1828,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT25_MASK (0x2000000U)
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT25_SHIFT (25U)
 /*! BIT25 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT25(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT25_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT25_MASK)
@@ -1837,8 +1837,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT26_MASK (0x4000000U)
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT26_SHIFT (26U)
 /*! BIT26 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT26(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT26_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT26_MASK)
@@ -1846,8 +1846,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT27_MASK (0x8000000U)
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT27_SHIFT (27U)
 /*! BIT27 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT27(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT27_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT27_MASK)
@@ -1855,8 +1855,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT28_MASK (0x10000000U)
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT28_SHIFT (28U)
 /*! BIT28 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT28(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT28_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT28_MASK)
@@ -1864,8 +1864,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT29_MASK (0x20000000U)
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT29_SHIFT (29U)
 /*! BIT29 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT29(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT29_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT29_MASK)
@@ -1873,8 +1873,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT30_MASK (0x40000000U)
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT30_SHIFT (30U)
 /*! BIT30 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT30(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT30_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT30_MASK)
@@ -1882,8 +1882,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT31_MASK (0x80000000U)
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT31_SHIFT (31U)
 /*! BIT31 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT31(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT31_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM0_MEM0_BLK_NSE_W0_BIT31_MASK)
@@ -1909,8 +1909,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_CFG_W0_NSE0_MASK (0x8U)
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_CFG_W0_NSE0_SHIFT (3U)
 /*! NSE0 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_CFG_W0_NSE0(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_CFG_W0_NSE0_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_CFG_W0_NSE0_MASK)
@@ -1932,8 +1932,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_CFG_W0_NSE1_MASK (0x80U)
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_CFG_W0_NSE1_SHIFT (7U)
 /*! NSE1 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_CFG_W0_NSE1(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_CFG_W0_NSE1_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_CFG_W0_NSE1_MASK)
@@ -1955,8 +1955,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_CFG_W0_NSE2_MASK (0x800U)
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_CFG_W0_NSE2_SHIFT (11U)
 /*! NSE2 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_CFG_W0_NSE2(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_CFG_W0_NSE2_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_CFG_W0_NSE2_MASK)
@@ -1978,8 +1978,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_CFG_W0_NSE3_MASK (0x8000U)
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_CFG_W0_NSE3_SHIFT (15U)
 /*! NSE3 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_CFG_W0_NSE3(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_CFG_W0_NSE3_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_CFG_W0_NSE3_MASK)
@@ -2001,8 +2001,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_CFG_W0_NSE4_MASK (0x80000U)
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_CFG_W0_NSE4_SHIFT (19U)
 /*! NSE4 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_CFG_W0_NSE4(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_CFG_W0_NSE4_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_CFG_W0_NSE4_MASK)
@@ -2024,8 +2024,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_CFG_W0_NSE5_MASK (0x800000U)
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_CFG_W0_NSE5_SHIFT (23U)
 /*! NSE5 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_CFG_W0_NSE5(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_CFG_W0_NSE5_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_CFG_W0_NSE5_MASK)
@@ -2047,8 +2047,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_CFG_W0_NSE6_MASK (0x8000000U)
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_CFG_W0_NSE6_SHIFT (27U)
 /*! NSE6 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_CFG_W0_NSE6(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_CFG_W0_NSE6_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_CFG_W0_NSE6_MASK)
@@ -2070,8 +2070,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_CFG_W0_NSE7_MASK (0x80000000U)
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_CFG_W0_NSE7_SHIFT (31U)
 /*! NSE7 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_CFG_W0_NSE7(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_CFG_W0_NSE7_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_CFG_W0_NSE7_MASK)
@@ -2083,8 +2083,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT0_MASK (0x1U)
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT0_SHIFT (0U)
 /*! BIT0 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT0(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT0_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT0_MASK)
@@ -2092,8 +2092,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT1_MASK (0x2U)
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT1_SHIFT (1U)
 /*! BIT1 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT1(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT1_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT1_MASK)
@@ -2101,8 +2101,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT2_MASK (0x4U)
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT2_SHIFT (2U)
 /*! BIT2 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT2(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT2_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT2_MASK)
@@ -2110,8 +2110,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT3_MASK (0x8U)
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT3_SHIFT (3U)
 /*! BIT3 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT3(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT3_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT3_MASK)
@@ -2119,8 +2119,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT4_MASK (0x10U)
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT4_SHIFT (4U)
 /*! BIT4 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT4(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT4_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT4_MASK)
@@ -2128,8 +2128,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT5_MASK (0x20U)
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT5_SHIFT (5U)
 /*! BIT5 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT5(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT5_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT5_MASK)
@@ -2137,8 +2137,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT6_MASK (0x40U)
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT6_SHIFT (6U)
 /*! BIT6 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT6(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT6_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT6_MASK)
@@ -2146,8 +2146,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT7_MASK (0x80U)
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT7_SHIFT (7U)
 /*! BIT7 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT7(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT7_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT7_MASK)
@@ -2155,8 +2155,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT8_MASK (0x100U)
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT8_SHIFT (8U)
 /*! BIT8 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT8(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT8_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT8_MASK)
@@ -2164,8 +2164,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT9_MASK (0x200U)
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT9_SHIFT (9U)
 /*! BIT9 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT9(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT9_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT9_MASK)
@@ -2173,8 +2173,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT10_MASK (0x400U)
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT10_SHIFT (10U)
 /*! BIT10 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT10(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT10_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT10_MASK)
@@ -2182,8 +2182,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT11_MASK (0x800U)
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT11_SHIFT (11U)
 /*! BIT11 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT11(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT11_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT11_MASK)
@@ -2191,8 +2191,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT12_MASK (0x1000U)
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT12_SHIFT (12U)
 /*! BIT12 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT12(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT12_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT12_MASK)
@@ -2200,8 +2200,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT13_MASK (0x2000U)
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT13_SHIFT (13U)
 /*! BIT13 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT13(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT13_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT13_MASK)
@@ -2209,8 +2209,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT14_MASK (0x4000U)
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT14_SHIFT (14U)
 /*! BIT14 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT14(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT14_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT14_MASK)
@@ -2218,8 +2218,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT15_MASK (0x8000U)
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT15_SHIFT (15U)
 /*! BIT15 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT15(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT15_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT15_MASK)
@@ -2227,8 +2227,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT16_MASK (0x10000U)
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT16_SHIFT (16U)
 /*! BIT16 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT16(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT16_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT16_MASK)
@@ -2236,8 +2236,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT17_MASK (0x20000U)
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT17_SHIFT (17U)
 /*! BIT17 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT17(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT17_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT17_MASK)
@@ -2245,8 +2245,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT18_MASK (0x40000U)
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT18_SHIFT (18U)
 /*! BIT18 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT18(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT18_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT18_MASK)
@@ -2254,8 +2254,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT19_MASK (0x80000U)
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT19_SHIFT (19U)
 /*! BIT19 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT19(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT19_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT19_MASK)
@@ -2263,8 +2263,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT20_MASK (0x100000U)
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT20_SHIFT (20U)
 /*! BIT20 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT20(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT20_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT20_MASK)
@@ -2272,8 +2272,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT21_MASK (0x200000U)
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT21_SHIFT (21U)
 /*! BIT21 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT21(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT21_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT21_MASK)
@@ -2281,8 +2281,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT22_MASK (0x400000U)
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT22_SHIFT (22U)
 /*! BIT22 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT22(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT22_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT22_MASK)
@@ -2290,8 +2290,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT23_MASK (0x800000U)
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT23_SHIFT (23U)
 /*! BIT23 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT23(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT23_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT23_MASK)
@@ -2299,8 +2299,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT24_MASK (0x1000000U)
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT24_SHIFT (24U)
 /*! BIT24 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT24(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT24_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT24_MASK)
@@ -2308,8 +2308,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT25_MASK (0x2000000U)
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT25_SHIFT (25U)
 /*! BIT25 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT25(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT25_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT25_MASK)
@@ -2317,8 +2317,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT26_MASK (0x4000000U)
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT26_SHIFT (26U)
 /*! BIT26 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT26(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT26_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT26_MASK)
@@ -2326,8 +2326,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT27_MASK (0x8000000U)
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT27_SHIFT (27U)
 /*! BIT27 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT27(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT27_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT27_MASK)
@@ -2335,8 +2335,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT28_MASK (0x10000000U)
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT28_SHIFT (28U)
 /*! BIT28 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT28(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT28_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT28_MASK)
@@ -2344,8 +2344,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT29_MASK (0x20000000U)
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT29_SHIFT (29U)
 /*! BIT29 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT29(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT29_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT29_MASK)
@@ -2353,8 +2353,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT30_MASK (0x40000000U)
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT30_SHIFT (30U)
 /*! BIT30 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT30(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT30_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT30_MASK)
@@ -2362,8 +2362,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT31_MASK (0x80000000U)
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT31_SHIFT (31U)
 /*! BIT31 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT31(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT31_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM1_MEM0_BLK_NSE_W0_BIT31_MASK)
@@ -2389,8 +2389,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_CFG_W0_NSE0_MASK (0x8U)
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_CFG_W0_NSE0_SHIFT (3U)
 /*! NSE0 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_CFG_W0_NSE0(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_CFG_W0_NSE0_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_CFG_W0_NSE0_MASK)
@@ -2412,8 +2412,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_CFG_W0_NSE1_MASK (0x80U)
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_CFG_W0_NSE1_SHIFT (7U)
 /*! NSE1 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_CFG_W0_NSE1(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_CFG_W0_NSE1_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_CFG_W0_NSE1_MASK)
@@ -2435,8 +2435,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_CFG_W0_NSE2_MASK (0x800U)
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_CFG_W0_NSE2_SHIFT (11U)
 /*! NSE2 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_CFG_W0_NSE2(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_CFG_W0_NSE2_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_CFG_W0_NSE2_MASK)
@@ -2458,8 +2458,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_CFG_W0_NSE3_MASK (0x8000U)
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_CFG_W0_NSE3_SHIFT (15U)
 /*! NSE3 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_CFG_W0_NSE3(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_CFG_W0_NSE3_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_CFG_W0_NSE3_MASK)
@@ -2481,8 +2481,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_CFG_W0_NSE4_MASK (0x80000U)
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_CFG_W0_NSE4_SHIFT (19U)
 /*! NSE4 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_CFG_W0_NSE4(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_CFG_W0_NSE4_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_CFG_W0_NSE4_MASK)
@@ -2504,8 +2504,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_CFG_W0_NSE5_MASK (0x800000U)
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_CFG_W0_NSE5_SHIFT (23U)
 /*! NSE5 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_CFG_W0_NSE5(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_CFG_W0_NSE5_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_CFG_W0_NSE5_MASK)
@@ -2527,8 +2527,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_CFG_W0_NSE6_MASK (0x8000000U)
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_CFG_W0_NSE6_SHIFT (27U)
 /*! NSE6 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_CFG_W0_NSE6(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_CFG_W0_NSE6_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_CFG_W0_NSE6_MASK)
@@ -2550,8 +2550,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_CFG_W0_NSE7_MASK (0x80000000U)
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_CFG_W0_NSE7_SHIFT (31U)
 /*! NSE7 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_CFG_W0_NSE7(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_CFG_W0_NSE7_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_CFG_W0_NSE7_MASK)
@@ -2563,8 +2563,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT0_MASK (0x1U)
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT0_SHIFT (0U)
 /*! BIT0 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT0(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT0_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT0_MASK)
@@ -2572,8 +2572,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT1_MASK (0x2U)
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT1_SHIFT (1U)
 /*! BIT1 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT1(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT1_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT1_MASK)
@@ -2581,8 +2581,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT2_MASK (0x4U)
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT2_SHIFT (2U)
 /*! BIT2 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT2(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT2_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT2_MASK)
@@ -2590,8 +2590,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT3_MASK (0x8U)
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT3_SHIFT (3U)
 /*! BIT3 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT3(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT3_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT3_MASK)
@@ -2599,8 +2599,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT4_MASK (0x10U)
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT4_SHIFT (4U)
 /*! BIT4 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT4(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT4_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT4_MASK)
@@ -2608,8 +2608,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT5_MASK (0x20U)
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT5_SHIFT (5U)
 /*! BIT5 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT5(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT5_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT5_MASK)
@@ -2617,8 +2617,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT6_MASK (0x40U)
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT6_SHIFT (6U)
 /*! BIT6 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT6(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT6_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT6_MASK)
@@ -2626,8 +2626,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT7_MASK (0x80U)
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT7_SHIFT (7U)
 /*! BIT7 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT7(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT7_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT7_MASK)
@@ -2635,8 +2635,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT8_MASK (0x100U)
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT8_SHIFT (8U)
 /*! BIT8 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT8(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT8_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT8_MASK)
@@ -2644,8 +2644,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT9_MASK (0x200U)
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT9_SHIFT (9U)
 /*! BIT9 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT9(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT9_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT9_MASK)
@@ -2653,8 +2653,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT10_MASK (0x400U)
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT10_SHIFT (10U)
 /*! BIT10 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT10(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT10_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT10_MASK)
@@ -2662,8 +2662,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT11_MASK (0x800U)
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT11_SHIFT (11U)
 /*! BIT11 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT11(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT11_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT11_MASK)
@@ -2671,8 +2671,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT12_MASK (0x1000U)
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT12_SHIFT (12U)
 /*! BIT12 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT12(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT12_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT12_MASK)
@@ -2680,8 +2680,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT13_MASK (0x2000U)
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT13_SHIFT (13U)
 /*! BIT13 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT13(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT13_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT13_MASK)
@@ -2689,8 +2689,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT14_MASK (0x4000U)
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT14_SHIFT (14U)
 /*! BIT14 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT14(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT14_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT14_MASK)
@@ -2698,8 +2698,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT15_MASK (0x8000U)
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT15_SHIFT (15U)
 /*! BIT15 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT15(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT15_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT15_MASK)
@@ -2707,8 +2707,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT16_MASK (0x10000U)
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT16_SHIFT (16U)
 /*! BIT16 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT16(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT16_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT16_MASK)
@@ -2716,8 +2716,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT17_MASK (0x20000U)
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT17_SHIFT (17U)
 /*! BIT17 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT17(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT17_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT17_MASK)
@@ -2725,8 +2725,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT18_MASK (0x40000U)
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT18_SHIFT (18U)
 /*! BIT18 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT18(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT18_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT18_MASK)
@@ -2734,8 +2734,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT19_MASK (0x80000U)
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT19_SHIFT (19U)
 /*! BIT19 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT19(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT19_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT19_MASK)
@@ -2743,8 +2743,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT20_MASK (0x100000U)
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT20_SHIFT (20U)
 /*! BIT20 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT20(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT20_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT20_MASK)
@@ -2752,8 +2752,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT21_MASK (0x200000U)
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT21_SHIFT (21U)
 /*! BIT21 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT21(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT21_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT21_MASK)
@@ -2761,8 +2761,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT22_MASK (0x400000U)
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT22_SHIFT (22U)
 /*! BIT22 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT22(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT22_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT22_MASK)
@@ -2770,8 +2770,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT23_MASK (0x800000U)
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT23_SHIFT (23U)
 /*! BIT23 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT23(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT23_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT23_MASK)
@@ -2779,8 +2779,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT24_MASK (0x1000000U)
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT24_SHIFT (24U)
 /*! BIT24 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT24(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT24_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT24_MASK)
@@ -2788,8 +2788,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT25_MASK (0x2000000U)
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT25_SHIFT (25U)
 /*! BIT25 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT25(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT25_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT25_MASK)
@@ -2797,8 +2797,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT26_MASK (0x4000000U)
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT26_SHIFT (26U)
 /*! BIT26 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT26(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT26_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT26_MASK)
@@ -2806,8 +2806,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT27_MASK (0x8000000U)
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT27_SHIFT (27U)
 /*! BIT27 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT27(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT27_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT27_MASK)
@@ -2815,8 +2815,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT28_MASK (0x10000000U)
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT28_SHIFT (28U)
 /*! BIT28 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT28(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT28_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT28_MASK)
@@ -2824,8 +2824,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT29_MASK (0x20000000U)
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT29_SHIFT (29U)
 /*! BIT29 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT29(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT29_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT29_MASK)
@@ -2833,8 +2833,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT30_MASK (0x40000000U)
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT30_SHIFT (30U)
 /*! BIT30 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT30(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT30_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT30_MASK)
@@ -2842,8 +2842,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT31_MASK (0x80000000U)
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT31_SHIFT (31U)
 /*! BIT31 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT31(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT31_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM2_MEM0_BLK_NSE_W0_BIT31_MASK)
@@ -2869,8 +2869,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_CFG_W0_NSE0_MASK (0x8U)
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_CFG_W0_NSE0_SHIFT (3U)
 /*! NSE0 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_CFG_W0_NSE0(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_CFG_W0_NSE0_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_CFG_W0_NSE0_MASK)
@@ -2892,8 +2892,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_CFG_W0_NSE1_MASK (0x80U)
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_CFG_W0_NSE1_SHIFT (7U)
 /*! NSE1 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_CFG_W0_NSE1(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_CFG_W0_NSE1_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_CFG_W0_NSE1_MASK)
@@ -2915,8 +2915,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_CFG_W0_NSE2_MASK (0x800U)
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_CFG_W0_NSE2_SHIFT (11U)
 /*! NSE2 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_CFG_W0_NSE2(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_CFG_W0_NSE2_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_CFG_W0_NSE2_MASK)
@@ -2938,8 +2938,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_CFG_W0_NSE3_MASK (0x8000U)
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_CFG_W0_NSE3_SHIFT (15U)
 /*! NSE3 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_CFG_W0_NSE3(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_CFG_W0_NSE3_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_CFG_W0_NSE3_MASK)
@@ -2961,8 +2961,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_CFG_W0_NSE4_MASK (0x80000U)
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_CFG_W0_NSE4_SHIFT (19U)
 /*! NSE4 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_CFG_W0_NSE4(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_CFG_W0_NSE4_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_CFG_W0_NSE4_MASK)
@@ -2984,8 +2984,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_CFG_W0_NSE5_MASK (0x800000U)
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_CFG_W0_NSE5_SHIFT (23U)
 /*! NSE5 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_CFG_W0_NSE5(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_CFG_W0_NSE5_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_CFG_W0_NSE5_MASK)
@@ -3007,8 +3007,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_CFG_W0_NSE6_MASK (0x8000000U)
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_CFG_W0_NSE6_SHIFT (27U)
 /*! NSE6 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_CFG_W0_NSE6(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_CFG_W0_NSE6_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_CFG_W0_NSE6_MASK)
@@ -3030,8 +3030,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_CFG_W0_NSE7_MASK (0x80000000U)
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_CFG_W0_NSE7_SHIFT (31U)
 /*! NSE7 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_CFG_W0_NSE7(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_CFG_W0_NSE7_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_CFG_W0_NSE7_MASK)
@@ -3043,8 +3043,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT0_MASK (0x1U)
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT0_SHIFT (0U)
 /*! BIT0 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT0(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT0_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT0_MASK)
@@ -3052,8 +3052,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT1_MASK (0x2U)
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT1_SHIFT (1U)
 /*! BIT1 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT1(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT1_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT1_MASK)
@@ -3061,8 +3061,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT2_MASK (0x4U)
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT2_SHIFT (2U)
 /*! BIT2 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT2(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT2_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT2_MASK)
@@ -3070,8 +3070,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT3_MASK (0x8U)
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT3_SHIFT (3U)
 /*! BIT3 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT3(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT3_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT3_MASK)
@@ -3079,8 +3079,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT4_MASK (0x10U)
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT4_SHIFT (4U)
 /*! BIT4 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT4(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT4_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT4_MASK)
@@ -3088,8 +3088,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT5_MASK (0x20U)
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT5_SHIFT (5U)
 /*! BIT5 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT5(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT5_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT5_MASK)
@@ -3097,8 +3097,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT6_MASK (0x40U)
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT6_SHIFT (6U)
 /*! BIT6 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT6(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT6_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT6_MASK)
@@ -3106,8 +3106,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT7_MASK (0x80U)
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT7_SHIFT (7U)
 /*! BIT7 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT7(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT7_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT7_MASK)
@@ -3115,8 +3115,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT8_MASK (0x100U)
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT8_SHIFT (8U)
 /*! BIT8 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT8(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT8_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT8_MASK)
@@ -3124,8 +3124,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT9_MASK (0x200U)
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT9_SHIFT (9U)
 /*! BIT9 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT9(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT9_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT9_MASK)
@@ -3133,8 +3133,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT10_MASK (0x400U)
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT10_SHIFT (10U)
 /*! BIT10 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT10(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT10_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT10_MASK)
@@ -3142,8 +3142,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT11_MASK (0x800U)
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT11_SHIFT (11U)
 /*! BIT11 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT11(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT11_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT11_MASK)
@@ -3151,8 +3151,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT12_MASK (0x1000U)
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT12_SHIFT (12U)
 /*! BIT12 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT12(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT12_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT12_MASK)
@@ -3160,8 +3160,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT13_MASK (0x2000U)
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT13_SHIFT (13U)
 /*! BIT13 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT13(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT13_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT13_MASK)
@@ -3169,8 +3169,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT14_MASK (0x4000U)
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT14_SHIFT (14U)
 /*! BIT14 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT14(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT14_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT14_MASK)
@@ -3178,8 +3178,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT15_MASK (0x8000U)
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT15_SHIFT (15U)
 /*! BIT15 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT15(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT15_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT15_MASK)
@@ -3187,8 +3187,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT16_MASK (0x10000U)
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT16_SHIFT (16U)
 /*! BIT16 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT16(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT16_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT16_MASK)
@@ -3196,8 +3196,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT17_MASK (0x20000U)
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT17_SHIFT (17U)
 /*! BIT17 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT17(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT17_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT17_MASK)
@@ -3205,8 +3205,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT18_MASK (0x40000U)
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT18_SHIFT (18U)
 /*! BIT18 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT18(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT18_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT18_MASK)
@@ -3214,8 +3214,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT19_MASK (0x80000U)
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT19_SHIFT (19U)
 /*! BIT19 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT19(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT19_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT19_MASK)
@@ -3223,8 +3223,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT20_MASK (0x100000U)
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT20_SHIFT (20U)
 /*! BIT20 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT20(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT20_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT20_MASK)
@@ -3232,8 +3232,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT21_MASK (0x200000U)
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT21_SHIFT (21U)
 /*! BIT21 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT21(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT21_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT21_MASK)
@@ -3241,8 +3241,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT22_MASK (0x400000U)
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT22_SHIFT (22U)
 /*! BIT22 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT22(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT22_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT22_MASK)
@@ -3250,8 +3250,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT23_MASK (0x800000U)
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT23_SHIFT (23U)
 /*! BIT23 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT23(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT23_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT23_MASK)
@@ -3259,8 +3259,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT24_MASK (0x1000000U)
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT24_SHIFT (24U)
 /*! BIT24 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT24(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT24_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT24_MASK)
@@ -3268,8 +3268,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT25_MASK (0x2000000U)
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT25_SHIFT (25U)
 /*! BIT25 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT25(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT25_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT25_MASK)
@@ -3277,8 +3277,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT26_MASK (0x4000000U)
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT26_SHIFT (26U)
 /*! BIT26 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT26(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT26_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT26_MASK)
@@ -3286,8 +3286,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT27_MASK (0x8000000U)
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT27_SHIFT (27U)
 /*! BIT27 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT27(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT27_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT27_MASK)
@@ -3295,8 +3295,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT28_MASK (0x10000000U)
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT28_SHIFT (28U)
 /*! BIT28 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT28(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT28_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT28_MASK)
@@ -3304,8 +3304,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT29_MASK (0x20000000U)
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT29_SHIFT (29U)
 /*! BIT29 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT29(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT29_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT29_MASK)
@@ -3313,8 +3313,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT30_MASK (0x40000000U)
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT30_SHIFT (30U)
 /*! BIT30 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT30(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT30_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT30_MASK)
@@ -3322,8 +3322,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT31_MASK (0x80000000U)
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT31_SHIFT (31U)
 /*! BIT31 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT31(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT31_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM3_MEM0_BLK_NSE_W0_BIT31_MASK)
@@ -3349,8 +3349,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_CFG_W0_NSE0_MASK (0x8U)
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_CFG_W0_NSE0_SHIFT (3U)
 /*! NSE0 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_CFG_W0_NSE0(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_CFG_W0_NSE0_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_CFG_W0_NSE0_MASK)
@@ -3372,8 +3372,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_CFG_W0_NSE1_MASK (0x80U)
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_CFG_W0_NSE1_SHIFT (7U)
 /*! NSE1 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_CFG_W0_NSE1(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_CFG_W0_NSE1_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_CFG_W0_NSE1_MASK)
@@ -3395,8 +3395,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_CFG_W0_NSE2_MASK (0x800U)
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_CFG_W0_NSE2_SHIFT (11U)
 /*! NSE2 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_CFG_W0_NSE2(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_CFG_W0_NSE2_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_CFG_W0_NSE2_MASK)
@@ -3418,8 +3418,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_CFG_W0_NSE3_MASK (0x8000U)
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_CFG_W0_NSE3_SHIFT (15U)
 /*! NSE3 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_CFG_W0_NSE3(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_CFG_W0_NSE3_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_CFG_W0_NSE3_MASK)
@@ -3441,8 +3441,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_CFG_W0_NSE4_MASK (0x80000U)
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_CFG_W0_NSE4_SHIFT (19U)
 /*! NSE4 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_CFG_W0_NSE4(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_CFG_W0_NSE4_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_CFG_W0_NSE4_MASK)
@@ -3464,8 +3464,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_CFG_W0_NSE5_MASK (0x800000U)
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_CFG_W0_NSE5_SHIFT (23U)
 /*! NSE5 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_CFG_W0_NSE5(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_CFG_W0_NSE5_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_CFG_W0_NSE5_MASK)
@@ -3487,8 +3487,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_CFG_W0_NSE6_MASK (0x8000000U)
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_CFG_W0_NSE6_SHIFT (27U)
 /*! NSE6 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_CFG_W0_NSE6(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_CFG_W0_NSE6_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_CFG_W0_NSE6_MASK)
@@ -3510,8 +3510,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_CFG_W0_NSE7_MASK (0x80000000U)
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_CFG_W0_NSE7_SHIFT (31U)
 /*! NSE7 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_CFG_W0_NSE7(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_CFG_W0_NSE7_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_CFG_W0_NSE7_MASK)
@@ -3523,8 +3523,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT0_MASK (0x1U)
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT0_SHIFT (0U)
 /*! BIT0 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT0(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT0_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT0_MASK)
@@ -3532,8 +3532,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT1_MASK (0x2U)
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT1_SHIFT (1U)
 /*! BIT1 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT1(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT1_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT1_MASK)
@@ -3541,8 +3541,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT2_MASK (0x4U)
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT2_SHIFT (2U)
 /*! BIT2 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT2(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT2_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT2_MASK)
@@ -3550,8 +3550,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT3_MASK (0x8U)
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT3_SHIFT (3U)
 /*! BIT3 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT3(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT3_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT3_MASK)
@@ -3559,8 +3559,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT4_MASK (0x10U)
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT4_SHIFT (4U)
 /*! BIT4 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT4(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT4_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT4_MASK)
@@ -3568,8 +3568,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT5_MASK (0x20U)
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT5_SHIFT (5U)
 /*! BIT5 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT5(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT5_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT5_MASK)
@@ -3577,8 +3577,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT6_MASK (0x40U)
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT6_SHIFT (6U)
 /*! BIT6 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT6(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT6_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT6_MASK)
@@ -3586,8 +3586,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT7_MASK (0x80U)
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT7_SHIFT (7U)
 /*! BIT7 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT7(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT7_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT7_MASK)
@@ -3595,8 +3595,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT8_MASK (0x100U)
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT8_SHIFT (8U)
 /*! BIT8 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT8(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT8_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT8_MASK)
@@ -3604,8 +3604,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT9_MASK (0x200U)
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT9_SHIFT (9U)
 /*! BIT9 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT9(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT9_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT9_MASK)
@@ -3613,8 +3613,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT10_MASK (0x400U)
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT10_SHIFT (10U)
 /*! BIT10 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT10(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT10_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT10_MASK)
@@ -3622,8 +3622,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT11_MASK (0x800U)
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT11_SHIFT (11U)
 /*! BIT11 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT11(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT11_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT11_MASK)
@@ -3631,8 +3631,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT12_MASK (0x1000U)
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT12_SHIFT (12U)
 /*! BIT12 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT12(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT12_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT12_MASK)
@@ -3640,8 +3640,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT13_MASK (0x2000U)
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT13_SHIFT (13U)
 /*! BIT13 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT13(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT13_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT13_MASK)
@@ -3649,8 +3649,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT14_MASK (0x4000U)
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT14_SHIFT (14U)
 /*! BIT14 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT14(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT14_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT14_MASK)
@@ -3658,8 +3658,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT15_MASK (0x8000U)
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT15_SHIFT (15U)
 /*! BIT15 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT15(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT15_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT15_MASK)
@@ -3667,8 +3667,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT16_MASK (0x10000U)
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT16_SHIFT (16U)
 /*! BIT16 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT16(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT16_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT16_MASK)
@@ -3676,8 +3676,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT17_MASK (0x20000U)
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT17_SHIFT (17U)
 /*! BIT17 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT17(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT17_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT17_MASK)
@@ -3685,8 +3685,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT18_MASK (0x40000U)
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT18_SHIFT (18U)
 /*! BIT18 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT18(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT18_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT18_MASK)
@@ -3694,8 +3694,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT19_MASK (0x80000U)
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT19_SHIFT (19U)
 /*! BIT19 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT19(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT19_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT19_MASK)
@@ -3703,8 +3703,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT20_MASK (0x100000U)
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT20_SHIFT (20U)
 /*! BIT20 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT20(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT20_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT20_MASK)
@@ -3712,8 +3712,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT21_MASK (0x200000U)
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT21_SHIFT (21U)
 /*! BIT21 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT21(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT21_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT21_MASK)
@@ -3721,8 +3721,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT22_MASK (0x400000U)
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT22_SHIFT (22U)
 /*! BIT22 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT22(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT22_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT22_MASK)
@@ -3730,8 +3730,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT23_MASK (0x800000U)
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT23_SHIFT (23U)
 /*! BIT23 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT23(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT23_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT23_MASK)
@@ -3739,8 +3739,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT24_MASK (0x1000000U)
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT24_SHIFT (24U)
 /*! BIT24 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT24(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT24_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT24_MASK)
@@ -3748,8 +3748,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT25_MASK (0x2000000U)
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT25_SHIFT (25U)
 /*! BIT25 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT25(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT25_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT25_MASK)
@@ -3757,8 +3757,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT26_MASK (0x4000000U)
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT26_SHIFT (26U)
 /*! BIT26 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT26(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT26_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT26_MASK)
@@ -3766,8 +3766,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT27_MASK (0x8000000U)
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT27_SHIFT (27U)
 /*! BIT27 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT27(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT27_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT27_MASK)
@@ -3775,8 +3775,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT28_MASK (0x10000000U)
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT28_SHIFT (28U)
 /*! BIT28 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT28(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT28_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT28_MASK)
@@ -3784,8 +3784,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT29_MASK (0x20000000U)
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT29_SHIFT (29U)
 /*! BIT29 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT29(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT29_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT29_MASK)
@@ -3793,8 +3793,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT30_MASK (0x40000000U)
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT30_SHIFT (30U)
 /*! BIT30 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT30(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT30_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT30_MASK)
@@ -3802,8 +3802,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT31_MASK (0x80000000U)
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT31_SHIFT (31U)
 /*! BIT31 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT31(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT31_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM4_MEM0_BLK_NSE_W0_BIT31_MASK)
@@ -3829,8 +3829,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_CFG_W0_NSE0_MASK (0x8U)
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_CFG_W0_NSE0_SHIFT (3U)
 /*! NSE0 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_CFG_W0_NSE0(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_CFG_W0_NSE0_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_CFG_W0_NSE0_MASK)
@@ -3852,8 +3852,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_CFG_W0_NSE1_MASK (0x80U)
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_CFG_W0_NSE1_SHIFT (7U)
 /*! NSE1 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_CFG_W0_NSE1(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_CFG_W0_NSE1_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_CFG_W0_NSE1_MASK)
@@ -3875,8 +3875,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_CFG_W0_NSE2_MASK (0x800U)
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_CFG_W0_NSE2_SHIFT (11U)
 /*! NSE2 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_CFG_W0_NSE2(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_CFG_W0_NSE2_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_CFG_W0_NSE2_MASK)
@@ -3898,8 +3898,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_CFG_W0_NSE3_MASK (0x8000U)
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_CFG_W0_NSE3_SHIFT (15U)
 /*! NSE3 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_CFG_W0_NSE3(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_CFG_W0_NSE3_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_CFG_W0_NSE3_MASK)
@@ -3921,8 +3921,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_CFG_W0_NSE4_MASK (0x80000U)
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_CFG_W0_NSE4_SHIFT (19U)
 /*! NSE4 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_CFG_W0_NSE4(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_CFG_W0_NSE4_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_CFG_W0_NSE4_MASK)
@@ -3944,8 +3944,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_CFG_W0_NSE5_MASK (0x800000U)
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_CFG_W0_NSE5_SHIFT (23U)
 /*! NSE5 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_CFG_W0_NSE5(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_CFG_W0_NSE5_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_CFG_W0_NSE5_MASK)
@@ -3967,8 +3967,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_CFG_W0_NSE6_MASK (0x8000000U)
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_CFG_W0_NSE6_SHIFT (27U)
 /*! NSE6 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_CFG_W0_NSE6(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_CFG_W0_NSE6_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_CFG_W0_NSE6_MASK)
@@ -3990,8 +3990,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_CFG_W0_NSE7_MASK (0x80000000U)
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_CFG_W0_NSE7_SHIFT (31U)
 /*! NSE7 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_CFG_W0_NSE7(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_CFG_W0_NSE7_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_CFG_W0_NSE7_MASK)
@@ -4003,8 +4003,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT0_MASK (0x1U)
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT0_SHIFT (0U)
 /*! BIT0 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT0(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT0_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT0_MASK)
@@ -4012,8 +4012,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT1_MASK (0x2U)
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT1_SHIFT (1U)
 /*! BIT1 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT1(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT1_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT1_MASK)
@@ -4021,8 +4021,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT2_MASK (0x4U)
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT2_SHIFT (2U)
 /*! BIT2 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT2(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT2_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT2_MASK)
@@ -4030,8 +4030,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT3_MASK (0x8U)
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT3_SHIFT (3U)
 /*! BIT3 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT3(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT3_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT3_MASK)
@@ -4039,8 +4039,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT4_MASK (0x10U)
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT4_SHIFT (4U)
 /*! BIT4 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT4(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT4_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT4_MASK)
@@ -4048,8 +4048,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT5_MASK (0x20U)
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT5_SHIFT (5U)
 /*! BIT5 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT5(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT5_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT5_MASK)
@@ -4057,8 +4057,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT6_MASK (0x40U)
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT6_SHIFT (6U)
 /*! BIT6 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT6(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT6_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT6_MASK)
@@ -4066,8 +4066,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT7_MASK (0x80U)
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT7_SHIFT (7U)
 /*! BIT7 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT7(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT7_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT7_MASK)
@@ -4075,8 +4075,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT8_MASK (0x100U)
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT8_SHIFT (8U)
 /*! BIT8 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT8(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT8_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT8_MASK)
@@ -4084,8 +4084,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT9_MASK (0x200U)
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT9_SHIFT (9U)
 /*! BIT9 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT9(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT9_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT9_MASK)
@@ -4093,8 +4093,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT10_MASK (0x400U)
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT10_SHIFT (10U)
 /*! BIT10 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT10(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT10_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT10_MASK)
@@ -4102,8 +4102,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT11_MASK (0x800U)
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT11_SHIFT (11U)
 /*! BIT11 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT11(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT11_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT11_MASK)
@@ -4111,8 +4111,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT12_MASK (0x1000U)
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT12_SHIFT (12U)
 /*! BIT12 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT12(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT12_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT12_MASK)
@@ -4120,8 +4120,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT13_MASK (0x2000U)
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT13_SHIFT (13U)
 /*! BIT13 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT13(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT13_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT13_MASK)
@@ -4129,8 +4129,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT14_MASK (0x4000U)
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT14_SHIFT (14U)
 /*! BIT14 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT14(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT14_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT14_MASK)
@@ -4138,8 +4138,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT15_MASK (0x8000U)
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT15_SHIFT (15U)
 /*! BIT15 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT15(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT15_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT15_MASK)
@@ -4147,8 +4147,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT16_MASK (0x10000U)
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT16_SHIFT (16U)
 /*! BIT16 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT16(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT16_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT16_MASK)
@@ -4156,8 +4156,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT17_MASK (0x20000U)
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT17_SHIFT (17U)
 /*! BIT17 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT17(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT17_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT17_MASK)
@@ -4165,8 +4165,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT18_MASK (0x40000U)
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT18_SHIFT (18U)
 /*! BIT18 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT18(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT18_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT18_MASK)
@@ -4174,8 +4174,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT19_MASK (0x80000U)
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT19_SHIFT (19U)
 /*! BIT19 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT19(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT19_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT19_MASK)
@@ -4183,8 +4183,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT20_MASK (0x100000U)
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT20_SHIFT (20U)
 /*! BIT20 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT20(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT20_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT20_MASK)
@@ -4192,8 +4192,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT21_MASK (0x200000U)
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT21_SHIFT (21U)
 /*! BIT21 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT21(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT21_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT21_MASK)
@@ -4201,8 +4201,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT22_MASK (0x400000U)
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT22_SHIFT (22U)
 /*! BIT22 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT22(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT22_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT22_MASK)
@@ -4210,8 +4210,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT23_MASK (0x800000U)
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT23_SHIFT (23U)
 /*! BIT23 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT23(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT23_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT23_MASK)
@@ -4219,8 +4219,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT24_MASK (0x1000000U)
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT24_SHIFT (24U)
 /*! BIT24 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT24(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT24_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT24_MASK)
@@ -4228,8 +4228,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT25_MASK (0x2000000U)
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT25_SHIFT (25U)
 /*! BIT25 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT25(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT25_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT25_MASK)
@@ -4237,8 +4237,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT26_MASK (0x4000000U)
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT26_SHIFT (26U)
 /*! BIT26 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT26(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT26_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT26_MASK)
@@ -4246,8 +4246,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT27_MASK (0x8000000U)
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT27_SHIFT (27U)
 /*! BIT27 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT27(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT27_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT27_MASK)
@@ -4255,8 +4255,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT28_MASK (0x10000000U)
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT28_SHIFT (28U)
 /*! BIT28 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT28(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT28_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT28_MASK)
@@ -4264,8 +4264,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT29_MASK (0x20000000U)
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT29_SHIFT (29U)
 /*! BIT29 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT29(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT29_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT29_MASK)
@@ -4273,8 +4273,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT30_MASK (0x40000000U)
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT30_SHIFT (30U)
 /*! BIT30 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT30(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT30_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT30_MASK)
@@ -4282,8 +4282,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT31_MASK (0x80000000U)
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT31_SHIFT (31U)
 /*! BIT31 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT31(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT31_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM5_MEM0_BLK_NSE_W0_BIT31_MASK)
@@ -4309,8 +4309,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_CFG_W0_NSE0_MASK (0x8U)
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_CFG_W0_NSE0_SHIFT (3U)
 /*! NSE0 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_CFG_W0_NSE0(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_CFG_W0_NSE0_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_CFG_W0_NSE0_MASK)
@@ -4332,8 +4332,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_CFG_W0_NSE1_MASK (0x80U)
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_CFG_W0_NSE1_SHIFT (7U)
 /*! NSE1 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_CFG_W0_NSE1(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_CFG_W0_NSE1_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_CFG_W0_NSE1_MASK)
@@ -4355,8 +4355,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_CFG_W0_NSE2_MASK (0x800U)
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_CFG_W0_NSE2_SHIFT (11U)
 /*! NSE2 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_CFG_W0_NSE2(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_CFG_W0_NSE2_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_CFG_W0_NSE2_MASK)
@@ -4378,8 +4378,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_CFG_W0_NSE3_MASK (0x8000U)
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_CFG_W0_NSE3_SHIFT (15U)
 /*! NSE3 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_CFG_W0_NSE3(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_CFG_W0_NSE3_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_CFG_W0_NSE3_MASK)
@@ -4401,8 +4401,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_CFG_W0_NSE4_MASK (0x80000U)
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_CFG_W0_NSE4_SHIFT (19U)
 /*! NSE4 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_CFG_W0_NSE4(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_CFG_W0_NSE4_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_CFG_W0_NSE4_MASK)
@@ -4424,8 +4424,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_CFG_W0_NSE5_MASK (0x800000U)
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_CFG_W0_NSE5_SHIFT (23U)
 /*! NSE5 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_CFG_W0_NSE5(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_CFG_W0_NSE5_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_CFG_W0_NSE5_MASK)
@@ -4447,8 +4447,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_CFG_W0_NSE6_MASK (0x8000000U)
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_CFG_W0_NSE6_SHIFT (27U)
 /*! NSE6 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_CFG_W0_NSE6(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_CFG_W0_NSE6_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_CFG_W0_NSE6_MASK)
@@ -4470,8 +4470,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_CFG_W0_NSE7_MASK (0x80000000U)
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_CFG_W0_NSE7_SHIFT (31U)
 /*! NSE7 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_CFG_W0_NSE7(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_CFG_W0_NSE7_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_CFG_W0_NSE7_MASK)
@@ -4483,8 +4483,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT0_MASK (0x1U)
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT0_SHIFT (0U)
 /*! BIT0 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT0(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT0_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT0_MASK)
@@ -4492,8 +4492,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT1_MASK (0x2U)
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT1_SHIFT (1U)
 /*! BIT1 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT1(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT1_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT1_MASK)
@@ -4501,8 +4501,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT2_MASK (0x4U)
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT2_SHIFT (2U)
 /*! BIT2 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT2(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT2_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT2_MASK)
@@ -4510,8 +4510,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT3_MASK (0x8U)
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT3_SHIFT (3U)
 /*! BIT3 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT3(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT3_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT3_MASK)
@@ -4519,8 +4519,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT4_MASK (0x10U)
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT4_SHIFT (4U)
 /*! BIT4 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT4(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT4_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT4_MASK)
@@ -4528,8 +4528,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT5_MASK (0x20U)
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT5_SHIFT (5U)
 /*! BIT5 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT5(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT5_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT5_MASK)
@@ -4537,8 +4537,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT6_MASK (0x40U)
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT6_SHIFT (6U)
 /*! BIT6 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT6(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT6_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT6_MASK)
@@ -4546,8 +4546,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT7_MASK (0x80U)
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT7_SHIFT (7U)
 /*! BIT7 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT7(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT7_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT7_MASK)
@@ -4555,8 +4555,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT8_MASK (0x100U)
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT8_SHIFT (8U)
 /*! BIT8 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT8(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT8_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT8_MASK)
@@ -4564,8 +4564,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT9_MASK (0x200U)
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT9_SHIFT (9U)
 /*! BIT9 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT9(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT9_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT9_MASK)
@@ -4573,8 +4573,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT10_MASK (0x400U)
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT10_SHIFT (10U)
 /*! BIT10 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT10(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT10_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT10_MASK)
@@ -4582,8 +4582,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT11_MASK (0x800U)
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT11_SHIFT (11U)
 /*! BIT11 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT11(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT11_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT11_MASK)
@@ -4591,8 +4591,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT12_MASK (0x1000U)
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT12_SHIFT (12U)
 /*! BIT12 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT12(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT12_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT12_MASK)
@@ -4600,8 +4600,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT13_MASK (0x2000U)
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT13_SHIFT (13U)
 /*! BIT13 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT13(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT13_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT13_MASK)
@@ -4609,8 +4609,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT14_MASK (0x4000U)
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT14_SHIFT (14U)
 /*! BIT14 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT14(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT14_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT14_MASK)
@@ -4618,8 +4618,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT15_MASK (0x8000U)
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT15_SHIFT (15U)
 /*! BIT15 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT15(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT15_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT15_MASK)
@@ -4627,8 +4627,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT16_MASK (0x10000U)
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT16_SHIFT (16U)
 /*! BIT16 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT16(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT16_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT16_MASK)
@@ -4636,8 +4636,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT17_MASK (0x20000U)
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT17_SHIFT (17U)
 /*! BIT17 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT17(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT17_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT17_MASK)
@@ -4645,8 +4645,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT18_MASK (0x40000U)
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT18_SHIFT (18U)
 /*! BIT18 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT18(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT18_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT18_MASK)
@@ -4654,8 +4654,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT19_MASK (0x80000U)
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT19_SHIFT (19U)
 /*! BIT19 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT19(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT19_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT19_MASK)
@@ -4663,8 +4663,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT20_MASK (0x100000U)
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT20_SHIFT (20U)
 /*! BIT20 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT20(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT20_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT20_MASK)
@@ -4672,8 +4672,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT21_MASK (0x200000U)
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT21_SHIFT (21U)
 /*! BIT21 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT21(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT21_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT21_MASK)
@@ -4681,8 +4681,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT22_MASK (0x400000U)
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT22_SHIFT (22U)
 /*! BIT22 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT22(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT22_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT22_MASK)
@@ -4690,8 +4690,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT23_MASK (0x800000U)
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT23_SHIFT (23U)
 /*! BIT23 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT23(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT23_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT23_MASK)
@@ -4699,8 +4699,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT24_MASK (0x1000000U)
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT24_SHIFT (24U)
 /*! BIT24 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT24(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT24_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT24_MASK)
@@ -4708,8 +4708,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT25_MASK (0x2000000U)
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT25_SHIFT (25U)
 /*! BIT25 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT25(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT25_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT25_MASK)
@@ -4717,8 +4717,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT26_MASK (0x4000000U)
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT26_SHIFT (26U)
 /*! BIT26 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT26(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT26_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT26_MASK)
@@ -4726,8 +4726,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT27_MASK (0x8000000U)
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT27_SHIFT (27U)
 /*! BIT27 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT27(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT27_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT27_MASK)
@@ -4735,8 +4735,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT28_MASK (0x10000000U)
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT28_SHIFT (28U)
 /*! BIT28 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT28(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT28_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT28_MASK)
@@ -4744,8 +4744,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT29_MASK (0x20000000U)
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT29_SHIFT (29U)
 /*! BIT29 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT29(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT29_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT29_MASK)
@@ -4753,8 +4753,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT30_MASK (0x40000000U)
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT30_SHIFT (30U)
 /*! BIT30 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT30(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT30_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT30_MASK)
@@ -4762,8 +4762,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT31_MASK (0x80000000U)
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT31_SHIFT (31U)
 /*! BIT31 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT31(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT31_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM6_MEM0_BLK_NSE_W0_BIT31_MASK)
@@ -4789,8 +4789,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_CFG_W0_NSE0_MASK (0x8U)
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_CFG_W0_NSE0_SHIFT (3U)
 /*! NSE0 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_CFG_W0_NSE0(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_CFG_W0_NSE0_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_CFG_W0_NSE0_MASK)
@@ -4812,8 +4812,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_CFG_W0_NSE1_MASK (0x80U)
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_CFG_W0_NSE1_SHIFT (7U)
 /*! NSE1 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_CFG_W0_NSE1(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_CFG_W0_NSE1_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_CFG_W0_NSE1_MASK)
@@ -4835,8 +4835,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_CFG_W0_NSE2_MASK (0x800U)
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_CFG_W0_NSE2_SHIFT (11U)
 /*! NSE2 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_CFG_W0_NSE2(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_CFG_W0_NSE2_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_CFG_W0_NSE2_MASK)
@@ -4858,8 +4858,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_CFG_W0_NSE3_MASK (0x8000U)
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_CFG_W0_NSE3_SHIFT (15U)
 /*! NSE3 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_CFG_W0_NSE3(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_CFG_W0_NSE3_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_CFG_W0_NSE3_MASK)
@@ -4881,8 +4881,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_CFG_W0_NSE4_MASK (0x80000U)
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_CFG_W0_NSE4_SHIFT (19U)
 /*! NSE4 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_CFG_W0_NSE4(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_CFG_W0_NSE4_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_CFG_W0_NSE4_MASK)
@@ -4904,8 +4904,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_CFG_W0_NSE5_MASK (0x800000U)
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_CFG_W0_NSE5_SHIFT (23U)
 /*! NSE5 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_CFG_W0_NSE5(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_CFG_W0_NSE5_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_CFG_W0_NSE5_MASK)
@@ -4927,8 +4927,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_CFG_W0_NSE6_MASK (0x8000000U)
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_CFG_W0_NSE6_SHIFT (27U)
 /*! NSE6 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_CFG_W0_NSE6(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_CFG_W0_NSE6_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_CFG_W0_NSE6_MASK)
@@ -4950,8 +4950,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_CFG_W0_NSE7_MASK (0x80000000U)
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_CFG_W0_NSE7_SHIFT (31U)
 /*! NSE7 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_CFG_W0_NSE7(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_CFG_W0_NSE7_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_CFG_W0_NSE7_MASK)
@@ -4963,8 +4963,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT0_MASK (0x1U)
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT0_SHIFT (0U)
 /*! BIT0 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT0(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT0_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT0_MASK)
@@ -4972,8 +4972,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT1_MASK (0x2U)
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT1_SHIFT (1U)
 /*! BIT1 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT1(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT1_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT1_MASK)
@@ -4981,8 +4981,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT2_MASK (0x4U)
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT2_SHIFT (2U)
 /*! BIT2 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT2(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT2_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT2_MASK)
@@ -4990,8 +4990,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT3_MASK (0x8U)
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT3_SHIFT (3U)
 /*! BIT3 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT3(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT3_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT3_MASK)
@@ -4999,8 +4999,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT4_MASK (0x10U)
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT4_SHIFT (4U)
 /*! BIT4 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT4(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT4_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT4_MASK)
@@ -5008,8 +5008,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT5_MASK (0x20U)
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT5_SHIFT (5U)
 /*! BIT5 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT5(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT5_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT5_MASK)
@@ -5017,8 +5017,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT6_MASK (0x40U)
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT6_SHIFT (6U)
 /*! BIT6 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT6(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT6_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT6_MASK)
@@ -5026,8 +5026,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT7_MASK (0x80U)
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT7_SHIFT (7U)
 /*! BIT7 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT7(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT7_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT7_MASK)
@@ -5035,8 +5035,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT8_MASK (0x100U)
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT8_SHIFT (8U)
 /*! BIT8 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT8(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT8_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT8_MASK)
@@ -5044,8 +5044,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT9_MASK (0x200U)
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT9_SHIFT (9U)
 /*! BIT9 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT9(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT9_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT9_MASK)
@@ -5053,8 +5053,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT10_MASK (0x400U)
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT10_SHIFT (10U)
 /*! BIT10 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT10(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT10_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT10_MASK)
@@ -5062,8 +5062,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT11_MASK (0x800U)
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT11_SHIFT (11U)
 /*! BIT11 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT11(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT11_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT11_MASK)
@@ -5071,8 +5071,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT12_MASK (0x1000U)
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT12_SHIFT (12U)
 /*! BIT12 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT12(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT12_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT12_MASK)
@@ -5080,8 +5080,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT13_MASK (0x2000U)
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT13_SHIFT (13U)
 /*! BIT13 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT13(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT13_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT13_MASK)
@@ -5089,8 +5089,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT14_MASK (0x4000U)
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT14_SHIFT (14U)
 /*! BIT14 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT14(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT14_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT14_MASK)
@@ -5098,8 +5098,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT15_MASK (0x8000U)
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT15_SHIFT (15U)
 /*! BIT15 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT15(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT15_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT15_MASK)
@@ -5107,8 +5107,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT16_MASK (0x10000U)
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT16_SHIFT (16U)
 /*! BIT16 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT16(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT16_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT16_MASK)
@@ -5116,8 +5116,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT17_MASK (0x20000U)
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT17_SHIFT (17U)
 /*! BIT17 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT17(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT17_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT17_MASK)
@@ -5125,8 +5125,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT18_MASK (0x40000U)
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT18_SHIFT (18U)
 /*! BIT18 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT18(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT18_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT18_MASK)
@@ -5134,8 +5134,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT19_MASK (0x80000U)
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT19_SHIFT (19U)
 /*! BIT19 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT19(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT19_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT19_MASK)
@@ -5143,8 +5143,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT20_MASK (0x100000U)
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT20_SHIFT (20U)
 /*! BIT20 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT20(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT20_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT20_MASK)
@@ -5152,8 +5152,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT21_MASK (0x200000U)
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT21_SHIFT (21U)
 /*! BIT21 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT21(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT21_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT21_MASK)
@@ -5161,8 +5161,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT22_MASK (0x400000U)
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT22_SHIFT (22U)
 /*! BIT22 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT22(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT22_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT22_MASK)
@@ -5170,8 +5170,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT23_MASK (0x800000U)
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT23_SHIFT (23U)
 /*! BIT23 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT23(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT23_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT23_MASK)
@@ -5179,8 +5179,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT24_MASK (0x1000000U)
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT24_SHIFT (24U)
 /*! BIT24 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT24(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT24_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT24_MASK)
@@ -5188,8 +5188,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT25_MASK (0x2000000U)
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT25_SHIFT (25U)
 /*! BIT25 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT25(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT25_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT25_MASK)
@@ -5197,8 +5197,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT26_MASK (0x4000000U)
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT26_SHIFT (26U)
 /*! BIT26 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT26(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT26_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT26_MASK)
@@ -5206,8 +5206,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT27_MASK (0x8000000U)
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT27_SHIFT (27U)
 /*! BIT27 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT27(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT27_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT27_MASK)
@@ -5215,8 +5215,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT28_MASK (0x10000000U)
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT28_SHIFT (28U)
 /*! BIT28 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT28(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT28_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT28_MASK)
@@ -5224,8 +5224,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT29_MASK (0x20000000U)
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT29_SHIFT (29U)
 /*! BIT29 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT29(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT29_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT29_MASK)
@@ -5233,8 +5233,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT30_MASK (0x40000000U)
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT30_SHIFT (30U)
 /*! BIT30 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT30(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT30_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT30_MASK)
@@ -5242,8 +5242,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT31_MASK (0x80000000U)
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT31_SHIFT (31U)
 /*! BIT31 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT31(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT31_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM7_MEM0_BLK_NSE_W0_BIT31_MASK)
@@ -5269,8 +5269,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_CFG_W0_NSE0_MASK (0x8U)
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_CFG_W0_NSE0_SHIFT (3U)
 /*! NSE0 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_CFG_W0_NSE0(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_CFG_W0_NSE0_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_CFG_W0_NSE0_MASK)
@@ -5292,8 +5292,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_CFG_W0_NSE1_MASK (0x80U)
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_CFG_W0_NSE1_SHIFT (7U)
 /*! NSE1 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_CFG_W0_NSE1(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_CFG_W0_NSE1_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_CFG_W0_NSE1_MASK)
@@ -5315,8 +5315,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_CFG_W0_NSE2_MASK (0x800U)
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_CFG_W0_NSE2_SHIFT (11U)
 /*! NSE2 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_CFG_W0_NSE2(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_CFG_W0_NSE2_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_CFG_W0_NSE2_MASK)
@@ -5338,8 +5338,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_CFG_W0_NSE3_MASK (0x8000U)
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_CFG_W0_NSE3_SHIFT (15U)
 /*! NSE3 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_CFG_W0_NSE3(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_CFG_W0_NSE3_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_CFG_W0_NSE3_MASK)
@@ -5361,8 +5361,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_CFG_W0_NSE4_MASK (0x80000U)
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_CFG_W0_NSE4_SHIFT (19U)
 /*! NSE4 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_CFG_W0_NSE4(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_CFG_W0_NSE4_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_CFG_W0_NSE4_MASK)
@@ -5384,8 +5384,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_CFG_W0_NSE5_MASK (0x800000U)
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_CFG_W0_NSE5_SHIFT (23U)
 /*! NSE5 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_CFG_W0_NSE5(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_CFG_W0_NSE5_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_CFG_W0_NSE5_MASK)
@@ -5407,8 +5407,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_CFG_W0_NSE6_MASK (0x8000000U)
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_CFG_W0_NSE6_SHIFT (27U)
 /*! NSE6 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_CFG_W0_NSE6(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_CFG_W0_NSE6_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_CFG_W0_NSE6_MASK)
@@ -5430,8 +5430,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_CFG_W0_NSE7_MASK (0x80000000U)
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_CFG_W0_NSE7_SHIFT (31U)
 /*! NSE7 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_CFG_W0_NSE7(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_CFG_W0_NSE7_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_CFG_W0_NSE7_MASK)
@@ -5443,8 +5443,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT0_MASK (0x1U)
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT0_SHIFT (0U)
 /*! BIT0 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT0(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT0_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT0_MASK)
@@ -5452,8 +5452,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT1_MASK (0x2U)
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT1_SHIFT (1U)
 /*! BIT1 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT1(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT1_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT1_MASK)
@@ -5461,8 +5461,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT2_MASK (0x4U)
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT2_SHIFT (2U)
 /*! BIT2 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT2(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT2_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT2_MASK)
@@ -5470,8 +5470,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT3_MASK (0x8U)
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT3_SHIFT (3U)
 /*! BIT3 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT3(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT3_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT3_MASK)
@@ -5479,8 +5479,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT4_MASK (0x10U)
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT4_SHIFT (4U)
 /*! BIT4 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT4(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT4_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT4_MASK)
@@ -5488,8 +5488,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT5_MASK (0x20U)
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT5_SHIFT (5U)
 /*! BIT5 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT5(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT5_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT5_MASK)
@@ -5497,8 +5497,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT6_MASK (0x40U)
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT6_SHIFT (6U)
 /*! BIT6 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT6(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT6_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT6_MASK)
@@ -5506,8 +5506,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT7_MASK (0x80U)
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT7_SHIFT (7U)
 /*! BIT7 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT7(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT7_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT7_MASK)
@@ -5515,8 +5515,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT8_MASK (0x100U)
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT8_SHIFT (8U)
 /*! BIT8 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT8(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT8_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT8_MASK)
@@ -5524,8 +5524,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT9_MASK (0x200U)
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT9_SHIFT (9U)
 /*! BIT9 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT9(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT9_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT9_MASK)
@@ -5533,8 +5533,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT10_MASK (0x400U)
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT10_SHIFT (10U)
 /*! BIT10 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT10(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT10_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT10_MASK)
@@ -5542,8 +5542,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT11_MASK (0x800U)
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT11_SHIFT (11U)
 /*! BIT11 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT11(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT11_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT11_MASK)
@@ -5551,8 +5551,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT12_MASK (0x1000U)
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT12_SHIFT (12U)
 /*! BIT12 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT12(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT12_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT12_MASK)
@@ -5560,8 +5560,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT13_MASK (0x2000U)
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT13_SHIFT (13U)
 /*! BIT13 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT13(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT13_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT13_MASK)
@@ -5569,8 +5569,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT14_MASK (0x4000U)
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT14_SHIFT (14U)
 /*! BIT14 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT14(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT14_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT14_MASK)
@@ -5578,8 +5578,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT15_MASK (0x8000U)
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT15_SHIFT (15U)
 /*! BIT15 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT15(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT15_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT15_MASK)
@@ -5587,8 +5587,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT16_MASK (0x10000U)
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT16_SHIFT (16U)
 /*! BIT16 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT16(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT16_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT16_MASK)
@@ -5596,8 +5596,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT17_MASK (0x20000U)
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT17_SHIFT (17U)
 /*! BIT17 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT17(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT17_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT17_MASK)
@@ -5605,8 +5605,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT18_MASK (0x40000U)
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT18_SHIFT (18U)
 /*! BIT18 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT18(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT18_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT18_MASK)
@@ -5614,8 +5614,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT19_MASK (0x80000U)
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT19_SHIFT (19U)
 /*! BIT19 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT19(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT19_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT19_MASK)
@@ -5623,8 +5623,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT20_MASK (0x100000U)
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT20_SHIFT (20U)
 /*! BIT20 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT20(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT20_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT20_MASK)
@@ -5632,8 +5632,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT21_MASK (0x200000U)
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT21_SHIFT (21U)
 /*! BIT21 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT21(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT21_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT21_MASK)
@@ -5641,8 +5641,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT22_MASK (0x400000U)
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT22_SHIFT (22U)
 /*! BIT22 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT22(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT22_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT22_MASK)
@@ -5650,8 +5650,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT23_MASK (0x800000U)
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT23_SHIFT (23U)
 /*! BIT23 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT23(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT23_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT23_MASK)
@@ -5659,8 +5659,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT24_MASK (0x1000000U)
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT24_SHIFT (24U)
 /*! BIT24 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT24(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT24_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT24_MASK)
@@ -5668,8 +5668,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT25_MASK (0x2000000U)
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT25_SHIFT (25U)
 /*! BIT25 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT25(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT25_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT25_MASK)
@@ -5677,8 +5677,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT26_MASK (0x4000000U)
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT26_SHIFT (26U)
 /*! BIT26 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT26(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT26_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT26_MASK)
@@ -5686,8 +5686,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT27_MASK (0x8000000U)
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT27_SHIFT (27U)
 /*! BIT27 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT27(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT27_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT27_MASK)
@@ -5695,8 +5695,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT28_MASK (0x10000000U)
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT28_SHIFT (28U)
 /*! BIT28 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT28(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT28_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT28_MASK)
@@ -5704,8 +5704,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT29_MASK (0x20000000U)
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT29_SHIFT (29U)
 /*! BIT29 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT29(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT29_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT29_MASK)
@@ -5713,8 +5713,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT30_MASK (0x40000000U)
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT30_SHIFT (30U)
 /*! BIT30 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT30(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT30_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT30_MASK)
@@ -5722,8 +5722,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT31_MASK (0x80000000U)
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT31_SHIFT (31U)
 /*! BIT31 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT31(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT31_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM8_MEM0_BLK_NSE_W0_BIT31_MASK)
@@ -5749,8 +5749,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_CFG_W0_NSE0_MASK (0x8U)
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_CFG_W0_NSE0_SHIFT (3U)
 /*! NSE0 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_CFG_W0_NSE0(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_CFG_W0_NSE0_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_CFG_W0_NSE0_MASK)
@@ -5772,8 +5772,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_CFG_W0_NSE1_MASK (0x80U)
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_CFG_W0_NSE1_SHIFT (7U)
 /*! NSE1 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_CFG_W0_NSE1(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_CFG_W0_NSE1_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_CFG_W0_NSE1_MASK)
@@ -5795,8 +5795,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_CFG_W0_NSE2_MASK (0x800U)
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_CFG_W0_NSE2_SHIFT (11U)
 /*! NSE2 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_CFG_W0_NSE2(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_CFG_W0_NSE2_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_CFG_W0_NSE2_MASK)
@@ -5818,8 +5818,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_CFG_W0_NSE3_MASK (0x8000U)
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_CFG_W0_NSE3_SHIFT (15U)
 /*! NSE3 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_CFG_W0_NSE3(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_CFG_W0_NSE3_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_CFG_W0_NSE3_MASK)
@@ -5841,8 +5841,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_CFG_W0_NSE4_MASK (0x80000U)
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_CFG_W0_NSE4_SHIFT (19U)
 /*! NSE4 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_CFG_W0_NSE4(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_CFG_W0_NSE4_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_CFG_W0_NSE4_MASK)
@@ -5864,8 +5864,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_CFG_W0_NSE5_MASK (0x800000U)
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_CFG_W0_NSE5_SHIFT (23U)
 /*! NSE5 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_CFG_W0_NSE5(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_CFG_W0_NSE5_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_CFG_W0_NSE5_MASK)
@@ -5887,8 +5887,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_CFG_W0_NSE6_MASK (0x8000000U)
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_CFG_W0_NSE6_SHIFT (27U)
 /*! NSE6 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_CFG_W0_NSE6(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_CFG_W0_NSE6_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_CFG_W0_NSE6_MASK)
@@ -5910,8 +5910,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_CFG_W0_NSE7_MASK (0x80000000U)
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_CFG_W0_NSE7_SHIFT (31U)
 /*! NSE7 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_CFG_W0_NSE7(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_CFG_W0_NSE7_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_CFG_W0_NSE7_MASK)
@@ -5923,8 +5923,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT0_MASK (0x1U)
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT0_SHIFT (0U)
 /*! BIT0 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT0(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT0_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT0_MASK)
@@ -5932,8 +5932,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT1_MASK (0x2U)
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT1_SHIFT (1U)
 /*! BIT1 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT1(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT1_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT1_MASK)
@@ -5941,8 +5941,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT2_MASK (0x4U)
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT2_SHIFT (2U)
 /*! BIT2 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT2(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT2_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT2_MASK)
@@ -5950,8 +5950,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT3_MASK (0x8U)
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT3_SHIFT (3U)
 /*! BIT3 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT3(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT3_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT3_MASK)
@@ -5959,8 +5959,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT4_MASK (0x10U)
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT4_SHIFT (4U)
 /*! BIT4 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT4(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT4_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT4_MASK)
@@ -5968,8 +5968,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT5_MASK (0x20U)
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT5_SHIFT (5U)
 /*! BIT5 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT5(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT5_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT5_MASK)
@@ -5977,8 +5977,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT6_MASK (0x40U)
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT6_SHIFT (6U)
 /*! BIT6 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT6(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT6_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT6_MASK)
@@ -5986,8 +5986,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT7_MASK (0x80U)
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT7_SHIFT (7U)
 /*! BIT7 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT7(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT7_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT7_MASK)
@@ -5995,8 +5995,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT8_MASK (0x100U)
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT8_SHIFT (8U)
 /*! BIT8 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT8(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT8_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT8_MASK)
@@ -6004,8 +6004,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT9_MASK (0x200U)
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT9_SHIFT (9U)
 /*! BIT9 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT9(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT9_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT9_MASK)
@@ -6013,8 +6013,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT10_MASK (0x400U)
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT10_SHIFT (10U)
 /*! BIT10 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT10(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT10_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT10_MASK)
@@ -6022,8 +6022,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT11_MASK (0x800U)
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT11_SHIFT (11U)
 /*! BIT11 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT11(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT11_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT11_MASK)
@@ -6031,8 +6031,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT12_MASK (0x1000U)
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT12_SHIFT (12U)
 /*! BIT12 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT12(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT12_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT12_MASK)
@@ -6040,8 +6040,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT13_MASK (0x2000U)
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT13_SHIFT (13U)
 /*! BIT13 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT13(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT13_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT13_MASK)
@@ -6049,8 +6049,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT14_MASK (0x4000U)
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT14_SHIFT (14U)
 /*! BIT14 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT14(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT14_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT14_MASK)
@@ -6058,8 +6058,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT15_MASK (0x8000U)
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT15_SHIFT (15U)
 /*! BIT15 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT15(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT15_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT15_MASK)
@@ -6067,8 +6067,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT16_MASK (0x10000U)
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT16_SHIFT (16U)
 /*! BIT16 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT16(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT16_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT16_MASK)
@@ -6076,8 +6076,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT17_MASK (0x20000U)
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT17_SHIFT (17U)
 /*! BIT17 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT17(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT17_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT17_MASK)
@@ -6085,8 +6085,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT18_MASK (0x40000U)
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT18_SHIFT (18U)
 /*! BIT18 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT18(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT18_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT18_MASK)
@@ -6094,8 +6094,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT19_MASK (0x80000U)
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT19_SHIFT (19U)
 /*! BIT19 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT19(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT19_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT19_MASK)
@@ -6103,8 +6103,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT20_MASK (0x100000U)
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT20_SHIFT (20U)
 /*! BIT20 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT20(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT20_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT20_MASK)
@@ -6112,8 +6112,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT21_MASK (0x200000U)
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT21_SHIFT (21U)
 /*! BIT21 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT21(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT21_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT21_MASK)
@@ -6121,8 +6121,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT22_MASK (0x400000U)
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT22_SHIFT (22U)
 /*! BIT22 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT22(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT22_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT22_MASK)
@@ -6130,8 +6130,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT23_MASK (0x800000U)
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT23_SHIFT (23U)
 /*! BIT23 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT23(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT23_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT23_MASK)
@@ -6139,8 +6139,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT24_MASK (0x1000000U)
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT24_SHIFT (24U)
 /*! BIT24 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT24(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT24_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT24_MASK)
@@ -6148,8 +6148,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT25_MASK (0x2000000U)
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT25_SHIFT (25U)
 /*! BIT25 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT25(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT25_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT25_MASK)
@@ -6157,8 +6157,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT26_MASK (0x4000000U)
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT26_SHIFT (26U)
 /*! BIT26 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT26(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT26_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT26_MASK)
@@ -6166,8 +6166,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT27_MASK (0x8000000U)
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT27_SHIFT (27U)
 /*! BIT27 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT27(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT27_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT27_MASK)
@@ -6175,8 +6175,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT28_MASK (0x10000000U)
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT28_SHIFT (28U)
 /*! BIT28 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT28(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT28_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT28_MASK)
@@ -6184,8 +6184,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT29_MASK (0x20000000U)
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT29_SHIFT (29U)
 /*! BIT29 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT29(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT29_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT29_MASK)
@@ -6193,8 +6193,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT30_MASK (0x40000000U)
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT30_SHIFT (30U)
 /*! BIT30 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT30(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT30_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT30_MASK)
@@ -6202,8 +6202,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT31_MASK (0x80000000U)
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT31_SHIFT (31U)
 /*! BIT31 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT31(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT31_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM9_MEM0_BLK_NSE_W0_BIT31_MASK)
@@ -6229,8 +6229,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_CFG_W0_NSE0_MASK (0x8U)
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_CFG_W0_NSE0_SHIFT (3U)
 /*! NSE0 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_CFG_W0_NSE0(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_CFG_W0_NSE0_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_CFG_W0_NSE0_MASK)
@@ -6252,8 +6252,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_CFG_W0_NSE1_MASK (0x80U)
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_CFG_W0_NSE1_SHIFT (7U)
 /*! NSE1 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_CFG_W0_NSE1(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_CFG_W0_NSE1_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_CFG_W0_NSE1_MASK)
@@ -6275,8 +6275,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_CFG_W0_NSE2_MASK (0x800U)
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_CFG_W0_NSE2_SHIFT (11U)
 /*! NSE2 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_CFG_W0_NSE2(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_CFG_W0_NSE2_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_CFG_W0_NSE2_MASK)
@@ -6298,8 +6298,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_CFG_W0_NSE3_MASK (0x8000U)
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_CFG_W0_NSE3_SHIFT (15U)
 /*! NSE3 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_CFG_W0_NSE3(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_CFG_W0_NSE3_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_CFG_W0_NSE3_MASK)
@@ -6321,8 +6321,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_CFG_W0_NSE4_MASK (0x80000U)
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_CFG_W0_NSE4_SHIFT (19U)
 /*! NSE4 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_CFG_W0_NSE4(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_CFG_W0_NSE4_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_CFG_W0_NSE4_MASK)
@@ -6344,8 +6344,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_CFG_W0_NSE5_MASK (0x800000U)
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_CFG_W0_NSE5_SHIFT (23U)
 /*! NSE5 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_CFG_W0_NSE5(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_CFG_W0_NSE5_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_CFG_W0_NSE5_MASK)
@@ -6367,8 +6367,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_CFG_W0_NSE6_MASK (0x8000000U)
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_CFG_W0_NSE6_SHIFT (27U)
 /*! NSE6 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_CFG_W0_NSE6(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_CFG_W0_NSE6_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_CFG_W0_NSE6_MASK)
@@ -6390,8 +6390,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_CFG_W0_NSE7_MASK (0x80000000U)
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_CFG_W0_NSE7_SHIFT (31U)
 /*! NSE7 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_CFG_W0_NSE7(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_CFG_W0_NSE7_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_CFG_W0_NSE7_MASK)
@@ -6403,8 +6403,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT0_MASK (0x1U)
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT0_SHIFT (0U)
 /*! BIT0 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT0(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT0_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT0_MASK)
@@ -6412,8 +6412,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT1_MASK (0x2U)
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT1_SHIFT (1U)
 /*! BIT1 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT1(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT1_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT1_MASK)
@@ -6421,8 +6421,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT2_MASK (0x4U)
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT2_SHIFT (2U)
 /*! BIT2 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT2(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT2_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT2_MASK)
@@ -6430,8 +6430,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT3_MASK (0x8U)
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT3_SHIFT (3U)
 /*! BIT3 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT3(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT3_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT3_MASK)
@@ -6439,8 +6439,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT4_MASK (0x10U)
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT4_SHIFT (4U)
 /*! BIT4 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT4(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT4_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT4_MASK)
@@ -6448,8 +6448,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT5_MASK (0x20U)
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT5_SHIFT (5U)
 /*! BIT5 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT5(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT5_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT5_MASK)
@@ -6457,8 +6457,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT6_MASK (0x40U)
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT6_SHIFT (6U)
 /*! BIT6 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT6(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT6_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT6_MASK)
@@ -6466,8 +6466,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT7_MASK (0x80U)
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT7_SHIFT (7U)
 /*! BIT7 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT7(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT7_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT7_MASK)
@@ -6475,8 +6475,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT8_MASK (0x100U)
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT8_SHIFT (8U)
 /*! BIT8 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT8(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT8_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT8_MASK)
@@ -6484,8 +6484,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT9_MASK (0x200U)
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT9_SHIFT (9U)
 /*! BIT9 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT9(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT9_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT9_MASK)
@@ -6493,8 +6493,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT10_MASK (0x400U)
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT10_SHIFT (10U)
 /*! BIT10 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT10(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT10_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT10_MASK)
@@ -6502,8 +6502,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT11_MASK (0x800U)
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT11_SHIFT (11U)
 /*! BIT11 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT11(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT11_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT11_MASK)
@@ -6511,8 +6511,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT12_MASK (0x1000U)
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT12_SHIFT (12U)
 /*! BIT12 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT12(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT12_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT12_MASK)
@@ -6520,8 +6520,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT13_MASK (0x2000U)
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT13_SHIFT (13U)
 /*! BIT13 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT13(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT13_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT13_MASK)
@@ -6529,8 +6529,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT14_MASK (0x4000U)
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT14_SHIFT (14U)
 /*! BIT14 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT14(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT14_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT14_MASK)
@@ -6538,8 +6538,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT15_MASK (0x8000U)
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT15_SHIFT (15U)
 /*! BIT15 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT15(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT15_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT15_MASK)
@@ -6547,8 +6547,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT16_MASK (0x10000U)
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT16_SHIFT (16U)
 /*! BIT16 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT16(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT16_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT16_MASK)
@@ -6556,8 +6556,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT17_MASK (0x20000U)
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT17_SHIFT (17U)
 /*! BIT17 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT17(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT17_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT17_MASK)
@@ -6565,8 +6565,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT18_MASK (0x40000U)
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT18_SHIFT (18U)
 /*! BIT18 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT18(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT18_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT18_MASK)
@@ -6574,8 +6574,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT19_MASK (0x80000U)
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT19_SHIFT (19U)
 /*! BIT19 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT19(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT19_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT19_MASK)
@@ -6583,8 +6583,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT20_MASK (0x100000U)
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT20_SHIFT (20U)
 /*! BIT20 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT20(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT20_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT20_MASK)
@@ -6592,8 +6592,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT21_MASK (0x200000U)
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT21_SHIFT (21U)
 /*! BIT21 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT21(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT21_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT21_MASK)
@@ -6601,8 +6601,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT22_MASK (0x400000U)
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT22_SHIFT (22U)
 /*! BIT22 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT22(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT22_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT22_MASK)
@@ -6610,8 +6610,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT23_MASK (0x800000U)
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT23_SHIFT (23U)
 /*! BIT23 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT23(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT23_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT23_MASK)
@@ -6619,8 +6619,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT24_MASK (0x1000000U)
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT24_SHIFT (24U)
 /*! BIT24 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT24(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT24_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT24_MASK)
@@ -6628,8 +6628,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT25_MASK (0x2000000U)
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT25_SHIFT (25U)
 /*! BIT25 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT25(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT25_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT25_MASK)
@@ -6637,8 +6637,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT26_MASK (0x4000000U)
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT26_SHIFT (26U)
 /*! BIT26 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT26(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT26_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT26_MASK)
@@ -6646,8 +6646,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT27_MASK (0x8000000U)
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT27_SHIFT (27U)
 /*! BIT27 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT27(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT27_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT27_MASK)
@@ -6655,8 +6655,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT28_MASK (0x10000000U)
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT28_SHIFT (28U)
 /*! BIT28 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT28(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT28_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT28_MASK)
@@ -6664,8 +6664,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT29_MASK (0x20000000U)
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT29_SHIFT (29U)
 /*! BIT29 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT29(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT29_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT29_MASK)
@@ -6673,8 +6673,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT30_MASK (0x40000000U)
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT30_SHIFT (30U)
 /*! BIT30 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT30(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT30_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT30_MASK)
@@ -6682,8 +6682,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT31_MASK (0x80000000U)
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT31_SHIFT (31U)
 /*! BIT31 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT31(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT31_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM10_MEM0_BLK_NSE_W0_BIT31_MASK)
@@ -6709,8 +6709,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_CFG_W0_NSE0_MASK (0x8U)
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_CFG_W0_NSE0_SHIFT (3U)
 /*! NSE0 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_CFG_W0_NSE0(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_CFG_W0_NSE0_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_CFG_W0_NSE0_MASK)
@@ -6732,8 +6732,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_CFG_W0_NSE1_MASK (0x80U)
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_CFG_W0_NSE1_SHIFT (7U)
 /*! NSE1 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_CFG_W0_NSE1(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_CFG_W0_NSE1_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_CFG_W0_NSE1_MASK)
@@ -6755,8 +6755,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_CFG_W0_NSE2_MASK (0x800U)
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_CFG_W0_NSE2_SHIFT (11U)
 /*! NSE2 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_CFG_W0_NSE2(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_CFG_W0_NSE2_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_CFG_W0_NSE2_MASK)
@@ -6778,8 +6778,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_CFG_W0_NSE3_MASK (0x8000U)
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_CFG_W0_NSE3_SHIFT (15U)
 /*! NSE3 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_CFG_W0_NSE3(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_CFG_W0_NSE3_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_CFG_W0_NSE3_MASK)
@@ -6801,8 +6801,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_CFG_W0_NSE4_MASK (0x80000U)
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_CFG_W0_NSE4_SHIFT (19U)
 /*! NSE4 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_CFG_W0_NSE4(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_CFG_W0_NSE4_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_CFG_W0_NSE4_MASK)
@@ -6824,8 +6824,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_CFG_W0_NSE5_MASK (0x800000U)
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_CFG_W0_NSE5_SHIFT (23U)
 /*! NSE5 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_CFG_W0_NSE5(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_CFG_W0_NSE5_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_CFG_W0_NSE5_MASK)
@@ -6847,8 +6847,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_CFG_W0_NSE6_MASK (0x8000000U)
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_CFG_W0_NSE6_SHIFT (27U)
 /*! NSE6 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_CFG_W0_NSE6(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_CFG_W0_NSE6_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_CFG_W0_NSE6_MASK)
@@ -6870,8 +6870,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_CFG_W0_NSE7_MASK (0x80000000U)
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_CFG_W0_NSE7_SHIFT (31U)
 /*! NSE7 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_CFG_W0_NSE7(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_CFG_W0_NSE7_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_CFG_W0_NSE7_MASK)
@@ -6883,8 +6883,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT0_MASK (0x1U)
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT0_SHIFT (0U)
 /*! BIT0 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT0(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT0_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT0_MASK)
@@ -6892,8 +6892,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT1_MASK (0x2U)
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT1_SHIFT (1U)
 /*! BIT1 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT1(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT1_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT1_MASK)
@@ -6901,8 +6901,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT2_MASK (0x4U)
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT2_SHIFT (2U)
 /*! BIT2 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT2(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT2_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT2_MASK)
@@ -6910,8 +6910,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT3_MASK (0x8U)
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT3_SHIFT (3U)
 /*! BIT3 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT3(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT3_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT3_MASK)
@@ -6919,8 +6919,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT4_MASK (0x10U)
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT4_SHIFT (4U)
 /*! BIT4 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT4(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT4_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT4_MASK)
@@ -6928,8 +6928,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT5_MASK (0x20U)
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT5_SHIFT (5U)
 /*! BIT5 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT5(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT5_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT5_MASK)
@@ -6937,8 +6937,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT6_MASK (0x40U)
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT6_SHIFT (6U)
 /*! BIT6 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT6(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT6_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT6_MASK)
@@ -6946,8 +6946,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT7_MASK (0x80U)
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT7_SHIFT (7U)
 /*! BIT7 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT7(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT7_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT7_MASK)
@@ -6955,8 +6955,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT8_MASK (0x100U)
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT8_SHIFT (8U)
 /*! BIT8 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT8(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT8_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT8_MASK)
@@ -6964,8 +6964,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT9_MASK (0x200U)
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT9_SHIFT (9U)
 /*! BIT9 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT9(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT9_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT9_MASK)
@@ -6973,8 +6973,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT10_MASK (0x400U)
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT10_SHIFT (10U)
 /*! BIT10 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT10(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT10_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT10_MASK)
@@ -6982,8 +6982,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT11_MASK (0x800U)
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT11_SHIFT (11U)
 /*! BIT11 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT11(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT11_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT11_MASK)
@@ -6991,8 +6991,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT12_MASK (0x1000U)
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT12_SHIFT (12U)
 /*! BIT12 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT12(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT12_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT12_MASK)
@@ -7000,8 +7000,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT13_MASK (0x2000U)
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT13_SHIFT (13U)
 /*! BIT13 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT13(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT13_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT13_MASK)
@@ -7009,8 +7009,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT14_MASK (0x4000U)
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT14_SHIFT (14U)
 /*! BIT14 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT14(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT14_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT14_MASK)
@@ -7018,8 +7018,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT15_MASK (0x8000U)
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT15_SHIFT (15U)
 /*! BIT15 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT15(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT15_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT15_MASK)
@@ -7027,8 +7027,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT16_MASK (0x10000U)
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT16_SHIFT (16U)
 /*! BIT16 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT16(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT16_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT16_MASK)
@@ -7036,8 +7036,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT17_MASK (0x20000U)
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT17_SHIFT (17U)
 /*! BIT17 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT17(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT17_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT17_MASK)
@@ -7045,8 +7045,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT18_MASK (0x40000U)
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT18_SHIFT (18U)
 /*! BIT18 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT18(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT18_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT18_MASK)
@@ -7054,8 +7054,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT19_MASK (0x80000U)
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT19_SHIFT (19U)
 /*! BIT19 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT19(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT19_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT19_MASK)
@@ -7063,8 +7063,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT20_MASK (0x100000U)
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT20_SHIFT (20U)
 /*! BIT20 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT20(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT20_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT20_MASK)
@@ -7072,8 +7072,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT21_MASK (0x200000U)
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT21_SHIFT (21U)
 /*! BIT21 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT21(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT21_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT21_MASK)
@@ -7081,8 +7081,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT22_MASK (0x400000U)
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT22_SHIFT (22U)
 /*! BIT22 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT22(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT22_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT22_MASK)
@@ -7090,8 +7090,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT23_MASK (0x800000U)
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT23_SHIFT (23U)
 /*! BIT23 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT23(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT23_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT23_MASK)
@@ -7099,8 +7099,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT24_MASK (0x1000000U)
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT24_SHIFT (24U)
 /*! BIT24 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT24(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT24_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT24_MASK)
@@ -7108,8 +7108,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT25_MASK (0x2000000U)
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT25_SHIFT (25U)
 /*! BIT25 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT25(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT25_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT25_MASK)
@@ -7117,8 +7117,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT26_MASK (0x4000000U)
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT26_SHIFT (26U)
 /*! BIT26 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT26(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT26_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT26_MASK)
@@ -7126,8 +7126,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT27_MASK (0x8000000U)
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT27_SHIFT (27U)
 /*! BIT27 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT27(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT27_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT27_MASK)
@@ -7135,8 +7135,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT28_MASK (0x10000000U)
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT28_SHIFT (28U)
 /*! BIT28 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT28(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT28_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT28_MASK)
@@ -7144,8 +7144,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT29_MASK (0x20000000U)
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT29_SHIFT (29U)
 /*! BIT29 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT29(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT29_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT29_MASK)
@@ -7153,8 +7153,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT30_MASK (0x40000000U)
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT30_SHIFT (30U)
 /*! BIT30 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT30(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT30_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT30_MASK)
@@ -7162,8 +7162,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT31_MASK (0x80000000U)
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT31_SHIFT (31U)
 /*! BIT31 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT31(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT31_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM11_MEM0_BLK_NSE_W0_BIT31_MASK)
@@ -7189,8 +7189,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_CFG_W0_NSE0_MASK (0x8U)
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_CFG_W0_NSE0_SHIFT (3U)
 /*! NSE0 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_CFG_W0_NSE0(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_CFG_W0_NSE0_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_CFG_W0_NSE0_MASK)
@@ -7212,8 +7212,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_CFG_W0_NSE1_MASK (0x80U)
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_CFG_W0_NSE1_SHIFT (7U)
 /*! NSE1 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_CFG_W0_NSE1(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_CFG_W0_NSE1_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_CFG_W0_NSE1_MASK)
@@ -7235,8 +7235,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_CFG_W0_NSE2_MASK (0x800U)
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_CFG_W0_NSE2_SHIFT (11U)
 /*! NSE2 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_CFG_W0_NSE2(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_CFG_W0_NSE2_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_CFG_W0_NSE2_MASK)
@@ -7258,8 +7258,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_CFG_W0_NSE3_MASK (0x8000U)
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_CFG_W0_NSE3_SHIFT (15U)
 /*! NSE3 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_CFG_W0_NSE3(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_CFG_W0_NSE3_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_CFG_W0_NSE3_MASK)
@@ -7281,8 +7281,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_CFG_W0_NSE4_MASK (0x80000U)
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_CFG_W0_NSE4_SHIFT (19U)
 /*! NSE4 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_CFG_W0_NSE4(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_CFG_W0_NSE4_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_CFG_W0_NSE4_MASK)
@@ -7304,8 +7304,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_CFG_W0_NSE5_MASK (0x800000U)
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_CFG_W0_NSE5_SHIFT (23U)
 /*! NSE5 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_CFG_W0_NSE5(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_CFG_W0_NSE5_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_CFG_W0_NSE5_MASK)
@@ -7327,8 +7327,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_CFG_W0_NSE6_MASK (0x8000000U)
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_CFG_W0_NSE6_SHIFT (27U)
 /*! NSE6 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_CFG_W0_NSE6(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_CFG_W0_NSE6_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_CFG_W0_NSE6_MASK)
@@ -7350,8 +7350,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_CFG_W0_NSE7_MASK (0x80000000U)
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_CFG_W0_NSE7_SHIFT (31U)
 /*! NSE7 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_CFG_W0_NSE7(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_CFG_W0_NSE7_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_CFG_W0_NSE7_MASK)
@@ -7363,8 +7363,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT0_MASK (0x1U)
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT0_SHIFT (0U)
 /*! BIT0 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT0(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT0_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT0_MASK)
@@ -7372,8 +7372,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT1_MASK (0x2U)
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT1_SHIFT (1U)
 /*! BIT1 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT1(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT1_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT1_MASK)
@@ -7381,8 +7381,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT2_MASK (0x4U)
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT2_SHIFT (2U)
 /*! BIT2 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT2(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT2_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT2_MASK)
@@ -7390,8 +7390,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT3_MASK (0x8U)
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT3_SHIFT (3U)
 /*! BIT3 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT3(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT3_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT3_MASK)
@@ -7399,8 +7399,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT4_MASK (0x10U)
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT4_SHIFT (4U)
 /*! BIT4 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT4(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT4_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT4_MASK)
@@ -7408,8 +7408,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT5_MASK (0x20U)
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT5_SHIFT (5U)
 /*! BIT5 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT5(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT5_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT5_MASK)
@@ -7417,8 +7417,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT6_MASK (0x40U)
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT6_SHIFT (6U)
 /*! BIT6 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT6(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT6_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT6_MASK)
@@ -7426,8 +7426,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT7_MASK (0x80U)
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT7_SHIFT (7U)
 /*! BIT7 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT7(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT7_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT7_MASK)
@@ -7435,8 +7435,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT8_MASK (0x100U)
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT8_SHIFT (8U)
 /*! BIT8 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT8(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT8_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT8_MASK)
@@ -7444,8 +7444,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT9_MASK (0x200U)
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT9_SHIFT (9U)
 /*! BIT9 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT9(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT9_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT9_MASK)
@@ -7453,8 +7453,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT10_MASK (0x400U)
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT10_SHIFT (10U)
 /*! BIT10 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT10(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT10_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT10_MASK)
@@ -7462,8 +7462,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT11_MASK (0x800U)
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT11_SHIFT (11U)
 /*! BIT11 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT11(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT11_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT11_MASK)
@@ -7471,8 +7471,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT12_MASK (0x1000U)
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT12_SHIFT (12U)
 /*! BIT12 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT12(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT12_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT12_MASK)
@@ -7480,8 +7480,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT13_MASK (0x2000U)
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT13_SHIFT (13U)
 /*! BIT13 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT13(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT13_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT13_MASK)
@@ -7489,8 +7489,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT14_MASK (0x4000U)
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT14_SHIFT (14U)
 /*! BIT14 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT14(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT14_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT14_MASK)
@@ -7498,8 +7498,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT15_MASK (0x8000U)
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT15_SHIFT (15U)
 /*! BIT15 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT15(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT15_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT15_MASK)
@@ -7507,8 +7507,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT16_MASK (0x10000U)
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT16_SHIFT (16U)
 /*! BIT16 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT16(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT16_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT16_MASK)
@@ -7516,8 +7516,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT17_MASK (0x20000U)
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT17_SHIFT (17U)
 /*! BIT17 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT17(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT17_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT17_MASK)
@@ -7525,8 +7525,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT18_MASK (0x40000U)
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT18_SHIFT (18U)
 /*! BIT18 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT18(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT18_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT18_MASK)
@@ -7534,8 +7534,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT19_MASK (0x80000U)
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT19_SHIFT (19U)
 /*! BIT19 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT19(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT19_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT19_MASK)
@@ -7543,8 +7543,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT20_MASK (0x100000U)
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT20_SHIFT (20U)
 /*! BIT20 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT20(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT20_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT20_MASK)
@@ -7552,8 +7552,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT21_MASK (0x200000U)
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT21_SHIFT (21U)
 /*! BIT21 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT21(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT21_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT21_MASK)
@@ -7561,8 +7561,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT22_MASK (0x400000U)
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT22_SHIFT (22U)
 /*! BIT22 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT22(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT22_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT22_MASK)
@@ -7570,8 +7570,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT23_MASK (0x800000U)
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT23_SHIFT (23U)
 /*! BIT23 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT23(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT23_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT23_MASK)
@@ -7579,8 +7579,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT24_MASK (0x1000000U)
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT24_SHIFT (24U)
 /*! BIT24 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT24(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT24_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT24_MASK)
@@ -7588,8 +7588,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT25_MASK (0x2000000U)
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT25_SHIFT (25U)
 /*! BIT25 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT25(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT25_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT25_MASK)
@@ -7597,8 +7597,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT26_MASK (0x4000000U)
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT26_SHIFT (26U)
 /*! BIT26 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT26(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT26_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT26_MASK)
@@ -7606,8 +7606,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT27_MASK (0x8000000U)
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT27_SHIFT (27U)
 /*! BIT27 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT27(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT27_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT27_MASK)
@@ -7615,8 +7615,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT28_MASK (0x10000000U)
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT28_SHIFT (28U)
 /*! BIT28 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT28(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT28_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT28_MASK)
@@ -7624,8 +7624,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT29_MASK (0x20000000U)
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT29_SHIFT (29U)
 /*! BIT29 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT29(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT29_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT29_MASK)
@@ -7633,8 +7633,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT30_MASK (0x40000000U)
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT30_SHIFT (30U)
 /*! BIT30 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT30(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT30_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT30_MASK)
@@ -7642,8 +7642,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT31_MASK (0x80000000U)
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT31_SHIFT (31U)
 /*! BIT31 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT31(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT31_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM12_MEM0_BLK_NSE_W0_BIT31_MASK)
@@ -7669,8 +7669,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_CFG_W0_NSE0_MASK (0x8U)
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_CFG_W0_NSE0_SHIFT (3U)
 /*! NSE0 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_CFG_W0_NSE0(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_CFG_W0_NSE0_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_CFG_W0_NSE0_MASK)
@@ -7692,8 +7692,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_CFG_W0_NSE1_MASK (0x80U)
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_CFG_W0_NSE1_SHIFT (7U)
 /*! NSE1 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_CFG_W0_NSE1(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_CFG_W0_NSE1_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_CFG_W0_NSE1_MASK)
@@ -7715,8 +7715,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_CFG_W0_NSE2_MASK (0x800U)
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_CFG_W0_NSE2_SHIFT (11U)
 /*! NSE2 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_CFG_W0_NSE2(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_CFG_W0_NSE2_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_CFG_W0_NSE2_MASK)
@@ -7738,8 +7738,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_CFG_W0_NSE3_MASK (0x8000U)
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_CFG_W0_NSE3_SHIFT (15U)
 /*! NSE3 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_CFG_W0_NSE3(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_CFG_W0_NSE3_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_CFG_W0_NSE3_MASK)
@@ -7761,8 +7761,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_CFG_W0_NSE4_MASK (0x80000U)
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_CFG_W0_NSE4_SHIFT (19U)
 /*! NSE4 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_CFG_W0_NSE4(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_CFG_W0_NSE4_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_CFG_W0_NSE4_MASK)
@@ -7784,8 +7784,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_CFG_W0_NSE5_MASK (0x800000U)
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_CFG_W0_NSE5_SHIFT (23U)
 /*! NSE5 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_CFG_W0_NSE5(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_CFG_W0_NSE5_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_CFG_W0_NSE5_MASK)
@@ -7807,8 +7807,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_CFG_W0_NSE6_MASK (0x8000000U)
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_CFG_W0_NSE6_SHIFT (27U)
 /*! NSE6 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_CFG_W0_NSE6(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_CFG_W0_NSE6_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_CFG_W0_NSE6_MASK)
@@ -7830,8 +7830,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_CFG_W0_NSE7_MASK (0x80000000U)
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_CFG_W0_NSE7_SHIFT (31U)
 /*! NSE7 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_CFG_W0_NSE7(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_CFG_W0_NSE7_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_CFG_W0_NSE7_MASK)
@@ -7843,8 +7843,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT0_MASK (0x1U)
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT0_SHIFT (0U)
 /*! BIT0 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT0(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT0_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT0_MASK)
@@ -7852,8 +7852,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT1_MASK (0x2U)
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT1_SHIFT (1U)
 /*! BIT1 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT1(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT1_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT1_MASK)
@@ -7861,8 +7861,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT2_MASK (0x4U)
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT2_SHIFT (2U)
 /*! BIT2 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT2(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT2_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT2_MASK)
@@ -7870,8 +7870,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT3_MASK (0x8U)
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT3_SHIFT (3U)
 /*! BIT3 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT3(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT3_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT3_MASK)
@@ -7879,8 +7879,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT4_MASK (0x10U)
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT4_SHIFT (4U)
 /*! BIT4 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT4(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT4_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT4_MASK)
@@ -7888,8 +7888,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT5_MASK (0x20U)
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT5_SHIFT (5U)
 /*! BIT5 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT5(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT5_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT5_MASK)
@@ -7897,8 +7897,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT6_MASK (0x40U)
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT6_SHIFT (6U)
 /*! BIT6 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT6(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT6_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT6_MASK)
@@ -7906,8 +7906,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT7_MASK (0x80U)
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT7_SHIFT (7U)
 /*! BIT7 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT7(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT7_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT7_MASK)
@@ -7915,8 +7915,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT8_MASK (0x100U)
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT8_SHIFT (8U)
 /*! BIT8 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT8(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT8_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT8_MASK)
@@ -7924,8 +7924,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT9_MASK (0x200U)
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT9_SHIFT (9U)
 /*! BIT9 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT9(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT9_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT9_MASK)
@@ -7933,8 +7933,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT10_MASK (0x400U)
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT10_SHIFT (10U)
 /*! BIT10 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT10(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT10_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT10_MASK)
@@ -7942,8 +7942,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT11_MASK (0x800U)
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT11_SHIFT (11U)
 /*! BIT11 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT11(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT11_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT11_MASK)
@@ -7951,8 +7951,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT12_MASK (0x1000U)
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT12_SHIFT (12U)
 /*! BIT12 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT12(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT12_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT12_MASK)
@@ -7960,8 +7960,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT13_MASK (0x2000U)
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT13_SHIFT (13U)
 /*! BIT13 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT13(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT13_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT13_MASK)
@@ -7969,8 +7969,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT14_MASK (0x4000U)
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT14_SHIFT (14U)
 /*! BIT14 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT14(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT14_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT14_MASK)
@@ -7978,8 +7978,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT15_MASK (0x8000U)
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT15_SHIFT (15U)
 /*! BIT15 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT15(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT15_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT15_MASK)
@@ -7987,8 +7987,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT16_MASK (0x10000U)
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT16_SHIFT (16U)
 /*! BIT16 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT16(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT16_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT16_MASK)
@@ -7996,8 +7996,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT17_MASK (0x20000U)
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT17_SHIFT (17U)
 /*! BIT17 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT17(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT17_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT17_MASK)
@@ -8005,8 +8005,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT18_MASK (0x40000U)
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT18_SHIFT (18U)
 /*! BIT18 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT18(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT18_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT18_MASK)
@@ -8014,8 +8014,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT19_MASK (0x80000U)
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT19_SHIFT (19U)
 /*! BIT19 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT19(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT19_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT19_MASK)
@@ -8023,8 +8023,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT20_MASK (0x100000U)
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT20_SHIFT (20U)
 /*! BIT20 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT20(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT20_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT20_MASK)
@@ -8032,8 +8032,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT21_MASK (0x200000U)
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT21_SHIFT (21U)
 /*! BIT21 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT21(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT21_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT21_MASK)
@@ -8041,8 +8041,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT22_MASK (0x400000U)
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT22_SHIFT (22U)
 /*! BIT22 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT22(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT22_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT22_MASK)
@@ -8050,8 +8050,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT23_MASK (0x800000U)
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT23_SHIFT (23U)
 /*! BIT23 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT23(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT23_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT23_MASK)
@@ -8059,8 +8059,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT24_MASK (0x1000000U)
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT24_SHIFT (24U)
 /*! BIT24 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT24(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT24_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT24_MASK)
@@ -8068,8 +8068,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT25_MASK (0x2000000U)
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT25_SHIFT (25U)
 /*! BIT25 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT25(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT25_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT25_MASK)
@@ -8077,8 +8077,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT26_MASK (0x4000000U)
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT26_SHIFT (26U)
 /*! BIT26 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT26(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT26_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT26_MASK)
@@ -8086,8 +8086,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT27_MASK (0x8000000U)
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT27_SHIFT (27U)
 /*! BIT27 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT27(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT27_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT27_MASK)
@@ -8095,8 +8095,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT28_MASK (0x10000000U)
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT28_SHIFT (28U)
 /*! BIT28 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT28(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT28_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT28_MASK)
@@ -8104,8 +8104,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT29_MASK (0x20000000U)
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT29_SHIFT (29U)
 /*! BIT29 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT29(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT29_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT29_MASK)
@@ -8113,8 +8113,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT30_MASK (0x40000000U)
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT30_SHIFT (30U)
 /*! BIT30 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT30(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT30_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT30_MASK)
@@ -8122,8 +8122,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT31_MASK (0x80000000U)
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT31_SHIFT (31U)
 /*! BIT31 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT31(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT31_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM13_MEM0_BLK_NSE_W0_BIT31_MASK)
@@ -8149,8 +8149,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_CFG_W0_NSE0_MASK (0x8U)
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_CFG_W0_NSE0_SHIFT (3U)
 /*! NSE0 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_CFG_W0_NSE0(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_CFG_W0_NSE0_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_CFG_W0_NSE0_MASK)
@@ -8172,8 +8172,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_CFG_W0_NSE1_MASK (0x80U)
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_CFG_W0_NSE1_SHIFT (7U)
 /*! NSE1 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_CFG_W0_NSE1(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_CFG_W0_NSE1_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_CFG_W0_NSE1_MASK)
@@ -8195,8 +8195,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_CFG_W0_NSE2_MASK (0x800U)
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_CFG_W0_NSE2_SHIFT (11U)
 /*! NSE2 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_CFG_W0_NSE2(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_CFG_W0_NSE2_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_CFG_W0_NSE2_MASK)
@@ -8218,8 +8218,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_CFG_W0_NSE3_MASK (0x8000U)
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_CFG_W0_NSE3_SHIFT (15U)
 /*! NSE3 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_CFG_W0_NSE3(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_CFG_W0_NSE3_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_CFG_W0_NSE3_MASK)
@@ -8241,8 +8241,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_CFG_W0_NSE4_MASK (0x80000U)
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_CFG_W0_NSE4_SHIFT (19U)
 /*! NSE4 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_CFG_W0_NSE4(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_CFG_W0_NSE4_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_CFG_W0_NSE4_MASK)
@@ -8264,8 +8264,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_CFG_W0_NSE5_MASK (0x800000U)
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_CFG_W0_NSE5_SHIFT (23U)
 /*! NSE5 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_CFG_W0_NSE5(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_CFG_W0_NSE5_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_CFG_W0_NSE5_MASK)
@@ -8287,8 +8287,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_CFG_W0_NSE6_MASK (0x8000000U)
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_CFG_W0_NSE6_SHIFT (27U)
 /*! NSE6 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_CFG_W0_NSE6(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_CFG_W0_NSE6_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_CFG_W0_NSE6_MASK)
@@ -8310,8 +8310,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_CFG_W0_NSE7_MASK (0x80000000U)
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_CFG_W0_NSE7_SHIFT (31U)
 /*! NSE7 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_CFG_W0_NSE7(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_CFG_W0_NSE7_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_CFG_W0_NSE7_MASK)
@@ -8323,8 +8323,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT0_MASK (0x1U)
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT0_SHIFT (0U)
 /*! BIT0 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT0(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT0_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT0_MASK)
@@ -8332,8 +8332,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT1_MASK (0x2U)
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT1_SHIFT (1U)
 /*! BIT1 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT1(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT1_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT1_MASK)
@@ -8341,8 +8341,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT2_MASK (0x4U)
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT2_SHIFT (2U)
 /*! BIT2 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT2(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT2_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT2_MASK)
@@ -8350,8 +8350,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT3_MASK (0x8U)
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT3_SHIFT (3U)
 /*! BIT3 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT3(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT3_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT3_MASK)
@@ -8359,8 +8359,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT4_MASK (0x10U)
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT4_SHIFT (4U)
 /*! BIT4 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT4(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT4_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT4_MASK)
@@ -8368,8 +8368,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT5_MASK (0x20U)
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT5_SHIFT (5U)
 /*! BIT5 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT5(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT5_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT5_MASK)
@@ -8377,8 +8377,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT6_MASK (0x40U)
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT6_SHIFT (6U)
 /*! BIT6 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT6(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT6_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT6_MASK)
@@ -8386,8 +8386,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT7_MASK (0x80U)
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT7_SHIFT (7U)
 /*! BIT7 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT7(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT7_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT7_MASK)
@@ -8395,8 +8395,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT8_MASK (0x100U)
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT8_SHIFT (8U)
 /*! BIT8 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT8(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT8_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT8_MASK)
@@ -8404,8 +8404,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT9_MASK (0x200U)
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT9_SHIFT (9U)
 /*! BIT9 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT9(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT9_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT9_MASK)
@@ -8413,8 +8413,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT10_MASK (0x400U)
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT10_SHIFT (10U)
 /*! BIT10 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT10(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT10_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT10_MASK)
@@ -8422,8 +8422,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT11_MASK (0x800U)
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT11_SHIFT (11U)
 /*! BIT11 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT11(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT11_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT11_MASK)
@@ -8431,8 +8431,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT12_MASK (0x1000U)
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT12_SHIFT (12U)
 /*! BIT12 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT12(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT12_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT12_MASK)
@@ -8440,8 +8440,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT13_MASK (0x2000U)
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT13_SHIFT (13U)
 /*! BIT13 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT13(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT13_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT13_MASK)
@@ -8449,8 +8449,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT14_MASK (0x4000U)
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT14_SHIFT (14U)
 /*! BIT14 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT14(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT14_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT14_MASK)
@@ -8458,8 +8458,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT15_MASK (0x8000U)
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT15_SHIFT (15U)
 /*! BIT15 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT15(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT15_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT15_MASK)
@@ -8467,8 +8467,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT16_MASK (0x10000U)
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT16_SHIFT (16U)
 /*! BIT16 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT16(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT16_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT16_MASK)
@@ -8476,8 +8476,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT17_MASK (0x20000U)
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT17_SHIFT (17U)
 /*! BIT17 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT17(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT17_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT17_MASK)
@@ -8485,8 +8485,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT18_MASK (0x40000U)
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT18_SHIFT (18U)
 /*! BIT18 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT18(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT18_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT18_MASK)
@@ -8494,8 +8494,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT19_MASK (0x80000U)
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT19_SHIFT (19U)
 /*! BIT19 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT19(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT19_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT19_MASK)
@@ -8503,8 +8503,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT20_MASK (0x100000U)
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT20_SHIFT (20U)
 /*! BIT20 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT20(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT20_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT20_MASK)
@@ -8512,8 +8512,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT21_MASK (0x200000U)
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT21_SHIFT (21U)
 /*! BIT21 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT21(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT21_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT21_MASK)
@@ -8521,8 +8521,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT22_MASK (0x400000U)
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT22_SHIFT (22U)
 /*! BIT22 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT22(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT22_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT22_MASK)
@@ -8530,8 +8530,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT23_MASK (0x800000U)
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT23_SHIFT (23U)
 /*! BIT23 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT23(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT23_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT23_MASK)
@@ -8539,8 +8539,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT24_MASK (0x1000000U)
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT24_SHIFT (24U)
 /*! BIT24 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT24(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT24_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT24_MASK)
@@ -8548,8 +8548,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT25_MASK (0x2000000U)
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT25_SHIFT (25U)
 /*! BIT25 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT25(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT25_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT25_MASK)
@@ -8557,8 +8557,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT26_MASK (0x4000000U)
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT26_SHIFT (26U)
 /*! BIT26 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT26(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT26_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT26_MASK)
@@ -8566,8 +8566,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT27_MASK (0x8000000U)
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT27_SHIFT (27U)
 /*! BIT27 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT27(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT27_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT27_MASK)
@@ -8575,8 +8575,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT28_MASK (0x10000000U)
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT28_SHIFT (28U)
 /*! BIT28 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT28(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT28_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT28_MASK)
@@ -8584,8 +8584,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT29_MASK (0x20000000U)
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT29_SHIFT (29U)
 /*! BIT29 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT29(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT29_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT29_MASK)
@@ -8593,8 +8593,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT30_MASK (0x40000000U)
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT30_SHIFT (30U)
 /*! BIT30 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT30(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT30_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT30_MASK)
@@ -8602,8 +8602,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT31_MASK (0x80000000U)
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT31_SHIFT (31U)
 /*! BIT31 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT31(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT31_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM14_MEM0_BLK_NSE_W0_BIT31_MASK)
@@ -8629,8 +8629,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_CFG_W0_NSE0_MASK (0x8U)
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_CFG_W0_NSE0_SHIFT (3U)
 /*! NSE0 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_CFG_W0_NSE0(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_CFG_W0_NSE0_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_CFG_W0_NSE0_MASK)
@@ -8652,8 +8652,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_CFG_W0_NSE1_MASK (0x80U)
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_CFG_W0_NSE1_SHIFT (7U)
 /*! NSE1 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_CFG_W0_NSE1(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_CFG_W0_NSE1_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_CFG_W0_NSE1_MASK)
@@ -8675,8 +8675,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_CFG_W0_NSE2_MASK (0x800U)
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_CFG_W0_NSE2_SHIFT (11U)
 /*! NSE2 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_CFG_W0_NSE2(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_CFG_W0_NSE2_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_CFG_W0_NSE2_MASK)
@@ -8698,8 +8698,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_CFG_W0_NSE3_MASK (0x8000U)
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_CFG_W0_NSE3_SHIFT (15U)
 /*! NSE3 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_CFG_W0_NSE3(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_CFG_W0_NSE3_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_CFG_W0_NSE3_MASK)
@@ -8721,8 +8721,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_CFG_W0_NSE4_MASK (0x80000U)
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_CFG_W0_NSE4_SHIFT (19U)
 /*! NSE4 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_CFG_W0_NSE4(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_CFG_W0_NSE4_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_CFG_W0_NSE4_MASK)
@@ -8744,8 +8744,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_CFG_W0_NSE5_MASK (0x800000U)
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_CFG_W0_NSE5_SHIFT (23U)
 /*! NSE5 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_CFG_W0_NSE5(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_CFG_W0_NSE5_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_CFG_W0_NSE5_MASK)
@@ -8767,8 +8767,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_CFG_W0_NSE6_MASK (0x8000000U)
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_CFG_W0_NSE6_SHIFT (27U)
 /*! NSE6 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_CFG_W0_NSE6(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_CFG_W0_NSE6_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_CFG_W0_NSE6_MASK)
@@ -8790,8 +8790,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_CFG_W0_NSE7_MASK (0x80000000U)
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_CFG_W0_NSE7_SHIFT (31U)
 /*! NSE7 - NonSecure Enable for block B
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in this register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in this register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in this register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_CFG_W0_NSE7(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_CFG_W0_NSE7_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_CFG_W0_NSE7_MASK)
@@ -8803,8 +8803,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT0_MASK (0x1U)
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT0_SHIFT (0U)
 /*! BIT0 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT0(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT0_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT0_MASK)
@@ -8812,8 +8812,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT1_MASK (0x2U)
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT1_SHIFT (1U)
 /*! BIT1 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT1(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT1_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT1_MASK)
@@ -8821,8 +8821,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT2_MASK (0x4U)
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT2_SHIFT (2U)
 /*! BIT2 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT2(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT2_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT2_MASK)
@@ -8830,8 +8830,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT3_MASK (0x8U)
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT3_SHIFT (3U)
 /*! BIT3 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT3(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT3_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT3_MASK)
@@ -8839,8 +8839,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT4_MASK (0x10U)
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT4_SHIFT (4U)
 /*! BIT4 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT4(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT4_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT4_MASK)
@@ -8848,8 +8848,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT5_MASK (0x20U)
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT5_SHIFT (5U)
 /*! BIT5 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT5(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT5_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT5_MASK)
@@ -8857,8 +8857,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT6_MASK (0x40U)
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT6_SHIFT (6U)
 /*! BIT6 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT6(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT6_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT6_MASK)
@@ -8866,8 +8866,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT7_MASK (0x80U)
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT7_SHIFT (7U)
 /*! BIT7 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT7(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT7_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT7_MASK)
@@ -8875,8 +8875,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT8_MASK (0x100U)
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT8_SHIFT (8U)
 /*! BIT8 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT8(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT8_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT8_MASK)
@@ -8884,8 +8884,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT9_MASK (0x200U)
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT9_SHIFT (9U)
 /*! BIT9 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT9(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT9_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT9_MASK)
@@ -8893,8 +8893,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT10_MASK (0x400U)
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT10_SHIFT (10U)
 /*! BIT10 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT10(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT10_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT10_MASK)
@@ -8902,8 +8902,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT11_MASK (0x800U)
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT11_SHIFT (11U)
 /*! BIT11 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT11(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT11_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT11_MASK)
@@ -8911,8 +8911,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT12_MASK (0x1000U)
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT12_SHIFT (12U)
 /*! BIT12 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT12(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT12_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT12_MASK)
@@ -8920,8 +8920,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT13_MASK (0x2000U)
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT13_SHIFT (13U)
 /*! BIT13 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT13(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT13_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT13_MASK)
@@ -8929,8 +8929,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT14_MASK (0x4000U)
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT14_SHIFT (14U)
 /*! BIT14 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT14(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT14_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT14_MASK)
@@ -8938,8 +8938,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT15_MASK (0x8000U)
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT15_SHIFT (15U)
 /*! BIT15 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT15(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT15_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT15_MASK)
@@ -8947,8 +8947,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT16_MASK (0x10000U)
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT16_SHIFT (16U)
 /*! BIT16 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT16(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT16_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT16_MASK)
@@ -8956,8 +8956,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT17_MASK (0x20000U)
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT17_SHIFT (17U)
 /*! BIT17 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT17(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT17_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT17_MASK)
@@ -8965,8 +8965,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT18_MASK (0x40000U)
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT18_SHIFT (18U)
 /*! BIT18 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT18(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT18_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT18_MASK)
@@ -8974,8 +8974,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT19_MASK (0x80000U)
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT19_SHIFT (19U)
 /*! BIT19 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT19(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT19_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT19_MASK)
@@ -8983,8 +8983,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT20_MASK (0x100000U)
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT20_SHIFT (20U)
 /*! BIT20 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT20(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT20_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT20_MASK)
@@ -8992,8 +8992,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT21_MASK (0x200000U)
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT21_SHIFT (21U)
 /*! BIT21 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT21(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT21_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT21_MASK)
@@ -9001,8 +9001,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT22_MASK (0x400000U)
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT22_SHIFT (22U)
 /*! BIT22 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT22(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT22_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT22_MASK)
@@ -9010,8 +9010,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT23_MASK (0x800000U)
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT23_SHIFT (23U)
 /*! BIT23 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT23(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT23_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT23_MASK)
@@ -9019,8 +9019,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT24_MASK (0x1000000U)
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT24_SHIFT (24U)
 /*! BIT24 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT24(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT24_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT24_MASK)
@@ -9028,8 +9028,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT25_MASK (0x2000000U)
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT25_SHIFT (25U)
 /*! BIT25 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT25(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT25_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT25_MASK)
@@ -9037,8 +9037,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT26_MASK (0x4000000U)
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT26_SHIFT (26U)
 /*! BIT26 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT26(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT26_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT26_MASK)
@@ -9046,8 +9046,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT27_MASK (0x8000000U)
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT27_SHIFT (27U)
 /*! BIT27 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT27(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT27_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT27_MASK)
@@ -9055,8 +9055,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT28_MASK (0x10000000U)
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT28_SHIFT (28U)
 /*! BIT28 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT28(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT28_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT28_MASK)
@@ -9064,8 +9064,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT29_MASK (0x20000000U)
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT29_SHIFT (29U)
 /*! BIT29 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT29(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT29_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT29_MASK)
@@ -9073,8 +9073,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT30_MASK (0x40000000U)
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT30_SHIFT (30U)
 /*! BIT30 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT30(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT30_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT30_MASK)
@@ -9082,8 +9082,8 @@ typedef struct {
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT31_MASK (0x80000000U)
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT31_SHIFT (31U)
 /*! BIT31 - Bit b NonSecure Enable [b = 0 - 31]
- *  0b0..Secure accesses to block B are based on corresponding MBACSEL field in register
- *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), nonsecure accesses to block B are not allowed.
+ *  0b0..Secure read and write to block B are based on corresponding MBACSEL field in register
+ *       (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]), secure execution and nonsecure accesses to block B are not allowed.
  *  0b1..Secure and nonsecure accesses to block B are based on corresponding MBACSEL field in register (MBCm_DOMd_MEMs_BLK_CFG_Ww[MBACSEL]).
  */
 #define GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT31(x) (((uint32_t)(((uint32_t)(x)) << GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT31_SHIFT)) & GPU_TRDC_MGR_MBC0_DOM15_MEM0_BLK_NSE_W0_BIT31_MASK)
