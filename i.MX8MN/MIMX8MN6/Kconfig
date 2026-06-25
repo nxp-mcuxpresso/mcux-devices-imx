@@ -38,3 +38,4 @@ config MCUX_HW_DEVICE_MIMX8MN6
     select MCUX_COMPONENT_driver.sdma if MCUX_COMPONENT_driver.ecspi_sdma
     select MCUX_COMPONENT_driver.sdma if MCUX_COMPONENT_driver.iuart_sdma
     select MCUX_COMPONENT_driver.sdma if MCUX_COMPONENT_driver.sai_sdma
+    select MCUX_COMPONENT_driver.cache_armv7_m7

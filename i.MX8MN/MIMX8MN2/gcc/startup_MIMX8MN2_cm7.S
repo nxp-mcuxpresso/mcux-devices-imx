@@ -4,7 +4,7 @@
 /*            MIMX8MN2_cm7                                                   */
 /*  @version: 3.0                                                            */
 /*  @date:    2024-10-29                                                     */
-/*  @build:   b260513                                                        */
+/*  @build:   b260624                                                        */
 /* ------------------------------------------------------------------------- */
 /*                                                                           */
 /* Copyright 1997-2016 Freescale Semiconductor, Inc.                         */
@@ -145,7 +145,7 @@ __isr_vector:
     .long   SJC_IRQHandler                                  /* Interrupt triggered by SJC register*/
     .long   CAAM_IRQ0_IRQHandler                            /* CAAM interrupt queue for JQ*/
     .long   CAAM_IRQ1_IRQHandler                            /* CAAM interrupt queue for JQ*/
-    .long   QSPI_IRQHandler                                 /* QSPI Interrupt*/
+    .long   FLEXSPI_IRQHandler                              /* FlexSPI Interrupt*/
     .long   TZASC_IRQHandler                                /* TZASC (PL380) interrupt*/
     .long   PDM_EVENT_IRQHandler                            /* Digital Microphone interface interrupt*/
     .long   PDM_ERROR_IRQHandler                            /* Digital Microphone interface error interrupt*/
@@ -572,12 +572,12 @@ SDMA2_IRQHandler:
 
     .align 1
     .thumb_func
-    .weak QSPI_IRQHandler
-    .type QSPI_IRQHandler, %function
-QSPI_IRQHandler:
-    ldr   r0,=QSPI_DriverIRQHandler
+    .weak FLEXSPI_IRQHandler
+    .type FLEXSPI_IRQHandler, %function
+FLEXSPI_IRQHandler:
+    ldr   r0,=FLEXSPI_DriverIRQHandler
     bx    r0
-    .size QSPI_IRQHandler, . - QSPI_IRQHandler
+    .size FLEXSPI_IRQHandler, . - FLEXSPI_IRQHandler
 
     .align 1
     .thumb_func
@@ -753,7 +753,7 @@ ENET1_1588_Timer_IRQHandler:
     def_irq_handler    SJC_IRQHandler
     def_irq_handler    CAAM_IRQ0_IRQHandler
     def_irq_handler    CAAM_IRQ1_IRQHandler
-    def_irq_handler    QSPI_DriverIRQHandler
+    def_irq_handler    FLEXSPI_DriverIRQHandler
     def_irq_handler    TZASC_IRQHandler
     def_irq_handler    PDM_EVENT_DriverIRQHandler
     def_irq_handler    PDM_ERROR_IRQHandler

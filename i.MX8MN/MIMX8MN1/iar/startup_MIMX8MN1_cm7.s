@@ -4,7 +4,7 @@
 ;            MIMX8MN1_cm7
 ;  @version: 3.0
 ;  @date:    2024-10-29
-;  @build:   b260513
+;  @build:   b260624
 ; -------------------------------------------------------------------------
 ;
 ; Copyright 1997-2016 Freescale Semiconductor, Inc.
@@ -174,7 +174,7 @@ __vector_table_0x1c
         DCD     SJC_IRQHandler                                ;Interrupt triggered by SJC register
         DCD     CAAM_IRQ0_IRQHandler                          ;CAAM interrupt queue for JQ
         DCD     CAAM_IRQ1_IRQHandler                          ;CAAM interrupt queue for JQ
-        DCD     QSPI_IRQHandler                               ;QSPI Interrupt
+        DCD     FLEXSPI_IRQHandler                            ;FlexSPI Interrupt
         DCD     TZASC_IRQHandler                              ;TZASC (PL380) interrupt
         DCD     PDM_EVENT_IRQHandler                          ;Digital Microphone interface interrupt
         DCD     PDM_ERROR_IRQHandler                          ;Digital Microphone interface error interrupt
@@ -518,11 +518,11 @@ SDMA2_IRQHandler
         PUBWEAK SJC_IRQHandler
         PUBWEAK CAAM_IRQ0_IRQHandler
         PUBWEAK CAAM_IRQ1_IRQHandler
-        PUBWEAK QSPI_IRQHandler
-        PUBWEAK QSPI_DriverIRQHandler
+        PUBWEAK FLEXSPI_IRQHandler
+        PUBWEAK FLEXSPI_DriverIRQHandler
         SECTION .text:CODE:REORDER:NOROOT(2)
-QSPI_IRQHandler
-        LDR     R0, =QSPI_DriverIRQHandler
+FLEXSPI_IRQHandler
+        LDR     R0, =FLEXSPI_DriverIRQHandler
         BX      R0
 
         PUBWEAK TZASC_IRQHandler
@@ -690,7 +690,7 @@ SDMA2_DriverIRQHandler
 SJC_IRQHandler
 CAAM_IRQ0_IRQHandler
 CAAM_IRQ1_IRQHandler
-QSPI_DriverIRQHandler
+FLEXSPI_DriverIRQHandler
 TZASC_IRQHandler
 PDM_EVENT_DriverIRQHandler
 PDM_ERROR_IRQHandler

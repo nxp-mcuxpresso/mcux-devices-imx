@@ -153,6 +153,12 @@
         kCLOCK_Qspi \
     }
 
+/*! @brief Clock ip name array for FLEXSPI. */
+#define FLEXSPI_CLOCKS \
+    {              \
+        kCLOCK_Qspi \
+    }
+
 /*! @brief Clock ip name array for PDM. */
 #define PDM_CLOCKS \
     {              \
