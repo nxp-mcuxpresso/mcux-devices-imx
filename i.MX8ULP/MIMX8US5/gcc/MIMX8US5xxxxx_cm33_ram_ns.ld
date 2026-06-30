@@ -238,8 +238,6 @@ SECTIONS
   PROVIDE(__stack = __StackTop);
 
   /* For Resource table region in dtcm, Cortex-A read the resource table from here */
-  __RscTblStart = ORIGIN(m_rsc_tbl);
-  __RscTblEnd = ORIGIN(m_rsc_tbl) + LENGTH(m_rsc_tbl);
 
   .ARM.attributes 0 : { *(.ARM.attributes) }
 
