@@ -152,7 +152,7 @@ typedef struct {
     __IO uint32_t OUT_BUF2_ADDR_Y;                   /**< Channel 0 RGB or Luma (Y) Output Buffer 2 Address..Channel 7 RGB or Luma (Y) Output Buffer 2 Address, array offset: 0x8C, array step: 0x10000 */
     __IO uint32_t OUT_BUF2_ADDR_U;                   /**< Channel 0 Chroma (U/Cb/UV/CbCr) Output Buffer 2 Address..Channel 7 Chroma (U/Cb/UV/CbCr) Output Buffer 2 Address, array offset: 0x90, array step: 0x10000 */
     __IO uint32_t OUT_BUF2_ADDR_V;                   /**< Channel 0 Chroma (V/Cr) Output Buffer 2 Address..Channel 7 Chroma (V/Cr) Output Buffer 2 Address, array offset: 0x94, array step: 0x10000 */
-    __I  uint32_t RESERVED_REG3;                     /**< Reserved register, array offset: 0x98, array step: 0x10000 */
+    __IO uint32_t SCL_IMG_CFG;                       /**< Channel 0 Scaled Image Configuration..Channel 7 Scaled Image Configuration, array offset: 0x98, array step: 0x10000 */
     __IO uint32_t FLOW_CTRL;                         /**< Channel 0 Flow Control..Channel 7 Flow Control, array offset: 0x9C, array step: 0x10000 */
     __IO uint32_t Y_BUF1_XTND_ADDR;                  /**< Channel 0 Output Y-Buffer 1 Extended Address..Channel 7 Output Y-Buffer 1 Extended Address, array offset: 0xA0, array step: 0x10000 */
     __IO uint32_t U_BUF1_XTND_ADDR;                  /**< Channel 0 Output U-Buffer 1 Extended Address..Channel 7 Output U-Buffer 1 Extended Address, array offset: 0xA4, array step: 0x10000 */
@@ -1475,8 +1475,22 @@ typedef struct {
 /* The count of ISI_OUT_BUF2_ADDR_V */
 #define ISI_OUT_BUF2_ADDR_V_COUNT                (8U)
 
-/* The count of ISI_RESERVED_REG3 */
-#define ISI_RESERVED_REG3_COUNT                  (8U)
+/*! @name SCL_IMG_CFG - Channel 0 Scaled Image Configuration..Channel 7 Scaled Image Configuration */
+/*! @{ */
+
+#define ISI_SCL_IMG_CFG_WIDTH_MASK               (0x1FFFU)
+#define ISI_SCL_IMG_CFG_WIDTH_SHIFT              (0U)
+/*! WIDTH - Scaled Image Width (Pixels) */
+#define ISI_SCL_IMG_CFG_WIDTH(x)                 (((uint32_t)(((uint32_t)(x)) << ISI_SCL_IMG_CFG_WIDTH_SHIFT)) & ISI_SCL_IMG_CFG_WIDTH_MASK)
+
+#define ISI_SCL_IMG_CFG_HEIGHT_MASK              (0x3FFF0000U)
+#define ISI_SCL_IMG_CFG_HEIGHT_SHIFT             (16U)
+/*! HEIGHT - Scaled Image Height (Lines) */
+#define ISI_SCL_IMG_CFG_HEIGHT(x)                (((uint32_t)(((uint32_t)(x)) << ISI_SCL_IMG_CFG_HEIGHT_SHIFT)) & ISI_SCL_IMG_CFG_HEIGHT_MASK)
+/*! @} */
+
+/* The count of ISI_SCL_IMG_CFG */
+#define ISI_SCL_IMG_CFG_COUNT                    (8U)
 
 /*! @name FLOW_CTRL - Channel 0 Flow Control..Channel 7 Flow Control */
 /*! @{ */
