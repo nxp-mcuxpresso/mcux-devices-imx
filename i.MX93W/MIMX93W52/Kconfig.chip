@@ -166,11 +166,6 @@ config MCUX_HW_IP_DriverType_FLEXIO
     default y
     depends on MCUX_HW_DEVICE_ID_MIMX93W52xxxxxM
 
-config MCUX_HW_IP_DriverType_FLEXSPI
-    bool
-    default y
-    depends on MCUX_HW_DEVICE_ID_MIMX93W52xxxxxM
-
 config MCUX_HW_IP_DriverType_FPB
     bool
     default y
@@ -257,11 +252,6 @@ config MCUX_HW_IP_DriverType_MQS
     depends on MCUX_HW_DEVICE_ID_MIMX93W52xxxxxM
 
 config MCUX_HW_IP_DriverType_MU_1
-    bool
-    default y
-    depends on MCUX_HW_DEVICE_ID_MIMX93W52xxxxxM
-
-config MCUX_HW_IP_DriverType_OTFAD
     bool
     default y
     depends on MCUX_HW_DEVICE_ID_MIMX93W52xxxxxM
