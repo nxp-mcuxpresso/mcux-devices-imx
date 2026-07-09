@@ -18,17 +18,17 @@ config MCUX_HW_DEVICE_MIMX9522
     # component dependency
     imply  MCUX_COMPONENT_driver.irqsteer_1
     imply  MCUX_COMPONENT_driver.irqsteer_1_soc
-    select MCUX_COMPONENT_driver.edma4 if MCUX_COMPONENT_driver.sai_edma
-    select MCUX_COMPONENT_driver.edma4 if MCUX_COMPONENT_driver.lpi2c_edma
-    select MCUX_COMPONENT_driver.edma4 if MCUX_COMPONENT_driver.lpspi_edma
-    select MCUX_COMPONENT_driver.edma4 if MCUX_COMPONENT_driver.lpuart_edma
+    select MCUX_COMPONENT_driver.edma_unified if MCUX_COMPONENT_driver.sai_edma
+    select MCUX_COMPONENT_driver.edma_unified if MCUX_COMPONENT_driver.lpi2c_edma
+    select MCUX_COMPONENT_driver.edma_unified if MCUX_COMPONENT_driver.lpspi_edma
+    select MCUX_COMPONENT_driver.edma_unified if MCUX_COMPONENT_driver.lpuart_edma
     select MCUX_COMPONENT_driver.memory if MCUX_COMPONENT_driver.netc
     select MCUX_COMPONENT_component.software_crc_adapter if MCUX_COMPONENT_driver.netc
-    select MCUX_COMPONENT_driver.edma4 if MCUX_COMPONENT_driver.flexspi_edma
+    select MCUX_COMPONENT_driver.edma_unified if MCUX_COMPONENT_driver.flexspi_edma
     select MCUX_COMPONENT_component.lpuart_adapter if MCUX_COMPONENT_component.serial_manager_uart
     select MCUX_COMPONENT_component.lpuart_adapter if MCUX_COMPONENT_utility.debug_console_lite
-    select MCUX_COMPONENT_driver.edma_soc if MCUX_COMPONENT_driver.edma4
-    select MCUX_COMPONENT_driver.memory if MCUX_COMPONENT_driver.edma4
+    select MCUX_COMPONENT_driver.edma_soc if MCUX_COMPONENT_driver.edma_unified
+    select MCUX_COMPONENT_driver.memory if MCUX_COMPONENT_driver.edma_unified
     select MCUX_COMPONENT_driver.memory if MCUX_COMPONENT_driver.enet
     select MCUX_COMPONENT_driver.memory if MCUX_COMPONENT_driver.enet_qos
 

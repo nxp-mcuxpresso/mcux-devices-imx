@@ -23,7 +23,7 @@ menu "Device specific drivers configuration"
 
     config MCUX_COMPONENT_driver.edma_soc
          bool "edma_soc"
-         depends on MCUX_COMPONENT_driver.edma4
+         depends on MCUX_COMPONENT_driver.edma_unified
          default y
 
     config MCUX_COMPONENT_driver.iomuxc
