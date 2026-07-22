@@ -9,7 +9,7 @@
 **
 **     Reference manual:    iMX952RM rev1 draftM
 **     Version:             rev. 2.0, 2024-10-29
-**     Build:               b260416
+**     Build:               b260722
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for MIMX9529_ca55
@@ -321,8 +321,6 @@
 #include "PERI_TCM_ECC_MCM.h"
 #include "PERI_TMPSNS.h"
 #include "PERI_TPM.h"
-#include "PERI_TRDC.h"
-#include "PERI_TRDC_MGR_MEGA.h"
 #include "PERI_TRGMUX.h"
 #include "PERI_TSTMR.h"
 #include "PERI_USB.h"

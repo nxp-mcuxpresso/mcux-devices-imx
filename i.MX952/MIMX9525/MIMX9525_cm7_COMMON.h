@@ -9,7 +9,7 @@
 **
 **     Reference manual:    iMX952RM rev1 draftM
 **     Version:             rev. 2.0, 2024-10-29
-**     Build:               b260416
+**     Build:               b260722
 **
 **     Abstract:
 **         CMSIS Peripheral Access Layer for MIMX9525_cm7
@@ -3241,26 +3241,6 @@ typedef enum _mu_core_boot_mode
 /** Interrupt vectors for the TPM peripheral type */
 #define TPM_IRQS                                 { NotAvail_IRQn, TPM1_IRQn, TPM2_IRQn, TPM3_IRQn, TPM4_IRQn, TPM5_IRQn, TPM6_IRQn }
 
-/* TRDC - Peripheral instance base addresses */
-/** Peripheral WAKEUP__TRDC_MGR1 base address */
-#define WAKEUP__TRDC_MGR1_BASE                   (0x42080000u)
-/** Peripheral WAKEUP__TRDC_MGR1 base pointer */
-#define WAKEUP__TRDC_MGR1                        ((TRDC_Type *)WAKEUP__TRDC_MGR1_BASE)
-/** Array initializer of TRDC peripheral base addresses */
-#define TRDC_BASE_ADDRS                          { WAKEUP__TRDC_MGR1_BASE }
-/** Array initializer of TRDC peripheral base pointers */
-#define TRDC_BASE_PTRS                           { WAKEUP__TRDC_MGR1 }
-
-/* TRDC_MGR_MEGA - Peripheral instance base addresses */
-/** Peripheral WAKEUP__TRDC_MGR2 base address */
-#define WAKEUP__TRDC_MGR2_BASE                   (0x424C0000u)
-/** Peripheral WAKEUP__TRDC_MGR2 base pointer */
-#define WAKEUP__TRDC_MGR2                        ((TRDC_MGR_MEGA_Type *)WAKEUP__TRDC_MGR2_BASE)
-/** Array initializer of TRDC_MGR_MEGA peripheral base addresses */
-#define TRDC_MGR_MEGA_BASE_ADDRS                 { WAKEUP__TRDC_MGR2_BASE }
-/** Array initializer of TRDC_MGR_MEGA peripheral base pointers */
-#define TRDC_MGR_MEGA_BASE_PTRS                  { WAKEUP__TRDC_MGR2 }
-
 /* TRGMUX - Peripheral instance base addresses */
 /** Peripheral ANALOG__TRGMUX base address */
 #define ANALOG__TRGMUX_BASE                      (0x44531000u)
@@ -3312,9 +3292,9 @@ typedef enum _mu_core_boot_mode
 /** Peripheral USBNC_OTG2 base pointer */
 #define USBNC_OTG2                               ((USBNC_Type *)USBNC_OTG2_BASE)
 /** Array initializer of USBNC peripheral base addresses */
-#define USBNC_BASE_ADDRS                         { USBNC_OTG1_BASE, USBNC_OTG2_BASE }
+#define USBNC_BASE_ADDRS                         { 0u, USBNC_OTG1_BASE, USBNC_OTG2_BASE }
 /** Array initializer of USBNC peripheral base pointers */
-#define USBNC_BASE_PTRS                          { USBNC_OTG1, USBNC_OTG2 }
+#define USBNC_BASE_PTRS                          { (USBNC_Type *)0u, USBNC_OTG1, USBNC_OTG2 }
 
 /* USDHC - Peripheral instance base addresses */
 /** Peripheral uSDHC1 base address */
