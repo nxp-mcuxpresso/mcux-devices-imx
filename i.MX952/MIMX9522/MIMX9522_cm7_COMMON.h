@@ -3292,9 +3292,9 @@ typedef enum _mu_core_boot_mode
 /** Peripheral USBNC_OTG2 base pointer */
 #define USBNC_OTG2                               ((USBNC_Type *)USBNC_OTG2_BASE)
 /** Array initializer of USBNC peripheral base addresses */
-#define USBNC_BASE_ADDRS                         { 0u, USBNC_OTG1_BASE, USBNC_OTG2_BASE }
+#define USBNC_BASE_ADDRS                         { USBNC_OTG1_BASE, USBNC_OTG2_BASE }
 /** Array initializer of USBNC peripheral base pointers */
-#define USBNC_BASE_PTRS                          { (USBNC_Type *)0u, USBNC_OTG1, USBNC_OTG2 }
+#define USBNC_BASE_PTRS                          { USBNC_OTG1, USBNC_OTG2 }
 
 /* USDHC - Peripheral instance base addresses */
 /** Peripheral uSDHC1 base address */
