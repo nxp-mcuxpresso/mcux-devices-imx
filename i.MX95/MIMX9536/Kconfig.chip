@@ -384,10 +384,6 @@ config MCUX_HW_IP_DriverType_TPM
     default y
     depends on MCUX_HW_DEVICE_ID_MIMX9536xxxxQ || MCUX_HW_DEVICE_ID_MIMX9536xxxxN
 
-config MCUX_HW_IP_DriverType_TRDC_1
-    bool
-    default y
-    depends on MCUX_HW_DEVICE_ID_MIMX9536xxxxQ || MCUX_HW_DEVICE_ID_MIMX9536xxxxN
 
 config MCUX_HW_IP_DriverType_TRGMUX_1
     bool
