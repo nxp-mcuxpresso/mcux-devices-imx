@@ -39,18 +39,6 @@ config MCUX_HW_MPU
     bool
     default n
 
-config MCUX_HW_FPU
-    string
-    default "SP_FPU"
-
-config MCUX_HW_FPU_TYPE
-    string
-    default "fpv4_sp"
-
-config MCUX_HW_FPV4_SP
-    bool
-    default y
-
 config MCUX_HW_SAU
     bool
     default n
