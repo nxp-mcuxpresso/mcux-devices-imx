@@ -292,3 +292,6 @@ config MCUX_HW_IP_DriverType_blk_ctrl_ddrmix
     default y
     depends on MCUX_HW_DEVICE_ID_MIMX9131xxxxJ
 
+config MCUX_TOOLCHAIN_LINKER_DEVICE_PREFIX
+    string
+    default "MIMX9131xxxxJ" if MCUX_HW_DEVICE_ID_MIMX9131xxxxJ
