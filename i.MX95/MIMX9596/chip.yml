@@ -35,6 +35,14 @@ device.hardware_data:
             slave_role:
               - id: "M7SLAVE"
                 name: "Cortex-M7F acts as slave by default"
+          - name: "Cortex-A55"
+            type: "ca55"
+            id: "ca55"
+            description: ""
+            fpu: "DP_FPU"
+            mpu: false
+            frequency_mhz: 1800
+            boot_role: "secondary"
         memory:
           memoryBlock:
             - id: "SRAM_UPPER_m7"
@@ -106,6 +114,15 @@ device.hardware_data:
             slave_role:
               - id: "M7SLAVE"
                 name: "Cortex-M7F acts as slave by default"
+          - name: "Cortex-A55"
+            type: "ca55"
+            id: "ca55"
+            description: ""
+            fpu: "DP_FPU"
+            mpu: false
+            frequency_mhz: 1800
+            boot_role: "secondary"
+            num_cores: 4
         memory:
           memoryBlock:
             - id: "SRAM_UPPER_m7"
