@@ -23,6 +23,14 @@ device.hardware_data:
             mpu: true
             sau: true
             frequency_mhz: 216
+          - name: "Cortex-A55"
+            type: "ca55"
+            id: "ca55"
+            description: ""
+            fpu: "DP_FPU"
+            mpu: false
+            frequency_mhz: 1700
+            boot_role: "secondary"
         memory:
           memoryBlock:
             - id: "SRAM_UPPER"
