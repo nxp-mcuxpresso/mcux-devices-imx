@@ -20,6 +20,13 @@ device.hardware_data:
         description: M4 core
         fpu: SP_FPU
         mpu: true
+      - name: Cortex-A53
+        type: ca53
+        id: ca53
+        description: A53 core
+        fpu: DP_FPU
+        mpu: false
+        boot_role: secondary
       memory:
         memoryBlock:
         - id: SRAM_UPPER
@@ -57,6 +64,13 @@ device.hardware_data:
         description: M4 core
         fpu: SP_FPU
         mpu: true
+      - name: Cortex-A53
+        type: ca53
+        id: ca53
+        description: A53 core
+        fpu: DP_FPU
+        mpu: false
+        boot_role: secondary
       memory:
         memoryBlock:
         - id: SRAM_UPPER
