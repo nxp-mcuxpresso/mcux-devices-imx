@@ -21,6 +21,12 @@ device.hardware_data:
             description: "M7 core"
             fpu: "SP_FPU"
             mpu: true
+          - name: "Cortex-A53"
+            type: "ca53"
+            id: "ca53"
+            description: "A53 core"
+            fpu: "DP_FPU"
+            mpu: true
         memory:
           memoryBlock:
             - id: "SRAM_UPPER"
@@ -57,6 +63,12 @@ device.hardware_data:
             id: "cm7"
             description: "M7 core"
             fpu: "SP_FPU"
+            mpu: true
+          - name: "Cortex-A53"
+            type: "ca53"
+            id: "ca53"
+            description: "A53 core"
+            fpu: "DP_FPU"
             mpu: true
         memory:
           memoryBlock:
