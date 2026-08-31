@@ -3,4 +3,4 @@
 #
 # SPDX-License-Identifier: BSD-3-Clause
 
-rsource "../../../i.MX/i.MX937/MIMX9375/drivers/Kconfig"
+rsource "../../../i.MX937/MIMX9375/drivers/Kconfig"
