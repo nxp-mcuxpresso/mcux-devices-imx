@@ -154,14 +154,6 @@ config MCUX_HW_IP_DriverType_EDMA5
     bool
     default y
     depends on MCUX_HW_DEVICE_ID_MIMX9373xxxxx
-config MCUX_HW_IP_DriverType_EIM
-    bool
-    default y
-    depends on MCUX_HW_DEVICE_ID_MIMX9373xxxxx
-config MCUX_HW_IP_DriverType_ERM
-    bool
-    default y
-    depends on MCUX_HW_DEVICE_ID_MIMX9373xxxxx
 config MCUX_HW_IP_DriverType_FLEXCAN
     bool
     default y
