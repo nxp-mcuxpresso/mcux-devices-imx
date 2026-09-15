@@ -29,7 +29,9 @@ config MCUX_HW_DEVICE_MIMX94398
     select MCUX_COMPONENT_driver.port if MCUX_PRJSEG_module.board.pinmux
     select MCUX_COMPONENT_driver.rgpio if MCUX_PRJSEG_module.board.pinmux
     select MCUX_COMPONENT_driver.clock if MCUX_PRJSEG_module.board.clock
-    select MCUX_COMPONENT_component.lpuart_adapter if MCUX_PRJSEG_module.board.console_lite
+    # Only one HAL UART adapter may be linked: skip the lpuart adapter when
+    # the serial_mux client adapter (muxuart) provides the HAL UART instead.
+    select MCUX_COMPONENT_component.lpuart_adapter if MCUX_PRJSEG_module.board.console_lite && !MCUX_COMPONENT_component.muxuart_adapter
     select MCUX_COMPONENT_driver.lpuart if MCUX_PRJSEG_module.board.console_lite
     select MCUX_COMPONENT_component.software_crc_adapter if MCUX_COMPONENT_driver.netc
     select ELE_HAS_V2X_FW_BRINGUP
