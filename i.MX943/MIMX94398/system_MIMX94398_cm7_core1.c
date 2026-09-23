@@ -320,7 +320,35 @@ void SystemPlatformHandler(void)
 
                     if (SCMI_BbmRtcEvent(SCMI_NOTIFY, &notifyFlags) == SCMI_ERR_SUCCESS)
                     {
-                        PRINTF("\nSCMI BBM RTC notification: flags=0x%08X\r\n", flags);
+                        /*
+                         * Report which RTC fired and why. A single event can
+                         * carry more than one reason, so name each one that is
+                         * set instead of printing the first match.
+                         */
+                        PRINTF("\nSCMI BBM RTC %u notification:",
+                               (unsigned int)SCMI_BBM_EVENT_RTC_ID(notifyFlags));
+
+                        if (SCMI_BBM_EVENT_RTC_ALARM(notifyFlags) != 0U)
+                        {
+                            PRINTF(" alarm expired");
+                        }
+
+                        if (SCMI_BBM_EVENT_RTC_ROLLOVER(notifyFlags) != 0U)
+                        {
+                            PRINTF(" counter rolled over");
+                        }
+
+                        if (SCMI_BBM_EVENT_RTC_UPDATED(notifyFlags) != 0U)
+                        {
+                            PRINTF(" time was updated");
+                        }
+
+                        if ((notifyFlags & 0x7U) == 0U)
+                        {
+                            PRINTF(" no reason reported");
+                        }
+
+                        PRINTF(" (flags=0x%08X)\r\n", (unsigned int)notifyFlags);
                     }
                 }
                 else
@@ -329,7 +357,10 @@ void SystemPlatformHandler(void)
 
                     if (SCMI_BbmButtonEvent(SCMI_NOTIFY, &notifyFlags) == SCMI_ERR_SUCCESS)
                     {
-                        PRINTF("\nSCMI BBM button notification: flags=0x%08X\r\n", flags);
+                        PRINTF("\nSCMI BBM button notification: %s (flags=0x%08X)\r\n",
+                               (SCMI_BBM_EVENT_BUTTON_DETECTED(notifyFlags) != 0U) ? "pressed"
+                                                                                  : "no press reported",
+                               (unsigned int)notifyFlags);
                     }
                 }
             }
