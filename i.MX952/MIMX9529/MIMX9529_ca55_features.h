@@ -1,7 +1,7 @@
 /*
 ** ###################################################################
 **     Version:             rev. 1.0, 2021-11-16
-**     Build:               b260722
+**     Build:               b260923
 **
 **     Abstract:
 **         Chip specific module features.
@@ -175,7 +175,7 @@
 #define FSL_FEATURE_MU_SIDE_A (1)
 /* @brief MU side for current core */
 #define FSL_FEATURE_MU_SIDE_B (1)
-/* @brief MU supports reset assert interrupt. CIER0[RAIE] or CR[RAIE] or BCR[RAIE]. Note: This feature value is not the same on all MU instances. */
+/* @brief MU supports reset assert interrupt. CIER0[RAIE] or CR[RAIE] or BCR[RAIE]. */
 #define FSL_FEATURE_MU_HAS_RESET_ASSERT_INT (1)
 /* @brief MU supports reset de-assert interrupt. CR[RDIE] or BCR[RDIE]. */
 #define FSL_FEATURE_MU_HAS_RESET_DEASSERT_INT (0)
@@ -183,25 +183,25 @@
 #define FSL_FEATURE_MU_NO_CORE_STATUS (0)
 /* @brief MU does not support NMI. Register bit CCR0[NMI]. */
 #define FSL_FEATURE_MU_NO_NMI (0)
-/* @brief MU does not support core event pending. Register bit SR[CEP]. Note: This feature value is not the same on all MU instances. */
+/* @brief MU does not support core event pending. Register bit SR[CEP]. */
 #define FSL_FEATURE_MU_NO_CEP (1)
-/* @brief MU supports Power-Down mode entry interrupt. CIER0[PDIE] Note: This feature value is not the same on all MU instances. */
+/* @brief MU supports Power-Down mode entry interrupt. CIER0[PDIE] */
 #define FSL_FEATURE_MU_HAS_PD_INT (1)
-/* @brief MU supports STOP mode entry interrupt. CIER0[STOPIE] Note: This feature value is not the same on all MU instances. */
+/* @brief MU supports STOP mode entry interrupt. CIER0[STOPIE] */
 #define FSL_FEATURE_MU_HAS_STOP_INT (1)
-/* @brief MU supports WAIT mode entry interrupt. CIER0[WAITIE] Note: This feature value is not the same on all MU instances. */
+/* @brief MU supports WAIT mode entry interrupt. CIER0[WAITIE] */
 #define FSL_FEATURE_MU_HAS_WAIT_INT (1)
-/* @brief MU supports HALT mode entry interrupt. CIER0[HALTIE] Note: This feature value is not the same on all MU instances. */
+/* @brief MU supports HALT mode entry interrupt. CIER0[HALTIE] */
 #define FSL_FEATURE_MU_HAS_HALT_INT (1)
-/* @brief MU supports RUN mode entry interrupt. CIER0[RUNIE] Note: This feature value is not the same on all MU instances. */
+/* @brief MU supports RUN mode entry interrupt. CIER0[RUNIE] */
 #define FSL_FEATURE_MU_HAS_RUN_INT (1)
-/* @brief MU supports hardware reset interrupt. CSSR0[HRIP] or CSR0[HRIP]. Note: This feature value is not the same on all MU instances. */
+/* @brief MU supports hardware reset interrupt. CSSR0[HRIP] or CSR0[HRIP]. */
 #define FSL_FEATURE_MU_HAS_SR_HRIP (1)
 /* @brief MU supports reset interrupt. Register bit SR[MURIP]. */
 #define FSL_FEATURE_MU_HAS_SR_MURIP (1)
 /* @brief MU does not support enable clock of the other core, CR[CLKE] or CCR[CLKE]. */
 #define FSL_FEATURE_MU_NO_CLKE (1)
-/* @brief MU has bit CCR0[RSTH]. Note: This feature value is not the same on all MU instances. */
+/* @brief MU has bit CCR0[RSTH]. */
 #define FSL_FEATURE_MU_HAS_RSTH (1)
 /* @brief MU has bit CCR0[RSTH] by instance. */
 #define FSL_FEATURE_MU_HAS_RSTH_BY_INSTANCEn(x) \
@@ -222,7 +222,7 @@
     (((x) == MU8_MUA) ? (0) : \
     (((x) == MU8_MUB) ? (0) : \
     (((x) == CAMERA__MUI_A1__MUA) ? (0) : (-1))))))))))))))))))
-/* @brief MU has bit CCR0[BOOT]. Note: This feature value is not the same on all MU instances. */
+/* @brief MU has bit CCR0[BOOT]. */
 #define FSL_FEATURE_MU_HAS_BOOT (1)
 /* @brief MU has bit CCR0[BOOT] by instance. */
 #define FSL_FEATURE_MU_HAS_BOOT_BY_INSTANCEn(x) \
@@ -245,7 +245,7 @@
     (((x) == CAMERA__MUI_A1__MUA) ? (0) : (-1))))))))))))))))))
 /* @brief MU supports MU reset, CR[MUR]. */
 #define FSL_FEATURE_MU_HAS_MUR (1)
-/* @brief MU supports hardware reset, CR[HR] or CCR0[HR]. Note: This feature value is not the same on all MU instances. */
+/* @brief MU supports hardware reset, CR[HR] or CCR0[HR]. */
 #define FSL_FEATURE_MU_HAS_HR (1)
 /* @brief MU supports hardware reset by instance */
 #define FSL_FEATURE_MU_HAS_HR_BY_INSTANCEn(x) \
@@ -361,7 +361,7 @@
 
 /* EDMA module features */
 
-/* @brief Number of DMA channels (related to number of registers TCD, DCHPRI, bit fields ERQ[ERQn], EEI[EEIn], INT[INTn], ERR[ERRn], HRS[HRSn] and bit field widths ES[ERRCHN], CEEI[CEEI], SEEI[SEEI], CERQ[CERQ], SERQ[SERQ], CDNE[CDNE], SSRT[SSRT], CERR[CERR], CINT[CINT], TCDn_CITER_ELINKYES[LINKCH], TCDn_CSR[MAJORLINKCH], TCDn_BITER_ELINKYES[LINKCH]). (Valid only for eDMA modules.) Note: This feature value is not the same on all EDMA instances. */
+/* @brief Number of DMA channels (related to number of registers TCD, DCHPRI, bit fields ERQ[ERQn], EEI[EEIn], INT[INTn], ERR[ERRn], HRS[HRSn] and bit field widths ES[ERRCHN], CEEI[CEEI], SEEI[SEEI], CERQ[CERQ], SERQ[SERQ], CDNE[CDNE], SSRT[SSRT], CERR[CERR], CINT[CINT], TCDn_CITER_ELINKYES[LINKCH], TCDn_CSR[MAJORLINKCH], TCDn_BITER_ELINKYES[LINKCH]). (Valid only for eDMA modules.) */
 #define FSL_FEATURE_EDMA_MODULE_CHANNEL (64)
 /* @brief If 8 bytes transfer supported. */
 #define FSL_FEATURE_EDMA_SUPPORT_8_BYTES_TRANSFER (1)
@@ -455,7 +455,7 @@
     (((x) == EDMA5_3) ? (1) : \
     (((x) == EDMA5_4) ? (1) : \
     (((x) == EDMA5_2) ? (1) : (-1)))))
-/* @brief Whether has MP channel mux Note: This feature value is not the same on all EDMA instances. */
+/* @brief Whether has MP channel mux */
 #define FSL_FEATURE_EDMA_HAS_MP_CHANNEL_MUX (1)
 /* @brief Has register bit field CH_CSR[SWAP]. */
 #define FSL_FEATURE_EDMA_HAS_CHANNEL_SWAP_SIZE (1)
@@ -469,7 +469,7 @@
     (((x) == DMA3) ? (0) : (-1)))))
 /* @brief Has register bit field TCD_CSR[BWC]. */
 #define FSL_FEATURE_EDMA_HAS_BANDWIDTH (1)
-/* @brief Has channel mux Note: This feature value is not the same on all EDMA instances. */
+/* @brief Has channel mux */
 #define FSL_FEATURE_EDMA_HAS_CHANNEL_MUX (1)
 /* @brief Has register bit field CH_SBR[INSTR]. */
 #define FSL_FEATURE_EDMA_HAS_CHANNEL_ACCESS_TYPE (1)
@@ -525,6 +525,8 @@
 #define FSL_FEATURE_FLEXIO_HAS_PIN_REGISTER (1)
 /* @brief Has DOZEN bit(CTRL[DOZEN]) */
 #define FSL_FEATURE_FLEXIO_HAS_DOZE_MODE_SUPPORT (1)
+/* @brief Has register TIMERSDEN */
+#define FSL_FEATURE_FLEXIO_HAS_TIMER_STATUS_DMA (1)
 
 /* RGPIO module features */
 
@@ -845,7 +847,7 @@
     (((x) == SAI6) ? (1) : (-1)))))))
 /* @brief Maximum words per frame (register bit fields TCR3[WDFL], TCR4[FRSZ], TMR[TWM], RCR3[WDFL], RCR4[FRSZ], RMR[RWM]). */
 #define FSL_FEATURE_SAI_MAX_WORDS_PER_FRAME (32)
-/* @brief Has support of combining multiple data channel FIFOs into single channel FIFO (register bit fields TCR3[CFR], TCR4[FCOMB], TFR0[WCP], TFR1[WCP], RCR3[CFR], RCR4[FCOMB], RFR0[RCP], RFR1[RCP]). Note: This feature value is not the same on all SAI instances. */
+/* @brief Has support of combining multiple data channel FIFOs into single channel FIFO (register bit fields TCR3[CFR], TCR4[FCOMB], TFR0[WCP], TFR1[WCP], RCR3[CFR], RCR4[FCOMB], RFR0[RCP], RFR1[RCP]). */
 #define FSL_FEATURE_SAI_HAS_FIFO_COMBINE_MODE (1)
 /* @brief Has packing of 8-bit and 16-bit data into each 32-bit FIFO word (register bit fields TCR4[FPACK], RCR4[FPACK]). */
 #define FSL_FEATURE_SAI_HAS_FIFO_PACKING (1)

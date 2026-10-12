@@ -1,7 +1,7 @@
 /*
 ** ###################################################################
 **     Version:             rev. 2.0, 2025-11-12
-**     Build:               b260513
+**     Build:               b261012
 **
 **     Abstract:
 **         Chip specific module features.
@@ -47,6 +47,8 @@
 #define FSL_FEATURE_SOC_FLEXIO_COUNT (2)
 /* @brief FLEXSPI availability on the SoC. */
 #define FSL_FEATURE_SOC_FLEXSPI_COUNT (1)
+/* @brief FRACT_PLL availability on the SoC. */
+#define FSL_FEATURE_SOC_FRACT_PLL_COUNT (5)
 /* @brief I3C availability on the SoC. */
 #define FSL_FEATURE_SOC_I3C_COUNT (2)
 /* @brief I2S availability on the SoC. */
@@ -116,6 +118,8 @@
 #define FSL_FEATURE_ADC_THRESHOLDS_COUNT (8)
 /* @brief Self-test threshold counts of ADC. */
 #define FSL_FEATURE_ADC_SELF_TEST_THRESHOLDS_COUNT (6)
+/* @brief Has external trigger or not. */
+#define FSL_FEATURE_ADC_HAS_EXTERNAL_TRIGGER (0)
 
 /* FLEXCAN module features */
 
@@ -369,6 +373,8 @@
 #define FSL_FEATURE_FLEXIO_HAS_PIN_REGISTER (1)
 /* @brief Has DOZEN bit(CTRL[DOZEN]) */
 #define FSL_FEATURE_FLEXIO_HAS_DOZE_MODE_SUPPORT (1)
+/* @brief Has register TIMERSDEN */
+#define FSL_FEATURE_FLEXIO_HAS_TIMER_STATUS_DMA (1)
 
 /* FLEXSPI module features */
 
@@ -610,6 +616,11 @@
 /* @brief Memory map has offset between subsystems. */
 #define FSL_FEATURE_MEMORY_HAS_ADDRESS_OFFSET (1)
 
+/* MIPI_DSI module features */
+
+/* @brief MIPI_DSI has DBI (Display Bus Interface) support. */
+#define FSL_FEATURE_MIPI_DSI_HAS_DBI (0)
+
 /* MU module features */
 
 /* @brief MU side for current core */
@@ -801,6 +812,8 @@
 #define FSL_FEATURE_TPM_HAS_GLOBAL_TIME_BASE_SYNC (1)
 /* @brief Is affected by errata with ID 050050 (Incorrect duty output when EPWM mode is set to PS=0 during write 1 to CnV register). */
 #define FSL_FEATURE_TPM_HAS_ERRATA_050050 (0)
+/* @brief Has no CPWMS field in SC register (bitfield SC[CPWMS]). */
+#define FSL_FEATURE_TPM_HAS_NO_SC_CPWMS (0)
 
 /* TRDC module features */
 

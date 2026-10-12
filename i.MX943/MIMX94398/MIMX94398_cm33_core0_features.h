@@ -450,6 +450,8 @@
 #define FSL_FEATURE_FLEXIO_HAS_PIN_REGISTER (1)
 /* @brief Has DOZEN bit(CTRL[DOZEN]) */
 #define FSL_FEATURE_FLEXIO_HAS_DOZE_MODE_SUPPORT (1)
+/* @brief Has register TIMERSDEN */
+#define FSL_FEATURE_FLEXIO_HAS_TIMER_STATUS_DMA (1)
 
 /* RGPIO module features */
 
