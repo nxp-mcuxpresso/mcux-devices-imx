@@ -1,0 +1,106 @@
+#!armclang --target=arm-arm-none-eabi -mcpu=cortex-m33 -E -x c
+/*
+** ###################################################################
+**     Processors:          MIMX94398AVKE_cm33_core1
+**                          MIMX94398AVKJ_cm33_core1
+**                          MIMX94398AVKM_cm33_core1
+**                          MIMX94398AVME_cm33_core1
+**                          MIMX94398AVMJ_cm33_core1
+**                          MIMX94398AVMM_cm33_core1
+**                          MIMX94398CVKE_cm33_core1
+**                          MIMX94398CVKJ_cm33_core1
+**                          MIMX94398CVKM_cm33_core1
+**                          MIMX94398CVME_cm33_core1
+**                          MIMX94398CVMJ_cm33_core1
+**                          MIMX94398CVMM_cm33_core1
+**                          MIMX94398DVKE_cm33_core1
+**                          MIMX94398DVKJ_cm33_core1
+**                          MIMX94398DVKM_cm33_core1
+**                          MIMX94398DVME_cm33_core1
+**                          MIMX94398DVMJ_cm33_core1
+**                          MIMX94398DVMM_cm33_core1
+**                          MIMX94398XVKE_cm33_core1
+**                          MIMX94398XVKJ_cm33_core1
+**                          MIMX94398XVKM_cm33_core1
+**                          MIMX94398XVME_cm33_core1
+**                          MIMX94398XVMJ_cm33_core1
+**                          MIMX94398XVMM_cm33_core1
+**
+**     Compiler:            Keil ARM C/C++ Compiler
+**     Reference manual:    iMX943RM rev1 draftK
+**     Version:             rev. 1.0, 2023-11-01
+**     Build:               b241111
+**
+**     Abstract:
+**         Linker file for the Keil ARM C/C++ Compiler
+**
+**     Copyright 2016 Freescale Semiconductor, Inc.
+**     Copyright 2016-2024 NXP
+**     SPDX-License-Identifier: BSD-3-Clause
+**
+**     http:                 www.nxp.com
+**     mail:                 support@nxp.com
+**
+** ###################################################################
+*/
+
+#if (defined(__ram_vector_table__))
+  #define __ram_vector_table_size__    0x00000620
+#else
+  #define __ram_vector_table_size__    0x00000000
+#endif
+
+/* Memory region from [0x28000000-0x28031FFF] is reserved for ROM header */
+/* Memory region from [0x20040000-0x2007FFFF] is reserved for A35 ATF */
+
+#define m_interrupts_start             0x28032000
+#define m_interrupts_size              0x00002000
+
+#define m_text_start                   0x28034000
+#define m_text_size                    0x003CC000
+
+#define m_interrupts_ram_start         0x20003000
+#define m_interrupts_ram_size          __ram_vector_table_size__
+
+#define m_data_start                   (m_interrupts_ram_start + m_interrupts_ram_size)
+#define m_data_size                    (0x0001D000 - m_interrupts_ram_size)
+
+#if (defined(__stack_size__))
+  #define Stack_Size                   __stack_size__
+#else
+  #define Stack_Size                   0x0400
+#endif
+
+#if (defined(__heap_size__))
+  #define Heap_Size                    __heap_size__
+#else
+  #define Heap_Size                    0x0400
+#endif
+
+LR_m_interrupts m_interrupts_start m_interrupts_size {
+  VECTOR_ROM m_interrupts_start m_interrupts_size {
+    * (.isr_vector, +FIRST)
+  }
+}
+
+LR_m_text m_text_start m_text_size {
+  ER_m_text m_text_start m_text_size {
+    * (InRoot$$Sections)
+    * (.resource_table)
+    * (CodeQuickAccess)
+    .ANY (+RO)
+  }
+}
+
+LR_m_data (LoadBase(LR_m_text) + ImageLength(LR_m_text)) {
+  RW_m_interrupts_ram m_interrupts_ram_start EMPTY m_interrupts_ram_size {
+  }
+  RW_m_data m_data_start (m_data_size - Stack_Size - Heap_Size) {
+    * (DataQuickAccess)
+    .ANY (+RW +ZI)
+  }
+  ARM_LIB_HEAP  +0 ALIGN 8 EMPTY Heap_Size {
+  }
+  ARM_LIB_STACK (m_data_start + m_data_size) EMPTY -Stack_Size {
+  }
+}

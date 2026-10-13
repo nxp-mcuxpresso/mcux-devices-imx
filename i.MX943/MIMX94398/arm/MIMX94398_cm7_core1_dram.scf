@@ -1,0 +1,155 @@
+#!armclang --target=arm-arm-none-eabi -mcpu=cortex-m7 -E -x c
+/*
+** ###################################################################
+**     Processors:          MIMX94398AVKE_cm7_core1
+**                          MIMX94398AVKJ_cm7_core1
+**                          MIMX94398AVKM_cm7_core1
+**                          MIMX94398AVME_cm7_core1
+**                          MIMX94398AVMJ_cm7_core1
+**                          MIMX94398AVMM_cm7_core1
+**                          MIMX94398CVKE_cm7_core1
+**                          MIMX94398CVKJ_cm7_core1
+**                          MIMX94398CVKM_cm7_core1
+**                          MIMX94398CVME_cm7_core1
+**                          MIMX94398CVMJ_cm7_core1
+**                          MIMX94398CVMM_cm7_core1
+**                          MIMX94398DVKE_cm7_core1
+**                          MIMX94398DVKJ_cm7_core1
+**                          MIMX94398DVKM_cm7_core1
+**                          MIMX94398DVME_cm7_core1
+**                          MIMX94398DVMJ_cm7_core1
+**                          MIMX94398DVMM_cm7_core1
+**                          MIMX94398XVKE_cm7_core1
+**                          MIMX94398XVKJ_cm7_core1
+**                          MIMX94398XVKM_cm7_core1
+**                          MIMX94398XVME_cm7_core1
+**                          MIMX94398XVMJ_cm7_core1
+**                          MIMX94398XVMM_cm7_core1
+**
+**     Compiler:            Keil ARM C/C++ Compiler
+**     Reference manual:    iMX943RM rev1 draftK
+**     Version:             rev. 1.0, 2023-11-01
+**     Build:               b241111
+**
+**     Abstract:
+**         Linker file for the Keil ARM C/C++ Compiler
+**
+**     Copyright 2016 Freescale Semiconductor, Inc.
+**     Copyright 2016-2024 NXP
+**     SPDX-License-Identifier: BSD-3-Clause
+**
+**     http:                 www.nxp.com
+**     mail:                 support@nxp.com
+**
+** ###################################################################
+*/
+ 
+#if (defined(__ram_vector_table__))
+  #define __ram_vector_table_size__    0x00000620
+#else
+  #define __ram_vector_table_size__    0x00000000
+#endif
+ 
+#define m_interrupts_start             0x81000000
+#define m_interrupts_size              0x00002000
+ 
+#define m_text_start                   0x81002000
+#define m_text_size                    0x00800000
+ 
+#define m_interrupts_ram_start         0x81802000
+#define m_interrupts_ram_size          __ram_vector_table_size__
+ 
+#define m_data_start                   (m_interrupts_ram_start + m_interrupts_ram_size)
+#define m_data_size                    (0x007F1000 - m_interrupts_ram_size)
+ 
+#define m_ncache_start                 0x81FF3000
+#define m_ncache_size                  0x0000B000
+ 
+#define m_rsc_tbl_start                0x81FFE000
+#define m_rsc_tbl_size                 0x00004000
+ 
+#define m_rsc_tbl_share_with_mpu_start 0x84220000
+#define m_rsc_tbl_share_with_mpu_size  0x00001000
+ 
+ 
+/* Sizes */
+#if (defined(__stack_size__))
+  #define Stack_Size                   __stack_size__
+#else
+  #define Stack_Size                   0x0400
+#endif
+ 
+#if (defined(__heap_size__))
+  #define Heap_Size                    __heap_size__
+#else
+  #define Heap_Size                    0x0400
+#endif
+ 
+; ===========================================================================
+; LR1: Vector table - DDR
+; ===========================================================================
+LR_m_interrupts m_interrupts_start m_interrupts_size {
+  VECTOR_ROM m_interrupts_start m_interrupts_size {
+    * (.isr_vector, +FIRST)
+  }
+}
+ 
+; ===========================================================================
+; LR2: Code only - DDR. Holds RO only (no RW init image).
+; ===========================================================================
+LR_m_text m_text_start m_text_size {
+  ER_m_text m_text_start m_text_size {
+    * (InRoot$$Sections)
+    * (.resource_table)
+    * (CodeQuickAccess)
+    .ANY (+RO)
+  }
+}
+ 
+; ===========================================================================
+; LR3: RW data - LMA placed right after the code image
+;   (AlignExpr(ImageLimit(LR_m_text), 8)), VMA = RAM.
+;   The RW init image load address follows the code tail, matching the GCC .ld
+;   layout (.data : AT(__DATA_ROM), __DATA_ROM = __etext). armlink inserts the
+;   LMA->VMA copy in __main; the LMA is 8-byte aligned because armlink requires
+;   a load region base to be 8-byte aligned (L6244E).
+; ===========================================================================
+LR_m_data AlignExpr(ImageLimit(LR_m_text), 8) {
+  RW_m_interrupts_ram m_interrupts_ram_start EMPTY m_interrupts_ram_size {
+  }
+  RW_m_data m_data_start (m_data_size - Stack_Size - Heap_Size) {
+    * (DataQuickAccess)
+    .ANY (+RW +ZI)
+  }
+  ARM_LIB_HEAP  +0 ALIGN 8 EMPTY Heap_Size {
+  }
+  ARM_LIB_STACK (m_data_start + m_data_size) EMPTY -Stack_Size {
+  }
+}
+ 
+; ===========================================================================
+; LR4: NonCacheable - DDR
+; ===========================================================================
+LR_m_ncache m_ncache_start m_ncache_size {
+  RW_m_ncache m_ncache_start m_ncache_size {
+    * (NonCacheable.init)
+    * (*NonCacheable)
+  }
+  RW_m_ncache_unused +0 EMPTY (m_ncache_size - ImageLength(RW_m_ncache)) {
+  }
+}
+ 
+; ===========================================================================
+; LR5/6: Resource table
+; ===========================================================================
+LR_m_rsc_tbl m_rsc_tbl_start m_rsc_tbl_size {
+  RW_m_rsc_tbl m_rsc_tbl_start m_rsc_tbl_size {
+    * (m_rsc_tbl)
+  }
+}
+ 
+LR_m_rsc_tbl_share_with_mpu m_rsc_tbl_share_with_mpu_start m_rsc_tbl_share_with_mpu_size {
+  RW_m_rsc_tbl_share_with_mpu m_rsc_tbl_share_with_mpu_start m_rsc_tbl_share_with_mpu_size {
+    * (m_rsc_tbl_share_with_mpu)
+  }
+}
